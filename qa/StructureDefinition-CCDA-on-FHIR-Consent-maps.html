@@ -1,0 +1,202 @@
+﻿<html>
+<head>
+  <title>StructureDefinition-CCDA-on-FHIR-Consent-maps</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<a name="rim"> </a><h3>Mappings for RIM Mapping (http://hl7.org/v3)</h3><table class="grid">
+ <tr><td colspan="3"><b>C-CDA on FHIR Consent</b></td></tr>
+ <tr><td>Contract</td><td></td><td>Entity. Role, or Act</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;meta</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;implicitRules</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;language</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;text</td><td></td><td>Act.text?</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;contained</td><td></td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td></td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td></td><td>FinancialContract id</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;status</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;issued</td><td></td><td>FinancialContract effectiveTime</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;applies</td><td></td><td>FinancialContract activityTime</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td></td><td>Role</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;topic</td><td></td><td>Role</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;authority</td><td></td><td>Role Scoper</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;domain</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;type</td><td></td><td>CNTRCT</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;subType</td><td></td><td>e.g. RECOV</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;action</td><td></td><td>e.g. JURISPOL</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;actionReason</td><td></td><td>e.g. QUALIMP</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;agent</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;actor</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;role</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;signer</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;party</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;signature</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;valuedItem</td><td></td><td>COCT_RM440000UV09 ValuedItem classCode INVE</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entity[x]</td><td></td><td>COCT_RM440000UV09 ValuedItem code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;identifier</td><td></td><td>COCT_RM440000UV09 ValuedItem id</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;effectiveTime</td><td></td><td>COCT_RM440000UV09 ValuedItem                effectiveTime</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;quantity</td><td></td><td>COCT_RM440000UV09 ValuedItem unitQuantity</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unitPrice</td><td></td><td>COCT_RM440000UV09 ValuedItem unitPriceAmt</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;factor</td><td></td><td>COCT_RM440000UV09 ValuedItem factorNumber</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;points</td><td></td><td>COCT_RM440000UV09 ValuedItem pointNumber</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;net</td><td></td><td>COCT_RM440000UV09 ValuedItem netAmt</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;term</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;identifier</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;issued</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;applies</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;subType</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;topic</td><td></td><td>Role</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;action</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;actionReason</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;agent</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;actor</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;role</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;valuedItem</td><td></td><td>COCT_RM440000UV09 ValuedUnitItem classCode INVE</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entity[x]</td><td></td><td>COCT_RM440000UV09 ValuedUnitItem code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;identifier</td><td></td><td>COCT_RM440000UV09 ValuedUnitItem id</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;effectiveTime</td><td></td><td>COCT_RM440000UV09 ValuedUnitItem effectiveTime</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;quantity</td><td></td><td>COCT_RM440000UV09 ValuedUnitItem unitQuantity</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unitPrice</td><td></td><td>COCT_RM440000UV09 ValuedUnitItem unitPriceAmt</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;factor</td><td></td><td>COCT_RM440000UV09 ValuedUnitItem factorNumber</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;points</td><td></td><td>COCT_RM440000UV09 ValuedUnitItem pointNumber</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;net</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;group</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;binding[x]</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;friendly</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content[x]</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;legal</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content[x]</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;rule</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content[x]</td><td></td><td></td> </tr>
+</table>
+<a name="w5"> </a><h3>Mappings for W5 Mapping (http://hl7.org/fhir/w5)</h3><table class="grid">
+ <tr><td colspan="3"><b>C-CDA on FHIR Consent</b></td></tr>
+ <tr><td>Contract</td><td></td><td>financial.other</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;meta</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;implicitRules</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;language</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;text</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;contained</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;status</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;issued</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;applies</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;topic</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;authority</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;domain</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;type</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;subType</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;action</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;actionReason</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;agent</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;actor</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;role</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;signer</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;party</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;signature</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;valuedItem</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entity[x]</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;identifier</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;effectiveTime</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;quantity</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unitPrice</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;factor</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;points</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;net</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;term</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;identifier</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;issued</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;applies</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;subType</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;topic</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;action</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;actionReason</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;agent</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;actor</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;role</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;valuedItem</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entity[x]</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;identifier</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;effectiveTime</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;quantity</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unitPrice</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;factor</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;points</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;net</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;group</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;binding[x]</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;friendly</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content[x]</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;legal</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content[x]</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;rule</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;content[x]</td><td></td><td></td> </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,632 @@
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<!-- instance template base -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>C-CDA on FHIR</title>
+  
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  
+
+  <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet"/>
+  <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="assets/js/html5shiv.js"></script>
+  <script src="assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+
+</head>
+<body>
+
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+  <div class="container">  <!-- container -->
+   <a id="logo" no-external="true" href="http://hl7.org/fhir"><img alt="logo fhir" src="assets/images/fhir-logo-www.png"/> </a>
+   <div id="hl7-status">
+    <b>Current Build</b> 
+   </div>
+
+   <div id="hl7-nav">
+     <a id="hl7-logo" no-external="true" href="http://www.hl7.org">
+     <img height="50" alt="visit the hl7 website" width="42" src="assets/images/hl7-logo.png"/>
+    </a>
+   </div>
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a></div>
+  </div>
+  <div class="container">  <!-- container -->
+ </div></div>  <!-- /segment-header -->
+
+ <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+  <div id="stripe"> </div>
+  <div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+
+   <nav class="navbar navbar-inverse">
+    <div class="container">
+     <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+     </button>
+      <a class="navbar-brand hidden" href="http://hl7.org/fhir/2017Janindex.html">FHIR</a>
+     <div class="nav-collapse collapse navbar-inverse-collapse">
+      <ul class="nav navbar-nav">
+              
+        <li><a href="http://hl7.org/fhir/2017Janindex.html">Home</a></li>
+        <li><a href="http://hl7.org/fhir/2017Jandocumentation.html">Documentation</a></li>
+        <li><a href="http://hl7.org/fhir/2017Janmodules.html">Modules</a></li>
+        <li><a href="http://hl7.org/fhir/2017Janresourcelist.html">Resources</a></li>
+        <li><a href="http://hl7.org/fhir/2017Janprofilelist.html">Profiles</a></li>
+        <li><a href="http://hl7.org/fhir/2017Janextensibility-registry.html">Extensions</a></li>
+        <li><a href="http://hl7.org/fhir/2017Janoperationslist.html">Operations</a></li>
+        <li><a href="http://hl7.org/fhir/2017Janservicelist.html">Services</a></li>
+
+      </ul>
+     </div>  <!-- /.nav-collapse -->
+    </div>  <!-- /.container -->
+   </nav>  <!-- /.navbar -->
+
+  <!-- /HEADER CONTENT -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-navbar -->
+
+ <div id="segment-breadcrumb" class="segmnt">  <!-- segment-breadcrumb -->
+  <div class="container">  <!-- container -->
+   <ul class="breadcrumb">
+     <li title="C-CDA on FHIR"><a href="index.html"><b>C-CDA on FHIR</b></a></li>
+     <li><b> Details</b></li>
+   </ul>
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-breadcrumb -->
+
+ <div id="segment-content" class="segment">  <!-- segment-content -->
+ <div class="container">  <!-- container -->
+            <div class="row">
+             <div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+  
+<h2>C-CDA on FHIR</h2>
+
+<pre class="xml">
+
+&lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide">ImplementationGuide</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.id">id</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#id">value</a>=&quot;2219&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.url">url</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/ccda/ImplementationGuide/2219&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.name">name</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;C-CDA on FHIR&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.status">status</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;draft&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package">package</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.name">name</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Profiles in this Implementation Guide&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;StructureDefinition-CCDA-on-FHIR-US-Realm-Header.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;StructureDefinition/CCDA-on-FHIR-US-Realm-Header&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;C-CDA on FHIR US Realm Header&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;StructureDefinition-CCDA-on-FHIR-Consent.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;StructureDefinition/CCDA-on-FHIR-Consent&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;C-CDA on FHIR Consent&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;StructureDefinition-CCDA-on-FHIR-Authorization.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;StructureDefinition/CCDA-on-FHIR-Authorization&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;C-CDA on FHIR Authorization&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;StructureDefinition-CCDA-on-FHIR-Data-Enterer.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;StructureDefinition/CCDA-on-FHIR-Data-Enterer&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;C-CDA on FHIR Data Enterer&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>
+                  <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;StructureDefinition-CCDA-on-FHIR-In-Fulfillment-Of-Order.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>
+                   <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;StructureDefinition/CCDA-on-FHIR-In-Fulfillment-Of-Order&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;C-CDA on FHIR In Fulfillment Of Order&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;StructureDefinition-CCDA-on-FHIR-Informant.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;StructureDefinition/CCDA-on-FHIR-Informant&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;C-CDA on FHIR Informant&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>
+                  <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;StructureDefinition-CCDA-on-FHIR-Information-Recipient.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>
+                   <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;StructureDefinition/CCDA-on-FHIR-Information-Recipient&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;C-CDA on FHIR Information Recipient&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;StructureDefinition-CCDA-on-FHIR-Participant.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;StructureDefinition/CCDA-on-FHIR-Participant&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;C-CDA on FHIR Participant&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;StructureDefinition-CCDA-on-FHIR-Performer.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;StructureDefinition/CCDA-on-FHIR-Performer&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;C-CDA on FHIR Performer&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;StructureDefinition-CCDA-on-FHIR-Care-Plan.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;StructureDefinition/CCDA-on-FHIR-Care-Plan&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;C-CDA on FHIR Care Plan&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>
+                  <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;StructureDefinition-CCDA-on-FHIR-Consultation-Note.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;StructureDefinition/CCDA-on-FHIR-Consultation-Note&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;C-CDA on FHIR Consultation Note&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>
+                  <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;StructureDefinition-CCDA-on-FHIR-Continuity-of-Care-Document.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>
+                   <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;StructureDefinition/CCDA-on-FHIR-Continuity-of-Care-Document&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;C-CDA on FHIR Continuity of Care Document&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>
+                  <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;StructureDefinition-CCDA-on-FHIR-Diagnostic-Imaging.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;StructureDefinition/CCDA-on-FHIR-Diagnostic-Imaging&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;C-CDA on FHIR Diagnostic Imaging&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>
+                  <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;StructureDefinition-CCDA-on-FHIR-Discharge-Summary.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;StructureDefinition/CCDA-on-FHIR-Discharge-Summary&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;C-CDA on FHIR Discharge Summary&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>
+                  <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;StructureDefinition-CCDA-on-FHIR-History-and-Physical.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;StructureDefinition/CCDA-on-FHIR-History-and-Physical&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;C-CDA on FHIR History and Physical&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;StructureDefinition-CCDA-on-FHIR-Operative-Note.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;StructureDefinition/CCDA-on-FHIR-Operative-Note&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;C-CDA on FHIR Operative Note&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;StructureDefinition-CCDA-on-FHIR-Procedure-Note.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;StructureDefinition/CCDA-on-FHIR-Procedure-Note&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;C-CDA on FHIR Procedure Note&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;StructureDefinition-CCDA-on-FHIR-Progress-Note.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;StructureDefinition/CCDA-on-FHIR-Progress-Note&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;C-CDA on FHIR Progress Note&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;StructureDefinition-CCDA-on-FHIR-Referral-Note.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;StructureDefinition/CCDA-on-FHIR-Referral-Note&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;C-CDA on FHIR Referral Note&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;StructureDefinition-CCDA-on-FHIR-Transfer-Summary.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;StructureDefinition/CCDA-on-FHIR-Transfer-Summary&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;C-CDA on FHIR Transfer Summary&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;ValueSet-2.16.840.1.113883.11.20.9.31.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;ValueSet/2.16.840.1.113883.11.20.9.31&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;ConsultDocumentType&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;ValueSet-1.3.6.1.4.1.12009.10.2.5.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;ValueSet/1.3.6.1.4.1.12009.10.2.5&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;LOINC Imaging Document Codes&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;ValueSet-2.16.840.1.113883.11.20.9.59.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;ValueSet/2.16.840.1.113883.11.20.9.59&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;DIRSectionTypeCodes&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;ValueSet-2.16.840.1.113883.11.20.4.1.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;ValueSet/2.16.840.1.113883.11.20.4.1&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;DischargeSummaryDocumentTypeCode&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;ValueSet-2.16.840.1.113883.1.11.20.22.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;ValueSet/2.16.840.1.113883.1.11.20.22&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;HPDocumentType&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;ValueSet-2.16.840.1.113883.11.20.1.1.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;ValueSet/2.16.840.1.113883.11.20.1.1&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;SurgicalOperationNoteDocumentTypeCode&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;ValueSet-2.16.840.1.113883.11.20.6.1.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;ValueSet/2.16.840.1.113883.11.20.6.1&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;ProcedureNoteDocumentTypeCodes&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;ValueSet-2.16.840.1.113883.11.20.8.1.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;ValueSet/2.16.840.1.113883.11.20.8.1&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;ProgressNoteDocumentTypeCode&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;ValueSet-2.16.840.1.113883.1.11.20.2.3.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;ValueSet/2.16.840.1.113883.1.11.20.2.3&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;ReferralDocumentType&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;ValueSet-v3-ConfidentialityClassification.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;ValueSet/v3-ConfidentialityClassification&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;v3-ConfidentialityClassification&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;Composition-CCDA-on-FHIR-Care-Plan-Example.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Composition/CCDA-on-FHIR-Care-Plan-Example&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;C-CDA-on-FHIR-Care-Plan-Example&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>
+                  <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;Composition-CCDA-on-FHIR-Consultation-Note-Example.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Composition/CCDA-on-FHIR-Consultation-Note-Example&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;C-CDA-on-FHIR-Consultation-Note-Example&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>
+                  <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;Composition-CCDA-on-FHIR-Continuity-of-Care-Document-Example.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>
+                   <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Composition/CCDA-on-FHIR-Continuity-of-Care-Document-Example&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;C-CDA-on-FHIR-Continuity-of-Care-Document-Example&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>
+                  <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;Composition-CCDA-on-FHIR-Diagnostic-Imaging-Example.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Composition/CCDA-on-FHIR-Diagnostic-Imaging-Example&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;C-CDA-on-FHIR-Diagnostic-Imaging-Example&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>
+                  <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;Composition-CCDA-on-FHIR-Discharge-Summary-Example.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Composition/CCDA-on-FHIR-Discharge-Summary-Example&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;C-CDA-on-FHIR-Discharge-Summary-Example&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>
+                  <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;Composition-CCDA-on-FHIR-History-and-Physical-Example.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Composition/CCDA-on-FHIR-History-and-Physical-Example&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;C-CDA-on-FHIR-History-and-Physical-Example&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;Composition-CCDA-on-FHIR-Operative-Note-Example.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Composition/CCDA-on-FHIR-Operative-Note-Example&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;C-CDA-on-FHIR-Operative-Note-Example&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;Composition-CCDA-on-FHIR-Procedure-Note-Example.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Composition/CCDA-on-FHIR-Procedure-Note-Example&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;C-CDA-on-FHIR-Procedure-Note-Example&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;Composition-CCDA-on-FHIR-Progress-Note-Example.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Composition/CCDA-on-FHIR-Progress-Note-Example&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;C-CDA-on-FHIR-Progress-Note-Example&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;Composition-CCDA-on-FHIR-Referral-Note-Example.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Composition/CCDA-on-FHIR-Referral-Note-Example&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;C-CDA-on-FHIR-Referral-Note-Example&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+  &lt;/package&gt;
+  &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.page">page</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.page.source">source</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://test.com/IG/View/2219&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.page.title">title</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;C-CDA on FHIR&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.page.kind">kind</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;page&quot;/&gt;
+  &lt;/page&gt;
+&lt;/ImplementationGuide&gt;</pre>
+
+
+
+ </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+    <div id="segment-footer" class="segment">  <!-- segment-footer -->
+  <div class="container">  <!-- container -->
+   <div class="inner-wrapper">
+    <p>
+      &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.8.0-10514) generated on Wed, Jan 4, 2017 23:36-0500. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img style="text-align: baseline" src="external.png"/></a> |
+          <a style="color: #81BEF7" href="http://hl7.org/fhir/2017Janhistory.html">Version History</a> |
+          <a style="color: #81BEF7" href="http://hl7.org/fhir/2017Jantoc.html">Table of Contents</a> |
+          <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/2017Janlicense.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> |
+          <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change <img style="text-align: baseline" src="external.png"/></a>
+        </span>
+        </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->
+
+ <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-post-footer -->
+
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="dist/js/bootstrap.min.js"> </script>
+<script src="assets/js/respond.min.js"> </script>
+
+<script src="assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+
+</body>
+</html>
+
+

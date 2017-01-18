@@ -1,0 +1,134 @@
+<pre class="xml">
+
+&lt;<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition">Composition</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.id">id</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#id">value</a>=&quot;CCDA-on-FHIR-Diagnostic-Imaging-Example&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.meta">meta</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Meta#Meta.versionId">versionId</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#id">value</a>=&quot;1&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Meta#Meta.lastUpdated">lastUpdated</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#instant">value</a>=&quot;2016-06-15T08:16:14Z&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Meta#Meta.profile">profile</a>
+             <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Diagnostic-Imaging&quot;/&gt;
+  &lt;/meta&gt;
+  &lt;<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.language">language</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;en-US&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.text">text</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+            &lt;p&gt;Diagnostic Imaging Report document for Henry Jones&lt;/p&gt;
+            &lt;p&gt;Managed by Community Health and Hospitals&lt;/p&gt;
+        &lt;/div&gt;
+  &lt;/text&gt;
+&lt;!-- &lt;extension url=&quot;http://hl7.org/fhir/ccda/StructureDefinition/ccda-data-enterer-extension&quot;&gt;&lt;valueUri value=&quot;http://fhir3.healthintersections.com.au/open/Practitioner/2679baa7-5dac-4d22-81ae-daded84500&quot;/&gt;&lt;/extension&gt;&lt;extension url=&quot;http://hl7.org/fhir/ccda/StructureDefinition/ccda-informant-extension&quot;&gt;&lt;valueUri value=&quot;http://fhir3.healthintersections.com.au/open/Practitioner/2679baa7-5dac-4d22-81ae-daded84500&quot;/&gt;&lt;/extension&gt;&lt;extension url=&quot;http://hl7.org/fhir/ccda/StructureDefinition/ccda-information-recipient-extension&quot;&gt;&lt;valueUri value=&quot;http://fhir3.healthintersections.com.au/open/Practitioner/2679baa7-5dac-4d22-81ae-daded84500&quot;/&gt;&lt;/extension&gt;&lt;extension url=&quot;http://hl7.org/fhir/ccda/StructureDefinition/ccda-participant-extension&quot;&gt;&lt;valueUri value=&quot;http://fhirtest.uhn.ca/baseDstu3/RelatedPerson/117466&quot;/&gt;&lt;/extension&gt;&lt;extension url=&quot;http://hl7.org/fhir/ccda/StructureDefinition/ccda-performer-extension&quot;&gt;&lt;valueUri value=&quot;http://fhir3.healthintersections.com.au/open/Practitioner/2679baa7-5dac-4d22-81ae-daded84500&quot;/&gt;&lt;/extension&gt;&lt;extension url=&quot;http://hl7.org/fhir/ccda/StructureDefinition/ccda-authorization-extension&quot;&gt;&lt;valueUri value=&quot;http://hl7.org/fhir/ccda/StructureDefinition/ccda-consent&quot;/&gt;&lt;/extension&gt; --&gt;
+  &lt;<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.identifier">identifier</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Identifier#Identifier.system">system</a>
+            <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Diagnostic-Imaging&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+  &lt;/identifier&gt;
+  &lt;<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.date">date</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#dateTime">value</a>=&quot;2016-03-22T09:10:14Z&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.type">type</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;18748-4&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Diagnostic imaging study&quot;/&gt;
+    &lt;/coding&gt;
+  &lt;/type&gt;
+  &lt;<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.title">title</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Diagnostic Imaging Report&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.status">status</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;preliminary&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.confidentiality">confidentiality</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;N&quot;/&gt;
+&lt;!--   Patient Resource  --&gt;
+  &lt;<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.subject">subject</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>
+               <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;http://fhir3.healthintersections.com.au/open/Patient/c493f2f2-28d5-49ab-90e8-9e8be341f7&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Henry Jones&quot;/&gt;
+  &lt;/subject&gt;
+&lt;!--   Practitioner Resource  --&gt;
+  &lt;<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.author">author</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>
+               <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;http://fhir3.healthintersections.com.au/open/Practitioner/2679baa7-5dac-4d22-81ae-daded84500&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Adam Everyman, MD&quot;/&gt;
+  &lt;/author&gt;
+  &lt;<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.attester">attester</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.attester.mode">mode</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;legal&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.attester.time">time</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#dateTime">value</a>=&quot;2012-01-04T09:10:14Z&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.attester.party">party</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>
+                 <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;http://fhir3.healthintersections.com.au/open/Practitioner/2679baa7-5dac-4d22-81ae-daded84500&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Adam Everyman, MD&quot;/&gt;
+    &lt;/party&gt;
+  &lt;/attester&gt;
+&lt;!--   Organization Resource  --&gt;
+  &lt;<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.custodian">custodian</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>
+               <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;http://fhir3.healthintersections.com.au/open/Organization/1213e1ae-afc2-4a7c-8ed3-43b7a4e3d7&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Community Health and Hospitals&quot;/&gt;
+  &lt;/custodian&gt;
+  &lt;<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.event">event</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.event.code">code</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://snomed.info/sct&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;73761001&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Colonoscopy&quot;/&gt;
+      &lt;/coding&gt;
+    &lt;/code&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.event.period">period</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Period#Period.start">start</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#dateTime">value</a>=&quot;2015-11-18&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Period#Period.end">end</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#dateTime">value</a>=&quot;2015-12-12&quot;/&gt;
+    &lt;/period&gt;
+  &lt;/event&gt;
+&lt;!--   Encounter Resource  --&gt;
+&lt;!--  &lt;encounter&gt;&lt;reference value=&quot;http://fhirtest.uhn.ca/baseDstu3/Encounter/117630&quot;/&gt;&lt;/encounter&gt; --&gt;
+&lt;!--   Findings Section Narrative  --&gt;
+  &lt;<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section">section</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.title">title</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Findings Section&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.code">code</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;urn:oid:1.2.840.10008.2.16.4&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;121070&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Findings&quot;/&gt;
+      &lt;/coding&gt;
+    &lt;/code&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.text">text</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+      &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+                &lt;p&gt;The cardiomediastinum is within normal limits. The trachea is midline. 
+                    The previously described opacity at the medial right lung base has cleared. 
+                    There are no new infiltrates. There is a new round density at the left hilus, 
+                    superiorly (diameter about 45mm). A CT scan is recommended for further evaluation. 
+                    The pleural spaces are clear. The visualized musculoskeletal structures and the
+                    upper abdomen are stable and unremarkable.&lt;/p&gt;
+            &lt;/div&gt;
+    &lt;/text&gt;
+  &lt;/section&gt;
+&lt;!--   DICOM Object Catalog Section Narrative  --&gt;
+  &lt;<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section">section</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.title">title</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;DICOM Object Catalog Section&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.code">code</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;urn:oid:1.2.840.10008.2.16.4&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;121181&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;DICOM Object Catalog&quot;/&gt;
+      &lt;/coding&gt;
+    &lt;/code&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.text">text</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+      &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+                &lt;p&gt;Computed Radiography Image Storage&lt;/p&gt;
+            &lt;/div&gt;
+    &lt;/text&gt;
+  &lt;/section&gt;
+&lt;!--   Indications for Procedure Section Narrative  --&gt;
+  &lt;<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section">section</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.title">title</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Indications for Procedure Section&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.code">code</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;urn:oid:1.2.840.10008.2.16.4&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;121109&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Indications for Procedure&quot;/&gt;
+      &lt;/coding&gt;
+    &lt;/code&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.text">text</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+      &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+                &lt;p&gt;Suspected lung tumor&lt;/p&gt;
+            &lt;/div&gt;
+    &lt;/text&gt;
+  &lt;/section&gt;
+&lt;/Composition&gt;</pre>

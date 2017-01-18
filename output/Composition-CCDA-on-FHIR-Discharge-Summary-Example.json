@@ -1,0 +1,495 @@
+{
+  "resourceType": "Composition",
+  "id": "CCDA-on-FHIR-Discharge-Summary-Example",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2016-06-15T08:16:14Z",
+    "profile": [
+      "http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Discharge-Summary"
+    ]
+  },
+  "language": "en-US",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <p>Discharge Summary document for Henry Jones</p>\n            <p>Managed by Community Health and Hospitals</p>\n        </div>"
+  },
+  "identifier": {
+    "system": "http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Discharge-Summary",
+    "value": "1"
+  },
+  "date": "2016-02-14T09:10:14Z",
+  "type": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "18842-5",
+        "display": "Discharge Summary"
+      }
+    ]
+  },
+  "title": "Discharge Summary(CCoF)",
+  "status": "preliminary",
+  "confidentiality": "N",
+  "subject": {
+    "reference": "http://fhir3.healthintersections.com.au/open/Patient/c493f2f2-28d5-49ab-90e8-9e8be341f7",
+    "display": "Henry Jones"
+  },
+  "author": [
+    {
+      "reference": "http://fhir3.healthintersections.com.au/open/Practitioner/2679baa7-5dac-4d22-81ae-daded84500",
+      "display": "Adam Everyman, MD"
+    }
+  ],
+  "custodian": {
+    "reference": "http://fhir3.healthintersections.com.au/open/Organization/1213e1ae-afc2-4a7c-8ed3-43b7a4e3d7",
+    "display": "Community Health and Hospitals"
+  },
+  "section": [
+    {
+      "title": "Allergies and Intolerances Section",
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "48765-2",
+            "display": "Allergies and adverse reactions"
+          }
+        ]
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <table>\n                    <tr>\n                        <td>\n                            <b>Substance</b>\n                        </td>\n                        <td>\n                            <b>Overall Severity</b>\n                        </td>\n                        <td>\n                            <b>Reaction</b>\n                        </td>\n                        <td>\n                            <b>Reaction Severity</b>\n                        </td>\n                        <td>\n                            <b>Status</b>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td>Cashew Nut</td>\n                        <td>Severe</td>\n                        <td>Anaphylactic reaction</td>\n                        <td>Mild</td>\n                        <td>Active</td>\n                    </tr>\n                </table>\n            </div>"
+      },
+      "mode": "snapshot",
+      "orderedBy": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/list-order",
+            "code": "event-date",
+            "display": "Sorted by Event Date"
+          }
+        ]
+      }
+    },
+    {
+      "title": "Chief Complaint and Reason for Visit Section",
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "46239-0",
+            "display": "Chief complaint and reason for visit"
+          }
+        ]
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <p>Cramping, bloating, and constipation.</p>\n            </div>"
+      }
+    },
+    {
+      "title": "Chief Complaint Section",
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "10154-3",
+            "display": "Chief complaint"
+          }
+        ]
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <p>Dark Stools</p>\n            </div>"
+      }
+    },
+    {
+      "title": "Reason for Visit Section",
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "29299-5",
+            "display": "Reason for visit"
+          }
+        ]
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <p>Tenderness of lower abdomen</p>\n            </div>"
+      }
+    },
+    {
+      "title": "Admission Diagnosis Section",
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "46241-6",
+            "display": "Hospital admission diagnosis"
+          }
+        ]
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <p>Appendicitis</p>\n            </div>"
+      }
+    },
+    {
+      "title": "Admission Medications Section",
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "42346-7",
+            "display": "Medications on admission"
+          }
+        ]
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <table>\n                    <tr>\n                        <td>\n                            <b>Medication</b>\n                        </td>\n                        <td>\n                            <b>Directions</b>\n                        </td>\n                        <td>\n                            <b>Start Date</b>\n                        </td>\n                        <td>\n                            <b>Status</b>\n                        </td>\n                        <td>\n                            <b>Indications</b>\n                        </td>\n                        <td>\n                            <b>Fill Instructions</b>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td>Pepcid Complete (MAGNESIUM HYDROXIDE0</td>\n                        <td>Chew one tablet completely and swallow as needed </td>\n                        <td>20151029</td>\n                        <td>Active</td>\n                        <td>Bloating</td>\n                        <td>Generic substitution allowed</td>\n                    </tr>\n                </table>\n            </div>"
+      }
+    },
+    {
+      "title": "History of Past Illness Section",
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "11348-0",
+            "display": "History of past illness"
+          }
+        ]
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <table>\n                    <tr>\n                        <td>\n                            <b>Problem Name</b>\n                        </td>\n                        <td>\n                            <b>Type</b>\n                        </td>\n                        <td>\n                            <b>Onset Date</b>\n                        </td>\n                        <td>\n                            <b>Abatement Date</b>\n                        </td>\n                        <td>\n                            <b>Status</b>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td>Fever</td>\n                        <td>Condition</td>\n                        <td>2016-04-01</td>\n                        <td>2016-04-14</td>\n                        <td>Complete</td>\n                    </tr>\n                </table>\n            </div>"
+      }
+    },
+    {
+      "title": "History of Present Illness Section",
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "10164-2",
+            "display": "History of present illness"
+          }
+        ]
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <p>This patient was only recently discharged for a recurrent GI bleed as described below. </p>\n                <p>He presented to the ER today c/o a dark stool yesterday but a normal brown\n                    stool today. On exam he was hypotensive in the 80?s resolved after .... .... .... </p>\n                <p>Lab at discharge: Glucose 112, BUN 16, creatinine 1.1, electrolytes normal.\n                    H. pylori antibody pending. Admission hematocrit 16%, discharge hematocrit 29%. WBC\n                    7300, platelet count 256,000. Urinalysis normal. Urine culture: No growth. INR 1.1,\n                    PTT 40. </p>\n                <p>He was transfused with 6 units of packed red blood cells with .... .... .... </p>\n                <p>GI evaluation 12 September: Colonoscopy showed single red clot in .... ........ </p>\n            </div>"
+      }
+    },
+    {
+      "title": "Review of Systems Section",
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "10187-3",
+            "display": "Review of systems"
+          }
+        ]
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <p>Patient denies recent history of fever or malaise. Positive for weakness and\n                    shortness of breath. One episode of melena. No recent headaches. Positive for\n                    osteoarthritis in hips, knees and hands. </p>\n            </div>"
+      }
+    },
+    {
+      "title": "Family History Section",
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "10157-6",
+            "display": "History of family member diseases"
+          }
+        ]
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <table>\n                    <tr>\n                        <td>\n                            <b>Relationship</b>\n                        </td>\n                        <td>\n                            <b>Diagnosis</b>\n                        </td>\n                        <td>\n                            <b>Age at Onset</b>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td>Father</td>\n                        <td>Myocardial Infarction(cause of Death)</td>\n                        <td>57</td>\n                    </tr>\n                    <tr>\n                        <td>Father</td>\n                        <td>Diabetes</td>\n                        <td>40</td>\n                    </tr>\n                </table>\n            </div>"
+      }
+    },
+    {
+      "title": "Social History Section",
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "29762-2",
+            "display": "Social history"
+          }
+        ]
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <table>\n                    <tr>\n                        <td>\n                            <b>Social History Element</b>\n                        </td>\n                        <td>\n                            <b>Description</b>\n                        </td>\n                        <td>\n                            <b>Effective Dates</b>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td>Smoking</td>\n                        <td>1 pack tobacco per day</td>\n                        <td>2005/05/01 - 2010/02/28</td>\n                    </tr>\n                </table>\n            </div>"
+      },
+      "entry": [
+        {
+          "reference": "http://fhir3.healthintersections.com.au/open/Observation/4d0aba77-8fc0-4739-9ea6-b958c63378"
+        }
+      ]
+    },
+    {
+      "title": "Functional Status Section",
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "47420-5",
+            "display": "Functional status"
+          }
+        ]
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <table>\n                    <tr>\n                        <td>\n                            <b>Functional or Cognitive Finding</b>\n                        </td>\n                        <td>\n                            <b>Observation</b>\n                        </td>\n                        <td>\n                            <b>Observation Date</b>\n                        </td>\n                        <td>\n                            <b>Condition Status</b>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td>Ambulation (Dependent to Independent</td>\n                        <td>Independently able</td>\n                        <td>2010/03/11</td>\n                        <td>Active</td>\n                    </tr>\n                    <tr>\n                        <td>Finding of Functional Performance and Activity</td>\n                        <td>Dyspnea</td>\n                        <td>2008/02/16</td>\n                        <td>Active</td>\n                    </tr>\n                    <tr>\n                        <td>Cognitive Function Finding</td>\n                        <td>Memory Impairment</td>\n                        <td>2014/04/29</td>\n                        <td>Active</td>\n                    </tr>\n                </table>\n            </div>"
+      }
+    },
+    {
+      "title": "Hospital Course Section",
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "8648-8",
+            "display": "Hospital course"
+          }
+        ]
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <p>Following a colonoscopy, the patient was admitted and started on Lovenox and\n                    nitroglycerin paste. The patient had serial cardiac enzymes and was ruled out for\n                    myocardial infarction. The patient underwent a dual isotope stress test. There was no\n                    evidence of reversible ischemia on the Cardiolite scan. The patient has been ambulated.\n                    The patient had a Holter monitor placed but the report is not available at this time.\n                    The patient has remained hemodynamically stable. Will discharge.</p>\n            </div>"
+      }
+    },
+    {
+      "title": "Hospital Consultations Section",
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "18841-7",
+            "display": "Hospital consultations"
+          }
+        ]
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <p>listType=&quot;ordered&quot;</p>\n                <p>Gastroenterology</p>\n                <p>Cardiology</p>\n                <p>Dietitian</p>\n            </div>"
+      }
+    },
+    {
+      "title": "Plan of Treatment Section",
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "18776-5",
+            "display": "Plan of treatment"
+          }
+        ]
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <table>\n                    <tr>\n                        <td>\n                            <b>Planned Activity</b>\n                        </td>\n                        <td>\n                            <b>Period</b>\n                        </td>\n                        <td>\n                            <b>Status</b>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td>Colonoscopy</td>\n                        <td>2010/08/16 - 2010/08/16</td>\n                        <td>Completed</td>\n                    </tr>\n                    <tr>\n                        <td>Recommendation to Exercise</td>\n                        <td>2015/10/29</td>\n                        <td>Ongoing</td>\n                    </tr>\n                </table>\n            </div>"
+      }
+    },
+    {
+      "title": "Problem Section",
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "11450-4",
+            "display": "Problem list"
+          }
+        ]
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <table>\n                    <tr>\n                        <td>\n                            <b>Problem Name</b>\n                        </td>\n                        <td>\n                            <b>Type</b>\n                        </td>\n                        <td>\n                            <b>Onset Date</b>\n                        </td>\n                        <td>\n                            <b>Abatement Date</b>\n                        </td>\n                        <td>\n                            <b>Status</b>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td>Fever</td>\n                        <td>Condition</td>\n                        <td>2016-04-01</td>\n                        <td>2016-04-14</td>\n                        <td>Complete</td>\n                    </tr>\n                </table>\n            </div>"
+      }
+    },
+    {
+      "title": "Procedures Section",
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "47519-4",
+            "display": "History of procedures"
+          }
+        ]
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <table>\n                    <tr>\n                        <td>\n                            <b>Procedure Name</b>\n                        </td>\n                        <td>\n                            <b>Body Site</b>\n                        </td>\n                        <td>\n                            <b>Performer</b>\n                        </td>\n                        <td>\n                            <b>Date Performed</b>\n                        </td>\n                        <td>\n                            <b>Reason</b>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td>Appendectomy (Procedure)</td>\n                        <td>Abdomen</td>\n                        <td>Dr. Adam Everyman</td>\n                        <td>20160405</td>\n                        <td>Generalized abdominal pain 24 hours. Localized in RIF with rebound and guarding</td>\n                    </tr>\n                </table>\n            </div>"
+      },
+      "entry": [
+        {
+          "reference": "http://fhir3.healthintersections.com.au/open/Procedure/62735e39-bc54-4636-b47e-9e3e5709ae"
+        }
+      ]
+    },
+    {
+      "title": "Discharge Diagnosis Section",
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "11535-2",
+            "display": " Hospital discharge diagnosis"
+          }
+        ]
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <p>Diverticula of intestine</p>\n            </div>"
+      }
+    },
+    {
+      "title": "Discharge Medications Section (entries optional)",
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "10183-2",
+            "display": "Hospital discharge medications"
+          }
+        ]
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <table>\n                    <tr>\n                        <td>\n                            <b>Medication</b>\n                        </td>\n                        <td>\n                            <b>Directions</b>\n                        </td>\n                        <td>\n                            <b>Start Date</b>\n                        </td>\n                        <td>\n                            <b>Status</b>\n                        </td>\n                        <td>\n                            <b>Indications</b>\n                        </td>\n                        <td>\n                            <b>Fill Instructions</b>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td>Proventil HFA</td>\n                        <td>Inhalant solution - 2 puffs QID PRN wheezing</td>\n                        <td>20151029</td>\n                        <td>Active</td>\n                        <td>Pneumonia</td>\n                        <td>Generic substitution allowed</td>\n                    </tr>\n                </table>\n            </div>"
+      }
+    },
+    {
+      "title": "Discharge Medications Section (entries required)",
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "10183-2",
+            "display": "Hospital discharge medications"
+          }
+        ]
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <table>\n                    <tr>\n                        <td>\n                            <b>Medication</b>\n                        </td>\n                        <td>\n                            <b>Directions</b>\n                        </td>\n                        <td>\n                            <b>Start Date</b>\n                        </td>\n                        <td>\n                            <b>Status</b>\n                        </td>\n                        <td>\n                            <b>Indications</b>\n                        </td>\n                        <td>\n                            <b>Fill Instructions</b>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td>Acetaminophen Tab 325 mg</td>\n                        <td>Take 2 tablet(s) every four hours if needed</td>\n                        <td>20151029</td>\n                        <td>Active</td>\n                        <td>Pain management</td>\n                        <td>Generic substitution allowed</td>\n                    </tr>\n                </table>\n            </div>"
+      }
+    },
+    {
+      "title": "Hospital Discharge Instructions Section",
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "8653-8",
+            "display": "Hospital discharge instructions"
+          }
+        ]
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <p>Take all of your prescription medication as directed. </p>\n                <p>Make an appointment with your doctor to be seen two weeks from the date of your procedure. </p>\n                <p>You may feel slightly bloated after the procedure because of air that was\n                    introduced during the examination. </p>\n                <p> Call your physician if you notice: \n                    <br/> Bleeding or black stools. \n                    <br/>\n                    Abdominal pain. \n                    <br/> Fever or chills. \n                    <br/> Nausea or vomiting. \n                    <br/> Any unusual\n                    pain or problem. \n                    <br/> Pain or redness at the site where the intravenous needle was\n                    placed. \n                    <br/>\n                </p>\n                <p>Do not drink alcohol for 24 hours. Alcohol amplifies the effect of the sedatives given. </p>\n                <p>Do not drive or operate machinery for 24 hours.</p>\n            </div>"
+      }
+    },
+    {
+      "title": "Hospital Discharge Physical Section",
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "10184-0",
+            "display": "Hospital discharge physical"
+          }
+        ]
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <p>GENERAL: Well-developed, slightly obese man. </p>\n                <p>NECK: Supple, with no jugular venous distension.</p>\n                <p>HEART: Intermittent tachycardia without murmurs or gallops. </p>\n                <p>PULMONARY: Decreased breath sounds, but no clear-cut rales or wheezes.</p>\n                <p>EXTREMITIES: Free of edema.</p>\n            </div>"
+      }
+    },
+    {
+      "title": "Hospital Discharge Studies Section",
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "11493-4",
+            "display": "Hospital discharge studies summary"
+          }
+        ]
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <table border=\"1\" width=\"100%\">\n                    <thead>\n                        <tr>\n                            <th>Laboratory Information</th>\n                            <th>Chemistries and drug levels</th>\n                        </tr>\n                    </thead>\n                    <tbody>\n                        <tr>\n                            <td>Potasium</td>\n                            <td>4.0</td>\n                        </tr>\n                        <tr>\n                            <td>NA (135-145meq/l)</td>\n                            <td>140</td>\n                        </tr>\n                    </tbody>\n                </table>\n                <br/>\n                <table border=\"1\" width=\"100%\">\n                    <thead>\n                        <tr>\n                            <th>Other Tests</th>\n                            <th>Results</th>\n                        </tr>\n                    </thead>\n                    <tbody>\n                        <tr>\n                            <td>EKG</td>\n                            <td>Sinus rhythm without acute changes.</td>\n                        </tr>\n                    </tbody>\n                </table>\n            </div>"
+      }
+    },
+    {
+      "title": "Immunizations Section",
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "11369-6",
+            "display": "History of immunization"
+          }
+        ]
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <table>\n                    <tr>\n                        <td>\n                            <b>Vaccine</b>\n                        </td>\n                        <td>\n                            <b>Date</b>\n                        </td>\n                        <td>\n                            <b>Status</b>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td>Fluvax (Influenza)</td>\n                        <td>2016-04-05</td>\n                        <td>Completed</td>\n                    </tr>\n                </table>\n            </div>"
+      },
+      "entry": [
+        {
+          "reference": "http://fhir3.healthintersections.com.au/open/Immunization/de43e197-62fb-4337-81bd-8523b9a8af"
+        }
+      ]
+    },
+    {
+      "title": " Nutrition Section",
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "61144-2",
+            "display": "Diet and nutrition"
+          }
+        ]
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <table>\n                    <tr>\n                        <td>\n                            <b>Date</b>\n                        </td>\n                        <td>\n                            <b>Nutritional Status</b>\n                        </td>\n                        <td>\n                            <b>Diet</b>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td>2005/12/29</td>\n                        <td>Well nourished</td>\n                        <td>Low sodium diet, excessive carbohydrate</td>\n                    </tr>\n                    <tr>\n                        <td>2010/05/26</td>\n                        <td>Slight dehydration</td>\n                        <td>High protein, low fibre</td>\n                    </tr>\n                </table>\n            </div>"
+      }
+    },
+    {
+      "title": "Vital Signs Section",
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "8716-3",
+            "display": "Vital signs"
+          }
+        ]
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <table>\n                    <tr>\n                        <td>\n                            <b>Vital Sign</b>\n                        </td>\n                        <td>\n                            <b>Date</b>\n                        </td>\n                        <td>\n                            <b>Value</b>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td>Temperature</td>\n                        <td>2016/04/05</td>\n                        <td>39 Degrees Celcius</td>\n                    </tr>\n                </table>\n            </div>"
+      },
+      "entry": [
+        {
+          "reference": "http://fhir3.healthintersections.com.au/open/Observation/bc96946f-c13f-4a7c-a396-92f8523763"
+        }
+      ]
+    }
+  ]
+}

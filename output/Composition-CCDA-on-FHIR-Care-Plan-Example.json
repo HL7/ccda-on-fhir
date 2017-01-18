@@ -1,0 +1,154 @@
+{
+  "resourceType": "Composition",
+  "id": "CCDA-on-FHIR-Care-Plan-Example",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2016-06-15T08:16:14Z",
+    "profile": [
+      "http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Care-Plan"
+    ]
+  },
+  "language": "en-US",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <p>Care Plan document for Henry Jones</p>\n            <p>Managed by Community Health and Hospitals</p>\n        </div>"
+  },
+  "identifier": {
+    "system": "http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Care-Plan",
+    "value": "1"
+  },
+  "date": "2016-03-22T09:10:14Z",
+  "type": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "52521-2",
+        "display": "Overall Plan of Care/Advance Care Directives"
+      }
+    ]
+  },
+  "title": "Care Plan Example",
+  "status": "preliminary",
+  "confidentiality": "N",
+  "subject": {
+    "reference": "http://fhir3.healthintersections.com.au/open/Patient/c493f2f2-28d5-49ab-90e8-9e8be341f7",
+    "display": "Henry Jones"
+  },
+  "author": [
+    {
+      "reference": "http://fhir3.healthintersections.com.au/open/Practitioner/2679baa7-5dac-4d22-81ae-daded84500",
+      "display": "Adam Everyman, MD"
+    }
+  ],
+  "attester": [
+    {
+      "mode": [
+        "legal"
+      ],
+      "time": "2012-01-04T09:10:14Z",
+      "party": {
+        "reference": "http://fhir3.healthintersections.com.au/open/Practitioner/2679baa7-5dac-4d22-81ae-daded84500",
+        "display": "Adam Everyman, MD"
+      }
+    }
+  ],
+  "custodian": {
+    "reference": "http://fhir3.healthintersections.com.au/open/Organization/1213e1ae-afc2-4a7c-8ed3-43b7a4e3d7",
+    "display": "Community Health and Hospitals"
+  },
+  "event": [
+    {
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "73761001",
+              "display": "Colonoscopy"
+            }
+          ]
+        }
+      ],
+      "period": {
+        "start": "2015-11-18",
+        "end": "2015-12-12"
+      }
+    }
+  ],
+  "section": [
+    {
+      "title": "Health Concerns Section",
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "75310-3",
+            "display": "Health concerns document"
+          }
+        ]
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <table>\n                    <tr>\n                        <td>\n                            <b>Concern</b>\n                        </td>\n                        <td>\n                            <b>Status</b>\n                        </td>\n                        <td>\n                            <b>Date</b>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td>Current every day smoker</td>\n                        <td>Active</td>\n                        <td>Concern from June 16, 2015</td>\n                    </tr>\n                    <tr>\n                        <td>Respiratory insufficiency</td>\n                        <td>Completed</td>\n                        <td>Concern from June 13, 2015</td>\n                    </tr>\n                    <tr>\n                        <td>Pneumonia</td>\n                        <td>Completed</td>\n                        <td>June 16, 2015</td>\n                    </tr>\n                </table>\n            </div>"
+      },
+      "mode": "snapshot",
+      "orderedBy": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/list-order",
+            "code": "event-date",
+            "display": "Sorted by Event Date"
+          }
+        ]
+      }
+    },
+    {
+      "title": "Goals Section",
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "61146-7",
+            "display": "Goals"
+          }
+        ]
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <table>\n                    <tr>\n                        <td>\n                            <b>Goal</b>\n                        </td>\n                        <td>\n                            <b>Value</b>\n                        </td>\n                        <td>\n                            <b>Date</b>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td>Pulse oximetry</td>\n                        <td>92%</td>\n                        <td>September 2, 2015</td>\n                    </tr>\n                </table>\n            </div>"
+      }
+    },
+    {
+      "title": "Interventions Section",
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "62387-6",
+            "display": "Interventions provided"
+          }
+        ]
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <table>\n                    <tr>\n                        <td>\n                            <b>Planned Intervention</b>\n                        </td>\n                        <td>\n                            <b>Status</b>\n                        </td>\n                        <td>\n                            <b>Date</b>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td>Elevate head of bed</td>\n                        <td>active</td>\n                        <td>September 2, 2015</td>\n                    </tr>\n                    <tr>\n                        <td>Oxygen administration by nasal cannula</td>\n                        <td>active</td>\n                        <td>September 1, 2015</td>\n                    </tr>\n                    <tr>\n                        <td>pulse oximetry monitoring</td>\n                        <td>active</td>\n                        <td>September 3, 2015</td>\n                    </tr>\n                </table>\n            </div>"
+      }
+    },
+    {
+      "title": "Health Status Evaluations and Outcomes Section",
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "11383-7",
+            "display": "Patient problem outcome"
+          }
+        ]
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <table>\n                    <tr>\n                        <td>\n                            <b>Item</b>\n                        </td>\n                        <td>\n                            <b>Outcome</b>\n                        </td>\n                        <td>\n                            <b>Date</b>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td>Pulse oximetry</td>\n                        <td>95%</td>\n                        <td>August 6, 2015</td>\n                    </tr>\n                </table>\n            </div>"
+      }
+    }
+  ]
+}

@@ -1,0 +1,439 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/ccda/ValueSet/2.16.840.1.113883.1.11.20.2.3> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "2.16.840.1.113883.1.11.20.2.3"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>Value Set Contents</h3><p>This value set contains 45 concepts</p><p>All codes from system <code>http://loinc.org</code></p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a name=\"http---loinc.org-57133-1\"> </a>57133-1</td><td>Referral note</td></tr><tr><td><a name=\"http---loinc.org-57170-3\"> </a>57170-3</td><td>Cardiovascular disease Referral note</td></tr><tr><td><a name=\"http---loinc.org-57178-6\"> </a>57178-6</td><td>Critical Care Medicine Referral note</td></tr><tr><td><a name=\"http---loinc.org-57134-9\"> </a>57134-9</td><td>Dentistry Referral note</td></tr><tr><td><a name=\"http---loinc.org-57135-6\"> </a>57135-6</td><td>Dermatology Referral note</td></tr><tr><td><a name=\"http---loinc.org-57136-4\"> </a>57136-4</td><td>Diabetology Referral note</td></tr><tr><td><a name=\"http---loinc.org-57137-2\"> </a>57137-2</td><td>Endocrinology Referral note</td></tr><tr><td><a name=\"http---loinc.org-57138-0\"> </a>57138-0</td><td>Gastroenterology Referral note</td></tr><tr><td><a name=\"http---loinc.org-57139-8\"> </a>57139-8</td><td>General medicine Referral note</td></tr><tr><td><a name=\"http---loinc.org-57171-1\"> </a>57171-1</td><td>Geriatric medicine Referral note</td></tr><tr><td><a name=\"http---loinc.org-57141-4\"> </a>57141-4</td><td>Infectious disease Referral note</td></tr><tr><td><a name=\"http---loinc.org-57142-2\"> </a>57142-2</td><td>Kinesiotherapy Referral note</td></tr><tr><td><a name=\"http---loinc.org-57143-0\"> </a>57143-0</td><td>Mental health Referral note</td></tr><tr><td><a name=\"http---loinc.org-57144-8\"> </a>57144-8</td><td>Nephrology Referral note</td></tr><tr><td><a name=\"http---loinc.org-57146-3\"> </a>57146-3</td><td>Neurological surgery Referral note</td></tr><tr><td><a name=\"http---loinc.org-57145-5\"> </a>57145-5</td><td>Neurology Referral note</td></tr><tr><td><a name=\"http---loinc.org-57173-7\"> </a>57173-7</td><td>Nutrition and dietetics Referral note</td></tr><tr><td><a name=\"http---loinc.org-57179-4\"> </a>57179-4</td><td>Obstetrics and Gynecology Referral note</td></tr><tr><td><a name=\"http---loinc.org-57147-1\"> </a>57147-1</td><td>Occupational health Referral note</td></tr><tr><td><a name=\"http---loinc.org-57148-9\"> </a>57148-9</td><td>Occupational therapy Referral note</td></tr><tr><td><a name=\"http---loinc.org-57149-7\"> </a>57149-7</td><td>Oncology Referral note</td></tr><tr><td><a name=\"http---loinc.org-57150-5\"> </a>57150-5</td><td>Ophthalmology Referral note</td></tr><tr><td><a name=\"http---loinc.org-57151-3\"> </a>57151-3</td><td>Optometry Referral note</td></tr><tr><td><a name=\"http---loinc.org-57174-5\"> </a>57174-5</td><td>Oral surgery Referral note</td></tr><tr><td><a name=\"http---loinc.org-57175-2\"> </a>57175-2</td><td>Orthopedic surgery Referral note</td></tr><tr><td><a name=\"http---loinc.org-57176-0\"> </a>57176-0</td><td>Otolaryngology Referral note</td></tr><tr><td><a name=\"http---loinc.org-57152-1\"> </a>57152-1</td><td>Pharmacy Referral note</td></tr><tr><td><a name=\"http---loinc.org-57153-9\"> </a>57153-9</td><td>Physical medicine and rehabilitation Referral note</td></tr><tr><td><a name=\"http---loinc.org-57154-7\"> </a>57154-7</td><td>Physical therapy Referral note</td></tr><tr><td><a name=\"http---loinc.org-57155-4\"> </a>57155-4</td><td>Plastic surgery Referral note</td></tr><tr><td><a name=\"http---loinc.org-57156-2\"> </a>57156-2</td><td>Podiatry Referral note</td></tr><tr><td><a name=\"http---loinc.org-57157-0\"> </a>57157-0</td><td>Psychiatry Referral note</td></tr><tr><td><a name=\"http---loinc.org-57158-8\"> </a>57158-8</td><td>Psychology Referral note</td></tr><tr><td><a name=\"http---loinc.org-57177-8\"> </a>57177-8</td><td>Pulmonary disease Referral note</td></tr><tr><td><a name=\"http---loinc.org-57159-6\"> </a>57159-6</td><td>Radiation oncology Referral note</td></tr><tr><td><a name=\"http---loinc.org-57160-4\"> </a>57160-4</td><td>Recreational therapy Referral note</td></tr><tr><td><a name=\"http---loinc.org-57161-2\"> </a>57161-2</td><td>Rehabilitation Referral note</td></tr><tr><td><a name=\"http---loinc.org-57162-0\"> </a>57162-0</td><td>Respiratory therapy Referral note</td></tr><tr><td><a name=\"http---loinc.org-57163-8\"> </a>57163-8</td><td>Rheumatology Referral note</td></tr><tr><td><a name=\"http---loinc.org-57164-6\"> </a>57164-6</td><td>Social work Referral note</td></tr><tr><td><a name=\"http---loinc.org-57166-1\"> </a>57166-1</td><td>Surgery Referral note</td></tr><tr><td><a name=\"http---loinc.org-57167-9\"> </a>57167-9</td><td>Thoracic surgery Referral note</td></tr><tr><td><a name=\"http---loinc.org-57168-7\"> </a>57168-7</td><td>Urology Referral note</td></tr><tr><td><a name=\"http---loinc.org-57169-5\"> </a>57169-5</td><td>Vascular surgery Referral note</td></tr><tr><td><a name=\"http---loinc.org-69438-0\"> </a>69438-0</td><td>Forensic medicine Referral note</td></tr></table></div>"
+  ];
+  fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/ccda/ValueSet/2.16.840.1.113883.1.11.20.2.3"];
+  fhir:ValueSet.name [ fhir:value "ReferralDocumentType"];
+  fhir:ValueSet.status [ fhir:value "active"];
+  fhir:ValueSet.date [ fhir:value "2017-01-04T23:36:09-05:00"^^xsd:dateTime];
+  fhir:ValueSet.description [ fhir:value "A referral note provides a consulting physician specified patient information about the patient referred. Specific URL Pending"];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "57133-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Referral note" ]
+       ], [
+         fhir:index 1;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "57170-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cardiovascular disease Referral note" ]
+       ], [
+         fhir:index 2;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "57178-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Critical Care Medicine Referral note" ]
+       ], [
+         fhir:index 3;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "57134-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dentistry Referral note" ]
+       ], [
+         fhir:index 4;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "57135-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dermatology Referral note" ]
+       ], [
+         fhir:index 5;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "57136-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Diabetology Referral note" ]
+       ], [
+         fhir:index 6;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "57137-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Endocrinology Referral note" ]
+       ], [
+         fhir:index 7;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "57138-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Gastroenterology Referral note" ]
+       ], [
+         fhir:index 8;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "57139-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "General medicine Referral note" ]
+       ], [
+         fhir:index 9;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "57171-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Geriatric medicine Referral note" ]
+       ], [
+         fhir:index 10;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "57141-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Infectious disease Referral note" ]
+       ], [
+         fhir:index 11;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "57142-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Kinesiotherapy Referral note" ]
+       ], [
+         fhir:index 12;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "57143-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Mental health Referral note" ]
+       ], [
+         fhir:index 13;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "57144-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nephrology Referral note" ]
+       ], [
+         fhir:index 14;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "57146-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Neurological surgery Referral note" ]
+       ], [
+         fhir:index 15;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "57145-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Neurology Referral note" ]
+       ], [
+         fhir:index 16;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "57173-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nutrition and dietetics Referral note" ]
+       ], [
+         fhir:index 17;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "57179-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Obstetrics and Gynecology Referral note" ]
+       ], [
+         fhir:index 18;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "57147-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Occupational health Referral note" ]
+       ], [
+         fhir:index 19;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "57148-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Occupational therapy Referral note" ]
+       ], [
+         fhir:index 20;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "57149-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Oncology Referral note" ]
+       ], [
+         fhir:index 21;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "57150-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ophthalmology Referral note" ]
+       ], [
+         fhir:index 22;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "57151-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Optometry Referral note" ]
+       ], [
+         fhir:index 23;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "57174-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Oral surgery Referral note" ]
+       ], [
+         fhir:index 24;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "57175-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Orthopedic surgery Referral note" ]
+       ], [
+         fhir:index 25;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "57176-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Otolaryngology Referral note" ]
+       ], [
+         fhir:index 26;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "57152-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pharmacy Referral note" ]
+       ], [
+         fhir:index 27;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "57153-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physical medicine and rehabilitation Referral note" ]
+       ], [
+         fhir:index 28;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "57154-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physical therapy Referral note" ]
+       ], [
+         fhir:index 29;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "57155-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Plastic surgery Referral note" ]
+       ], [
+         fhir:index 30;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "57156-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Podiatry Referral note" ]
+       ], [
+         fhir:index 31;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "57157-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Psychiatry Referral note" ]
+       ], [
+         fhir:index 32;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "57158-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Psychology Referral note" ]
+       ], [
+         fhir:index 33;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "57177-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pulmonary disease Referral note" ]
+       ], [
+         fhir:index 34;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "57159-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Radiation oncology Referral note" ]
+       ], [
+         fhir:index 35;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "57160-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Recreational therapy Referral note" ]
+       ], [
+         fhir:index 36;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "57161-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Rehabilitation Referral note" ]
+       ], [
+         fhir:index 37;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "57162-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory therapy Referral note" ]
+       ], [
+         fhir:index 38;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "57163-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Rheumatology Referral note" ]
+       ], [
+         fhir:index 39;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "57164-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Social work Referral note" ]
+       ], [
+         fhir:index 40;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "57166-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Surgery Referral note" ]
+       ], [
+         fhir:index 41;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "57167-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Thoracic surgery Referral note" ]
+       ], [
+         fhir:index 42;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "57168-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Urology Referral note" ]
+       ], [
+         fhir:index 43;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "57169-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Vascular surgery Referral note" ]
+       ], [
+         fhir:index 44;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "69438-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Forensic medicine Referral note" ]
+       ]
+     ]
+  ];
+  fhir:ValueSet.expansion [
+     fhir:ValueSet.expansion.identifier [ fhir:value "urn:uuid:9001d67a-d12a-4384-a7ea-5803398f3019" ];
+     fhir:ValueSet.expansion.timestamp [ fhir:value "2016-12-03T17:27:13.8455709-05:00"^^xsd:dateTime ];
+     fhir:ValueSet.expansion.contains [
+       fhir:index 0;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "57133-1" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Referral note" ]
+     ], [
+       fhir:index 1;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "57170-3" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Cardiovascular disease Referral note" ]
+     ], [
+       fhir:index 2;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "57178-6" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Critical Care Medicine Referral note" ]
+     ], [
+       fhir:index 3;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "57134-9" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Dentistry Referral note" ]
+     ], [
+       fhir:index 4;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "57135-6" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Dermatology Referral note" ]
+     ], [
+       fhir:index 5;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "57136-4" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Diabetology Referral note" ]
+     ], [
+       fhir:index 6;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "57137-2" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Endocrinology Referral note" ]
+     ], [
+       fhir:index 7;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "57138-0" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Gastroenterology Referral note" ]
+     ], [
+       fhir:index 8;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "57139-8" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "General medicine Referral note" ]
+     ], [
+       fhir:index 9;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "57171-1" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Geriatric medicine Referral note" ]
+     ], [
+       fhir:index 10;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "57141-4" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Infectious disease Referral note" ]
+     ], [
+       fhir:index 11;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "57142-2" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Kinesiotherapy Referral note" ]
+     ], [
+       fhir:index 12;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "57143-0" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Mental health Referral note" ]
+     ], [
+       fhir:index 13;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "57144-8" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Nephrology Referral note" ]
+     ], [
+       fhir:index 14;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "57146-3" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Neurological surgery Referral note" ]
+     ], [
+       fhir:index 15;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "57145-5" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Neurology Referral note" ]
+     ], [
+       fhir:index 16;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "57173-7" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Nutrition and dietetics Referral note" ]
+     ], [
+       fhir:index 17;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "57179-4" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Obstetrics and Gynecology Referral note" ]
+     ], [
+       fhir:index 18;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "57147-1" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Occupational health Referral note" ]
+     ], [
+       fhir:index 19;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "57148-9" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Occupational therapy Referral note" ]
+     ], [
+       fhir:index 20;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "57149-7" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Oncology Referral note" ]
+     ], [
+       fhir:index 21;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "57150-5" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Ophthalmology Referral note" ]
+     ], [
+       fhir:index 22;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "57151-3" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Optometry Referral note" ]
+     ], [
+       fhir:index 23;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "57174-5" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Oral surgery Referral note" ]
+     ], [
+       fhir:index 24;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "57175-2" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Orthopedic surgery Referral note" ]
+     ], [
+       fhir:index 25;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "57176-0" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Otolaryngology Referral note" ]
+     ], [
+       fhir:index 26;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "57152-1" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Pharmacy Referral note" ]
+     ], [
+       fhir:index 27;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "57153-9" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Physical medicine and rehabilitation Referral note" ]
+     ], [
+       fhir:index 28;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "57154-7" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Physical therapy Referral note" ]
+     ], [
+       fhir:index 29;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "57155-4" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Plastic surgery Referral note" ]
+     ], [
+       fhir:index 30;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "57156-2" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Podiatry Referral note" ]
+     ], [
+       fhir:index 31;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "57157-0" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Psychiatry Referral note" ]
+     ], [
+       fhir:index 32;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "57158-8" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Psychology Referral note" ]
+     ], [
+       fhir:index 33;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "57177-8" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Pulmonary disease Referral note" ]
+     ], [
+       fhir:index 34;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "57159-6" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Radiation oncology Referral note" ]
+     ], [
+       fhir:index 35;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "57160-4" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Recreational therapy Referral note" ]
+     ], [
+       fhir:index 36;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "57161-2" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Rehabilitation Referral note" ]
+     ], [
+       fhir:index 37;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "57162-0" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Respiratory therapy Referral note" ]
+     ], [
+       fhir:index 38;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "57163-8" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Rheumatology Referral note" ]
+     ], [
+       fhir:index 39;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "57164-6" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Social work Referral note" ]
+     ], [
+       fhir:index 40;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "57166-1" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Surgery Referral note" ]
+     ], [
+       fhir:index 41;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "57167-9" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Thoracic surgery Referral note" ]
+     ], [
+       fhir:index 42;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "57168-7" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Urology Referral note" ]
+     ], [
+       fhir:index 43;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "57169-5" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Vascular surgery Referral note" ]
+     ], [
+       fhir:index 44;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "69438-0" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Forensic medicine Referral note" ]
+     ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

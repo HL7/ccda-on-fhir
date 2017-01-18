@@ -1,0 +1,589 @@
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<!-- instance template base -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>C-CDA on FHIR</title>
+  
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  
+
+  <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet"/>
+  <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="assets/js/html5shiv.js"></script>
+  <script src="assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+
+</head>
+<body>
+
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+  <div class="container">  <!-- container -->
+   <a id="logo" no-external="true" href="http://hl7.org/fhir"><img alt="logo fhir" src="assets/images/fhir-logo-www.png"/> </a>
+   <div id="hl7-status">
+    <b>Current Build</b> 
+   </div>
+
+   <div id="hl7-nav">
+     <a id="hl7-logo" no-external="true" href="http://www.hl7.org">
+     <img height="50" alt="visit the hl7 website" width="42" src="assets/images/hl7-logo.png"/>
+    </a>
+   </div>
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a></div>
+  </div>
+  <div class="container">  <!-- container -->
+ </div></div>  <!-- /segment-header -->
+
+ <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+  <div id="stripe"> </div>
+  <div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+
+   <nav class="navbar navbar-inverse">
+    <div class="container">
+     <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+     </button>
+      <a class="navbar-brand hidden" href="http://hl7.org/fhir/2017Janindex.html">FHIR</a>
+     <div class="nav-collapse collapse navbar-inverse-collapse">
+      <ul class="nav navbar-nav">
+              
+        <li><a href="http://hl7.org/fhir/2017Janindex.html">Home</a></li>
+        <li><a href="http://hl7.org/fhir/2017Jandocumentation.html">Documentation</a></li>
+        <li><a href="http://hl7.org/fhir/2017Janmodules.html">Modules</a></li>
+        <li><a href="http://hl7.org/fhir/2017Janresourcelist.html">Resources</a></li>
+        <li><a href="http://hl7.org/fhir/2017Janprofilelist.html">Profiles</a></li>
+        <li><a href="http://hl7.org/fhir/2017Janextensibility-registry.html">Extensions</a></li>
+        <li><a href="http://hl7.org/fhir/2017Janoperationslist.html">Operations</a></li>
+        <li><a href="http://hl7.org/fhir/2017Janservicelist.html">Services</a></li>
+
+      </ul>
+     </div>  <!-- /.nav-collapse -->
+    </div>  <!-- /.container -->
+   </nav>  <!-- /.navbar -->
+
+  <!-- /HEADER CONTENT -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-navbar -->
+
+ <div id="segment-breadcrumb" class="segmnt">  <!-- segment-breadcrumb -->
+  <div class="container">  <!-- container -->
+   <ul class="breadcrumb">
+     <li title="C-CDA on FHIR"><a href="index.html"><b>C-CDA on FHIR</b></a></li>
+     <li><b> Details</b></li>
+   </ul>
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-breadcrumb -->
+
+ <div id="segment-content" class="segment">  <!-- segment-content -->
+ <div class="container">  <!-- container -->
+            <div class="row">
+             <div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+  
+<h2>ReferralDocumentType</h2>
+
+<pre class="xml">
+
+&lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet">ValueSet</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.id">id</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#id">value</a>=&quot;2.16.840.1.113883.1.11.20.2.3&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.text">text</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;h3&gt;Value Set Contents&lt;/h3&gt;&lt;p&gt;This value set contains 45 concepts&lt;/p&gt;&lt;p&gt;All codes from system &lt;code&gt;http://loinc.org&lt;/code&gt;&lt;/p&gt;&lt;table class=&quot;codes&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-57133-1&quot;&gt; &lt;/a&gt;57133-1&lt;/td&gt;&lt;td&gt;Referral note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-57170-3&quot;&gt; &lt;/a&gt;57170-3&lt;/td&gt;&lt;td&gt;Cardiovascular disease Referral note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-57178-6&quot;&gt; &lt;/a&gt;57178-6&lt;/td&gt;&lt;td&gt;Critical Care Medicine Referral note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-57134-9&quot;&gt; &lt;/a&gt;57134-9&lt;/td&gt;&lt;td&gt;Dentistry Referral note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-57135-6&quot;&gt; &lt;/a&gt;57135-6&lt;/td&gt;&lt;td&gt;Dermatology Referral note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-57136-4&quot;&gt; &lt;/a&gt;57136-4&lt;/td&gt;&lt;td&gt;Diabetology Referral note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-57137-2&quot;&gt; &lt;/a&gt;57137-2&lt;/td&gt;&lt;td&gt;Endocrinology Referral note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-57138-0&quot;&gt; &lt;/a&gt;57138-0&lt;/td&gt;&lt;td&gt;Gastroenterology Referral note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-57139-8&quot;&gt; &lt;/a&gt;57139-8&lt;/td&gt;&lt;td&gt;General medicine Referral note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-57171-1&quot;&gt; &lt;/a&gt;57171-1&lt;/td&gt;&lt;td&gt;Geriatric medicine Referral note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-57141-4&quot;&gt; &lt;/a&gt;57141-4&lt;/td&gt;&lt;td&gt;Infectious disease Referral note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-57142-2&quot;&gt; &lt;/a&gt;57142-2&lt;/td&gt;&lt;td&gt;Kinesiotherapy Referral note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-57143-0&quot;&gt; &lt;/a&gt;57143-0&lt;/td&gt;&lt;td&gt;Mental health Referral note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-57144-8&quot;&gt; &lt;/a&gt;57144-8&lt;/td&gt;&lt;td&gt;Nephrology Referral note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-57146-3&quot;&gt; &lt;/a&gt;57146-3&lt;/td&gt;&lt;td&gt;Neurological surgery Referral note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-57145-5&quot;&gt; &lt;/a&gt;57145-5&lt;/td&gt;&lt;td&gt;Neurology Referral note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-57173-7&quot;&gt; &lt;/a&gt;57173-7&lt;/td&gt;&lt;td&gt;Nutrition and dietetics Referral note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-57179-4&quot;&gt; &lt;/a&gt;57179-4&lt;/td&gt;&lt;td&gt;Obstetrics and Gynecology Referral note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-57147-1&quot;&gt; &lt;/a&gt;57147-1&lt;/td&gt;&lt;td&gt;Occupational health Referral note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-57148-9&quot;&gt; &lt;/a&gt;57148-9&lt;/td&gt;&lt;td&gt;Occupational therapy Referral note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-57149-7&quot;&gt; &lt;/a&gt;57149-7&lt;/td&gt;&lt;td&gt;Oncology Referral note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-57150-5&quot;&gt; &lt;/a&gt;57150-5&lt;/td&gt;&lt;td&gt;Ophthalmology Referral note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-57151-3&quot;&gt; &lt;/a&gt;57151-3&lt;/td&gt;&lt;td&gt;Optometry Referral note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-57174-5&quot;&gt; &lt;/a&gt;57174-5&lt;/td&gt;&lt;td&gt;Oral surgery Referral note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-57175-2&quot;&gt; &lt;/a&gt;57175-2&lt;/td&gt;&lt;td&gt;Orthopedic surgery Referral note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-57176-0&quot;&gt; &lt;/a&gt;57176-0&lt;/td&gt;&lt;td&gt;Otolaryngology Referral note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-57152-1&quot;&gt; &lt;/a&gt;57152-1&lt;/td&gt;&lt;td&gt;Pharmacy Referral note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-57153-9&quot;&gt; &lt;/a&gt;57153-9&lt;/td&gt;&lt;td&gt;Physical medicine and rehabilitation Referral note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-57154-7&quot;&gt; &lt;/a&gt;57154-7&lt;/td&gt;&lt;td&gt;Physical therapy Referral note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-57155-4&quot;&gt; &lt;/a&gt;57155-4&lt;/td&gt;&lt;td&gt;Plastic surgery Referral note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-57156-2&quot;&gt; &lt;/a&gt;57156-2&lt;/td&gt;&lt;td&gt;Podiatry Referral note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-57157-0&quot;&gt; &lt;/a&gt;57157-0&lt;/td&gt;&lt;td&gt;Psychiatry Referral note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-57158-8&quot;&gt; &lt;/a&gt;57158-8&lt;/td&gt;&lt;td&gt;Psychology Referral note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-57177-8&quot;&gt; &lt;/a&gt;57177-8&lt;/td&gt;&lt;td&gt;Pulmonary disease Referral note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-57159-6&quot;&gt; &lt;/a&gt;57159-6&lt;/td&gt;&lt;td&gt;Radiation oncology Referral note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-57160-4&quot;&gt; &lt;/a&gt;57160-4&lt;/td&gt;&lt;td&gt;Recreational therapy Referral note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-57161-2&quot;&gt; &lt;/a&gt;57161-2&lt;/td&gt;&lt;td&gt;Rehabilitation Referral note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-57162-0&quot;&gt; &lt;/a&gt;57162-0&lt;/td&gt;&lt;td&gt;Respiratory therapy Referral note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-57163-8&quot;&gt; &lt;/a&gt;57163-8&lt;/td&gt;&lt;td&gt;Rheumatology Referral note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-57164-6&quot;&gt; &lt;/a&gt;57164-6&lt;/td&gt;&lt;td&gt;Social work Referral note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-57166-1&quot;&gt; &lt;/a&gt;57166-1&lt;/td&gt;&lt;td&gt;Surgery Referral note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-57167-9&quot;&gt; &lt;/a&gt;57167-9&lt;/td&gt;&lt;td&gt;Thoracic surgery Referral note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-57168-7&quot;&gt; &lt;/a&gt;57168-7&lt;/td&gt;&lt;td&gt;Urology Referral note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-57169-5&quot;&gt; &lt;/a&gt;57169-5&lt;/td&gt;&lt;td&gt;Vascular surgery Referral note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-69438-0&quot;&gt; &lt;/a&gt;69438-0&lt;/td&gt;&lt;td&gt;Forensic medicine Referral note&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+  &lt;/text&gt;
+  &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.url">url</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/ccda/ValueSet/2.16.840.1.113883.1.11.20.2.3&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.name">name</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;ReferralDocumentType&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.status">status</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.date">date</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#dateTime">value</a>=&quot;2017-01-04T23:36:09-05:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.description">description</a>
+               <a href="http://hl7.org/fhir/2017Jan/datatypes.html#markdown">value</a>=&quot;A referral note provides a consulting physician specified patient information about the patient referred. Specific URL Pending&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose">compose</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include">include</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57133-1&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Referral note&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57170-3&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Cardiovascular disease Referral note&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57178-6&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Critical Care Medicine Referral note&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57134-9&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Dentistry Referral note&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57135-6&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Dermatology Referral note&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57136-4&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Diabetology Referral note&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57137-2&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Endocrinology Referral note&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57138-0&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Gastroenterology Referral note&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57139-8&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;General medicine Referral note&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57171-1&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Geriatric medicine Referral note&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57141-4&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Infectious disease Referral note&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57142-2&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Kinesiotherapy Referral note&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57143-0&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Mental health Referral note&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57144-8&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Nephrology Referral note&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57146-3&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Neurological surgery Referral note&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57145-5&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Neurology Referral note&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57173-7&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Nutrition and dietetics Referral note&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57179-4&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Obstetrics and Gynecology Referral note&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57147-1&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Occupational health Referral note&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57148-9&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Occupational therapy Referral note&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57149-7&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Oncology Referral note&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57150-5&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Ophthalmology Referral note&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57151-3&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Optometry Referral note&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57174-5&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Oral surgery Referral note&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57175-2&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Orthopedic surgery Referral note&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57176-0&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Otolaryngology Referral note&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57152-1&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Pharmacy Referral note&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57153-9&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Physical medicine and rehabilitation Referral note&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57154-7&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Physical therapy Referral note&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57155-4&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Plastic surgery Referral note&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57156-2&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Podiatry Referral note&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57157-0&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Psychiatry Referral note&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57158-8&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Psychology Referral note&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57177-8&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Pulmonary disease Referral note&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57159-6&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Radiation oncology Referral note&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57160-4&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Recreational therapy Referral note&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57161-2&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Rehabilitation Referral note&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57162-0&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Respiratory therapy Referral note&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57163-8&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Rheumatology Referral note&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57164-6&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Social work Referral note&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57166-1&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Surgery Referral note&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57167-9&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Thoracic surgery Referral note&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57168-7&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Urology Referral note&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57169-5&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Vascular surgery Referral note&quot;/&gt;
+      &lt;/concept&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept">concept</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;69438-0&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Forensic medicine Referral note&quot;/&gt;
+      &lt;/concept&gt;
+    &lt;/include&gt;
+  &lt;/compose&gt;
+  &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion">expansion</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.identifier">identifier</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;urn:uuid:9001d67a-d12a-4384-a7ea-5803398f3019&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.timestamp">timestamp</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#dateTime">value</a>=&quot;2016-12-03T17:27:13.8455709-05:00&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57133-1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Referral note&quot;/&gt;
+    &lt;/contains&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57170-3&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Cardiovascular disease Referral note&quot;/&gt;
+    &lt;/contains&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57178-6&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Critical Care Medicine Referral note&quot;/&gt;
+    &lt;/contains&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57134-9&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Dentistry Referral note&quot;/&gt;
+    &lt;/contains&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57135-6&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Dermatology Referral note&quot;/&gt;
+    &lt;/contains&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57136-4&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Diabetology Referral note&quot;/&gt;
+    &lt;/contains&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57137-2&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Endocrinology Referral note&quot;/&gt;
+    &lt;/contains&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57138-0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Gastroenterology Referral note&quot;/&gt;
+    &lt;/contains&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57139-8&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;General medicine Referral note&quot;/&gt;
+    &lt;/contains&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57171-1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Geriatric medicine Referral note&quot;/&gt;
+    &lt;/contains&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57141-4&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Infectious disease Referral note&quot;/&gt;
+    &lt;/contains&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57142-2&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Kinesiotherapy Referral note&quot;/&gt;
+    &lt;/contains&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57143-0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Mental health Referral note&quot;/&gt;
+    &lt;/contains&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57144-8&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Nephrology Referral note&quot;/&gt;
+    &lt;/contains&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57146-3&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Neurological surgery Referral note&quot;/&gt;
+    &lt;/contains&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57145-5&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Neurology Referral note&quot;/&gt;
+    &lt;/contains&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57173-7&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Nutrition and dietetics Referral note&quot;/&gt;
+    &lt;/contains&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57179-4&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Obstetrics and Gynecology Referral note&quot;/&gt;
+    &lt;/contains&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57147-1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Occupational health Referral note&quot;/&gt;
+    &lt;/contains&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57148-9&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Occupational therapy Referral note&quot;/&gt;
+    &lt;/contains&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57149-7&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Oncology Referral note&quot;/&gt;
+    &lt;/contains&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57150-5&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Ophthalmology Referral note&quot;/&gt;
+    &lt;/contains&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57151-3&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Optometry Referral note&quot;/&gt;
+    &lt;/contains&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57174-5&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Oral surgery Referral note&quot;/&gt;
+    &lt;/contains&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57175-2&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Orthopedic surgery Referral note&quot;/&gt;
+    &lt;/contains&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57176-0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Otolaryngology Referral note&quot;/&gt;
+    &lt;/contains&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57152-1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Pharmacy Referral note&quot;/&gt;
+    &lt;/contains&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57153-9&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Physical medicine and rehabilitation Referral note&quot;/&gt;
+    &lt;/contains&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57154-7&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Physical therapy Referral note&quot;/&gt;
+    &lt;/contains&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57155-4&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Plastic surgery Referral note&quot;/&gt;
+    &lt;/contains&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57156-2&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Podiatry Referral note&quot;/&gt;
+    &lt;/contains&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57157-0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Psychiatry Referral note&quot;/&gt;
+    &lt;/contains&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57158-8&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Psychology Referral note&quot;/&gt;
+    &lt;/contains&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57177-8&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Pulmonary disease Referral note&quot;/&gt;
+    &lt;/contains&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57159-6&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Radiation oncology Referral note&quot;/&gt;
+    &lt;/contains&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57160-4&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Recreational therapy Referral note&quot;/&gt;
+    &lt;/contains&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57161-2&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Rehabilitation Referral note&quot;/&gt;
+    &lt;/contains&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57162-0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Respiratory therapy Referral note&quot;/&gt;
+    &lt;/contains&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57163-8&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Rheumatology Referral note&quot;/&gt;
+    &lt;/contains&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57164-6&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Social work Referral note&quot;/&gt;
+    &lt;/contains&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57166-1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Surgery Referral note&quot;/&gt;
+    &lt;/contains&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57167-9&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Thoracic surgery Referral note&quot;/&gt;
+    &lt;/contains&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57168-7&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Urology Referral note&quot;/&gt;
+    &lt;/contains&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;57169-5&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Vascular surgery Referral note&quot;/&gt;
+    &lt;/contains&gt;
+    &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">value</a>=&quot;69438-0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">value</a>=&quot;Forensic medicine Referral note&quot;/&gt;
+    &lt;/contains&gt;
+  &lt;/expansion&gt;
+&lt;/ValueSet&gt;</pre>
+
+
+
+ </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+    <div id="segment-footer" class="segment">  <!-- segment-footer -->
+  <div class="container">  <!-- container -->
+   <div class="inner-wrapper">
+    <p>
+      &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.8.0-10514) generated on Wed, Jan 4, 2017 23:36-0500. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img style="text-align: baseline" src="external.png"/></a> |
+          <a style="color: #81BEF7" href="http://hl7.org/fhir/2017Janhistory.html">Version History</a> |
+          <a style="color: #81BEF7" href="http://hl7.org/fhir/2017Jantoc.html">Table of Contents</a> |
+          <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/2017Janlicense.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> |
+          <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change <img style="text-align: baseline" src="external.png"/></a>
+        </span>
+        </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->
+
+ <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-post-footer -->
+
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="dist/js/bootstrap.min.js"> </script>
+<script src="assets/js/respond.min.js"> </script>
+
+<script src="assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+
+</body>
+</html>
+
+

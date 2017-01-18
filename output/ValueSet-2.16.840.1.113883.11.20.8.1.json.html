@@ -1,0 +1,432 @@
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<!-- instance template base -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>C-CDA on FHIR</title>
+  
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  
+
+  <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet"/>
+  <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="assets/js/html5shiv.js"></script>
+  <script src="assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+
+</head>
+<body>
+
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+  <div class="container">  <!-- container -->
+   <a id="logo" no-external="true" href="http://hl7.org/fhir"><img alt="logo fhir" src="assets/images/fhir-logo-www.png"/> </a>
+   <div id="hl7-status">
+    <b>Current Build</b> 
+   </div>
+
+   <div id="hl7-nav">
+     <a id="hl7-logo" no-external="true" href="http://www.hl7.org">
+     <img height="50" alt="visit the hl7 website" width="42" src="assets/images/hl7-logo.png"/>
+    </a>
+   </div>
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a></div>
+  </div>
+  <div class="container">  <!-- container -->
+ </div></div>  <!-- /segment-header -->
+
+ <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+  <div id="stripe"> </div>
+  <div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+
+   <nav class="navbar navbar-inverse">
+    <div class="container">
+     <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+     </button>
+      <a class="navbar-brand hidden" href="http://hl7.org/fhir/2017Janindex.html">FHIR</a>
+     <div class="nav-collapse collapse navbar-inverse-collapse">
+      <ul class="nav navbar-nav">
+              
+        <li><a href="http://hl7.org/fhir/2017Janindex.html">Home</a></li>
+        <li><a href="http://hl7.org/fhir/2017Jandocumentation.html">Documentation</a></li>
+        <li><a href="http://hl7.org/fhir/2017Janmodules.html">Modules</a></li>
+        <li><a href="http://hl7.org/fhir/2017Janresourcelist.html">Resources</a></li>
+        <li><a href="http://hl7.org/fhir/2017Janprofilelist.html">Profiles</a></li>
+        <li><a href="http://hl7.org/fhir/2017Janextensibility-registry.html">Extensions</a></li>
+        <li><a href="http://hl7.org/fhir/2017Janoperationslist.html">Operations</a></li>
+        <li><a href="http://hl7.org/fhir/2017Janservicelist.html">Services</a></li>
+
+      </ul>
+     </div>  <!-- /.nav-collapse -->
+    </div>  <!-- /.container -->
+   </nav>  <!-- /.navbar -->
+
+  <!-- /HEADER CONTENT -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-navbar -->
+
+ <div id="segment-breadcrumb" class="segmnt">  <!-- segment-breadcrumb -->
+  <div class="container">  <!-- container -->
+   <ul class="breadcrumb">
+     <li title="C-CDA on FHIR"><a href="index.html"><b>C-CDA on FHIR</b></a></li>
+     <li><b> Details</b></li>
+   </ul>
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-breadcrumb -->
+
+ <div id="segment-content" class="segment">  <!-- segment-content -->
+ <div class="container">  <!-- container -->
+            <div class="row">
+             <div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+  
+<h2>ProgressNoteDocumentTypeCode</h2>
+
+<pre class="json">
+{
+  "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet">resourceType</a>" : "ValueSet",
+  "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.id">id</a>" : "2.16.840.1.113883.11.20.8.1",
+  "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;h3&gt;Value Set Contents&lt;/h3&gt;&lt;p&gt;This value set contains 27 concepts&lt;/p&gt;&lt;p&gt;All codes from system &lt;code&gt;http://loinc.org&lt;/code&gt;&lt;/p&gt;&lt;table class=&quot;codes&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-11506-3&quot;&gt; &lt;/a&gt;11506-3&lt;/td&gt;&lt;td&gt;Provider-unspecified Progress note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-18733-6&quot;&gt; &lt;/a&gt;18733-6&lt;/td&gt;&lt;td&gt;Physician attending Progress note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-28569-2&quot;&gt; &lt;/a&gt;28569-2&lt;/td&gt;&lt;td&gt;Physician consulting Progress note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-28617-9&quot;&gt; &lt;/a&gt;28617-9&lt;/td&gt;&lt;td&gt;Dentistry Progress note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-34900-1&quot;&gt; &lt;/a&gt;34900-1&lt;/td&gt;&lt;td&gt;General medicine Progress note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-34904-3&quot;&gt; &lt;/a&gt;34904-3&lt;/td&gt;&lt;td&gt;Mental health Progress note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-28623-7&quot;&gt; &lt;/a&gt;28623-7&lt;/td&gt;&lt;td&gt;Nurse Progress note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-11507-1&quot;&gt; &lt;/a&gt;11507-1&lt;/td&gt;&lt;td&gt;Occupational therapy Progress note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-11508-9&quot;&gt; &lt;/a&gt;11508-9&lt;/td&gt;&lt;td&gt;Physical therapy Progress note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-11509-7&quot;&gt; &lt;/a&gt;11509-7&lt;/td&gt;&lt;td&gt;Podiatry Progress note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-28627-8&quot;&gt; &lt;/a&gt;28627-8&lt;/td&gt;&lt;td&gt;Psychiatry Progress note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-11510-5&quot;&gt; &lt;/a&gt;11510-5&lt;/td&gt;&lt;td&gt;Psychology Progress note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-28656-7&quot;&gt; &lt;/a&gt;28656-7&lt;/td&gt;&lt;td&gt;Social work Progress note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-11512-1&quot;&gt; &lt;/a&gt;11512-1&lt;/td&gt;&lt;td&gt;Speech-language pathology Progress note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-34126-3&quot;&gt; &lt;/a&gt;34126-3&lt;/td&gt;&lt;td&gt;Intensive care unit Progress note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-15507-7&quot;&gt; &lt;/a&gt;15507-7&lt;/td&gt;&lt;td&gt;Provider-unspecified ED Progress note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-34129-7&quot;&gt; &lt;/a&gt;34129-7&lt;/td&gt;&lt;td&gt;Patient's home Progress note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-34125-5&quot;&gt; &lt;/a&gt;34125-5&lt;/td&gt;&lt;td&gt;Case manager Patient's home Progress note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-34130-5&quot;&gt; &lt;/a&gt;34130-5&lt;/td&gt;&lt;td&gt;Hospital Progress note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-34131-3&quot;&gt; &lt;/a&gt;34131-3&lt;/td&gt;&lt;td&gt;Outpatient Progress note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-34124-8&quot;&gt; &lt;/a&gt;34124-8&lt;/td&gt;&lt;td&gt;Cardiology Outpatient Progress note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-34127-1&quot;&gt; &lt;/a&gt;34127-1&lt;/td&gt;&lt;td&gt;Dentistry Hygienist Outpatient Progress note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-34128-9&quot;&gt; &lt;/a&gt;34128-9&lt;/td&gt;&lt;td&gt;Dentistry Outpatient Progress note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-34901-9&quot;&gt; &lt;/a&gt;34901-9&lt;/td&gt;&lt;td&gt;General medicine Outpatient Progress note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-34132-1&quot;&gt; &lt;/a&gt;34132-1&lt;/td&gt;&lt;td&gt;Pharmacy Outpatient Progress note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-28580-9&quot;&gt; &lt;/a&gt;28580-9&lt;/td&gt;&lt;td&gt;Chiropractic medicine Progress note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;http---loinc.org-28575-9&quot;&gt; &lt;/a&gt;28575-9&lt;/td&gt;&lt;td&gt;Nurse practitioner Progress note&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
+  },
+  "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.url">url</a>" : "http://hl7.org/fhir/ccda/ValueSet/2.16.840.1.113883.11.20.8.1",
+  "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.name">name</a>" : "ProgressNoteDocumentTypeCode",
+  "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.status">status</a>" : "active",
+  "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.date">date</a>" : "2017-01-04T23:36:09-05:00",
+  "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.description">description</a>" : "Specific URL Pending",
+  "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose">compose</a>" : {
+    "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include">include</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.system">system</a>" : "http://loinc.org",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept">concept</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "11506-3",
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Provider-unspecified Progress note"
+          },
+          {
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "18733-6",
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Physician attending Progress note"
+          },
+          {
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "28569-2",
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Physician consulting Progress note"
+          },
+          {
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "28617-9",
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Dentistry Progress note"
+          },
+          {
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "34900-1",
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "General medicine Progress note"
+          },
+          {
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "34904-3",
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Mental health Progress note"
+          },
+          {
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "28623-7",
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Nurse Progress note"
+          },
+          {
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "11507-1",
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Occupational therapy Progress note"
+          },
+          {
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "11508-9",
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Physical therapy Progress note"
+          },
+          {
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "11509-7",
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Podiatry Progress note"
+          },
+          {
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "28627-8",
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Psychiatry Progress note"
+          },
+          {
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "11510-5",
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Psychology Progress note"
+          },
+          {
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "28656-7",
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Social work Progress note"
+          },
+          {
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "11512-1",
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Speech-language pathology Progress note"
+          },
+          {
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "34126-3",
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Intensive care unit Progress note"
+          },
+          {
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "15507-7",
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Provider-unspecified ED Progress note"
+          },
+          {
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "34129-7",
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Patient's home Progress note"
+          },
+          {
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "34125-5",
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Case manager Patient's home Progress note"
+          },
+          {
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "34130-5",
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hospital Progress note"
+          },
+          {
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "34131-3",
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Outpatient Progress note"
+          },
+          {
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "34124-8",
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Cardiology Outpatient Progress note"
+          },
+          {
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "34127-1",
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Dentistry Hygienist Outpatient Progress note"
+          },
+          {
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "34128-9",
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Dentistry Outpatient Progress note"
+          },
+          {
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "34901-9",
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "General medicine Outpatient Progress note"
+          },
+          {
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "34132-1",
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Pharmacy Outpatient Progress note"
+          },
+          {
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "28580-9",
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Chiropractic medicine Progress note"
+          },
+          {
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "28575-9",
+            "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Nurse practitioner Progress note"
+          }
+        ]
+      }
+    ]
+  },
+  "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion">expansion</a>" : {
+    "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.identifier">identifier</a>" : "urn:uuid:50118dc5-e80b-416b-a465-e3cf5f507544",
+    "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.timestamp">timestamp</a>" : "2016-12-03T17:27:14.6617709-05:00",
+    "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains">contains</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a>" : "http://loinc.org",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a>" : "11506-3",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a>" : "Provider-unspecified Progress note"
+      },
+      {
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a>" : "http://loinc.org",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a>" : "18733-6",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a>" : "Physician attending Progress note"
+      },
+      {
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a>" : "http://loinc.org",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a>" : "28569-2",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a>" : "Physician consulting Progress note"
+      },
+      {
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a>" : "http://loinc.org",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a>" : "28617-9",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a>" : "Dentistry Progress note"
+      },
+      {
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a>" : "http://loinc.org",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a>" : "34900-1",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a>" : "General medicine Progress note"
+      },
+      {
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a>" : "http://loinc.org",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a>" : "34904-3",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a>" : "Mental health Progress note"
+      },
+      {
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a>" : "http://loinc.org",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a>" : "28623-7",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a>" : "Nurse Progress note"
+      },
+      {
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a>" : "http://loinc.org",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a>" : "11507-1",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a>" : "Occupational therapy Progress note"
+      },
+      {
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a>" : "http://loinc.org",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a>" : "11508-9",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a>" : "Physical therapy Progress note"
+      },
+      {
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a>" : "http://loinc.org",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a>" : "11509-7",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a>" : "Podiatry Progress note"
+      },
+      {
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a>" : "http://loinc.org",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a>" : "28627-8",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a>" : "Psychiatry Progress note"
+      },
+      {
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a>" : "http://loinc.org",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a>" : "11510-5",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a>" : "Psychology Progress note"
+      },
+      {
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a>" : "http://loinc.org",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a>" : "28656-7",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a>" : "Social work Progress note"
+      },
+      {
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a>" : "http://loinc.org",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a>" : "11512-1",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a>" : "Speech-language pathology Progress note"
+      },
+      {
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a>" : "http://loinc.org",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a>" : "34126-3",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a>" : "Intensive care unit Progress note"
+      },
+      {
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a>" : "http://loinc.org",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a>" : "15507-7",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a>" : "Provider-unspecified ED Progress note"
+      },
+      {
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a>" : "http://loinc.org",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a>" : "34129-7",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a>" : "Patient's home Progress note"
+      },
+      {
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a>" : "http://loinc.org",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a>" : "34125-5",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a>" : "Case manager Patient's home Progress note"
+      },
+      {
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a>" : "http://loinc.org",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a>" : "34130-5",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a>" : "Hospital Progress note"
+      },
+      {
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a>" : "http://loinc.org",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a>" : "34131-3",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a>" : "Outpatient Progress note"
+      },
+      {
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a>" : "http://loinc.org",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a>" : "34124-8",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a>" : "Cardiology Outpatient Progress note"
+      },
+      {
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a>" : "http://loinc.org",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a>" : "34127-1",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a>" : "Dentistry Hygienist Outpatient Progress note"
+      },
+      {
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a>" : "http://loinc.org",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a>" : "34128-9",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a>" : "Dentistry Outpatient Progress note"
+      },
+      {
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a>" : "http://loinc.org",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a>" : "34901-9",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a>" : "General medicine Outpatient Progress note"
+      },
+      {
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a>" : "http://loinc.org",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a>" : "34132-1",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a>" : "Pharmacy Outpatient Progress note"
+      },
+      {
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a>" : "http://loinc.org",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a>" : "28580-9",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a>" : "Chiropractic medicine Progress note"
+      },
+      {
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">system</a>" : "http://loinc.org",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">code</a>" : "28575-9",
+        "<a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">display</a>" : "Nurse practitioner Progress note"
+      }
+    ]
+  }
+}</pre>
+
+
+
+ </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+    <div id="segment-footer" class="segment">  <!-- segment-footer -->
+  <div class="container">  <!-- container -->
+   <div class="inner-wrapper">
+    <p>
+      &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.8.0-10514) generated on Wed, Jan 4, 2017 23:36-0500. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img style="text-align: baseline" src="external.png"/></a> |
+          <a style="color: #81BEF7" href="http://hl7.org/fhir/2017Janhistory.html">Version History</a> |
+          <a style="color: #81BEF7" href="http://hl7.org/fhir/2017Jantoc.html">Table of Contents</a> |
+          <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/2017Janlicense.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> |
+          <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change <img style="text-align: baseline" src="external.png"/></a>
+        </span>
+        </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->
+
+ <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-post-footer -->
+
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="dist/js/bootstrap.min.js"> </script>
+<script src="assets/js/respond.min.js"> </script>
+
+<script src="assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+
+</body>
+</html>
+
+

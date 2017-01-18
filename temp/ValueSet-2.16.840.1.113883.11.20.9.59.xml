@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="2.16.840.1.113883.11.20.9.59"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h3>Value Set Contents</h3><p>This value set contains 31 concepts</p><table class="codes"><tr><td><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td><a name="urn-oid-1.2.840.10008.2.16.4-121181"> </a>121181</td><td>urn:oid:1.2.840.10008.2.16.4</td><td>DICOM Object Catalog</td></tr><tr><td><a name="urn-oid-1.2.840.10008.2.16.4-121060"> </a>121060</td><td>urn:oid:1.2.840.10008.2.16.4</td><td>History</td></tr><tr><td><a name="urn-oid-1.2.840.10008.2.16.4-121062"> </a>121062</td><td>urn:oid:1.2.840.10008.2.16.4</td><td>Request</td></tr><tr><td><a name="urn-oid-1.2.840.10008.2.16.4-121064"> </a>121064</td><td>urn:oid:1.2.840.10008.2.16.4</td><td>Current Procedure Descriptions</td></tr><tr><td><a name="urn-oid-1.2.840.10008.2.16.4-121066"> </a>121066</td><td>urn:oid:1.2.840.10008.2.16.4</td><td>Prior Procedure Descriptions</td></tr><tr><td><a name="urn-oid-1.2.840.10008.2.16.4-121068"> </a>121068</td><td>urn:oid:1.2.840.10008.2.16.4</td><td>Previous Findings</td></tr><tr><td><a name="urn-oid-1.2.840.10008.2.16.4-121070"> </a>121070</td><td>urn:oid:1.2.840.10008.2.16.4</td><td>Findings (DIR)</td></tr><tr><td><a name="urn-oid-1.2.840.10008.2.16.4-121072"> </a>121072</td><td>urn:oid:1.2.840.10008.2.16.4</td><td>Impressions</td></tr><tr><td><a name="urn-oid-1.2.840.10008.2.16.4-121074"> </a>121074</td><td>urn:oid:1.2.840.10008.2.16.4</td><td>Recommendations</td></tr><tr><td><a name="urn-oid-1.2.840.10008.2.16.4-121076"> </a>121076</td><td>urn:oid:1.2.840.10008.2.16.4</td><td>Conclusions</td></tr><tr><td><a name="urn-oid-1.2.840.10008.2.16.4-121078"> </a>121078</td><td>urn:oid:1.2.840.10008.2.16.4</td><td>Addendum</td></tr><tr><td><a name="urn-oid-1.2.840.10008.2.16.4-121109"> </a>121109</td><td>urn:oid:1.2.840.10008.2.16.4</td><td>Indications for Procedure</td></tr><tr><td><a name="urn-oid-1.2.840.10008.2.16.4-121110"> </a>121110</td><td>urn:oid:1.2.840.10008.2.16.4</td><td>Patient Presentation</td></tr><tr><td><a name="urn-oid-1.2.840.10008.2.16.4-121113"> </a>121113</td><td>urn:oid:1.2.840.10008.2.16.4</td><td>Complications</td></tr><tr><td><a name="urn-oid-1.2.840.10008.2.16.4-121111"> </a>121111</td><td>urn:oid:1.2.840.10008.2.16.4</td><td>Summary</td></tr><tr><td><a name="urn-oid-1.2.840.10008.2.16.4-121180"> </a>121180</td><td>urn:oid:1.2.840.10008.2.16.4</td><td>Key Images</td></tr><tr><td><a name="http---loinc.org-11329-0"> </a>11329-0</td><td>http://loinc.org</td><td>HISTORY GENERAL</td></tr><tr><td><a name="http---loinc.org-55115-0"> </a>55115-0</td><td>http://loinc.org</td><td>REQUESTED IMAGING STUDIES INFORMATION</td></tr><tr><td><a name="http---loinc.org-55111-9"> </a>55111-9</td><td>http://loinc.org</td><td>CURRENT IMAGING PROCEDURE DESCRIPTIONS</td></tr><tr><td><a name="http---loinc.org-55114-3"> </a>55114-3</td><td>http://loinc.org</td><td>PRIOR IMAGING PROCEDURE DESCRIPTIONS</td></tr><tr><td><a name="http---loinc.org-18834-2"> </a>18834-2</td><td>http://loinc.org</td><td>RADIOLOGY COMPARISON STUDY - OBSERVATION</td></tr><tr><td><a name="http---loinc.org-18782-3"> </a>18782-3</td><td>http://loinc.org</td><td>RADIOLOGY STUDY OBSERVATION</td></tr><tr><td><a name="http---loinc.org-19005-8"> </a>19005-8</td><td>http://loinc.org</td><td>RADIOLOGY - IMPRESSION</td></tr><tr><td><a name="http---loinc.org-18783-1"> </a>18783-1</td><td>http://loinc.org</td><td>RADIOLOGY STUDY - RECOMMENDATION</td></tr><tr><td><a name="http---loinc.org-55110-1"> </a>55110-1</td><td>http://loinc.org</td><td>CONCLUSIONS</td></tr><tr><td><a name="http---loinc.org-55107-7"> </a>55107-7</td><td>http://loinc.org</td><td>ADDENDUM</td></tr><tr><td><a name="http---loinc.org-18785-6"> </a>18785-6</td><td>http://loinc.org</td><td>RADIOLOGY REASON FOR STUDY</td></tr><tr><td><a name="http---loinc.org-55108-5"> </a>55108-5</td><td>http://loinc.org</td><td>CLINICAL PRESENTATION</td></tr><tr><td><a name="http---loinc.org-55109-3"> </a>55109-3</td><td>http://loinc.org</td><td>COMPLICATIONS</td></tr><tr><td><a name="http---loinc.org-55112-7"> </a>55112-7</td><td>http://loinc.org</td><td>DOCUMENT SUMMARY</td></tr><tr><td><a name="http---loinc.org-55113-5"> </a>55113-5</td><td>http://loinc.org</td><td>KEY IMAGES</td></tr></table></div>
+  </text>
+  <url value="http://hl7.org/fhir/ccda/ValueSet/2.16.840.1.113883.11.20.9.59"/>
+  <name value="DIRSectionTypeCodes"/>
+  <status value="active"/>
+  <date value="2017-01-04T23:36:09-05:00"/>
+  <description value="The Section Type codes used by DIR are all narrative document sections. The codes in this table are drawn from LOINC (http://www.loinc.org/) and DICOM (http://medical.nema.org/). The section/code should be selected from LOINC or DICOM for sections not listed in this table."/>
+  <compose>
+    <include>
+      <system value="urn:oid:1.2.840.10008.2.16.4"/>
+      <concept>
+        <code value="121181"/>
+        <display value="DICOM Object Catalog"/>
+      </concept>
+      <concept>
+        <code value="121060"/>
+        <display value="History"/>
+      </concept>
+      <concept>
+        <code value="121062"/>
+        <display value="Request"/>
+      </concept>
+      <concept>
+        <code value="121064"/>
+        <display value="Current Procedure Descriptions"/>
+      </concept>
+      <concept>
+        <code value="121066"/>
+        <display value="Prior Procedure Descriptions"/>
+      </concept>
+      <concept>
+        <code value="121068"/>
+        <display value="Previous Findings"/>
+      </concept>
+      <concept>
+        <code value="121070"/>
+        <display value="Findings (DIR)"/>
+      </concept>
+      <concept>
+        <code value="121072"/>
+        <display value="Impressions"/>
+      </concept>
+      <concept>
+        <code value="121074"/>
+        <display value="Recommendations"/>
+      </concept>
+      <concept>
+        <code value="121076"/>
+        <display value="Conclusions"/>
+      </concept>
+      <concept>
+        <code value="121078"/>
+        <display value="Addendum"/>
+      </concept>
+      <concept>
+        <code value="121109"/>
+        <display value="Indications for Procedure"/>
+      </concept>
+      <concept>
+        <code value="121110"/>
+        <display value="Patient Presentation"/>
+      </concept>
+      <concept>
+        <code value="121113"/>
+        <display value="Complications"/>
+      </concept>
+      <concept>
+        <code value="121111"/>
+        <display value="Summary"/>
+      </concept>
+      <concept>
+        <code value="121180"/>
+        <display value="Key Images"/>
+      </concept>
+    </include>
+    <include>
+      <system value="http://loinc.org"/>
+      <concept>
+        <code value="11329-0"/>
+        <display value="HISTORY GENERAL"/>
+      </concept>
+      <concept>
+        <code value="55115-0"/>
+        <display value="REQUESTED IMAGING STUDIES INFORMATION"/>
+      </concept>
+      <concept>
+        <code value="55111-9"/>
+        <display value="CURRENT IMAGING PROCEDURE DESCRIPTIONS"/>
+      </concept>
+      <concept>
+        <code value="55114-3"/>
+        <display value="PRIOR IMAGING PROCEDURE DESCRIPTIONS"/>
+      </concept>
+      <concept>
+        <code value="18834-2"/>
+        <display value="RADIOLOGY COMPARISON STUDY - OBSERVATION"/>
+      </concept>
+      <concept>
+        <code value="18782-3"/>
+        <display value="RADIOLOGY STUDY OBSERVATION"/>
+      </concept>
+      <concept>
+        <code value="19005-8"/>
+        <display value="RADIOLOGY - IMPRESSION"/>
+      </concept>
+      <concept>
+        <code value="18783-1"/>
+        <display value="RADIOLOGY STUDY - RECOMMENDATION"/>
+      </concept>
+      <concept>
+        <code value="55110-1"/>
+        <display value="CONCLUSIONS"/>
+      </concept>
+      <concept>
+        <code value="55107-7"/>
+        <display value="ADDENDUM"/>
+      </concept>
+      <concept>
+        <code value="18785-6"/>
+        <display value="RADIOLOGY REASON FOR STUDY"/>
+      </concept>
+      <concept>
+        <code value="55108-5"/>
+        <display value="CLINICAL PRESENTATION"/>
+      </concept>
+      <concept>
+        <code value="55109-3"/>
+        <display value="COMPLICATIONS"/>
+      </concept>
+      <concept>
+        <code value="55112-7"/>
+        <display value="DOCUMENT SUMMARY"/>
+      </concept>
+      <concept>
+        <code value="55113-5"/>
+        <display value="KEY IMAGES"/>
+      </concept>
+    </include>
+  </compose>
+  <expansion>
+    <identifier value="urn:uuid:6a22653c-7256-4b4f-b027-fdb13da5a74d"/>
+    <timestamp value="2016-12-03T17:27:14.5963709-05:00"/>
+    <contains>
+      <system value="urn:oid:1.2.840.10008.2.16.4"/>
+      <code value="121181"/>
+      <display value="DICOM Object Catalog"/>
+    </contains>
+    <contains>
+      <system value="urn:oid:1.2.840.10008.2.16.4"/>
+      <code value="121060"/>
+      <display value="History"/>
+    </contains>
+    <contains>
+      <system value="urn:oid:1.2.840.10008.2.16.4"/>
+      <code value="121062"/>
+      <display value="Request"/>
+    </contains>
+    <contains>
+      <system value="urn:oid:1.2.840.10008.2.16.4"/>
+      <code value="121064"/>
+      <display value="Current Procedure Descriptions"/>
+    </contains>
+    <contains>
+      <system value="urn:oid:1.2.840.10008.2.16.4"/>
+      <code value="121066"/>
+      <display value="Prior Procedure Descriptions"/>
+    </contains>
+    <contains>
+      <system value="urn:oid:1.2.840.10008.2.16.4"/>
+      <code value="121068"/>
+      <display value="Previous Findings"/>
+    </contains>
+    <contains>
+      <system value="urn:oid:1.2.840.10008.2.16.4"/>
+      <code value="121070"/>
+      <display value="Findings (DIR)"/>
+    </contains>
+    <contains>
+      <system value="urn:oid:1.2.840.10008.2.16.4"/>
+      <code value="121072"/>
+      <display value="Impressions"/>
+    </contains>
+    <contains>
+      <system value="urn:oid:1.2.840.10008.2.16.4"/>
+      <code value="121074"/>
+      <display value="Recommendations"/>
+    </contains>
+    <contains>
+      <system value="urn:oid:1.2.840.10008.2.16.4"/>
+      <code value="121076"/>
+      <display value="Conclusions"/>
+    </contains>
+    <contains>
+      <system value="urn:oid:1.2.840.10008.2.16.4"/>
+      <code value="121078"/>
+      <display value="Addendum"/>
+    </contains>
+    <contains>
+      <system value="urn:oid:1.2.840.10008.2.16.4"/>
+      <code value="121109"/>
+      <display value="Indications for Procedure"/>
+    </contains>
+    <contains>
+      <system value="urn:oid:1.2.840.10008.2.16.4"/>
+      <code value="121110"/>
+      <display value="Patient Presentation"/>
+    </contains>
+    <contains>
+      <system value="urn:oid:1.2.840.10008.2.16.4"/>
+      <code value="121113"/>
+      <display value="Complications"/>
+    </contains>
+    <contains>
+      <system value="urn:oid:1.2.840.10008.2.16.4"/>
+      <code value="121111"/>
+      <display value="Summary"/>
+    </contains>
+    <contains>
+      <system value="urn:oid:1.2.840.10008.2.16.4"/>
+      <code value="121180"/>
+      <display value="Key Images"/>
+    </contains>
+    <contains>
+      <system value="http://loinc.org"/>
+      <code value="11329-0"/>
+      <display value="HISTORY GENERAL"/>
+    </contains>
+    <contains>
+      <system value="http://loinc.org"/>
+      <code value="55115-0"/>
+      <display value="REQUESTED IMAGING STUDIES INFORMATION"/>
+    </contains>
+    <contains>
+      <system value="http://loinc.org"/>
+      <code value="55111-9"/>
+      <display value="CURRENT IMAGING PROCEDURE DESCRIPTIONS"/>
+    </contains>
+    <contains>
+      <system value="http://loinc.org"/>
+      <code value="55114-3"/>
+      <display value="PRIOR IMAGING PROCEDURE DESCRIPTIONS"/>
+    </contains>
+    <contains>
+      <system value="http://loinc.org"/>
+      <code value="18834-2"/>
+      <display value="RADIOLOGY COMPARISON STUDY - OBSERVATION"/>
+    </contains>
+    <contains>
+      <system value="http://loinc.org"/>
+      <code value="18782-3"/>
+      <display value="RADIOLOGY STUDY OBSERVATION"/>
+    </contains>
+    <contains>
+      <system value="http://loinc.org"/>
+      <code value="19005-8"/>
+      <display value="RADIOLOGY - IMPRESSION"/>
+    </contains>
+    <contains>
+      <system value="http://loinc.org"/>
+      <code value="18783-1"/>
+      <display value="RADIOLOGY STUDY - RECOMMENDATION"/>
+    </contains>
+    <contains>
+      <system value="http://loinc.org"/>
+      <code value="55110-1"/>
+      <display value="CONCLUSIONS"/>
+    </contains>
+    <contains>
+      <system value="http://loinc.org"/>
+      <code value="55107-7"/>
+      <display value="ADDENDUM"/>
+    </contains>
+    <contains>
+      <system value="http://loinc.org"/>
+      <code value="18785-6"/>
+      <display value="RADIOLOGY REASON FOR STUDY"/>
+    </contains>
+    <contains>
+      <system value="http://loinc.org"/>
+      <code value="55108-5"/>
+      <display value="CLINICAL PRESENTATION"/>
+    </contains>
+    <contains>
+      <system value="http://loinc.org"/>
+      <code value="55109-3"/>
+      <display value="COMPLICATIONS"/>
+    </contains>
+    <contains>
+      <system value="http://loinc.org"/>
+      <code value="55112-7"/>
+      <display value="DOCUMENT SUMMARY"/>
+    </contains>
+    <contains>
+      <system value="http://loinc.org"/>
+      <code value="55113-5"/>
+      <display value="KEY IMAGES"/>
+    </contains>
+  </expansion>
+</ValueSet>

@@ -1,0 +1,2350 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-US-Realm-Header> a fhir:StructureDefinition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "CCDA-on-FHIR-US-Realm-Header"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>url</b>: <a href=\"http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-US-Realm-Header\">http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-US-Realm-Header</a></p><p><b>name</b>: C-CDA on FHIR US Realm Header</p><p><b>status</b>: DRAFT</p><p><b>date</b>: Jan 4, 2017 11:36:09 PM</p><p><b>contact</b>: </p><p><b>description</b>: This profile defines constraints that represent common administrative and demographic concepts for US Realm clinical documents. Further specification, such as type, are provided in document profiles that conform to this profile.</p><p><b>url</b>: <a href=\"http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-US-Realm-Header\">http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-US-Realm-Header</a></p><p><b>name</b>: C-CDA on FHIR US Realm Header</p><p><b>status</b>: DRAFT</p><p><b>contact</b>: </p><p><b>date</b>: Jan 4, 2017 11:36:09 PM</p><p><b>description</b>: This profile defines constraints that represent common administrative and demographic concepts for US Realm clinical documents. Further specification, such as type, are provided in document profiles that conform to this profile.</p><blockquote><p><b>mapping</b></p><p><b>identity</b>: rim</p><p><b>uri</b>: <a href=\"http://hl7.org/v3\">http://hl7.org/v3</a></p><p><b>name</b>: RIM Mapping</p></blockquote><blockquote><p><b>mapping</b></p><p><b>identity</b>: cda</p><p><b>uri</b>: <a href=\"http://hl7.org/v3/cda\">http://hl7.org/v3/cda</a></p><p><b>name</b>: CDA (R2)</p></blockquote><blockquote><p><b>mapping</b></p><p><b>identity</b>: w5</p><p><b>uri</b>: <a href=\"http://hl7.org/fhir/w5\">http://hl7.org/fhir/w5</a></p><p><b>name</b>: W5 Mapping</p></blockquote><p><b>kind</b>: RESOURCE</p><p><b>abstract</b>: false</p><p><b>contextType</b>: RESOURCE</p><p><b>context</b>: Composition</p><p><b>type</b>: Composition</p><p><b>baseDefinition</b>: <a href=\"http://hl7.org/fhir/StructureDefinition/Composition\">http://hl7.org/fhir/StructureDefinition/Composition</a></p><p><b>derivation</b>: CONSTRAINT</p><h3>Snapshots</h3><table class=\"grid\"><tr><td>-</td><td><b>Element</b></td></tr><tr><td>*</td><td>todo-bundle</td></tr></table><h3>Differentials</h3><table class=\"grid\"><tr><td>-</td><td><b>Element</b></td></tr><tr><td>*</td><td>todo-bundle</td></tr></table></div>"
+  ];
+  fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-US-Realm-Header"];
+  fhir:StructureDefinition.name [ fhir:value "C-CDA on FHIR US Realm Header"];
+  fhir:StructureDefinition.status [ fhir:value "draft"];
+  fhir:StructureDefinition.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "Rick Geimer" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "phone" ];
+       fhir:ContactPoint.value [ fhir:value "206-592-2443" ];
+       fhir:ContactPoint.use [ fhir:value "work" ]
+     ], [
+       fhir:index 1;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "rick.geimer@lantanagroup.com" ];
+       fhir:ContactPoint.use [ fhir:value "work" ]
+     ]
+  ];
+  fhir:StructureDefinition.date [ fhir:value "2017-01-04T23:36:09-05:00"^^xsd:dateTime];
+  fhir:StructureDefinition.description [ fhir:value "This profile defines constraints that represent common administrative and demographic concepts for US Realm clinical documents. Further specification, such as type, are provided in document profiles that conform to this profile."];
+  fhir:StructureDefinition.mapping [
+     fhir:index 0;
+     fhir:StructureDefinition.mapping.identity [ fhir:value "rim" ];
+     fhir:StructureDefinition.mapping.uri [ fhir:value "http://hl7.org/v3" ];
+     fhir:StructureDefinition.mapping.name [ fhir:value "RIM Mapping" ]
+  ], [
+     fhir:index 1;
+     fhir:StructureDefinition.mapping.identity [ fhir:value "cda" ];
+     fhir:StructureDefinition.mapping.uri [ fhir:value "http://hl7.org/v3/cda" ];
+     fhir:StructureDefinition.mapping.name [ fhir:value "CDA (R2)" ]
+  ], [
+     fhir:index 2;
+     fhir:StructureDefinition.mapping.identity [ fhir:value "w5" ];
+     fhir:StructureDefinition.mapping.uri [ fhir:value "http://hl7.org/fhir/w5" ];
+     fhir:StructureDefinition.mapping.name [ fhir:value "W5 Mapping" ]
+  ];
+  fhir:StructureDefinition.kind [ fhir:value "resource"];
+  fhir:StructureDefinition.abstract [ fhir:value "false"^^xsd:boolean];
+  fhir:StructureDefinition.contextType [ fhir:value "resource"];
+  fhir:StructureDefinition.context [
+     fhir:value "Composition";
+     fhir:index 0
+  ];
+  fhir:StructureDefinition.type [ fhir:value "Composition"];
+  fhir:StructureDefinition.baseDefinition [ fhir:value "http://hl7.org/fhir/StructureDefinition/Composition"];
+  fhir:StructureDefinition.derivation [ fhir:value "constraint"];
+  fhir:StructureDefinition.snapshot [
+     fhir:StructureDefinition.snapshot.element [
+       fhir:index 0;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition" ];
+       fhir:ElementDefinition.short [ fhir:value "A set of resources composed into a single coherent clinical statement with clinical attestation" ];
+       fhir:ElementDefinition.definition [ fhir:value "A set of healthcare-related information that is assembled together into a single logical document that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. While a Composition defines the structure, it does not actually contain the content: rather the full content of a document is contained in a Bundle, of which the Composition is the first resource contained." ];
+       fhir:ElementDefinition.comments [ fhir:value "While the focus of this specification is on patient-specific clinical statements, this resource can also apply to other healthcare-related statements such as study protocol designs, healthcare invoices and other activities that are not necessarily patient-specific or clinical." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Composition" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "dom-2" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "If the resource is contained in another resource, it SHALL NOT contain nested Resources" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "contained.contained.empty()" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "not(parent::f:contained and f:contained)" ];
+         fhir:ElementDefinition.constraint.source [ fhir:value "DomainResource" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.constraint.key [ fhir:value "dom-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "If the resource is contained in another resource, it SHALL NOT contain any narrative" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "contained.text.empty()" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "not(parent::f:contained and f:text)" ];
+         fhir:ElementDefinition.constraint.source [ fhir:value "DomainResource" ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.constraint.key [ fhir:value "dom-4" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "not(exists(f:contained/*/f:meta/f:versionId)) and not(exists(f:contained/*/f:meta/f:lastUpdated))" ];
+         fhir:ElementDefinition.constraint.source [ fhir:value "DomainResource" ]
+       ], [
+         fhir:index 3;
+         fhir:ElementDefinition.constraint.key [ fhir:value "dom-3" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "contained.where(('#'+id in %resource.descendants().reference).not()).empty()" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "not(exists(for $id in f:contained/*/@id return $id[not(ancestor::f:contained/parent::*/descendant::f:reference/@value=concat('#', $id))]))" ];
+         fhir:ElementDefinition.constraint.source [ fhir:value "DomainResource" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "Entity. Role, or Act" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "Document[classCode=\"DOC\" and moodCode=\"EVN\" and isNormalAct()]" ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "cda" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "ClinicalDocument" ]
+       ], [
+         fhir:index 3;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "infrastructure.documents" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.id" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.id" ];
+       fhir:ElementDefinition.short [ fhir:value "Logical id of this artifact" ];
+       fhir:ElementDefinition.definition [ fhir:value "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes." ];
+       fhir:ElementDefinition.comments [ fhir:value "The only time that a resource does not have an id is when it is being submitted to the server using a create operation." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Resource.id" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "id" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 2;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.meta" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.meta" ];
+       fhir:ElementDefinition.short [ fhir:value "Metadata about the resource" ];
+       fhir:ElementDefinition.definition [ fhir:value "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Resource.meta" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Meta" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.implicitRules" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.implicitRules" ];
+       fhir:ElementDefinition.short [ fhir:value "A set of rules under which this content was created" ];
+       fhir:ElementDefinition.definition [ fhir:value "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content." ];
+       fhir:ElementDefinition.comments [ fhir:value "Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Resource.implicitRules" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "uri" ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 4;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.language" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.language" ];
+       fhir:ElementDefinition.short [ fhir:value "language" ];
+       fhir:ElementDefinition.definition [ fhir:value "SHALL contain exactly one [1..1] language (CONF:2219-146)." ];
+       fhir:ElementDefinition.comments [ fhir:value "Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource  Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Resource.language" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "code" ]
+       ];
+       fhir:ElementDefinition.binding [
+         fhir:extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet" ];
+           fhir:Extension.valueReference [
+             fhir:link <http://hl7.org/fhir/ValueSet/all-languages>;
+             fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/all-languages" ]
+           ]
+         ];
+         fhir:ElementDefinition.binding.strength [ fhir:value "extensible" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "A human language." ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/languages>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/languages" ]
+         ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.text" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.text" ];
+       fhir:ElementDefinition.short [ fhir:value "Text summary of the resource, for human interpretation" ];
+       fhir:ElementDefinition.definition [ fhir:value "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety." ];
+       fhir:ElementDefinition.comments [ fhir:value "Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs=1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded in formation is added later." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "narrative";
+         fhir:index 0
+       ], [
+         fhir:value "html";
+         fhir:index 1
+       ], [
+         fhir:value "xhtml";
+         fhir:index 2
+       ], [
+         fhir:value "display";
+         fhir:index 3
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DomainResource.text" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Narrative" ]
+       ];
+       fhir:ElementDefinition.condition [
+         fhir:value "dom-1";
+         fhir:index 0
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "Act.text?" ]
+       ]
+     ], [
+       fhir:index 6;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.contained" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.contained" ];
+       fhir:ElementDefinition.short [ fhir:value "Contained, inline Resources" ];
+       fhir:ElementDefinition.definition [ fhir:value "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope." ];
+       fhir:ElementDefinition.comments [ fhir:value "This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "inline resources";
+         fhir:index 0
+       ], [
+         fhir:value "anonymous resources";
+         fhir:index 1
+       ], [
+         fhir:value "contained resources";
+         fhir:index 2
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DomainResource.contained" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Resource" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
+       ]
+     ], [
+       fhir:index 7;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.extension" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.extension" ];
+       fhir:ElementDefinition.slicing [
+         fhir:ElementDefinition.slicing.discriminator [
+           fhir:value "Composition.url";
+           fhir:index 0
+         ];
+         fhir:ElementDefinition.slicing.rules [ fhir:value "open" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Extension" ];
+       fhir:ElementDefinition.definition [ fhir:value "MAY contain zero or more [0..*] C-CDA on FHIR Authorization (identifier: http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Authorization) (CONF:2219-2012)." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DomainResource.extension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ]
+     ], [
+       fhir:index 8;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.extension:extension_slice_pos2" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.extension" ];
+       fhir:ElementDefinition.sliceName [ fhir:value "extension_slice_pos2" ];
+       fhir:ElementDefinition.label [ fhir:value "dataEnterer" ];
+       fhir:ElementDefinition.short [ fhir:value "dataEnterer" ];
+       fhir:ElementDefinition.definition [ fhir:value "MAY contain zero or one [0..1] C-CDA on FHIR Data Enterer (identifier: http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Data-Enterer) (CONF:2219-1844)." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DomainResource.extension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ];
+         fhir:ElementDefinition.type.profile [ fhir:value "http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Data-Enterer" ]
+       ]
+     ], [
+       fhir:index 9;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.extension:extension_slice_pos3" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.extension" ];
+       fhir:ElementDefinition.sliceName [ fhir:value "extension_slice_pos3" ];
+       fhir:ElementDefinition.label [ fhir:value "informant" ];
+       fhir:ElementDefinition.short [ fhir:value "informant" ];
+       fhir:ElementDefinition.definition [ fhir:value "MAY contain zero or more [0..*] C-CDA on FHIR Informant (identifier: http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Informant) (CONF:2219-1849)." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DomainResource.extension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ];
+         fhir:ElementDefinition.type.profile [ fhir:value "http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Informant" ]
+       ]
+     ], [
+       fhir:index 10;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.extension:extension_slice_pos4" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.extension" ];
+       fhir:ElementDefinition.sliceName [ fhir:value "extension_slice_pos4" ];
+       fhir:ElementDefinition.label [ fhir:value "informationRecipient" ];
+       fhir:ElementDefinition.short [ fhir:value "informationRecipient" ];
+       fhir:ElementDefinition.definition [ fhir:value "MAY contain zero or more [0..*] C-CDA on FHIR Information Recipient (identifier: http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Information-Recipient) (CONF:2219-1856)." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DomainResource.extension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ];
+         fhir:ElementDefinition.type.profile [ fhir:value "http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Information-Recipient" ]
+       ]
+     ], [
+       fhir:index 11;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.extension:extension_slice_pos5" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.extension" ];
+       fhir:ElementDefinition.sliceName [ fhir:value "extension_slice_pos5" ];
+       fhir:ElementDefinition.label [ fhir:value "participant" ];
+       fhir:ElementDefinition.short [ fhir:value "participant" ];
+       fhir:ElementDefinition.definition [ fhir:value "MAY contain zero or more [0..*] C-CDA on FHIR Participant (identifier: http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Participant) (CONF:2219-1861)." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DomainResource.extension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ];
+         fhir:ElementDefinition.type.profile [ fhir:value "http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Participant" ]
+       ]
+     ], [
+       fhir:index 12;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.extension:extension_slice_pos6" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.extension" ];
+       fhir:ElementDefinition.sliceName [ fhir:value "extension_slice_pos6" ];
+       fhir:ElementDefinition.label [ fhir:value "performer" ];
+       fhir:ElementDefinition.short [ fhir:value "performer" ];
+       fhir:ElementDefinition.definition [ fhir:value "SHOULD contain zero or more [0..*] C-CDA on FHIR Performer (identifier: http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Performer) (CONF:2219-1869)." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DomainResource.extension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ];
+         fhir:ElementDefinition.type.profile [ fhir:value "http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Performer" ]
+       ]
+     ], [
+       fhir:index 13;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.extension:extension_slice_pos7" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.extension" ];
+       fhir:ElementDefinition.sliceName [ fhir:value "extension_slice_pos7" ];
+       fhir:ElementDefinition.label [ fhir:value "authorization" ];
+       fhir:ElementDefinition.short [ fhir:value "authorization" ];
+       fhir:ElementDefinition.definition [ fhir:value "MAY contain zero or more [0..*] C-CDA on FHIR Authorization (identifier: http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Authorization) (CONF:2219-2012)." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DomainResource.extension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ];
+         fhir:ElementDefinition.type.profile [ fhir:value "http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Authorization" ]
+       ]
+     ], [
+       fhir:index 14;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.modifierExtension" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.modifierExtension" ];
+       fhir:ElementDefinition.short [ fhir:value "Extensions that cannot be ignored" ];
+       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions." ];
+       fhir:ElementDefinition.comments [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "extensions";
+         fhir:index 0
+       ], [
+         fhir:value "user content";
+         fhir:index 1
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DomainResource.modifierExtension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
+       ]
+     ], [
+       fhir:index 15;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.identifier" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.identifier" ];
+       fhir:ElementDefinition.short [ fhir:value "identifier" ];
+       fhir:ElementDefinition.definition [ fhir:value "SHALL contain exactly one [1..1] identifier (CONF:2219-147)." ];
+       fhir:ElementDefinition.comments [ fhir:value "See discussion in resource definition for how these relate." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Composition.identifier" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Identifier" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "Document.id / Document.setId" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "cda" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".setId" ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "id" ]
+       ]
+     ], [
+       fhir:index 16;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.date" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.date" ];
+       fhir:ElementDefinition.short [ fhir:value "date" ];
+       fhir:ElementDefinition.definition [ fhir:value "SHALL contain exactly one [1..1] date (CONF:2219-148)." ];
+       fhir:ElementDefinition.comments [ fhir:value "US Realm Datetime" ];
+       fhir:ElementDefinition.requirements [ fhir:value "dateTime is used for tracking, organizing versions and searching." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Composition.date" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "dateTime" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".effectiveTime[type=\"TS\"]" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "cda" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".effectiveTime" ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "when.done" ]
+       ]
+     ], [
+       fhir:index 17;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.type" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.type" ];
+       fhir:ElementDefinition.label [ fhir:value "Document Type" ];
+       fhir:ElementDefinition.short [ fhir:value "Document Type" ];
+       fhir:ElementDefinition.definition [ fhir:value "SHALL contain exactly one [1..1] type (CONF:2219-149)." ];
+       fhir:ElementDefinition.comments [ fhir:value "For Composition type, LOINC is ubiquitous and strongly endorsed by HL7. Most implementation guides will require a specific LOINC code, or use LOINC as an extensible binding." ];
+       fhir:ElementDefinition.requirements [ fhir:value "Key metadata element describing the composition, used in searching/filtering." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Composition.type" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "Type of a composition." ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/doc-typecodes>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/doc-typecodes" ]
+         ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "./code" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "cda" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".code" ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "class" ]
+       ]
+     ], [
+       fhir:index 18;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.class" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.class" ];
+       fhir:ElementDefinition.short [ fhir:value "Categorization of Composition" ];
+       fhir:ElementDefinition.definition [ fhir:value "A categorization for the type of the composition - helps for indexing and searching. This may be implied by or derived from the code specified in the Composition Type." ];
+       fhir:ElementDefinition.comments [ fhir:value "This is a metadata field from [XDS/MHD](http://wiki.ihe.net/index.php?title=Mobile_access_to_Health_Documents_(MHD))." ];
+       fhir:ElementDefinition.requirements [ fhir:value "Helps humans to assess whether the composition is of interest when viewing an index of compositions or documents." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Composition.class" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "High-level kind of a clinical document at a macro level." ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/doc-classcodes>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/doc-classcodes" ]
+         ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".outboundRelationship[typeCode=\"COMP].target[classCode=\"LIST\", moodCode=\"EVN\"].code" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "cda" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "class" ]
+       ]
+     ], [
+       fhir:index 19;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.title" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.title" ];
+       fhir:ElementDefinition.label [ fhir:value "Document Title" ];
+       fhir:ElementDefinition.short [ fhir:value "Document Title" ];
+       fhir:ElementDefinition.definition [ fhir:value "SHALL contain exactly one [1..1] title (CONF:2219-150)." ];
+       fhir:ElementDefinition.comments [ fhir:value "For many compositions, the title is the same as the text or a display name of Composition.type (e.g. a \"consultation\" or \"progress note\"). Note that CDA does not make title mandatory, but there are no known cases where it is useful for title to be omitted, so it is mandatory here. Feedback on this requirement is welcome during the trial use period." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Composition.title" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "./title" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "cda" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".title" ]
+       ]
+     ], [
+       fhir:index 20;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.status" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.status" ];
+       fhir:ElementDefinition.short [ fhir:value "status" ];
+       fhir:ElementDefinition.definition [ fhir:value "SHALL contain exactly one [1..1] status (CONF:2219-1048)." ];
+       fhir:ElementDefinition.comments [ fhir:value "If a composition is marked as withdrawn, the compositions/documents in the series, or data from the composition or document series, should never be displayed to a user without being clearly marked as untrustworthy. The flag \"withdrawn\" is why this element is labeled as a modifier of other elements.   Some reporting work flows require that the original narrative of a final document never be altered; instead, only new narrative can be added. The composition resource has no explicit status for explicitly noting whether this business rule is in effect. This would be handled by an extension if required." ];
+       fhir:ElementDefinition.requirements [ fhir:value "Need to be able to mark interim, amended, or withdrawn compositions or documents." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Composition.status" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "code" ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "The workflow/clinical status of the composition." ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/composition-status>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/composition-status" ]
+         ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "interim: .completionCode=\"IN\" & ./statusCode[isNormalDatatype()]=\"active\";  final: .completionCode=\"AU\" &&  ./statusCode[isNormalDatatype()]=\"complete\" and not(./inboundRelationship[typeCode=\"SUBJ\" and isNormalActRelationship()]/source[subsumesCode(\"ActClass#CACT\") and moodCode=\"EVN\" and domainMember(\"ReviseComposition\", code) and isNormalAct()]);  amended: .completionCode=\"AU\" &&  ./statusCode[isNormalDatatype()]=\"complete\" and ./inboundRelationship[typeCode=\"SUBJ\" and isNormalActRelationship()]/source[subsumesCode(\"ActClass#CACT\") and moodCode=\"EVN\" and domainMember(\"ReviseComposition\", code) and isNormalAct() and statusCode=\"completed\"];  withdrawn : .completionCode=NI &&  ./statusCode[isNormalDatatype()]=\"obsolete\"" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "cda" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "status" ]
+       ]
+     ], [
+       fhir:index 21;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.confidentiality" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.confidentiality" ];
+       fhir:ElementDefinition.short [ fhir:value "confidentiality" ];
+       fhir:ElementDefinition.definition [ fhir:value "SHALL contain exactly one [1..1] confidentiality, which SHALL be selected from ValueSet v3-ConfidentialityClassification http://hl7.org/fhir/ValueSet/v3-ConfidentialityClassification STATIC 2016-01-01 (CONF:2219-151)." ];
+       fhir:ElementDefinition.comments [ fhir:value "The exact use of this element, and enforcement and issues related to highly sensitive documents are out of scope for the base specification, and delegated to implementation profiles (see security section)." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Composition.confidentiality" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "code" ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/v3-ConfidentialityClassification>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/v3-ConfidentialityClassification" ];
+           fhir:Reference.display [ fhir:value "v3-ConfidentialityClassification" ]
+         ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".confidentialityCode" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "cda" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".confidentialityCode" ]
+       ]
+     ], [
+       fhir:index 22;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.subject" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.subject" ];
+       fhir:ElementDefinition.label [ fhir:value "recordTarget" ];
+       fhir:ElementDefinition.short [ fhir:value "recordTarget" ];
+       fhir:ElementDefinition.definition [ fhir:value "SHALL contain exactly one [1..1] U.S. Core Patient Profile (identifier: http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient) (CONF:2219-152)." ];
+       fhir:ElementDefinition.comments [ fhir:value "U.S. DAF Patient" ];
+       fhir:ElementDefinition.requirements [ fhir:value "Essential metadata for searching for the composition. Identifies who and/or what the composition/document is about." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Composition.subject" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".participation[typeCode=\"SBJ\"].role[typeCode=\"PAT\"]" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "cda" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".recordTarget" ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "who.focus" ]
+       ]
+     ], [
+       fhir:index 23;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.author" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.author" ];
+       fhir:ElementDefinition.label [ fhir:value "author" ];
+       fhir:ElementDefinition.short [ fhir:value "author" ];
+       fhir:ElementDefinition.definition [ fhir:value "SHALL contain at least one [1..*] U.S. Core Practitioner Profile (identifier: http://hl7.org/fhir/us/core/StructureDefinition/us-core-pract) (CONF:2219-153)." ];
+       fhir:ElementDefinition.comments [ fhir:value "U.S. DAF Practitioner" ];
+       fhir:ElementDefinition.requirements [ fhir:value "Identifies who is responsible for the content." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Composition.author" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-pract" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Device" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".participation[typeCode=\"AUT\"].role[classCode=\"ASSIGNED\"]" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "cda" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".author.assignedAuthor" ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "who.author" ]
+       ]
+     ], [
+       fhir:index 24;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.attester" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.attester" ];
+       fhir:ElementDefinition.slicing [
+         fhir:ElementDefinition.slicing.discriminator [
+           fhir:value "Composition.attester.mode";
+           fhir:index 0
+         ];
+         fhir:ElementDefinition.slicing.rules [ fhir:value "open" ]
+       ];
+       fhir:ElementDefinition.short [ fhir:value "Attests to accuracy of composition" ];
+       fhir:ElementDefinition.definition [ fhir:value "MAY contain zero or more [0..*] attester (CONF:2219-2083) such that it" ];
+       fhir:ElementDefinition.comments [ fhir:value "Only list each attester once." ];
+       fhir:ElementDefinition.requirements [ fhir:value "Identifies responsibility for the accuracy of the composition content." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Composition.attester" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "BackboneElement" ]
+       ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "children().count() > id.count()" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [ fhir:value "Element" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".participation[typeCode=\"AUTHEN\"].role[classCode=\"ASSIGNED\"]" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "cda" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".authenticator/.legalAuthenticator" ]
+       ]
+     ], [
+       fhir:index 25;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.attester:attester_slice_pos16" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.attester" ];
+       fhir:ElementDefinition.sliceName [ fhir:value "attester_slice_pos16" ];
+       fhir:ElementDefinition.short [ fhir:value "attester" ];
+       fhir:ElementDefinition.definition [ fhir:value "SHOULD contain zero or one [0..1] attester (CONF:2219-2082) such that it" ];
+       fhir:ElementDefinition.comments [ fhir:value "Only list each attester once." ];
+       fhir:ElementDefinition.requirements [ fhir:value "Identifies responsibility for the accuracy of the composition content." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Composition.attester" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "BackboneElement" ]
+       ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "children().count() > id.count()" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [ fhir:value "Element" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".participation[typeCode=\"AUTHEN\"].role[classCode=\"ASSIGNED\"]" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "cda" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".authenticator/.legalAuthenticator" ]
+       ]
+     ], [
+       fhir:index 26;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.attester:attester_slice_pos16.id" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.attester.id" ];
+       fhir:ElementDefinition.representation [
+         fhir:value "xmlAttr";
+         fhir:index 0
+       ];
+       fhir:ElementDefinition.short [ fhir:value "xml:id (or equivalent in JSON)" ];
+       fhir:ElementDefinition.definition [ fhir:value "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.id" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
+       ]
+     ], [
+       fhir:index 27;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.attester:attester_slice_pos16.extension" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.attester.extension" ];
+       fhir:ElementDefinition.short [ fhir:value "Additional Content defined by implementations" ];
+       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." ];
+       fhir:ElementDefinition.comments [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "extensions";
+         fhir:index 0
+       ], [
+         fhir:value "user content";
+         fhir:index 1
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.extension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
+       ]
+     ], [
+       fhir:index 28;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.attester:attester_slice_pos16.modifierExtension" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.attester.modifierExtension" ];
+       fhir:ElementDefinition.short [ fhir:value "Extensions that cannot be ignored" ];
+       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions." ];
+       fhir:ElementDefinition.comments [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "extensions";
+         fhir:index 0
+       ], [
+         fhir:value "user content";
+         fhir:index 1
+       ], [
+         fhir:value "modifiers";
+         fhir:index 2
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "BackboneElement.modifierExtension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
+       ]
+     ], [
+       fhir:index 29;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.attester:attester_slice_pos16.mode:attester_slice_pos16" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.attester.mode" ];
+       fhir:ElementDefinition.sliceName [ fhir:value "attester_slice_pos16" ];
+       fhir:ElementDefinition.short [ fhir:value "mode" ];
+       fhir:ElementDefinition.definition [ fhir:value "SHALL contain exactly one [1..1] mode=\"legal\" (CodeSystem: FHIR CompositionAttestationMode http://hl7.org/fhir/composition-attestation-mode) (CONF:2219-2084)." ];
+       fhir:ElementDefinition.comments [ fhir:value "Use more than one code where a single attester has more than one mode (professional and legal are often paired)." ];
+       fhir:ElementDefinition.requirements [ fhir:value "Indicates the level of authority of the attestation." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Composition.attester.mode" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "code" ]
+       ];
+       fhir:ElementDefinition.patternString [ fhir:value "legal" ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "The way in which a person authenticated a composition." ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/composition-attestation-mode>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/composition-attestation-mode" ]
+         ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "unique(./modeCode)" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "cda" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "implied by .authenticator/.legalAuthenticator" ]
+       ]
+     ], [
+       fhir:index 30;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.attester:attester_slice_pos16.time" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.attester.time" ];
+       fhir:ElementDefinition.short [ fhir:value "When composition attested" ];
+       fhir:ElementDefinition.definition [ fhir:value "When composition was attested by the party." ];
+       fhir:ElementDefinition.requirements [ fhir:value "Identifies when the information in the composition was deemed accurate.  (Things may have changed since then.)." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Composition.attester.time" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "dateTime" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "./time[type=\"TS\" and isNormalDatatype()]" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "cda" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".authenticator.time" ]
+       ]
+     ], [
+       fhir:index 31;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.attester:attester_slice_pos16.party:attester_slice_pos16" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.attester.party" ];
+       fhir:ElementDefinition.sliceName [ fhir:value "attester_slice_pos16" ];
+       fhir:ElementDefinition.short [ fhir:value "party" ];
+       fhir:ElementDefinition.definition [ fhir:value "MAY contain zero or one [0..1] U.S. Core Practitioner Profile (identifier: http://hl7.org/fhir/us/core/StructureDefinition/us-core-pract) (CONF:2219-2085)." ];
+       fhir:ElementDefinition.requirements [ fhir:value "Identifies who has taken on the responsibility for accuracy of the composition content." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Composition.attester.party" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-pract" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "./role[classCode=\"ASSIGNED\" and isNormalRole]/player[determinerCode=\"INST\" and classCode=(\"DEV\", \"PSN\") and isNormalEntity()] or ./role[classCode=\"ASSIGNED\" and isNormalRole and not(player)]/scoper[determinerCode=\"INST\" and classCode=\"ORG\" and isNormalEntity()]" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "cda" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".authenticator.assignedEnttty" ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "who.witness" ]
+       ]
+     ], [
+       fhir:index 32;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.attester:attester_slice_pos17" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.attester" ];
+       fhir:ElementDefinition.sliceName [ fhir:value "attester_slice_pos17" ];
+       fhir:ElementDefinition.short [ fhir:value "attester" ];
+       fhir:ElementDefinition.definition [ fhir:value "MAY contain zero or more [0..*] attester (CONF:2219-2083) such that it" ];
+       fhir:ElementDefinition.comments [ fhir:value "Only list each attester once." ];
+       fhir:ElementDefinition.requirements [ fhir:value "Identifies responsibility for the accuracy of the composition content." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Composition.attester" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "BackboneElement" ]
+       ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "children().count() > id.count()" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [ fhir:value "Element" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".participation[typeCode=\"AUTHEN\"].role[classCode=\"ASSIGNED\"]" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "cda" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".authenticator/.legalAuthenticator" ]
+       ]
+     ], [
+       fhir:index 33;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.attester:attester_slice_pos17.id" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.attester.id" ];
+       fhir:ElementDefinition.representation [
+         fhir:value "xmlAttr";
+         fhir:index 0
+       ];
+       fhir:ElementDefinition.short [ fhir:value "xml:id (or equivalent in JSON)" ];
+       fhir:ElementDefinition.definition [ fhir:value "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.id" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
+       ]
+     ], [
+       fhir:index 34;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.attester:attester_slice_pos17.extension" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.attester.extension" ];
+       fhir:ElementDefinition.short [ fhir:value "Additional Content defined by implementations" ];
+       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." ];
+       fhir:ElementDefinition.comments [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "extensions";
+         fhir:index 0
+       ], [
+         fhir:value "user content";
+         fhir:index 1
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.extension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
+       ]
+     ], [
+       fhir:index 35;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.attester:attester_slice_pos17.modifierExtension" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.attester.modifierExtension" ];
+       fhir:ElementDefinition.short [ fhir:value "Extensions that cannot be ignored" ];
+       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions." ];
+       fhir:ElementDefinition.comments [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "extensions";
+         fhir:index 0
+       ], [
+         fhir:value "user content";
+         fhir:index 1
+       ], [
+         fhir:value "modifiers";
+         fhir:index 2
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "BackboneElement.modifierExtension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
+       ]
+     ], [
+       fhir:index 36;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.attester:attester_slice_pos17.mode:attester_slice_pos17" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.attester.mode" ];
+       fhir:ElementDefinition.sliceName [ fhir:value "attester_slice_pos17" ];
+       fhir:ElementDefinition.short [ fhir:value "mode" ];
+       fhir:ElementDefinition.definition [ fhir:value "SHALL contain at least one [1..*] mode (CONF:2219-2086)." ];
+       fhir:ElementDefinition.comments [ fhir:value "Use more than one code where a single attester has more than one mode (professional and legal are often paired)." ];
+       fhir:ElementDefinition.requirements [ fhir:value "Indicates the level of authority of the attestation." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Composition.attester.mode" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "code" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "The way in which a person authenticated a composition." ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/composition-attestation-mode>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/composition-attestation-mode" ]
+         ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "unique(./modeCode)" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "cda" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "implied by .authenticator/.legalAuthenticator" ]
+       ]
+     ], [
+       fhir:index 37;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.attester:attester_slice_pos17.time" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.attester.time" ];
+       fhir:ElementDefinition.short [ fhir:value "When composition attested" ];
+       fhir:ElementDefinition.definition [ fhir:value "When composition was attested by the party." ];
+       fhir:ElementDefinition.requirements [ fhir:value "Identifies when the information in the composition was deemed accurate.  (Things may have changed since then.)." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Composition.attester.time" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "dateTime" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "./time[type=\"TS\" and isNormalDatatype()]" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "cda" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".authenticator.time" ]
+       ]
+     ], [
+       fhir:index 38;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.attester:attester_slice_pos17.party:attester_slice_pos17" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.attester.party" ];
+       fhir:ElementDefinition.sliceName [ fhir:value "attester_slice_pos17" ];
+       fhir:ElementDefinition.short [ fhir:value "party" ];
+       fhir:ElementDefinition.definition [ fhir:value "MAY contain zero or one [0..1] U.S. Core Practitioner Profile (identifier: http://hl7.org/fhir/us/core/StructureDefinition/us-core-pract) (CONF:2219-2087)." ];
+       fhir:ElementDefinition.requirements [ fhir:value "Identifies who has taken on the responsibility for accuracy of the composition content." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Composition.attester.party" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-pract" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "./role[classCode=\"ASSIGNED\" and isNormalRole]/player[determinerCode=\"INST\" and classCode=(\"DEV\", \"PSN\") and isNormalEntity()] or ./role[classCode=\"ASSIGNED\" and isNormalRole and not(player)]/scoper[determinerCode=\"INST\" and classCode=\"ORG\" and isNormalEntity()]" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "cda" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".authenticator.assignedEnttty" ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "who.witness" ]
+       ]
+     ], [
+       fhir:index 39;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.custodian" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.custodian" ];
+       fhir:ElementDefinition.label [ fhir:value "custodian" ];
+       fhir:ElementDefinition.short [ fhir:value "custodian" ];
+       fhir:ElementDefinition.definition [ fhir:value "SHALL contain exactly one [1..1] U.S. Core Organization Profile (identifier: http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization) (CONF:2219-154)." ];
+       fhir:ElementDefinition.comments [ fhir:value "U.S. DAF Organization" ];
+       fhir:ElementDefinition.requirements [ fhir:value "Identifies where to go to find the current version, where to report issues, etc." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Composition.custodian" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".participation[typeCode=\"RCV\"].role[classCode=\"CUST\"].scoper[classCode=\"ORG\" and determinerCode=\"INST\"]" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "cda" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".custodian.assignedCustodian" ]
+       ]
+     ], [
+       fhir:index 40;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.event" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.event" ];
+       fhir:ElementDefinition.short [ fhir:value "The clinical service(s) being documented" ];
+       fhir:ElementDefinition.definition [ fhir:value "The clinical service, such as a colonoscopy or an appendectomy, being documented." ];
+       fhir:ElementDefinition.comments [ fhir:value "The event needs to be consistent with the type element, though can provide further information if desired." ];
+       fhir:ElementDefinition.requirements [ fhir:value "Provides context for the composition and creates a linkage between a resource describing an event and the composition created describing the event." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Composition.event" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "BackboneElement" ]
+       ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "children().count() > id.count()" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [ fhir:value "Element" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "outboundRelationship[typeCode=\"SUBJ\"].target[classCode<'ACT']" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "cda" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".documentationOf.serviceEvent" ]
+       ]
+     ], [
+       fhir:index 41;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.event.id" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.event.id" ];
+       fhir:ElementDefinition.representation [
+         fhir:value "xmlAttr";
+         fhir:index 0
+       ];
+       fhir:ElementDefinition.short [ fhir:value "xml:id (or equivalent in JSON)" ];
+       fhir:ElementDefinition.definition [ fhir:value "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.id" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
+       ]
+     ], [
+       fhir:index 42;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.event.extension" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.event.extension" ];
+       fhir:ElementDefinition.short [ fhir:value "Additional Content defined by implementations" ];
+       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." ];
+       fhir:ElementDefinition.comments [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "extensions";
+         fhir:index 0
+       ], [
+         fhir:value "user content";
+         fhir:index 1
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.extension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
+       ]
+     ], [
+       fhir:index 43;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.event.modifierExtension" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.event.modifierExtension" ];
+       fhir:ElementDefinition.short [ fhir:value "Extensions that cannot be ignored" ];
+       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions." ];
+       fhir:ElementDefinition.comments [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "extensions";
+         fhir:index 0
+       ], [
+         fhir:value "user content";
+         fhir:index 1
+       ], [
+         fhir:value "modifiers";
+         fhir:index 2
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "BackboneElement.modifierExtension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
+       ]
+     ], [
+       fhir:index 44;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.event.code" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.event.code" ];
+       fhir:ElementDefinition.short [ fhir:value "Code(s) that apply to the event being documented" ];
+       fhir:ElementDefinition.definition [ fhir:value "This list of codes represents the main clinical acts, such as a colonoscopy or an appendectomy, being documented. In some cases, the event is inherent in the typeCode, such as a \"History and Physical Report\" in which the procedure being documented is necessarily a \"History and Physical\" act." ];
+       fhir:ElementDefinition.comments [ fhir:value "An event can further specialize the act inherent in the typeCode, such as where it is simply \"Procedure Report\" and the procedure was a \"colonoscopy\". If one or more eventCodes are included, they SHALL NOT conflict with the values inherent in the classCode, practiceSettingCode or typeCode, as such a conflict would create an ambiguous situation. This short list of codes is provided to be used as key words for certain types of queries." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Composition.event.code" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "This list of codes represents the main clinical acts being documented." ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/v3-ActCode>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/v3-ActCode" ]
+         ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".code" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "cda" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".code" ]
+       ]
+     ], [
+       fhir:index 45;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.event.period" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.event.period" ];
+       fhir:ElementDefinition.short [ fhir:value "The period covered by the documentation" ];
+       fhir:ElementDefinition.definition [ fhir:value "The period of time covered by the documentation. There is no assertion that the documentation is a complete representation for this period, only that it documents events during this time." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Composition.event.period" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Period" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".effectiveTime" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "cda" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".effectiveTime" ]
+       ]
+     ], [
+       fhir:index 46;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.event.detail" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.event.detail" ];
+       fhir:ElementDefinition.short [ fhir:value "The event(s) being documented" ];
+       fhir:ElementDefinition.definition [ fhir:value "The description and/or reference of the event(s) being documented. For example, this could be used to document such a colonoscopy or an appendectomy." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Composition.event.detail" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Resource" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".outboundRelationship[typeCode=\"SUBJ\"].target" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "cda" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
+       ]
+     ], [
+       fhir:index 47;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.encounter" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.encounter" ];
+       fhir:ElementDefinition.short [ fhir:value "Context of the Composition" ];
+       fhir:ElementDefinition.definition [ fhir:value "Describes the clinical encounter or type of care this documentation is associated with." ];
+       fhir:ElementDefinition.requirements [ fhir:value "Provides context for the composition and supports searching." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Composition.encounter" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Encounter" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "unique(highest(./outboundRelationship[typeCode=\"SUBJ\" and isNormalActRelationship()], priorityNumber)/target[moodCode=\"EVN\" and classCode=(\"ENC\", \"PCPR\") and isNormalAct])" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "cda" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".componentOf.encompassingEncounter" ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "context" ]
+       ]
+     ], [
+       fhir:index 48;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.section" ];
+       fhir:extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name" ];
+         fhir:Extension.valueString [ fhir:value "Section" ]
+       ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.section" ];
+       fhir:ElementDefinition.short [ fhir:value "Composition is broken into sections" ];
+       fhir:ElementDefinition.definition [ fhir:value "The root of the sections that make up the composition." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Composition.section" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "BackboneElement" ]
+       ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "children().count() > id.count()" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [ fhir:value "Element" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.constraint.key [ fhir:value "cmp-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "A section must at least one of text, entries, or sub-sections" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "text.exists() or entry.exists() or section.exists()" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:text) or exists(f:entry) or exists(f:section)" ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.constraint.key [ fhir:value "cmp-2" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "A section can only have an emptyReason if it is empty" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "emptyReason.empty() or entry.empty()" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "not(exists(f:emptyReason) and exists(f:entry))" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "./outboundRelationship[typeCode=\"COMP\" and isNormalActRelationship()]/target[moodCode=\"EVN\" and classCode=\"DOCSECT\" and isNormalAct]" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "cda" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".component.structuredBody.component.section" ]
+       ]
+     ], [
+       fhir:index 49;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.section.id" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.section.id" ];
+       fhir:ElementDefinition.representation [
+         fhir:value "xmlAttr";
+         fhir:index 0
+       ];
+       fhir:ElementDefinition.short [ fhir:value "xml:id (or equivalent in JSON)" ];
+       fhir:ElementDefinition.definition [ fhir:value "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.id" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
+       ]
+     ], [
+       fhir:index 50;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.section.extension" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.section.extension" ];
+       fhir:ElementDefinition.short [ fhir:value "Additional Content defined by implementations" ];
+       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." ];
+       fhir:ElementDefinition.comments [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "extensions";
+         fhir:index 0
+       ], [
+         fhir:value "user content";
+         fhir:index 1
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.extension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
+       ]
+     ], [
+       fhir:index 51;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.section.modifierExtension" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.section.modifierExtension" ];
+       fhir:ElementDefinition.short [ fhir:value "Extensions that cannot be ignored" ];
+       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions." ];
+       fhir:ElementDefinition.comments [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "extensions";
+         fhir:index 0
+       ], [
+         fhir:value "user content";
+         fhir:index 1
+       ], [
+         fhir:value "modifiers";
+         fhir:index 2
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "BackboneElement.modifierExtension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
+       ]
+     ], [
+       fhir:index 52;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.section.title" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.section.title" ];
+       fhir:ElementDefinition.short [ fhir:value "Label for section (e.g. for ToC)" ];
+       fhir:ElementDefinition.definition [ fhir:value "The label for this particular section.  This will be part of the rendered content for the document, and is often used to build a table of contents." ];
+       fhir:ElementDefinition.comments [ fhir:value "The title identifies the section for a human reader. The title must be consistent with the narrative of the resource that is the target of the section.content reference. Generally, sections SHOULD have titles, but in some documents it is unnecessary or inappropriate. Typically, this is where a section has subsections that have their own adequately distinguishing title,  or documents that only have a single section. Most Implementation Guides will make section title to be a required element." ];
+       fhir:ElementDefinition.requirements [ fhir:value "Section headings are often standardized for different types of documents.  They give guidance to humans on how the document is organized." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "header";
+         fhir:index 0
+       ], [
+         fhir:value "label";
+         fhir:index 1
+       ], [
+         fhir:value "caption";
+         fhir:index 2
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Composition.section.title" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "./title" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "cda" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".title" ]
+       ]
+     ], [
+       fhir:index 53;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.section.code" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.section.code" ];
+       fhir:ElementDefinition.short [ fhir:value "Classification of section (recommended)" ];
+       fhir:ElementDefinition.definition [ fhir:value "A code identifying the kind of content contained within the section. This must be consistent with the section title." ];
+       fhir:ElementDefinition.comments [ fhir:value "The code identifies the section for an automated processor of the document. This is particularly relevant when using profiles to control the structure of the document.   If the section has content (instead of sub-sections), the section.code does not change the meaning or interpretation of the resource that is the content of the section in the comments for the section.code." ];
+       fhir:ElementDefinition.requirements [ fhir:value "Provides computable standardized labels to topics within the document." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Composition.section.code" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
+       ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "Classification of a section of a composition/document." ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/doc-section-codes>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/doc-section-codes" ]
+         ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "./code" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "cda" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".code" ]
+       ]
+     ], [
+       fhir:index 54;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.section.text" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.section.text" ];
+       fhir:ElementDefinition.short [ fhir:value "Text summary of the section, for human interpretation" ];
+       fhir:ElementDefinition.definition [ fhir:value "A human-readable narrative that contains the attested content of the section, used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative." ];
+       fhir:ElementDefinition.comments [ fhir:value "Document profiles may define what content should be represented in the narrative to ensure clinical safety." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Composition.section.text" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Narrative" ]
+       ];
+       fhir:ElementDefinition.condition [
+         fhir:value "cmp-1";
+         fhir:index 0
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".text" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "cda" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".text" ]
+       ]
+     ], [
+       fhir:index 55;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.section.mode" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.section.mode" ];
+       fhir:ElementDefinition.short [ fhir:value "working | snapshot | changes" ];
+       fhir:ElementDefinition.definition [ fhir:value "How the entry list was prepared - whether it is a working list that is suitable for being maintained on an ongoing basis, or if it represents a snapshot of a list of items from another source, or whether it is a prepared list where items may be marked as added, modified or deleted." ];
+       fhir:ElementDefinition.requirements [ fhir:value "Sections are used in various ways, and it must be known in what way it is safe to use the entries in them." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Composition.section.mode" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "code" ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "The processing mode that applies to this section." ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/list-mode>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/list-mode" ]
+         ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".outBoundRelationship[typeCode=COMP].target[classCode=OBS\"].value" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "cda" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "class" ]
+       ]
+     ], [
+       fhir:index 56;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.section.orderedBy" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.section.orderedBy" ];
+       fhir:ElementDefinition.short [ fhir:value "Order of section entries" ];
+       fhir:ElementDefinition.definition [ fhir:value "Specifies the order applied to the items in the section entries." ];
+       fhir:ElementDefinition.comments [ fhir:value "Applications SHOULD render ordered lists in the order provided, but MAY allow users to re-order based on their own preferences as well. If there is no order specified, the order is unknown, though there may still be some order." ];
+       fhir:ElementDefinition.requirements [ fhir:value "Important for presentation and rendering.  Lists may be sorted to place more important information first or to group related entries." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Composition.section.orderedBy" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
+       ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "What order applies to the items in the entry." ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/list-order>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/list-order" ]
+         ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".outboundRelationship[typeCode=COMP].sequenceNumber > 1" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "cda" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
+       ]
+     ], [
+       fhir:index 57;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.section.entry" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.section.entry" ];
+       fhir:ElementDefinition.short [ fhir:value "A reference to data that supports this section" ];
+       fhir:ElementDefinition.definition [ fhir:value "A reference to the actual resource from which the narrative in the section is derived." ];
+       fhir:ElementDefinition.comments [ fhir:value "If there are no entries in the list, an emptyReason SHOULD be provided." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Composition.section.entry" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Resource" ]
+       ];
+       fhir:ElementDefinition.condition [
+         fhir:value "cmp-2";
+         fhir:index 0
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".outboundRelationship[typeCode=COMP] or  .participation[typeCode=SBJ]" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "cda" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".entry" ]
+       ]
+     ], [
+       fhir:index 58;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.section.emptyReason" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.section.emptyReason" ];
+       fhir:ElementDefinition.short [ fhir:value "Why the section is empty" ];
+       fhir:ElementDefinition.definition [ fhir:value "If the section is empty, why the list is empty. An empty section typically has some text explaining the empty reason." ];
+       fhir:ElementDefinition.comments [ fhir:value "The various reasons for an empty section make a significant interpretation to its interpretation. Note that this code is for use when the entire section content has been suppressed, and not for when individual items are omitted - implementers may consider using a text note or a flag on an entry in these cases." ];
+       fhir:ElementDefinition.requirements [ fhir:value "Allows capturing things like \"none exist\" or \"not asked\" which can be important for most lists." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Composition.section.emptyReason" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
+       ];
+       fhir:ElementDefinition.condition [
+         fhir:value "cmp-2";
+         fhir:index 0
+       ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "If a section is empty, why it is empty." ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/list-empty-reason>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/list-empty-reason" ]
+         ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".inboundRelationship[typeCode=SUBJ,code<{ListEmptyReason}].value[type=CD]" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "cda" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
+       ]
+     ], [
+       fhir:index 59;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.section.section" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.section.section" ];
+       fhir:ElementDefinition.short [ fhir:value "Nested Section" ];
+       fhir:ElementDefinition.definition [ fhir:value "A nested sub-section within this section." ];
+       fhir:ElementDefinition.comments [ fhir:value "Nested sections are primarily used to help human readers navigate to particular portions of the document." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Composition.section.section" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.contentReference [ fhir:value "#Composition:c-cdaonfhirusrealmheader.section" ];
+       fhir:ElementDefinition.condition [
+         fhir:value "cmp-1";
+         fhir:index 0
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "./outboundRelationship[typeCode=\"COMP\" and isNormalActRelationship()]/target[moodCode=\"EVN\" and classCode=\"DOCSECT\" and isNormalAct]" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "cda" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".component.section" ]
+       ]
+     ]
+  ];
+  fhir:StructureDefinition.differential [
+     fhir:StructureDefinition.differential.element [
+       fhir:index 0;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition" ]
+     ], [
+       fhir:index 1;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.language" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.language" ];
+       fhir:ElementDefinition.short [ fhir:value "language" ];
+       fhir:ElementDefinition.definition [ fhir:value "SHALL contain exactly one [1..1] language (CONF:2219-146)." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ]
+     ], [
+       fhir:index 2;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.extension" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.extension" ];
+       fhir:ElementDefinition.slicing [
+         fhir:ElementDefinition.slicing.discriminator [
+           fhir:value "Composition.url";
+           fhir:index 0
+         ];
+         fhir:ElementDefinition.slicing.rules [ fhir:value "open" ]
+       ];
+       fhir:ElementDefinition.definition [ fhir:value "MAY contain zero or more [0..*] C-CDA on FHIR Authorization (identifier: http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Authorization) (CONF:2219-2012)." ]
+     ], [
+       fhir:index 3;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.extension:extension_slice_pos2" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.extension" ];
+       fhir:ElementDefinition.sliceName [ fhir:value "extension_slice_pos2" ];
+       fhir:ElementDefinition.label [ fhir:value "dataEnterer" ];
+       fhir:ElementDefinition.short [ fhir:value "dataEnterer" ];
+       fhir:ElementDefinition.definition [ fhir:value "MAY contain zero or one [0..1] C-CDA on FHIR Data Enterer (identifier: http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Data-Enterer) (CONF:2219-1844)." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ];
+         fhir:ElementDefinition.type.profile [ fhir:value "http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Data-Enterer" ]
+       ]
+     ], [
+       fhir:index 4;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.extension:extension_slice_pos3" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.extension" ];
+       fhir:ElementDefinition.sliceName [ fhir:value "extension_slice_pos3" ];
+       fhir:ElementDefinition.label [ fhir:value "informant" ];
+       fhir:ElementDefinition.short [ fhir:value "informant" ];
+       fhir:ElementDefinition.definition [ fhir:value "MAY contain zero or more [0..*] C-CDA on FHIR Informant (identifier: http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Informant) (CONF:2219-1849)." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ];
+         fhir:ElementDefinition.type.profile [ fhir:value "http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Informant" ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.extension:extension_slice_pos4" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.extension" ];
+       fhir:ElementDefinition.sliceName [ fhir:value "extension_slice_pos4" ];
+       fhir:ElementDefinition.label [ fhir:value "informationRecipient" ];
+       fhir:ElementDefinition.short [ fhir:value "informationRecipient" ];
+       fhir:ElementDefinition.definition [ fhir:value "MAY contain zero or more [0..*] C-CDA on FHIR Information Recipient (identifier: http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Information-Recipient) (CONF:2219-1856)." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ];
+         fhir:ElementDefinition.type.profile [ fhir:value "http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Information-Recipient" ]
+       ]
+     ], [
+       fhir:index 6;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.extension:extension_slice_pos5" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.extension" ];
+       fhir:ElementDefinition.sliceName [ fhir:value "extension_slice_pos5" ];
+       fhir:ElementDefinition.label [ fhir:value "participant" ];
+       fhir:ElementDefinition.short [ fhir:value "participant" ];
+       fhir:ElementDefinition.definition [ fhir:value "MAY contain zero or more [0..*] C-CDA on FHIR Participant (identifier: http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Participant) (CONF:2219-1861)." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ];
+         fhir:ElementDefinition.type.profile [ fhir:value "http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Participant" ]
+       ]
+     ], [
+       fhir:index 7;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.extension:extension_slice_pos6" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.extension" ];
+       fhir:ElementDefinition.sliceName [ fhir:value "extension_slice_pos6" ];
+       fhir:ElementDefinition.label [ fhir:value "performer" ];
+       fhir:ElementDefinition.short [ fhir:value "performer" ];
+       fhir:ElementDefinition.definition [ fhir:value "SHOULD contain zero or more [0..*] C-CDA on FHIR Performer (identifier: http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Performer) (CONF:2219-1869)." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ];
+         fhir:ElementDefinition.type.profile [ fhir:value "http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Performer" ]
+       ]
+     ], [
+       fhir:index 8;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.extension:extension_slice_pos7" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.extension" ];
+       fhir:ElementDefinition.sliceName [ fhir:value "extension_slice_pos7" ];
+       fhir:ElementDefinition.label [ fhir:value "authorization" ];
+       fhir:ElementDefinition.short [ fhir:value "authorization" ];
+       fhir:ElementDefinition.definition [ fhir:value "MAY contain zero or more [0..*] C-CDA on FHIR Authorization (identifier: http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Authorization) (CONF:2219-2012)." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ];
+         fhir:ElementDefinition.type.profile [ fhir:value "http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Authorization" ]
+       ]
+     ], [
+       fhir:index 9;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.identifier" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.identifier" ];
+       fhir:ElementDefinition.short [ fhir:value "identifier" ];
+       fhir:ElementDefinition.definition [ fhir:value "SHALL contain exactly one [1..1] identifier (CONF:2219-147)." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ]
+     ], [
+       fhir:index 10;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.date" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.date" ];
+       fhir:ElementDefinition.short [ fhir:value "date" ];
+       fhir:ElementDefinition.definition [ fhir:value "SHALL contain exactly one [1..1] date (CONF:2219-148)." ];
+       fhir:ElementDefinition.comments [ fhir:value "US Realm Datetime" ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ]
+     ], [
+       fhir:index 11;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.type" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.type" ];
+       fhir:ElementDefinition.label [ fhir:value "Document Type" ];
+       fhir:ElementDefinition.short [ fhir:value "Document Type" ];
+       fhir:ElementDefinition.definition [ fhir:value "SHALL contain exactly one [1..1] type (CONF:2219-149)." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ]
+     ], [
+       fhir:index 12;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.title" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.title" ];
+       fhir:ElementDefinition.label [ fhir:value "Document Title" ];
+       fhir:ElementDefinition.short [ fhir:value "Document Title" ];
+       fhir:ElementDefinition.definition [ fhir:value "SHALL contain exactly one [1..1] title (CONF:2219-150)." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ]
+     ], [
+       fhir:index 13;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.status" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.status" ];
+       fhir:ElementDefinition.short [ fhir:value "status" ];
+       fhir:ElementDefinition.definition [ fhir:value "SHALL contain exactly one [1..1] status (CONF:2219-1048)." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ]
+     ], [
+       fhir:index 14;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.confidentiality" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.confidentiality" ];
+       fhir:ElementDefinition.short [ fhir:value "confidentiality" ];
+       fhir:ElementDefinition.definition [ fhir:value "SHALL contain exactly one [1..1] confidentiality, which SHALL be selected from ValueSet v3-ConfidentialityClassification http://hl7.org/fhir/ValueSet/v3-ConfidentialityClassification STATIC 2016-01-01 (CONF:2219-151)." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "code" ]
+       ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/v3-ConfidentialityClassification>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/v3-ConfidentialityClassification" ];
+           fhir:Reference.display [ fhir:value "v3-ConfidentialityClassification" ]
+         ]
+       ]
+     ], [
+       fhir:index 15;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.subject" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.subject" ];
+       fhir:ElementDefinition.label [ fhir:value "recordTarget" ];
+       fhir:ElementDefinition.short [ fhir:value "recordTarget" ];
+       fhir:ElementDefinition.definition [ fhir:value "SHALL contain exactly one [1..1] U.S. Core Patient Profile (identifier: http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient) (CONF:2219-152)." ];
+       fhir:ElementDefinition.comments [ fhir:value "U.S. DAF Patient" ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient" ]
+       ]
+     ], [
+       fhir:index 16;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.author" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.author" ];
+       fhir:ElementDefinition.label [ fhir:value "author" ];
+       fhir:ElementDefinition.short [ fhir:value "author" ];
+       fhir:ElementDefinition.definition [ fhir:value "SHALL contain at least one [1..*] U.S. Core Practitioner Profile (identifier: http://hl7.org/fhir/us/core/StructureDefinition/us-core-pract) (CONF:2219-153)." ];
+       fhir:ElementDefinition.comments [ fhir:value "U.S. DAF Practitioner" ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-pract" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Device" ]
+       ]
+     ], [
+       fhir:index 17;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.attester" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.attester" ];
+       fhir:ElementDefinition.slicing [
+         fhir:ElementDefinition.slicing.discriminator [
+           fhir:value "Composition.attester.mode";
+           fhir:index 0
+         ];
+         fhir:ElementDefinition.slicing.rules [ fhir:value "open" ]
+       ];
+       fhir:ElementDefinition.definition [ fhir:value "MAY contain zero or more [0..*] attester (CONF:2219-2083) such that it" ]
+     ], [
+       fhir:index 18;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.attester:attester_slice_pos16" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.attester" ];
+       fhir:ElementDefinition.sliceName [ fhir:value "attester_slice_pos16" ];
+       fhir:ElementDefinition.short [ fhir:value "attester" ];
+       fhir:ElementDefinition.definition [ fhir:value "SHOULD contain zero or one [0..1] attester (CONF:2219-2082) such that it" ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ]
+     ], [
+       fhir:index 19;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.attester:attester_slice_pos16.mode:attester_slice_pos16" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.attester.mode" ];
+       fhir:ElementDefinition.sliceName [ fhir:value "attester_slice_pos16" ];
+       fhir:ElementDefinition.short [ fhir:value "mode" ];
+       fhir:ElementDefinition.definition [ fhir:value "SHALL contain exactly one [1..1] mode=\"legal\" (CodeSystem: FHIR CompositionAttestationMode http://hl7.org/fhir/composition-attestation-mode) (CONF:2219-2084)." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "code" ]
+       ];
+       fhir:ElementDefinition.patternString [ fhir:value "legal" ]
+     ], [
+       fhir:index 20;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.attester:attester_slice_pos16.party:attester_slice_pos16" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.attester.party" ];
+       fhir:ElementDefinition.sliceName [ fhir:value "attester_slice_pos16" ];
+       fhir:ElementDefinition.short [ fhir:value "party" ];
+       fhir:ElementDefinition.definition [ fhir:value "MAY contain zero or one [0..1] U.S. Core Practitioner Profile (identifier: http://hl7.org/fhir/us/core/StructureDefinition/us-core-pract) (CONF:2219-2085)." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-pract" ]
+       ]
+     ], [
+       fhir:index 21;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.attester:attester_slice_pos17" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.attester" ];
+       fhir:ElementDefinition.sliceName [ fhir:value "attester_slice_pos17" ];
+       fhir:ElementDefinition.short [ fhir:value "attester" ];
+       fhir:ElementDefinition.definition [ fhir:value "MAY contain zero or more [0..*] attester (CONF:2219-2083) such that it" ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ]
+     ], [
+       fhir:index 22;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.attester:attester_slice_pos17.mode:attester_slice_pos17" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.attester.mode" ];
+       fhir:ElementDefinition.sliceName [ fhir:value "attester_slice_pos17" ];
+       fhir:ElementDefinition.short [ fhir:value "mode" ];
+       fhir:ElementDefinition.definition [ fhir:value "SHALL contain at least one [1..*] mode (CONF:2219-2086)." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ]
+     ], [
+       fhir:index 23;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.attester:attester_slice_pos17.party:attester_slice_pos17" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.attester.party" ];
+       fhir:ElementDefinition.sliceName [ fhir:value "attester_slice_pos17" ];
+       fhir:ElementDefinition.short [ fhir:value "party" ];
+       fhir:ElementDefinition.definition [ fhir:value "MAY contain zero or one [0..1] U.S. Core Practitioner Profile (identifier: http://hl7.org/fhir/us/core/StructureDefinition/us-core-pract) (CONF:2219-2087)." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-pract" ]
+       ]
+     ], [
+       fhir:index 24;
+       fhir:Element.id [ fhir:value "Composition:c-cdaonfhirusrealmheader.custodian" ];
+       fhir:ElementDefinition.path [ fhir:value "Composition.custodian" ];
+       fhir:ElementDefinition.label [ fhir:value "custodian" ];
+       fhir:ElementDefinition.short [ fhir:value "custodian" ];
+       fhir:ElementDefinition.definition [ fhir:value "SHALL contain exactly one [1..1] U.S. Core Organization Profile (identifier: http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization) (CONF:2219-154)." ];
+       fhir:ElementDefinition.comments [ fhir:value "U.S. DAF Organization" ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization" ]
+       ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/ValueSet/all-languages> a fhir:ValueSet .
+
+<http://hl7.org/fhir/ValueSet/languages> a fhir:ValueSet .
+
+<http://hl7.org/fhir/ValueSet/doc-typecodes> a fhir:ValueSet .
+
+<http://hl7.org/fhir/ValueSet/doc-classcodes> a fhir:ValueSet .
+
+<http://hl7.org/fhir/ValueSet/composition-status> a fhir:ValueSet .
+
+<http://hl7.org/fhir/ValueSet/v3-ConfidentialityClassification> a fhir:ValueSet, fhir:ValueSet .
+
+<http://hl7.org/fhir/ValueSet/composition-attestation-mode> a fhir:ValueSet, fhir:ValueSet .
+
+<http://hl7.org/fhir/ValueSet/v3-ActCode> a fhir:ValueSet .
+
+<http://hl7.org/fhir/ValueSet/doc-section-codes> a fhir:ValueSet .
+
+<http://hl7.org/fhir/ValueSet/list-mode> a fhir:ValueSet .
+
+<http://hl7.org/fhir/ValueSet/list-order> a fhir:ValueSet .
+
+<http://hl7.org/fhir/ValueSet/list-empty-reason> a fhir:ValueSet .
+
+# -------------------------------------------------------------------------------------
+

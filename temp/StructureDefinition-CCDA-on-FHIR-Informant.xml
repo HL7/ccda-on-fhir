@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="CCDA-on-FHIR-Informant"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>url</b>: <a href="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Informant">http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Informant</a></p><p><b>name</b>: C-CDA on FHIR Informant</p><p><b>status</b>: DRAFT</p><p><b>date</b>: Jan 4, 2017 11:36:09 PM</p><p><b>publisher</b>: Lantana Consulting Group</p><p><b>contact</b>: </p><p><b>description</b>: C-CDA on FHIR Informant Extension</p><p><b>url</b>: <a href="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Informant">http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Informant</a></p><p><b>name</b>: C-CDA on FHIR Informant</p><p><b>status</b>: DRAFT</p><p><b>publisher</b>: Lantana Consulting Group</p><p><b>contact</b>: </p><p><b>date</b>: Jan 4, 2017 11:36:09 PM</p><p><b>description</b>: C-CDA on FHIR Informant Extension</p><h3>Mappings</h3><table class="grid"><tr><td>-</td><td><b>Identity</b></td><td><b>Uri</b></td><td><b>Name</b></td></tr><tr><td>*</td><td>rim</td><td><a href="http://hl7.org/v3">http://hl7.org/v3</a></td><td>RIM Mapping</td></tr></table><p><b>kind</b>: RESOURCE</p><p><b>abstract</b>: false</p><p><b>contextType</b>: EXTENSION</p><p><b>context</b>: Extension</p><p><b>type</b>: Extension</p><p><b>baseDefinition</b>: <a href="http://hl7.org/fhir/StructureDefinition/Extension">http://hl7.org/fhir/StructureDefinition/Extension</a></p><p><b>derivation</b>: CONSTRAINT</p><h3>Snapshots</h3><table class="grid"><tr><td>-</td><td><b>Element</b></td></tr><tr><td>*</td><td>todo-bundle</td></tr></table><h3>Differentials</h3><table class="grid"><tr><td>-</td><td><b>Element</b></td></tr><tr><td>*</td><td>todo-bundle</td></tr></table></div>
+  </text>
+  <url value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Informant"/>
+  <name value="C-CDA on FHIR Informant"/>
+  <status value="draft"/>
+  <publisher value="Lantana Consulting Group"/>
+  <contact>
+    <name value="Sarah Gaunt"/>
+    <telecom>
+      <system value="phone"/>
+      <value value="+6 141-029-2506"/>
+      <use value="work"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="sarah.gaunt@lantanagroup.com"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <date value="2017-01-04T23:36:09-05:00"/>
+  <description value="C-CDA on FHIR Informant Extension"/>
+  <mapping>
+    <identity value="rim"/>
+    <uri value="http://hl7.org/v3"/>
+    <name value="RIM Mapping"/>
+  </mapping>
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <contextType value="extension"/>
+  <context value="Extension"/>
+  <type value="Extension"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+  <derivation value="constraint"/>
+  <snapshot>
+    <element id="Extension:c-cdaonfhirinformant">
+      <path value="Extension"/>
+      <short value="Extension"/>
+      <definition value="An Extension"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <condition value="ele-1"/>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="children().count() &gt; id.count()"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="Element"/>
+      </constraint>
+      <constraint>
+        <key value="ext-1"/>
+        <severity value="error"/>
+        <human value="Must have either extensions or value[x], not both"/>
+        <expression value="extension.exists() != value.exists()"/>
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
+        <source value="Extension"/>
+      </constraint>
+    </element>
+    <element id="Extension:c-cdaonfhirinformant.id">
+      <path value="Extension.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <definition value="unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Element.id"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="Extension:c-cdaonfhirinformant.extension">
+      <path value="Extension.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Element.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="Extension:c-cdaonfhirinformant.url">
+      <path value="Extension.url"/>
+      <representation value="xmlAttr"/>
+      <short value="@url"/>
+      <definition value="SHALL contain exactly one [1..1] @url=&quot;http://hl7.org/fhir/ccda/StructureDefinition/CCDA_on_FHIR_Informant&quot; (CONF:2219-1852)."/>
+      <comments value="The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="Extension.url"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="uri"/>
+      </type>
+      <fixedUri value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA_on_FHIR_Informant"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element id="Extension:c-cdaonfhirinformant.valueReference">
+      <path value="Extension.valueReference"/>
+      <short value="valueReference"/>
+      <definition value="SHALL contain exactly one [1..1] U.S. Core Practitioner Profile (identifier: http://hl7.org/fhir/us/core/StructureDefinition/us-core-pract) (CONF:2219-1853)."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="Extension.value[x]"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-pract"/>
+      </type>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="Extension:c-cdaonfhirinformant">
+      <path value="Extension"/>
+    </element>
+    <element id="Extension:c-cdaonfhirinformant.url">
+      <path value="Extension.url"/>
+      <short value="@url"/>
+      <definition value="SHALL contain exactly one [1..1] @url=&quot;http://hl7.org/fhir/ccda/StructureDefinition/CCDA_on_FHIR_Informant&quot; (CONF:2219-1852)."/>
+      <min value="1"/>
+      <max value="1"/>
+      <fixedUri value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA_on_FHIR_Informant"/>
+    </element>
+    <element id="Extension:c-cdaonfhirinformant.valueReference">
+      <path value="Extension.valueReference"/>
+      <short value="valueReference"/>
+      <definition value="SHALL contain exactly one [1..1] U.S. Core Practitioner Profile (identifier: http://hl7.org/fhir/us/core/StructureDefinition/us-core-pract) (CONF:2219-1853)."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-pract"/>
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

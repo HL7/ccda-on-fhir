@@ -1,0 +1,894 @@
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<!-- instance template base -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>C-CDA on FHIR</title>
+  
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  
+
+  <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet"/>
+  <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="assets/js/html5shiv.js"></script>
+  <script src="assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+
+</head>
+<body>
+
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+  <div class="container">  <!-- container -->
+   <a id="logo" no-external="true" href="http://hl7.org/fhir"><img alt="logo fhir" src="assets/images/fhir-logo-www.png"/> </a>
+   <div id="hl7-status">
+    <b>Current Build</b> 
+   </div>
+
+   <div id="hl7-nav">
+     <a id="hl7-logo" no-external="true" href="http://www.hl7.org">
+     <img height="50" alt="visit the hl7 website" width="42" src="assets/images/hl7-logo.png"/>
+    </a>
+   </div>
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a></div>
+  </div>
+  <div class="container">  <!-- container -->
+ </div></div>  <!-- /segment-header -->
+
+ <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+  <div id="stripe"> </div>
+  <div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+
+   <nav class="navbar navbar-inverse">
+    <div class="container">
+     <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+     </button>
+      <a class="navbar-brand hidden" href="http://hl7.org/fhir/2017Janindex.html">FHIR</a>
+     <div class="nav-collapse collapse navbar-inverse-collapse">
+      <ul class="nav navbar-nav">
+              
+        <li><a href="http://hl7.org/fhir/2017Janindex.html">Home</a></li>
+        <li><a href="http://hl7.org/fhir/2017Jandocumentation.html">Documentation</a></li>
+        <li><a href="http://hl7.org/fhir/2017Janmodules.html">Modules</a></li>
+        <li><a href="http://hl7.org/fhir/2017Janresourcelist.html">Resources</a></li>
+        <li><a href="http://hl7.org/fhir/2017Janprofilelist.html">Profiles</a></li>
+        <li><a href="http://hl7.org/fhir/2017Janextensibility-registry.html">Extensions</a></li>
+        <li><a href="http://hl7.org/fhir/2017Janoperationslist.html">Operations</a></li>
+        <li><a href="http://hl7.org/fhir/2017Janservicelist.html">Services</a></li>
+
+      </ul>
+     </div>  <!-- /.nav-collapse -->
+    </div>  <!-- /.container -->
+   </nav>  <!-- /.navbar -->
+
+  <!-- /HEADER CONTENT -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-navbar -->
+
+ <div id="segment-breadcrumb" class="segmnt">  <!-- segment-breadcrumb -->
+  <div class="container">  <!-- container -->
+   <ul class="breadcrumb">
+     <li title="C-CDA on FHIR"><a href="index.html"><b>C-CDA on FHIR</b></a></li>
+     <li><b> Details</b></li>
+   </ul>
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-breadcrumb -->
+
+ <div id="segment-content" class="segment">  <!-- segment-content -->
+ <div class="container">  <!-- container -->
+            <div class="row">
+             <div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+  
+<h2>ConsultDocumentType</h2>
+
+<pre class="rdf">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+&lt;ValueSet/2.16.840.1.113883.11.20.9.31&gt; a fhir:ValueSet;
+  <a href="http://hl7.org/fhir/2017Jan/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot;
+  <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#id">fhir:value</a> &quot;2.16.840.1.113883.11.20.9.31&quot;];
+  <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.text">fhir:DomainResource.text</a> [
+     <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h3&gt;Value Set Contents&lt;/h3&gt;&lt;p&gt;This value set contains 100 concepts&lt;/p&gt;&lt;p&gt;All codes from system &lt;code&gt;http://loinc.org&lt;/code&gt;&lt;/p&gt;&lt;table class=\&quot;codes\&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-11488-4\&quot;&gt; &lt;/a&gt;11488-4&lt;/td&gt;&lt;td&gt;Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34099-2\&quot;&gt; &lt;/a&gt;34099-2&lt;/td&gt;&lt;td&gt;Cardiology Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34756-7\&quot;&gt; &lt;/a&gt;34756-7&lt;/td&gt;&lt;td&gt;Dentistry Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34758-3\&quot;&gt; &lt;/a&gt;34758-3&lt;/td&gt;&lt;td&gt;Dermatology Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34760-9\&quot;&gt; &lt;/a&gt;34760-9&lt;/td&gt;&lt;td&gt;Diabetology Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34879-7\&quot;&gt; &lt;/a&gt;34879-7&lt;/td&gt;&lt;td&gt;Endocrinology Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34761-7\&quot;&gt; &lt;/a&gt;34761-7&lt;/td&gt;&lt;td&gt;Gastroenterology Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34764-1\&quot;&gt; &lt;/a&gt;34764-1&lt;/td&gt;&lt;td&gt;General Medicine Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34776-5\&quot;&gt; &lt;/a&gt;34776-5&lt;/td&gt;&lt;td&gt;Gerontology Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34779-9\&quot;&gt; &lt;/a&gt;34779-9&lt;/td&gt;&lt;td&gt;Hematology + Medical Oncology Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34781-5\&quot;&gt; &lt;/a&gt;34781-5&lt;/td&gt;&lt;td&gt;Infectious Disease Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-72555-6\&quot;&gt; &lt;/a&gt;72555-6&lt;/td&gt;&lt;td&gt;Interventional Radiology Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34783-1\&quot;&gt; &lt;/a&gt;34783-1&lt;/td&gt;&lt;td&gt;Kinesiotherapy Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34785-6\&quot;&gt; &lt;/a&gt;34785-6&lt;/td&gt;&lt;td&gt;Mental Health Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34795-5\&quot;&gt; &lt;/a&gt;34795-5&lt;/td&gt;&lt;td&gt;Nephrology Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34798-9\&quot;&gt; &lt;/a&gt;34798-9&lt;/td&gt;&lt;td&gt;Neurological Surgery Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34797-1\&quot;&gt; &lt;/a&gt;34797-1&lt;/td&gt;&lt;td&gt;Neurology Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34800-3\&quot;&gt; &lt;/a&gt;34800-3&lt;/td&gt;&lt;td&gt;Nutrition and Dietetics Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34777-3\&quot;&gt; &lt;/a&gt;34777-3&lt;/td&gt;&lt;td&gt;Obstetrics and Gynecology Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34803-7\&quot;&gt; &lt;/a&gt;34803-7&lt;/td&gt;&lt;td&gt;Occupational Health Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34855-7\&quot;&gt; &lt;/a&gt;34855-7&lt;/td&gt;&lt;td&gt;Occupational Therapy Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34805-2\&quot;&gt; &lt;/a&gt;34805-2&lt;/td&gt;&lt;td&gt;Oncology Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34807-8\&quot;&gt; &lt;/a&gt;34807-8&lt;/td&gt;&lt;td&gt;Ophthalmology Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34810-2\&quot;&gt; &lt;/a&gt;34810-2&lt;/td&gt;&lt;td&gt;Optometry Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34812-8\&quot;&gt; &lt;/a&gt;34812-8&lt;/td&gt;&lt;td&gt;Oromaxillofacial Surgery Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34814-4\&quot;&gt; &lt;/a&gt;34814-4&lt;/td&gt;&lt;td&gt;Orthopedics Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34816-9\&quot;&gt; &lt;/a&gt;34816-9&lt;/td&gt;&lt;td&gt;Otorhinolaryngology Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-60570-9\&quot;&gt; &lt;/a&gt;60570-9&lt;/td&gt;&lt;td&gt;Pathology Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34820-1\&quot;&gt; &lt;/a&gt;34820-1&lt;/td&gt;&lt;td&gt;Pharmacy Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34822-7\&quot;&gt; &lt;/a&gt;34822-7&lt;/td&gt;&lt;td&gt;Physical Medicine and Rehabilitation Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34824-3\&quot;&gt; &lt;/a&gt;34824-3&lt;/td&gt;&lt;td&gt;Physical Therapy Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34826-8\&quot;&gt; &lt;/a&gt;34826-8&lt;/td&gt;&lt;td&gt;Plastic Surgery Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34828-4\&quot;&gt; &lt;/a&gt;34828-4&lt;/td&gt;&lt;td&gt;Podiatry Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34788-0\&quot;&gt; &lt;/a&gt;34788-0&lt;/td&gt;&lt;td&gt;Psychiatry Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34791-4\&quot;&gt; &lt;/a&gt;34791-4&lt;/td&gt;&lt;td&gt;Psychology Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34103-2\&quot;&gt; &lt;/a&gt;34103-2&lt;/td&gt;&lt;td&gt;Pulmonary Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34831-8\&quot;&gt; &lt;/a&gt;34831-8&lt;/td&gt;&lt;td&gt;Radiation Oncology Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-73575-3\&quot;&gt; &lt;/a&gt;73575-3&lt;/td&gt;&lt;td&gt;Radiology Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34833-4\&quot;&gt; &lt;/a&gt;34833-4&lt;/td&gt;&lt;td&gt;Recreational Therapy Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34835-9\&quot;&gt; &lt;/a&gt;34835-9&lt;/td&gt;&lt;td&gt;Rehabilitation Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34837-5\&quot;&gt; &lt;/a&gt;34837-5&lt;/td&gt;&lt;td&gt;Respiratory Therapy Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34839-1\&quot;&gt; &lt;/a&gt;34839-1&lt;/td&gt;&lt;td&gt;Rheumatology Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34841-7\&quot;&gt; &lt;/a&gt;34841-7&lt;/td&gt;&lt;td&gt;Social Work Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34845-8\&quot;&gt; &lt;/a&gt;34845-8&lt;/td&gt;&lt;td&gt;Speech-language pathology+Audiology Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34847-4\&quot;&gt; &lt;/a&gt;34847-4&lt;/td&gt;&lt;td&gt;Surgery Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34849-0\&quot;&gt; &lt;/a&gt;34849-0&lt;/td&gt;&lt;td&gt;Thoracic surgery Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34851-6\&quot;&gt; &lt;/a&gt;34851-6&lt;/td&gt;&lt;td&gt;Urology Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34853-2\&quot;&gt; &lt;/a&gt;34853-2&lt;/td&gt;&lt;td&gt;Vascular surgery Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-51846-4\&quot;&gt; &lt;/a&gt;51846-4&lt;/td&gt;&lt;td&gt;Emergency department Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34104-0\&quot;&gt; &lt;/a&gt;34104-0&lt;/td&gt;&lt;td&gt;Hospital Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-68619-6\&quot;&gt; &lt;/a&gt;68619-6&lt;/td&gt;&lt;td&gt;Adolescent medicine Hospital Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-68633-7\&quot;&gt; &lt;/a&gt;68633-7&lt;/td&gt;&lt;td&gt;Allergy and immunology Hospital Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-68639-4\&quot;&gt; &lt;/a&gt;68639-4&lt;/td&gt;&lt;td&gt;Audiology Hospital Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-68486-0\&quot;&gt; &lt;/a&gt;68486-0&lt;/td&gt;&lt;td&gt;Cardiovascular disease.medical student Hospital Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-68648-5\&quot;&gt; &lt;/a&gt;68648-5&lt;/td&gt;&lt;td&gt;Child and adolescent psychiatry Hospital Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-68651-9\&quot;&gt; &lt;/a&gt;68651-9&lt;/td&gt;&lt;td&gt;Clinical biochemical genetics Hospital Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-68661-8\&quot;&gt; &lt;/a&gt;68661-8&lt;/td&gt;&lt;td&gt;Clinical genetics Hospital Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-64072-2\&quot;&gt; &lt;/a&gt;64072-2&lt;/td&gt;&lt;td&gt;Critical care medicine.medical student Hospital Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-68551-1\&quot;&gt; &lt;/a&gt;68551-1&lt;/td&gt;&lt;td&gt;Dermatology Hospital Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-68670-9\&quot;&gt; &lt;/a&gt;68670-9&lt;/td&gt;&lt;td&gt;Developmental-behavioral pediatrics Hospital Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-64056-5\&quot;&gt; &lt;/a&gt;64056-5&lt;/td&gt;&lt;td&gt;General medicine.medical student Hospital Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-68681-6\&quot;&gt; &lt;/a&gt;68681-6&lt;/td&gt;&lt;td&gt;Multi-specialty program Hospital Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-68685-7\&quot;&gt; &lt;/a&gt;68685-7&lt;/td&gt;&lt;td&gt;Neonatal perinatal medicine Hospital Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-68694-9\&quot;&gt; &lt;/a&gt;68694-9&lt;/td&gt;&lt;td&gt;Neurological surgery Hospital Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-68705-3\&quot;&gt; &lt;/a&gt;68705-3&lt;/td&gt;&lt;td&gt;Neurology with special qualifications in child neurology Hospital Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-68566-9\&quot;&gt; &lt;/a&gt;68566-9&lt;/td&gt;&lt;td&gt;Obstetrics and Gynecology Hospital Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-68570-1\&quot;&gt; &lt;/a&gt;68570-1&lt;/td&gt;&lt;td&gt;Occupational therapy Hospital Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-68575-0\&quot;&gt; &lt;/a&gt;68575-0&lt;/td&gt;&lt;td&gt;Ophthalmology Hospital Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-68584-2\&quot;&gt; &lt;/a&gt;68584-2&lt;/td&gt;&lt;td&gt;Orthopedic surgery Hospital Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-68716-0\&quot;&gt; &lt;/a&gt;68716-0&lt;/td&gt;&lt;td&gt;Pain medicine Hospital Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-68469-6\&quot;&gt; &lt;/a&gt;68469-6&lt;/td&gt;&lt;td&gt;Pastoral care Hospital Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-68727-7\&quot;&gt; &lt;/a&gt;68727-7&lt;/td&gt;&lt;td&gt;Pediatric cardiology Hospital Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-68892-9\&quot;&gt; &lt;/a&gt;68892-9&lt;/td&gt;&lt;td&gt;Pediatric dermatology Hospital Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-68897-8\&quot;&gt; &lt;/a&gt;68897-8&lt;/td&gt;&lt;td&gt;Pediatric endocrinology Hospital Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-68746-7\&quot;&gt; &lt;/a&gt;68746-7&lt;/td&gt;&lt;td&gt;Pediatric gastroenterology Hospital Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-68757-4\&quot;&gt; &lt;/a&gt;68757-4&lt;/td&gt;&lt;td&gt;Pediatric hematology-oncology Hospital Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-68765-7\&quot;&gt; &lt;/a&gt;68765-7&lt;/td&gt;&lt;td&gt;Pediatric infectious diseases Hospital Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-68869-7\&quot;&gt; &lt;/a&gt;68869-7&lt;/td&gt;&lt;td&gt;Pediatric nephrology Hospital Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-68874-7\&quot;&gt; &lt;/a&gt;68874-7&lt;/td&gt;&lt;td&gt;Pediatric otolaryngology Hospital Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-68787-1\&quot;&gt; &lt;/a&gt;68787-1&lt;/td&gt;&lt;td&gt;Pediatric pulmonology Hospital Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-68879-6\&quot;&gt; &lt;/a&gt;68879-6&lt;/td&gt;&lt;td&gt;Pediatric rheumatology Hospital Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-68802-8\&quot;&gt; &lt;/a&gt;68802-8&lt;/td&gt;&lt;td&gt;Pediatric surgery Hospital Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-68864-8\&quot;&gt; &lt;/a&gt;68864-8&lt;/td&gt;&lt;td&gt;Pediatric transplant hepatology Hospital Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-68812-7\&quot;&gt; &lt;/a&gt;68812-7&lt;/td&gt;&lt;td&gt;Pediatric urology Hospital Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-68821-8\&quot;&gt; &lt;/a&gt;68821-8&lt;/td&gt;&lt;td&gt;Pediatrics Hospital Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-68586-7\&quot;&gt; &lt;/a&gt;68586-7&lt;/td&gt;&lt;td&gt;Pharmacy Hospital Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-68590-9\&quot;&gt; &lt;/a&gt;68590-9&lt;/td&gt;&lt;td&gt;Physical therapy Hospital Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-68597-4\&quot;&gt; &lt;/a&gt;68597-4&lt;/td&gt;&lt;td&gt;Plastic surgery Hospital Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-68837-4\&quot;&gt; &lt;/a&gt;68837-4&lt;/td&gt;&lt;td&gt;Primary care Hospital Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34102-4\&quot;&gt; &lt;/a&gt;34102-4&lt;/td&gt;&lt;td&gt;Psychiatry Hospital Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-64080-5\&quot;&gt; &lt;/a&gt;64080-5&lt;/td&gt;&lt;td&gt;Pulmonary disease.medical student Hospital Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-68846-5\&quot;&gt; &lt;/a&gt;68846-5&lt;/td&gt;&lt;td&gt;Speech-language pathology Hospital Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-64068-0\&quot;&gt; &lt;/a&gt;64068-0&lt;/td&gt;&lt;td&gt;Surgery medical student Hospital Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-64076-3\&quot;&gt; &lt;/a&gt;64076-3&lt;/td&gt;&lt;td&gt;Thoracic surgery.medical student Hospital Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-68852-3\&quot;&gt; &lt;/a&gt;68852-3&lt;/td&gt;&lt;td&gt;Transplant surgery Hospital Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34100-8\&quot;&gt; &lt;/a&gt;34100-8&lt;/td&gt;&lt;td&gt;Intensive care unit Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-51854-8\&quot;&gt; &lt;/a&gt;51854-8&lt;/td&gt;&lt;td&gt;Long term care facility Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-51845-6\&quot;&gt; &lt;/a&gt;51845-6&lt;/td&gt;&lt;td&gt;Outpatient Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34749-2\&quot;&gt; &lt;/a&gt;34749-2&lt;/td&gt;&lt;td&gt;Anesthesiology Outpatient Consult note&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;http---loinc.org-34101-6\&quot;&gt; &lt;/a&gt;34101-6&lt;/td&gt;&lt;td&gt;General medicine Outpatient Consult note&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&quot;
+  ];
+  <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.url">fhir:ValueSet.url</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/ccda/ValueSet/2.16.840.1.113883.11.20.9.31&quot;];
+  <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.name">fhir:ValueSet.name</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;ConsultDocumentType&quot;];
+  <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.status">fhir:ValueSet.status</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;active&quot;];
+  <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.date">fhir:ValueSet.date</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#dateTime">fhir:value</a> &quot;2017-01-04T23:36:09-05:00&quot;^^xsd:dateTime];
+  <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.description">fhir:ValueSet.description</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#markdown">fhir:value</a> &quot;Specific URL Pending&quot;];
+  <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose">fhir:ValueSet.compose</a> [
+     <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include">fhir:ValueSet.compose.include</a> [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.system">fhir:ValueSet.compose.include.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept">fhir:ValueSet.compose.include.concept</a> [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;11488-4&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 1;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34099-2&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Cardiology Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 2;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34756-7&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Dentistry Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 3;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34758-3&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Dermatology Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 4;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34760-9&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Diabetology Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 5;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34879-7&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Endocrinology Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 6;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34761-7&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Gastroenterology Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 7;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34764-1&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;General Medicine Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 8;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34776-5&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Gerontology Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 9;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34779-9&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Hematology + Medical Oncology Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 10;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34781-5&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Infectious Disease Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 11;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;72555-6&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Interventional Radiology Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 12;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34783-1&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Kinesiotherapy Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 13;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34785-6&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Mental Health Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 14;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34795-5&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Nephrology Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 15;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34798-9&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Neurological Surgery Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 16;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34797-1&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Neurology Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 17;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34800-3&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Nutrition and Dietetics Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 18;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34777-3&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Obstetrics and Gynecology Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 19;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34803-7&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Occupational Health Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 20;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34855-7&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Occupational Therapy Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 21;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34805-2&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Oncology Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 22;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34807-8&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Ophthalmology Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 23;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34810-2&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Optometry Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 24;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34812-8&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Oromaxillofacial Surgery Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 25;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34814-4&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Orthopedics Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 26;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34816-9&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Otorhinolaryngology Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 27;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;60570-9&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Pathology Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 28;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34820-1&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Pharmacy Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 29;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34822-7&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Physical Medicine and Rehabilitation Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 30;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34824-3&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Physical Therapy Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 31;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34826-8&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Plastic Surgery Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 32;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34828-4&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Podiatry Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 33;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34788-0&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Psychiatry Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 34;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34791-4&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Psychology Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 35;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34103-2&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Pulmonary Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 36;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34831-8&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Radiation Oncology Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 37;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;73575-3&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Radiology Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 38;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34833-4&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Recreational Therapy Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 39;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34835-9&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Rehabilitation Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 40;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34837-5&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Respiratory Therapy Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 41;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34839-1&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Rheumatology Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 42;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34841-7&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Social Work Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 43;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34845-8&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Speech-language pathology+Audiology Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 44;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34847-4&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Surgery Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 45;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34849-0&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Thoracic surgery Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 46;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34851-6&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Urology Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 47;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34853-2&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Vascular surgery Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 48;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;51846-4&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Emergency department Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 49;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34104-0&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Hospital Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 50;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68619-6&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Adolescent medicine Hospital Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 51;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68633-7&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Allergy and immunology Hospital Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 52;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68639-4&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Audiology Hospital Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 53;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68486-0&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Cardiovascular disease.medical student Hospital Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 54;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68648-5&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Child and adolescent psychiatry Hospital Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 55;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68651-9&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Clinical biochemical genetics Hospital Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 56;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68661-8&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Clinical genetics Hospital Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 57;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;64072-2&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Critical care medicine.medical student Hospital Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 58;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68551-1&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Dermatology Hospital Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 59;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68670-9&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Developmental-behavioral pediatrics Hospital Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 60;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;64056-5&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;General medicine.medical student Hospital Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 61;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68681-6&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Multi-specialty program Hospital Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 62;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68685-7&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Neonatal perinatal medicine Hospital Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 63;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68694-9&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Neurological surgery Hospital Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 64;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68705-3&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Neurology with special qualifications in child neurology Hospital Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 65;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68566-9&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Obstetrics and Gynecology Hospital Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 66;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68570-1&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Occupational therapy Hospital Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 67;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68575-0&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Ophthalmology Hospital Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 68;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68584-2&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Orthopedic surgery Hospital Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 69;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68716-0&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Pain medicine Hospital Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 70;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68469-6&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Pastoral care Hospital Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 71;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68727-7&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Pediatric cardiology Hospital Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 72;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68892-9&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Pediatric dermatology Hospital Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 73;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68897-8&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Pediatric endocrinology Hospital Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 74;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68746-7&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Pediatric gastroenterology Hospital Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 75;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68757-4&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Pediatric hematology-oncology Hospital Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 76;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68765-7&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Pediatric infectious diseases Hospital Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 77;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68869-7&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Pediatric nephrology Hospital Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 78;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68874-7&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Pediatric otolaryngology Hospital Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 79;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68787-1&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Pediatric pulmonology Hospital Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 80;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68879-6&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Pediatric rheumatology Hospital Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 81;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68802-8&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Pediatric surgery Hospital Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 82;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68864-8&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Pediatric transplant hepatology Hospital Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 83;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68812-7&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Pediatric urology Hospital Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 84;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68821-8&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Pediatrics Hospital Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 85;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68586-7&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Pharmacy Hospital Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 86;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68590-9&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Physical therapy Hospital Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 87;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68597-4&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Plastic surgery Hospital Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 88;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68837-4&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Primary care Hospital Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 89;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34102-4&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Psychiatry Hospital Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 90;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;64080-5&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Pulmonary disease.medical student Hospital Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 91;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68846-5&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Speech-language pathology Hospital Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 92;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;64068-0&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Surgery medical student Hospital Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 93;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;64076-3&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Thoracic surgery.medical student Hospital Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 94;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68852-3&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Transplant surgery Hospital Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 95;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34100-8&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Intensive care unit Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 96;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;51854-8&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Long term care facility Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 97;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;51845-6&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Outpatient Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 98;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34749-2&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Anesthesiology Outpatient Consult note&quot; ]       ], [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 99;
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34101-6&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;General medicine Outpatient Consult note&quot; ]       ]     ]
+  ];
+  <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion">fhir:ValueSet.expansion</a> [
+     <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.identifier">fhir:ValueSet.expansion.identifier</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;urn:uuid:1cfe83cd-9d32-44a4-80b3-487ec0b1b0f0&quot; ];
+     <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.timestamp">fhir:ValueSet.expansion.timestamp</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#dateTime">fhir:value</a> &quot;2016-12-03T17:27:13.8143709-05:00&quot;^^xsd:dateTime ];
+     <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains">fhir:ValueSet.expansion.contains</a> [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;11488-4&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 1;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34099-2&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Cardiology Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 2;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34756-7&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Dentistry Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 3;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34758-3&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Dermatology Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 4;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34760-9&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Diabetology Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 5;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34879-7&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Endocrinology Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 6;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34761-7&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Gastroenterology Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 7;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34764-1&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;General Medicine Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 8;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34776-5&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Gerontology Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 9;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34779-9&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Hematology + Medical Oncology Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 10;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34781-5&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Infectious Disease Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 11;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;72555-6&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Interventional Radiology Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 12;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34783-1&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Kinesiotherapy Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 13;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34785-6&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Mental Health Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 14;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34795-5&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Nephrology Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 15;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34798-9&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Neurological Surgery Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 16;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34797-1&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Neurology Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 17;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34800-3&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Nutrition and Dietetics Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 18;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34777-3&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Obstetrics and Gynecology Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 19;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34803-7&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Occupational Health Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 20;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34855-7&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Occupational Therapy Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 21;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34805-2&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Oncology Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 22;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34807-8&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Ophthalmology Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 23;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34810-2&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Optometry Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 24;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34812-8&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Oromaxillofacial Surgery Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 25;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34814-4&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Orthopedics Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 26;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34816-9&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Otorhinolaryngology Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 27;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;60570-9&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Pathology Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 28;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34820-1&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Pharmacy Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 29;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34822-7&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Physical Medicine and Rehabilitation Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 30;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34824-3&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Physical Therapy Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 31;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34826-8&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Plastic Surgery Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 32;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34828-4&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Podiatry Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 33;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34788-0&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Psychiatry Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 34;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34791-4&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Psychology Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 35;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34103-2&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Pulmonary Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 36;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34831-8&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Radiation Oncology Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 37;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;73575-3&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Radiology Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 38;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34833-4&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Recreational Therapy Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 39;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34835-9&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Rehabilitation Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 40;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34837-5&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Respiratory Therapy Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 41;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34839-1&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Rheumatology Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 42;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34841-7&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Social Work Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 43;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34845-8&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Speech-language pathology+Audiology Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 44;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34847-4&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Surgery Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 45;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34849-0&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Thoracic surgery Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 46;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34851-6&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Urology Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 47;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34853-2&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Vascular surgery Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 48;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;51846-4&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Emergency department Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 49;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34104-0&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Hospital Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 50;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68619-6&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Adolescent medicine Hospital Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 51;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68633-7&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Allergy and immunology Hospital Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 52;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68639-4&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Audiology Hospital Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 53;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68486-0&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Cardiovascular disease.medical student Hospital Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 54;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68648-5&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Child and adolescent psychiatry Hospital Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 55;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68651-9&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Clinical biochemical genetics Hospital Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 56;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68661-8&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Clinical genetics Hospital Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 57;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;64072-2&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Critical care medicine.medical student Hospital Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 58;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68551-1&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Dermatology Hospital Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 59;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68670-9&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Developmental-behavioral pediatrics Hospital Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 60;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;64056-5&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;General medicine.medical student Hospital Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 61;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68681-6&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Multi-specialty program Hospital Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 62;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68685-7&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Neonatal perinatal medicine Hospital Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 63;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68694-9&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Neurological surgery Hospital Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 64;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68705-3&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Neurology with special qualifications in child neurology Hospital Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 65;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68566-9&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Obstetrics and Gynecology Hospital Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 66;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68570-1&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Occupational therapy Hospital Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 67;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68575-0&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Ophthalmology Hospital Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 68;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68584-2&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Orthopedic surgery Hospital Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 69;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68716-0&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Pain medicine Hospital Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 70;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68469-6&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Pastoral care Hospital Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 71;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68727-7&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Pediatric cardiology Hospital Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 72;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68892-9&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Pediatric dermatology Hospital Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 73;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68897-8&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Pediatric endocrinology Hospital Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 74;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68746-7&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Pediatric gastroenterology Hospital Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 75;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68757-4&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Pediatric hematology-oncology Hospital Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 76;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68765-7&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Pediatric infectious diseases Hospital Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 77;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68869-7&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Pediatric nephrology Hospital Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 78;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68874-7&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Pediatric otolaryngology Hospital Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 79;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68787-1&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Pediatric pulmonology Hospital Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 80;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68879-6&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Pediatric rheumatology Hospital Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 81;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68802-8&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Pediatric surgery Hospital Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 82;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68864-8&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Pediatric transplant hepatology Hospital Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 83;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68812-7&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Pediatric urology Hospital Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 84;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68821-8&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Pediatrics Hospital Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 85;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68586-7&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Pharmacy Hospital Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 86;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68590-9&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Physical therapy Hospital Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 87;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68597-4&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Plastic surgery Hospital Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 88;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68837-4&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Primary care Hospital Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 89;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34102-4&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Psychiatry Hospital Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 90;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;64080-5&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Pulmonary disease.medical student Hospital Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 91;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68846-5&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Speech-language pathology Hospital Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 92;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;64068-0&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Surgery medical student Hospital Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 93;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;64076-3&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Thoracic surgery.medical student Hospital Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 94;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;68852-3&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Transplant surgery Hospital Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 95;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34100-8&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Intensive care unit Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 96;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;51854-8&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Long term care facility Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 97;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;51845-6&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Outpatient Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 98;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34749-2&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Anesthesiology Outpatient Consult note&quot; ]     ], [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 99;
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;34101-6&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;General medicine Outpatient Consult note&quot; ]     ]
+  ].
+
+</pre>
+
+
+
+
+ </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+    <div id="segment-footer" class="segment">  <!-- segment-footer -->
+  <div class="container">  <!-- container -->
+   <div class="inner-wrapper">
+    <p>
+      &copy; HL7.org 2011+. FHIR STU3 Candidate (v1.8.0-10514) generated on Wed, Jan 4, 2017 23:36-0500. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img style="text-align: baseline" src="external.png"/></a> |
+          <a style="color: #81BEF7" href="http://hl7.org/fhir/2017Janhistory.html">Version History</a> |
+          <a style="color: #81BEF7" href="http://hl7.org/fhir/2017Jantoc.html">Table of Contents</a> |
+          <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/2017Janlicense.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> |
+          <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change <img style="text-align: baseline" src="external.png"/></a>
+        </span>
+        </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->
+
+ <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-post-footer -->
+
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="dist/js/bootstrap.min.js"> </script>
+<script src="assets/js/respond.min.js"> </script>
+
+<script src="assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+
+</body>
+</html>
+
+

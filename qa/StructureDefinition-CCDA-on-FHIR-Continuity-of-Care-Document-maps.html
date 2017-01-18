@@ -1,0 +1,791 @@
+﻿<html>
+<head>
+  <title>StructureDefinition-CCDA-on-FHIR-Continuity-of-Care-Document-maps</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<a name="rim"> </a><h3>Mappings for RIM Mapping (http://hl7.org/v3)</h3><table class="grid">
+ <tr><td colspan="3"><b>C-CDA on FHIR Continuity of Care Document</b></td></tr>
+ <tr><td>Composition</td><td></td><td>Entity. Role, or Act</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;meta</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;implicitRules</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;language</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;text</td><td></td><td>Act.text?</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;contained</td><td></td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td>extension_slice_pos2</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td>extension_slice_pos3</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td>extension_slice_pos4</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td>extension_slice_pos5</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td>extension_slice_pos6</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td>extension_slice_pos7</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td></td><td>Document.id / Document.setId</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;date</td><td></td><td>.effectiveTime[type=&quot;TS&quot;]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;type</td><td></td><td>./code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;class</td><td></td><td>.outboundRelationship[typeCode=&quot;COMP].target[classCode=&quot;LIST&quot;, moodCode=&quot;EVN&quot;].code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;title</td><td></td><td>./title</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;status</td><td></td><td>interim: .completionCode=&quot;IN&quot; &amp; ./statusCode[isNormalDatatype()]=&quot;active&quot;;  final: .completionCode=&quot;AU&quot; &amp;&amp;  ./statusCode[isNormalDatatype()]=&quot;complete&quot; and not(./inboundRelationship[typeCode=&quot;SUBJ&quot; and isNormalActRelationship()]/source[subsumesCode(&quot;ActClass#CACT&quot;) and moodCode=&quot;EVN&quot; and domainMember(&quot;ReviseComposition&quot;, code) and isNormalAct()]);  amended: .completionCode=&quot;AU&quot; &amp;&amp;  ./statusCode[isNormalDatatype()]=&quot;complete&quot; and ./inboundRelationship[typeCode=&quot;SUBJ&quot; and isNormalActRelationship()]/source[subsumesCode(&quot;ActClass#CACT&quot;) and moodCode=&quot;EVN&quot; and domainMember(&quot;ReviseComposition&quot;, code) and isNormalAct() and statusCode=&quot;completed&quot;];  withdrawn : .completionCode=NI &amp;&amp;  ./statusCode[isNormalDatatype()]=&quot;obsolete&quot;</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;confidentiality</td><td></td><td>.confidentialityCode</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td></td><td>.participation[typeCode=&quot;SBJ&quot;].role[typeCode=&quot;PAT&quot;]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;author</td><td></td><td>.participation[typeCode=&quot;AUT&quot;].role[classCode=&quot;ASSIGNED&quot;]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;attester</td><td></td><td>.participation[typeCode=&quot;AUTHEN&quot;].role[classCode=&quot;ASSIGNED&quot;]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;attester</td><td>attester_slice_pos16</td><td>.participation[typeCode=&quot;AUTHEN&quot;].role[classCode=&quot;ASSIGNED&quot;]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td>attester_slice_pos16</td><td>unique(./modeCode)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;time</td><td></td><td>./time[type=&quot;TS&quot; and isNormalDatatype()]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;party</td><td>attester_slice_pos16</td><td>./role[classCode=&quot;ASSIGNED&quot; and isNormalRole]/player[determinerCode=&quot;INST&quot; and classCode=(&quot;DEV&quot;, &quot;PSN&quot;) and isNormalEntity()] or ./role[classCode=&quot;ASSIGNED&quot; and isNormalRole and not(player)]/scoper[determinerCode=&quot;INST&quot; and classCode=&quot;ORG&quot; and isNormalEntity()]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;attester</td><td>attester_slice_pos17</td><td>.participation[typeCode=&quot;AUTHEN&quot;].role[classCode=&quot;ASSIGNED&quot;]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td>attester_slice_pos17</td><td>unique(./modeCode)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;time</td><td></td><td>./time[type=&quot;TS&quot; and isNormalDatatype()]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;party</td><td>attester_slice_pos17</td><td>./role[classCode=&quot;ASSIGNED&quot; and isNormalRole]/player[determinerCode=&quot;INST&quot; and classCode=(&quot;DEV&quot;, &quot;PSN&quot;) and isNormalEntity()] or ./role[classCode=&quot;ASSIGNED&quot; and isNormalRole and not(player)]/scoper[determinerCode=&quot;INST&quot; and classCode=&quot;ORG&quot; and isNormalEntity()]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;custodian</td><td></td><td>.participation[typeCode=&quot;RCV&quot;].role[classCode=&quot;CUST&quot;].scoper[classCode=&quot;ORG&quot; and determinerCode=&quot;INST&quot;]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;event</td><td></td><td>outboundRelationship[typeCode=&quot;SUBJ&quot;].target[classCode&lt;'ACT']</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td></td><td>.code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;period</td><td></td><td>.effectiveTime</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;start</td><td></td><td>./low</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end</td><td></td><td>./high</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;detail</td><td></td><td>.outboundRelationship[typeCode=&quot;SUBJ&quot;].target</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;encounter</td><td></td><td>unique(highest(./outboundRelationship[typeCode=&quot;SUBJ&quot; and isNormalActRelationship()], priorityNumber)/target[moodCode=&quot;EVN&quot; and classCode=(&quot;ENC&quot;, &quot;PCPR&quot;) and isNormalAct])</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td></td><td>./outboundRelationship[typeCode=&quot;COMP&quot; and isNormalActRelationship()]/target[moodCode=&quot;EVN&quot; and classCode=&quot;DOCSECT&quot; and isNormalAct]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos3</td><td>./outboundRelationship[typeCode=&quot;COMP&quot; and isNormalActRelationship()]/target[moodCode=&quot;EVN&quot; and classCode=&quot;DOCSECT&quot; and isNormalAct]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos3</td><td>./title</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos3</td><td>./code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos3</td><td>.text</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>.outBoundRelationship[typeCode=COMP].target[classCode=OBS&quot;].value</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td>.outboundRelationship[typeCode=COMP].sequenceNumber &gt; 1</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td></td><td>.outboundRelationship[typeCode=COMP] or  .participation[typeCode=SBJ]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td>section_slice_pos3</td><td>.outboundRelationship[typeCode=COMP] or  .participation[typeCode=SBJ]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td>.inboundRelationship[typeCode=SUBJ,code&lt;{ListEmptyReason}].value[type=CD]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td>./outboundRelationship[typeCode=&quot;COMP&quot; and isNormalActRelationship()]/target[moodCode=&quot;EVN&quot; and classCode=&quot;DOCSECT&quot; and isNormalAct]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos4</td><td>./outboundRelationship[typeCode=&quot;COMP&quot; and isNormalActRelationship()]/target[moodCode=&quot;EVN&quot; and classCode=&quot;DOCSECT&quot; and isNormalAct]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos4</td><td>./title</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos4</td><td>./code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos4</td><td>.text</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>.outBoundRelationship[typeCode=COMP].target[classCode=OBS&quot;].value</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td>.outboundRelationship[typeCode=COMP].sequenceNumber &gt; 1</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td>section_slice_pos4</td><td>.outboundRelationship[typeCode=COMP] or  .participation[typeCode=SBJ]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td>.inboundRelationship[typeCode=SUBJ,code&lt;{ListEmptyReason}].value[type=CD]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td>./outboundRelationship[typeCode=&quot;COMP&quot; and isNormalActRelationship()]/target[moodCode=&quot;EVN&quot; and classCode=&quot;DOCSECT&quot; and isNormalAct]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos5</td><td>./outboundRelationship[typeCode=&quot;COMP&quot; and isNormalActRelationship()]/target[moodCode=&quot;EVN&quot; and classCode=&quot;DOCSECT&quot; and isNormalAct]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos5</td><td>./title</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos5</td><td>./code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos5</td><td>.text</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>.outBoundRelationship[typeCode=COMP].target[classCode=OBS&quot;].value</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td>.outboundRelationship[typeCode=COMP].sequenceNumber &gt; 1</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td>section_slice_pos5</td><td>.outboundRelationship[typeCode=COMP] or  .participation[typeCode=SBJ]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td>.inboundRelationship[typeCode=SUBJ,code&lt;{ListEmptyReason}].value[type=CD]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td>./outboundRelationship[typeCode=&quot;COMP&quot; and isNormalActRelationship()]/target[moodCode=&quot;EVN&quot; and classCode=&quot;DOCSECT&quot; and isNormalAct]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos6</td><td>./outboundRelationship[typeCode=&quot;COMP&quot; and isNormalActRelationship()]/target[moodCode=&quot;EVN&quot; and classCode=&quot;DOCSECT&quot; and isNormalAct]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos6</td><td>./title</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos6</td><td>./code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos6</td><td>.text</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>.outBoundRelationship[typeCode=COMP].target[classCode=OBS&quot;].value</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td>.outboundRelationship[typeCode=COMP].sequenceNumber &gt; 1</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td>section_slice_pos6</td><td>.outboundRelationship[typeCode=COMP] or  .participation[typeCode=SBJ]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td>.inboundRelationship[typeCode=SUBJ,code&lt;{ListEmptyReason}].value[type=CD]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td>./outboundRelationship[typeCode=&quot;COMP&quot; and isNormalActRelationship()]/target[moodCode=&quot;EVN&quot; and classCode=&quot;DOCSECT&quot; and isNormalAct]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos7</td><td>./outboundRelationship[typeCode=&quot;COMP&quot; and isNormalActRelationship()]/target[moodCode=&quot;EVN&quot; and classCode=&quot;DOCSECT&quot; and isNormalAct]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos7</td><td>./title</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos7</td><td>./code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos7</td><td>.text</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>.outBoundRelationship[typeCode=COMP].target[classCode=OBS&quot;].value</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td>.outboundRelationship[typeCode=COMP].sequenceNumber &gt; 1</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td>section_slice_pos7</td><td>.outboundRelationship[typeCode=COMP] or  .participation[typeCode=SBJ]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td>.inboundRelationship[typeCode=SUBJ,code&lt;{ListEmptyReason}].value[type=CD]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td>./outboundRelationship[typeCode=&quot;COMP&quot; and isNormalActRelationship()]/target[moodCode=&quot;EVN&quot; and classCode=&quot;DOCSECT&quot; and isNormalAct]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos8</td><td>./outboundRelationship[typeCode=&quot;COMP&quot; and isNormalActRelationship()]/target[moodCode=&quot;EVN&quot; and classCode=&quot;DOCSECT&quot; and isNormalAct]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos8</td><td>./title</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos8</td><td>./code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos8</td><td>.text</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>.outBoundRelationship[typeCode=COMP].target[classCode=OBS&quot;].value</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td>.outboundRelationship[typeCode=COMP].sequenceNumber &gt; 1</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td></td><td>.outboundRelationship[typeCode=COMP] or  .participation[typeCode=SBJ]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td>.inboundRelationship[typeCode=SUBJ,code&lt;{ListEmptyReason}].value[type=CD]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td>./outboundRelationship[typeCode=&quot;COMP&quot; and isNormalActRelationship()]/target[moodCode=&quot;EVN&quot; and classCode=&quot;DOCSECT&quot; and isNormalAct]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos9</td><td>./outboundRelationship[typeCode=&quot;COMP&quot; and isNormalActRelationship()]/target[moodCode=&quot;EVN&quot; and classCode=&quot;DOCSECT&quot; and isNormalAct]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos9</td><td>./title</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos9</td><td>./code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos9</td><td>.text</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>.outBoundRelationship[typeCode=COMP].target[classCode=OBS&quot;].value</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td>.outboundRelationship[typeCode=COMP].sequenceNumber &gt; 1</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td></td><td>.outboundRelationship[typeCode=COMP] or  .participation[typeCode=SBJ]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td>.inboundRelationship[typeCode=SUBJ,code&lt;{ListEmptyReason}].value[type=CD]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td>./outboundRelationship[typeCode=&quot;COMP&quot; and isNormalActRelationship()]/target[moodCode=&quot;EVN&quot; and classCode=&quot;DOCSECT&quot; and isNormalAct]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos10</td><td>./outboundRelationship[typeCode=&quot;COMP&quot; and isNormalActRelationship()]/target[moodCode=&quot;EVN&quot; and classCode=&quot;DOCSECT&quot; and isNormalAct]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos10</td><td>./title</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos10</td><td>./code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos10</td><td>.text</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>.outBoundRelationship[typeCode=COMP].target[classCode=OBS&quot;].value</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td>.outboundRelationship[typeCode=COMP].sequenceNumber &gt; 1</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td></td><td>.outboundRelationship[typeCode=COMP] or  .participation[typeCode=SBJ]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td>.inboundRelationship[typeCode=SUBJ,code&lt;{ListEmptyReason}].value[type=CD]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td>./outboundRelationship[typeCode=&quot;COMP&quot; and isNormalActRelationship()]/target[moodCode=&quot;EVN&quot; and classCode=&quot;DOCSECT&quot; and isNormalAct]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos11</td><td>./outboundRelationship[typeCode=&quot;COMP&quot; and isNormalActRelationship()]/target[moodCode=&quot;EVN&quot; and classCode=&quot;DOCSECT&quot; and isNormalAct]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos11</td><td>./title</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos11</td><td>./code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos11</td><td>.text</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>.outBoundRelationship[typeCode=COMP].target[classCode=OBS&quot;].value</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td>.outboundRelationship[typeCode=COMP].sequenceNumber &gt; 1</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td></td><td>.outboundRelationship[typeCode=COMP] or  .participation[typeCode=SBJ]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td>.inboundRelationship[typeCode=SUBJ,code&lt;{ListEmptyReason}].value[type=CD]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td>./outboundRelationship[typeCode=&quot;COMP&quot; and isNormalActRelationship()]/target[moodCode=&quot;EVN&quot; and classCode=&quot;DOCSECT&quot; and isNormalAct]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos12</td><td>./outboundRelationship[typeCode=&quot;COMP&quot; and isNormalActRelationship()]/target[moodCode=&quot;EVN&quot; and classCode=&quot;DOCSECT&quot; and isNormalAct]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos12</td><td>./title</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos12</td><td>./code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos12</td><td>.text</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>.outBoundRelationship[typeCode=COMP].target[classCode=OBS&quot;].value</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td>.outboundRelationship[typeCode=COMP].sequenceNumber &gt; 1</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td>section_slice_pos12</td><td>.outboundRelationship[typeCode=COMP] or  .participation[typeCode=SBJ]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td>.inboundRelationship[typeCode=SUBJ,code&lt;{ListEmptyReason}].value[type=CD]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td>./outboundRelationship[typeCode=&quot;COMP&quot; and isNormalActRelationship()]/target[moodCode=&quot;EVN&quot; and classCode=&quot;DOCSECT&quot; and isNormalAct]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos13</td><td>./outboundRelationship[typeCode=&quot;COMP&quot; and isNormalActRelationship()]/target[moodCode=&quot;EVN&quot; and classCode=&quot;DOCSECT&quot; and isNormalAct]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos13</td><td>./title</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos13</td><td>./code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos13</td><td>.text</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>.outBoundRelationship[typeCode=COMP].target[classCode=OBS&quot;].value</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td>.outboundRelationship[typeCode=COMP].sequenceNumber &gt; 1</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td></td><td>.outboundRelationship[typeCode=COMP] or  .participation[typeCode=SBJ]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td>.inboundRelationship[typeCode=SUBJ,code&lt;{ListEmptyReason}].value[type=CD]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td>./outboundRelationship[typeCode=&quot;COMP&quot; and isNormalActRelationship()]/target[moodCode=&quot;EVN&quot; and classCode=&quot;DOCSECT&quot; and isNormalAct]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos14</td><td>./outboundRelationship[typeCode=&quot;COMP&quot; and isNormalActRelationship()]/target[moodCode=&quot;EVN&quot; and classCode=&quot;DOCSECT&quot; and isNormalAct]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos14</td><td>./title</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos14</td><td>./code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos14</td><td>.text</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>.outBoundRelationship[typeCode=COMP].target[classCode=OBS&quot;].value</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td>.outboundRelationship[typeCode=COMP].sequenceNumber &gt; 1</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td></td><td>.outboundRelationship[typeCode=COMP] or  .participation[typeCode=SBJ]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td>.inboundRelationship[typeCode=SUBJ,code&lt;{ListEmptyReason}].value[type=CD]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td>./outboundRelationship[typeCode=&quot;COMP&quot; and isNormalActRelationship()]/target[moodCode=&quot;EVN&quot; and classCode=&quot;DOCSECT&quot; and isNormalAct]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos15</td><td>./outboundRelationship[typeCode=&quot;COMP&quot; and isNormalActRelationship()]/target[moodCode=&quot;EVN&quot; and classCode=&quot;DOCSECT&quot; and isNormalAct]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos15</td><td>./title</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos15</td><td>./code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos15</td><td>.text</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>.outBoundRelationship[typeCode=COMP].target[classCode=OBS&quot;].value</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td>.outboundRelationship[typeCode=COMP].sequenceNumber &gt; 1</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td>section_slice_pos15</td><td>.outboundRelationship[typeCode=COMP] or  .participation[typeCode=SBJ]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td>.inboundRelationship[typeCode=SUBJ,code&lt;{ListEmptyReason}].value[type=CD]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td>./outboundRelationship[typeCode=&quot;COMP&quot; and isNormalActRelationship()]/target[moodCode=&quot;EVN&quot; and classCode=&quot;DOCSECT&quot; and isNormalAct]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos16</td><td>./outboundRelationship[typeCode=&quot;COMP&quot; and isNormalActRelationship()]/target[moodCode=&quot;EVN&quot; and classCode=&quot;DOCSECT&quot; and isNormalAct]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos16</td><td>./title</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos16</td><td>./code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos16</td><td>.text</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>.outBoundRelationship[typeCode=COMP].target[classCode=OBS&quot;].value</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td>.outboundRelationship[typeCode=COMP].sequenceNumber &gt; 1</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td>entry_slice_pos4</td><td>.outboundRelationship[typeCode=COMP] or  .participation[typeCode=SBJ]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td>.inboundRelationship[typeCode=SUBJ,code&lt;{ListEmptyReason}].value[type=CD]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td>./outboundRelationship[typeCode=&quot;COMP&quot; and isNormalActRelationship()]/target[moodCode=&quot;EVN&quot; and classCode=&quot;DOCSECT&quot; and isNormalAct]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos17</td><td>./outboundRelationship[typeCode=&quot;COMP&quot; and isNormalActRelationship()]/target[moodCode=&quot;EVN&quot; and classCode=&quot;DOCSECT&quot; and isNormalAct]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos17</td><td>./title</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos17</td><td>./code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos17</td><td>.text</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>.outBoundRelationship[typeCode=COMP].target[classCode=OBS&quot;].value</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td>.outboundRelationship[typeCode=COMP].sequenceNumber &gt; 1</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td></td><td>.outboundRelationship[typeCode=COMP] or  .participation[typeCode=SBJ]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td>.inboundRelationship[typeCode=SUBJ,code&lt;{ListEmptyReason}].value[type=CD]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td>./outboundRelationship[typeCode=&quot;COMP&quot; and isNormalActRelationship()]/target[moodCode=&quot;EVN&quot; and classCode=&quot;DOCSECT&quot; and isNormalAct]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos18</td><td>./outboundRelationship[typeCode=&quot;COMP&quot; and isNormalActRelationship()]/target[moodCode=&quot;EVN&quot; and classCode=&quot;DOCSECT&quot; and isNormalAct]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos18</td><td>./title</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos18</td><td>./code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos18</td><td>.text</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>.outBoundRelationship[typeCode=COMP].target[classCode=OBS&quot;].value</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td>.outboundRelationship[typeCode=COMP].sequenceNumber &gt; 1</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td></td><td>.outboundRelationship[typeCode=COMP] or  .participation[typeCode=SBJ]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td>.inboundRelationship[typeCode=SUBJ,code&lt;{ListEmptyReason}].value[type=CD]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td>./outboundRelationship[typeCode=&quot;COMP&quot; and isNormalActRelationship()]/target[moodCode=&quot;EVN&quot; and classCode=&quot;DOCSECT&quot; and isNormalAct]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos19</td><td>./outboundRelationship[typeCode=&quot;COMP&quot; and isNormalActRelationship()]/target[moodCode=&quot;EVN&quot; and classCode=&quot;DOCSECT&quot; and isNormalAct]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos19</td><td>./title</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos19</td><td>./code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos19</td><td>.text</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>.outBoundRelationship[typeCode=COMP].target[classCode=OBS&quot;].value</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td>.outboundRelationship[typeCode=COMP].sequenceNumber &gt; 1</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td></td><td>.outboundRelationship[typeCode=COMP] or  .participation[typeCode=SBJ]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td>.inboundRelationship[typeCode=SUBJ,code&lt;{ListEmptyReason}].value[type=CD]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td>./outboundRelationship[typeCode=&quot;COMP&quot; and isNormalActRelationship()]/target[moodCode=&quot;EVN&quot; and classCode=&quot;DOCSECT&quot; and isNormalAct]</td> </tr>
+</table>
+<a name="cda"> </a><h3>Mappings for CDA (R2) (http://hl7.org/v3/cda)</h3><table class="grid">
+ <tr><td colspan="3"><b>C-CDA on FHIR Continuity of Care Document</b></td></tr>
+ <tr><td>Composition</td><td></td><td>ClinicalDocument</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;meta</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;implicitRules</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;language</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;text</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;contained</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td>extension_slice_pos2</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td>extension_slice_pos3</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td>extension_slice_pos4</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td>extension_slice_pos5</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td>extension_slice_pos6</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td>extension_slice_pos7</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td></td><td>.setId</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;date</td><td></td><td>.effectiveTime</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;type</td><td></td><td>.code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;class</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;title</td><td></td><td>.title</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;status</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;confidentiality</td><td></td><td>.confidentialityCode</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td></td><td>.recordTarget</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;author</td><td></td><td>.author.assignedAuthor</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;attester</td><td></td><td>.authenticator/.legalAuthenticator</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;attester</td><td>attester_slice_pos16</td><td>.authenticator/.legalAuthenticator</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td>attester_slice_pos16</td><td>implied by .authenticator/.legalAuthenticator</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;time</td><td></td><td>.authenticator.time</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;party</td><td>attester_slice_pos16</td><td>.authenticator.assignedEnttty</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;attester</td><td>attester_slice_pos17</td><td>.authenticator/.legalAuthenticator</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td>attester_slice_pos17</td><td>implied by .authenticator/.legalAuthenticator</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;time</td><td></td><td>.authenticator.time</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;party</td><td>attester_slice_pos17</td><td>.authenticator.assignedEnttty</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;custodian</td><td></td><td>.custodian.assignedCustodian</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;event</td><td></td><td>.documentationOf.serviceEvent</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td></td><td>.code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;period</td><td></td><td>.effectiveTime</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;start</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;detail</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;encounter</td><td></td><td>.componentOf.encompassingEncounter</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td></td><td>.component.structuredBody.component.section</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos3</td><td>.component.structuredBody.component.section</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos3</td><td>.title</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos3</td><td>.code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos3</td><td>.text</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td></td><td>.entry</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td>section_slice_pos3</td><td>.entry</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td>.component.section</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos4</td><td>.component.structuredBody.component.section</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos4</td><td>.title</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos4</td><td>.code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos4</td><td>.text</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td>section_slice_pos4</td><td>.entry</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td>.component.section</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos5</td><td>.component.structuredBody.component.section</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos5</td><td>.title</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos5</td><td>.code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos5</td><td>.text</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td>section_slice_pos5</td><td>.entry</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td>.component.section</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos6</td><td>.component.structuredBody.component.section</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos6</td><td>.title</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos6</td><td>.code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos6</td><td>.text</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td>section_slice_pos6</td><td>.entry</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td>.component.section</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos7</td><td>.component.structuredBody.component.section</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos7</td><td>.title</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos7</td><td>.code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos7</td><td>.text</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td>section_slice_pos7</td><td>.entry</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td>.component.section</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos8</td><td>.component.structuredBody.component.section</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos8</td><td>.title</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos8</td><td>.code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos8</td><td>.text</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td></td><td>.entry</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td>.component.section</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos9</td><td>.component.structuredBody.component.section</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos9</td><td>.title</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos9</td><td>.code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos9</td><td>.text</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td></td><td>.entry</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td>.component.section</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos10</td><td>.component.structuredBody.component.section</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos10</td><td>.title</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos10</td><td>.code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos10</td><td>.text</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td></td><td>.entry</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td>.component.section</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos11</td><td>.component.structuredBody.component.section</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos11</td><td>.title</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos11</td><td>.code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos11</td><td>.text</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td></td><td>.entry</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td>.component.section</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos12</td><td>.component.structuredBody.component.section</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos12</td><td>.title</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos12</td><td>.code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos12</td><td>.text</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td>section_slice_pos12</td><td>.entry</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td>.component.section</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos13</td><td>.component.structuredBody.component.section</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos13</td><td>.title</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos13</td><td>.code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos13</td><td>.text</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td></td><td>.entry</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td>.component.section</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos14</td><td>.component.structuredBody.component.section</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos14</td><td>.title</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos14</td><td>.code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos14</td><td>.text</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td></td><td>.entry</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td>.component.section</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos15</td><td>.component.structuredBody.component.section</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos15</td><td>.title</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos15</td><td>.code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos15</td><td>.text</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td>section_slice_pos15</td><td>.entry</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td>.component.section</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos16</td><td>.component.structuredBody.component.section</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos16</td><td>.title</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos16</td><td>.code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos16</td><td>.text</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td>entry_slice_pos4</td><td>.entry</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td>.component.section</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos17</td><td>.component.structuredBody.component.section</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos17</td><td>.title</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos17</td><td>.code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos17</td><td>.text</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td></td><td>.entry</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td>.component.section</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos18</td><td>.component.structuredBody.component.section</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos18</td><td>.title</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos18</td><td>.code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos18</td><td>.text</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td></td><td>.entry</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td>.component.section</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos19</td><td>.component.structuredBody.component.section</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos19</td><td>.title</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos19</td><td>.code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos19</td><td>.text</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td></td><td>.entry</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td>.component.section</td> </tr>
+</table>
+<a name="w5"> </a><h3>Mappings for W5 Mapping (http://hl7.org/fhir/w5)</h3><table class="grid">
+ <tr><td colspan="3"><b>C-CDA on FHIR Continuity of Care Document</b></td></tr>
+ <tr><td>Composition</td><td></td><td>infrastructure.documents</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;meta</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;implicitRules</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;language</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;text</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;contained</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td>extension_slice_pos2</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td>extension_slice_pos3</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td>extension_slice_pos4</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td>extension_slice_pos5</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td>extension_slice_pos6</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td>extension_slice_pos7</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td></td><td>id</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;date</td><td></td><td>when.done</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;type</td><td></td><td>class</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;class</td><td></td><td>class</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;title</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;status</td><td></td><td>status</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;confidentiality</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td></td><td>who.focus</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;author</td><td></td><td>who.author</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;attester</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;attester</td><td>attester_slice_pos16</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td>attester_slice_pos16</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;time</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;party</td><td>attester_slice_pos16</td><td>who.witness</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;attester</td><td>attester_slice_pos17</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td>attester_slice_pos17</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;time</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;party</td><td>attester_slice_pos17</td><td>who.witness</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;custodian</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;event</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;period</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;start</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;detail</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;encounter</td><td></td><td>context</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos3</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos3</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos3</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos3</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>class</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td>section_slice_pos3</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos4</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos4</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos4</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos4</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>class</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td>section_slice_pos4</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos5</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos5</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos5</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos5</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>class</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td>section_slice_pos5</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos6</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos6</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos6</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos6</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>class</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td>section_slice_pos6</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos7</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos7</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos7</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos7</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>class</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td>section_slice_pos7</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos8</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos8</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos8</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos8</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>class</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos9</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos9</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos9</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos9</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>class</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos10</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos10</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos10</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos10</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>class</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos11</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos11</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos11</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos11</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>class</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos12</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos12</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos12</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos12</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>class</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td>section_slice_pos12</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos13</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos13</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos13</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos13</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>class</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos14</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos14</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos14</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos14</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>class</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos15</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos15</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos15</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos15</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>class</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td>section_slice_pos15</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos16</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos16</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos16</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos16</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>class</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td>entry_slice_pos4</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos17</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos17</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos17</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos17</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>class</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos18</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos18</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos18</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos18</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>class</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;section</td><td>section_slice_pos19</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>section_slice_pos19</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>section_slice_pos19</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>section_slice_pos19</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td></td><td>class</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td></td><td></td> </tr>
+</table>
+</body>
+</html>

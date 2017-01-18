@@ -1,0 +1,360 @@
+﻿<html>
+<head>
+  <title>Composition-CCDA-on-FHIR-Operative-Note-Example-ttl-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="rdf">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix loinc: &lt;http://loinc.org/owl#&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix sct: &lt;http://snomed.info/id/&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+&lt;Composition/CCDA-on-FHIR-Operative-Note-Example&gt; a fhir:Composition;
+  <a href="http://hl7.org/fhir/2017Jan/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot;
+  <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#id">fhir:value</a> &quot;CCDA-on-FHIR-Operative-Note-Example&quot;];
+  <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.meta">fhir:Resource.meta</a> [
+     <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Meta#Meta.versionId">fhir:Meta.versionId</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#id">fhir:value</a> &quot;1&quot; ];
+     <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Meta#Meta.lastUpdated">fhir:Meta.lastUpdated</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#instant">fhir:value</a> &quot;2016-06-15T08:16:14Z&quot;^^xsd:dateTime ];
+     <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Meta#Meta.profile">fhir:Meta.profile</a> [
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Operative-Note&quot;;
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 0     ]
+  ];
+  <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.language">fhir:Resource.language</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;en-US&quot;];
+  <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.text">fhir:DomainResource.text</a> [
+     <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n            &lt;p&gt;Operative Note document for Henry Jones&lt;/p&gt;\n            &lt;p&gt;Managed by Community Health and Hospitals&lt;/p&gt;\n        &lt;/div&gt;&quot;
+  ];
+  <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.identifier">fhir:Composition.identifier</a> [
+     <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Identifier#Identifier.system">fhir:Identifier.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Operative-Note&quot; ];
+     <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Identifier#Identifier.value">fhir:Identifier.value</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;1&quot; ]
+  ];
+  <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.date">fhir:Composition.date</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#dateTime">fhir:value</a> &quot;2016-03-22T09:10:14Z&quot;^^xsd:dateTime];
+  <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.type">fhir:Composition.type</a> [
+     <a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#concept">fhir:concept</a> loinc:11504-8;
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;11504-8&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Provider-unspecified Operation Note&quot; ]     ]
+  ];
+  <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.title">fhir:Composition.title</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Operative Note&quot;];
+  <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.status">fhir:Composition.status</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;preliminary&quot;];
+  <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.confidentiality">fhir:Composition.confidentiality</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;N&quot;];
+  <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.subject">fhir:Composition.subject</a> [
+     <a href="http://hl7.org/fhir/2017Jan/rdf.html#reference">fhir:link</a> &lt;http://fhir3.healthintersections.com.au/open/Patient/c493f2f2-28d5-49ab-90e8-9e8be341f7&gt;;
+     <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;http://fhir3.healthintersections.com.au/open/Patient/c493f2f2-28d5-49ab-90e8-9e8be341f7&quot; ];
+     <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Henry Jones&quot; ]
+  ];
+  <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.author">fhir:Composition.author</a> [
+     <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/2017Jan/rdf.html#reference">fhir:link</a> &lt;http://fhir3.healthintersections.com.au/open/Practitioner/2679baa7-5dac-4d22-81ae-daded84500&gt;;
+     <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;http://fhir3.healthintersections.com.au/open/Practitioner/2679baa7-5dac-4d22-81ae-daded84500&quot; ];
+     <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Adam Everyman, MD&quot; ]
+  ];
+  <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.attester">fhir:Composition.attester</a> [
+     <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.attester.mode">fhir:Composition.attester.mode</a> [
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;legal&quot;;
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 0     ];
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.attester.time">fhir:Composition.attester.time</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#dateTime">fhir:value</a> &quot;2012-01-04T09:10:14Z&quot;^^xsd:dateTime ];
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.attester.party">fhir:Composition.attester.party</a> [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#reference">fhir:link</a> &lt;http://fhir3.healthintersections.com.au/open/Practitioner/2679baa7-5dac-4d22-81ae-daded84500&gt;;
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;http://fhir3.healthintersections.com.au/open/Practitioner/2679baa7-5dac-4d22-81ae-daded84500&quot; ];
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Adam Everyman, MD&quot; ]     ]
+  ];
+  <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.custodian">fhir:Composition.custodian</a> [
+     <a href="http://hl7.org/fhir/2017Jan/rdf.html#reference">fhir:link</a> &lt;http://fhir3.healthintersections.com.au/open/Organization/1213e1ae-afc2-4a7c-8ed3-43b7a4e3d7&gt;;
+     <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;http://fhir3.healthintersections.com.au/open/Organization/1213e1ae-afc2-4a7c-8ed3-43b7a4e3d7&quot; ];
+     <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Community Health and Hospitals&quot; ]
+  ];
+  <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.event">fhir:Composition.event</a> [
+     <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.event.code">fhir:Composition.event.code</a> [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#concept">fhir:concept</a> sct:73761001;
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://snomed.info/sct&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;73761001&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Colonoscopy&quot; ]       ]     ];
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.event.period">fhir:Composition.event.period</a> [
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Period#Period.start">fhir:Period.start</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#dateTime">fhir:value</a> &quot;2015-11-18&quot;^^xsd:date ];
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Period#Period.end">fhir:Period.end</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#dateTime">fhir:value</a> &quot;2015-12-12&quot;^^xsd:date ]     ]
+  ];
+  <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.encounter">fhir:Composition.encounter</a> [
+     <a href="http://hl7.org/fhir/2017Jan/rdf.html#reference">fhir:link</a> &lt;http://fhirtest.uhn.ca/baseDstu3/Encounter/117630&gt;;
+     <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;http://fhirtest.uhn.ca/baseDstu3/Encounter/117630&quot; ]
+  ];
+  <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section">fhir:Composition.section</a> [
+     <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.title">fhir:Composition.section.title</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Allergies and Intolerances Section&quot; ];
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.code">fhir:Composition.section.code</a> [
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#concept">fhir:concept</a> loinc:48765-2;
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;48765-2&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Allergies and adverse reactions&quot; ]       ]     ];
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.text">fhir:Composition.section.text</a> [
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
+       fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                &lt;table&gt;\n                    &lt;tr&gt;\n                        &lt;td&gt;\n                            &lt;b&gt;Substance&lt;/b&gt;\n                        &lt;/td&gt;\n                        &lt;td&gt;\n                            &lt;b&gt;Overall Severity&lt;/b&gt;\n                        &lt;/td&gt;\n                        &lt;td&gt;\n                            &lt;b&gt;Reaction&lt;/b&gt;\n                        &lt;/td&gt;\n                        &lt;td&gt;\n                            &lt;b&gt;Reaction Severity&lt;/b&gt;\n                        &lt;/td&gt;\n                        &lt;td&gt;\n                            &lt;b&gt;Status&lt;/b&gt;\n                        &lt;/td&gt;\n                    &lt;/tr&gt;\n                    &lt;tr&gt;\n                        &lt;td&gt;Cashew Nut&lt;/td&gt;\n                        &lt;td&gt;Severe&lt;/td&gt;\n                        &lt;td&gt;Anaphylactic reaction&lt;/td&gt;\n                        &lt;td&gt;Mild&lt;/td&gt;\n                        &lt;td&gt;Active&lt;/td&gt;\n                    &lt;/tr&gt;\n                &lt;/table&gt;\n            &lt;/div&gt;&quot;     ];
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.mode">fhir:Composition.section.mode</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;snapshot&quot; ];
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.orderedBy">fhir:Composition.section.orderedBy</a> [
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/list-order&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;event-date&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Sorted by Event Date&quot; ]       ]     ]
+  ], [
+     <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 1;
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.title">fhir:Composition.section.title</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Anesthesia Section&quot; ];
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.code">fhir:Composition.section.code</a> [
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#concept">fhir:concept</a> loinc:59774-0;
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;59774-0&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Anesthesia&quot; ]       ]     ];
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.text">fhir:Composition.section.text</a> [
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
+       fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                &lt;p&gt;Conscious sedation with propofol 200 mg IV&lt;/p&gt;\n            &lt;/div&gt;&quot;     ];
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.entry">fhir:Composition.section.entry</a> [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#reference">fhir:link</a> &lt;http://fhir3.healthintersections.com.au/open/Medication/73bdc4a1-736c-4d79-8f42-620a19a367&gt;;
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;http://fhir3.healthintersections.com.au/open/Medication/73bdc4a1-736c-4d79-8f42-620a19a367&quot; ]     ]
+  ], [
+     <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 2;
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.title">fhir:Composition.section.title</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot; Assessment Section&quot; ];
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.code">fhir:Composition.section.code</a> [
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#concept">fhir:concept</a> loinc:51848-0;
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;51848-0&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Assessment (evaluation)&quot; ]       ]     ];
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.text">fhir:Composition.section.text</a> [
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
+       fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                &lt;p&gt;Obesity.&lt;/p&gt;\n                &lt;p&gt;Uncontrolled brittle Type II diabetic.&lt;/p&gt;\n                &lt;p&gt;Shortness of breath, mild wheezing.&lt;/p&gt;\n                &lt;p&gt;Pressure ulder on left knee.&lt;/p&gt;\n            &lt;/div&gt;&quot;     ]
+  ], [
+     <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 3;
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.title">fhir:Composition.section.title</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Assessment and Plan Section&quot; ];
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.code">fhir:Composition.section.code</a> [
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#concept">fhir:concept</a> loinc:51847-2;
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;51847-2&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Assessment (evaluation) and plan&quot; ]       ]     ];
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.text">fhir:Composition.section.text</a> [
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
+       fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                &lt;p&gt;Recurrent GI bleed of unknown etiology; hypotension perhaps\n                    secondary to this but as likely secondary to polypharmacy&lt;/p&gt;\n                &lt;p&gt;Acute on chronic anemia secondary to #1.&lt;/p&gt;\n                &lt;p&gt;Azotemia, acute renal failure with volume loss secondary tom#1.&lt;/p&gt;\n                &lt;p&gt;Hyperkalemia secondary to #3 and on ACE and K+ supplement.&lt;/p&gt;\n                &lt;p&gt;Other chronic diagnoses as noted above, currently stable.&lt;/p&gt;\n            &lt;/div&gt;&quot;     ]
+  ], [
+     <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 4;
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.title">fhir:Composition.section.title</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Complications Section&quot; ];
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.code">fhir:Composition.section.code</a> [
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#concept">fhir:concept</a> loinc:55109-3;
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;55109-3&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Complications&quot; ]       ]     ];
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.text">fhir:Composition.section.text</a> [
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
+       fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                &lt;p&gt;Asthmatic symptoms while under general anesthesia.&lt;/p&gt;\n            &lt;/div&gt;&quot;     ];
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.entry">fhir:Composition.section.entry</a> [
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/2017Jan/rdf.html#reference">fhir:link</a> &lt;http://fhirtest.uhn.ca/baseDstu3/Condition/117648&gt;;
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;http://fhirtest.uhn.ca/baseDstu3/Condition/117648&quot; ]     ]
+  ], [
+     <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 5;
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.title">fhir:Composition.section.title</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Preoperative Diagnosis Section&quot; ];
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.code">fhir:Composition.section.code</a> [
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#concept">fhir:concept</a> loinc:10219-4;
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;10219-4&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Preoperative Diagnosis&quot; ]       ]     ];
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.text">fhir:Composition.section.text</a> [
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
+       fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                &lt;p&gt;Appendicitis&lt;/p&gt;\n            &lt;/div&gt;&quot;     ]
+  ], [
+     <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 6;
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.title">fhir:Composition.section.title</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Operative Note Surgical Procedure Section&quot; ];
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.code">fhir:Composition.section.code</a> [
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#concept">fhir:concept</a> loinc:10223-6;
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;10223-6&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Operative Note Surgical Procedure&quot; ]       ]     ];
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.text">fhir:Composition.section.text</a> [
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
+       fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                &lt;p&gt;Laparoscopic Appendectomy&lt;/p&gt;\n            &lt;/div&gt;&quot;     ]
+  ], [
+     <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 7;
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.title">fhir:Composition.section.title</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Planned Procedure Section&quot; ];
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.code">fhir:Composition.section.code</a> [
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#concept">fhir:concept</a> loinc:59772-4;
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;59772-4&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Planned procedure&quot; ]       ]     ];
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.text">fhir:Composition.section.text</a> [
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
+       fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                &lt;p&gt;Colonoscopy&lt;/p&gt;\n            &lt;/div&gt;&quot;     ]
+  ], [
+     <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 8;
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.title">fhir:Composition.section.title</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Procedure Indications Section&quot; ];
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.code">fhir:Composition.section.code</a> [
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#concept">fhir:concept</a> loinc:59768-2;
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;59768-2&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Procedure indications&quot; ]       ]     ];
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.text">fhir:Composition.section.text</a> [
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
+       fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                &lt;p&gt;The procedure is performed for screening in a low risk individual.&lt;/p&gt;\n            &lt;/div&gt;&quot;     ]
+  ], [
+     <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 9;
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.title">fhir:Composition.section.title</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Procedure Description Section&quot; ];
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.code">fhir:Composition.section.code</a> [
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#concept">fhir:concept</a> loinc:29554-3;
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;29554-3&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Procedure description&quot; ]       ]     ];
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.text">fhir:Composition.section.text</a> [
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
+       fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                &lt;p&gt;The patient was brought to the operating room, placed in the supine position, and\n                    general anesthesia was induced. A detailed technical narrative of a laparoscopic\n                    appendectomy from initial incision to placement of any dressings follows.  &lt;/p&gt;\n            &lt;/div&gt;&quot;     ]
+  ], [
+     <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 10;
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.title">fhir:Composition.section.title</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Procedure Estimated Blood Loss Section&quot; ];
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.code">fhir:Composition.section.code</a> [
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#concept">fhir:concept</a> loinc:59770-8;
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;59770-8&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Procedure Estimated Blood Loss&quot; ]       ]     ];
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.text">fhir:Composition.section.text</a> [
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
+       fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                &lt;p&gt;Minimal&lt;/p&gt;\n            &lt;/div&gt;&quot;     ]
+  ], [
+     <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 11;
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.title">fhir:Composition.section.title</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Procedure Findings Section&quot; ];
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.code">fhir:Composition.section.code</a> [
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#concept">fhir:concept</a> loinc:59776-5;
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;59776-5&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Procedure findings&quot; ]       ]     ];
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.text">fhir:Composition.section.text</a> [
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
+       fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                &lt;p&gt;A 6 mm sessile polyp was found in the ascending colon and \n                    removed by snare, no cautery. Bleeding was controlled. \n                    Moderate diverticulosis and hemorrhoids were incidentally noted.&lt;/p&gt;\n            &lt;/div&gt;&quot;     ]
+  ], [
+     <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 12;
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.title">fhir:Composition.section.title</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Procedure Specimens Taken Section&quot; ];
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.code">fhir:Composition.section.code</a> [
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#concept">fhir:concept</a> loinc:59773-2;
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;59773-2&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Procedure specimens taken&quot; ]       ]     ];
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.text">fhir:Composition.section.text</a> [
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
+       fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                &lt;p&gt;Ascending colon polyp&lt;/p&gt;\n            &lt;/div&gt;&quot;     ]
+  ], [
+     <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 13;
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.title">fhir:Composition.section.title</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Operative Note Fluids Section&quot; ];
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.code">fhir:Composition.section.code</a> [
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#concept">fhir:concept</a> loinc:10216-0;
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;10216-0&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Operative Note Fluids&quot; ]       ]     ];
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.text">fhir:Composition.section.text</a> [
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
+       fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                &lt;p&gt;250 ML Ringers Lactate&lt;/p&gt;\n            &lt;/div&gt;&quot;     ]
+  ], [
+     <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 14;
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.title">fhir:Composition.section.title</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Surgical Drains Section&quot; ];
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.code">fhir:Composition.section.code</a> [
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#concept">fhir:concept</a> loinc:11537-8;
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;11537-8&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Surgical Drains&quot; ]       ]     ];
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.text">fhir:Composition.section.text</a> [
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
+       fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                &lt;p&gt;Penrose drain placed&lt;/p&gt;\n            &lt;/div&gt;&quot;     ]
+  ], [
+     <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 15;
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.title">fhir:Composition.section.title</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Procedure Implants Section&quot; ];
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.code">fhir:Composition.section.code</a> [
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#concept">fhir:concept</a> loinc:59771-6;
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;59771-6&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Procedure implants&quot; ]       ]     ];
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.text">fhir:Composition.section.text</a> [
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
+       fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                &lt;p&gt;No implants were placed.&lt;/p&gt;\n            &lt;/div&gt;&quot;     ]
+  ], [
+     <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 16;
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.title">fhir:Composition.section.title</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Procedure Disposition Section&quot; ];
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.code">fhir:Composition.section.code</a> [
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#concept">fhir:concept</a> loinc:59775-7;
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;59775-7&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Procedure disposition&quot; ]       ]     ];
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.text">fhir:Composition.section.text</a> [
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
+       fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                &lt;p&gt;The patient was taken to the Endoscopy Recovery Unit in stable condition.&lt;/p&gt;\n            &lt;/div&gt;&quot;     ]
+  ], [
+     <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 17;
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.title">fhir:Composition.section.title</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Postoperative Diagnosis Section&quot; ];
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.code">fhir:Composition.section.code</a> [
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#concept">fhir:concept</a> loinc:10218-6;
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;10218-6&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Postoperative Diagnosis&quot; ]       ]     ];
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.text">fhir:Composition.section.text</a> [
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
+       fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                &lt;p&gt;Appendicitis with periappendiceal abscess&lt;/p&gt;\n            &lt;/div&gt;&quot;     ]
+  ], [
+     <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 18;
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.title">fhir:Composition.section.title</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Plan of Treatment Section&quot; ];
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.code">fhir:Composition.section.code</a> [
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/2017Jan/rdf.html#concept">fhir:concept</a> loinc:18776-5;
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;18776-5&quot; ];
+         <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">fhir:value</a> &quot;Plan of treatment&quot; ]       ]     ];
+     <a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.text">fhir:Composition.section.text</a> [
+       <a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/2017Jan/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
+       fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                &lt;table&gt;\n                    &lt;tr&gt;\n                        &lt;td&gt;\n                            &lt;b&gt;Planned Activity&lt;/b&gt;\n                        &lt;/td&gt;\n                        &lt;td&gt;\n                            &lt;b&gt;Period&lt;/b&gt;\n                        &lt;/td&gt;\n                        &lt;td&gt;\n                            &lt;b&gt;Status&lt;/b&gt;\n                        &lt;/td&gt;\n                    &lt;/tr&gt;\n                    &lt;tr&gt;\n                        &lt;td&gt;Colonoscopy&lt;/td&gt;\n                        &lt;td&gt;2010/08/16 - 2010/08/16&lt;/td&gt;\n                        &lt;td&gt;Completed&lt;/td&gt;\n                    &lt;/tr&gt;\n                    &lt;tr&gt;\n                        &lt;td&gt;Recommendation to Exercise&lt;/td&gt;\n                        &lt;td&gt;2015/10/29&lt;/td&gt;\n                        &lt;td&gt;Ongoing&lt;/td&gt;\n                    &lt;/tr&gt;\n                &lt;/table&gt;\n            &lt;/div&gt;&quot;     ]
+  ].
+
+</pre>
+
+</body>
+</html>

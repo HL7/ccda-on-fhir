@@ -1,0 +1,97 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/ccda/ValueSet/2.16.840.1.113883.11.20.4.1> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "2.16.840.1.113883.11.20.4.1"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>Value Set Contents</h3><p>This value set contains 7 concepts</p><p>All codes from system <code>http://loinc.org</code></p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a name=\"http---loinc.org-18842-5\"> </a>18842-5</td><td>Discharge summary</td></tr><tr><td><a name=\"http---loinc.org-11490-0\"> </a>11490-0</td><td>Physician Discharge summary</td></tr><tr><td><a name=\"http---loinc.org-28655-9\"> </a>28655-9</td><td>Physician attending Discharge summary</td></tr><tr><td><a name=\"http---loinc.org-29761-4\"> </a>29761-4</td><td>Dentist Discharge summary</td></tr><tr><td><a name=\"http---loinc.org-34745-0\"> </a>34745-0</td><td>Nurse Discharge summary</td></tr><tr><td><a name=\"http---loinc.org-34105-7\"> </a>34105-7</td><td>Hospital Discharge summary</td></tr><tr><td><a name=\"http---loinc.org-34106-5\"> </a>34106-5</td><td>Physician Hospital Discharge summary</td></tr></table></div>"
+  ];
+  fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/ccda/ValueSet/2.16.840.1.113883.11.20.4.1"];
+  fhir:ValueSet.name [ fhir:value "DischargeSummaryDocumentTypeCode"];
+  fhir:ValueSet.status [ fhir:value "active"];
+  fhir:ValueSet.date [ fhir:value "2017-01-04T23:36:09-05:00"^^xsd:dateTime];
+  fhir:ValueSet.description [ fhir:value "A value set of LOINC document codes for discharge summaries.\r\n\r\n\r\n\r\nSpecific URL Pending"];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "18842-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Discharge summary" ]
+       ], [
+         fhir:index 1;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "11490-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Discharge summary" ]
+       ], [
+         fhir:index 2;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "28655-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician attending Discharge summary" ]
+       ], [
+         fhir:index 3;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "29761-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dentist Discharge summary" ]
+       ], [
+         fhir:index 4;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "34745-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nurse Discharge summary" ]
+       ], [
+         fhir:index 5;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "34105-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hospital Discharge summary" ]
+       ], [
+         fhir:index 6;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "34106-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician Hospital Discharge summary" ]
+       ]
+     ]
+  ];
+  fhir:ValueSet.expansion [
+     fhir:ValueSet.expansion.identifier [ fhir:value "urn:uuid:040f5f26-4b01-4461-9595-49dc3a8ce633" ];
+     fhir:ValueSet.expansion.timestamp [ fhir:value "2016-12-03T17:27:13.7831709-05:00"^^xsd:dateTime ];
+     fhir:ValueSet.expansion.contains [
+       fhir:index 0;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "18842-5" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Discharge summary" ]
+     ], [
+       fhir:index 1;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "11490-0" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Physician Discharge summary" ]
+     ], [
+       fhir:index 2;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "28655-9" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Physician attending Discharge summary" ]
+     ], [
+       fhir:index 3;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "29761-4" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Dentist Discharge summary" ]
+     ], [
+       fhir:index 4;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "34745-0" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Nurse Discharge summary" ]
+     ], [
+       fhir:index 5;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "34105-7" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Hospital Discharge summary" ]
+     ], [
+       fhir:index 6;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "34106-5" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Physician Hospital Discharge summary" ]
+     ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

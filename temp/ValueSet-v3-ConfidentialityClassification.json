@@ -1,0 +1,20 @@
+{
+  "resourceType": "ValueSet",
+  "id": "v3-ConfidentialityClassification",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>v3-ConfidentialityClassification</h2><div><p>Set of codes used to value Act.Confidentiality and Role.Confidentiality attribute in accordance with the definition for concept domain &quot;Confidentiality&quot;. See http://hl7.org/fhir/ValueSet/v3-ConfidentialityClassification</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in http://hl7.org/fhir/ValueSet/v3-ConfidentialityClassification</li></ul></div>"
+  },
+  "url": "http://hl7.org/fhir/ccda/ValueSet/v3-ConfidentialityClassification",
+  "name": "v3-ConfidentialityClassification",
+  "status": "draft",
+  "date": "2017-01-04T23:36:09-05:00",
+  "description": "Set of codes used to value Act.Confidentiality and Role.Confidentiality attribute in accordance with the definition for concept domain \"Confidentiality\". See http://hl7.org/fhir/ValueSet/v3-ConfidentialityClassification",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/ValueSet/v3-ConfidentialityClassification"
+      }
+    ]
+  }
+}

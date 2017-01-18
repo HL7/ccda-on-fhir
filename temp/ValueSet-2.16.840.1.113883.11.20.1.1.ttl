@@ -1,0 +1,124 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/ccda/ValueSet/2.16.840.1.113883.11.20.1.1> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "2.16.840.1.113883.11.20.1.1"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>Value Set Contents</h3><p>This value set contains 10 concepts</p><p>All codes from system <code>http://loinc.org</code></p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a name=\"http---loinc.org-11504-8\"> </a>11504-8</td><td>Provider-unspecified Operation note</td></tr><tr><td><a name=\"http---loinc.org-34137-0\"> </a>34137-0</td><td>Outpatient Surgical operation note</td></tr><tr><td><a name=\"http---loinc.org-28583-3\"> </a>28583-3</td><td>Dentist Operation note</td></tr><tr><td><a name=\"http---loinc.org-28624-5\"> </a>28624-5</td><td>Podiatry Operation note</td></tr><tr><td><a name=\"http---loinc.org-28573-4\"> </a>28573-4</td><td>Physician, Operation note</td></tr><tr><td><a name=\"http---loinc.org-34877-1\"> </a>34877-1</td><td>Urology Surgical operation note</td></tr><tr><td><a name=\"http---loinc.org-34874-8\"> </a>34874-8</td><td>Surgery Surgical operation note</td></tr><tr><td><a name=\"http---loinc.org-34870-6\"> </a>34870-6</td><td>Plastic surgery Surgical operation note</td></tr><tr><td><a name=\"http---loinc.org-34868-0\"> </a>34868-0</td><td>Orthopaedic surgery Surgical operation note</td></tr><tr><td><a name=\"http---loinc.org-34818-5\"> </a>34818-5</td><td>Otolaryngology Surgical operation note</td></tr></table></div>"
+  ];
+  fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/ccda/ValueSet/2.16.840.1.113883.11.20.1.1"];
+  fhir:ValueSet.name [ fhir:value "SurgicalOperationNoteDocumentTypeCode"];
+  fhir:ValueSet.status [ fhir:value "active"];
+  fhir:ValueSet.date [ fhir:value "2017-01-04T23:36:09-05:00"^^xsd:dateTime];
+  fhir:ValueSet.description [ fhir:value "Specific URL Pending"];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "11504-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Provider-unspecified Operation note" ]
+       ], [
+         fhir:index 1;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "34137-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Outpatient Surgical operation note" ]
+       ], [
+         fhir:index 2;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "28583-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dentist Operation note" ]
+       ], [
+         fhir:index 3;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "28624-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Podiatry Operation note" ]
+       ], [
+         fhir:index 4;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "28573-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician, Operation note" ]
+       ], [
+         fhir:index 5;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "34877-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Urology Surgical operation note" ]
+       ], [
+         fhir:index 6;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "34874-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Surgery Surgical operation note" ]
+       ], [
+         fhir:index 7;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "34870-6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Plastic surgery Surgical operation note" ]
+       ], [
+         fhir:index 8;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "34868-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Orthopaedic surgery Surgical operation note" ]
+       ], [
+         fhir:index 9;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "34818-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Otolaryngology Surgical operation note" ]
+       ]
+     ]
+  ];
+  fhir:ValueSet.expansion [
+     fhir:ValueSet.expansion.identifier [ fhir:value "urn:uuid:1c335802-e2bd-44ac-95f7-b2d13bf5a4cd" ];
+     fhir:ValueSet.expansion.timestamp [ fhir:value "2016-12-03T17:27:14.6305709-05:00"^^xsd:dateTime ];
+     fhir:ValueSet.expansion.contains [
+       fhir:index 0;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "11504-8" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Provider-unspecified Operation note" ]
+     ], [
+       fhir:index 1;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "34137-0" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Outpatient Surgical operation note" ]
+     ], [
+       fhir:index 2;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "28583-3" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Dentist Operation note" ]
+     ], [
+       fhir:index 3;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "28624-5" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Podiatry Operation note" ]
+     ], [
+       fhir:index 4;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "28573-4" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Physician, Operation note" ]
+     ], [
+       fhir:index 5;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "34877-1" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Urology Surgical operation note" ]
+     ], [
+       fhir:index 6;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "34874-8" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Surgery Surgical operation note" ]
+     ], [
+       fhir:index 7;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "34870-6" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Plastic surgery Surgical operation note" ]
+     ], [
+       fhir:index 8;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "34868-0" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Orthopaedic surgery Surgical operation note" ]
+     ], [
+       fhir:index 9;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "34818-5" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Otolaryngology Surgical operation note" ]
+     ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

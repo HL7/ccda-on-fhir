@@ -1,0 +1,140 @@
+﻿C-CDA on FHIR : Validation Results
+=========================================
+
+Generated Wed Jan 04 23:37:36 EST 2017. FHIR version 1.8.0
+
+ Build Errors : 0 / 0
+ C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\ImplementationGuide/ImplementationGuide_2219 : 0 / 0
+ C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\composition/CCDA-on-FHIR-Care-Plan-Example : 0 / 4
+ C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\composition/CCDA-on-FHIR-Consultation-Note-Example : 0 / 3
+ C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\composition/CCDA-on-FHIR-Continuity-of-Care-Document-Example : 0 / 7
+ C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\composition/CCDA-on-FHIR-Diagnostic-Imaging-Example : 0 / 2
+ C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\composition/CCDA-on-FHIR-Discharge-Summary-Example : 0 / 4
+ C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\composition/CCDA-on-FHIR-History-and-Physical-Example : 0 / 10
+ C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\composition/CCDA-on-FHIR-Operative-Note-Example : 0 / 9
+ C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\composition/CCDA-on-FHIR-Procedure-Note-Example : 0 / 5
+ C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\composition/CCDA-on-FHIR-Progress-Note-Example : 0 / 0
+ C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\composition/CCDA-on-FHIR-Referral-Note-Example : 0 / 4
+ C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\structuredefinition/CCDA-on-FHIR-Authorization : 0 / 0
+ C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\structuredefinition/CCDA-on-FHIR-Care-Plan : 0 / 0
+ C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\structuredefinition/CCDA-on-FHIR-Consent : 0 / 0
+ C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\structuredefinition/CCDA-on-FHIR-Consultation-Note : 0 / 0
+ C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\structuredefinition/CCDA-on-FHIR-Continuity-of-Care-Document : 0 / 0
+ C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\structuredefinition/CCDA-on-FHIR-Data-Enterer : 0 / 0
+ C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\structuredefinition/CCDA-on-FHIR-Diagnostic-Imaging : 0 / 0
+ C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\structuredefinition/CCDA-on-FHIR-Discharge-Summary : 0 / 0
+ C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\structuredefinition/CCDA-on-FHIR-History-and-Physical : 0 / 0
+ C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\structuredefinition/CCDA-on-FHIR-In-Fulfillment-Of-Order : 0 / 0
+ C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\structuredefinition/CCDA-on-FHIR-Informant : 0 / 0
+ C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\structuredefinition/CCDA-on-FHIR-Information-Recipient : 0 / 0
+ C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\structuredefinition/CCDA-on-FHIR-Operative-Note : 0 / 0
+ C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\structuredefinition/CCDA-on-FHIR-Participant : 0 / 0
+ C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\structuredefinition/CCDA-on-FHIR-Performer : 0 / 0
+ C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\structuredefinition/CCDA-on-FHIR-Procedure-Note : 0 / 0
+ C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\structuredefinition/CCDA-on-FHIR-Progress-Note : 0 / 0
+ C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\structuredefinition/CCDA-on-FHIR-Referral-Note : 0 / 0
+ C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\structuredefinition/CCDA-on-FHIR-Transfer-Summary : 0 / 0
+ C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\structuredefinition/CCDA-on-FHIR-US-Realm-Header : 0 / 2
+ C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\valueset/1.3.6.1.4.1.12009.10.2.5 : 0 / 0
+ C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\valueset/2.16.840.1.113883.1.11.20.2.3 : 0 / 0
+ C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\valueset/2.16.840.1.113883.1.11.20.22 : 0 / 0
+ C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\valueset/2.16.840.1.113883.11.20.1.1 : 0 / 0
+ C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\valueset/2.16.840.1.113883.11.20.4.1 : 0 / 0
+ C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\valueset/2.16.840.1.113883.11.20.6.1 : 0 / 0
+ C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\valueset/2.16.840.1.113883.11.20.8.1 : 0 / 0
+ C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\valueset/2.16.840.1.113883.11.20.9.31 : 0 / 0
+ C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\valueset/2.16.840.1.113883.11.20.9.59 : 0 / 0
+ C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\valueset/v3-ConfidentialityClassification : 0 / 0
+</table>
+== n/a ==
+== C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\ImplementationGuide/ImplementationGuide_2219.xml ==
+== C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\composition/CCDA-on-FHIR-Care-Plan-Example.xml ==
+ * information : Composition/CCDA-on-FHIR-Care-Plan-Example: Composition ==> Profile http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Care-Plan, Element 'Composition.section[section_slice_pos2]': Unable to check minimum required (1) due to lack of slicing validation
+ * information : Composition/CCDA-on-FHIR-Care-Plan-Example: Composition ==> Profile http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Care-Plan, Element 'Composition.section[section_slice_pos3]': Unable to check minimum required (1) due to lack of slicing validation
+ * information : Composition/CCDA-on-FHIR-Care-Plan-Example: Composition.type ==> None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/doc-typecodes (http://hl7.org/fhir/ValueSet/doc-typecodes, and a code is recommended to come from this value set) (codes = http://loinc.org#52521-2)
+ * warning : Composition/CCDA-on-FHIR-Care-Plan-Example: Composition.event.code.coding ==> Codes are not available for validation of content from system http://snomed.info/sct
+== C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\composition/CCDA-on-FHIR-Consultation-Note-Example.xml ==
+ * information : Composition/CCDA-on-FHIR-Consultation-Note-Example: Composition ==> Profile http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Consultation-Note, Element 'Composition.section[section_slice_pos4]': Unable to check minimum required (1) due to lack of slicing validation
+ * information : Composition/CCDA-on-FHIR-Consultation-Note-Example: Composition ==> Profile http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Consultation-Note, Element 'Composition.section[section_slice_pos13]': Unable to check minimum required (1) due to lack of slicing validation
+ * information : Composition/CCDA-on-FHIR-Consultation-Note-Example: Composition ==> Profile http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Consultation-Note, Element 'Composition.section[section_slice_pos21]': Unable to check minimum required (1) due to lack of slicing validation
+== C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\composition/CCDA-on-FHIR-Continuity-of-Care-Document-Example.xml ==
+ * information : Composition/CCDA-on-FHIR-Continuity-of-Care-Document-Example: Composition ==> Profile http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Continuity-of-Care-Document, Element 'Composition.section[section_slice_pos3]': Unable to check minimum required (1) due to lack of slicing validation
+ * information : Composition/CCDA-on-FHIR-Continuity-of-Care-Document-Example: Composition ==> Profile http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Continuity-of-Care-Document, Element 'Composition.section[section_slice_pos4]': Unable to check minimum required (1) due to lack of slicing validation
+ * information : Composition/CCDA-on-FHIR-Continuity-of-Care-Document-Example: Composition ==> Profile http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Continuity-of-Care-Document, Element 'Composition.section[section_slice_pos5]': Unable to check minimum required (1) due to lack of slicing validation
+ * information : Composition/CCDA-on-FHIR-Continuity-of-Care-Document-Example: Composition ==> Profile http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Continuity-of-Care-Document, Element 'Composition.section[section_slice_pos7]': Unable to check minimum required (1) due to lack of slicing validation
+ * information : Composition/CCDA-on-FHIR-Continuity-of-Care-Document-Example: Composition ==> Profile http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Continuity-of-Care-Document, Element 'Composition.section[section_slice_pos15]': Unable to check minimum required (1) due to lack of slicing validation
+ * information : Composition/CCDA-on-FHIR-Continuity-of-Care-Document-Example: Composition ==> Profile http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Continuity-of-Care-Document, Element 'Composition.section[section_slice_pos16]': Unable to check minimum required (1) due to lack of slicing validation
+ * information : Composition/CCDA-on-FHIR-Continuity-of-Care-Document-Example: Composition.type ==> None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/doc-typecodes (http://hl7.org/fhir/ValueSet/doc-typecodes, and a code is recommended to come from this value set) (codes = http://loinc.org#34133-9)
+== C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\composition/CCDA-on-FHIR-Diagnostic-Imaging-Example.xml ==
+ * information : Composition/CCDA-on-FHIR-Diagnostic-Imaging-Example: Composition ==> Profile http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Diagnostic-Imaging, Element 'Composition.section[section_slice_pos2]': Unable to check minimum required (1) due to lack of slicing validation
+ * warning : Composition/CCDA-on-FHIR-Diagnostic-Imaging-Example: Composition.event.code.coding ==> Codes are not available for validation of content from system http://snomed.info/sct
+== C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\composition/CCDA-on-FHIR-Discharge-Summary-Example.xml ==
+ * information : Composition/CCDA-on-FHIR-Discharge-Summary-Example: Composition ==> Profile http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Discharge-Summary, Element 'Composition.section[section_slice_pos2]': Unable to check minimum required (1) due to lack of slicing validation
+ * information : Composition/CCDA-on-FHIR-Discharge-Summary-Example: Composition ==> Profile http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Discharge-Summary, Element 'Composition.section[section_slice_pos3]': Unable to check minimum required (1) due to lack of slicing validation
+ * information : Composition/CCDA-on-FHIR-Discharge-Summary-Example: Composition ==> Profile http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Discharge-Summary, Element 'Composition.section[section_slice_pos4]': Unable to check minimum required (1) due to lack of slicing validation
+ * information : Composition/CCDA-on-FHIR-Discharge-Summary-Example: Composition ==> Profile http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Discharge-Summary, Element 'Composition.section[section_slice_pos16]': Unable to check minimum required (1) due to lack of slicing validation
+== C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\composition/CCDA-on-FHIR-History-and-Physical-Example.xml ==
+ * information : Composition/CCDA-on-FHIR-History-and-Physical-Example: Composition ==> Profile http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-History-and-Physical, Element 'Composition.section[section_slice_pos2]': Unable to check minimum required (1) due to lack of slicing validation
+ * information : Composition/CCDA-on-FHIR-History-and-Physical-Example: Composition ==> Profile http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-History-and-Physical, Element 'Composition.section[section_slice_pos7]': Unable to check minimum required (1) due to lack of slicing validation
+ * information : Composition/CCDA-on-FHIR-History-and-Physical-Example: Composition ==> Profile http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-History-and-Physical, Element 'Composition.section[section_slice_pos8]': Unable to check minimum required (1) due to lack of slicing validation
+ * information : Composition/CCDA-on-FHIR-History-and-Physical-Example: Composition ==> Profile http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-History-and-Physical, Element 'Composition.section[section_slice_pos9]': Unable to check minimum required (1) due to lack of slicing validation
+ * information : Composition/CCDA-on-FHIR-History-and-Physical-Example: Composition ==> Profile http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-History-and-Physical, Element 'Composition.section[section_slice_pos12]': Unable to check minimum required (1) due to lack of slicing validation
+ * information : Composition/CCDA-on-FHIR-History-and-Physical-Example: Composition ==> Profile http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-History-and-Physical, Element 'Composition.section[section_slice_pos13]': Unable to check minimum required (1) due to lack of slicing validation
+ * information : Composition/CCDA-on-FHIR-History-and-Physical-Example: Composition ==> Profile http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-History-and-Physical, Element 'Composition.section[section_slice_pos18]': Unable to check minimum required (1) due to lack of slicing validation
+ * information : Composition/CCDA-on-FHIR-History-and-Physical-Example: Composition ==> Profile http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-History-and-Physical, Element 'Composition.section[section_slice_pos19]': Unable to check minimum required (1) due to lack of slicing validation
+ * information : Composition/CCDA-on-FHIR-History-and-Physical-Example: Composition ==> Profile http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-History-and-Physical, Element 'Composition.section[section_slice_pos20]': Unable to check minimum required (1) due to lack of slicing validation
+ * information : Composition/CCDA-on-FHIR-History-and-Physical-Example: Composition ==> Profile http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-History-and-Physical, Element 'Composition.section[section_slice_pos21]': Unable to check minimum required (1) due to lack of slicing validation
+== C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\composition/CCDA-on-FHIR-Operative-Note-Example.xml ==
+ * information : Composition/CCDA-on-FHIR-Operative-Note-Example: Composition ==> Profile http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Operative-Note, Element 'Composition.section[section_slice_pos2]': Unable to check minimum required (1) due to lack of slicing validation
+ * information : Composition/CCDA-on-FHIR-Operative-Note-Example: Composition ==> Profile http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Operative-Note, Element 'Composition.section[section_slice_pos3]': Unable to check minimum required (1) due to lack of slicing validation
+ * information : Composition/CCDA-on-FHIR-Operative-Note-Example: Composition ==> Profile http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Operative-Note, Element 'Composition.section[section_slice_pos4]': Unable to check minimum required (1) due to lack of slicing validation
+ * information : Composition/CCDA-on-FHIR-Operative-Note-Example: Composition ==> Profile http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Operative-Note, Element 'Composition.section[section_slice_pos5]': Unable to check minimum required (1) due to lack of slicing validation
+ * information : Composition/CCDA-on-FHIR-Operative-Note-Example: Composition ==> Profile http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Operative-Note, Element 'Composition.section[section_slice_pos6]': Unable to check minimum required (1) due to lack of slicing validation
+ * information : Composition/CCDA-on-FHIR-Operative-Note-Example: Composition ==> Profile http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Operative-Note, Element 'Composition.section[section_slice_pos7]': Unable to check minimum required (1) due to lack of slicing validation
+ * information : Composition/CCDA-on-FHIR-Operative-Note-Example: Composition ==> Profile http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Operative-Note, Element 'Composition.section[section_slice_pos16]': Unable to check minimum required (1) due to lack of slicing validation
+ * information : Composition/CCDA-on-FHIR-Operative-Note-Example: Composition ==> Profile http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Operative-Note, Element 'Composition.section[section_slice_pos17]': Unable to check minimum required (1) due to lack of slicing validation
+ * warning : Composition/CCDA-on-FHIR-Operative-Note-Example: Composition.event.code.coding ==> Codes are not available for validation of content from system http://snomed.info/sct
+== C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\composition/CCDA-on-FHIR-Procedure-Note-Example.xml ==
+ * information : Composition/CCDA-on-FHIR-Procedure-Note-Example: Composition ==> Profile http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Procedure-Note, Element 'Composition.section[section_slice_pos5]': Unable to check minimum required (1) due to lack of slicing validation
+ * information : Composition/CCDA-on-FHIR-Procedure-Note-Example: Composition ==> Profile http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Procedure-Note, Element 'Composition.section[section_slice_pos6]': Unable to check minimum required (1) due to lack of slicing validation
+ * information : Composition/CCDA-on-FHIR-Procedure-Note-Example: Composition ==> Profile http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Procedure-Note, Element 'Composition.section[section_slice_pos7]': Unable to check minimum required (1) due to lack of slicing validation
+ * information : Composition/CCDA-on-FHIR-Procedure-Note-Example: Composition ==> Profile http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Procedure-Note, Element 'Composition.section[section_slice_pos8]': Unable to check minimum required (1) due to lack of slicing validation
+ * warning : Composition/CCDA-on-FHIR-Procedure-Note-Example: Composition.event.code.coding ==> Codes are not available for validation of content from system http://snomed.info/sct
+== C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\composition/CCDA-on-FHIR-Progress-Note-Example.xml ==
+== C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\composition/CCDA-on-FHIR-Referral-Note-Example.xml ==
+ * information : Composition/CCDA-on-FHIR-Referral-Note-Example: Composition ==> Profile http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Referral-Note, Element 'Composition.section[section_slice_pos2]': Unable to check minimum required (1) due to lack of slicing validation
+ * information : Composition/CCDA-on-FHIR-Referral-Note-Example: Composition ==> Profile http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Referral-Note, Element 'Composition.section[section_slice_pos3]': Unable to check minimum required (1) due to lack of slicing validation
+ * information : Composition/CCDA-on-FHIR-Referral-Note-Example: Composition ==> Profile http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Referral-Note, Element 'Composition.section[section_slice_pos4]': Unable to check minimum required (1) due to lack of slicing validation
+ * information : Composition/CCDA-on-FHIR-Referral-Note-Example: Composition ==> Profile http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Referral-Note, Element 'Composition.section[section_slice_pos5]': Unable to check minimum required (1) due to lack of slicing validation
+== C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\structuredefinition/CCDA-on-FHIR-Authorization.xml ==
+== C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\structuredefinition/CCDA-on-FHIR-Care-Plan.xml ==
+== C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\structuredefinition/CCDA-on-FHIR-Consent.xml ==
+== C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\structuredefinition/CCDA-on-FHIR-Consultation-Note.xml ==
+== C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\structuredefinition/CCDA-on-FHIR-Continuity-of-Care-Document.xml ==
+== C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\structuredefinition/CCDA-on-FHIR-Data-Enterer.xml ==
+== C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\structuredefinition/CCDA-on-FHIR-Diagnostic-Imaging.xml ==
+== C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\structuredefinition/CCDA-on-FHIR-Discharge-Summary.xml ==
+== C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\structuredefinition/CCDA-on-FHIR-History-and-Physical.xml ==
+== C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\structuredefinition/CCDA-on-FHIR-In-Fulfillment-Of-Order.xml ==
+== C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\structuredefinition/CCDA-on-FHIR-Informant.xml ==
+== C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\structuredefinition/CCDA-on-FHIR-Information-Recipient.xml ==
+== C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\structuredefinition/CCDA-on-FHIR-Operative-Note.xml ==
+== C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\structuredefinition/CCDA-on-FHIR-Participant.xml ==
+== C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\structuredefinition/CCDA-on-FHIR-Performer.xml ==
+== C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\structuredefinition/CCDA-on-FHIR-Procedure-Note.xml ==
+== C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\structuredefinition/CCDA-on-FHIR-Progress-Note.xml ==
+== C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\structuredefinition/CCDA-on-FHIR-Referral-Note.xml ==
+== C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\structuredefinition/CCDA-on-FHIR-Transfer-Summary.xml ==
+== C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\structuredefinition/CCDA-on-FHIR-US-Realm-Header.xml ==
+ * warning : StructureDefinition/CCDA-on-FHIR-US-Realm-Header: StructureDefinition.differential.element[15].binding.valueSetReference.ValueSet.meta.profile[0] ==> StructureDefinition reference &quot;http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition&quot; could not be resolved
+ * warning : StructureDefinition/CCDA-on-FHIR-US-Realm-Header: StructureDefinition.differential.element[15].binding.valueSetReference.ValueSet.description ==> value should not start or finish with whitespace
+== C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\valueset/1.3.6.1.4.1.12009.10.2.5.xml ==
+== C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\valueset/2.16.840.1.113883.1.11.20.2.3.xml ==
+== C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\valueset/2.16.840.1.113883.1.11.20.22.xml ==
+== C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\valueset/2.16.840.1.113883.11.20.1.1.xml ==
+== C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\valueset/2.16.840.1.113883.11.20.4.1.xml ==
+== C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\valueset/2.16.840.1.113883.11.20.6.1.xml ==
+== C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\valueset/2.16.840.1.113883.11.20.8.1.xml ==
+== C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\valueset/2.16.840.1.113883.11.20.9.31.xml ==
+== C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\valueset/2.16.840.1.113883.11.20.9.59.xml ==
+== C:\Users\rickg\Documents\Workspaces-SVN\FHIR-build\guides\ccda2\resources\valueset/v3-ConfidentialityClassification.xml ==

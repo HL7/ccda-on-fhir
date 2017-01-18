@@ -1,0 +1,34 @@
+<table class="dict">
+  <tr><td colspan="2" class="structure"><a name="Extension:c-cdaonfhirperformer"> </a><a name="Extension"> </a><b>Extension</b></td></tr>
+  <tr><td>Definition</td><td><p>An Extension</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/2017Jan/conformance-rules.html#conformance">Control</a></td><td>0..* This element is affected by the following invariants: ele-1</td></tr>
+  <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
+<b title="Formal Invariant Identifier">ele-1</b>: All FHIR elements must have a @value or children (xpath: @value|f:*|h:div)<br/><b title="Formal Invariant Identifier">ext-1</b>: Must have either extensions or value[x], not both (xpath: exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')]))</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Extension:c-cdaonfhirperformer.id"> </a><a name="Extension.id"> </a><b>Extension.id</b></td></tr>
+  <tr><td>Definition</td><td><p>unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/2017Jan/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/2017Jan/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/2017Jan/datatypes.html#string">string</a></td></tr>
+  <tr><td colspan="2" class="structure"><a name="Extension:c-cdaonfhirperformer.extension"> </a><a name="Extension.extension"> </a><b>Extension.extension</b></td></tr>
+  <tr><td>Definition</td><td><p>May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/2017Jan/conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/2017Jan/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension">Extension</a></td></tr>
+  <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>extensions, user content</td></tr>
+  <tr><td>Comments</td><td><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Extension:c-cdaonfhirperformer.url"> </a><a name="Extension.url"> </a><b>Extension.url</b></td></tr>
+  <tr><td>Definition</td><td><p>SHALL contain exactly one [1..1] @url=&quot;http://hl7.org/fhir/ccda/StructureDefinition/CCDA<em>on</em>FHIR_Performer&quot; (CONF:2219-1867).</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/2017Jan/conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/2017Jan/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/2017Jan/datatypes.html#uri">uri</a></td></tr>
+  <tr><td>Comments</td><td><p>The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.</p>
+</td></tr>
+  <tr><td>Fixed Value</td><td>http://hl7.org/fhir/ccda/StructureDefinition/CCDA_on_FHIR_Performer</td></tr>
+  <tr><td colspan="2" class="structure"><a name="Extension:c-cdaonfhirperformer.valueReference"> </a><a name="Extension:c-cdaonfhirperformer.value[x]"> </a><a name="Extension:c-cdaonfhirperformer.value[x]"> </a><b>Extension.valueReference</b></td></tr>
+  <tr><td>Definition</td><td><p>SHALL contain exactly one [1..1] U.S. Core Practitioner Profile (identifier: http://hl7.org/fhir/us/core/StructureDefinition/us-core-pract) (CONF:2219-1868).</p>
+</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/2017Jan/conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/2017Jan/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference">Reference</a>(<a href="http://hl7.org/fhir/us/core/2017Jan/StructureDefinition-us-core-pract.html" title="http://hl7.org/fhir/us/core/StructureDefinition/us-core-pract">US Core Practitioner</a>)</td></tr>
+</table>

@@ -1,0 +1,91 @@
+{
+  "resourceType": "ValueSet",
+  "id": "2.16.840.1.113883.11.20.4.1",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>Value Set Contents</h3><p>This value set contains 7 concepts</p><p>All codes from system <code>http://loinc.org</code></p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a name=\"http---loinc.org-18842-5\"> </a>18842-5</td><td>Discharge summary</td></tr><tr><td><a name=\"http---loinc.org-11490-0\"> </a>11490-0</td><td>Physician Discharge summary</td></tr><tr><td><a name=\"http---loinc.org-28655-9\"> </a>28655-9</td><td>Physician attending Discharge summary</td></tr><tr><td><a name=\"http---loinc.org-29761-4\"> </a>29761-4</td><td>Dentist Discharge summary</td></tr><tr><td><a name=\"http---loinc.org-34745-0\"> </a>34745-0</td><td>Nurse Discharge summary</td></tr><tr><td><a name=\"http---loinc.org-34105-7\"> </a>34105-7</td><td>Hospital Discharge summary</td></tr><tr><td><a name=\"http---loinc.org-34106-5\"> </a>34106-5</td><td>Physician Hospital Discharge summary</td></tr></table></div>"
+  },
+  "url": "http://hl7.org/fhir/ccda/ValueSet/2.16.840.1.113883.11.20.4.1",
+  "name": "DischargeSummaryDocumentTypeCode",
+  "status": "active",
+  "date": "2017-01-04T23:36:09-05:00",
+  "description": "A value set of LOINC document codes for discharge summaries.\r\n\r\n\r\n\r\nSpecific URL Pending",
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "18842-5",
+            "display": "Discharge summary"
+          },
+          {
+            "code": "11490-0",
+            "display": "Physician Discharge summary"
+          },
+          {
+            "code": "28655-9",
+            "display": "Physician attending Discharge summary"
+          },
+          {
+            "code": "29761-4",
+            "display": "Dentist Discharge summary"
+          },
+          {
+            "code": "34745-0",
+            "display": "Nurse Discharge summary"
+          },
+          {
+            "code": "34105-7",
+            "display": "Hospital Discharge summary"
+          },
+          {
+            "code": "34106-5",
+            "display": "Physician Hospital Discharge summary"
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "identifier": "urn:uuid:040f5f26-4b01-4461-9595-49dc3a8ce633",
+    "timestamp": "2016-12-03T17:27:13.7831709-05:00",
+    "contains": [
+      {
+        "system": "http://loinc.org",
+        "code": "18842-5",
+        "display": "Discharge summary"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "11490-0",
+        "display": "Physician Discharge summary"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "28655-9",
+        "display": "Physician attending Discharge summary"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "29761-4",
+        "display": "Dentist Discharge summary"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "34745-0",
+        "display": "Nurse Discharge summary"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "34105-7",
+        "display": "Hospital Discharge summary"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "34106-5",
+        "display": "Physician Hospital Discharge summary"
+      }
+    ]
+  }
+}

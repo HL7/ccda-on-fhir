@@ -1,0 +1,548 @@
+﻿<html>
+<head>
+  <title>ImplementationGuide-2219-json-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="json">
+{
+  "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide">resourceType</a>" : "ImplementationGuide",
+  "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.id">id</a>" : "2219",
+  "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.url">url</a>" : "http://hl7.org/fhir/ccda/ImplementationGuide/2219",
+  "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.name">name</a>" : "C-CDA on FHIR",
+  "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.status">status</a>" : "draft",
+  "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package">package</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.name">name</a>" : "Profiles in this Implementation Guide",
+      "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource">resource</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "StructureDefinition-CCDA-on-FHIR-US-Realm-Header.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : false,
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "StructureDefinition/CCDA-on-FHIR-US-Realm-Header",
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a>" : "C-CDA on FHIR US Realm Header"
+          }
+        },
+        {
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "StructureDefinition-CCDA-on-FHIR-Consent.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : false,
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "StructureDefinition/CCDA-on-FHIR-Consent",
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a>" : "C-CDA on FHIR Consent"
+          }
+        },
+        {
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "StructureDefinition-CCDA-on-FHIR-Authorization.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : false,
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "StructureDefinition/CCDA-on-FHIR-Authorization",
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a>" : "C-CDA on FHIR Authorization"
+          }
+        },
+        {
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "StructureDefinition-CCDA-on-FHIR-Data-Enterer.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : false,
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "StructureDefinition/CCDA-on-FHIR-Data-Enterer",
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a>" : "C-CDA on FHIR Data Enterer"
+          }
+        },
+        {
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "StructureDefinition-CCDA-on-FHIR-In-Fulfillment-Of-Order.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : false,
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "StructureDefinition/CCDA-on-FHIR-In-Fulfillment-Of-Order",
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a>" : "C-CDA on FHIR In Fulfillment Of Order"
+          }
+        },
+        {
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "StructureDefinition-CCDA-on-FHIR-Informant.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : false,
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "StructureDefinition/CCDA-on-FHIR-Informant",
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a>" : "C-CDA on FHIR Informant"
+          }
+        },
+        {
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "StructureDefinition-CCDA-on-FHIR-Information-Recipient.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : false,
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "StructureDefinition/CCDA-on-FHIR-Information-Recipient",
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a>" : "C-CDA on FHIR Information Recipient"
+          }
+        },
+        {
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "StructureDefinition-CCDA-on-FHIR-Participant.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : false,
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "StructureDefinition/CCDA-on-FHIR-Participant",
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a>" : "C-CDA on FHIR Participant"
+          }
+        },
+        {
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "StructureDefinition-CCDA-on-FHIR-Performer.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : false,
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "StructureDefinition/CCDA-on-FHIR-Performer",
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a>" : "C-CDA on FHIR Performer"
+          }
+        },
+        {
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "StructureDefinition-CCDA-on-FHIR-Care-Plan.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : false,
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "StructureDefinition/CCDA-on-FHIR-Care-Plan",
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a>" : "C-CDA on FHIR Care Plan"
+          }
+        },
+        {
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "StructureDefinition-CCDA-on-FHIR-Consultation-Note.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : false,
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "StructureDefinition/CCDA-on-FHIR-Consultation-Note",
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a>" : "C-CDA on FHIR Consultation Note"
+          }
+        },
+        {
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "StructureDefinition-CCDA-on-FHIR-Continuity-of-Care-Document.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : false,
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "StructureDefinition/CCDA-on-FHIR-Continuity-of-Care-Document",
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a>" : "C-CDA on FHIR Continuity of Care Document"
+          }
+        },
+        {
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "StructureDefinition-CCDA-on-FHIR-Diagnostic-Imaging.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : false,
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "StructureDefinition/CCDA-on-FHIR-Diagnostic-Imaging",
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a>" : "C-CDA on FHIR Diagnostic Imaging"
+          }
+        },
+        {
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "StructureDefinition-CCDA-on-FHIR-Discharge-Summary.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : false,
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "StructureDefinition/CCDA-on-FHIR-Discharge-Summary",
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a>" : "C-CDA on FHIR Discharge Summary"
+          }
+        },
+        {
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "StructureDefinition-CCDA-on-FHIR-History-and-Physical.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : false,
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "StructureDefinition/CCDA-on-FHIR-History-and-Physical",
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a>" : "C-CDA on FHIR History and Physical"
+          }
+        },
+        {
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "StructureDefinition-CCDA-on-FHIR-Operative-Note.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : false,
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "StructureDefinition/CCDA-on-FHIR-Operative-Note",
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a>" : "C-CDA on FHIR Operative Note"
+          }
+        },
+        {
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "StructureDefinition-CCDA-on-FHIR-Procedure-Note.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : false,
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "StructureDefinition/CCDA-on-FHIR-Procedure-Note",
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a>" : "C-CDA on FHIR Procedure Note"
+          }
+        },
+        {
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "StructureDefinition-CCDA-on-FHIR-Progress-Note.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : false,
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "StructureDefinition/CCDA-on-FHIR-Progress-Note",
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a>" : "C-CDA on FHIR Progress Note"
+          }
+        },
+        {
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "StructureDefinition-CCDA-on-FHIR-Referral-Note.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : false,
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "StructureDefinition/CCDA-on-FHIR-Referral-Note",
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a>" : "C-CDA on FHIR Referral Note"
+          }
+        },
+        {
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "StructureDefinition-CCDA-on-FHIR-Transfer-Summary.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : false,
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "StructureDefinition/CCDA-on-FHIR-Transfer-Summary",
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a>" : "C-CDA on FHIR Transfer Summary"
+          }
+        },
+        {
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "ValueSet-2.16.840.1.113883.11.20.9.31.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : false,
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "ValueSet/2.16.840.1.113883.11.20.9.31",
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a>" : "ConsultDocumentType"
+          }
+        },
+        {
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "ValueSet-1.3.6.1.4.1.12009.10.2.5.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : false,
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "ValueSet/1.3.6.1.4.1.12009.10.2.5",
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a>" : "LOINC Imaging Document Codes"
+          }
+        },
+        {
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "ValueSet-2.16.840.1.113883.11.20.9.59.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : false,
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "ValueSet/2.16.840.1.113883.11.20.9.59",
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a>" : "DIRSectionTypeCodes"
+          }
+        },
+        {
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "ValueSet-2.16.840.1.113883.11.20.4.1.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : false,
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "ValueSet/2.16.840.1.113883.11.20.4.1",
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a>" : "DischargeSummaryDocumentTypeCode"
+          }
+        },
+        {
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "ValueSet-2.16.840.1.113883.1.11.20.22.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : false,
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "ValueSet/2.16.840.1.113883.1.11.20.22",
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a>" : "HPDocumentType"
+          }
+        },
+        {
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "ValueSet-2.16.840.1.113883.11.20.1.1.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : false,
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "ValueSet/2.16.840.1.113883.11.20.1.1",
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a>" : "SurgicalOperationNoteDocumentTypeCode"
+          }
+        },
+        {
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "ValueSet-2.16.840.1.113883.11.20.6.1.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : false,
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "ValueSet/2.16.840.1.113883.11.20.6.1",
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a>" : "ProcedureNoteDocumentTypeCodes"
+          }
+        },
+        {
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "ValueSet-2.16.840.1.113883.11.20.8.1.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : false,
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "ValueSet/2.16.840.1.113883.11.20.8.1",
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a>" : "ProgressNoteDocumentTypeCode"
+          }
+        },
+        {
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "ValueSet-2.16.840.1.113883.1.11.20.2.3.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : false,
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "ValueSet/2.16.840.1.113883.1.11.20.2.3",
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a>" : "ReferralDocumentType"
+          }
+        },
+        {
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "ValueSet-v3-ConfidentialityClassification.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : false,
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "ValueSet/v3-ConfidentialityClassification",
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a>" : "v3-ConfidentialityClassification"
+          }
+        },
+        {
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "Composition-CCDA-on-FHIR-Care-Plan-Example.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "Composition/CCDA-on-FHIR-Care-Plan-Example",
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a>" : "C-CDA-on-FHIR-Care-Plan-Example"
+          }
+        },
+        {
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "Composition-CCDA-on-FHIR-Consultation-Note-Example.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "Composition/CCDA-on-FHIR-Consultation-Note-Example",
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a>" : "C-CDA-on-FHIR-Consultation-Note-Example"
+          }
+        },
+        {
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "Composition-CCDA-on-FHIR-Continuity-of-Care-Document-Example.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "Composition/CCDA-on-FHIR-Continuity-of-Care-Document-Example",
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a>" : "C-CDA-on-FHIR-Continuity-of-Care-Document-Example"
+          }
+        },
+        {
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "Composition-CCDA-on-FHIR-Diagnostic-Imaging-Example.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "Composition/CCDA-on-FHIR-Diagnostic-Imaging-Example",
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a>" : "C-CDA-on-FHIR-Diagnostic-Imaging-Example"
+          }
+        },
+        {
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "Composition-CCDA-on-FHIR-Discharge-Summary-Example.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "Composition/CCDA-on-FHIR-Discharge-Summary-Example",
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a>" : "C-CDA-on-FHIR-Discharge-Summary-Example"
+          }
+        },
+        {
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "Composition-CCDA-on-FHIR-History-and-Physical-Example.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "Composition/CCDA-on-FHIR-History-and-Physical-Example",
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a>" : "C-CDA-on-FHIR-History-and-Physical-Example"
+          }
+        },
+        {
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "Composition-CCDA-on-FHIR-Operative-Note-Example.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "Composition/CCDA-on-FHIR-Operative-Note-Example",
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a>" : "C-CDA-on-FHIR-Operative-Note-Example"
+          }
+        },
+        {
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "Composition-CCDA-on-FHIR-Procedure-Note-Example.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "Composition/CCDA-on-FHIR-Procedure-Note-Example",
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a>" : "C-CDA-on-FHIR-Procedure-Note-Example"
+          }
+        },
+        {
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "Composition-CCDA-on-FHIR-Progress-Note-Example.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "Composition/CCDA-on-FHIR-Progress-Note-Example",
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a>" : "C-CDA-on-FHIR-Progress-Note-Example"
+          }
+        },
+        {
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "Composition-CCDA-on-FHIR-Referral-Note-Example.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
+          "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "Composition/CCDA-on-FHIR-Referral-Note-Example",
+            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a>" : "C-CDA-on-FHIR-Referral-Note-Example"
+          }
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.page">page</a>" : {
+    "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.page.source">source</a>" : "http://test.com/IG/View/2219",
+    "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.page.title">title</a>" : "C-CDA on FHIR",
+    "<a href="http://hl7.org/fhir/2017Jan/implementationguide.html#ImplementationGuide.page.kind">kind</a>" : "page"
+  }
+}</pre>
+</body>
+</html>

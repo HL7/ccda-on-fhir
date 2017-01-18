@@ -1,0 +1,187 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/ccda/ValueSet/2.16.840.1.113883.11.20.6.1> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "2.16.840.1.113883.11.20.6.1"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>Value Set Contents</h3><p>This value set contains 17 concepts</p><p>All codes from system <code>http://loinc.org</code></p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a name=\"http---loinc.org-28570-0\"> </a>28570-0</td><td>Provider-unspecified Procedure note</td></tr><tr><td><a name=\"http---loinc.org-11505-5\"> </a>11505-5</td><td>Physician procedure note</td></tr><tr><td><a name=\"http---loinc.org-18744-3\"> </a>18744-3</td><td>Bronchoscopy study</td></tr><tr><td><a name=\"http---loinc.org-18745-0\"> </a>18745-0</td><td>Cardiac catheterization study</td></tr><tr><td><a name=\"http---loinc.org-18746-8\"> </a>18746-8</td><td>Colonoscopy study</td></tr><tr><td><a name=\"http---loinc.org-18751-8\"> </a>18751-8</td><td>Endoscopy study</td></tr><tr><td><a name=\"http---loinc.org-18753-4\"> </a>18753-4</td><td>Flexible sigmoidoscopy study</td></tr><tr><td><a name=\"http---loinc.org-18836-7\"> </a>18836-7</td><td>Cardiac stress study Procedure</td></tr><tr><td><a name=\"http---loinc.org-28577-5\"> </a>28577-5</td><td>Dentist procedure note</td></tr><tr><td><a name=\"http---loinc.org-28625-2\"> </a>28625-2</td><td>Podiatry procedure note</td></tr><tr><td><a name=\"http---loinc.org-29757-2\"> </a>29757-2</td><td>Colposcopy study</td></tr><tr><td><a name=\"http---loinc.org-33721-2\"> </a>33721-2</td><td>Bone marrow Pathology biopsy report</td></tr><tr><td><a name=\"http---loinc.org-34121-4\"> </a>34121-4</td><td>Interventional procedure note</td></tr><tr><td><a name=\"http---loinc.org-34896-1\"> </a>34896-1</td><td>Cardiovascular disease Interventional procedure note</td></tr><tr><td><a name=\"http---loinc.org-34899-5\"> </a>34899-5</td><td>Gastroenterology Interventional procedure note</td></tr><tr><td><a name=\"http---loinc.org-47048-4\"> </a>47048-4</td><td>Diagnostic interventional study report Interventional radiology</td></tr><tr><td><a name=\"http---loinc.org-48807-2\"> </a>48807-2</td><td>Bone marrow aspiration report</td></tr></table></div>"
+  ];
+  fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/ccda/ValueSet/2.16.840.1.113883.11.20.6.1"];
+  fhir:ValueSet.name [ fhir:value "ProcedureNoteDocumentTypeCodes"];
+  fhir:ValueSet.status [ fhir:value "active"];
+  fhir:ValueSet.date [ fhir:value "2017-01-04T23:36:09-05:00"^^xsd:dateTime];
+  fhir:ValueSet.description [ fhir:value "A value set of LOINC document codes for Procedure Notes.\r\n\r\nSpecific URL Pending"];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "28570-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Provider-unspecified Procedure note" ]
+       ], [
+         fhir:index 1;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "11505-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician procedure note" ]
+       ], [
+         fhir:index 2;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "18744-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Bronchoscopy study" ]
+       ], [
+         fhir:index 3;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "18745-0" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cardiac catheterization study" ]
+       ], [
+         fhir:index 4;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "18746-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Colonoscopy study" ]
+       ], [
+         fhir:index 5;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "18751-8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Endoscopy study" ]
+       ], [
+         fhir:index 6;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "18753-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Flexible sigmoidoscopy study" ]
+       ], [
+         fhir:index 7;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "18836-7" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cardiac stress study Procedure" ]
+       ], [
+         fhir:index 8;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "28577-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dentist procedure note" ]
+       ], [
+         fhir:index 9;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "28625-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Podiatry procedure note" ]
+       ], [
+         fhir:index 10;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "29757-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Colposcopy study" ]
+       ], [
+         fhir:index 11;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "33721-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Bone marrow Pathology biopsy report" ]
+       ], [
+         fhir:index 12;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "34121-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Interventional procedure note" ]
+       ], [
+         fhir:index 13;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "34896-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cardiovascular disease Interventional procedure note" ]
+       ], [
+         fhir:index 14;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "34899-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Gastroenterology Interventional procedure note" ]
+       ], [
+         fhir:index 15;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "47048-4" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Diagnostic interventional study report Interventional radiology" ]
+       ], [
+         fhir:index 16;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "48807-2" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Bone marrow aspiration report" ]
+       ]
+     ]
+  ];
+  fhir:ValueSet.expansion [
+     fhir:ValueSet.expansion.identifier [ fhir:value "urn:uuid:7d51a8d0-52cc-428d-8c5a-80f8ef48b6ae" ];
+     fhir:ValueSet.expansion.timestamp [ fhir:value "2016-12-03T17:27:13.8767709-05:00"^^xsd:dateTime ];
+     fhir:ValueSet.expansion.contains [
+       fhir:index 0;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "28570-0" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Provider-unspecified Procedure note" ]
+     ], [
+       fhir:index 1;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "11505-5" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Physician procedure note" ]
+     ], [
+       fhir:index 2;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "18744-3" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Bronchoscopy study" ]
+     ], [
+       fhir:index 3;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "18745-0" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Cardiac catheterization study" ]
+     ], [
+       fhir:index 4;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "18746-8" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Colonoscopy study" ]
+     ], [
+       fhir:index 5;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "18751-8" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Endoscopy study" ]
+     ], [
+       fhir:index 6;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "18753-4" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Flexible sigmoidoscopy study" ]
+     ], [
+       fhir:index 7;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "18836-7" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Cardiac stress study Procedure" ]
+     ], [
+       fhir:index 8;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "28577-5" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Dentist procedure note" ]
+     ], [
+       fhir:index 9;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "28625-2" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Podiatry procedure note" ]
+     ], [
+       fhir:index 10;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "29757-2" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Colposcopy study" ]
+     ], [
+       fhir:index 11;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "33721-2" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Bone marrow Pathology biopsy report" ]
+     ], [
+       fhir:index 12;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "34121-4" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Interventional procedure note" ]
+     ], [
+       fhir:index 13;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "34896-1" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Cardiovascular disease Interventional procedure note" ]
+     ], [
+       fhir:index 14;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "34899-5" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Gastroenterology Interventional procedure note" ]
+     ], [
+       fhir:index 15;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "47048-4" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Diagnostic interventional study report Interventional radiology" ]
+     ], [
+       fhir:index 16;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "48807-2" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Bone marrow aspiration report" ]
+     ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+

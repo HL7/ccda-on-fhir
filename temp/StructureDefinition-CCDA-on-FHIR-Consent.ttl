@@ -1,0 +1,2752 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Consent> a fhir:StructureDefinition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "CCDA-on-FHIR-Consent"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>url</b>: <a href=\"http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Consent\">http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Consent</a></p><p><b>name</b>: C-CDA on FHIR Consent</p><p><b>status</b>: DRAFT</p><p><b>date</b>: Jan 4, 2017 11:36:09 PM</p><p><b>publisher</b>: Lantana Consulting Group</p><p><b>contact</b>: </p><p><b>description</b>: This profile represents information about the patients consent.\n\nThe type of consent is conveyed in type. Consents in the header have been finalized and should be on file. This specification does not address how 'Privacy Consent' is represented, but does not preclude the inclusion of Privacy Consent.\n\nThe authorization consent is used for referring to consents that are documented elsewhere in the EHR or medical record for a health condition and/or treatment that is described in the document.</p><p><b>url</b>: <a href=\"http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Consent\">http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Consent</a></p><p><b>name</b>: C-CDA on FHIR Consent</p><p><b>status</b>: DRAFT</p><p><b>publisher</b>: Lantana Consulting Group</p><p><b>contact</b>: </p><p><b>date</b>: Jan 4, 2017 11:36:09 PM</p><p><b>description</b>: This profile represents information about the patients consent.\n\nThe type of consent is conveyed in type. Consents in the header have been finalized and should be on file. This specification does not address how 'Privacy Consent' is represented, but does not preclude the inclusion of Privacy Consent.\n\nThe authorization consent is used for referring to consents that are documented elsewhere in the EHR or medical record for a health condition and/or treatment that is described in the document.</p><blockquote><p><b>mapping</b></p><p><b>identity</b>: rim</p><p><b>uri</b>: <a href=\"http://hl7.org/v3\">http://hl7.org/v3</a></p><p><b>name</b>: RIM Mapping</p></blockquote><blockquote><p><b>mapping</b></p><p><b>identity</b>: w5</p><p><b>uri</b>: <a href=\"http://hl7.org/fhir/w5\">http://hl7.org/fhir/w5</a></p><p><b>name</b>: W5 Mapping</p></blockquote><p><b>kind</b>: RESOURCE</p><p><b>abstract</b>: false</p><p><b>contextType</b>: RESOURCE</p><p><b>context</b>: Contract</p><p><b>type</b>: Contract</p><p><b>baseDefinition</b>: <a href=\"http://hl7.org/fhir/StructureDefinition/Contract\">http://hl7.org/fhir/StructureDefinition/Contract</a></p><p><b>derivation</b>: CONSTRAINT</p><h3>Snapshots</h3><table class=\"grid\"><tr><td>-</td><td><b>Element</b></td></tr><tr><td>*</td><td>todo-bundle</td></tr></table><h3>Differentials</h3><table class=\"grid\"><tr><td>-</td><td><b>Element</b></td></tr><tr><td>*</td><td>todo-bundle</td></tr></table></div>"
+  ];
+  fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Consent"];
+  fhir:StructureDefinition.name [ fhir:value "C-CDA on FHIR Consent"];
+  fhir:StructureDefinition.status [ fhir:value "draft"];
+  fhir:StructureDefinition.publisher [ fhir:value "Lantana Consulting Group"];
+  fhir:StructureDefinition.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "Sarah Gaunt" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "phone" ];
+       fhir:ContactPoint.value [ fhir:value "+6 141-029-2506" ];
+       fhir:ContactPoint.use [ fhir:value "work" ]
+     ], [
+       fhir:index 1;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "sarah.gaunt@lantanagroup.com" ];
+       fhir:ContactPoint.use [ fhir:value "work" ]
+     ]
+  ];
+  fhir:StructureDefinition.date [ fhir:value "2017-01-04T23:36:09-05:00"^^xsd:dateTime];
+  fhir:StructureDefinition.description [ fhir:value "This profile represents information about the patients consent.\n\nThe type of consent is conveyed in type. Consents in the header have been finalized and should be on file. This specification does not address how 'Privacy Consent' is represented, but does not preclude the inclusion of Privacy Consent.\n\nThe authorization consent is used for referring to consents that are documented elsewhere in the EHR or medical record for a health condition and/or treatment that is described in the document."];
+  fhir:StructureDefinition.mapping [
+     fhir:index 0;
+     fhir:StructureDefinition.mapping.identity [ fhir:value "rim" ];
+     fhir:StructureDefinition.mapping.uri [ fhir:value "http://hl7.org/v3" ];
+     fhir:StructureDefinition.mapping.name [ fhir:value "RIM Mapping" ]
+  ], [
+     fhir:index 1;
+     fhir:StructureDefinition.mapping.identity [ fhir:value "w5" ];
+     fhir:StructureDefinition.mapping.uri [ fhir:value "http://hl7.org/fhir/w5" ];
+     fhir:StructureDefinition.mapping.name [ fhir:value "W5 Mapping" ]
+  ];
+  fhir:StructureDefinition.kind [ fhir:value "resource"];
+  fhir:StructureDefinition.abstract [ fhir:value "false"^^xsd:boolean];
+  fhir:StructureDefinition.contextType [ fhir:value "resource"];
+  fhir:StructureDefinition.context [
+     fhir:value "Contract";
+     fhir:index 0
+  ];
+  fhir:StructureDefinition.type [ fhir:value "Contract"];
+  fhir:StructureDefinition.baseDefinition [ fhir:value "http://hl7.org/fhir/StructureDefinition/Contract"];
+  fhir:StructureDefinition.derivation [ fhir:value "constraint"];
+  fhir:StructureDefinition.snapshot [
+     fhir:StructureDefinition.snapshot.element [
+       fhir:index 0;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract" ];
+       fhir:ElementDefinition.short [ fhir:value "Contract" ];
+       fhir:ElementDefinition.definition [ fhir:value "A formal agreement between parties regarding the conduct of business, exchange of information or other matters." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "dom-2" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "If the resource is contained in another resource, it SHALL NOT contain nested Resources" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "contained.contained.empty()" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "not(parent::f:contained and f:contained)" ];
+         fhir:ElementDefinition.constraint.source [ fhir:value "DomainResource" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.constraint.key [ fhir:value "dom-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "If the resource is contained in another resource, it SHALL NOT contain any narrative" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "contained.text.empty()" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "not(parent::f:contained and f:text)" ];
+         fhir:ElementDefinition.constraint.source [ fhir:value "DomainResource" ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.constraint.key [ fhir:value "dom-4" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "not(exists(f:contained/*/f:meta/f:versionId)) and not(exists(f:contained/*/f:meta/f:lastUpdated))" ];
+         fhir:ElementDefinition.constraint.source [ fhir:value "DomainResource" ]
+       ], [
+         fhir:index 3;
+         fhir:ElementDefinition.constraint.key [ fhir:value "dom-3" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "contained.where(('#'+id in %resource.descendants().reference).not()).empty()" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "not(exists(for $id in f:contained/*/@id return $id[not(ancestor::f:contained/parent::*/descendant::f:reference/@value=concat('#', $id))]))" ];
+         fhir:ElementDefinition.constraint.source [ fhir:value "DomainResource" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "Entity. Role, or Act" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "FinancialContract" ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "w5" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "financial.other" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.id" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.id" ];
+       fhir:ElementDefinition.short [ fhir:value "Logical id of this artifact" ];
+       fhir:ElementDefinition.definition [ fhir:value "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes." ];
+       fhir:ElementDefinition.comments [ fhir:value "The only time that a resource does not have an id is when it is being submitted to the server using a create operation." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Resource.id" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "id" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 2;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.meta" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.meta" ];
+       fhir:ElementDefinition.short [ fhir:value "Metadata about the resource" ];
+       fhir:ElementDefinition.definition [ fhir:value "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Resource.meta" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Meta" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.implicitRules" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.implicitRules" ];
+       fhir:ElementDefinition.short [ fhir:value "A set of rules under which this content was created" ];
+       fhir:ElementDefinition.definition [ fhir:value "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content." ];
+       fhir:ElementDefinition.comments [ fhir:value "Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Resource.implicitRules" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "uri" ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 4;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.language" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.language" ];
+       fhir:ElementDefinition.short [ fhir:value "Language of the resource content" ];
+       fhir:ElementDefinition.definition [ fhir:value "The base language in which the resource is written." ];
+       fhir:ElementDefinition.comments [ fhir:value "Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource  Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Resource.language" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "code" ]
+       ];
+       fhir:ElementDefinition.binding [
+         fhir:extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet" ];
+           fhir:Extension.valueReference [
+             fhir:link <http://hl7.org/fhir/ValueSet/all-languages>;
+             fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/all-languages" ]
+           ]
+         ];
+         fhir:ElementDefinition.binding.strength [ fhir:value "extensible" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "A human language." ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/languages>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/languages" ]
+         ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.text" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.text" ];
+       fhir:ElementDefinition.short [ fhir:value "Text summary of the resource, for human interpretation" ];
+       fhir:ElementDefinition.definition [ fhir:value "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety." ];
+       fhir:ElementDefinition.comments [ fhir:value "Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs=1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded in formation is added later." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "narrative";
+         fhir:index 0
+       ], [
+         fhir:value "html";
+         fhir:index 1
+       ], [
+         fhir:value "xhtml";
+         fhir:index 2
+       ], [
+         fhir:value "display";
+         fhir:index 3
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DomainResource.text" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Narrative" ]
+       ];
+       fhir:ElementDefinition.condition [
+         fhir:value "dom-1";
+         fhir:index 0
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "Act.text?" ]
+       ]
+     ], [
+       fhir:index 6;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.contained" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.contained" ];
+       fhir:ElementDefinition.short [ fhir:value "Contained, inline Resources" ];
+       fhir:ElementDefinition.definition [ fhir:value "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope." ];
+       fhir:ElementDefinition.comments [ fhir:value "This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "inline resources";
+         fhir:index 0
+       ], [
+         fhir:value "anonymous resources";
+         fhir:index 1
+       ], [
+         fhir:value "contained resources";
+         fhir:index 2
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DomainResource.contained" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Resource" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
+       ]
+     ], [
+       fhir:index 7;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.extension" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.extension" ];
+       fhir:ElementDefinition.short [ fhir:value "Additional Content defined by implementations" ];
+       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." ];
+       fhir:ElementDefinition.comments [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "extensions";
+         fhir:index 0
+       ], [
+         fhir:value "user content";
+         fhir:index 1
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DomainResource.extension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
+       ]
+     ], [
+       fhir:index 8;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.modifierExtension" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.modifierExtension" ];
+       fhir:ElementDefinition.short [ fhir:value "Extensions that cannot be ignored" ];
+       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions." ];
+       fhir:ElementDefinition.comments [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "extensions";
+         fhir:index 0
+       ], [
+         fhir:value "user content";
+         fhir:index 1
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DomainResource.modifierExtension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
+       ]
+     ], [
+       fhir:index 9;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.identifier" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.identifier" ];
+       fhir:ElementDefinition.short [ fhir:value "identifier" ];
+       fhir:ElementDefinition.definition [ fhir:value "MAY contain zero or one [0..1] identifier (CONF:2219-2007)." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.identifier" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Identifier" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "FinancialContract id" ]
+       ]
+     ], [
+       fhir:index 10;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.status" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.status" ];
+       fhir:ElementDefinition.short [ fhir:value "active | cancelled | draft | entered-in-error" ];
+       fhir:ElementDefinition.definition [ fhir:value "The status of the resource instance." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.status" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "code" ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "A code specifying the state of the resource instance." ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/fm-status>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/fm-status" ]
+         ]
+       ]
+     ], [
+       fhir:index 11;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.issued" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.issued" ];
+       fhir:ElementDefinition.short [ fhir:value "When this Contract was issued" ];
+       fhir:ElementDefinition.definition [ fhir:value "When this  Contract was issued." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.issued" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "dateTime" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "FinancialContract effectiveTime" ]
+       ]
+     ], [
+       fhir:index 12;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.applies" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.applies" ];
+       fhir:ElementDefinition.short [ fhir:value "Effective time" ];
+       fhir:ElementDefinition.definition [ fhir:value "Relevant time or time-period when this Contract is applicable." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.applies" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Period" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "FinancialContract activityTime" ]
+       ]
+     ], [
+       fhir:index 13;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.subject" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.subject" ];
+       fhir:ElementDefinition.short [ fhir:value "Contract Target Entity" ];
+       fhir:ElementDefinition.definition [ fhir:value "The target entity impacted by or of interest to parties to the agreement." ];
+       fhir:ElementDefinition.comments [ fhir:value "The Contract.subject is an entity that has some role with respect to the Contract.topic and Contract.topic.term, which is of focal interest to the parties to the contract and likely impacted in a significant way by the Contract.action/Contract.action.reason and the Contract.term.action/Contract.action.reason.  In many cases, the Contract.subject is a Contract.signer if the subject is an adult; has a legal interest in the contract; and incompetent to participate in the contract agreement." ];
+       fhir:ElementDefinition.requirements [ fhir:value "The Contract.subject is an entity that has some role with respect to the Contract.topic and Contract.topic.term, which is of focal interest to the parties to the contract and likely impacted in a significant way by the Contract.action/Contract.action.reason and the Contract.term.action/Contract.action.reason.  In many cases, the Contract.subject is a Contract.signer if the subject is an adult; has a legal interest in the contract; and incompetent to participate in the contract agreement." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "Patient";
+         fhir:index 0
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.subject" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Resource" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "Role" ]
+       ]
+     ], [
+       fhir:index 14;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.topic" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.topic" ];
+       fhir:ElementDefinition.short [ fhir:value "Context of the Contract" ];
+       fhir:ElementDefinition.definition [ fhir:value "The matter of concern in the context of this agreement." ];
+       fhir:ElementDefinition.comments [ fhir:value "The Contract.topic may be an application for or offer of a policy or service (e.g., uri to a consent directive form or a health insurance policy), which becomes the Contract once accepted by both the grantor and grantee.  The Contract Resource may function simply as the computable representation of the executed contract, which may be the attached to the Contract Resource as the “binding” or as the “friendly” electronic form.  For example, a Contract Resource may be automatically populated with the values expressed in a related QuestionnaireResponse.  However, the Contract Resource may be considered the legally binding contract if it is the only “executed” form of this contract, and includes the signatures as *The Contract Resource may function as the computable representation of an application or offer in a pre-executed Contract if the grantor has not entered any values.  In this case, it is populated with values in a “legal” form of the application or offer or by the values in an associated Questionnaire.  If the grantor has filled in the legal form or the associated Questionnaire Response, then these values are used to populate a pre-executed Contract Resource. If the Contract.topic is considered an application or offer, then the policy is often required to be attached as the “legal” basis for the application to ensure “informed consent” to the contract, and that any discrepancy between the application and the policy are interpreted against the policy.  Implementers should check organizational and jurisdictional policies to determine the relationship among multiple representations of a contract pre- and post-execution." ];
+       fhir:ElementDefinition.requirements [ fhir:value "In the context of a contract, the topic is the matter under consideration in regards to which specific rights, privileges, obligations, restrictions, and prohibitions are binding on any grantor and grantee parties upon the execution of the contract.  Given the wide range of contract topics, implementers need to be cognizant of the business use case for which they are designing a FHIR Contract, and narrowly specify the topic being represented with respect to the Contract.type and any specializing Contract.subtype.  The same topic, e.g., an asset such as a good or service, such as a real property, medical supply, insurance, information, a procedure or employment, or a manner of conduct, such adherence to a privacy, trust, or security policy, may be the topic of multiple types of contracts.  One way to determine the Contract.topic is to answer the question: “What is the object of negotiation?” Answer: The Contract.topic, which may be described with more detail in the [0..*]Contract.valuedItem @ [0..1] Contract.valuedItem.entity[x] Definition: Specific type of Contract Valued Item that may be priced. CodeableConcept|Reference(Any) Contract.topic is “the what” that a grantor is exchanging with a grantee in return for some benefit.  Contract.topic is “the what” to which any Contract.action is being applied for any stipulated Contract.action.reason.  AContract.topic is “the what” governed by the execution of the contract to which any party’s rights, privileges, obligations, restrictions, and prohibitions apply." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.topic" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Resource" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "Role" ]
+       ]
+     ], [
+       fhir:index 15;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.authority" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.authority" ];
+       fhir:ElementDefinition.short [ fhir:value "Authority under which this Contract has standing" ];
+       fhir:ElementDefinition.definition [ fhir:value "A formally or informally recognized grouping of people, principals, organizations, or jurisdictions formed for the purpose of achieving some form of collective action such as the promulgation, administration and enforcement of contracts and policies." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.authority" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Organization" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "Role Scoper" ]
+       ]
+     ], [
+       fhir:index 16;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.domain" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.domain" ];
+       fhir:ElementDefinition.short [ fhir:value "Domain in which this Contract applies" ];
+       fhir:ElementDefinition.definition [ fhir:value "Recognized governance framework or system operating with a circumscribed scope in accordance with specified principles, policies, processes or procedures for managing rights, actions, or behaviors of parties or principals relative to resources." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "scope of governance jurisdiction";
+         fhir:index 0
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.domain" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Location" ]
+       ]
+     ], [
+       fhir:index 17;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.type" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.type" ];
+       fhir:ElementDefinition.label [ fhir:value "Consent" ];
+       fhir:ElementDefinition.short [ fhir:value "Consent" ];
+       fhir:ElementDefinition.definition [ fhir:value "SHALL contain exactly one [1..1] type=\"CONS\" (CodeSystem: HL7ActClass urn:oid:2.16.840.1.113883.5.6) (CONF:2219-2008)." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.type" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
+       ];
+       fhir:ElementDefinition.patternCodeableConcept [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "urn:oid:2.16.840.1.113883.5.6" ];
+           fhir:Coding.code [ fhir:value "CONS" ]
+         ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "List of overall contract codes." ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/contract-type>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/contract-type" ]
+         ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "CNTRCT" ]
+       ]
+     ], [
+       fhir:index 18;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.subType" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.subType" ];
+       fhir:ElementDefinition.label [ fhir:value "Type of consent" ];
+       fhir:ElementDefinition.short [ fhir:value "Type of consent" ];
+       fhir:ElementDefinition.definition [ fhir:value "MAY contain zero or one [0..1] subType (CONF:2219-2009)." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.subType" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "Detailed codes within the above." ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/contract-subtype>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/contract-subtype" ]
+         ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "e.g. RECOV" ]
+       ]
+     ], [
+       fhir:index 19;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.action" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.action" ];
+       fhir:ElementDefinition.short [ fhir:value "Contract Action" ];
+       fhir:ElementDefinition.definition [ fhir:value "Action stipulated by this Contract." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.action" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
+       ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "Detailed codes for the contract action." ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/contract-action>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/contract-action" ]
+         ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "e.g. JURISPOL" ]
+       ]
+     ], [
+       fhir:index 20;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.actionReason" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.actionReason" ];
+       fhir:ElementDefinition.short [ fhir:value "Contract Action Reason" ];
+       fhir:ElementDefinition.definition [ fhir:value "Reason for action stipulated by this Contract." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.actionReason" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
+       ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "Detailed codes for the contract action reason." ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/v3-PurposeOfUse>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/v3-PurposeOfUse" ]
+         ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "e.g. QUALIMP" ]
+       ]
+     ], [
+       fhir:index 21;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.agent" ];
+       fhir:extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name" ];
+         fhir:Extension.valueString [ fhir:value "Agent" ]
+       ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.agent" ];
+       fhir:ElementDefinition.short [ fhir:value "Contract Agent" ];
+       fhir:ElementDefinition.definition [ fhir:value "An actor taking a role in an activity for which it can be assigned some degree of responsibility for the activity taking place." ];
+       fhir:ElementDefinition.comments [ fhir:value "Several agents may be associated (i.e. has some responsibility for an activity) with an activity and vice-versa. For example, in cases of actions initiated by one user for other users, or in events that involve more than one user, hardware device, software, or system process. However, only one user may be the initiator/requestor for the event." ];
+       fhir:ElementDefinition.requirements [ fhir:value "An agent can be a person, an organization, software, device, or other entities that may be ascribed responsibility." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.agent" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "BackboneElement" ]
+       ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "children().count() > id.count()" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [ fhir:value "Element" ]
+       ]
+     ], [
+       fhir:index 22;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.agent.id" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.agent.id" ];
+       fhir:ElementDefinition.representation [
+         fhir:value "xmlAttr";
+         fhir:index 0
+       ];
+       fhir:ElementDefinition.short [ fhir:value "xml:id (or equivalent in JSON)" ];
+       fhir:ElementDefinition.definition [ fhir:value "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.id" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
+       ]
+     ], [
+       fhir:index 23;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.agent.extension" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.agent.extension" ];
+       fhir:ElementDefinition.short [ fhir:value "Additional Content defined by implementations" ];
+       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." ];
+       fhir:ElementDefinition.comments [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "extensions";
+         fhir:index 0
+       ], [
+         fhir:value "user content";
+         fhir:index 1
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.extension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
+       ]
+     ], [
+       fhir:index 24;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.agent.modifierExtension" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.agent.modifierExtension" ];
+       fhir:ElementDefinition.short [ fhir:value "Extensions that cannot be ignored" ];
+       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions." ];
+       fhir:ElementDefinition.comments [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "extensions";
+         fhir:index 0
+       ], [
+         fhir:value "user content";
+         fhir:index 1
+       ], [
+         fhir:value "modifiers";
+         fhir:index 2
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "BackboneElement.modifierExtension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
+       ]
+     ], [
+       fhir:index 25;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.agent.actor" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.agent.actor" ];
+       fhir:ElementDefinition.short [ fhir:value "Contract Agent Type" ];
+       fhir:ElementDefinition.definition [ fhir:value "Who or what parties are assigned roles in this Contract." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.agent.actor" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Contract" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Device" ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Group" ]
+       ], [
+         fhir:index 3;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Location" ]
+       ], [
+         fhir:index 4;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Organization" ]
+       ], [
+         fhir:index 5;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Patient" ]
+       ], [
+         fhir:index 6;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Practitioner" ]
+       ], [
+         fhir:index 7;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/StructureDefinition/RelatedPerson" ]
+       ], [
+         fhir:index 8;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Substance" ]
+       ]
+     ], [
+       fhir:index 26;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.agent.role" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.agent.role" ];
+       fhir:ElementDefinition.short [ fhir:value "Contract  Agent Role" ];
+       fhir:ElementDefinition.definition [ fhir:value "Role type of agent assigned roles in this Contract." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.agent.role" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
+       ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "Detailed codes for the contract actor role." ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/contract-actorrole>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/contract-actorrole" ]
+         ]
+       ]
+     ], [
+       fhir:index 27;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.signer" ];
+       fhir:extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name" ];
+         fhir:Extension.valueString [ fhir:value "Signatory" ]
+       ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.signer" ];
+       fhir:ElementDefinition.short [ fhir:value "Contract Signer" ];
+       fhir:ElementDefinition.definition [ fhir:value "Parties with legal standing in the Contract, including the principal parties, the grantor(s) and grantee(s), which are any person or organization bound by the contract, and any ancillary parties, which facilitate the execution of the contract such as a notary or witness." ];
+       fhir:ElementDefinition.comments [ fhir:value "Signers who are principal parties to the contract are bound by the Contract.activity related to the Contract.topic, and the Contract.term(s), which either extend or restrict the overall action on the topic by, for example, stipulating specific policies or obligations constraining actions, action reason, or agents with respect to some or all of the topic. For example, specifying how policies or obligations shall constrain actions and action reasons permitted or denied on all or a subset of the Contract.topic (e.g., all or a portion of property being transferred by the contract), agents (e.g., who can resell, assign interests, or alter the property being transferred by the contract), actions, and action reasons; or with respect to Contract.terms, stipulating, extending, or limiting the Contract.period of applicability or valuation of items under consideration." ];
+       fhir:ElementDefinition.requirements [ fhir:value "The Contract.signer applies a signature to the Contract.binding referenced resource, which is the documentation that is the legal \"source of truth\". The Contract.signer may delegate, such as a legally recognized personal representative, or have a delegate assigned e.g., by a court of law, to actually sign the Contract, such as a trustee in the case of incompetence." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.signer" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "BackboneElement" ]
+       ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "children().count() > id.count()" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [ fhir:value "Element" ]
+       ]
+     ], [
+       fhir:index 28;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.signer.id" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.signer.id" ];
+       fhir:ElementDefinition.representation [
+         fhir:value "xmlAttr";
+         fhir:index 0
+       ];
+       fhir:ElementDefinition.short [ fhir:value "xml:id (or equivalent in JSON)" ];
+       fhir:ElementDefinition.definition [ fhir:value "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.id" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
+       ]
+     ], [
+       fhir:index 29;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.signer.extension" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.signer.extension" ];
+       fhir:ElementDefinition.short [ fhir:value "Additional Content defined by implementations" ];
+       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." ];
+       fhir:ElementDefinition.comments [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "extensions";
+         fhir:index 0
+       ], [
+         fhir:value "user content";
+         fhir:index 1
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.extension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
+       ]
+     ], [
+       fhir:index 30;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.signer.modifierExtension" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.signer.modifierExtension" ];
+       fhir:ElementDefinition.short [ fhir:value "Extensions that cannot be ignored" ];
+       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions." ];
+       fhir:ElementDefinition.comments [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "extensions";
+         fhir:index 0
+       ], [
+         fhir:value "user content";
+         fhir:index 1
+       ], [
+         fhir:value "modifiers";
+         fhir:index 2
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "BackboneElement.modifierExtension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
+       ]
+     ], [
+       fhir:index 31;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.signer.type" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.signer.type" ];
+       fhir:ElementDefinition.short [ fhir:value "Contract Signer Type" ];
+       fhir:ElementDefinition.definition [ fhir:value "Role of this Contract signer, e.g. notary, grantee." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.signer.type" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "List of parties who may be signing." ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/contract-signer-type>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/contract-signer-type" ]
+         ]
+       ]
+     ], [
+       fhir:index 32;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.signer.party" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.signer.party" ];
+       fhir:ElementDefinition.short [ fhir:value "Contract Signatory Party" ];
+       fhir:ElementDefinition.definition [ fhir:value "Party which is a signator to this Contract." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.signer.party" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Organization" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Patient" ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Practitioner" ]
+       ], [
+         fhir:index 3;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/StructureDefinition/RelatedPerson" ]
+       ]
+     ], [
+       fhir:index 33;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.signer.signature" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.signer.signature" ];
+       fhir:ElementDefinition.short [ fhir:value "Contract Documentation Signature" ];
+       fhir:ElementDefinition.definition [ fhir:value "Legally binding Contract DSIG signature contents in Base64." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.signer.signature" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Signature" ]
+       ]
+     ], [
+       fhir:index 34;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.valuedItem" ];
+       fhir:extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name" ];
+         fhir:Extension.valueString [ fhir:value "ValuedItem" ]
+       ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.valuedItem" ];
+       fhir:ElementDefinition.short [ fhir:value "Contract Valued Item" ];
+       fhir:ElementDefinition.definition [ fhir:value "Contract Valued Item List." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.valuedItem" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "BackboneElement" ]
+       ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "children().count() > id.count()" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [ fhir:value "Element" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "COCT_RM440000UV09 ValuedItem classCode INVE" ]
+       ]
+     ], [
+       fhir:index 35;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.valuedItem.id" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.valuedItem.id" ];
+       fhir:ElementDefinition.representation [
+         fhir:value "xmlAttr";
+         fhir:index 0
+       ];
+       fhir:ElementDefinition.short [ fhir:value "xml:id (or equivalent in JSON)" ];
+       fhir:ElementDefinition.definition [ fhir:value "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.id" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
+       ]
+     ], [
+       fhir:index 36;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.valuedItem.extension" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.valuedItem.extension" ];
+       fhir:ElementDefinition.short [ fhir:value "Additional Content defined by implementations" ];
+       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." ];
+       fhir:ElementDefinition.comments [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "extensions";
+         fhir:index 0
+       ], [
+         fhir:value "user content";
+         fhir:index 1
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.extension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
+       ]
+     ], [
+       fhir:index 37;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.valuedItem.modifierExtension" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.valuedItem.modifierExtension" ];
+       fhir:ElementDefinition.short [ fhir:value "Extensions that cannot be ignored" ];
+       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions." ];
+       fhir:ElementDefinition.comments [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "extensions";
+         fhir:index 0
+       ], [
+         fhir:value "user content";
+         fhir:index 1
+       ], [
+         fhir:value "modifiers";
+         fhir:index 2
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "BackboneElement.modifierExtension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
+       ]
+     ], [
+       fhir:index 38;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.valuedItem.entity[x]" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.valuedItem.entity[x]" ];
+       fhir:ElementDefinition.short [ fhir:value "Contract Valued Item Type" ];
+       fhir:ElementDefinition.definition [ fhir:value "Specific type of Contract Valued Item that may be priced." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.valuedItem.entity[x]" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Resource" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "COCT_RM440000UV09 ValuedItem code" ]
+       ]
+     ], [
+       fhir:index 39;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.valuedItem.identifier" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.valuedItem.identifier" ];
+       fhir:ElementDefinition.short [ fhir:value "Contract Valued Item Identifier" ];
+       fhir:ElementDefinition.definition [ fhir:value "Identifies a Contract Valued Item instance." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.valuedItem.identifier" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Identifier" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "COCT_RM440000UV09 ValuedItem id" ]
+       ]
+     ], [
+       fhir:index 40;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.valuedItem.effectiveTime" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.valuedItem.effectiveTime" ];
+       fhir:ElementDefinition.short [ fhir:value "Contract Valued Item Effective Tiem" ];
+       fhir:ElementDefinition.definition [ fhir:value "Indicates the time during which this Contract ValuedItem information is effective." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.valuedItem.effectiveTime" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "dateTime" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "COCT_RM440000UV09 ValuedItem                effectiveTime" ]
+       ]
+     ], [
+       fhir:index 41;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.valuedItem.quantity" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.valuedItem.quantity" ];
+       fhir:ElementDefinition.short [ fhir:value "Count of Contract Valued Items" ];
+       fhir:ElementDefinition.definition [ fhir:value "Specifies the units by which the Contract Valued Item is measured or counted, and quantifies the countable or measurable Contract Valued Item instances." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.valuedItem.quantity" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Quantity" ];
+         fhir:ElementDefinition.type.profile [ fhir:value "http://hl7.org/fhir/StructureDefinition/SimpleQuantity" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "COCT_RM440000UV09 ValuedItem unitQuantity" ]
+       ]
+     ], [
+       fhir:index 42;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.valuedItem.unitPrice" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.valuedItem.unitPrice" ];
+       fhir:ElementDefinition.short [ fhir:value "Contract Valued Item fee, charge, or cost" ];
+       fhir:ElementDefinition.definition [ fhir:value "A Contract Valued Item unit valuation measure." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.valuedItem.unitPrice" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Money" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "COCT_RM440000UV09 ValuedItem unitPriceAmt" ]
+       ]
+     ], [
+       fhir:index 43;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.valuedItem.factor" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.valuedItem.factor" ];
+       fhir:ElementDefinition.short [ fhir:value "Contract Valued Item Price Scaling Factor" ];
+       fhir:ElementDefinition.definition [ fhir:value "A real number that represents a multiplier used in determining the overall value of the Contract Valued Item delivered. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.valuedItem.factor" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "decimal" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "COCT_RM440000UV09 ValuedItem factorNumber" ]
+       ]
+     ], [
+       fhir:index 44;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.valuedItem.points" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.valuedItem.points" ];
+       fhir:ElementDefinition.short [ fhir:value "Contract Valued Item Difficulty Scaling Factor" ];
+       fhir:ElementDefinition.definition [ fhir:value "An amount that expresses the weighting (based on difficulty, cost and/or resource intensiveness) associated with the Contract Valued Item delivered. The concept of Points allows for assignment of point values for a Contract Valued Item, such that a monetary amount can be assigned to each point." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.valuedItem.points" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "decimal" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "COCT_RM440000UV09 ValuedItem pointNumber" ]
+       ]
+     ], [
+       fhir:index 45;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.valuedItem.net" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.valuedItem.net" ];
+       fhir:ElementDefinition.short [ fhir:value "Total Contract Valued Item Value" ];
+       fhir:ElementDefinition.definition [ fhir:value "Expresses the product of the Contract Valued Item unitQuantity and the unitPriceAmt. For example, the formula: unit Quantity * unit Price (Cost per Point) * factor Number  * points = net Amount. Quantity, factor and points are assumed to be 1 if not supplied." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.valuedItem.net" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Money" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "COCT_RM440000UV09 ValuedItem netAmt" ]
+       ]
+     ], [
+       fhir:index 46;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.term" ];
+       fhir:extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name" ];
+         fhir:Extension.valueString [ fhir:value "Term" ]
+       ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.term" ];
+       fhir:ElementDefinition.short [ fhir:value "Contract Term List" ];
+       fhir:ElementDefinition.definition [ fhir:value "One or more Contract Provisions, which may be related and conveyed as a group, and may contain nested groups." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.term" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "BackboneElement" ]
+       ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "children().count() > id.count()" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [ fhir:value "Element" ]
+       ]
+     ], [
+       fhir:index 47;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.term.id" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.term.id" ];
+       fhir:ElementDefinition.representation [
+         fhir:value "xmlAttr";
+         fhir:index 0
+       ];
+       fhir:ElementDefinition.short [ fhir:value "xml:id (or equivalent in JSON)" ];
+       fhir:ElementDefinition.definition [ fhir:value "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.id" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
+       ]
+     ], [
+       fhir:index 48;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.term.extension" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.term.extension" ];
+       fhir:ElementDefinition.short [ fhir:value "Additional Content defined by implementations" ];
+       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." ];
+       fhir:ElementDefinition.comments [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "extensions";
+         fhir:index 0
+       ], [
+         fhir:value "user content";
+         fhir:index 1
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.extension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
+       ]
+     ], [
+       fhir:index 49;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.term.modifierExtension" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.term.modifierExtension" ];
+       fhir:ElementDefinition.short [ fhir:value "Extensions that cannot be ignored" ];
+       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions." ];
+       fhir:ElementDefinition.comments [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "extensions";
+         fhir:index 0
+       ], [
+         fhir:value "user content";
+         fhir:index 1
+       ], [
+         fhir:value "modifiers";
+         fhir:index 2
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "BackboneElement.modifierExtension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
+       ]
+     ], [
+       fhir:index 50;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.term.identifier" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.term.identifier" ];
+       fhir:ElementDefinition.short [ fhir:value "Contract Term identifier" ];
+       fhir:ElementDefinition.definition [ fhir:value "Unique identifier for this particular Contract Provision." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.term.identifier" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Identifier" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 51;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.term.issued" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.term.issued" ];
+       fhir:ElementDefinition.short [ fhir:value "Contract Term Issue Date Time" ];
+       fhir:ElementDefinition.definition [ fhir:value "When this Contract Provision was issued." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.term.issued" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "dateTime" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 52;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.term.applies" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.term.applies" ];
+       fhir:ElementDefinition.short [ fhir:value "Contract Term Effective Time" ];
+       fhir:ElementDefinition.definition [ fhir:value "Relevant time or time-period when this Contract Provision is applicable." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.term.applies" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Period" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 53;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.term.type" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.term.type" ];
+       fhir:ElementDefinition.short [ fhir:value "Contract Term Type" ];
+       fhir:ElementDefinition.definition [ fhir:value "Type of Contract Provision such as specific requirements, purposes for actions, obligations, prohibitions, e.g. life time maximum benefit." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.term.type" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
+       ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "Detailed codes for the types of contract provisions." ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/contract-term-type>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/contract-term-type" ]
+         ]
+       ]
+     ], [
+       fhir:index 54;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.term.subType" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.term.subType" ];
+       fhir:ElementDefinition.short [ fhir:value "Contract Term Subtype" ];
+       fhir:ElementDefinition.definition [ fhir:value "Subtype of this Contract Provision, e.g. life time maximum payment for a contract term for specific valued item, e.g. disability payment." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.term.subType" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
+       ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "Detailed codes for the subtypes of contract provisions." ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/contract-term-subtype>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/contract-term-subtype" ]
+         ]
+       ]
+     ], [
+       fhir:index 55;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.term.topic" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.term.topic" ];
+       fhir:ElementDefinition.short [ fhir:value "Context of the Contract term" ];
+       fhir:ElementDefinition.definition [ fhir:value "The matter of concern in the context of this provision of the agrement." ];
+       fhir:ElementDefinition.comments [ fhir:value "The Contract.term.topic, as a Contract Resource subpart, is handled in the same manner as the Contract Resource as discussed above." ];
+       fhir:ElementDefinition.requirements [ fhir:value "A contract term topic is typically about a portion of the contract topic which has additional or specialized rights, privileges, obligations, restrictions, and prohibitions that are binding on any grantor and grantee parties upon the execution of the contract.  Contract.term.topic may be described in more detail in the [0..*] Contract.term.valuedItem @[0..1] Contract.term.valuedItem [x] Definition: Specific type of Contract Provision Valued Item that may be priced. CodeableConcept|Reference(Any) [See Contract.topic Requirements for further elaboration on this requirement.]." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.term.topic" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Resource" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "Role" ]
+       ]
+     ], [
+       fhir:index 56;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.term.action" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.term.action" ];
+       fhir:ElementDefinition.short [ fhir:value "Contract Term Action" ];
+       fhir:ElementDefinition.definition [ fhir:value "Action stipulated by this Contract Provision." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.term.action" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
+       ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "Detailed codes for the contract action." ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/contract-action>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/contract-action" ]
+         ]
+       ]
+     ], [
+       fhir:index 57;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.term.actionReason" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.term.actionReason" ];
+       fhir:ElementDefinition.short [ fhir:value "Contract Term Action Reason" ];
+       fhir:ElementDefinition.definition [ fhir:value "Reason or purpose for the action stipulated by this Contract Provision." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.term.actionReason" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
+       ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "Detailed codes for the contract action reason." ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/v3-PurposeOfUse>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/v3-PurposeOfUse" ]
+         ]
+       ]
+     ], [
+       fhir:index 58;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.term.agent" ];
+       fhir:extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name" ];
+         fhir:Extension.valueString [ fhir:value "TermAgent" ]
+       ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.term.agent" ];
+       fhir:ElementDefinition.short [ fhir:value "Contract Term Agent List" ];
+       fhir:ElementDefinition.definition [ fhir:value "An actor taking a role in an activity for which it can be assigned some degree of responsibility for the activity taking place." ];
+       fhir:ElementDefinition.comments [ fhir:value "Several agents may be associated (i.e. has some responsibility for an activity) with an activity and vice-versa. For example, in cases of actions initiated by one user for other users, or in events that involve more than one user, hardware device, software, or system process. However, only one user may be the initiator/requestor for the event." ];
+       fhir:ElementDefinition.requirements [ fhir:value "An agent can be a person, an organization, software, device, or other entities that may be ascribed responsibility." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.term.agent" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "BackboneElement" ]
+       ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "children().count() > id.count()" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [ fhir:value "Element" ]
+       ]
+     ], [
+       fhir:index 59;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.term.agent.id" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.term.agent.id" ];
+       fhir:ElementDefinition.representation [
+         fhir:value "xmlAttr";
+         fhir:index 0
+       ];
+       fhir:ElementDefinition.short [ fhir:value "xml:id (or equivalent in JSON)" ];
+       fhir:ElementDefinition.definition [ fhir:value "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.id" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
+       ]
+     ], [
+       fhir:index 60;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.term.agent.extension" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.term.agent.extension" ];
+       fhir:ElementDefinition.short [ fhir:value "Additional Content defined by implementations" ];
+       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." ];
+       fhir:ElementDefinition.comments [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "extensions";
+         fhir:index 0
+       ], [
+         fhir:value "user content";
+         fhir:index 1
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.extension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
+       ]
+     ], [
+       fhir:index 61;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.term.agent.modifierExtension" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.term.agent.modifierExtension" ];
+       fhir:ElementDefinition.short [ fhir:value "Extensions that cannot be ignored" ];
+       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions." ];
+       fhir:ElementDefinition.comments [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "extensions";
+         fhir:index 0
+       ], [
+         fhir:value "user content";
+         fhir:index 1
+       ], [
+         fhir:value "modifiers";
+         fhir:index 2
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "BackboneElement.modifierExtension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
+       ]
+     ], [
+       fhir:index 62;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.term.agent.actor" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.term.agent.actor" ];
+       fhir:ElementDefinition.short [ fhir:value "Contract Term Agent List" ];
+       fhir:ElementDefinition.definition [ fhir:value "The agent assigned a role in this Contract Provision." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.term.agent.actor" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Contract" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Device" ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Group" ]
+       ], [
+         fhir:index 3;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Location" ]
+       ], [
+         fhir:index 4;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Organization" ]
+       ], [
+         fhir:index 5;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Patient" ]
+       ], [
+         fhir:index 6;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Practitioner" ]
+       ], [
+         fhir:index 7;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/StructureDefinition/RelatedPerson" ]
+       ], [
+         fhir:index 8;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Substance" ]
+       ]
+     ], [
+       fhir:index 63;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.term.agent.role" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.term.agent.role" ];
+       fhir:ElementDefinition.short [ fhir:value "Contract Term Agent Role" ];
+       fhir:ElementDefinition.definition [ fhir:value "Role played by the agent assigned this role in the execution of this Contract Provision." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.term.agent.role" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
+       ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "Detailed codes for the contract actor role." ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/contract-actorrole>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/contract-actorrole" ]
+         ]
+       ]
+     ], [
+       fhir:index 64;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.term.text" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.term.text" ];
+       fhir:ElementDefinition.short [ fhir:value "Human readable Contract term text" ];
+       fhir:ElementDefinition.definition [ fhir:value "Human readable form of this Contract Provision." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.term.text" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ]
+     ], [
+       fhir:index 65;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.term.valuedItem" ];
+       fhir:extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name" ];
+         fhir:Extension.valueString [ fhir:value "TermValuedItem" ]
+       ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.term.valuedItem" ];
+       fhir:ElementDefinition.short [ fhir:value "Contract Term Valued Item" ];
+       fhir:ElementDefinition.definition [ fhir:value "Contract Provision Valued Item List." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.term.valuedItem" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "BackboneElement" ]
+       ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "children().count() > id.count()" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [ fhir:value "Element" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "COCT_RM440000UV09 ValuedUnitItem classCode INVE" ]
+       ]
+     ], [
+       fhir:index 66;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.term.valuedItem.id" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.term.valuedItem.id" ];
+       fhir:ElementDefinition.representation [
+         fhir:value "xmlAttr";
+         fhir:index 0
+       ];
+       fhir:ElementDefinition.short [ fhir:value "xml:id (or equivalent in JSON)" ];
+       fhir:ElementDefinition.definition [ fhir:value "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.id" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
+       ]
+     ], [
+       fhir:index 67;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.term.valuedItem.extension" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.term.valuedItem.extension" ];
+       fhir:ElementDefinition.short [ fhir:value "Additional Content defined by implementations" ];
+       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." ];
+       fhir:ElementDefinition.comments [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "extensions";
+         fhir:index 0
+       ], [
+         fhir:value "user content";
+         fhir:index 1
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.extension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
+       ]
+     ], [
+       fhir:index 68;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.term.valuedItem.modifierExtension" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.term.valuedItem.modifierExtension" ];
+       fhir:ElementDefinition.short [ fhir:value "Extensions that cannot be ignored" ];
+       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions." ];
+       fhir:ElementDefinition.comments [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "extensions";
+         fhir:index 0
+       ], [
+         fhir:value "user content";
+         fhir:index 1
+       ], [
+         fhir:value "modifiers";
+         fhir:index 2
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "BackboneElement.modifierExtension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
+       ]
+     ], [
+       fhir:index 69;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.term.valuedItem.entity[x]" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.term.valuedItem.entity[x]" ];
+       fhir:ElementDefinition.short [ fhir:value "Contract Term Valued Item Type" ];
+       fhir:ElementDefinition.definition [ fhir:value "Specific type of Contract Provision Valued Item that may be priced." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.term.valuedItem.entity[x]" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Resource" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "COCT_RM440000UV09 ValuedUnitItem code" ]
+       ]
+     ], [
+       fhir:index 70;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.term.valuedItem.identifier" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.term.valuedItem.identifier" ];
+       fhir:ElementDefinition.short [ fhir:value "Contract Term Valued Item Identifier" ];
+       fhir:ElementDefinition.definition [ fhir:value "Identifies a Contract Provision Valued Item instance." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.term.valuedItem.identifier" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Identifier" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "COCT_RM440000UV09 ValuedUnitItem id" ]
+       ]
+     ], [
+       fhir:index 71;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.term.valuedItem.effectiveTime" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.term.valuedItem.effectiveTime" ];
+       fhir:ElementDefinition.short [ fhir:value "Contract Term Valued Item Effective Tiem" ];
+       fhir:ElementDefinition.definition [ fhir:value "Indicates the time during which this Contract Term ValuedItem information is effective." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.term.valuedItem.effectiveTime" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "dateTime" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "COCT_RM440000UV09 ValuedUnitItem effectiveTime" ]
+       ]
+     ], [
+       fhir:index 72;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.term.valuedItem.quantity" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.term.valuedItem.quantity" ];
+       fhir:ElementDefinition.short [ fhir:value "Contract Term Valued Item Count" ];
+       fhir:ElementDefinition.definition [ fhir:value "Specifies the units by which the Contract Provision Valued Item is measured or counted, and quantifies the countable or measurable Contract Term Valued Item instances." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.term.valuedItem.quantity" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Quantity" ];
+         fhir:ElementDefinition.type.profile [ fhir:value "http://hl7.org/fhir/StructureDefinition/SimpleQuantity" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "COCT_RM440000UV09 ValuedUnitItem unitQuantity" ]
+       ]
+     ], [
+       fhir:index 73;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.term.valuedItem.unitPrice" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.term.valuedItem.unitPrice" ];
+       fhir:ElementDefinition.short [ fhir:value "Contract Term Valued Item fee, charge, or cost" ];
+       fhir:ElementDefinition.definition [ fhir:value "A Contract Provision Valued Item unit valuation measure." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.term.valuedItem.unitPrice" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Money" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "COCT_RM440000UV09 ValuedUnitItem unitPriceAmt" ]
+       ]
+     ], [
+       fhir:index 74;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.term.valuedItem.factor" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.term.valuedItem.factor" ];
+       fhir:ElementDefinition.short [ fhir:value "Contract Term Valued Item Price Scaling Factor" ];
+       fhir:ElementDefinition.definition [ fhir:value "A real number that represents a multiplier used in determining the overall value of the Contract Provision Valued Item delivered. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.term.valuedItem.factor" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "decimal" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "COCT_RM440000UV09 ValuedUnitItem factorNumber" ]
+       ]
+     ], [
+       fhir:index 75;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.term.valuedItem.points" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.term.valuedItem.points" ];
+       fhir:ElementDefinition.short [ fhir:value "Contract Term Valued Item Difficulty Scaling Factor" ];
+       fhir:ElementDefinition.definition [ fhir:value "An amount that expresses the weighting (based on difficulty, cost and/or resource intensiveness) associated with the Contract Provision Valued Item delivered. The concept of Points allows for assignment of point values for a Contract ProvisionValued Item, such that a monetary amount can be assigned to each point." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.term.valuedItem.points" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "decimal" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "COCT_RM440000UV09 ValuedUnitItem pointNumber" ]
+       ]
+     ], [
+       fhir:index 76;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.term.valuedItem.net" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.term.valuedItem.net" ];
+       fhir:ElementDefinition.short [ fhir:value "Total Contract Term Valued Item Value" ];
+       fhir:ElementDefinition.definition [ fhir:value "Expresses the product of the Contract Provision Valued Item unitQuantity and the unitPriceAmt. For example, the formula: unit Quantity * unit Price (Cost per Point) * factor Number  * points = net Amount. Quantity, factor and points are assumed to be 1 if not supplied." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.term.valuedItem.net" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Money" ]
+       ]
+     ], [
+       fhir:index 77;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.term.group" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.term.group" ];
+       fhir:ElementDefinition.short [ fhir:value "Nested Contract Term Group" ];
+       fhir:ElementDefinition.definition [ fhir:value "Nested group of Contract Provisions." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.term.group" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.contentReference [ fhir:value "#Contract:c-cdaonfhirconsent.term" ]
+     ], [
+       fhir:index 78;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.binding[x]" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.binding[x]" ];
+       fhir:ElementDefinition.short [ fhir:value "Binding Contract" ];
+       fhir:ElementDefinition.definition [ fhir:value "Legally binding Contract: This is the signed and legally recognized representation of the Contract, which is considered the \"source of truth\" and which would be the basis for legal action related to enforcement of this Contract." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.binding[x]" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Attachment" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Composition" ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/StructureDefinition/DocumentReference" ]
+       ], [
+         fhir:index 3;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" ]
+       ]
+     ], [
+       fhir:index 79;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.friendly" ];
+       fhir:extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name" ];
+         fhir:Extension.valueString [ fhir:value "FriendlyLanguage" ]
+       ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.friendly" ];
+       fhir:ElementDefinition.short [ fhir:value "Contract Friendly Language" ];
+       fhir:ElementDefinition.definition [ fhir:value "The \"patient friendly language\" versionof the Contract in whole or in parts. \"Patient friendly language\" means the representation of the Contract and Contract Provisions in a manner that is readily accessible and understandable by a layperson in accordance with best practices for communication styles that ensure that those agreeing to or signing the Contract understand the roles, actions, obligations, responsibilities, and implication of the agreement." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.friendly" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "BackboneElement" ]
+       ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "children().count() > id.count()" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [ fhir:value "Element" ]
+       ]
+     ], [
+       fhir:index 80;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.friendly.id" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.friendly.id" ];
+       fhir:ElementDefinition.representation [
+         fhir:value "xmlAttr";
+         fhir:index 0
+       ];
+       fhir:ElementDefinition.short [ fhir:value "xml:id (or equivalent in JSON)" ];
+       fhir:ElementDefinition.definition [ fhir:value "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.id" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
+       ]
+     ], [
+       fhir:index 81;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.friendly.extension" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.friendly.extension" ];
+       fhir:ElementDefinition.short [ fhir:value "Additional Content defined by implementations" ];
+       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." ];
+       fhir:ElementDefinition.comments [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "extensions";
+         fhir:index 0
+       ], [
+         fhir:value "user content";
+         fhir:index 1
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.extension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
+       ]
+     ], [
+       fhir:index 82;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.friendly.modifierExtension" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.friendly.modifierExtension" ];
+       fhir:ElementDefinition.short [ fhir:value "Extensions that cannot be ignored" ];
+       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions." ];
+       fhir:ElementDefinition.comments [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "extensions";
+         fhir:index 0
+       ], [
+         fhir:value "user content";
+         fhir:index 1
+       ], [
+         fhir:value "modifiers";
+         fhir:index 2
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "BackboneElement.modifierExtension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
+       ]
+     ], [
+       fhir:index 83;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.friendly.content[x]" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.friendly.content[x]" ];
+       fhir:ElementDefinition.short [ fhir:value "Easily comprehended representation of this Contract" ];
+       fhir:ElementDefinition.definition [ fhir:value "Human readable rendering of this Contract in a format and representation intended to enhance comprehension and ensure understandability." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.friendly.content[x]" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Attachment" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Composition" ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/StructureDefinition/DocumentReference" ]
+       ], [
+         fhir:index 3;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" ]
+       ]
+     ], [
+       fhir:index 84;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.legal" ];
+       fhir:extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name" ];
+         fhir:Extension.valueString [ fhir:value "LegalLanguage" ]
+       ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.legal" ];
+       fhir:ElementDefinition.short [ fhir:value "Contract Legal Language" ];
+       fhir:ElementDefinition.definition [ fhir:value "List of Legal expressions or representations of this Contract." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.legal" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "BackboneElement" ]
+       ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "children().count() > id.count()" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [ fhir:value "Element" ]
+       ]
+     ], [
+       fhir:index 85;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.legal.id" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.legal.id" ];
+       fhir:ElementDefinition.representation [
+         fhir:value "xmlAttr";
+         fhir:index 0
+       ];
+       fhir:ElementDefinition.short [ fhir:value "xml:id (or equivalent in JSON)" ];
+       fhir:ElementDefinition.definition [ fhir:value "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.id" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
+       ]
+     ], [
+       fhir:index 86;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.legal.extension" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.legal.extension" ];
+       fhir:ElementDefinition.short [ fhir:value "Additional Content defined by implementations" ];
+       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." ];
+       fhir:ElementDefinition.comments [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "extensions";
+         fhir:index 0
+       ], [
+         fhir:value "user content";
+         fhir:index 1
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.extension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
+       ]
+     ], [
+       fhir:index 87;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.legal.modifierExtension" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.legal.modifierExtension" ];
+       fhir:ElementDefinition.short [ fhir:value "Extensions that cannot be ignored" ];
+       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions." ];
+       fhir:ElementDefinition.comments [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "extensions";
+         fhir:index 0
+       ], [
+         fhir:value "user content";
+         fhir:index 1
+       ], [
+         fhir:value "modifiers";
+         fhir:index 2
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "BackboneElement.modifierExtension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
+       ]
+     ], [
+       fhir:index 88;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.legal.content[x]" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.legal.content[x]" ];
+       fhir:ElementDefinition.short [ fhir:value "Contract Legal Text" ];
+       fhir:ElementDefinition.definition [ fhir:value "Contract legal text in human renderable form." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.legal.content[x]" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Attachment" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/StructureDefinition/Composition" ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/StructureDefinition/DocumentReference" ]
+       ], [
+         fhir:index 3;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" ]
+       ]
+     ], [
+       fhir:index 89;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.rule" ];
+       fhir:extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name" ];
+         fhir:Extension.valueString [ fhir:value "ComputableLanguage" ]
+       ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.rule" ];
+       fhir:ElementDefinition.short [ fhir:value "Computable Contract Language" ];
+       fhir:ElementDefinition.definition [ fhir:value "List of Computable Policy Rule Language Representations of this Contract." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.rule" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "BackboneElement" ]
+       ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "children().count() > id.count()" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [ fhir:value "Element" ]
+       ]
+     ], [
+       fhir:index 90;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.rule.id" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.rule.id" ];
+       fhir:ElementDefinition.representation [
+         fhir:value "xmlAttr";
+         fhir:index 0
+       ];
+       fhir:ElementDefinition.short [ fhir:value "xml:id (or equivalent in JSON)" ];
+       fhir:ElementDefinition.definition [ fhir:value "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.id" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
+       ]
+     ], [
+       fhir:index 91;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.rule.extension" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.rule.extension" ];
+       fhir:ElementDefinition.short [ fhir:value "Additional Content defined by implementations" ];
+       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." ];
+       fhir:ElementDefinition.comments [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "extensions";
+         fhir:index 0
+       ], [
+         fhir:value "user content";
+         fhir:index 1
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.extension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
+       ]
+     ], [
+       fhir:index 92;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.rule.modifierExtension" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.rule.modifierExtension" ];
+       fhir:ElementDefinition.short [ fhir:value "Extensions that cannot be ignored" ];
+       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions." ];
+       fhir:ElementDefinition.comments [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
+       fhir:ElementDefinition.alias [
+         fhir:value "extensions";
+         fhir:index 0
+       ], [
+         fhir:value "user content";
+         fhir:index 1
+       ], [
+         fhir:value "modifiers";
+         fhir:index 2
+       ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "BackboneElement.modifierExtension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ];
+       fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
+       ]
+     ], [
+       fhir:index 93;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.rule.content[x]" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.rule.content[x]" ];
+       fhir:ElementDefinition.short [ fhir:value "Computable Contract Rules" ];
+       fhir:ElementDefinition.definition [ fhir:value "Computable Contract conveyed using a policy rule language (e.g. XACML, DKAL, SecPal)." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Contract.rule.content[x]" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:int ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Attachment" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org/fhir/StructureDefinition/DocumentReference" ]
+       ]
+     ]
+  ];
+  fhir:StructureDefinition.differential [
+     fhir:StructureDefinition.differential.element [
+       fhir:index 0;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract" ]
+     ], [
+       fhir:index 1;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.identifier" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.identifier" ];
+       fhir:ElementDefinition.short [ fhir:value "identifier" ];
+       fhir:ElementDefinition.definition [ fhir:value "MAY contain zero or one [0..1] identifier (CONF:2219-2007)." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ]
+     ], [
+       fhir:index 2;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.type" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.type" ];
+       fhir:ElementDefinition.label [ fhir:value "Consent" ];
+       fhir:ElementDefinition.short [ fhir:value "Consent" ];
+       fhir:ElementDefinition.definition [ fhir:value "SHALL contain exactly one [1..1] type=\"CONS\" (CodeSystem: HL7ActClass urn:oid:2.16.840.1.113883.5.6) (CONF:2219-2008)." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
+       ];
+       fhir:ElementDefinition.patternCodeableConcept [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "urn:oid:2.16.840.1.113883.5.6" ];
+           fhir:Coding.code [ fhir:value "CONS" ]
+         ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:Element.id [ fhir:value "Contract:c-cdaonfhirconsent.subType" ];
+       fhir:ElementDefinition.path [ fhir:value "Contract.subType" ];
+       fhir:ElementDefinition.label [ fhir:value "Type of consent" ];
+       fhir:ElementDefinition.short [ fhir:value "Type of consent" ];
+       fhir:ElementDefinition.definition [ fhir:value "MAY contain zero or one [0..1] subType (CONF:2219-2009)." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:int ];
+       fhir:ElementDefinition.max [ fhir:value "1" ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/ValueSet/all-languages> a fhir:ValueSet .
+
+<http://hl7.org/fhir/ValueSet/languages> a fhir:ValueSet .
+
+<http://hl7.org/fhir/ValueSet/fm-status> a fhir:ValueSet .
+
+<http://hl7.org/fhir/ValueSet/contract-type> a fhir:ValueSet .
+
+<http://hl7.org/fhir/ValueSet/contract-subtype> a fhir:ValueSet .
+
+<http://hl7.org/fhir/ValueSet/contract-action> a fhir:ValueSet, fhir:ValueSet .
+
+<http://hl7.org/fhir/ValueSet/v3-PurposeOfUse> a fhir:ValueSet, fhir:ValueSet .
+
+<http://hl7.org/fhir/ValueSet/contract-actorrole> a fhir:ValueSet, fhir:ValueSet .
+
+<http://hl7.org/fhir/ValueSet/contract-signer-type> a fhir:ValueSet .
+
+<http://hl7.org/fhir/ValueSet/contract-term-type> a fhir:ValueSet .
+
+<http://hl7.org/fhir/ValueSet/contract-term-subtype> a fhir:ValueSet .
+
+# -------------------------------------------------------------------------------------
+

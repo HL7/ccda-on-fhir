@@ -1,0 +1,2784 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "CCDA-on-FHIR-Consent",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>url</b>: <a href=\"http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Consent\">http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Consent</a></p><p><b>name</b>: C-CDA on FHIR Consent</p><p><b>status</b>: DRAFT</p><p><b>date</b>: Jan 4, 2017 11:36:09 PM</p><p><b>publisher</b>: Lantana Consulting Group</p><p><b>contact</b>: </p><p><b>description</b>: This profile represents information about the patients consent.\n\nThe type of consent is conveyed in type. Consents in the header have been finalized and should be on file. This specification does not address how 'Privacy Consent' is represented, but does not preclude the inclusion of Privacy Consent.\n\nThe authorization consent is used for referring to consents that are documented elsewhere in the EHR or medical record for a health condition and/or treatment that is described in the document.</p><p><b>url</b>: <a href=\"http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Consent\">http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Consent</a></p><p><b>name</b>: C-CDA on FHIR Consent</p><p><b>status</b>: DRAFT</p><p><b>publisher</b>: Lantana Consulting Group</p><p><b>contact</b>: </p><p><b>date</b>: Jan 4, 2017 11:36:09 PM</p><p><b>description</b>: This profile represents information about the patients consent.\n\nThe type of consent is conveyed in type. Consents in the header have been finalized and should be on file. This specification does not address how 'Privacy Consent' is represented, but does not preclude the inclusion of Privacy Consent.\n\nThe authorization consent is used for referring to consents that are documented elsewhere in the EHR or medical record for a health condition and/or treatment that is described in the document.</p><blockquote><p><b>mapping</b></p><p><b>identity</b>: rim</p><p><b>uri</b>: <a href=\"http://hl7.org/v3\">http://hl7.org/v3</a></p><p><b>name</b>: RIM Mapping</p></blockquote><blockquote><p><b>mapping</b></p><p><b>identity</b>: w5</p><p><b>uri</b>: <a href=\"http://hl7.org/fhir/w5\">http://hl7.org/fhir/w5</a></p><p><b>name</b>: W5 Mapping</p></blockquote><p><b>kind</b>: RESOURCE</p><p><b>abstract</b>: false</p><p><b>contextType</b>: RESOURCE</p><p><b>context</b>: Contract</p><p><b>type</b>: Contract</p><p><b>baseDefinition</b>: <a href=\"http://hl7.org/fhir/StructureDefinition/Contract\">http://hl7.org/fhir/StructureDefinition/Contract</a></p><p><b>derivation</b>: CONSTRAINT</p><h3>Snapshots</h3><table class=\"grid\"><tr><td>-</td><td><b>Element</b></td></tr><tr><td>*</td><td>todo-bundle</td></tr></table><h3>Differentials</h3><table class=\"grid\"><tr><td>-</td><td><b>Element</b></td></tr><tr><td>*</td><td>todo-bundle</td></tr></table></div>"
+  },
+  "url": "http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Consent",
+  "name": "C-CDA on FHIR Consent",
+  "status": "draft",
+  "publisher": "Lantana Consulting Group",
+  "contact": [
+    {
+      "name": "Sarah Gaunt",
+      "telecom": [
+        {
+          "system": "phone",
+          "value": "+6 141-029-2506",
+          "use": "work"
+        },
+        {
+          "system": "email",
+          "value": "sarah.gaunt@lantanagroup.com",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "date": "2017-01-04T23:36:09-05:00",
+  "description": "This profile represents information about the patients consent.\n\nThe type of consent is conveyed in type. Consents in the header have been finalized and should be on file. This specification does not address how 'Privacy Consent' is represented, but does not preclude the inclusion of Privacy Consent.\n\nThe authorization consent is used for referring to consents that are documented elsewhere in the EHR or medical record for a health condition and/or treatment that is described in the document.",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/w5",
+      "name": "W5 Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "contextType": "resource",
+  "context": [
+    "Contract"
+  ],
+  "type": "Contract",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Contract",
+  "derivation": "constraint",
+  "snapshot": {
+    "element": [
+      {
+        "id": "Contract:c-cdaonfhirconsent",
+        "path": "Contract",
+        "short": "Contract",
+        "definition": "A formal agreement between parties regarding the conduct of business, exchange of information or other matters.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Contract",
+          "min": 0,
+          "max": "*"
+        },
+        "constraint": [
+          {
+            "key": "dom-2",
+            "severity": "error",
+            "human": "If the resource is contained in another resource, it SHALL NOT contain nested Resources",
+            "expression": "contained.contained.empty()",
+            "xpath": "not(parent::f:contained and f:contained)",
+            "source": "DomainResource"
+          },
+          {
+            "key": "dom-1",
+            "severity": "error",
+            "human": "If the resource is contained in another resource, it SHALL NOT contain any narrative",
+            "expression": "contained.text.empty()",
+            "xpath": "not(parent::f:contained and f:text)",
+            "source": "DomainResource"
+          },
+          {
+            "key": "dom-4",
+            "severity": "error",
+            "human": "If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated",
+            "expression": "contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()",
+            "xpath": "not(exists(f:contained/*/f:meta/f:versionId)) and not(exists(f:contained/*/f:meta/f:lastUpdated))",
+            "source": "DomainResource"
+          },
+          {
+            "key": "dom-3",
+            "severity": "error",
+            "human": "If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource",
+            "expression": "contained.where(('#'+id in %resource.descendants().reference).not()).empty()",
+            "xpath": "not(exists(for $id in f:contained/*/@id return $id[not(ancestor::f:contained/parent::*/descendant::f:reference/@value=concat('#', $id))]))",
+            "source": "DomainResource"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "Entity. Role, or Act"
+          },
+          {
+            "identity": "rim",
+            "map": "FinancialContract"
+          },
+          {
+            "identity": "w5",
+            "map": "financial.other"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.id",
+        "path": "Contract.id",
+        "short": "Logical id of this artifact",
+        "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
+        "comments": "The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Resource.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.meta",
+        "path": "Contract.meta",
+        "short": "Metadata about the resource",
+        "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Resource.meta",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Meta"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.implicitRules",
+        "path": "Contract.implicitRules",
+        "short": "A set of rules under which this content was created",
+        "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content.",
+        "comments": "Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Resource.implicitRules",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "isModifier": true,
+        "isSummary": true
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.language",
+        "path": "Contract.language",
+        "short": "Language of the resource content",
+        "definition": "The base language in which the resource is written.",
+        "comments": "Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource  Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Resource.language",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet",
+              "valueReference": {
+                "reference": "http://hl7.org/fhir/ValueSet/all-languages"
+              }
+            }
+          ],
+          "strength": "extensible",
+          "description": "A human language.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/languages"
+          }
+        }
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.text",
+        "path": "Contract.text",
+        "short": "Text summary of the resource, for human interpretation",
+        "definition": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
+        "comments": "Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs=1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded in formation is added later.",
+        "alias": [
+          "narrative",
+          "html",
+          "xhtml",
+          "display"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.text",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Narrative"
+          }
+        ],
+        "condition": [
+          "dom-1"
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "Act.text?"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.contained",
+        "path": "Contract.contained",
+        "short": "Contained, inline Resources",
+        "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
+        "comments": "This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again.",
+        "alias": [
+          "inline resources",
+          "anonymous resources",
+          "contained resources"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.contained",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Resource"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.extension",
+        "path": "Contract.extension",
+        "short": "Additional Content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.modifierExtension",
+        "path": "Contract.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.modifierExtension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isModifier": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.identifier",
+        "path": "Contract.identifier",
+        "short": "identifier",
+        "definition": "MAY contain zero or one [0..1] identifier (CONF:2219-2007).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Contract.identifier",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "FinancialContract id"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.status",
+        "path": "Contract.status",
+        "short": "active | cancelled | draft | entered-in-error",
+        "definition": "The status of the resource instance.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Contract.status",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "isModifier": true,
+        "isSummary": true,
+        "binding": {
+          "strength": "required",
+          "description": "A code specifying the state of the resource instance.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/fm-status"
+          }
+        }
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.issued",
+        "path": "Contract.issued",
+        "short": "When this Contract was issued",
+        "definition": "When this  Contract was issued.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Contract.issued",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "FinancialContract effectiveTime"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.applies",
+        "path": "Contract.applies",
+        "short": "Effective time",
+        "definition": "Relevant time or time-period when this Contract is applicable.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Contract.applies",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Period"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "FinancialContract activityTime"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.subject",
+        "path": "Contract.subject",
+        "short": "Contract Target Entity",
+        "definition": "The target entity impacted by or of interest to parties to the agreement.",
+        "comments": "The Contract.subject is an entity that has some role with respect to the Contract.topic and Contract.topic.term, which is of focal interest to the parties to the contract and likely impacted in a significant way by the Contract.action/Contract.action.reason and the Contract.term.action/Contract.action.reason.  In many cases, the Contract.subject is a Contract.signer if the subject is an adult; has a legal interest in the contract; and incompetent to participate in the contract agreement.",
+        "requirements": "The Contract.subject is an entity that has some role with respect to the Contract.topic and Contract.topic.term, which is of focal interest to the parties to the contract and likely impacted in a significant way by the Contract.action/Contract.action.reason and the Contract.term.action/Contract.action.reason.  In many cases, the Contract.subject is a Contract.signer if the subject is an adult; has a legal interest in the contract; and incompetent to participate in the contract agreement.",
+        "alias": [
+          "Patient"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Contract.subject",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Resource"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "Role"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.topic",
+        "path": "Contract.topic",
+        "short": "Context of the Contract",
+        "definition": "The matter of concern in the context of this agreement.",
+        "comments": "The Contract.topic may be an application for or offer of a policy or service (e.g., uri to a consent directive form or a health insurance policy), which becomes the Contract once accepted by both the grantor and grantee.  The Contract Resource may function simply as the computable representation of the executed contract, which may be the attached to the Contract Resource as the “binding” or as the “friendly” electronic form.  For example, a Contract Resource may be automatically populated with the values expressed in a related QuestionnaireResponse.  However, the Contract Resource may be considered the legally binding contract if it is the only “executed” form of this contract, and includes the signatures as *The Contract Resource may function as the computable representation of an application or offer in a pre-executed Contract if the grantor has not entered any values.  In this case, it is populated with values in a “legal” form of the application or offer or by the values in an associated Questionnaire.  If the grantor has filled in the legal form or the associated Questionnaire Response, then these values are used to populate a pre-executed Contract Resource. If the Contract.topic is considered an application or offer, then the policy is often required to be attached as the “legal” basis for the application to ensure “informed consent” to the contract, and that any discrepancy between the application and the policy are interpreted against the policy.  Implementers should check organizational and jurisdictional policies to determine the relationship among multiple representations of a contract pre- and post-execution.",
+        "requirements": "In the context of a contract, the topic is the matter under consideration in regards to which specific rights, privileges, obligations, restrictions, and prohibitions are binding on any grantor and grantee parties upon the execution of the contract.  Given the wide range of contract topics, implementers need to be cognizant of the business use case for which they are designing a FHIR Contract, and narrowly specify the topic being represented with respect to the Contract.type and any specializing Contract.subtype.  The same topic, e.g., an asset such as a good or service, such as a real property, medical supply, insurance, information, a procedure or employment, or a manner of conduct, such adherence to a privacy, trust, or security policy, may be the topic of multiple types of contracts.  One way to determine the Contract.topic is to answer the question: “What is the object of negotiation?” Answer: The Contract.topic, which may be described with more detail in the [0..*]Contract.valuedItem @ [0..1] Contract.valuedItem.entity[x] Definition: Specific type of Contract Valued Item that may be priced. CodeableConcept|Reference(Any) Contract.topic is “the what” that a grantor is exchanging with a grantee in return for some benefit.  Contract.topic is “the what” to which any Contract.action is being applied for any stipulated Contract.action.reason.  AContract.topic is “the what” governed by the execution of the contract to which any party’s rights, privileges, obligations, restrictions, and prohibitions apply.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Contract.topic",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Resource"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "Role"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.authority",
+        "path": "Contract.authority",
+        "short": "Authority under which this Contract has standing",
+        "definition": "A formally or informally recognized grouping of people, principals, organizations, or jurisdictions formed for the purpose of achieving some form of collective action such as the promulgation, administration and enforcement of contracts and policies.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Contract.authority",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Organization"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "Role Scoper"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.domain",
+        "path": "Contract.domain",
+        "short": "Domain in which this Contract applies",
+        "definition": "Recognized governance framework or system operating with a circumscribed scope in accordance with specified principles, policies, processes or procedures for managing rights, actions, or behaviors of parties or principals relative to resources.",
+        "alias": [
+          "scope of governance jurisdiction"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Contract.domain",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Location"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.type",
+        "path": "Contract.type",
+        "label": "Consent",
+        "short": "Consent",
+        "definition": "SHALL contain exactly one [1..1] type=\"CONS\" (CodeSystem: HL7ActClass urn:oid:2.16.840.1.113883.5.6) (CONF:2219-2008).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Contract.type",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.5.6",
+              "code": "CONS"
+            }
+          ]
+        },
+        "isSummary": true,
+        "binding": {
+          "strength": "example",
+          "description": "List of overall contract codes.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/contract-type"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "CNTRCT"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.subType",
+        "path": "Contract.subType",
+        "label": "Type of consent",
+        "short": "Type of consent",
+        "definition": "MAY contain zero or one [0..1] subType (CONF:2219-2009).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Contract.subType",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "isSummary": true,
+        "binding": {
+          "strength": "example",
+          "description": "Detailed codes within the above.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/contract-subtype"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "e.g. RECOV"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.action",
+        "path": "Contract.action",
+        "short": "Contract Action",
+        "definition": "Action stipulated by this Contract.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Contract.action",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "Detailed codes for the contract action.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/contract-action"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "e.g. JURISPOL"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.actionReason",
+        "path": "Contract.actionReason",
+        "short": "Contract Action Reason",
+        "definition": "Reason for action stipulated by this Contract.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Contract.actionReason",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "Detailed codes for the contract action reason.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/v3-PurposeOfUse"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "e.g. QUALIMP"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.agent",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
+            "valueString": "Agent"
+          }
+        ],
+        "path": "Contract.agent",
+        "short": "Contract Agent",
+        "definition": "An actor taking a role in an activity for which it can be assigned some degree of responsibility for the activity taking place.",
+        "comments": "Several agents may be associated (i.e. has some responsibility for an activity) with an activity and vice-versa. For example, in cases of actions initiated by one user for other users, or in events that involve more than one user, hardware device, software, or system process. However, only one user may be the initiator/requestor for the event.",
+        "requirements": "An agent can be a person, an organization, software, device, or other entities that may be ascribed responsibility.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Contract.agent",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "children().count() > id.count()",
+            "xpath": "@value|f:*|h:div",
+            "source": "Element"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.agent.id",
+        "path": "Contract.agent.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.agent.extension",
+        "path": "Contract.agent.extension",
+        "short": "Additional Content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.agent.modifierExtension",
+        "path": "Contract.agent.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "BackboneElement.modifierExtension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isModifier": true,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.agent.actor",
+        "path": "Contract.agent.actor",
+        "short": "Contract Agent Type",
+        "definition": "Who or what parties are assigned roles in this Contract.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Contract.agent.actor",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Contract"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Device"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Group"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Location"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Organization"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Patient"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Practitioner"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Substance"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.agent.role",
+        "path": "Contract.agent.role",
+        "short": "Contract  Agent Role",
+        "definition": "Role type of agent assigned roles in this Contract.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Contract.agent.role",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "Detailed codes for the contract actor role.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/contract-actorrole"
+          }
+        }
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.signer",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
+            "valueString": "Signatory"
+          }
+        ],
+        "path": "Contract.signer",
+        "short": "Contract Signer",
+        "definition": "Parties with legal standing in the Contract, including the principal parties, the grantor(s) and grantee(s), which are any person or organization bound by the contract, and any ancillary parties, which facilitate the execution of the contract such as a notary or witness.",
+        "comments": "Signers who are principal parties to the contract are bound by the Contract.activity related to the Contract.topic, and the Contract.term(s), which either extend or restrict the overall action on the topic by, for example, stipulating specific policies or obligations constraining actions, action reason, or agents with respect to some or all of the topic. For example, specifying how policies or obligations shall constrain actions and action reasons permitted or denied on all or a subset of the Contract.topic (e.g., all or a portion of property being transferred by the contract), agents (e.g., who can resell, assign interests, or alter the property being transferred by the contract), actions, and action reasons; or with respect to Contract.terms, stipulating, extending, or limiting the Contract.period of applicability or valuation of items under consideration.",
+        "requirements": "The Contract.signer applies a signature to the Contract.binding referenced resource, which is the documentation that is the legal \"source of truth\". The Contract.signer may delegate, such as a legally recognized personal representative, or have a delegate assigned e.g., by a court of law, to actually sign the Contract, such as a trustee in the case of incompetence.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Contract.signer",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "children().count() > id.count()",
+            "xpath": "@value|f:*|h:div",
+            "source": "Element"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.signer.id",
+        "path": "Contract.signer.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.signer.extension",
+        "path": "Contract.signer.extension",
+        "short": "Additional Content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.signer.modifierExtension",
+        "path": "Contract.signer.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "BackboneElement.modifierExtension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isModifier": true,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.signer.type",
+        "path": "Contract.signer.type",
+        "short": "Contract Signer Type",
+        "definition": "Role of this Contract signer, e.g. notary, grantee.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Contract.signer.type",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "binding": {
+          "strength": "preferred",
+          "description": "List of parties who may be signing.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/contract-signer-type"
+          }
+        }
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.signer.party",
+        "path": "Contract.signer.party",
+        "short": "Contract Signatory Party",
+        "definition": "Party which is a signator to this Contract.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Contract.signer.party",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Organization"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Patient"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Practitioner"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.signer.signature",
+        "path": "Contract.signer.signature",
+        "short": "Contract Documentation Signature",
+        "definition": "Legally binding Contract DSIG signature contents in Base64.",
+        "min": 1,
+        "max": "*",
+        "base": {
+          "path": "Contract.signer.signature",
+          "min": 1,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Signature"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.valuedItem",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
+            "valueString": "ValuedItem"
+          }
+        ],
+        "path": "Contract.valuedItem",
+        "short": "Contract Valued Item",
+        "definition": "Contract Valued Item List.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Contract.valuedItem",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "children().count() > id.count()",
+            "xpath": "@value|f:*|h:div",
+            "source": "Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "COCT_RM440000UV09 ValuedItem classCode INVE"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.valuedItem.id",
+        "path": "Contract.valuedItem.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.valuedItem.extension",
+        "path": "Contract.valuedItem.extension",
+        "short": "Additional Content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.valuedItem.modifierExtension",
+        "path": "Contract.valuedItem.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "BackboneElement.modifierExtension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isModifier": true,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.valuedItem.entity[x]",
+        "path": "Contract.valuedItem.entity[x]",
+        "short": "Contract Valued Item Type",
+        "definition": "Specific type of Contract Valued Item that may be priced.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Contract.valuedItem.entity[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Resource"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "COCT_RM440000UV09 ValuedItem code"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.valuedItem.identifier",
+        "path": "Contract.valuedItem.identifier",
+        "short": "Contract Valued Item Identifier",
+        "definition": "Identifies a Contract Valued Item instance.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Contract.valuedItem.identifier",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "COCT_RM440000UV09 ValuedItem id"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.valuedItem.effectiveTime",
+        "path": "Contract.valuedItem.effectiveTime",
+        "short": "Contract Valued Item Effective Tiem",
+        "definition": "Indicates the time during which this Contract ValuedItem information is effective.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Contract.valuedItem.effectiveTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "COCT_RM440000UV09 ValuedItem                effectiveTime"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.valuedItem.quantity",
+        "path": "Contract.valuedItem.quantity",
+        "short": "Count of Contract Valued Items",
+        "definition": "Specifies the units by which the Contract Valued Item is measured or counted, and quantifies the countable or measurable Contract Valued Item instances.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Contract.valuedItem.quantity",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Quantity",
+            "profile": "http://hl7.org/fhir/StructureDefinition/SimpleQuantity"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "COCT_RM440000UV09 ValuedItem unitQuantity"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.valuedItem.unitPrice",
+        "path": "Contract.valuedItem.unitPrice",
+        "short": "Contract Valued Item fee, charge, or cost",
+        "definition": "A Contract Valued Item unit valuation measure.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Contract.valuedItem.unitPrice",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Money"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "COCT_RM440000UV09 ValuedItem unitPriceAmt"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.valuedItem.factor",
+        "path": "Contract.valuedItem.factor",
+        "short": "Contract Valued Item Price Scaling Factor",
+        "definition": "A real number that represents a multiplier used in determining the overall value of the Contract Valued Item delivered. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Contract.valuedItem.factor",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "COCT_RM440000UV09 ValuedItem factorNumber"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.valuedItem.points",
+        "path": "Contract.valuedItem.points",
+        "short": "Contract Valued Item Difficulty Scaling Factor",
+        "definition": "An amount that expresses the weighting (based on difficulty, cost and/or resource intensiveness) associated with the Contract Valued Item delivered. The concept of Points allows for assignment of point values for a Contract Valued Item, such that a monetary amount can be assigned to each point.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Contract.valuedItem.points",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "COCT_RM440000UV09 ValuedItem pointNumber"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.valuedItem.net",
+        "path": "Contract.valuedItem.net",
+        "short": "Total Contract Valued Item Value",
+        "definition": "Expresses the product of the Contract Valued Item unitQuantity and the unitPriceAmt. For example, the formula: unit Quantity * unit Price (Cost per Point) * factor Number  * points = net Amount. Quantity, factor and points are assumed to be 1 if not supplied.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Contract.valuedItem.net",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Money"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "COCT_RM440000UV09 ValuedItem netAmt"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.term",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
+            "valueString": "Term"
+          }
+        ],
+        "path": "Contract.term",
+        "short": "Contract Term List",
+        "definition": "One or more Contract Provisions, which may be related and conveyed as a group, and may contain nested groups.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Contract.term",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "children().count() > id.count()",
+            "xpath": "@value|f:*|h:div",
+            "source": "Element"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.term.id",
+        "path": "Contract.term.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.term.extension",
+        "path": "Contract.term.extension",
+        "short": "Additional Content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.term.modifierExtension",
+        "path": "Contract.term.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "BackboneElement.modifierExtension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isModifier": true,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.term.identifier",
+        "path": "Contract.term.identifier",
+        "short": "Contract Term identifier",
+        "definition": "Unique identifier for this particular Contract Provision.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Contract.term.identifier",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.term.issued",
+        "path": "Contract.term.issued",
+        "short": "Contract Term Issue Date Time",
+        "definition": "When this Contract Provision was issued.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Contract.term.issued",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.term.applies",
+        "path": "Contract.term.applies",
+        "short": "Contract Term Effective Time",
+        "definition": "Relevant time or time-period when this Contract Provision is applicable.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Contract.term.applies",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Period"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.term.type",
+        "path": "Contract.term.type",
+        "short": "Contract Term Type",
+        "definition": "Type of Contract Provision such as specific requirements, purposes for actions, obligations, prohibitions, e.g. life time maximum benefit.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Contract.term.type",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "Detailed codes for the types of contract provisions.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/contract-term-type"
+          }
+        }
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.term.subType",
+        "path": "Contract.term.subType",
+        "short": "Contract Term Subtype",
+        "definition": "Subtype of this Contract Provision, e.g. life time maximum payment for a contract term for specific valued item, e.g. disability payment.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Contract.term.subType",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "Detailed codes for the subtypes of contract provisions.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/contract-term-subtype"
+          }
+        }
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.term.topic",
+        "path": "Contract.term.topic",
+        "short": "Context of the Contract term",
+        "definition": "The matter of concern in the context of this provision of the agrement.",
+        "comments": "The Contract.term.topic, as a Contract Resource subpart, is handled in the same manner as the Contract Resource as discussed above.",
+        "requirements": "A contract term topic is typically about a portion of the contract topic which has additional or specialized rights, privileges, obligations, restrictions, and prohibitions that are binding on any grantor and grantee parties upon the execution of the contract.  Contract.term.topic may be described in more detail in the [0..*] Contract.term.valuedItem @[0..1] Contract.term.valuedItem [x] Definition: Specific type of Contract Provision Valued Item that may be priced. CodeableConcept|Reference(Any) [See Contract.topic Requirements for further elaboration on this requirement.].",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Contract.term.topic",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Resource"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "Role"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.term.action",
+        "path": "Contract.term.action",
+        "short": "Contract Term Action",
+        "definition": "Action stipulated by this Contract Provision.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Contract.term.action",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "Detailed codes for the contract action.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/contract-action"
+          }
+        }
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.term.actionReason",
+        "path": "Contract.term.actionReason",
+        "short": "Contract Term Action Reason",
+        "definition": "Reason or purpose for the action stipulated by this Contract Provision.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Contract.term.actionReason",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "Detailed codes for the contract action reason.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/v3-PurposeOfUse"
+          }
+        }
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.term.agent",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
+            "valueString": "TermAgent"
+          }
+        ],
+        "path": "Contract.term.agent",
+        "short": "Contract Term Agent List",
+        "definition": "An actor taking a role in an activity for which it can be assigned some degree of responsibility for the activity taking place.",
+        "comments": "Several agents may be associated (i.e. has some responsibility for an activity) with an activity and vice-versa. For example, in cases of actions initiated by one user for other users, or in events that involve more than one user, hardware device, software, or system process. However, only one user may be the initiator/requestor for the event.",
+        "requirements": "An agent can be a person, an organization, software, device, or other entities that may be ascribed responsibility.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Contract.term.agent",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "children().count() > id.count()",
+            "xpath": "@value|f:*|h:div",
+            "source": "Element"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.term.agent.id",
+        "path": "Contract.term.agent.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.term.agent.extension",
+        "path": "Contract.term.agent.extension",
+        "short": "Additional Content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.term.agent.modifierExtension",
+        "path": "Contract.term.agent.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "BackboneElement.modifierExtension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isModifier": true,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.term.agent.actor",
+        "path": "Contract.term.agent.actor",
+        "short": "Contract Term Agent List",
+        "definition": "The agent assigned a role in this Contract Provision.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Contract.term.agent.actor",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Contract"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Device"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Group"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Location"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Organization"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Patient"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Practitioner"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Substance"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.term.agent.role",
+        "path": "Contract.term.agent.role",
+        "short": "Contract Term Agent Role",
+        "definition": "Role played by the agent assigned this role in the execution of this Contract Provision.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Contract.term.agent.role",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "Detailed codes for the contract actor role.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/contract-actorrole"
+          }
+        }
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.term.text",
+        "path": "Contract.term.text",
+        "short": "Human readable Contract term text",
+        "definition": "Human readable form of this Contract Provision.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Contract.term.text",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.term.valuedItem",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
+            "valueString": "TermValuedItem"
+          }
+        ],
+        "path": "Contract.term.valuedItem",
+        "short": "Contract Term Valued Item",
+        "definition": "Contract Provision Valued Item List.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Contract.term.valuedItem",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "children().count() > id.count()",
+            "xpath": "@value|f:*|h:div",
+            "source": "Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "COCT_RM440000UV09 ValuedUnitItem classCode INVE"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.term.valuedItem.id",
+        "path": "Contract.term.valuedItem.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.term.valuedItem.extension",
+        "path": "Contract.term.valuedItem.extension",
+        "short": "Additional Content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.term.valuedItem.modifierExtension",
+        "path": "Contract.term.valuedItem.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "BackboneElement.modifierExtension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isModifier": true,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.term.valuedItem.entity[x]",
+        "path": "Contract.term.valuedItem.entity[x]",
+        "short": "Contract Term Valued Item Type",
+        "definition": "Specific type of Contract Provision Valued Item that may be priced.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Contract.term.valuedItem.entity[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Resource"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "COCT_RM440000UV09 ValuedUnitItem code"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.term.valuedItem.identifier",
+        "path": "Contract.term.valuedItem.identifier",
+        "short": "Contract Term Valued Item Identifier",
+        "definition": "Identifies a Contract Provision Valued Item instance.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Contract.term.valuedItem.identifier",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "COCT_RM440000UV09 ValuedUnitItem id"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.term.valuedItem.effectiveTime",
+        "path": "Contract.term.valuedItem.effectiveTime",
+        "short": "Contract Term Valued Item Effective Tiem",
+        "definition": "Indicates the time during which this Contract Term ValuedItem information is effective.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Contract.term.valuedItem.effectiveTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "COCT_RM440000UV09 ValuedUnitItem effectiveTime"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.term.valuedItem.quantity",
+        "path": "Contract.term.valuedItem.quantity",
+        "short": "Contract Term Valued Item Count",
+        "definition": "Specifies the units by which the Contract Provision Valued Item is measured or counted, and quantifies the countable or measurable Contract Term Valued Item instances.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Contract.term.valuedItem.quantity",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Quantity",
+            "profile": "http://hl7.org/fhir/StructureDefinition/SimpleQuantity"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "COCT_RM440000UV09 ValuedUnitItem unitQuantity"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.term.valuedItem.unitPrice",
+        "path": "Contract.term.valuedItem.unitPrice",
+        "short": "Contract Term Valued Item fee, charge, or cost",
+        "definition": "A Contract Provision Valued Item unit valuation measure.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Contract.term.valuedItem.unitPrice",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Money"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "COCT_RM440000UV09 ValuedUnitItem unitPriceAmt"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.term.valuedItem.factor",
+        "path": "Contract.term.valuedItem.factor",
+        "short": "Contract Term Valued Item Price Scaling Factor",
+        "definition": "A real number that represents a multiplier used in determining the overall value of the Contract Provision Valued Item delivered. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Contract.term.valuedItem.factor",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "COCT_RM440000UV09 ValuedUnitItem factorNumber"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.term.valuedItem.points",
+        "path": "Contract.term.valuedItem.points",
+        "short": "Contract Term Valued Item Difficulty Scaling Factor",
+        "definition": "An amount that expresses the weighting (based on difficulty, cost and/or resource intensiveness) associated with the Contract Provision Valued Item delivered. The concept of Points allows for assignment of point values for a Contract ProvisionValued Item, such that a monetary amount can be assigned to each point.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Contract.term.valuedItem.points",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "COCT_RM440000UV09 ValuedUnitItem pointNumber"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.term.valuedItem.net",
+        "path": "Contract.term.valuedItem.net",
+        "short": "Total Contract Term Valued Item Value",
+        "definition": "Expresses the product of the Contract Provision Valued Item unitQuantity and the unitPriceAmt. For example, the formula: unit Quantity * unit Price (Cost per Point) * factor Number  * points = net Amount. Quantity, factor and points are assumed to be 1 if not supplied.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Contract.term.valuedItem.net",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Money"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.term.group",
+        "path": "Contract.term.group",
+        "short": "Nested Contract Term Group",
+        "definition": "Nested group of Contract Provisions.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Contract.term.group",
+          "min": 0,
+          "max": "*"
+        },
+        "contentReference": "#Contract:c-cdaonfhirconsent.term"
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.binding[x]",
+        "path": "Contract.binding[x]",
+        "short": "Binding Contract",
+        "definition": "Legally binding Contract: This is the signed and legally recognized representation of the Contract, which is considered the \"source of truth\" and which would be the basis for legal action related to enforcement of this Contract.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Contract.binding[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Attachment"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Composition"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.friendly",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
+            "valueString": "FriendlyLanguage"
+          }
+        ],
+        "path": "Contract.friendly",
+        "short": "Contract Friendly Language",
+        "definition": "The \"patient friendly language\" versionof the Contract in whole or in parts. \"Patient friendly language\" means the representation of the Contract and Contract Provisions in a manner that is readily accessible and understandable by a layperson in accordance with best practices for communication styles that ensure that those agreeing to or signing the Contract understand the roles, actions, obligations, responsibilities, and implication of the agreement.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Contract.friendly",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "children().count() > id.count()",
+            "xpath": "@value|f:*|h:div",
+            "source": "Element"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.friendly.id",
+        "path": "Contract.friendly.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.friendly.extension",
+        "path": "Contract.friendly.extension",
+        "short": "Additional Content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.friendly.modifierExtension",
+        "path": "Contract.friendly.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "BackboneElement.modifierExtension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isModifier": true,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.friendly.content[x]",
+        "path": "Contract.friendly.content[x]",
+        "short": "Easily comprehended representation of this Contract",
+        "definition": "Human readable rendering of this Contract in a format and representation intended to enhance comprehension and ensure understandability.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Contract.friendly.content[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Attachment"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Composition"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.legal",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
+            "valueString": "LegalLanguage"
+          }
+        ],
+        "path": "Contract.legal",
+        "short": "Contract Legal Language",
+        "definition": "List of Legal expressions or representations of this Contract.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Contract.legal",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "children().count() > id.count()",
+            "xpath": "@value|f:*|h:div",
+            "source": "Element"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.legal.id",
+        "path": "Contract.legal.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.legal.extension",
+        "path": "Contract.legal.extension",
+        "short": "Additional Content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.legal.modifierExtension",
+        "path": "Contract.legal.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "BackboneElement.modifierExtension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isModifier": true,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.legal.content[x]",
+        "path": "Contract.legal.content[x]",
+        "short": "Contract Legal Text",
+        "definition": "Contract legal text in human renderable form.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Contract.legal.content[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Attachment"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Composition"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.rule",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
+            "valueString": "ComputableLanguage"
+          }
+        ],
+        "path": "Contract.rule",
+        "short": "Computable Contract Language",
+        "definition": "List of Computable Policy Rule Language Representations of this Contract.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Contract.rule",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "children().count() > id.count()",
+            "xpath": "@value|f:*|h:div",
+            "source": "Element"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.rule.id",
+        "path": "Contract.rule.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.rule.extension",
+        "path": "Contract.rule.extension",
+        "short": "Additional Content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.rule.modifierExtension",
+        "path": "Contract.rule.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "BackboneElement.modifierExtension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isModifier": true,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.rule.content[x]",
+        "path": "Contract.rule.content[x]",
+        "short": "Computable Contract Rules",
+        "definition": "Computable Contract conveyed using a policy rule language (e.g. XACML, DKAL, SecPal).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Contract.rule.content[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Attachment"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+          }
+        ]
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "Contract:c-cdaonfhirconsent",
+        "path": "Contract"
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.identifier",
+        "path": "Contract.identifier",
+        "short": "identifier",
+        "definition": "MAY contain zero or one [0..1] identifier (CONF:2219-2007).",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.type",
+        "path": "Contract.type",
+        "label": "Consent",
+        "short": "Consent",
+        "definition": "SHALL contain exactly one [1..1] type=\"CONS\" (CodeSystem: HL7ActClass urn:oid:2.16.840.1.113883.5.6) (CONF:2219-2008).",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.5.6",
+              "code": "CONS"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Contract:c-cdaonfhirconsent.subType",
+        "path": "Contract.subType",
+        "label": "Type of consent",
+        "short": "Type of consent",
+        "definition": "MAY contain zero or one [0..1] subType (CONF:2219-2009).",
+        "min": 0,
+        "max": "1"
+      }
+    ]
+  }
+}

@@ -1,0 +1,137 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/ccda/Composition/CCDA-on-FHIR-Diagnostic-Imaging-Example> a fhir:Composition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "CCDA-on-FHIR-Diagnostic-Imaging-Example"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "1" ];
+     fhir:Meta.lastUpdated [ fhir:value "2016-06-15T08:16:14Z"^^xsd:dateTime ];
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Diagnostic-Imaging";
+       fhir:index 0
+     ]
+  ];
+  fhir:Resource.language [ fhir:value "en-US"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <p>Diagnostic Imaging Report document for Henry Jones</p>\n            <p>Managed by Community Health and Hospitals</p>\n        </div>"
+  ];
+  fhir:Composition.identifier [
+     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Diagnostic-Imaging" ];
+     fhir:Identifier.value [ fhir:value "1" ]
+  ];
+  fhir:Composition.date [ fhir:value "2016-03-22T09:10:14Z"^^xsd:dateTime];
+  fhir:Composition.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:concept loinc:18748-4;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "18748-4" ];
+       fhir:Coding.display [ fhir:value "Diagnostic imaging study" ]
+     ]
+  ];
+  fhir:Composition.title [ fhir:value "Diagnostic Imaging Report"];
+  fhir:Composition.status [ fhir:value "preliminary"];
+  fhir:Composition.confidentiality [ fhir:value "N"];
+  fhir:Composition.subject [
+     fhir:link <http://fhir3.healthintersections.com.au/open/Patient/c493f2f2-28d5-49ab-90e8-9e8be341f7>;
+     fhir:Reference.reference [ fhir:value "http://fhir3.healthintersections.com.au/open/Patient/c493f2f2-28d5-49ab-90e8-9e8be341f7" ];
+     fhir:Reference.display [ fhir:value "Henry Jones" ]
+  ];
+  fhir:Composition.author [
+     fhir:index 0;
+     fhir:link <http://fhir3.healthintersections.com.au/open/Practitioner/2679baa7-5dac-4d22-81ae-daded84500>;
+     fhir:Reference.reference [ fhir:value "http://fhir3.healthintersections.com.au/open/Practitioner/2679baa7-5dac-4d22-81ae-daded84500" ];
+     fhir:Reference.display [ fhir:value "Adam Everyman, MD" ]
+  ];
+  fhir:Composition.attester [
+     fhir:index 0;
+     fhir:Composition.attester.mode [
+       fhir:value "legal";
+       fhir:index 0
+     ];
+     fhir:Composition.attester.time [ fhir:value "2012-01-04T09:10:14Z"^^xsd:dateTime ];
+     fhir:Composition.attester.party [
+       fhir:link <http://fhir3.healthintersections.com.au/open/Practitioner/2679baa7-5dac-4d22-81ae-daded84500>;
+       fhir:Reference.reference [ fhir:value "http://fhir3.healthintersections.com.au/open/Practitioner/2679baa7-5dac-4d22-81ae-daded84500" ];
+       fhir:Reference.display [ fhir:value "Adam Everyman, MD" ]
+     ]
+  ];
+  fhir:Composition.custodian [
+     fhir:link <http://fhir3.healthintersections.com.au/open/Organization/1213e1ae-afc2-4a7c-8ed3-43b7a4e3d7>;
+     fhir:Reference.reference [ fhir:value "http://fhir3.healthintersections.com.au/open/Organization/1213e1ae-afc2-4a7c-8ed3-43b7a4e3d7" ];
+     fhir:Reference.display [ fhir:value "Community Health and Hospitals" ]
+  ];
+  fhir:Composition.event [
+     fhir:index 0;
+     fhir:Composition.event.code [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:concept sct:73761001;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "73761001" ];
+         fhir:Coding.display [ fhir:value "Colonoscopy" ]
+       ]
+     ];
+     fhir:Composition.event.period [
+       fhir:Period.start [ fhir:value "2015-11-18"^^xsd:date ];
+       fhir:Period.end [ fhir:value "2015-12-12"^^xsd:date ]
+     ]
+  ];
+  fhir:Composition.section [
+     fhir:index 0;
+     fhir:Composition.section.title [ fhir:value "Findings Section" ];
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "urn:oid:1.2.840.10008.2.16.4" ];
+         fhir:Coding.code [ fhir:value "121070" ];
+         fhir:Coding.display [ fhir:value "Findings" ]
+       ]
+     ];
+     fhir:Composition.section.text [
+       fhir:Narrative.status [ fhir:value "generated" ];
+       fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <p>The cardiomediastinum is within normal limits. The trachea is midline. \n                    The previously described opacity at the medial right lung base has cleared. \n                    There are no new infiltrates. There is a new round density at the left hilus, \n                    superiorly (diameter about 45mm). A CT scan is recommended for further evaluation. \n                    The pleural spaces are clear. The visualized musculoskeletal structures and the\n                    upper abdomen are stable and unremarkable.</p>\n            </div>"
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Composition.section.title [ fhir:value "DICOM Object Catalog Section" ];
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "urn:oid:1.2.840.10008.2.16.4" ];
+         fhir:Coding.code [ fhir:value "121181" ];
+         fhir:Coding.display [ fhir:value "DICOM Object Catalog" ]
+       ]
+     ];
+     fhir:Composition.section.text [
+       fhir:Narrative.status [ fhir:value "generated" ];
+       fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <p>Computed Radiography Image Storage</p>\n            </div>"
+     ]
+  ], [
+     fhir:index 2;
+     fhir:Composition.section.title [ fhir:value "Indications for Procedure Section" ];
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "urn:oid:1.2.840.10008.2.16.4" ];
+         fhir:Coding.code [ fhir:value "121109" ];
+         fhir:Coding.display [ fhir:value "Indications for Procedure" ]
+       ]
+     ];
+     fhir:Composition.section.text [
+       fhir:Narrative.status [ fhir:value "generated" ];
+       fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <p>Suspected lung tumor</p>\n            </div>"
+     ]
+  ] .
+
+# -------------------------------------------------------------------------------------
+
