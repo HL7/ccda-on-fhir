@@ -9,11 +9,11 @@
     "output": "output",
     "qa": "qa",
     "txCache" : "txCache",
-    "specification": "http://hl7.org/fhir/2017Jan"
+    "specification": "http://hl7.org/fhir/"
   },
   "dependencyList": [{
     "name": "USCore",
-    "location": "http://hl7.org/fhir/us/core/2017Jan",
+    "location": "http://hl7.org/fhir/us/core",
     "source": "us-core-output"
   }],
   "defaults": {

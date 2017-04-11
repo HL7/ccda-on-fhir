@@ -12,6 +12,13 @@ body.book {
     background-color: #fff;
 }
 
+blockquote.stu-note {
+	margin: 5px;
+	padding:10px;
+  background-color: #fff2ff;
+  border-left-color: #ffa0ff;
+}
+
 .watermark
 {
    background-image: url(watermark.png);
@@ -64,6 +71,7 @@ tr {
 	vertical-align: top;
 	text-align: left;
 }
+
 table.cols {
 	width: 100%;
 }
@@ -85,8 +93,34 @@ table.colsd td {
 	border-spacing: 0;
 	padding: 5px;
 	border-collapse: collapse;
-	background-color: salmon;
+	background-color: #fdd4ce;
 }
+
+table.colsn {
+	width: 100%;
+}
+
+table.colsn td {
+  border: 1px grey solid;
+	border-spacing: 0;
+	padding: 5px;
+	border-collapse: collapse;
+	background-color: #e6ffe6;
+}
+
+table.colse {
+	width: 100%;
+}
+
+table.colse td {
+  border: 1px grey solid;
+	border-spacing: 0;
+	padding: 5px;
+	border-collapse: collapse;
+	background-color: #e6e6e6;
+}
+
+
 
 table.list td {
         border-top: 1px silver solid;
@@ -249,7 +283,7 @@ div.mapping {
 	padding: 5px;
 	margin-bottom: 10px;
 	font-size: 0.75em;
-	width: 670px;
+	width: 800px;
 }
 
 
@@ -673,4 +707,59 @@ tr.diff-del-item {
 }
 .self-link-parent:hover a {
  visibility:visible;
+}
+
+tr.frm-group {
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+  border-bottom: 0px none black;
+  font-weight: bold;
+}
+
+tr.frm-group-n {
+  border: 1px solid black;
+  font-weight: bold;
+}
+
+tr.frm-contents {
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  padding-bottom: 3px;
+  border-bottom: 1px solid black;
+}
+
+td.frm-category {
+  border-left: 1px solid #eeeeee;
+  font-weight: bold;
+  text-align: center;
+}
+
+td.frm-group {
+  background: #f4f4f4;
+  font-weight: bold;
+}
+
+td.frm-null {
+  background: #f4f4f4;
+}
+
+
+td.frm-set {
+  border-left: 1px solid #eeeeee;
+}
+
+.rotate {
+  text-align: center;
+  vertical-align: middle;
+  width: 1.5em;
+}
+.rotate div {
+     -moz-transform: rotate(-90.0deg);  /* FF3.5+ */
+       -o-transform: rotate(-90.0deg);  /* Opera 10.5 */
+  -webkit-transform: rotate(-90.0deg);  /* Saf3.1+, Chrome */
+             filter:  progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083);  /* IE6,IE7 */
+         -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083)"; /* IE8 */
+         margin-left: -10em;
+         margin-right: -10em;
 }
