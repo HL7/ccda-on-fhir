@@ -3,3 +3,4 @@ output/
 qa/
 *.zip
 org.hl7.fhir.igpublisher.jar
+description_html.txt
