@@ -1,0 +1,5 @@
+temp/
+output/
+qa/
+*.zip
+org.hl7.fhir.igpublisher.jar
