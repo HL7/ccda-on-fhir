@@ -6,100 +6,125 @@
 <body>
 <pre class="json">
 {
-  "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition">resourceType</a>" : "Composition",
-  "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.id">id</a>" : "CCDA-on-FHIR-History-and-Physical-Example",
-  "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.meta">meta</a>" : {
-    "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Meta#Meta.versionId">versionId</a>" : "1",
-    "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Meta#Meta.lastUpdated">lastUpdated</a>" : "2016-06-15T08:16:14Z",
-    "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Meta#Meta.profile">profile</a>" : [
+  "<a href="http://hl7-fhir.github.io/composition.html#Composition">resourceType</a>" : "Composition",
+  "<a href="http://hl7-fhir.github.io/composition.html#Composition.id">id</a>" : "CCDA-on-FHIR-History-and-Physical-Example",
+  "<a href="http://hl7-fhir.github.io/composition.html#Composition.meta">meta</a>" : {
+    "<a href="http://hl7-fhir.github.io/datatypes.html#Meta#Meta.versionId">versionId</a>" : "1",
+    "<a href="http://hl7-fhir.github.io/datatypes.html#Meta#Meta.lastUpdated">lastUpdated</a>" : "2016-06-15T08:16:14Z",
+    "<a href="http://hl7-fhir.github.io/datatypes.html#Meta#Meta.profile">profile</a>" : [
       "http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-History-and-Physical"
     ]
   },
-  "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.language">language</a>" : "en-US",
-  "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.text">text</a>" : {
-    "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-    "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
-            &lt;p&gt;History and Physical document for Henry Jones&lt;/p&gt;
+  "<a href="http://hl7-fhir.github.io/composition.html#Composition.text">text</a>" : {
+    "<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+            &lt;p&gt;History and Physical document for Amy Shaw&lt;/p&gt;
             &lt;p&gt;Managed by Community Health and Hospitals&lt;/p&gt;
         &lt;/div&gt;"
   },
-  "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.identifier">identifier</a>" : {
-    "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Identifier#Identifier.system">system</a>" : "http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-History-and-Physical",
-    "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Identifier#Identifier.value">value</a>" : "1"
+  "<a href="http://hl7-fhir.github.io/composition.html#Composition.extension">extension</a>" : [
+    {
+      "<a href="http://hl7-fhir.github.io/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Data-Enterer",
+      "<a href="http://hl7-fhir.github.io/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "http://hl7.org/fhir/us/core/Practitioner-practitioner-1.xml"
+    },
+    {
+      "<a href="http://hl7-fhir.github.io/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Informant",
+      "<a href="http://hl7-fhir.github.io/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "http://hl7.org/fhir/us/core/Practitioner-practitioner-1.xml"
+    },
+    {
+      "<a href="http://hl7-fhir.github.io/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Information-Recipient",
+      "<a href="http://hl7-fhir.github.io/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "http://hl7.org/fhir/us/core/Practitioner-practitioner-1.xml"
+    },
+    {
+      "<a href="http://hl7-fhir.github.io/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Participant",
+      "<a href="http://hl7-fhir.github.io/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "http://hl7.org/fhir/relatedperson-example-peter.xml.html"
+    },
+    {
+      "<a href="http://hl7-fhir.github.io/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Performer",
+      "<a href="http://hl7-fhir.github.io/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "http://hl7.org/fhir/us/core/Practitioner-practitioner-1.xml"
+    },
+    {
+      "<a href="http://hl7-fhir.github.io/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Authorization",
+      "<a href="http://hl7-fhir.github.io/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "http://hl7.org/fhir/ccda/StructureDefinition/ccda-consent"
+    }
+  ],
+  "<a href="http://hl7-fhir.github.io/composition.html#Composition.identifier">identifier</a>" : {
+    "<a href="http://hl7-fhir.github.io/datatypes.html#Identifier#Identifier.system">system</a>" : "http://hl7.org/fhir/ccda/StructureDefinition/CCDA_on_FHIR_History_and_Physical",
+    "<a href="http://hl7-fhir.github.io/datatypes.html#Identifier#Identifier.value">value</a>" : "1"
   },
-  "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.date">date</a>" : "2016-02-28T09:10:14Z",
-  "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.type">type</a>" : {
-    "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+  "<a href="http://hl7-fhir.github.io/composition.html#Composition.status">status</a>" : "preliminary",
+  "<a href="http://hl7-fhir.github.io/composition.html#Composition.type">type</a>" : {
+    "<a href="http://hl7-fhir.github.io/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
       {
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">code</a>" : "34117-2",
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">display</a>" : "History and Physical Note"
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.code">code</a>" : "34117-2",
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.display">display</a>" : "History and Physical Note"
       }
     ]
   },
-  "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.title">title</a>" : "History and Physical",
-  "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.status">status</a>" : "preliminary",
-  "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.confidentiality">confidentiality</a>" : "N",
-  "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.subject">subject</a>" : {
-    "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "http://fhir3.healthintersections.com.au/open/Patient/c493f2f2-28d5-49ab-90e8-9e8be341f7",
-    "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a>" : "Henry Jones"
+  "<a href="http://hl7-fhir.github.io/composition.html#Composition.subject">subject</a>" : {
+    "<a href="http://hl7-fhir.github.io/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/us/core/Patient-example.xml",
+    "<a href="http://hl7-fhir.github.io/datatypes.html#Reference#Reference.display">display</a>" : "Amy V. Shaw"
   },
-  "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.author">author</a>" : [
+  "<a href="http://hl7-fhir.github.io/composition.html#Composition.date">date</a>" : "2016-02-28T09:10:14Z",
+  "<a href="http://hl7-fhir.github.io/composition.html#Composition.author">author</a>" : [
     {
-      "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "http://fhir3.healthintersections.com.au/open/Practitioner/2679baa7-5dac-4d22-81ae-daded84500",
-      "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a>" : "Adam Everyman, MD"
+      "<a href="http://hl7-fhir.github.io/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/us/core/Practitioner-practitioner-1.xml",
+      "<a href="http://hl7-fhir.github.io/datatypes.html#Reference#Reference.display">display</a>" : "Ronald Boone, MD"
     }
   ],
-  "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.attester">attester</a>" : [
+  "<a href="http://hl7-fhir.github.io/composition.html#Composition.title">title</a>" : "History and Physical Note",
+  "<a href="http://hl7-fhir.github.io/composition.html#Composition.confidentiality">confidentiality</a>" : "N",
+  "<a href="http://hl7-fhir.github.io/composition.html#Composition.attester">attester</a>" : [
     {
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.attester.mode">mode</a>" : [
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.attester.mode">mode</a>" : [
         "legal"
       ],
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.attester.time">time</a>" : "2012-01-04T09:10:14Z",
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.attester.party">party</a>" : {
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "http://fhir3.healthintersections.com.au/open/Practitioner/2679baa7-5dac-4d22-81ae-daded84500",
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a>" : "Adam Everyman, MD"
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.attester.time">time</a>" : "2012-01-04T09:10:14Z",
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.attester.party">party</a>" : {
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/us/core/Practitioner-practitioner-1.xml",
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Reference#Reference.display">display</a>" : "Ronald Boone, MD"
       }
     }
   ],
-  "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.custodian">custodian</a>" : {
-    "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "http://fhir3.healthintersections.com.au/open/Organization/1213e1ae-afc2-4a7c-8ed3-43b7a4e3d7",
-    "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.display">display</a>" : "Community Health and Hospitals"
+  "<a href="http://hl7-fhir.github.io/composition.html#Composition.custodian">custodian</a>" : {
+    "<a href="http://hl7-fhir.github.io/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/us/core/Organization-acme-lab.xml",
+    "<a href="http://hl7-fhir.github.io/datatypes.html#Reference#Reference.display">display</a>" : "Acme Labs"
   },
-  "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.event">event</a>" : [
+  "<a href="http://hl7-fhir.github.io/composition.html#Composition.event">event</a>" : [
     {
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.event.code">code</a>" : [
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.event.code">code</a>" : [
         {
-          "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+          "<a href="http://hl7-fhir.github.io/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
             {
-              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">system</a>" : "http://hl7.org/fhir/v3/ActClass",
-              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">code</a>" : "PCPR",
-              "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">display</a>" : "Care Provision"
+              "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.system">system</a>" : "http://hl7.org/fhir/v3/ActClass",
+              "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.code">code</a>" : "PCPR",
+              "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.display">display</a>" : "Care Provision"
             }
           ]
         }
       ],
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.event.period">period</a>" : {
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Period#Period.start">start</a>" : "2015-11-18",
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Period#Period.end">end</a>" : "2015-12-12"
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.event.period">period</a>" : {
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Period#Period.start">start</a>" : "2015-11-18",
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Period#Period.end">end</a>" : "2015-12-12"
       }
     }
   ],
-  "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section">section</a>" : [
+  "<a href="http://hl7-fhir.github.io/composition.html#Composition.section">section</a>" : [
     {
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.title">title</a>" : "Allergies and Intolerances Section",
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.code">code</a>" : {
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.title">title</a>" : "Allergies and Intolerances Section",
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.code">code</a>" : {
+        "<a href="http://hl7-fhir.github.io/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
           {
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">code</a>" : "48765-2",
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">display</a>" : "Allergies and adverse reactions"
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.code">code</a>" : "48765-2",
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.display">display</a>" : "Allergies and adverse reactions"
           }
         ]
       },
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.text">text</a>" : {
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.text">text</a>" : {
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
                 &lt;table&gt;
                     &lt;tr&gt;
                         &lt;td&gt;
@@ -128,31 +153,36 @@
                 &lt;/table&gt;
             &lt;/div&gt;"
       },
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.mode">mode</a>" : "snapshot",
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.orderedBy">orderedBy</a>" : {
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.mode">mode</a>" : "snapshot",
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.orderedBy">orderedBy</a>" : {
+        "<a href="http://hl7-fhir.github.io/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
           {
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">system</a>" : "http://hl7.org/fhir/list-order",
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">code</a>" : "event-date",
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">display</a>" : "Sorted by Event Date"
-          }
-        ]
-      }
-    },
-    {
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.title">title</a>" : " Assessment Section",
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.code">code</a>" : {
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">code</a>" : "51848-0",
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">display</a>" : "Assessment (evaluation)"
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.system">system</a>" : "http://hl7.org/fhir/list-order",
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.code">code</a>" : "event-date",
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.display">display</a>" : "Sorted by Event Date"
           }
         ]
       },
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.text">text</a>" : {
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.entry">entry</a>" : [
+        {
+          "<a href="http://hl7-fhir.github.io/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/us/core/AllergyIntolerance-example.xml"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.title">title</a>" : " Assessment Section",
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.code">code</a>" : {
+        "<a href="http://hl7-fhir.github.io/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+          {
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.code">code</a>" : "51848-0",
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.display">display</a>" : "Assessment (evaluation)"
+          }
+        ]
+      },
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.text">text</a>" : {
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
                 &lt;p&gt;Obesity.&lt;/p&gt;
                 &lt;p&gt;Uncontrolled brittle Type II diabetic.&lt;/p&gt;
                 &lt;p&gt;Shortness of breath, mild wheezing.&lt;/p&gt;
@@ -161,19 +191,19 @@
       }
     },
     {
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.title">title</a>" : "Assessment and Plan Section",
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.code">code</a>" : {
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.title">title</a>" : "Assessment and Plan Section",
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.code">code</a>" : {
+        "<a href="http://hl7-fhir.github.io/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
           {
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">code</a>" : "51847-2",
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">display</a>" : "Assessment (evaluation) and plan"
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.code">code</a>" : "51847-2",
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.display">display</a>" : "Assessment (evaluation) and plan"
           }
         ]
       },
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.text">text</a>" : {
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.text">text</a>" : {
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
                 &lt;p&gt;Recurrent GI bleed of unknown etiology; hypotension perhaps
                     secondary to this but as likely secondary to polypharmacy&lt;/p&gt;
                 &lt;p&gt;Acute on chronic anemia secondary to #1.&lt;/p&gt;
@@ -184,55 +214,55 @@
       }
     },
     {
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.title">title</a>" : "Chief Complaint and Reason for Visit Section",
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.code">code</a>" : {
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.title">title</a>" : "Chief Complaint and Reason for Visit Section",
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.code">code</a>" : {
+        "<a href="http://hl7-fhir.github.io/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
           {
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">code</a>" : "46239-0",
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">display</a>" : "Chief complaint and reason for visit"
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.code">code</a>" : "46239-0",
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.display">display</a>" : "Chief complaint and reason for visit"
           }
         ]
       },
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.text">text</a>" : {
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.text">text</a>" : {
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
                 &lt;p&gt;Cramping, bloating, and constipation.&lt;/p&gt;
             &lt;/div&gt;"
       }
     },
     {
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.title">title</a>" : "Chief Complaint Section",
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.code">code</a>" : {
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.title">title</a>" : "Chief Complaint Section",
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.code">code</a>" : {
+        "<a href="http://hl7-fhir.github.io/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
           {
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">code</a>" : "10154-3",
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">display</a>" : "Chief complaint"
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.code">code</a>" : "10154-3",
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.display">display</a>" : "Chief complaint"
           }
         ]
       },
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.text">text</a>" : {
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.text">text</a>" : {
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
                 &lt;p&gt;Dark Stools&lt;/p&gt;
             &lt;/div&gt;"
       }
     },
     {
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.title">title</a>" : "Family History Section",
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.code">code</a>" : {
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.title">title</a>" : "Family History Section",
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.code">code</a>" : {
+        "<a href="http://hl7-fhir.github.io/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
           {
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">code</a>" : "10157-6",
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">display</a>" : "History of family member diseases"
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.code">code</a>" : "10157-6",
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.display">display</a>" : "History of family member diseases"
           }
         ]
       },
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.text">text</a>" : {
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.text">text</a>" : {
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
                 &lt;table&gt;
                     &lt;tr&gt;
                         &lt;td&gt;
@@ -260,37 +290,37 @@
       }
     },
     {
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.title">title</a>" : " General Status Section",
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.code">code</a>" : {
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.title">title</a>" : " General Status Section",
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.code">code</a>" : {
+        "<a href="http://hl7-fhir.github.io/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
           {
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">code</a>" : "10210-3",
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">display</a>" : "Physical findings of General status"
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.code">code</a>" : "10210-3",
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.display">display</a>" : "Physical findings of General status"
           }
         ]
       },
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.text">text</a>" : {
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.text">text</a>" : {
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
                 &lt;p&gt;Alert and in good spirits, no acute distress.&lt;/p&gt;
             &lt;/div&gt;"
       }
     },
     {
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.title">title</a>" : "History of Past Illness Section",
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.code">code</a>" : {
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.title">title</a>" : "History of Past Illness Section",
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.code">code</a>" : {
+        "<a href="http://hl7-fhir.github.io/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
           {
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">code</a>" : "11348-0",
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">display</a>" : "History of past illness"
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.code">code</a>" : "11348-0",
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.display">display</a>" : "History of past illness"
           }
         ]
       },
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.text">text</a>" : {
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.text">text</a>" : {
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
                 &lt;table&gt;
                     &lt;tr&gt;
                         &lt;td&gt;
@@ -321,19 +351,19 @@
       }
     },
     {
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.title">title</a>" : "History of Present Illness Section",
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.code">code</a>" : {
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.title">title</a>" : "History of Present Illness Section",
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.code">code</a>" : {
+        "<a href="http://hl7-fhir.github.io/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
           {
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">code</a>" : "10164-2",
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">display</a>" : "History of present illness"
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.code">code</a>" : "10164-2",
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.display">display</a>" : "History of present illness"
           }
         ]
       },
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.text">text</a>" : {
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.text">text</a>" : {
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
                 &lt;p&gt;This patient was only recently discharged for a recurrent GI bleed as described below. &lt;/p&gt;
                 &lt;p&gt;He presented to the ER today c/o a dark stool yesterday but a normal brown
                     stool today. On exam he was hypotensive in the 80?s resolved after .... .... .... &lt;/p&gt;
@@ -347,19 +377,19 @@
       }
     },
     {
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.title">title</a>" : "Immunizations Section",
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.code">code</a>" : {
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.title">title</a>" : "Immunizations Section",
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.code">code</a>" : {
+        "<a href="http://hl7-fhir.github.io/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
           {
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">code</a>" : "11369-6",
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">display</a>" : "History of immunization"
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.code">code</a>" : "11369-6",
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.display">display</a>" : "History of immunization"
           }
         ]
       },
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.text">text</a>" : {
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.text">text</a>" : {
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
                 &lt;table&gt;
                     &lt;tr&gt;
                         &lt;td&gt;
@@ -380,44 +410,44 @@
                 &lt;/table&gt;
             &lt;/div&gt;"
       },
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.entry">entry</a>" : [
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.entry">entry</a>" : [
         {
-          "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "http://fhir3.healthintersections.com.au/open/Immunization/de43e197-62fb-4337-81bd-8523b9a8af"
+          "<a href="http://hl7-fhir.github.io/datatypes.html#Reference#Reference.reference">reference</a>" : "http://fhir3.healthintersections.com.au/open/Immunization/de43e197-62fb-4337-81bd-8523b9a8af"
         }
       ]
     },
     {
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.title">title</a>" : "Instructions Section",
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.code">code</a>" : {
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.title">title</a>" : "Instructions Section",
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.code">code</a>" : {
+        "<a href="http://hl7-fhir.github.io/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
           {
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">code</a>" : "69730-0",
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">display</a>" : " Instructions"
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.code">code</a>" : "69730-0",
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.display">display</a>" : " Instructions"
           }
         ]
       },
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.text">text</a>" : {
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.text">text</a>" : {
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
                 &lt;p&gt;Patient may have low grade fever, mild joint pain and injection area tenderness.&lt;/p&gt;
             &lt;/div&gt;"
       }
     },
     {
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.title">title</a>" : "Medication Section",
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.code">code</a>" : {
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.title">title</a>" : "Medication Section",
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.code">code</a>" : {
+        "<a href="http://hl7-fhir.github.io/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
           {
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">code</a>" : "10160-0",
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">display</a>" : "History of Medication Use"
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.code">code</a>" : "10160-0",
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.display">display</a>" : "History of Medication Use"
           }
         ]
       },
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.text">text</a>" : {
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.text">text</a>" : {
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
                 &lt;table&gt;
                     &lt;tr&gt;
                         &lt;td&gt;
@@ -450,26 +480,26 @@
                 &lt;/table&gt;
             &lt;/div&gt;"
       },
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.entry">entry</a>" : [
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.entry">entry</a>" : [
         {
-          "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "http://fhir3.healthintersections.com.au/open/Medication/73bdc4a1-736c-4d79-8f42-620a19a367"
+          "<a href="http://hl7-fhir.github.io/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/us/core/MedicationStatement-uscore-ms1.xml"
         }
       ]
     },
     {
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.title">title</a>" : "Physical Exam Section",
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.code">code</a>" : {
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.title">title</a>" : "Physical Exam Section",
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.code">code</a>" : {
+        "<a href="http://hl7-fhir.github.io/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
           {
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">code</a>" : "29545-1",
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">display</a>" : "Physical findings"
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.code">code</a>" : "29545-1",
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.display">display</a>" : "Physical findings"
           }
         ]
       },
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.text">text</a>" : {
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.text">text</a>" : {
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
                 &lt;p&gt;HEENT: All normal to examination.&lt;/p&gt;
                 &lt;p&gt;&amp;gt;HEART: RRR, no murmur.&lt;/p&gt;
                 &lt;p&gt;THORAX &amp;amp; LUNGS: Clear without rhonchi or wheeze.&lt;/p&gt;
@@ -480,19 +510,19 @@
       }
     },
     {
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.title">title</a>" : "Plan of Treatment Section",
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.code">code</a>" : {
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.title">title</a>" : "Plan of Treatment Section",
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.code">code</a>" : {
+        "<a href="http://hl7-fhir.github.io/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
           {
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">code</a>" : "18776-5",
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">display</a>" : "Plan of treatment"
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.code">code</a>" : "18776-5",
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.display">display</a>" : "Plan of treatment"
           }
         ]
       },
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.text">text</a>" : {
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.text">text</a>" : {
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
                 &lt;table&gt;
                     &lt;tr&gt;
                         &lt;td&gt;
@@ -520,19 +550,19 @@
       }
     },
     {
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.title">title</a>" : "Problem Section",
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.code">code</a>" : {
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.title">title</a>" : "Problem Section",
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.code">code</a>" : {
+        "<a href="http://hl7-fhir.github.io/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
           {
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">code</a>" : "11450-4",
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">display</a>" : "Problem list"
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.code">code</a>" : "11450-4",
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.display">display</a>" : "Problem list"
           }
         ]
       },
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.text">text</a>" : {
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.text">text</a>" : {
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
                 &lt;table&gt;
                     &lt;tr&gt;
                         &lt;td&gt;
@@ -560,22 +590,27 @@
                     &lt;/tr&gt;
                 &lt;/table&gt;
             &lt;/div&gt;"
-      }
+      },
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.entry">entry</a>" : [
+        {
+          "<a href="http://hl7-fhir.github.io/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/us/core/Condition-hc1.xml"
+        }
+      ]
     },
     {
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.title">title</a>" : "Procedures Section",
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.code">code</a>" : {
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.title">title</a>" : "Procedures Section",
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.code">code</a>" : {
+        "<a href="http://hl7-fhir.github.io/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
           {
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">code</a>" : "47519-4",
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">display</a>" : "History of procedures"
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.code">code</a>" : "47519-4",
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.display">display</a>" : "History of procedures"
           }
         ]
       },
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.text">text</a>" : {
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.text">text</a>" : {
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
                 &lt;table&gt;
                     &lt;tr&gt;
                         &lt;td&gt;
@@ -604,44 +639,44 @@
                 &lt;/table&gt;
             &lt;/div&gt;"
       },
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.entry">entry</a>" : [
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.entry">entry</a>" : [
         {
-          "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "http://fhir3.healthintersections.com.au/open/Procedure/62735e39-bc54-4636-b47e-9e3e5709ae"
+          "<a href="http://hl7-fhir.github.io/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/us/core/Procedure-rehab.xml"
         }
       ]
     },
     {
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.title">title</a>" : "Reason for Visit Section",
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.code">code</a>" : {
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.title">title</a>" : "Reason for Visit Section",
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.code">code</a>" : {
+        "<a href="http://hl7-fhir.github.io/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
           {
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">code</a>" : "29299-5",
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">display</a>" : "Reason for visit"
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.code">code</a>" : "29299-5",
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.display">display</a>" : "Reason for visit"
           }
         ]
       },
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.text">text</a>" : {
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.text">text</a>" : {
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
                 &lt;p&gt;Tenderness of lower abdomen&lt;/p&gt;
             &lt;/div&gt;"
       }
     },
     {
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.title">title</a>" : "Results Section",
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.code">code</a>" : {
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.title">title</a>" : "Results Section",
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.code">code</a>" : {
+        "<a href="http://hl7-fhir.github.io/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
           {
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">code</a>" : "30954-2",
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">display</a>" : "Relevant diagnostic tests and laboratory data"
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.code">code</a>" : "30954-2",
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.display">display</a>" : "Relevant diagnostic tests and laboratory data"
           }
         ]
       },
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.text">text</a>" : {
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.text">text</a>" : {
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
                 &lt;table&gt;
                     &lt;tr&gt;
                         &lt;td&gt;
@@ -666,26 +701,26 @@
                 &lt;/table&gt;
             &lt;/div&gt;"
       },
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.entry">entry</a>" : [
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.entry">entry</a>" : [
         {
-          "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "http://fhir3.healthintersections.com.au/open/Observation/dce96908-11fc-49e0-9d55-7442b0eff9"
+          "<a href="http://hl7-fhir.github.io/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/us/core/Observation-usg.xml"
         }
       ]
     },
     {
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.title">title</a>" : "Review of Systems Section",
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.code">code</a>" : {
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.title">title</a>" : "Review of Systems Section",
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.code">code</a>" : {
+        "<a href="http://hl7-fhir.github.io/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
           {
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">code</a>" : "10187-3",
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">display</a>" : "Review of systems"
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.code">code</a>" : "10187-3",
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.display">display</a>" : "Review of systems"
           }
         ]
       },
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.text">text</a>" : {
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.text">text</a>" : {
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
                 &lt;p&gt;Patient denies recent history of fever or malaise. Positive for weakness and
                    shortness of breath. Several episodes of abdominal tenderness. No recent headaches. 
                    Positive for osteoarthritis in hips, knees and hands. &lt;/p&gt;
@@ -693,19 +728,19 @@
       }
     },
     {
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.title">title</a>" : "Social History Section",
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.code">code</a>" : {
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.title">title</a>" : "Social History Section",
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.code">code</a>" : {
+        "<a href="http://hl7-fhir.github.io/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
           {
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">code</a>" : "29762-2",
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">display</a>" : "Social history"
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.code">code</a>" : "29762-2",
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.display">display</a>" : "Social history"
           }
         ]
       },
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.text">text</a>" : {
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.text">text</a>" : {
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
                 &lt;table&gt;
                     &lt;tr&gt;
                         &lt;td&gt;
@@ -726,26 +761,26 @@
                 &lt;/table&gt;
             &lt;/div&gt;"
       },
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.entry">entry</a>" : [
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.entry">entry</a>" : [
         {
-          "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "http://fhir3.healthintersections.com.au/open/Observation/4d0aba77-8fc0-4739-9ea6-b958c63378"
+          "<a href="http://hl7-fhir.github.io/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/us/core/Observation-some-day-smoker.xml"
         }
       ]
     },
     {
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.title">title</a>" : "Vital Signs Section",
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.code">code</a>" : {
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.title">title</a>" : "Vital Signs Section",
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.code">code</a>" : {
+        "<a href="http://hl7-fhir.github.io/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
           {
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.code">code</a>" : "8716-3",
-            "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Coding#Coding.display">display</a>" : "Vital signs"
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.code">code</a>" : "8716-3",
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.display">display</a>" : "Vital signs"
           }
         ]
       },
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.text">text</a>" : {
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-        "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.text">text</a>" : {
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
                 &lt;table&gt;
                     &lt;tr&gt;
                         &lt;td&gt;
@@ -766,9 +801,9 @@
                 &lt;/table&gt;
             &lt;/div&gt;"
       },
-      "<a href="http://hl7.org/fhir/2017Jan/composition.html#Composition.section.entry">entry</a>" : [
+      "<a href="http://hl7-fhir.github.io/composition.html#Composition.section.entry">entry</a>" : [
         {
-          "<a href="http://hl7.org/fhir/2017Jan/datatypes.html#Reference#Reference.reference">reference</a>" : "http://fhir3.healthintersections.com.au/open/Observation/bc96946f-c13f-4a7c-a396-92f8523763"
+          "<a href="http://hl7-fhir.github.io/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/us/core/Observation-temperature.xml"
         }
       ]
     }
