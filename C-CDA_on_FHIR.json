@@ -1,7 +1,9 @@
 {
   "tool": "jekyll",
   "paths": {
-    "resources": ["resources"],
+    "resources": [
+      "resources"
+    ],
     "pages": "pages",
     "temp": "temp",
     "output": "output",
@@ -13,191 +15,140 @@
       "template-format": "instance-template-format.html",
       "template-base": "instance-template-base.html"
     },
-    "StructureDefinition": {"template-format": "instance-template-sd.html"},
-    "Composition": {
-      "template-format": "instance-template-format-example.html",
-      "template-base": "instance-template-example.html"
-    },
-    "Extension": {
-      "template-format": "instance-template-format-example.html",
-      "template-base": "instance-template-example.html"
-    },
-    "Contract": {
-      "template-format": "instance-template-format-example.html",
-      "template-base": "instance-template-example.html"
+    "StructureDefinition": {
+      "template-base": "instance-template-sd.html"
     }
   },
   "canonicalBase": "http://hl7.org/fhir/ccda",
-  "source": "implementationguide/ImplementationGuide_2219.xml",
+  "source": "ImplementationGuide/ImplementationGuide_2219.xml",
   "sct-edition": "http://snomed.info/sct/731000124108",
+  "special-urls": [],
   "resources": {
     "StructureDefinition/CCDA-on-FHIR-US-Realm-Header": {
-      "template-base": "instance-template-sd-no-example.html",
-      "base": "StructureDefinition_CCDA-on-FHIR-US-Realm-Header.html"
+      "base": "StructureDefinition-CCDA-on-FHIR-US-Realm-Header.html"
     },
     "StructureDefinition/CCDA-on-FHIR-Continuity-of-Care-Document": {
-      "template-base": "instance-template-sd-no-example.html",
-      "base": "StructureDefinition_CCDA-on-FHIR-Continuity-of-Care-Document.html"
+      "base": "StructureDefinition-CCDA-on-FHIR-Continuity-of-Care-Document.html"
     },
     "StructureDefinition/CCDA-on-FHIR-Discharge-Summary": {
-      "template-base": "instance-template-sd-no-example.html",
-      "base": "StructureDefinition_CCDA-on-FHIR-Discharge-Summary.html"
+      "base": "StructureDefinition-CCDA-on-FHIR-Discharge-Summary.html"
     },
     "StructureDefinition/CCDA-on-FHIR-Consultation-Note": {
-      "template-base": "instance-template-sd-no-example.html",
-      "base": "StructureDefinition_CCDA-on-FHIR-Consultation-Note.html"
+      "base": "StructureDefinition-CCDA-on-FHIR-Consultation-Note.html"
     },
     "StructureDefinition/CCDA-on-FHIR-Referral-Note": {
-      "template-base": "instance-template-sd-no-example.html",
-      "base": "StructureDefinition_CCDA-on-FHIR-Referral-Note.html"
+      "base": "StructureDefinition-CCDA-on-FHIR-Referral-Note.html"
     },
     "StructureDefinition/CCDA-on-FHIR-Care-Plan": {
-      "template-base": "instance-template-sd-no-example.html",
-      "base": "StructureDefinition_CCDA-on-FHIR-Care-Plan.html"
+      "base": "StructureDefinition-CCDA-on-FHIR-Care-Plan.html"
     },
     "StructureDefinition/CCDA-on-FHIR-Procedure-Note": {
-      "template-base": "instance-template-sd-no-example.html",
-      "base": "StructureDefinition_CCDA-on-FHIR-Procedure-Note.html"
+      "base": "StructureDefinition-CCDA-on-FHIR-Procedure-Note.html"
     },
     "StructureDefinition/CCDA-on-FHIR-History-and-Physical": {
-      "template-base": "instance-template-sd-no-example.html",
-      "base": "StructureDefinition_CCDA-on-FHIR-History-and-Physical.html"
+      "base": "StructureDefinition-CCDA-on-FHIR-History-and-Physical.html"
     },
     "StructureDefinition/CCDA-on-FHIR-Diagnostic-Imaging": {
-      "template-base": "instance-template-sd-no-example.html",
-      "base": "StructureDefinition_CCDA-on-FHIR-Diagnostic-Imaging.html"
+      "base": "StructureDefinition-CCDA-on-FHIR-Diagnostic-Imaging.html"
     },
     "StructureDefinition/CCDA-on-FHIR-Data-Enterer": {
-      "template-base": "instance-template-sd-no-example.html",
-      "base": "StructureDefinition_CCDA-on-FHIR-Data-Enterer.html"
+      "base": "StructureDefinition-CCDA-on-FHIR-Data-Enterer.html"
     },
     "StructureDefinition/CCDA-on-FHIR-Informant": {
-      "template-base": "instance-template-sd-no-example.html",
-      "base": "StructureDefinition_CCDA-on-FHIR-Informant.html"
+      "base": "StructureDefinition-CCDA-on-FHIR-Informant.html"
     },
     "StructureDefinition/CCDA-on-FHIR-Information-Recipient": {
-      "template-base": "instance-template-sd-no-example.html",
-      "base": "StructureDefinition_CCDA-on-FHIR-Information-Recipient.html"
+      "base": "StructureDefinition-CCDA-on-FHIR-Information-Recipient.html"
     },
     "StructureDefinition/CCDA-on-FHIR-Participant": {
-      "template-base": "instance-template-sd-no-example.html",
-      "base": "StructureDefinition_CCDA-on-FHIR-Participant.html"
+      "base": "StructureDefinition-CCDA-on-FHIR-Participant.html"
     },
     "StructureDefinition/CCDA-on-FHIR-In-Fulfillment-Of-Order": {
-      "template-base": "instance-template-sd-no-example.html",
-      "base": "StructureDefinition_CCDA-on-FHIR-In-Fulfillment-Of-Order.html"
+      "base": "StructureDefinition-CCDA-on-FHIR-In-Fulfillment-Of-Order.html"
     },
     "StructureDefinition/CCDA-on-FHIR-Performer": {
-      "template-base": "instance-template-sd-no-example.html",
-      "base": "StructureDefinition_CCDA-on-FHIR-Performer.html"
+      "base": "StructureDefinition-CCDA-on-FHIR-Performer.html"
     },
     "StructureDefinition/CCDA-on-FHIR-Operative-Note": {
-      "template-base": "instance-template-sd-no-example.html",
-      "base": "StructureDefinition_CCDA-on-FHIR-Operative-Note.html"
+      "base": "StructureDefinition-CCDA-on-FHIR-Operative-Note.html"
     },
     "StructureDefinition/CCDA-on-FHIR-Progress-Note": {
-      "template-base": "instance-template-sd-no-example.html",
-      "base": "StructureDefinition_CCDA-on-FHIR-Progress-Note.html"
+      "base": "StructureDefinition-CCDA-on-FHIR-Progress-Note.html"
     },
     "StructureDefinition/CCDA-on-FHIR-Consent": {
-      "template-base": "instance-template-sd-no-example.html",
-      "base": "StructureDefinition_CCDA-on-FHIR-Consent.html"
+      "base": "StructureDefinition-CCDA-on-FHIR-Consent.html"
     },
     "StructureDefinition/CCDA-on-FHIR-Authorization": {
-      "template-base": "instance-template-sd-no-example.html",
-      "base": "StructureDefinition_CCDA-on-FHIR-Authorization.html"
+      "base": "StructureDefinition-CCDA-on-FHIR-Authorization.html"
     },
     "StructureDefinition/CCDA-on-FHIR-Transfer-Summary": {
-      "template-base": "instance-template-sd-no-example.html",
-      "base": "StructureDefinition_CCDA-on-FHIR-Transfer-Summary.html"
+      "base": "StructureDefinition-CCDA-on-FHIR-Transfer-Summary.html"
     },
-    "StructureDefinition/CCDAonFHIRVersionNumber": {
-      "template-base": "instance-template-sd-no-example.html",
-      "base": "StructureDefinition_CCDAonFHIRVersionNumber.html"
+    "StructureDefinition/CCDA-on-FHIR-VersionNumber": {
+      "base": "StructureDefinition-CCDA-on-FHIR-VersionNumber.html"
     },
-    "ValueSet/v3-ConfidentialityClassification": {
-      "template-base": "instance-template-format.html",
-      "base": "ValueSet-v3-ConfidentialityClassification.html"
+    "ValueSet/2.16.840.1.113883.11.20.4.1": {
+      "base": "ValueSet-2.16.840.1.113883.11.20.4.1.html"
     },
-    "ValueSet/176": {
-      "template-base": "instance-template-format.html",
-      "base": "ValueSet-176.html"
+    "ValueSet/2.16.840.1.113883.11.20.9.31": {
+      "base": "ValueSet-2.16.840.1.113883.11.20.9.31.html"
     },
-    "ValueSet/208": {
-      "template-base": "instance-template-format.html",
-      "base": "ValueSet-208.html"
+    "ValueSet/2.16.840.1.113883.1.11.20.2.3": {
+      "base": "ValueSet-2.16.840.1.113883.1.11.20.2.3.html"
     },
-    "ValueSet/2426": {
-      "template-base": "instance-template-format.html",
-      "base": "ValueSet-2426.html"
+    "ValueSet/2.16.840.1.113883.11.20.6.1": {
+      "base": "ValueSet-2.16.840.1.113883.11.20.6.1.html"
     },
-    "ValueSet/178": {
-      "template-base": "instance-template-format.html",
-      "base": "ValueSet-178.html"
+    "ValueSet/2.16.840.1.113883.1.11.20.22": {
+      "base": "ValueSet-2.16.840.1.113883.1.11.20.22.html"
     },
-    "ValueSet/173": {
-      "template-base": "instance-template-format.html",
-      "base": "ValueSet-173.html"
+    "ValueSet/1.3.6.1.4.1.12009.10.2.5": {
+      "base": "ValueSet-1.3.6.1.4.1.12009.10.2.5.html"
     },
-    "ValueSet/2757": {
-      "template-base": "instance-template-format.html",
-      "base": "ValueSet-2757.html"
+    "ValueSet/2.16.840.1.113883.11.20.9.59": {
+      "base": "ValueSet-2.16.840.1.113883.11.20.9.59.html"
     },
-    "ValueSet/2467": {
-      "template-base": "instance-template-format.html",
-      "base": "ValueSet-2467.html"
+    "ValueSet/2.16.840.1.113883.11.20.1.1": {
+      "base": "ValueSet-2.16.840.1.113883.11.20.1.1.html"
     },
-    "ValueSet/177": {
-      "template-base": "instance-template-format.html",
-      "base": "ValueSet-177.html"
+    "ValueSet/2.16.840.1.113883.11.20.8.1": {
+      "base": "ValueSet-2.16.840.1.113883.11.20.8.1.html"
     },
-    "ValueSet/166": {
-      "template-base": "instance-template-format.html",
-      "base": "ValueSet-166.html"
-    },
-    "ValueSet/2427": {
-      "template-base": "instance-template-format.html",
-      "base": "ValueSet-2427.html"
+    "ValueSet/2.16.840.1.113883.1.11.20.2.4": {
+      "base": "ValueSet-2.16.840.1.113883.1.11.20.2.4.html"
     },
     "Composition/CCDA-on-FHIR-Continuity-of-Care-Document-Example": {
-      "template-base": "instance-template-example.html",
-      "base": "_includes/CCDA-on-FHIR-Continuity-of-Care-Document-Example.xhtml"
+      "base": "Composition-CCDA-on-FHIR-Continuity-of-Care-Document-Example.html"
     },
     "Composition/CCDA-on-FHIR-Discharge-Summary-Example": {
-      "template-base": "instance-template-example.html",
-      "base": "_includes/CCDA-on-FHIR-Discharge-Summary-Example.xhtml"
+      "base": "Composition-CCDA-on-FHIR-Discharge-Summary-Example.html"
     },
     "Composition/CCDA-on-FHIR-Consultation-Note-Example": {
-      "template-base": "instance-template-example.html",
-      "base": "_includes/CCDA-on-FHIR-Consultation-Note-Example.xhtml"
+      "base": "Composition-CCDA-on-FHIR-Consultation-Note-Example.html"
     },
     "Composition/CCDA-on-FHIR-Referral-Note-Example": {
-      "template-base": "instance-template-example.html",
-      "base": "_includes/CCDA-on-FHIR-Referral-Note-Example.xhtml"
+      "base": "Composition-CCDA-on-FHIR-Referral-Note-Example.html"
     },
     "Composition/CCDA-on-FHIR-Care-Plan-Example": {
-      "template-base": "instance-template-example.html",
-      "base": "_includes/CCDA-on-FHIR-Care-Plan-Example.xhtml"
+      "base": "Composition-CCDA-on-FHIR-Care-Plan-Example.html"
     },
     "Composition/CCDA-on-FHIR-Procedure-Note-Example": {
-      "template-base": "instance-template-example.html",
-      "base": "_includes/CCDA-on-FHIR-Procedure-Note-Example.xhtml"
+      "base": "Composition-CCDA-on-FHIR-Procedure-Note-Example.html"
     },
     "Composition/CCDA-on-FHIR-History-and-Physical-Example": {
-      "template-base": "instance-template-example.html",
-      "base": "_includes/CCDA-on-FHIR-History-and-Physical-Example.xhtml"
+      "base": "Composition-CCDA-on-FHIR-History-and-Physical-Example.html"
     },
     "Composition/CCDA-on-FHIR-Diagnostic-Imaging-Example": {
-      "template-base": "instance-template-example.html",
-      "base": "_includes/CCDA-on-FHIR-Diagnostic-Imaging-Example.xhtml"
+      "base": "Composition-CCDA-on-FHIR-Diagnostic-Imaging-Example.html"
     },
     "Composition/CCDA-on-FHIR-Operative-Note-Example": {
-      "template-base": "instance-template-example.html",
-      "base": "_includes/CCDA-on-FHIR-Operative-Note-Example.xhtml"
+      "base": "Composition-CCDA-on-FHIR-Operative-Note-Example.html"
     },
     "Composition/CCDA-on-FHIR-Progress-Note-Example": {
-      "template-base": "instance-template-example.html",
-      "base": "_includes/CCDA-on-FHIR-Progress-Note-Example.xhtml"
+      "base": "Composition-CCDA-on-FHIR-Progress-Note-Example.html"
+    },
+    "Composition/CCDA-on-FHIR-Transfer-Summary-Example": {
+      "base": "Composition-CCDA-on-FHIR-Transfer-Summary-Example.html"
     }
   }
 }
