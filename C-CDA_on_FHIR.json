@@ -10,6 +10,10 @@
     "qa": "qa",
     "specification": "http://hl7-fhir.github.io/"
   },
+  "dependencyList": [{
+    "name": "USCore",
+    "location": "http://hl7.org/fhir/us/core/"
+  }],
   "defaults": {
     "Any": {
       "template-format": "instance-template-format.html",
