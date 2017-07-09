@@ -4,7 +4,7 @@
     <meta>
         <versionId value="1"/>
         <lastUpdated value="2016-06-15T08:16:14Z"/>
-        <profile value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Continuity-of-Care-Document"/>
+        <profile value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA_on_FHIR_Continuity_of_Care_Document"/>
     </meta>
     <text>
         <status value="generated"/>
@@ -24,7 +24,7 @@
         <valueUri value="http://hl7.org/fhir/us/core/Practitioner-practitioner-1.xml"/>
     </extension>
     <extension url="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Participant">
-        <valueUri value="http://hl7.org/fhir/relatedperson-example-peter.xml.html"/>
+        <valueUri value="http://hl7.org/fhir/relatedperson-example-peter.xml"/>
     </extension>
     <extension url="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Performer">
         <valueUri value="http://hl7.org/fhir/us/core/Practitioner-practitioner-1.xml"/>

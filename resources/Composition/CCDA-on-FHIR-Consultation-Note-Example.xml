@@ -4,7 +4,7 @@
     <meta>
         <versionId value="1"/>
         <lastUpdated value="2016-06-15T08:16:14Z"/>
-        <profile value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Consultation-Note"/>
+        <profile value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA_on_FHIR_Consultation_Note"/>
     </meta>
     <text>
         <status value="generated"/>
@@ -14,9 +14,7 @@
             <p>Managed by Community Health and Hospitals</p>
         </div>
     </text>
-    <extension url="http://hl7.org/fhir/ccda/StructureDefinition/CCDA_on_FHIR_In_Fulfillment_Of_Order">
-        <valueUri value="http://hl7.org/fhir/procedurerequest-example-lipid.xml" />
-    </extension>
+    <!--<extension url="http://hl7.org/fhir/ccda/StructureDefinition/CCDA_on_FHIR_In_Fulfillment_Of_Order"><valueUri value="http://hl7.org/fhir/procedurerequest-example-lipid.xml" /></extension>-->
     <extension url="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Data-Enterer">
         <valueUri value="http://hl7.org/fhir/us/core/Practitioner-practitioner-1.xml"/>
     </extension>

@@ -4,7 +4,7 @@
     <meta>
         <versionId value="1"/>
         <lastUpdated value="2016-06-15T08:16:14Z"/>
-        <profile value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Discharge-Summary"/>
+        <profile value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA_on_FHIR_Discharge_Summary"/>
     </meta>
     <text>
         <status value="generated"/>
@@ -772,15 +772,36 @@
                 <p>You may feel slightly bloated after the procedure because of air that was
                     introduced during the examination. </p>
                 <p> Call your physician if you notice: 
+                    
+                    
+                    
                     <br/> Bleeding or black stools. 
+                    
+                    
+                    
                     <br/>
                     Abdominal pain. 
+                    
+                    
+                    
                     <br/> Fever or chills. 
+                    
+                    
+                    
                     <br/> Nausea or vomiting. 
+                    
+                    
+                    
                     <br/> Any unusual
                     pain or problem. 
+                    
+                    
+                    
                     <br/> Pain or redness at the site where the intravenous needle was
                     placed. 
+                    
+                    
+                    
                     <br/>
                 </p>
                 <p>Do not drink alcohol for 24 hours. Alcohol amplifies the effect of the sedatives given. </p>

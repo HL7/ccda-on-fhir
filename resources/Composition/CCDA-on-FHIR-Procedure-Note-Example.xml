@@ -4,7 +4,7 @@
     <meta>
         <versionId value="1"/>
         <lastUpdated value="2016-06-15T08:16:14Z"/>
-        <profile value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Procedure-Note"/>
+        <profile value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA_on_FHIR_Procedure_Note"/>
     </meta>
     <text>
         <status value="generated"/>
@@ -621,7 +621,7 @@
         </text>
         <!--  Medications Section Resource-->
         <entry>
-            <reference value="http://fhir3.healthintersections.com.au/open/Medication/73bdc4a1-736c-4d79-8f42-620a19a367"/>
+            <reference value="http://hl7.org/fhir/us/core/MedicationStatement-uscore-ms1.xml"/>
         </entry>
     </section>
     <!--  Physical Exam Section Narrative -->
@@ -731,7 +731,7 @@
         </text>
         <!--  Procedures Section Resource -->
         <entry>
-            <reference value="http://fhir3.healthintersections.com.au/open/Procedure/62735e39-bc54-4636-b47e-9e3e5709ae"/>
+            <reference value="http://hl7.org/fhir/us/core/Procedure-rehab.xml"/>
         </entry>
     </section>
     <!--  Reason for Visit Section Narrative -->

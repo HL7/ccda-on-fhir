@@ -4,7 +4,7 @@
     <meta>
         <versionId value="1"/>
         <lastUpdated value="2016-06-15T08:16:14Z"/>
-        <profile value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-History-and-Physical"/>
+        <profile value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA_on_FHIR_History_and_Physical"/>
     </meta>
     <text>
         <status value="generated"/>
@@ -387,7 +387,7 @@
         </text>
         <!--  Immunization Section Resource -->
         <entry>
-            <reference value="http://fhir3.healthintersections.com.au/open/Immunization/de43e197-62fb-4337-81bd-8523b9a8af"/>
+            <reference value="http://hl7.org/fhir/us/core/Immunization-imm-1.xml"/>
         </entry>
     </section>
     <!--  Instructions Section Narrative -->
