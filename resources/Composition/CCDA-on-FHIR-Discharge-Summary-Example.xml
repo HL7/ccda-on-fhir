@@ -15,19 +15,19 @@
         </div>
     </text>
     <extension url="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Data-Enterer">
-        <valueUri value="http://hl7.org/fhir/us/core/Practitioner-practitioner-1.xml"/>
+        <valueUri value="Practitioner/practitioner-1"/>
     </extension>
     <extension url="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Informant">
-        <valueUri value="http://hl7.org/fhir/us/core/Practitioner-practitioner-1.xml"/>
+        <valueUri value="Practitioner/practitioner-1"/>
     </extension>
     <extension url="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Information-Recipient">
-        <valueUri value="http://hl7.org/fhir/us/core/Practitioner-practitioner-1.xml"/>
+        <valueUri value="Practitioner/practitioner-1"/>
     </extension>
     <extension url="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Participant">
-        <valueUri value="http://hl7.org/fhir/relatedperson-example-peter.xml.html"/>
+        <valueUri value="RelatedPerson/related-person"/>
     </extension>
     <extension url="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Performer">
-        <valueUri value="http://hl7.org/fhir/us/core/Practitioner-practitioner-1.xml"/>
+        <valueUri value="Practitioner/practitioner-1"/>
     </extension>
     <extension url="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Authorization">
         <valueUri value="http://hl7.org/fhir/ccda/StructureDefinition/ccda-consent"/>
@@ -46,20 +46,20 @@
     </type>
     <!--  Patient Resource -->
     <subject>
-        <reference value="http://hl7.org/fhir/us/core/Patient-example.xml"/>
+        <reference value="Patient/patient-1"/>
         <display value="Amy V. Shaw"/>
     </subject>
     <date value="2016-02-28T09:10:14Z"/>
     <!--  Practitioner Resource -->
     <author>
-        <reference value="http://hl7.org/fhir/us/core/Practitioner-practitioner-1.xml"/>
+        <reference value="Practitioner/practitioner-1"/>
         <display value="Ronald Boone, MD"/>
     </author>
     <title value="Discharge Summary(CCoF)"/>
     <confidentiality value="N"/>
     <!--  Organization Resource -->
     <custodian>
-        <reference value="http://hl7.org/fhir/us/core/Organization-acme-lab.xml"/>
+        <reference value="Organization/organization-1"/>
         <display value="Acme Labs"/>
     </custodian>
     <!--  Encounter Resource -->
@@ -116,7 +116,7 @@
         </orderedBy>
         <!--  Allergies and Intolerances Section Resource -->
         <entry>
-            <reference value="http://hl7.org/fhir/us/core/AllergyIntolerance-example.xml"/>
+            <reference value="AllergyIntolerance/allergy-intolerance"/>
         </entry>
     </section>
     <!--  Chief Complaint and Reason for Visit Section Narrative -->
@@ -282,7 +282,7 @@
         </text>
         <!--  History of Past Illness Section Condition Resource -->
         <entry>
-            <reference value="http://hl7.org/fhir/us/core/Condition-hc1.xml"/>
+            <reference value="Condition/condition-problem"/>
         </entry>
     </section>
     <!--  History of Present Illness Section Narrative -->
@@ -409,7 +409,7 @@
         </text>
         <!--  Social History Section Observation Resource-->
         <entry>
-            <reference value="http://hl7.org/fhir/us/core/Observation-some-day-smoker.xml"/>
+            <reference value="Observation/observation-smoker"/>
         </entry>
     </section>
     <!--  Functional Status Section Narrative -->
@@ -591,7 +591,7 @@
         </text>
         <!--  Problem Section Condition Resource -->
         <entry>
-            <reference value="http://hl7.org/fhir/us/core/Condition-hc1.xml"/>
+            <reference value="Condition/condition-problem"/>
         </entry>
     </section>
     <!--  Procedures Section Narrative -->
@@ -638,7 +638,7 @@
         </text>
         <!--  Procedures Section Resource -->
         <entry>
-            <reference value="http://hl7.org/fhir/us/core/Procedure-rehab.xml"/>
+            <reference value="Procedure/procedure-rehab"/>
         </entry>
     </section>
     <!--  Discharge Diagnosis Section Narrative -->
@@ -775,7 +775,21 @@
                     
                     
                     
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     <br/> Bleeding or black stools. 
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
                     
@@ -784,11 +798,32 @@
                     
                     
                     
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     <br/> Fever or chills. 
                     
                     
                     
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     <br/> Nausea or vomiting. 
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
                     
@@ -797,8 +832,22 @@
                     
                     
                     
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     <br/> Pain or redness at the site where the intravenous needle was
                     placed. 
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
                     
@@ -917,7 +966,7 @@
         </text>
         <!--  Immunizations Section Resource -->
         <entry>
-            <reference value="http://hl7.org/fhir/us/core/Immunization-imm-1.xml"/>
+            <reference value="Immunization/immunization"/>
         </entry>
     </section>
     <!--  Nutrition Section Narrative -->
@@ -996,7 +1045,7 @@
         </text>
         <!--  Vital Signs Section Observation Resource -->
         <entry>
-            <reference value="http://hl7.org/fhir/us/core/Observation-temperature.xml"/>
+            <reference value="Observation/observation-vitals-temp"/>
         </entry>
     </section>
 </Composition>
