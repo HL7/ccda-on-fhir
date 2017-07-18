@@ -26,25 +26,14 @@
     <type value="Extension"/>
     <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
     <derivation value="constraint"/>
-    <differential>
-        <element>
-            <path value="Extension"/>
-        </element>
-        <element>
-            <path value="Extension.url"/>
-            <short value="@url"/>
-            <definition
-                value="SHALL contain exactly one [1..1] @url=&quot;http://hl7.org/fhir/ccda/StructureDefinition/CCDA_on_FHIR_Performer&quot; (CONF:2219-1867)."/>
-            <min value="1"/>
-            <max value="1"/>
-        </element>
-        <element>
-            <path value="Extension.valueReference"/>
-            <short value="valueReference"/>
-            <definition
-                value="SHALL contain exactly one [1..1] U.S. Core Practitioner Profile (identifier: http://hl7.org/fhir/us/core/StructureDefinition/us-core-pract) (CONF:2219-1868)."/>
-            <min value="1"/>
-            <max value="1"/>
-        </element>
-    </differential>
+  <differential>
+    <element id="Extension.value[x]:valueReference">
+      <path value="Extension.valueReference" />
+      <sliceName value="valueReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-pract" />
+      </type>
+    </element>
+  </differential>
 </StructureDefinition>

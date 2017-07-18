@@ -17,6 +17,14 @@
             <use value="work"/>
         </telecom>
     </contact>
+  <contact>
+    <name value="Rick Geimer" />
+    <telecom>
+      <system value="email" />
+      <value value="rick.geimer@lantanagroup.com" />
+      <use value="work" />
+    </telecom>
+  </contact>
     <description value="C-CDA on FHIR Authorization Extension"/>
     <kind value="complex-type"/>
     <abstract value="false"/>

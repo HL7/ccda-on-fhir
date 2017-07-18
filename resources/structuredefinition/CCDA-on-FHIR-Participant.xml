@@ -25,39 +25,22 @@
     <type value="Extension"/>
     <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
     <derivation value="constraint"/>
-    <differential>
-        <element>
-            <path value="Extension"/>
-        </element>
-        <element>
-            <path value="Extension.url"/>
-            <short value="@url"/>
-            <definition
-                value="SHALL contain exactly one [1..1] @url=&quot;http://hl7.org/fhir/ccda/StructureDefinition/CCDA_on_FHIR_Participant&quot; (CONF:2219-1859)."/>
-            <min value="1"/>
-            <max value="1"/>
-        </element>
-        <element>
-            <path value="Extension.value[x]"/>
-            <slicing>
-                <discriminator>
-                    <type value="value"/>
-                    <path value="@type"/>
-                </discriminator>
-                <rules value="open"/>
-            </slicing>
-            <short value="value[x]"/>
-            <definition
-                value="SHALL contain exactly one [1..1] value[x], where value[x] is (CONF:2219-2474)"/>
-            <min value="1"/>
-            <max value="1"/>
-        </element>
-        <element>
-            <path value="Extension.valueReference"/>
-            <short value="valueReference"/>
-            <definition
-                value="valueReference which includes RelatedPerson (identifier: http://hl7.org/fhir/StructureDefinition/RelatedPerson) (CONF:2219-2475)"
-            />
-        </element>
-    </differential>
+   <differential>
+    <element id="Extension.value[x]:valueReference">
+      <path value="Extension.valueReference" />
+      <sliceName value="valueReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-pract" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+      </type>
+    </element>
+  </differential>
 </StructureDefinition>
