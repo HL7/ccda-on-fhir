@@ -34,24 +34,13 @@
     <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
     <derivation value="constraint"/>
     <differential>
-        <element>
-            <path value="Extension"/>
-        </element>
-        <element>
-            <path value="Extension.url"/>
-            <short value="@url"/>
-            <definition
-                value="SHALL contain exactly one [1..1] @url=&quot;http://hl7.org/fhir/ccda/StructureDefinition/CCDA_on_FHIR_Authorization&quot; (CONF:2219-2010)."/>
-            <min value="1"/>
-            <max value="1"/>
-        </element>
-        <element>
-            <path value="Extension.valueReference"/>
-            <short value="valueReference"/>
-            <definition
-                value="SHALL contain exactly one [1..1] C-CDA on FHIR Consent (identifier: http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Consent) (CONF:2219-2011)."/>
-            <min value="1"/>
-            <max value="1"/>
-        </element>
+    <element id="Extension.value[x]:valueReference">
+      <path value="Extension.valueReference" />
+      <sliceName value="valueReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Consent" />
+      </type>
+    </element>
     </differential>
 </StructureDefinition>

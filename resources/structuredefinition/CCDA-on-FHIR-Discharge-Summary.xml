@@ -39,6 +39,9 @@
   <baseDefinition value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-US-Realm-Header" />
   <derivation value="constraint"/>
   <differential>
+    <element id="Composition">
+      <path value="Composition"/>
+    </element>
     <element id="Composition.section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />

@@ -11,10 +11,14 @@
   <contact>
     <name value="Sarah Gaunt"/>
     <telecom>
-      <value value="+6 141-029-2506"/>
+      <system value="phone"/>
+      <value value="+6-141-029-2506"/>
+      <use value="work"/>
     </telecom>
     <telecom>
+      <system value="email"/>
       <value value="sarah.gaunt@lantanagroup.com"/>
+      <use value="work"/>
     </telecom>
   </contact>
   <contact>
