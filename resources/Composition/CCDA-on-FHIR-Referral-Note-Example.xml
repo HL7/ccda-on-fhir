@@ -14,24 +14,6 @@
             <p>Managed by Community Health and Hospitals</p>
         </div>
     </text>
-    <extension url="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Data-Enterer">
-        <valueUri value="Practitioner/practitioner-1"/>
-    </extension>
-    <extension url="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Informant">
-        <valueUri value="Practitioner/practitioner-1"/>
-    </extension>
-    <extension url="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Information-Recipient">
-        <valueUri value="Practitioner/practitioner-1"/>
-    </extension>
-    <extension url="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Participant">
-        <valueUri value="RelatedPerson/related-person"/>
-    </extension>
-    <extension url="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Performer">
-        <valueUri value="Practitioner/practitioner-1"/>
-    </extension>
-    <extension url="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Authorization">
-        <valueUri value="http://hl7.org/fhir/ccda/StructureDefinition/ccda-consent"/>
-    </extension>
     <identifier>
         <system value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA_on_FHIR_Referral_Note"/>
         <value value="1"/>

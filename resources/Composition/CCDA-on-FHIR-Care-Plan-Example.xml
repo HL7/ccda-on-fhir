@@ -1,5 +1,4 @@
-<Composition
-    xmlns="http://hl7.org/fhir">
+<Composition xmlns="http://hl7.org/fhir">
     <id value="CCDA-on-FHIR-Care-Plan-Example"/>
     <meta>
         <versionId value="1"/>
@@ -8,29 +7,35 @@
     </meta>
     <text>
         <status value="generated"/>
-        <div
-            xmlns="http://www.w3.org/1999/xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
             <p>Care Plan document for Amy Shaw</p>
             <p>Managed by Community Health and Hospitals</p>
         </div>
     </text>
     <extension url="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Data-Enterer">
-        <valueUri value="Practitioner/practitioner-1"/>
+        <valueReference>
+            <reference value="Practitioner/practitioner-1"/>
+        </valueReference>
     </extension>
     <extension url="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Informant">
-        <valueUri value="Practitioner/practitioner-1"/>
+        <valueReference>
+            <reference value="Practitioner/practitioner-1"/>
+        </valueReference>
     </extension>
     <extension url="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Information-Recipient">
-        <valueUri value="Practitioner/practitioner-1"/>
+        <valueReference>
+            <reference value="Practitioner/practitioner-1"/>
+        </valueReference>
     </extension>
     <extension url="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Participant">
-        <valueUri value="RelatedPerson/related-person"/>
+        <valueReference>
+            <reference value="RelatedPerson/related-person"/>
+        </valueReference>
     </extension>
     <extension url="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Performer">
-        <valueUri value="Practitioner/practitioner-1"/>
-    </extension>
-    <extension url="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Authorization">
-        <valueUri value="http://hl7.org/fhir/ccda/StructureDefinition/ccda-consent"/>
+        <valueReference>
+            <reference value="Practitioner/practitioner-1"/>
+        </valueReference>
     </extension>
     <identifier>
         <system value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA_on_FHIR_Care_Plan"/>
@@ -97,8 +102,7 @@
         </code>
         <text>
             <status value="generated"/>
-            <div
-                xmlns="http://www.w3.org/1999/xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
                 <table>
                     <tr>
                         <td>
@@ -150,8 +154,7 @@
         </code>
         <text>
             <status value="generated"/>
-            <div
-                xmlns="http://www.w3.org/1999/xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
                 <table>
                     <tr>
                         <td>
@@ -185,8 +188,7 @@
         </code>
         <text>
             <status value="generated"/>
-            <div
-                xmlns="http://www.w3.org/1999/xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
                 <table>
                     <tr>
                         <td>
@@ -230,8 +232,7 @@
         </code>
         <text>
             <status value="generated"/>
-            <div
-                xmlns="http://www.w3.org/1999/xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
                 <table>
                     <tr>
                         <td>
