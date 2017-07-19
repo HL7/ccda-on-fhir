@@ -219,7 +219,7 @@
         value="SHALL contain exactly one [1..1] confidentiality, which SHALL be selected from ValueSet v3-ConfidentialityClassification http://hl7.org/fhir/ValueSet/v3-ConfidentialityClassification STATIC 2016-01-01 (CONF:2219-151)."/>
       <min value="1"/>
     </element>
-    <element id="6865-03">
+    <element id="Composition.attester">
       <path value="Composition.attester"/>
       <slicing>
         <discriminator>
