@@ -40,7 +40,7 @@
       <definition value="SHALL contain exactly one [1..1] language (CONF:2219-146)."/>
       <min value="1"/>
     </element>
-    <element>
+    <element id="Composition.extension">
       <path value="Composition.extension"/>
       <slicing>
         <discriminator>
