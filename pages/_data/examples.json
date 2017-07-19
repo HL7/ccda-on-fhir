@@ -1,0 +1,90 @@
+{
+  "CCDA-on-FHIR-Continuity-of-Care-Document": {
+    "examples": [
+      {
+        "type": "Composition",
+        "id": "CCDA-on-FHIR-Continuity-of-Care-Document-Example"
+      }
+    ]
+  },
+  "CCDA-on-FHIR-Discharge-Summary": {
+    "examples": [
+      {
+        "type": "Composition",
+        "id": "CCDA-on-FHIR-Discharge-Summary-Example"
+      }
+    ]
+  },
+  "CCDA-on-FHIR-Consultation-Note": {
+    "examples": [
+      {
+        "type": "Composition",
+        "id": "CCDA-on-FHIR-Consultation-Note-Example"
+      }
+    ]
+  },
+  "CCDA-on-FHIR-Referral-Note": {
+    "examples": [
+      {
+        "type": "Composition",
+        "id": "CCDA-on-FHIR-Referral-Note-Example"
+      }
+    ]
+  },
+  "CCDA-on-FHIR-Care-Plan": {
+    "examples": [
+      {
+        "type": "Composition",
+        "id": "CCDA-on-FHIR-Care-Plan-Example"
+      }
+    ]
+  },
+  "CCDA-on-FHIR-Procedure-Note": {
+    "examples": [
+      {
+        "type": "Composition",
+        "id": "CCDA-on-FHIR-Procedure-Note-Example"
+      }
+    ]
+  },
+  "CCDA-on-FHIR-History-and-Physical": {
+    "examples": [
+      {
+        "type": "Composition",
+        "id": "CCDA-on-FHIR-History-and-Physical-Example"
+      }
+    ]
+  },
+  "CCDA-on-FHIR-Diagnostic-Imaging": {
+    "examples": [
+      {
+        "type": "Composition",
+        "id": "CCDA-on-FHIR-Diagnostic-Imaging-Example"
+      }
+    ]
+  },
+  "CCDA-on-FHIR-Operative-Note": {
+    "examples": [
+      {
+        "type": "Composition",
+        "id": "CCDA-on-FHIR-Operative-Note-Example"
+      }
+    ]
+  },
+  "CCDA-on-FHIR-Progress-Note": {
+    "examples": [
+      {
+        "type": "Composition",
+        "id": "CCDA-on-FHIR-Progress-Note-Example"
+      }
+    ]
+  },
+  "CCDA-on-FHIR-Transfer-Summary": {
+    "examples": [
+      {
+        "type": "Composition",
+        "id": "CCDA-on-FHIR-Transfer-Summary-Example"
+      }
+    ]
+  }
+}
