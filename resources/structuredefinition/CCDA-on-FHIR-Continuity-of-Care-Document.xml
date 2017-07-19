@@ -22,11 +22,11 @@
     </telecom>
   </contact>
   <contact>
-    <name value="Rick Geimer" />
+    <name value="Rick Geimer"/>
     <telecom>
-      <system value="email" />
-      <value value="rick.geimer@lantanagroup.com" />
-      <use value="work" />
+      <system value="email"/>
+      <value value="rick.geimer@lantanagroup.com"/>
+      <use value="work"/>
     </telecom>
   </contact>
   <description
@@ -107,7 +107,6 @@
         </discriminator>
         <rules value="open"/>
       </slicing>
-      <definition value="MAY contain zero or one [0..1] section (CONF:2219-1065) such that it"/>
     </element>
     <element id="Composition.section:allergy_intolerance_section_slice">
       <extension
@@ -133,8 +132,6 @@
       <path value="Composition.section.code"/>
       <label value="Allergies and adverse reactions"/>
       <short value="Allergies and adverse reactions"/>
-      <definition
-        value="SHALL contain exactly one [1..1] code=&quot;48765-2&quot; Allergies and Adverse Reactions (CodeSystem: LOINC http://loinc.org) (CONF:2219-1066)."/>
       <min value="1"/>
       <patternCodeableConcept>
         <coding>
@@ -146,26 +143,20 @@
     <element id="Composition.section:allergy_intolerance_section_slice.text">
       <path value="Composition.section.text"/>
       <short value="text"/>
-      <definition value="SHALL contain exactly one [1..1] text (CONF:2219-1068)."/>
       <min value="1"/>
     </element>
     <element id="Composition.section:allergy_intolerance_section_slice.entry">
       <path value="Composition.section.entry"/>
-      <slicing>
-        <discriminator>
-          <type value="value"/>
-          <path value="Composition.status"/>
-        </discriminator>
-        <discriminator>
-          <type value="value"/>
-          <path value="Composition.code"/>
-        </discriminator>
-        <rules value="open"/>
-      </slicing>
-      <definition
-        value="SHOULD contain zero or one [0..1] U.S. Core SmokingStatus Profile (identifier: http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus) (CONF:2219-2433)."
-      />
+      <short value="entry"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile
+          value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance"/>
+      </type>
     </element>
+
     <element id="Composition.section:section_slice_pos4">
       <extension
         url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
@@ -175,7 +166,6 @@
       <sliceName value="section_slice_pos4"/>
       <label value="Medications Section"/>
       <short value="Medications Section"/>
-      <definition value="SHALL contain exactly one [1..1] section (CONF:2219-1051) such that it"/>
       <comment value="Medications Section"/>
       <min value="1"/>
       <max value="1"/>

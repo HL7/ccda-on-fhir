@@ -230,25 +230,21 @@
       <path value="Composition.attester"/>
       <sliceName value="attester_slice_pos17"/>
       <short value="attester"/>
-      <definition value="SHOULD contain zero or one [0..1] attester (CONF:2219-2082) such that it"/>
       <max value="1"/>
     </element>
     <element id="Composition.attester:attester_slice_pos17.mode">
       <path value="Composition.attester.mode"/>
       <short value="mode"/>
-      <definition
-        value="SHALL contain exactly one [1..1] mode=&quot;legal&quot; (CodeSystem: FHIR CompositionAttestationMode http://hl7.org/fhir/composition-attestation-mode) (CONF:2219-2084)."/>
       <max value="1"/>
       <fixedCode value="legal"/>
     </element>
-    <element id="Composition.attester.party">
+    <element id="Composition.attester:attester_slice_pos17.party">
       <path value="Composition.attester.party"/>
       <short value="party"/>
-      <definition
-        value="MAY contain zero or one [0..1] U.S. Core Practitioner Profile (identifier: http://hl7.org/fhir/us/core/StructureDefinition/us-core-pract) (CONF:2219-2085). MAY contain zero or one [0..1] U.S. Core Practitioner Profile (identifier: http://hl7.org/fhir/us/core/StructureDefinition/us-core-pract) (CONF:2219-2087)."/>
+      <min value="1"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-pract"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"/>
       </type>
     </element>
     <element id="Composition.attester:attester_slice_pos18">
@@ -261,6 +257,15 @@
       <path value="Composition.attester.mode"/>
       <short value="mode"/>
       <definition value="SHALL contain at least one [1..*] mode (CONF:2219-2086)."/>
+    </element>
+    <element id="Composition.attester:attester_slice_pos18.party">
+      <path value="Composition.attester.party"/>
+      <short value="party"/>
+      <min value="1"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"/>
+      </type>
     </element>
     <element id="Composition.custodian">
       <path value="Composition.custodian"/>
