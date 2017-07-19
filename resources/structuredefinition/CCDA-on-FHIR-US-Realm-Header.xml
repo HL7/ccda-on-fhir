@@ -53,10 +53,6 @@
     <element id="Composition.extension:extension_slice_pos2">
       <path value="Composition.extension"/>
       <sliceName value="extension_slice_pos2"/>
-      <label value="dataEnterer"/>
-      <short value="dataEnterer"/>
-      <definition
-        value="MAY contain zero or one [0..1] C-CDA on FHIR Data Enterer (identifier: http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Data-Enterer) (CONF:2219-1844)."/>
       <max value="1"/>
       <type>
         <code value="Extension"/>
