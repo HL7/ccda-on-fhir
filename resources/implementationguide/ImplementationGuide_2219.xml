@@ -8,7 +8,7 @@
         <resource>
             <example value="false"/>
             <sourceReference>
-                <reference value="/StructureDefinition/CCDA-on-FHIR-Consent"/>
+                <reference value="StructureDefinition/CCDA-on-FHIR-Consent"/>
                 <display value="C-CDA on FHIR Consent"/>
             </sourceReference>
         </resource>
