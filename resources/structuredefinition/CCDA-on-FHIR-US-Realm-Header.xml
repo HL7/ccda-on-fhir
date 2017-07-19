@@ -237,12 +237,13 @@
       <definition value="SHOULD contain zero or one [0..1] attester (CONF:2219-2082) such that it"/>
       <max value="1"/>
     </element>
-    <element id="Composition.attester.mode">
+    <element id="Composition.attester:attester_slice_pos17.mode">
       <path value="Composition.attester.mode"/>
       <short value="mode"/>
       <definition
         value="SHALL contain exactly one [1..1] mode=&quot;legal&quot; (CodeSystem: FHIR CompositionAttestationMode http://hl7.org/fhir/composition-attestation-mode) (CONF:2219-2084)."/>
       <max value="1"/>
+      <fixedCode value="legal"/>
     </element>
     <element id="Composition.attester.party">
       <path value="Composition.attester.party"/>
@@ -260,7 +261,7 @@
       <short value="attester"/>
       <definition value="MAY contain zero or more [0..*] attester (CONF:2219-2083) such that it"/>
     </element>
-    <element id="Composition.attester.mode">
+    <element id="Composition.attester:attester_slice_pos18.mode">
       <path value="Composition.attester.mode"/>
       <short value="mode"/>
       <definition value="SHALL contain at least one [1..*] mode (CONF:2219-2086)."/>
