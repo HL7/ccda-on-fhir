@@ -222,85 +222,86 @@
                 <display value="TransferDocumentType"/>
             </sourceReference>
         </resource>
+        <!--
         <resource>
-            <example value="false"/>
+            <example value="true"/>
             <sourceReference>
                 <reference value="Patient/patient-1"/>
                 <display value="patient-1.xml"/>
             </sourceReference>
         </resource>
         <resource>
-            <example value="false"/>
+            <example value="true"/>
             <sourceReference>
                 <reference value="Practitioner/practitioner-1"/>
                 <display value="practitioner-1.xml"/>
             </sourceReference>
         </resource>
         <resource>
-            <example value="false"/>
+            <example value="true"/>
             <sourceReference>
                 <reference value="RelatedPerson/related-person"/>
                 <display value="related-person.xml"/>
             </sourceReference>
         </resource>
         <resource>
-            <example value="false"/>
+            <example value="true"/>
             <sourceReference>
                 <reference value="Organization/organization-1"/>
                 <display value="Acme Labs"/>
             </sourceReference>
         </resource>
         <resource>
-            <example value="false"/>
+            <example value="true"/>
             <sourceReference>
                 <reference value="AllergyIntolerance/allergy-intolerance"/>
                 <display value="allergy-intolerance.xml"/>
             </sourceReference>
         </resource>
         <resource>
-            <example value="false"/>
+            <example value="true"/>
             <sourceReference>
                 <reference value="Condition/condition-problem"/>
                 <display value="condition-problem.xml"/>
             </sourceReference>
         </resource>
         <resource>
-            <example value="false"/>
+            <example value="true"/>
             <sourceReference>
                 <reference value="Immunization/immunization"/>
                 <display value="immunization.xml"/>
             </sourceReference>
         </resource>
         <resource>
-            <example value="false"/>
+            <example value="true"/>
             <sourceReference>
                 <reference value="MedicationStatement/medication-statement"/>
                 <display value="medication-statement.xml"/>
             </sourceReference>
         </resource>
         <resource>
-            <example value="false"/>
+            <example value="true"/>
             <sourceReference>
                 <reference value="Observation/observation-lab-urine"/>
                 <display value="observation-lab-urine.xml"/>
             </sourceReference>
         </resource>
         <resource>
-            <example value="false"/>
+            <example value="true"/>
             <sourceReference>
                 <reference value="Observation/observation-smoker"/>
                 <display value="observation-smoker.xml"/>
             </sourceReference>
         </resource>
         <resource>
-            <example value="false"/>
+            <example value="true"/>
             <sourceReference>
                 <reference value="Observation/observation-vitals-temp"/>
                 <display value="observation-vitals-temp.xml"/>
             </sourceReference>
         </resource>
         <resource>
-            <example value="false"/>
+            <example value="true"/>
             <sourceReference>
                 <reference value="Procedure/procedure-rehab"/>
                 <display value="procedure-rehab.xml"/>
@@ -427,6 +428,7 @@
                 <display value="C-CDA on FHIR Transfer Summary"/>
             </exampleFor>
         </resource>
+        -->
     </package>
     <page>
         <source value="http://test.com/IG/View/2219"/>
