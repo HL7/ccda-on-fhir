@@ -1,6 +1,6 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-    <id value="2219"/>
-    <url value="http://hl7.org/fhir/ccda/ImplementationGuide/2219"/>
+    <id value="CCDA-on-FHIR"/>
+    <url value="http://hl7.org/fhir/ccda/ImplementationGuide/CCDA-on-FHIR"/>
     <name value="C-CDA on FHIR"/>
     <status value="draft"/>
     <package>
@@ -222,7 +222,6 @@
                 <display value="TransferDocumentType"/>
             </sourceReference>
         </resource>
-        <!--
         <resource>
             <example value="true"/>
             <sourceReference>
@@ -428,7 +427,6 @@
                 <display value="C-CDA on FHIR Transfer Summary"/>
             </exampleFor>
         </resource>
-        -->
     </package>
     <page>
         <source value="http://test.com/IG/View/2219"/>
