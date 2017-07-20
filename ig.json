@@ -12,7 +12,7 @@
   },
   "dependencyList": [{
     "name": "USCore",
-    "location": "http://hl7.org/fhir/us/core/"
+    "location": "http://hl7.org/fhir/us/core/" 
   }],
   "defaults": {
     "Any": {
