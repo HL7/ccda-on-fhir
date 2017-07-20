@@ -30,7 +30,7 @@
     </telecom>
   </contact>
   <description
-    value="CARE PLAN FRAMEWORK&#xA;&#xA;A Care Plan (including Home Health Plan of Care (HHPoC)) is a consensus-driven dynamic plan that represents a patients and Care Team Members prioritized concerns, goals, and planned interventions. It serves as a blueprint shared by all Care Team Members (including the patient, their caregivers and providers), to guide the patients care. A Care Plan integrates multiple interventions proposed by multiple providers and disciplines for multiple conditions.&#xA;&#xA;A Care Plan represents one or more Plan(s) of Care and serves to reconcile and resolve conflicts between the various Plans of Care developed for a specific patient by different providers. While both a plan of care and a care plan include the patients life goals and require Care Team Members (including patients) to prioritize goals and interventions, the reconciliation process becomes more complex as the number of plans of care increases. The Care Plan also serves to enable longitudinal coordination of care.&#xA;&#xA;The Care Plan represents an instance of this dynamic Care Plan at a point in time. The composition itself is NOT dynamic.&#xA;&#xA;Key differentiators between a Care Plan profile and CCD  profile (another snapshot in time document):&#xA;&#xA;*  Requires relationships between various concepts:&#xA;&#xA;        *  Health Concerns&#xA;&#xA;        *  Interventions&#xA;&#xA;        *  Goals&#xA;&#xA;        *  Outcomes&#xA;&#xA;*  Provides the ability to identify patient and provider priorities with each act&#xA;&#xA;*  Provides a header participant to indicate occurrences of Care Plan review"/>
+    value="CARE PLAN FRAMEWORK: A Care Plan (including Home Health Plan of Care (HHPoC)) is a consensus-driven dynamic plan that represents a patients and Care Team Members prioritized concerns, goals, and planned interventions. It serves as a blueprint shared by all Care Team Members (including the patient, their caregivers and providers), to guide the patients care. A Care Plan integrates multiple interventions proposed by multiple providers and disciplines for multiple conditions.&#xA;&#xA;A Care Plan represents one or more Plan(s) of Care and serves to reconcile and resolve conflicts between the various Plans of Care developed for a specific patient by different providers. While both a plan of care and a care plan include the patients life goals and require Care Team Members (including patients) to prioritize goals and interventions, the reconciliation process becomes more complex as the number of plans of care increases. The Care Plan also serves to enable longitudinal coordination of care.&#xA;&#xA;The Care Plan represents an instance of this dynamic Care Plan at a point in time. The composition itself is NOT dynamic.&#xA;&#xA;Key differentiators between a Care Plan profile and CCD  profile (another snapshot in time document):&#xA;&#xA;*  Requires relationships between various concepts:&#xA;&#xA;        *  Health Concerns&#xA;&#xA;        *  Interventions&#xA;&#xA;        *  Goals&#xA;&#xA;        *  Outcomes&#xA;&#xA;*  Provides the ability to identify patient and provider priorities with each act&#xA;&#xA;*  Provides a header participant to indicate occurrences of Care Plan review"/>
   <fhirVersion value="3.0.1"/>
   <kind value="resource"/>
   <abstract value="false"/>
@@ -93,10 +93,7 @@
     </element>
     <element id="Composition.section:health_concerns_section_slice.code">
       <path value="Composition.section.code"/>
-      <label value="Health concerns document"/>
-      <short value="Health concerns document"/>
-      <definition
-        value="SHALL contain exactly one [1..1] code=&quot;75310-3&quot; Health Concerns Document (CodeSystem: LOINC http://loinc.org) (CONF:2219-1421)."/>
+      <short value="Health concerns section code"/>
       <min value="1"/>
       <patternCodeableConcept>
         <coding>
@@ -111,9 +108,21 @@
       <definition value="SHALL contain exactly one [1..1] text (CONF:2219-1422)."/>
       <min value="1"/>
     </element>
-
     <element id="Composition.section:health_concerns_section_slice.entry">
       <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="reference"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="entry"/>
+    </element>
+    <element
+      id="Composition.section:health_concerns_section_slice.entry:health_concerns_entry_slice">
+      <path value="Composition.section.entry"/>
+      <sliceName value="health_concerns_entry_slice"/>
       <short value="entry"/>
       <type>
         <code value="Reference"/>
@@ -178,8 +187,6 @@
       <path value="Composition.section.code"/>
       <label value="Goals"/>
       <short value="Goals"/>
-      <definition
-        value="SHALL contain exactly one [1..1] code=&quot;61146-7&quot; Goals (CodeSystem: LOINC http://loinc.org) (CONF:2219-1424)."/>
       <min value="1"/>
       <patternCodeableConcept>
         <coding>
@@ -196,9 +203,19 @@
     </element>
     <element id="Composition.section:goals_section_slice.entry">
       <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="reference"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
       <short value="entry"/>
-      <definition
-        value="SHOULD contain zero or more [0..*] US  Core Goal Profile (identifier: http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal) (CONF:2219-2595). SHOULD contain zero or more [0..*] Observation (identifier: http://hl7.org/fhir/StructureDefinition/Observation) (CONF:2219-2596)."/>
+    </element>
+    <element id="Composition.section:goals_section_slice.entry:goals_entry_slice">
+      <path value="Composition.section.entry"/>
+      <sliceName value="goals_entry_slice"/>
+      <short value="entry"/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal"/>
@@ -243,9 +260,20 @@
       <definition value="SHALL contain exactly one [1..1] text (CONF:2219-1428)."/>
       <min value="1"/>
     </element>
-
     <element id="Composition.section:interventions_section_slice.entry">
       <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="reference"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="entry"/>
+    </element>
+    <element id="Composition.section:interventions_section_slice.entry:interventions_entry_slice">
+      <path value="Composition.section.entry"/>
+      <sliceName value="interventions_section_slice"/>
       <short value="entry"/>
       <type>
         <code value="Reference"/>
@@ -256,8 +284,6 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/RequestGroup"/>
       </type>
     </element>
-
-
     <element id="Composition.section:eval_outcomes_section_slice">
       <extension
         url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
@@ -299,6 +325,18 @@
     </element>
     <element id="Composition.section:eval_outcomes_section_slice.entry">
       <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="reference"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="entry"/>
+    </element>
+    <element id="Composition.section:eval_outcomes_section_slice.entry:eval_outcomes_entry_slice">
+      <path value="Composition.section.entry"/>
+      <sliceName value="eval_outcomes_entry_slice"/>
       <short value="entry"/>
       <type>
         <code value="Reference"/>
