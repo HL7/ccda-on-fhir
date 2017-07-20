@@ -24,7 +24,7 @@
     }
   },
   "canonicalBase": "http://hl7.org/fhir/ccda",
-  "source": "implementationguide/ImplementationGuide_2219.xml",
+  "source": "ImplementationGuide_2219.xml",
   "sct-edition": "http://snomed.info/sct/731000124108",
   "special-urls": [],
   "resources": {
