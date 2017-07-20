@@ -24,7 +24,7 @@
     }
   },
   "canonicalBase": "http://hl7.org/fhir/ccda",
-  "source": "ImplementationGuide-CCDA-on-FHIR.xml",
+  "source": "implementationguide-CCDA-on-FHIR.xml",
   "sct-edition": "http://snomed.info/sct/731000124108",
   "special-urls": [],
   "resources": {
