@@ -45,10 +45,7 @@
     </element>
     <element id="Composition.type">
       <path value="Composition.type"/>
-      <label value="Overall Plan of Care/Advance Care Directives"/>
       <short value="Overall Plan of Care/Advance Care Directives"/>
-      <definition
-        value="SHALL contain exactly one [1..1] type=&quot;52521-2&quot; (CodeSystem: LOINC http://loinc.org STATIC) (CONF:2219-1498)."/>
       <patternCodeableConcept>
         <coding>
           <system value="http://loinc.org"/>
@@ -57,10 +54,6 @@
       </patternCodeableConcept>
     </element>
     <element id="Composition.section">
-      <extension
-        url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section"/>
-      </extension>
       <path value="Composition.section"/>
       <slicing>
         <discriminator>
@@ -69,7 +62,6 @@
         </discriminator>
         <rules value="open"/>
       </slicing>
-      <definition value="SHOULD contain zero or one [0..1] section (CONF:2219-1414) such that it"/>
     </element>
     <element id="Composition.section:health_concerns_section_slice">
       <extension
@@ -78,17 +70,13 @@
       </extension>
       <path value="Composition.section"/>
       <sliceName value="health_concerns_section_slice"/>
-      <label value="Health Concerns Section"/>
       <short value="Health Concerns Section"/>
-      <definition value="SHALL contain exactly one [1..1] section (CONF:2219-1393) such that it"/>
-      <comment value="Health Concerns Section"/>
       <min value="1"/>
       <max value="1"/>
     </element>
     <element id="Composition.section:health_concerns_section_slice.title">
       <path value="Composition.section.title"/>
       <short value="title"/>
-      <definition value="SHALL contain exactly one [1..1] title (CONF:2219-1420)."/>
       <min value="1"/>
     </element>
     <element id="Composition.section:health_concerns_section_slice.code">
@@ -105,7 +93,6 @@
     <element id="Composition.section:health_concerns_section_slice.text">
       <path value="Composition.section.text"/>
       <short value="text"/>
-      <definition value="SHALL contain exactly one [1..1] text (CONF:2219-1422)."/>
       <min value="1"/>
     </element>
     <element id="Composition.section:health_concerns_section_slice.entry">
@@ -171,21 +158,17 @@
       </extension>
       <path value="Composition.section"/>
       <sliceName value="goals_section_slice"/>
-      <label value="Goals Section"/>
       <short value="Goals Section"/>
-      <comment value="Goals Section"/>
       <min value="1"/>
       <max value="1"/>
     </element>
     <element id="Composition.section:goals_section_slice.title">
       <path value="Composition.section.title"/>
       <short value="title"/>
-      <definition value="SHALL contain exactly one [1..1] title (CONF:2219-1423)."/>
       <min value="1"/>
     </element>
     <element id="Composition.section:goals_section_slice.code">
       <path value="Composition.section.code"/>
-      <label value="Goals"/>
       <short value="Goals"/>
       <min value="1"/>
       <patternCodeableConcept>
@@ -198,7 +181,6 @@
     <element id="Composition.section:goals_section_slice.text">
       <path value="Composition.section.text"/>
       <short value="text"/>
-      <definition value="SHALL contain exactly one [1..1] text (CONF:2219-1425)."/>
       <min value="1"/>
     </element>
     <element id="Composition.section:goals_section_slice.entry">
@@ -228,24 +210,18 @@
       </extension>
       <path value="Composition.section"/>
       <sliceName value="interventions_section_slice"/>
-      <label value="Interventions Section"/>
       <short value="Interventions Section"/>
-      <definition value="SHOULD contain zero or one [0..1] section (CONF:2219-1395) such that it"/>
       <comment value="Interventions Section"/>
       <max value="1"/>
     </element>
     <element id="Composition.section:interventions_section_slice.title">
       <path value="Composition.section.title"/>
       <short value="title"/>
-      <definition value="SHALL contain exactly one [1..1] title (CONF:2219-1426)."/>
       <min value="1"/>
     </element>
     <element id="Composition.section:interventions_section_slice.code">
       <path value="Composition.section.code"/>
-      <label value="Interventions provided"/>
       <short value="Interventions provided"/>
-      <definition
-        value="SHALL contain exactly one [1..1] code=&quot;62387-6&quot; Interventions (CodeSystem: LOINC http://loinc.org) (CONF:2219-1427)."/>
       <min value="1"/>
       <patternCodeableConcept>
         <coding>
@@ -257,7 +233,6 @@
     <element id="Composition.section:interventions_section_slice.text">
       <path value="Composition.section.text"/>
       <short value="text"/>
-      <definition value="SHALL contain exactly one [1..1] text (CONF:2219-1428)."/>
       <min value="1"/>
     </element>
     <element id="Composition.section:interventions_section_slice.entry">
@@ -291,24 +266,18 @@
       </extension>
       <path value="Composition.section"/>
       <sliceName value="eval_outcomes_section_slice"/>
-      <label value="Health Status Evaluations and Outcomes Section"/>
       <short value="Health Status Evaluations and Outcomes Section"/>
-      <definition value="SHOULD contain zero or one [0..1] section (CONF:2219-1414) such that it"/>
       <comment value="Health Status Evaluations and Outcomes Section"/>
       <max value="1"/>
     </element>
     <element id="Composition.section:eval_outcomes_section_slice.title">
       <path value="Composition.section.title"/>
       <short value="title"/>
-      <definition value="SHALL contain exactly one [1..1] title (CONF:2219-1483)."/>
       <min value="1"/>
     </element>
     <element id="Composition.section:eval_outcomes_section_slice.code">
       <path value="Composition.section.code"/>
-      <label value="Patient problem outcome"/>
       <short value="Patient problem outcome"/>
-      <definition
-        value="SHALL contain exactly one [1..1] code=&quot;11383-7&quot; Patient problem outcome  (CodeSystem: LOINC http://loinc.org) (CONF:2219-1484)."/>
       <min value="1"/>
       <patternCodeableConcept>
         <coding>
@@ -320,7 +289,6 @@
     <element id="Composition.section:eval_outcomes_section_slice.text">
       <path value="Composition.section.text"/>
       <short value="text"/>
-      <definition value="SHALL contain exactly one [1..1] text (CONF:2219-1485)."/>
       <min value="1"/>
     </element>
     <element id="Composition.section:eval_outcomes_section_slice.entry">
@@ -343,5 +311,6 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
       </type>
     </element>
+    
   </differential>
 </StructureDefinition>
