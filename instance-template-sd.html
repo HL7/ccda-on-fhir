@@ -8,12 +8,12 @@ tcode: {{[type]}}
   <head>
     <meta charset="UTF-8" />
     <title>Profile: {{page.title}} - FHIR</title>
-    
+
     {% include header.html %}
   </head>
   <body>
     {% include navbar.html %}
-    
+
     <div id="segment-breadcrumb" class="segmnt">
       <div class="container">
         <ul class="breadcrumb">
@@ -28,7 +28,7 @@ tcode: {{[type]}}
         </ul>
       </div>
     </div>
-    
+
     <div id="segment-content" class="segment">
       <div class="container">
         <div class="row">
@@ -42,20 +42,20 @@ tcode: {{[type]}}
               <h3>
                 <span class="sectioncount">D.4.1<a name="D.4.1"> </a></span> StructureDefinition: {{page.id}} <a title="link to here" class="self-link" href="StructureDefinition-{{page.id}}.html#D.4.1"><img src="target.png" /></a>
               </h3>
-              
+
               <a name="introduction"> </a>
-              
+
               <a name="profile"> </a>
               <h4><span class="sectioncount">D.4.1.1</span> Formal Views of Profile Content <a title="link to here" class="self-link" href="StructureDefinition-{{page.id}}.html#profile"><img src="target.png" /></a></h4>
-              
+
               {% include StructureDefinition-{{page.id}}-header.xhtml %}
-              
+
               <p>
                 <a href="{{site.data.fhir.path}}profiling.html#representation">Description of Profiles, Differentials, Snapshots, and how the XML and JSON presentations work</a>.
               </p>
-              
+
               {% assign examples = site.data.examples.{{[id]}}.examples %}
-              
+
               <div id="tabs">
                 <ul>
                   <li>
@@ -67,12 +67,7 @@ tcode: {{[type]}}
                   <li>
                     <a href="#tabs-snap">Snapshot Table</a>
                   </li>
-                  <li>
-                    <a href="#tabs-xml">XML Template</a>
-                  </li>
-                  <li>
-                    <a href="#tabs-json">JSON Template</a>
-                  </li>
+
                   {% if examples %}
                   <li>
                     <a href="#tabs-examples">Examples</a>
@@ -114,22 +109,8 @@ tcode: {{[type]}}
                   </div>
                 </div>
 
-                <div id="tabs-xml">
-                  <div id="xml">
-                    <div id="xml-inner">
-                      {% include StructureDefinition-{{page.id}}-pseudo-xml.xhtml %}
-                    </div>
-                  </div>
-                </div>
 
-                <div id="tabs-json">
-                  <div id="json">
-                    <div id="json-inner">
-                      {% include StructureDefinition-{{page.id}}-pseudo-json.xhtml %}
-                    </div>
-                  </div>
-                </div>
-                
+
                 {% if examples %}
                 <div id="tabs-examples">
                   <ul>
@@ -169,40 +150,24 @@ tcode: {{[type]}}
                       {% include StructureDefinition-{{page.id}}-snapshot.xhtml%}
                     </div>
                   </div>
-                  <div id="all-xml">
-                    <p>
-                      <b>XML Template</b>
-                    </p>
-                    <div id="all-xml-inner">
-                      {% include StructureDefinition-{{page.id}}-pseudo-xml.xhtml%}
-                    </div>
-                  </div>
-                  <div id="all-json">
-                    <p>
-                      <b>JSON Template</b>
-                    </p>
-                    <div id="all-json-inner">
-                      {% include StructureDefinition-{{page.id}}-pseudo-json.xhtml%}
-                    </div>
-                  </div>
                 </div>
               </div>
               <p>&nbsp;</p>
               <a name="tx"> </a>
               <h4><span class="sectioncount">D.4.1.2</span> Terminology Bindings <a title="link to here" class="self-link" href="StructureDefinition-{{page.id}}.html#tx"><img src="target.png" /></a></h4>
-              
+
               {% include StructureDefinition-{{page.id}}-tx.xhtml%}
-              
+
               <h4><span class="sectioncount">D.4.1.3<a name="D.4.1.3"> </a></span> Constraints <a title="link to here" class="self-link" href="StructureDefinition-{{page.id}}.html#D.4.1.3"><img src="target.png" /></a></h4>
-              
+
               {% include StructureDefinition-{{page.id}}-inv.xhtml%} . </div>
           </div>
         </div>
       </div>
     </div>
-    
+
     {% include footer.html %}
-    
+
     <script>
 $(document).ready(function() {
 	try {

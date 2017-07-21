@@ -5,3 +5,4 @@ qa/
 org.hl7.fhir.igpublisher.jar
 description_html.txt
 /.project
+/instance-template-sd.html.bak

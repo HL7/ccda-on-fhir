@@ -19,9 +19,9 @@
           quadrivalent'}; {http://hl7.org/fhir/sid/ndc code '49281-0623-78' = '49281-0623-78', given
           as 'FLUZONE QUADRIVALENT'})</span></p>
       <p>
-        <b>patient</b>: <a href="Patient-example.html">Amy Shaw. Generated Summary: id: example;
+        <b>patient</b>: Amy Shaw. Generated Summary: id: example;
           Medical Record Number = 1032702 (USUAL); active; Amy V. Shaw ; ph: 555-555-5555(HOME),
-          amy.shaw@example.com; gender: female; birthDate: 20/02/2007</a></p>
+          amy.shaw@example.com; gender: female; birthDate: 20/02/2007</p>
       <p>
         <b>date</b>: 08/01/2016</p>
       <p>

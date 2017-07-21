@@ -19,9 +19,9 @@
           : {LOINC code '72166-2' = 'Tobacco smoking status NHIS', given as 'Tobacco smoking
           status'})</span></p>
       <p>
-        <b>subject</b>: <a href="Patient-example.html">Amy Shaw. Generated Summary: id: example;
+        <b>subject</b>: Amy Shaw. Generated Summary: id: example;
           Medical Record Number = 1032702 (USUAL); active; Amy V. Shaw ; ph: 555-555-5555(HOME),
-          amy.shaw@example.com; gender: female; birthDate: 20/02/2007</a></p>
+          amy.shaw@example.com; gender: female; birthDate: 20/02/2007</p>
       <p>
         <b>issued</b>: 18/03/2016 5:27:04 AM</p>
       <p>
