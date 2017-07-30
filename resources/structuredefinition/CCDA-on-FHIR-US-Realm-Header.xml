@@ -232,24 +232,42 @@
         <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner" />
       </type>
     </element>
-    <element id="Composition.attester:other_attester_slice">
+    <element id="Composition.attester:professional_attester_slice">
       <path value="Composition.attester" />
       <sliceName value="other_attester_slice" />
       <short value="attester" />
-      <definition value="MAY contain zero or more [0..*] attester (CONF:2219-2083) such that it" />
     </element>
-    <element id="Composition.attester:other_attester_slice.mode">
+    <element id="Composition.attester:professional_attester_slice.mode">
       <path value="Composition.attester.mode" />
       <short value="mode" />
-      <definition value="SHALL contain at least one [1..*] mode (CONF:2219-2086)." />
+      <fixedCode value="professional" />
     </element>
-    <element id="Composition.attester:other_attester_slice.party">
+    <element id="Composition.attester:professional_attester_slice.party">
       <path value="Composition.attester.party" />
       <short value="party" />
       <min value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner" />
+      </type>
+    </element>
+    <element id="Composition.attester:personal_attester_slice">
+      <path value="Composition.attester" />
+      <sliceName value="other_attester_slice" />
+      <short value="attester" />
+    </element>
+    <element id="Composition.attester:personal_attester_slice.mode">
+      <path value="Composition.attester.mode" />
+      <short value="mode" />
+      <fixedCode value="personal" />
+    </element>
+    <element id="Composition.attester:personal_attester_slice.party">
+      <path value="Composition.attester.party" />
+      <short value="party" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient" />
       </type>
     </element>
     <element id="Composition.custodian">
