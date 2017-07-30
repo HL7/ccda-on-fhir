@@ -4,7 +4,7 @@
   <meta>
     <lastUpdated value="2017-07-24T13:27:59.069-04:00" />
   </meta>
-  <url value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-US-Realm-Header" />
+  <url value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-US-Realm-Header" />
   <name value="C-CDA on FHIR US Realm Header" />
   <status value="draft" />
   <contact>
@@ -54,12 +54,12 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Data-Enterer" />
+        <profile value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Data-Enterer" />
       </type>
     </element>
     <element id="Composition.extension:data_enterer_extension_slice.url">
       <path value="Composition.extension.url" />
-      <fixedUri value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Data-Enterer" />
+      <fixedUri value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Data-Enterer" />
     </element>
     <element id="Composition.extension:informant_extension_slice">
       <path value="Composition.extension" />
@@ -68,12 +68,12 @@
       <short value="informant" />
       <type>
         <code value="Extension" />
-        <profile value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Informant" />
+        <profile value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Informant" />
       </type>
     </element>
     <element id="Composition.extension:informant_extension_slice.url">
       <path value="Composition.extension.url" />
-      <fixedUri value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Informant" />
+      <fixedUri value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Informant" />
     </element>
     <element id="Composition.extension:information_recipient_extension_slice">
       <path value="Composition.extension" />
@@ -82,12 +82,12 @@
       <short value="informationRecipient" />
       <type>
         <code value="Extension" />
-        <profile value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Information-Recipient" />
+        <profile value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Information-Recipient" />
       </type>
     </element>
     <element id="Composition.extension:information_recipient_extension_slice.url">
       <path value="Composition.extension.url" />
-      <fixedUri value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Information-Recipient" />
+      <fixedUri value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Information-Recipient" />
     </element>
     <element id="Composition.extension:participant_extension_slice">
       <path value="Composition.extension" />
@@ -96,12 +96,12 @@
       <short value="participant" />
       <type>
         <code value="Extension" />
-        <profile value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Participant" />
+        <profile value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Participant" />
       </type>
     </element>
     <element id="Composition.extension:participant_extension_slice.url">
       <path value="Composition.extension.url" />
-      <fixedUri value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Participant" />
+      <fixedUri value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Participant" />
     </element>
     <element id="Composition.extension:performer_extension_slice">
       <path value="Composition.extension" />
@@ -110,12 +110,12 @@
       <short value="performer" />
       <type>
         <code value="Extension" />
-        <profile value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Performer" />
+        <profile value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Performer" />
       </type>
     </element>
     <element id="Composition.extension:performer_extension_slice.url">
       <path value="Composition.extension.url" />
-      <fixedUri value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Performer" />
+      <fixedUri value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Performer" />
     </element>
     <element id="Composition.extension:authorization_extension_slice">
       <path value="Composition.extension" />
@@ -124,12 +124,12 @@
       <short value="authorization" />
       <type>
         <code value="Extension" />
-        <profile value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Authorization" />
+        <profile value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Authorization" />
       </type>
     </element>
     <element id="Composition.extension:authorization_extension_slice.url">
       <path value="Composition.extension.url" />
-      <fixedUri value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Authorization" />
+      <fixedUri value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Authorization" />
     </element>
     <element id="Composition.extension:order_extension_slide">
       <path value="Composition.extension" />
@@ -138,12 +138,12 @@
       <short value="authorization" />
       <type>
         <code value="Extension" />
-        <profile value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-In-Fulfillment-Of-Order" />
+        <profile value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-In-Fulfillment-Of-Order" />
       </type>
     </element>
     <element id="Composition.extension:order_extension_slide.url">
       <path value="Composition.extension.url" />
-      <fixedUri value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-In-Fulfillment-Of-Order" />
+      <fixedUri value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-In-Fulfillment-Of-Order" />
     </element>
     <element id="Composition.identifier">
       <path value="Composition.identifier" />

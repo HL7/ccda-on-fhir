@@ -1,6 +1,6 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
     <id value="CCDA-on-FHIR-Performer"/>
-    <url value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Performer"/>
+    <url value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Performer"/>
     <name value="C-CDA on FHIR Performer"/>
     <status value="draft"/>
     <publisher value="Lantana Consulting Group"/>

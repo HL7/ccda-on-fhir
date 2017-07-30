@@ -1,6 +1,6 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
     <id value="CCDA-on-FHIR"/>
-    <url value="http://hl7.org/fhir/ccda/ImplementationGuide/CCDA-on-FHIR"/>
+    <url value="http://hl7.org/fhir/us/ccda/ImplementationGuide/CCDA-on-FHIR"/>
     <name value="C-CDA on FHIR"/>
     <status value="draft"/>
     <package>

@@ -3,8 +3,9 @@
     <meta>
         <versionId value="1"/>
         <lastUpdated value="2016-06-15T08:16:14Z"/>
-        <profile value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA_on_FHIR_Care_Plan"/>
+        <profile value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Care-Plan"/>
     </meta>
+    <language value="en-US"/>
     <text>
         <status value="generated"/>
         <div xmlns="http://www.w3.org/1999/xhtml">
@@ -12,35 +13,37 @@
             <p>Managed by Community Health and Hospitals</p>
         </div>
     </text>
-    <extension url="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Data-Enterer">
+    <identifier>
+        <system value="urn:ietf:rfc:3986"/>
+        <value value="urn:uuid:39067866-6319-4008-9c6d-3f0176d6826c"/>
+    </identifier>
+    <!--
+    <extension url="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Data-Enterer">
         <valueReference>
             <reference value="Practitioner/practitioner-1"/>
         </valueReference>
     </extension>
-    <extension url="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Informant">
+    <extension url="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Informant">
         <valueReference>
             <reference value="Practitioner/practitioner-1"/>
         </valueReference>
     </extension>
-    <extension url="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Information-Recipient">
+    <extension url="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Information-Recipient">
         <valueReference>
             <reference value="Practitioner/practitioner-1"/>
         </valueReference>
     </extension>
-    <extension url="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Participant">
+    <extension url="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Participant">
         <valueReference>
             <reference value="RelatedPerson/related-person"/>
         </valueReference>
     </extension>
-    <extension url="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Performer">
+    <extension url="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Performer">
         <valueReference>
             <reference value="Practitioner/practitioner-1"/>
         </valueReference>
     </extension>
-    <identifier>
-        <system value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA_on_FHIR_Care_Plan"/>
-        <value value="1"/>
-    </identifier>
+    -->
     <status value="preliminary"/>
     <type>
         <coding>

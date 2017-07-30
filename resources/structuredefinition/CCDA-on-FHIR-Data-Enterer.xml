@@ -4,7 +4,7 @@
   <meta>
     <lastUpdated value="2017-07-18T14:36:32.864-04:00" />
   </meta>
-  <url value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Data-Enterer" />
+  <url value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Data-Enterer" />
   <name value="C-CDA on FHIR Data Enterer" />
   <status value="draft" />
   <publisher value="Lantana Consulting Group" />

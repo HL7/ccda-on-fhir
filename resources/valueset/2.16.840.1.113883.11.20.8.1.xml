@@ -1,6 +1,6 @@
 <ValueSet xmlns="http://hl7.org/fhir">
     <id value="2.16.840.1.113883.11.20.8.1"/>
-    <url value="http://hl7.org/fhir/ccda/ValueSet/2.16.840.1.113883.11.20.8.1"/>
+    <url value="http://hl7.org/fhir/us/ccda/ValueSet/2.16.840.1.113883.11.20.8.1"/>
     <name value="ProgressNoteDocumentTypeCode"/>
     <status value="active"/>
     <description value="Specific URL Pending"/>

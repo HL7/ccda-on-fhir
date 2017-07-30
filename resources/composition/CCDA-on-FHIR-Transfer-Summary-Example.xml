@@ -4,7 +4,7 @@
     <meta>
         <versionId value="1"/>
         <lastUpdated value="2016-06-15T08:16:14Z"/>
-        <profile value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA_on_FHIR_Transfer_Summary"/>
+        <profile value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA_on_FHIR_Transfer_Summary"/>
     </meta>
     <text>
         <status value="generated"/>
@@ -15,7 +15,7 @@
         </div>
     </text>
     <identifier>
-        <system value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA_on_FHIR_Transfer_Summary"/>
+        <system value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA_on_FHIR_Transfer_Summary"/>
         <value value="1"/>
     </identifier>
     <status value="preliminary"/>

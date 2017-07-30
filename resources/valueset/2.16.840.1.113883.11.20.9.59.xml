@@ -1,6 +1,6 @@
 <ValueSet xmlns="http://hl7.org/fhir">
     <id value="2.16.840.1.113883.11.20.9.59"/>
-    <url value="http://hl7.org/fhir/ccda/ValueSet/2.16.840.1.113883.11.20.9.59"/>
+    <url value="http://hl7.org/fhir/us/ccda/ValueSet/2.16.840.1.113883.11.20.9.59"/>
     <name value="DIRSectionTypeCodes"/>
     <status value="active"/>
     <description

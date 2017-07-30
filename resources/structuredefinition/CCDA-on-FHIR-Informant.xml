@@ -4,7 +4,7 @@
   <meta>
     <lastUpdated value="2017-07-18T15:52:19.511-04:00" />
   </meta>
-  <url value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Informant" />
+  <url value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Informant" />
   <name value="C-CDA on FHIR Informant" />
   <status value="draft" />
   <publisher value="Lantana Consulting Group" />

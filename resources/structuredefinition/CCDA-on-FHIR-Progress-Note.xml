@@ -4,7 +4,7 @@
   <meta>
     <lastUpdated value="2017-07-19T11:40:18.168-04:00"/>
   </meta>
-  <url value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Progress-Note"/>
+  <url value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Progress-Note"/>
   <name value="C-CDA on FHIR Progress Note"/>
   <status value="draft"/>
   <publisher value="Lantana Consulting Group"/>
@@ -37,7 +37,7 @@
   <contextType value="resource"/>
   <context value="Composition"/>
   <type value="Composition"/>
-  <baseDefinition value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-US-Realm-Header"/>
+  <baseDefinition value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-US-Realm-Header"/>
   <derivation value="constraint"/>
   <differential>
     <element id="Composition">

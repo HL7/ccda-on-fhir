@@ -4,7 +4,7 @@
   <meta>
     <lastUpdated value="2017-07-17T17:27:51.909-04:00"/>
   </meta>
-  <url value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Consultation-Note"/>
+  <url value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Consultation-Note"/>
   <name value="C-CDA on FHIR Consultation Note"/>
   <status value="draft"/>
   <publisher value="Lantana Consulting Group"/>
@@ -37,7 +37,7 @@
   <contextType value="resource"/>
   <context value="Composition"/>
   <type value="Composition"/>
-  <baseDefinition value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-US-Realm-Header"/>
+  <baseDefinition value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-US-Realm-Header"/>
   <derivation value="constraint"/>
   <differential>
     <element id="Composition">
@@ -47,20 +47,16 @@
       <path value="Composition.extension"/>
       <sliceName value="extension_slice_pos8"/>
       <short value="extension"/>
-      <definition
-        value="SHALL contain at least one [1..*] C-CDA on FHIR In Fulfillment Of Order (identifier: http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-In-Fulfillment-Of-Order) (CONF:2219-2477)."/>
       <min value="1"/>
     </element>
     <element id="Composition.type">
       <path value="Composition.type"/>
       <label value="Consultation Note"/>
       <short value="Consultation Note"/>
-      <definition
-        value="SHALL contain exactly one [1..1] type, which SHALL be selected from ValueSet ConsultDocumentType http://hl7.org/fhir/ccda/ValueSet/2.16.840.1.113883.11.20.9.31 DYNAMIC (CONF:2219-1320)."/>
       <binding>
         <strength value="required"/>
         <valueSetReference>
-          <reference value="http://hl7.org/fhir/ccda/ValueSet/2.16.840.1.113883.11.20.9.31"/>
+          <reference value="http://hl7.org/fhir/us/ccda/ValueSet/2.16.840.1.113883.11.20.9.31"/>
           <display value="ConsultDocumentType"/>
         </valueSetReference>
       </binding>
@@ -69,7 +65,6 @@
       <path value="Composition.encounter"/>
       <label value="encompassingEncounter"/>
       <short value="encompassingEncounter"/>
-      <definition value="SHALL contain exactly one [1..1] encounter (CONF:2219-1363)."/>
       <min value="1"/>
     </element>
     <element id="Composition.section">
