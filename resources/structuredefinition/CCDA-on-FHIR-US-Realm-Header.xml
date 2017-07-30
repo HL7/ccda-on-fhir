@@ -36,7 +36,6 @@
     <element id="Composition.language">
       <path value="Composition.language" />
       <short value="language" />
-      <definition value="SHALL contain exactly one [1..1] language (CONF:2219-146)." />
       <min value="1" />
     </element>
     <element id="Composition.extension">
@@ -67,7 +66,6 @@
       <sliceName value="informant_extension_slice" />
       <label value="informant" />
       <short value="informant" />
-      <definition value="MAY contain zero or more [0..*] C-CDA on FHIR Informant (identifier: http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Informant) (CONF:2219-1849)." />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Informant" />
@@ -82,7 +80,6 @@
       <sliceName value="information_recipient_extension_slice" />
       <label value="informationRecipient" />
       <short value="informationRecipient" />
-      <definition value="MAY contain zero or more [0..*] C-CDA on FHIR Information Recipient (identifier: http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Information-Recipient) (CONF:2219-1856)." />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Information-Recipient" />
@@ -97,7 +94,6 @@
       <sliceName value="participant_extension_slice" />
       <label value="participant" />
       <short value="participant" />
-      <definition value="MAY contain zero or more [0..*] C-CDA on FHIR Participant (identifier: http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Participant) (CONF:2219-1861)." />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Participant" />
@@ -112,7 +108,6 @@
       <sliceName value="performer_extension_slice" />
       <label value="performer" />
       <short value="performer" />
-      <definition value="SHOULD contain zero or more [0..*] C-CDA on FHIR Performer (identifier: http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Performer) (CONF:2219-1869)." />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Performer" />
@@ -127,7 +122,6 @@
       <sliceName value="authorization_extension_slice" />
       <label value="authorization" />
       <short value="authorization" />
-      <definition value="MAY contain zero or more [0..*] C-CDA on FHIR Authorization (identifier: http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Authorization) (CONF:2219-2012)." />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-Authorization" />
@@ -142,7 +136,6 @@
       <sliceName value="order_extension_slide" />
       <label value="authorization" />
       <short value="authorization" />
-      <definition value="MAY contain zero or more [0..*] C-CDA on FHIR In Fulfillment Of Order (identifier: http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-In-Fulfillment-Of-Order) (CONF:2219-2476)." />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/ccda/StructureDefinition/CCDA-on-FHIR-In-Fulfillment-Of-Order" />
@@ -155,7 +148,6 @@
     <element id="Composition.identifier">
       <path value="Composition.identifier" />
       <short value="identifier" />
-      <definition value="SHALL contain exactly one [1..1] identifier (CONF:2219-147)." />
       <min value="1" />
     </element>
     <element id="Composition.subject">
@@ -168,8 +160,6 @@
     <element id="Composition.date">
       <path value="Composition.date" />
       <short value="date" />
-      <definition value="SHALL contain exactly one [1..1] date (CONF:2219-148)." />
-      <comment value="US Realm Datetime" />
     </element>
     <element id="Composition.author">
       <path value="Composition.author" />
@@ -209,7 +199,6 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <definition value="MAY contain zero or more [0..*] attester (CONF:2219-2083) such that it" />
     </element>
     <element id="Composition.attester:legal_attester_slice">
       <path value="Composition.attester" />
@@ -274,8 +263,6 @@
       <path value="Composition.custodian" />
       <label value="custodian" />
       <short value="custodian" />
-      <definition value="SHALL contain exactly one [1..1] U.S. Core Organization Profile (identifier: http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization) (CONF:2219-154)." />
-      <comment value="U.S. DAF Organization" />
       <min value="1" />
       <type>
         <code value="Reference" />
