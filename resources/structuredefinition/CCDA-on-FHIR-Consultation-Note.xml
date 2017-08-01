@@ -139,8 +139,7 @@
       <sliceName value="allergy-section-entry" />
       <type>
         <code value="Reference" />
-        <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance" />
       </type>
     </element>
     <element id="Composition.section:history-of-present-illness">
