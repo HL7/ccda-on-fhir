@@ -2,9 +2,10 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="CCDA-on-FHIR-Continuity-of-Care-Document"/>
   <meta>
-    <lastUpdated value="2017-07-17T17:42:51.038-04:00"/>
+    <lastUpdated value="2017-08-07T17:41:58.996-04:00"/>
   </meta>
-  <url value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Continuity-of-Care-Document"/>
+  <url
+    value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Continuity-of-Care-Document"/>
   <name value="C-CDA on FHIR Continuity of Care Document"/>
   <status value="draft"/>
   <publisher value="Lantana Consulting Group"/>
@@ -37,7 +38,8 @@
   <contextType value="resource"/>
   <context value="Composition"/>
   <type value="Composition"/>
-  <baseDefinition value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-US-Realm-Header"/>
+  <baseDefinition
+    value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-US-Realm-Header"/>
   <derivation value="constraint"/>
   <differential>
     <element id="Composition">
@@ -47,8 +49,6 @@
       <path value="Composition.type"/>
       <label value="Summary of episode note"/>
       <short value="Summary of episode note"/>
-      <definition
-        value="SHALL contain exactly one [1..1] type=&quot;34133-9&quot; Summary of Episode (CodeSystem: LOINC http://loinc.org) (CONF:2219-1072)."/>
       <patternCodeableConcept>
         <coding>
           <system value="http://loinc.org"/>
@@ -60,15 +60,12 @@
       <path value="Composition.event"/>
       <label value="serviceEvent"/>
       <short value="serviceEvent"/>
-      <definition value="SHALL contain exactly one [1..1] event (CONF:2219-1225)."/>
       <min value="1"/>
       <max value="1"/>
     </element>
     <element id="Composition.event.code">
       <path value="Composition.event.code"/>
       <short value="code"/>
-      <definition
-        value="This event MAY contain zero or more [0..*] code=&quot;PCPR&quot; Care Provision (CodeSystem: HL7ActClass urn:oid:2.16.840.1.113883.5.6) (CONF:2219-1227)."/>
       <patternCodeableConcept>
         <coding>
           <system value="urn:oid:2.16.840.1.113883.5.6"/>
@@ -79,19 +76,16 @@
     <element id="Composition.event.period">
       <path value="Composition.event.period"/>
       <short value="period"/>
-      <definition value="This event SHALL contain exactly one [1..1] period (CONF:2219-1226)."/>
       <min value="1"/>
     </element>
     <element id="Composition.event.period.start">
       <path value="Composition.event.period.start"/>
       <short value="start"/>
-      <definition value="This period SHALL contain exactly one [1..1] start (CONF:2219-1228)."/>
       <min value="1"/>
     </element>
     <element id="Composition.event.period.end">
       <path value="Composition.event.period.end"/>
       <short value="end"/>
-      <definition value="This period SHALL contain exactly one [1..1] end (CONF:2219-1229)."/>
       <min value="1"/>
     </element>
     <element id="Composition.section">
@@ -108,27 +102,25 @@
         <rules value="open"/>
       </slicing>
     </element>
-    <element id="Composition.section:allergy_intolerance_section_slice">
+    <element id="Composition.section:allergy_intolerance_section">
       <extension
         url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section"/>
       </extension>
       <path value="Composition.section"/>
-      <sliceName value="allergy_intolerance_section_slice"/>
+      <sliceName value="allergy_intolerance_section"/>
       <label value="Allergies and Intolerances Section"/>
       <short value="Allergies and Intolerances Section"/>
-      <definition value="SHALL contain exactly one [1..1] section (CONF:2219-1049) such that it"/>
       <comment value="Allergies and Intolerances Section"/>
       <min value="1"/>
       <max value="1"/>
     </element>
-    <element id="Composition.section:allergy_intolerance_section_slice.title">
+    <element id="Composition.section:allergy_intolerance_section.title">
       <path value="Composition.section.title"/>
       <short value="title"/>
-      <definition value="SHALL contain exactly one [1..1] title (CONF:2219-1067)."/>
       <min value="1"/>
     </element>
-    <element id="Composition.section:allergy_intolerance_section_slice.code">
+    <element id="Composition.section:allergy_intolerance_section.code">
       <path value="Composition.section.code"/>
       <label value="Allergies and adverse reactions"/>
       <short value="Allergies and adverse reactions"/>
@@ -140,48 +132,53 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Composition.section:allergy_intolerance_section_slice.text">
+    <element id="Composition.section:allergy_intolerance_section.text">
       <path value="Composition.section.text"/>
       <short value="text"/>
       <min value="1"/>
     </element>
-    <element id="Composition.section:allergy_intolerance_section_slice.entry">
+    <element id="Composition.section:allergy_intolerance_section.entry">
       <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="reference"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
       <short value="entry"/>
-      <min value="0"/>
-      <max value="*"/>
+    </element>
+    <element id="Composition.section:allergy_intolerance_section.entry:sliceEntry">
+      <path value="Composition.section.entry"/>
+      <sliceName value="sliceEntry"/>
       <type>
         <code value="Reference"/>
-        <targetProfile
-          value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance"/>
+        <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource"/>
       </type>
     </element>
-
-    <element id="Composition.section:section_slice_pos4">
+    <element id="Composition.section:medications_section">
       <extension
         url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section"/>
       </extension>
       <path value="Composition.section"/>
-      <sliceName value="section_slice_pos4"/>
+      <sliceName value="medications_section"/>
       <label value="Medications Section"/>
       <short value="Medications Section"/>
       <comment value="Medications Section"/>
       <min value="1"/>
       <max value="1"/>
     </element>
-    <element id="Composition.section:section_slice_pos4.title">
+    <element id="Composition.section:medications_section.title">
       <path value="Composition.section.title"/>
       <short value="title"/>
-      <definition value="SHALL contain exactly one [1..1] title (CONF:2219-1073)."/>
       <min value="1"/>
     </element>
-    <element id="Composition.section:section_slice_pos4.code">
+    <element id="Composition.section:medications_section.code">
       <path value="Composition.section.code"/>
       <label value="History of medication use"/>
       <short value="History of medication use"/>
-      <definition
-        value="SHALL contain exactly one [1..1] code=&quot;10160-0&quot; History of Medication Use (CodeSystem: LOINC http://loinc.org) (CONF:2219-1074)."/>
       <min value="1"/>
       <patternCodeableConcept>
         <coding>
@@ -190,38 +187,54 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Composition.section:section_slice_pos4.text">
+    <element id="Composition.section:medications_section.text">
       <path value="Composition.section.text"/>
       <short value="text"/>
-      <definition value="SHALL contain exactly one [1..1] text (CONF:2219-1075)."/>
       <min value="1"/>
     </element>
-    <element id="Composition.section:section_slice_pos5">
+    <element id="Composition.section:medications_section.entry">
+      <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="reference"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="entry"/>
+    </element>
+    <element id="Composition.section:medications_section.entry:sliceEntry">
+      <path value="Composition.section.entry"/>
+      <sliceName value="sliceEntry"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationstatement"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource"/>
+      </type>
+    </element>
+    
+    <element id="Composition.section:problem_section">
       <extension
         url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section"/>
       </extension>
       <path value="Composition.section"/>
-      <sliceName value="section_slice_pos5"/>
+      <sliceName value="problem_section"/>
       <label value="Problem Section"/>
       <short value="Problem Section"/>
-      <definition value="SHALL contain exactly one [1..1] section (CONF:2219-1050) such that it"/>
       <comment value="Problem Section"/>
       <min value="1"/>
       <max value="1"/>
     </element>
-    <element id="Composition.section:section_slice_pos5.title">
+    <element id="Composition.section:problem_section.title">
       <path value="Composition.section.title"/>
       <short value="title"/>
-      <definition value="SHALL contain exactly one [1..1] title (CONF:2219-1069)."/>
       <min value="1"/>
     </element>
-    <element id="Composition.section:section_slice_pos5.code">
+    <element id="Composition.section:problem_section.code">
       <path value="Composition.section.code"/>
       <label value="Problem list"/>
       <short value="Problem list"/>
-      <definition
-        value="SHALL contain exactly one [1..1] code=&quot;11450-4&quot; Problem List (CodeSystem: LOINC http://loinc.org) (CONF:2219-1070)."/>
       <min value="1"/>
       <patternCodeableConcept>
         <coding>
@@ -230,38 +243,55 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Composition.section:section_slice_pos5.text">
+    <element id="Composition.section:problem_section.text">
       <path value="Composition.section.text"/>
       <short value="text"/>
-      <definition value="SHALL contain exactly one [1..1] text (CONF:2219-1071)."/>
       <min value="1"/>
     </element>
-    <element id="Composition.section:section_slice_pos6">
+    
+    <element id="Composition.section:problem_section.entry">
+      <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="reference"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="entry"/>
+    </element>
+    <element id="Composition.section:problem_section.entry:sliceEntry">
+      <path value="Composition.section.entry"/>
+      <sliceName value="sliceEntry"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource"/>
+      </type>
+    </element>
+    
+    <element id="Composition.section:results_section">
       <extension
         url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section"/>
       </extension>
       <path value="Composition.section"/>
-      <sliceName value="section_slice_pos6"/>
+      <sliceName value="results_section"/>
       <label value="Results Section"/>
       <short value="Results Section"/>
-      <definition value="SHALL contain exactly one [1..1] section (CONF:2219-1053) such that it"/>
       <comment value="Results Section"/>
       <min value="1"/>
       <max value="1"/>
     </element>
-    <element id="Composition.section:section_slice_pos6.title">
+    <element id="Composition.section:results_section.title">
       <path value="Composition.section.title"/>
       <short value="title"/>
-      <definition value="SHALL contain exactly one [1..1] title (CONF:2219-1079)."/>
       <min value="1"/>
     </element>
-    <element id="Composition.section:section_slice_pos6.code">
+    <element id="Composition.section:results_section.code">
       <path value="Composition.section.code"/>
       <label value="Relevant diagnostic tests and laboratory data"/>
       <short value="Relevant diagnostic tests and laboratory data"/>
-      <definition
-        value="SHALL contain exactly one [1..1] code=&quot;30954-2&quot; Relevant Diagnostic Tests/?Laboratory Data (CodeSystem: LOINC http://loinc.org) (CONF:2219-1080)."/>
       <min value="1"/>
       <patternCodeableConcept>
         <coding>
@@ -270,38 +300,57 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Composition.section:section_slice_pos6.text">
+    <element id="Composition.section:results_section.text">
       <path value="Composition.section.text"/>
       <short value="text"/>
-      <definition value="SHALL contain exactly one [1..1] text (CONF:2219-1081)."/>
       <min value="1"/>
     </element>
-    <element id="Composition.section:section_slice_pos7">
+    
+    <element id="Composition.section:results_section.entry">
+      <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="reference"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="entry"/>
+    </element>
+    <element id="Composition.section:results_section.entry:sliceEntry">
+      <path value="Composition.section.entry"/>
+      <sliceName value="sliceEntry"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observationresults"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource"/>
+      </type>
+    </element>
+    
+    
+    
+    <element id="Composition.section:social_history_section">
       <extension
         url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section"/>
       </extension>
       <path value="Composition.section"/>
-      <sliceName value="section_slice_pos7"/>
+      <sliceName value="social_history_section"/>
       <label value="Social History Section"/>
       <short value="Social History Section"/>
-      <definition value="SHALL contain exactly one [1..1] section (CONF:2219-1063) such that it"/>
       <comment value="Social History Section"/>
       <min value="1"/>
       <max value="1"/>
     </element>
-    <element id="Composition.section:section_slice_pos7.title">
+    <element id="Composition.section:social_history_section.title">
       <path value="Composition.section.title"/>
       <short value="title"/>
-      <definition value="SHALL contain exactly one [1..1] title (CONF:2219-1110)."/>
       <min value="1"/>
     </element>
-    <element id="Composition.section:section_slice_pos7.code">
+    <element id="Composition.section:social_history_section.code">
       <path value="Composition.section.code"/>
       <label value="Social history"/>
       <short value="Social history"/>
-      <definition
-        value="SHALL contain exactly one [1..1] code=&quot;29762-2&quot; Social History (CodeSystem: LOINC http://loinc.org) (CONF:2219-1111)."/>
       <min value="1"/>
       <patternCodeableConcept>
         <coding>
@@ -310,51 +359,58 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Composition.section:section_slice_pos7.text">
+    <element id="Composition.section:social_history_section.text">
       <path value="Composition.section.text"/>
       <short value="text"/>
-      <definition value="SHALL contain exactly one [1..1] text (CONF:2219-1112)."/>
       <min value="1"/>
     </element>
-    <element id="Composition.section:section_slice_pos7.entry:entry_slice_pos4">
+    
+    
+    
+    <element id="Composition.section:social_history_section.entry">
       <path value="Composition.section.entry"/>
-      <sliceName value="entry_slice_pos4"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="reference"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
       <short value="entry"/>
-      <definition
-        value="SHOULD contain zero or one [0..1] U.S. Core SmokingStatus Profile (identifier: http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus) (CONF:2219-2433)."/>
-      <max value="1"/>
+    </element>
+    <element id="Composition.section:social_history_section.entry:sliceEntry">
+      <path value="Composition.section.entry"/>
+      <sliceName value="sliceEntry"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus"
-        />
+        <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource"/>
       </type>
     </element>
-    <element id="Composition.section:section_slice_pos8">
+    
+    
+    <element id="Composition.section:vital_signs_section">
       <extension
         url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section"/>
       </extension>
       <path value="Composition.section"/>
-      <sliceName value="section_slice_pos8"/>
+      <sliceName value="vital_signs_section"/>
       <label value="Vital Signs Section"/>
       <short value="Vital Signs Section"/>
-      <definition value="SHALL contain exactly one [1..1] section (CONF:2219-1062) such that it"/>
       <comment value="Vital Signs Section"/>
       <min value="1"/>
       <max value="1"/>
     </element>
-    <element id="Composition.section:section_slice_pos8.title">
+    <element id="Composition.section:vital_signs_section.title">
       <path value="Composition.section.title"/>
       <short value="title"/>
-      <definition value="SHALL contain exactly one [1..1] title (CONF:2219-1106)."/>
       <min value="1"/>
     </element>
-    <element id="Composition.section:section_slice_pos8.code">
+    <element id="Composition.section:vital_signs_section.code">
       <path value="Composition.section.code"/>
       <label value="Vital signs"/>
       <short value="Vital signs"/>
-      <definition
-        value="SHALL contain exactly one [1..1] code=&quot;8716-3&quot; Vital Signs (CodeSystem: LOINC http://loinc.org) (CONF:2219-1107)."/>
       <min value="1"/>
       <patternCodeableConcept>
         <coding>
@@ -363,37 +419,54 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Composition.section:section_slice_pos8.text">
+    <element id="Composition.section:vital_signs_section.text">
       <path value="Composition.section.text"/>
       <short value="text"/>
-      <definition value="SHALL contain exactly one [1..1] text (CONF:2219-1108)."/>
       <min value="1"/>
     </element>
-    <element id="Composition.section:section_slice_pos9">
+    
+    <element id="Composition.section:vital_signs_section.entry">
+      <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="reference"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="entry"/>
+    </element>
+    <element id="Composition.section:vital_signs_section.entry:sliceEntry">
+      <path value="Composition.section.entry"/>
+      <sliceName value="sliceEntry"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/vitalsigns"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource"/>
+      </type>
+    </element>
+    
+    <element id="Composition.section:plan_of_treatment_section">
       <extension
         url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section"/>
       </extension>
       <path value="Composition.section"/>
-      <sliceName value="section_slice_pos9"/>
+      <sliceName value="plan_of_treatment_section"/>
       <label value="Plan of Treatment Section"/>
       <short value="Plan of Treatment Section"/>
-      <definition value="SHOULD contain zero or one [0..1] section (CONF:2219-1064) such that it"/>
       <comment value="Plan of Treatment Section"/>
       <max value="1"/>
     </element>
-    <element id="Composition.section:section_slice_pos9.title">
+    <element id="Composition.section:plan_of_treatment_section.title">
       <path value="Composition.section.title"/>
       <short value="title"/>
-      <definition value="SHALL contain exactly one [1..1] title (CONF:2219-1113)."/>
       <min value="1"/>
     </element>
-    <element id="Composition.section:section_slice_pos9.code">
+    <element id="Composition.section:plan_of_treatment_section.code">
       <path value="Composition.section.code"/>
       <label value="Plan of treatment"/>
       <short value="Plan of treatment"/>
-      <definition
-        value="SHALL contain exactly one [1..1] code=&quot;18776-5&quot; Plan of Care (CodeSystem: LOINC http://loinc.org) (CONF:2219-1114)."/>
       <min value="1"/>
       <patternCodeableConcept>
         <coding>
@@ -402,37 +475,32 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Composition.section:section_slice_pos9.text">
+    <element id="Composition.section:plan_of_treatment_section.text">
       <path value="Composition.section.text"/>
       <short value="text"/>
-      <definition value="SHALL contain exactly one [1..1] text (CONF:2219-1115)."/>
       <min value="1"/>
     </element>
-    <element id="Composition.section:section_slice_pos10">
+    <element id="Composition.section:procedures_section">
       <extension
         url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section"/>
       </extension>
       <path value="Composition.section"/>
-      <sliceName value="section_slice_pos10"/>
+      <sliceName value="procedures_section"/>
       <label value="Procedures Section"/>
       <short value="Procedures Section"/>
-      <definition value="SHOULD contain zero or one [0..1] section (CONF:2219-1052) such that it"/>
       <comment value="Procedures Section"/>
       <max value="1"/>
     </element>
-    <element id="Composition.section:section_slice_pos10.title">
+    <element id="Composition.section:procedures_section.title">
       <path value="Composition.section.title"/>
       <short value="title"/>
-      <definition value="SHALL contain exactly one [1..1] title (CONF:2219-1076)."/>
       <min value="1"/>
     </element>
-    <element id="Composition.section:section_slice_pos10.code">
+    <element id="Composition.section:procedures_section.code">
       <path value="Composition.section.code"/>
       <label value="History of procedures"/>
       <short value="History of procedures"/>
-      <definition
-        value="SHALL contain exactly one [1..1] code=&quot;47519-4&quot; History of Procedures (CodeSystem: LOINC http://loinc.org) (CONF:2219-1077)."/>
       <min value="1"/>
       <patternCodeableConcept>
         <coding>
@@ -441,37 +509,32 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Composition.section:section_slice_pos10.text">
+    <element id="Composition.section:procedures_section.text">
       <path value="Composition.section.text"/>
       <short value="text"/>
-      <definition value="SHALL contain exactly one [1..1] text (CONF:2219-1078)."/>
       <min value="1"/>
     </element>
-    <element id="Composition.section:section_slice_pos11">
+    <element id="Composition.section:family_history_section">
       <extension
         url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section"/>
       </extension>
       <path value="Composition.section"/>
-      <sliceName value="section_slice_pos11"/>
+      <sliceName value="family_history_section"/>
       <label value="Family History Section"/>
       <short value="Family History Section"/>
-      <definition value="MAY contain zero or one [0..1] section (CONF:2219-1056) such that it"/>
       <comment value="Family History Section"/>
       <max value="1"/>
     </element>
-    <element id="Composition.section:section_slice_pos11.title">
+    <element id="Composition.section:family_history_section.title">
       <path value="Composition.section.title"/>
       <short value="title"/>
-      <definition value="SHALL contain exactly one [1..1] title (CONF:2219-1088)."/>
       <min value="1"/>
     </element>
-    <element id="Composition.section:section_slice_pos11.code">
+    <element id="Composition.section:family_history_section.code">
       <path value="Composition.section.code"/>
       <label value="History of family member diseases"/>
       <short value="History of family member diseases"/>
-      <definition
-        value="SHALL contain exactly one [1..1] code=&quot;10157-6&quot; History of Family Member Diseases (CodeSystem: LOINC http://loinc.org) (CONF:2219-1089)."/>
       <min value="1"/>
       <patternCodeableConcept>
         <coding>
@@ -480,37 +543,32 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Composition.section:section_slice_pos11.text">
+    <element id="Composition.section:family_history_section.text">
       <path value="Composition.section.text"/>
       <short value="text"/>
-      <definition value="SHALL contain exactly one [1..1] text (CONF:2219-1090)."/>
       <min value="1"/>
     </element>
-    <element id="Composition.section:section_slice_pos12">
+    <element id="Composition.section:advance_directives_section">
       <extension
         url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section"/>
       </extension>
       <path value="Composition.section"/>
-      <sliceName value="section_slice_pos12"/>
+      <sliceName value="advance_directives_section"/>
       <label value="Advance Directives Section"/>
       <short value="Advance Directives Section"/>
-      <definition value="MAY contain zero or one [0..1] section (CONF:2219-1054) such that it"/>
       <comment value="Advance Directives Section"/>
       <max value="1"/>
     </element>
-    <element id="Composition.section:section_slice_pos12.title">
+    <element id="Composition.section:advance_directives_section.title">
       <path value="Composition.section.title"/>
       <short value="title"/>
-      <definition value="SHALL contain exactly one [1..1] title (CONF:2219-1082)."/>
       <min value="1"/>
     </element>
-    <element id="Composition.section:section_slice_pos12.code">
+    <element id="Composition.section:advance_directives_section.code">
       <path value="Composition.section.code"/>
       <label value="Advance directives"/>
       <short value="Advance directives"/>
-      <definition
-        value="SHALL contain exactly one [1..1] code=&quot;42348-3&quot; Advance Directives (CodeSystem: LOINC http://loinc.org) (CONF:2219-1083)."/>
       <min value="1"/>
       <patternCodeableConcept>
         <coding>
@@ -519,37 +577,32 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Composition.section:section_slice_pos12.text">
+    <element id="Composition.section:advance_directives_section.text">
       <path value="Composition.section.text"/>
       <short value="text"/>
-      <definition value="SHALL contain exactly one [1..1] text (CONF:2219-1084)."/>
       <min value="1"/>
     </element>
-    <element id="Composition.section:section_slice_pos13">
+    <element id="Composition.section:encounters_section">
       <extension
         url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section"/>
       </extension>
       <path value="Composition.section"/>
-      <sliceName value="section_slice_pos13"/>
+      <sliceName value="encounters_section"/>
       <label value="Encounters Section"/>
       <short value="Encounters Section"/>
-      <definition value="MAY contain zero or one [0..1] section (CONF:2219-1055) such that it"/>
       <comment value="Encounters Section"/>
       <max value="1"/>
     </element>
-    <element id="Composition.section:section_slice_pos13.title">
+    <element id="Composition.section:encounters_section.title">
       <path value="Composition.section.title"/>
       <short value="title"/>
-      <definition value="SHALL contain exactly one [1..1] title (CONF:2219-1085)."/>
       <min value="1"/>
     </element>
-    <element id="Composition.section:section_slice_pos13.code">
+    <element id="Composition.section:encounters_section.code">
       <path value="Composition.section.code"/>
       <label value="Encounters"/>
       <short value="Encounters"/>
-      <definition
-        value="SHALL contain exactly one [1..1] code=&quot;46240-8&quot; History of Hospitalizations and Outpatient Visits (CodeSystem: LOINC http://loinc.org) (CONF:2219-1086)."/>
       <min value="1"/>
       <patternCodeableConcept>
         <coding>
@@ -558,37 +611,32 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Composition.section:section_slice_pos13.text">
+    <element id="Composition.section:encounters_section.text">
       <path value="Composition.section.text"/>
       <short value="text"/>
-      <definition value="SHALL contain exactly one [1..1] text (CONF:2219-1087)."/>
       <min value="1"/>
     </element>
-    <element id="Composition.section:section_slice_pos14">
+    <element id="Composition.section:functional_status_section">
       <extension
         url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section"/>
       </extension>
       <path value="Composition.section"/>
-      <sliceName value="section_slice_pos14"/>
+      <sliceName value="functional_status_section"/>
       <label value="Functional Status Section"/>
       <short value="Functional Status Section"/>
-      <definition value="MAY contain zero or one [0..1] section (CONF:2219-1057) such that it"/>
       <comment value="Functional Status Section"/>
       <max value="1"/>
     </element>
-    <element id="Composition.section:section_slice_pos14.title">
+    <element id="Composition.section:functional_status_section.title">
       <path value="Composition.section.title"/>
       <short value="title"/>
-      <definition value="SHALL contain exactly one [1..1] title (CONF:2219-1091)."/>
       <min value="1"/>
     </element>
-    <element id="Composition.section:section_slice_pos14.code">
+    <element id="Composition.section:functional_status_section.code">
       <path value="Composition.section.code"/>
       <label value="Functional status assessment"/>
       <short value="Functional status assessment"/>
-      <definition
-        value="SHALL contain exactly one [1..1] code=&quot;47420-5&quot; Functional Status Assessment  (CodeSystem: LOINC http://loinc.org) (CONF:2219-1092)."/>
       <min value="1"/>
       <patternCodeableConcept>
         <coding>
@@ -597,37 +645,32 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Composition.section:section_slice_pos14.text">
+    <element id="Composition.section:functional_status_section.text">
       <path value="Composition.section.text"/>
       <short value="text"/>
-      <definition value="SHALL contain exactly one [1..1] text (CONF:2219-1093)."/>
       <min value="1"/>
     </element>
-    <element id="Composition.section:section_slice_pos15">
+    <element id="Composition.section:immunizations_section">
       <extension
         url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section"/>
       </extension>
       <path value="Composition.section"/>
-      <sliceName value="section_slice_pos15"/>
+      <sliceName value="immunizations_section"/>
       <label value="Immunizations Section"/>
       <short value="Immunizations Section"/>
-      <definition value="MAY contain zero or one [0..1] section (CONF:2219-1058) such that it"/>
       <comment value="Immunizations Section"/>
       <max value="1"/>
     </element>
-    <element id="Composition.section:section_slice_pos15.title">
+    <element id="Composition.section:immunizations_section.title">
       <path value="Composition.section.title"/>
       <short value="title"/>
-      <definition value="SHALL contain exactly one [1..1] title (CONF:2219-1094)."/>
       <min value="1"/>
     </element>
-    <element id="Composition.section:section_slice_pos15.code">
+    <element id="Composition.section:immunizations_section.code">
       <path value="Composition.section.code"/>
       <label value="History of immunization"/>
       <short value="History of immunization"/>
-      <definition
-        value="SHALL contain exactly one [1..1] code=&quot;11369-6&quot; History of Immunization (CodeSystem: LOINC http://loinc.org) (CONF:2219-1095)."/>
       <min value="1"/>
       <patternCodeableConcept>
         <coding>
@@ -636,37 +679,32 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Composition.section:section_slice_pos15.text">
+    <element id="Composition.section:immunizations_section.text">
       <path value="Composition.section.text"/>
       <short value="text"/>
-      <definition value="SHALL contain exactly one [1..1] text (CONF:2219-1096)."/>
       <min value="1"/>
     </element>
-    <element id="Composition.section:section_slice_pos16">
+    <element id="Composition.section:nutrition_section">
       <extension
         url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section"/>
       </extension>
       <path value="Composition.section"/>
-      <sliceName value="section_slice_pos16"/>
+      <sliceName value="nutrition_section"/>
       <label value="Nutrition Section"/>
       <short value="Nutrition Section"/>
-      <definition value="MAY contain zero or one [0..1] section (CONF:2219-1060) such that it"/>
       <comment value="Nutrition Section"/>
       <max value="1"/>
     </element>
-    <element id="Composition.section:section_slice_pos16.title">
+    <element id="Composition.section:nutrition_section.title">
       <path value="Composition.section.title"/>
       <short value="title"/>
-      <definition value="SHALL contain exactly one [1..1] title (CONF:2219-1100)."/>
       <min value="1"/>
     </element>
-    <element id="Composition.section:section_slice_pos16.code">
+    <element id="Composition.section:nutrition_section.code">
       <path value="Composition.section.code"/>
       <label value="Diet and nutrition"/>
       <short value="Diet and nutrition"/>
-      <definition
-        value="SHALL contain exactly one [1..1] code=&quot;61144-2&quot; Diet and Nutrition (CodeSystem: LOINC http://loinc.org) (CONF:2219-1101)."/>
       <min value="1"/>
       <patternCodeableConcept>
         <coding>
@@ -675,10 +713,9 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Composition.section:section_slice_pos16.text">
+    <element id="Composition.section:nutrition_section.text">
       <path value="Composition.section.text"/>
       <short value="text"/>
-      <definition value="SHALL contain exactly one [1..1] text (CONF:2219-1102)."/>
       <min value="1"/>
     </element>
     <element id="Composition.section:section_slice_pos17">
@@ -690,22 +727,18 @@
       <sliceName value="section_slice_pos17"/>
       <label value="Mental Status Section"/>
       <short value="Mental Status Section"/>
-      <definition value="MAY contain zero or one [0..1] section (CONF:2219-1061) such that it"/>
       <comment value="Mental Status Section"/>
       <max value="1"/>
     </element>
     <element id="Composition.section:section_slice_pos17.title">
       <path value="Composition.section.title"/>
       <short value="title"/>
-      <definition value="SHALL contain exactly one [1..1] title (CONF:2219-1103)."/>
       <min value="1"/>
     </element>
     <element id="Composition.section:section_slice_pos17.code">
       <path value="Composition.section.code"/>
       <label value="Mental status"/>
       <short value="Mental status"/>
-      <definition
-        value="SHALL contain exactly one [1..1] code=&quot;10190-7&quot; Mental Status (CodeSystem: LOINC http://loinc.org) (CONF:2219-1104)."/>
       <min value="1"/>
       <patternCodeableConcept>
         <coding>
@@ -717,7 +750,6 @@
     <element id="Composition.section:section_slice_pos17.text">
       <path value="Composition.section.text"/>
       <short value="text"/>
-      <definition value="SHALL contain exactly one [1..1] text (CONF:2219-1105)."/>
       <min value="1"/>
     </element>
     <element id="Composition.section:section_slice_pos18">
@@ -729,22 +761,18 @@
       <sliceName value="section_slice_pos18"/>
       <label value="Medical Equipment Section"/>
       <short value="Medical Equipment Section"/>
-      <definition value="MAY contain zero or one [0..1] section (CONF:2219-1059) such that it"/>
       <comment value="Medical Equipment Section"/>
       <max value="1"/>
     </element>
     <element id="Composition.section:section_slice_pos18.title">
       <path value="Composition.section.title"/>
       <short value="title"/>
-      <definition value="SHALL contain exactly one [1..1] title (CONF:2219-1097)."/>
       <min value="1"/>
     </element>
     <element id="Composition.section:section_slice_pos18.code">
       <path value="Composition.section.code"/>
       <label value="Medical equipment"/>
       <short value="Medical equipment"/>
-      <definition
-        value="SHALL contain exactly one [1..1] code=&quot;46264-8&quot; History of Medical Device Use (CodeSystem: LOINC http://loinc.org) (CONF:2219-1098)."/>
       <min value="1"/>
       <patternCodeableConcept>
         <coding>
@@ -756,7 +784,6 @@
     <element id="Composition.section:section_slice_pos18.text">
       <path value="Composition.section.text"/>
       <short value="text"/>
-      <definition value="SHALL contain exactly one [1..1] text (CONF:2219-1099)."/>
       <min value="1"/>
     </element>
     <element id="Composition.section:section_slice_pos19">
@@ -768,22 +795,18 @@
       <sliceName value="section_slice_pos19"/>
       <label value="Payers Section"/>
       <short value="Payers Section"/>
-      <definition value="MAY contain zero or one [0..1] section (CONF:2219-1065) such that it"/>
       <comment value="Payers Section"/>
       <max value="1"/>
     </element>
     <element id="Composition.section:section_slice_pos19.title">
       <path value="Composition.section.title"/>
       <short value="title"/>
-      <definition value="SHALL contain exactly one [1..1] title (CONF:2219-1116)."/>
       <min value="1"/>
     </element>
     <element id="Composition.section:section_slice_pos19.code">
       <path value="Composition.section.code"/>
       <label value="Payers"/>
       <short value="Payers"/>
-      <definition
-        value="SHALL contain exactly one [1..1] code=&quot;48768-6&quot; Payment Sources (CodeSystem: LOINC http://loinc.org) (CONF:2219-1117)."/>
       <min value="1"/>
       <patternCodeableConcept>
         <coding>
@@ -795,7 +818,6 @@
     <element id="Composition.section:section_slice_pos19.text">
       <path value="Composition.section.text"/>
       <short value="text"/>
-      <definition value="SHALL contain exactly one [1..1] text (CONF:2219-1118)."/>
       <min value="1"/>
     </element>
   </differential>
