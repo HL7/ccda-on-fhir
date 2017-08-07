@@ -153,8 +153,8 @@
       <sliceName value="sliceEntry"/>
       <type>
         <code value="Reference"/>
-        <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource"/>
+        <targetProfile
+          value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance"/>
       </type>
     </element>
     <element id="Composition.section:medications_section">
@@ -208,11 +208,12 @@
       <sliceName value="sliceEntry"/>
       <type>
         <code value="Reference"/>
-        <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationstatement"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource"/>
+        <targetProfile
+          value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationstatement"/>
+
       </type>
     </element>
-    
+
     <element id="Composition.section:problem_section">
       <extension
         url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
@@ -248,7 +249,7 @@
       <short value="text"/>
       <min value="1"/>
     </element>
-    
+
     <element id="Composition.section:problem_section.entry">
       <path value="Composition.section.entry"/>
       <slicing>
@@ -265,11 +266,11 @@
       <sliceName value="sliceEntry"/>
       <type>
         <code value="Reference"/>
-        <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"/>
+
       </type>
     </element>
-    
+
     <element id="Composition.section:results_section">
       <extension
         url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
@@ -305,7 +306,7 @@
       <short value="text"/>
       <min value="1"/>
     </element>
-    
+
     <element id="Composition.section:results_section.entry">
       <path value="Composition.section.entry"/>
       <slicing>
@@ -322,13 +323,14 @@
       <sliceName value="sliceEntry"/>
       <type>
         <code value="Reference"/>
-        <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observationresults"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource"/>
+        <targetProfile
+          value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observationresults"/>
+
       </type>
     </element>
-    
-    
-    
+
+
+
     <element id="Composition.section:social_history_section">
       <extension
         url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
@@ -364,9 +366,9 @@
       <short value="text"/>
       <min value="1"/>
     </element>
-    
-    
-    
+
+
+
     <element id="Composition.section:social_history_section.entry">
       <path value="Composition.section.entry"/>
       <slicing>
@@ -383,12 +385,12 @@
       <sliceName value="sliceEntry"/>
       <type>
         <code value="Reference"/>
-        <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus"/>
+
       </type>
     </element>
-    
-    
+
+
     <element id="Composition.section:vital_signs_section">
       <extension
         url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
@@ -424,7 +426,7 @@
       <short value="text"/>
       <min value="1"/>
     </element>
-    
+
     <element id="Composition.section:vital_signs_section.entry">
       <path value="Composition.section.entry"/>
       <slicing>
@@ -441,11 +443,10 @@
       <sliceName value="sliceEntry"/>
       <type>
         <code value="Reference"/>
-        <profile value="http://hl7.org/fhir/StructureDefinition/vitalsigns"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/vitalsigns"/>
       </type>
     </element>
-    
+
     <element id="Composition.section:plan_of_treatment_section">
       <extension
         url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
