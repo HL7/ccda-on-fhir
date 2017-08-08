@@ -481,6 +481,80 @@
       <short value="text"/>
       <min value="1"/>
     </element>
+    
+    <element id="Composition.section:plan_of_treatment_section.entry">
+      <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="reference"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="entry"/>
+    </element>
+    <element id="Composition.section:plan_of_treatment_section.entry:sliceEntry">
+      <path value="Composition.section.entry"/>
+      <sliceName value="sliceEntry"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Communication"/>
+      </type>
+      <!-- Items below are from CarePlan.activity.reference -->
+      <type> 
+        <code value="Reference"/> 
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Appointment"/> 
+      </type> 
+      <type> 
+        <code value="Reference"/> 
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CommunicationRequest"/> 
+      </type> 
+      <type> 
+        <code value="Reference"/> 
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DeviceRequest"/> 
+      </type> 
+      <!-- Removing since there is a US Core MedicationRequest profile above -->
+      <!--
+      <type> 
+        <code value="Reference"/> 
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/MedicationRequest"/> 
+      </type> 
+      -->
+      <type> 
+        <code value="Reference"/> 
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/NutritionOrder"/> 
+      </type> 
+      <type> 
+        <code value="Reference"/> 
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Task"/> 
+      </type> 
+      <type> 
+        <code value="Reference"/> 
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ProcedureRequest"/> 
+      </type> 
+      <type> 
+        <code value="Reference"/> 
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ReferralRequest"/> 
+      </type> 
+      <type> 
+        <code value="Reference"/> 
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/VisionPrescription"/> 
+      </type> 
+      <type> 
+        <code value="Reference"/> 
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RequestGroup"/> 
+      </type> 
+    </element>
+    
+    
     <element id="Composition.section:procedures_section">
       <extension
         url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
