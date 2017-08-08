@@ -58,23 +58,23 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Composition.section:section_slice_pos2">
+    <element id="Composition.section:allergy_intolerance_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
       </extension>
       <path value="Composition.section" />
-      <sliceName value="section_slice_pos2" />
+      <sliceName value="allergy_intolerance_section" />
       <label value="Allergies and Intolerances Section" />
       <short value="Allergies and Intolerances Section" />
       <min value="1" />
       <max value="1" />
     </element>
-    <element id="Composition.section:section_slice_pos2.title">
+    <element id="Composition.section:allergy_intolerance_section.title">
       <path value="Composition.section.title" />
       <short value="title" />
       <min value="1" />
     </element>
-    <element id="Composition.section:section_slice_pos2.code">
+    <element id="Composition.section:allergy_intolerance_section.code">
       <path value="Composition.section.code" />
       <label value="Allergies and/or adverse reactions" />
       <short value="Allergies and/or adverse reactions" />
@@ -86,17 +86,17 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Composition.section:section_slice_pos2.text">
+    <element id="Composition.section:allergy_intolerance_section.text">
       <path value="Composition.section.text" />
       <short value="text" />
       <min value="1" />
     </element>
-    <element id="Composition.section:section_slice_pos2.entry">
+    <element id="Composition.section:allergy_intolerance_section.entry">
       <path value="Composition.section.entry" />
       <short value="entry" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-vitalsigns" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance" />
       </type>
     </element>
     <element id="Composition.section:section_slice_pos3">
