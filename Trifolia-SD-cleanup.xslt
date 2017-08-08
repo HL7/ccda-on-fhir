@@ -11,7 +11,15 @@
    <xsl:output method="xml" indent="yes" encoding="UTF-8" />
    <xsl:strip-space elements="*"/>   
    
+   <xsl:template match="fhir:element/@id">
+      <!-- Suppress -->
+   </xsl:template>   
+   
    <xsl:template match="fhir:definition[parent::fhir:element]">
+      <!-- Suppress -->
+   </xsl:template>
+   
+   <xsl:template match="fhir:comment[parent::fhir:element]">
       <!-- Suppress -->
    </xsl:template>
    

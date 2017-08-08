@@ -540,10 +540,13 @@
         <code value="Reference"/> 
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/ProcedureRequest"/> 
       </type> 
+      <!-- Removed, since ProcedureRequest now covers referrals -->
+      <!--
       <type> 
         <code value="Reference"/> 
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/ReferralRequest"/> 
       </type> 
+      -->
       <type> 
         <code value="Reference"/> 
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/VisionPrescription"/> 
