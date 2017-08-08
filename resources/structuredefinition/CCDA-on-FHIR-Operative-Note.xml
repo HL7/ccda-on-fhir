@@ -2,45 +2,47 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="CCDA-on-FHIR-Operative-Note" />
   <meta>
-    <lastUpdated value="2017-07-18T16:10:51.387-04:00" />
+    <lastUpdated value="2017-08-08T15:19:25.879-04:00" />
   </meta>
   <url value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Operative-Note" />
   <name value="C-CDA on FHIR Operative Note" />
   <status value="draft" />
   <publisher value="Lantana Consulting Group" />
- <contact>
+  <contact>
     <name value="Sarah Gaunt" />
     <telecom>
-      <system value="phone"/>
-      <value value="+6-141-029-2506" />
-      <use value="work"/>
+      <system value="phone" />
+      <value value="+6 141-029-2506" />
+      <use value="work" />
     </telecom>
-    <telecom>
-      <system value="email"/>
-      <value value="sarah.gaunt@lantanagroup.com" />
-      <use value="work"/>
-    </telecom>
-  </contact>
-  <contact>
-    <name value="Rick Geimer" />
     <telecom>
       <system value="email" />
-      <value value="rick.geimer@lantanagroup.com" />
+      <value value="sarah.gaunt@lantanagroup.com" />
       <use value="work" />
     </telecom>
   </contact>
-  <description value="The Operative Note is a frequently used type of procedure note with specific requirements set forth by regulatory agencies.&#xA;&#xA;The Operative Note is created immediately following a surgical or other high-risk procedure. It records the pre- and post-surgical diagnosis, pertinent events of the procedure, as well as the condition of the patient following the procedure. The report should be sufficiently detailed to support the diagnoses, justify the treatment, document the course of the procedure, and provide continuity of care." />
-  <fhirVersion value="3.0.1" />
+  <description value="The Operative Note is a frequently used type of procedure note with specific requirements set forth by regulatory agencies.&#xA;&#xA;The Operative Note is created immediately following a surgical or other high-risk procedure. It records the pre- and post-surgical diagnosis, pertinent events of the procedure, as well as the condition of the patient following the procedure. The report should be sufficiently detailed to support the diagnoses, justify the treatment, document the course of the procedure, and provide continuity of care. " />
   <kind value="resource" />
   <abstract value="false" />
   <contextType value="resource" />
   <context value="Composition" />
   <type value="Composition" />
   <baseDefinition value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-US-Realm-Header" />
-  <derivation value="constraint"/>
+  <derivation value="constraint" />
   <differential>
     <element id="Composition">
       <path value="Composition"/>
+    </element>
+    <element id="Composition.type">
+      <path value="Composition.type" />
+      <short value="type" />
+      <binding>
+        <strength value="required" />
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/us/ccda/ValueSet/2.16.840.1.113883.11.20.1.1" />
+          <display value="SurgicalOperationNoteDocumentTypeCode" />
+        </valueSetReference>
+      </binding>
     </element>
     <element id="Composition.section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
@@ -54,7 +56,6 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <definition value="MAY contain zero or one [0..1] section (CONF:2219-1887) such that it" />
     </element>
     <element id="Composition.section:section_slice_pos2">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
@@ -64,16 +65,38 @@
       <sliceName value="section_slice_pos2" />
       <label value="Anesthesia Section" />
       <short value="Anesthesia Section" />
-      <definition value="SHALL contain exactly one [1..1] section (CONF:2219-1872) such that it" />
-      <comment value="Anesthesia Section" />
       <min value="1" />
       <max value="1" />
     </element>
     <element id="Composition.section:section_slice_pos2.title">
       <path value="Composition.section.title" />
       <short value="title" />
-      <definition value="SHALL contain exactly one [1..1] title (CONF:2219-1889)." />
       <min value="1" />
+    </element>
+    <element id="Composition.section:section_slice_pos2.code">
+      <path value="Composition.section.code" />
+      <label value="Anesthesia" />
+      <short value="Anesthesia" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org" />
+          <code value="59774-0" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.section:section_slice_pos2.text">
+      <path value="Composition.section.text" />
+      <short value="text" />
+      <min value="1" />
+    </element>
+    <element id="Composition.section:section_slice_pos2.entry">
+      <path value="Composition.section.entry" />
+      <short value="entry" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition" />
+      </type>
     </element>
     <element id="Composition.section:section_slice_pos3">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
@@ -83,15 +106,29 @@
       <sliceName value="section_slice_pos3" />
       <label value="Complications Section" />
       <short value="Complications Section" />
-      <definition value="SHALL contain exactly one [1..1] section (CONF:2219-1873) such that it" />
-      <comment value="Complications Section" />
       <min value="1" />
       <max value="1" />
     </element>
     <element id="Composition.section:section_slice_pos3.title">
       <path value="Composition.section.title" />
       <short value="title" />
-      <definition value="SHALL contain exactly one [1..1] title (CONF:2219-1892)." />
+      <min value="1" />
+    </element>
+    <element id="Composition.section:section_slice_pos3.code">
+      <path value="Composition.section.code" />
+      <label value="Complications" />
+      <short value="Complications" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org" />
+          <code value="55109-3" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.section:section_slice_pos3.text">
+      <path value="Composition.section.text" />
+      <short value="text" />
       <min value="1" />
     </element>
     <element id="Composition.section:section_slice_pos4">
@@ -102,15 +139,29 @@
       <sliceName value="section_slice_pos4" />
       <label value="Preoperative Diagnosis Section" />
       <short value="Preoperative Diagnosis Section" />
-      <definition value="SHALL contain exactly one [1..1] section (CONF:2219-1874) such that it" />
-      <comment value="Preoperative Diagnosis Section" />
       <min value="1" />
       <max value="1" />
     </element>
     <element id="Composition.section:section_slice_pos4.title">
       <path value="Composition.section.title" />
       <short value="title" />
-      <definition value="SHALL contain exactly one [1..1] title (CONF:2219-1895)." />
+      <min value="1" />
+    </element>
+    <element id="Composition.section:section_slice_pos4.code">
+      <path value="Composition.section.code" />
+      <label value="Preoperative Diagnosis" />
+      <short value="Preoperative Diagnosis" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org" />
+          <code value="10219-4" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.section:section_slice_pos4.text">
+      <path value="Composition.section.text" />
+      <short value="text" />
       <min value="1" />
     </element>
     <element id="Composition.section:section_slice_pos5">
@@ -121,15 +172,29 @@
       <sliceName value="section_slice_pos5" />
       <label value="Procedure Estimated Blood Loss Section" />
       <short value="Procedure Estimated Blood Loss Section" />
-      <definition value="SHALL contain exactly one [1..1] section (CONF:2219-1875) such that it" />
-      <comment value="Procedure Estimated Blood Loss Section" />
       <min value="1" />
       <max value="1" />
     </element>
     <element id="Composition.section:section_slice_pos5.title">
       <path value="Composition.section.title" />
       <short value="title" />
-      <definition value="SHALL contain exactly one [1..1] title (CONF:2219-1898)." />
+      <min value="1" />
+    </element>
+    <element id="Composition.section:section_slice_pos5.code">
+      <path value="Composition.section.code" />
+      <label value="Procedure Estimated Blood Loss" />
+      <short value="Procedure Estimated Blood Loss" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org" />
+          <code value="59770-8" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.section:section_slice_pos5.text">
+      <path value="Composition.section.text" />
+      <short value="text" />
       <min value="1" />
     </element>
     <element id="Composition.section:section_slice_pos6">
@@ -140,15 +205,29 @@
       <sliceName value="section_slice_pos6" />
       <label value="Procedure Findings Section" />
       <short value="Procedure Findings Section" />
-      <definition value="SHALL contain exactly one [1..1] section (CONF:2219-1876) such that it" />
-      <comment value="Procedure Findings Section" />
       <min value="1" />
       <max value="1" />
     </element>
     <element id="Composition.section:section_slice_pos6.title">
       <path value="Composition.section.title" />
       <short value="title" />
-      <definition value="SHALL contain exactly one [1..1] title (CONF:2219-1901)." />
+      <min value="1" />
+    </element>
+    <element id="Composition.section:section_slice_pos6.code">
+      <path value="Composition.section.code" />
+      <label value="Procedure Findings" />
+      <short value="Procedure Findings" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org" />
+          <code value="59776-5" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.section:section_slice_pos6.text">
+      <path value="Composition.section.text" />
+      <short value="text" />
       <min value="1" />
     </element>
     <element id="Composition.section:section_slice_pos7">
@@ -159,15 +238,29 @@
       <sliceName value="section_slice_pos7" />
       <label value="Procedure Specimens Taken Section" />
       <short value="Procedure Specimens Taken Section" />
-      <definition value="SHALL contain exactly one [1..1] section (CONF:2219-1877) such that it" />
-      <comment value="Procedure Specimens Taken Section" />
       <min value="1" />
       <max value="1" />
     </element>
     <element id="Composition.section:section_slice_pos7.title">
       <path value="Composition.section.title" />
       <short value="title" />
-      <definition value="SHALL contain exactly one [1..1] title (CONF:2219-1904)." />
+      <min value="1" />
+    </element>
+    <element id="Composition.section:section_slice_pos7.code">
+      <path value="Composition.section.code" />
+      <label value="Procedure Specimens Taken" />
+      <short value="Procedure Specimens Taken" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org" />
+          <code value="59773-2" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.section:section_slice_pos7.text">
+      <path value="Composition.section.text" />
+      <short value="text" />
       <min value="1" />
     </element>
     <element id="Composition.section:section_slice_pos8">
@@ -178,15 +271,29 @@
       <sliceName value="section_slice_pos8" />
       <label value="Postoperative Diagnosis Section" />
       <short value="Postoperative Diagnosis Section" />
-      <definition value="SHALL contain exactly one [1..1] section (CONF:2219-1881) such that it" />
-      <comment value="Postoperative Diagnosis Section" />
       <min value="1" />
       <max value="1" />
     </element>
     <element id="Composition.section:section_slice_pos8.title">
       <path value="Composition.section.title" />
       <short value="title" />
-      <definition value="SHALL contain exactly one [1..1] title (CONF:2219-1916)." />
+      <min value="1" />
+    </element>
+    <element id="Composition.section:section_slice_pos8.code">
+      <path value="Composition.section.code" />
+      <label value="Postoperative Diagnosis" />
+      <short value="Postoperative Diagnosis" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org" />
+          <code value="10218-6" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.section:section_slice_pos8.text">
+      <path value="Composition.section.text" />
+      <short value="text" />
       <min value="1" />
     </element>
     <element id="Composition.section:section_slice_pos9">
@@ -197,15 +304,29 @@
       <sliceName value="section_slice_pos9" />
       <label value="Procedure Description Section" />
       <short value="Procedure Description Section" />
-      <definition value="SHALL contain exactly one [1..1] section (CONF:2219-1882) such that it" />
-      <comment value="Procedure Description Section" />
       <min value="1" />
       <max value="1" />
     </element>
     <element id="Composition.section:section_slice_pos9.title">
       <path value="Composition.section.title" />
       <short value="title" />
-      <definition value="SHALL contain exactly one [1..1] title (CONF:2219-1919)." />
+      <min value="1" />
+    </element>
+    <element id="Composition.section:section_slice_pos9.code">
+      <path value="Composition.section.code" />
+      <label value="Procedure Description" />
+      <short value="Procedure Description" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org" />
+          <code value="29554-3" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.section:section_slice_pos9.text">
+      <path value="Composition.section.text" />
+      <short value="text" />
       <min value="1" />
     </element>
     <element id="Composition.section:section_slice_pos10">
@@ -216,14 +337,28 @@
       <sliceName value="section_slice_pos10" />
       <label value="Operative Note Surgical Procedure Section" />
       <short value="Operative Note Surgical Procedure Section" />
-      <definition value="MAY contain zero or one [0..1] section (CONF:2219-1878) such that it" />
-      <comment value="Operative Note Surgical Procedure Section" />
       <max value="1" />
     </element>
     <element id="Composition.section:section_slice_pos10.title">
       <path value="Composition.section.title" />
       <short value="title" />
-      <definition value="SHALL contain exactly one [1..1] title (CONF:2219-1907)." />
+      <min value="1" />
+    </element>
+    <element id="Composition.section:section_slice_pos10.code">
+      <path value="Composition.section.code" />
+      <label value="Operative Note Surgical Procedure" />
+      <short value="Operative Note Surgical Procedure" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org" />
+          <code value="10223-6" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.section:section_slice_pos10.text">
+      <path value="Composition.section.text" />
+      <short value="text" />
       <min value="1" />
     </element>
     <element id="Composition.section:section_slice_pos11">
@@ -234,14 +369,28 @@
       <sliceName value="section_slice_pos11" />
       <label value="Operative Note Fluids Section" />
       <short value="Operative Note Fluids Section" />
-      <definition value="MAY contain zero or one [0..1] section (CONF:2219-1879) such that it" />
-      <comment value="Operative Note Fluids Section" />
       <max value="1" />
     </element>
     <element id="Composition.section:section_slice_pos11.title">
       <path value="Composition.section.title" />
       <short value="title" />
-      <definition value="SHALL contain exactly one [1..1] title (CONF:2219-1910)." />
+      <min value="1" />
+    </element>
+    <element id="Composition.section:section_slice_pos11.code">
+      <path value="Composition.section.code" />
+      <label value="Operative Note Fluids" />
+      <short value="Operative Note Fluids" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org" />
+          <code value="10216-0" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.section:section_slice_pos11.text">
+      <path value="Composition.section.text" />
+      <short value="text" />
       <min value="1" />
     </element>
     <element id="Composition.section:section_slice_pos12">
@@ -252,14 +401,28 @@
       <sliceName value="section_slice_pos12" />
       <label value="Plan of Treatment Section" />
       <short value="Plan of Treatment Section" />
-      <definition value="MAY contain zero or one [0..1] section (CONF:2219-1883) such that it" />
-      <comment value="Plan of Treatment Section" />
       <max value="1" />
     </element>
     <element id="Composition.section:section_slice_pos12.title">
       <path value="Composition.section.title" />
       <short value="title" />
-      <definition value="SHALL contain exactly one [1..1] title (CONF:2219-1922)." />
+      <min value="1" />
+    </element>
+    <element id="Composition.section:section_slice_pos12.code">
+      <path value="Composition.section.code" />
+      <label value="Plan of Treatment" />
+      <short value="Plan of Treatment" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org" />
+          <code value="18776-5" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.section:section_slice_pos12.text">
+      <path value="Composition.section.text" />
+      <short value="text" />
       <min value="1" />
     </element>
     <element id="Composition.section:section_slice_pos13">
@@ -270,14 +433,28 @@
       <sliceName value="section_slice_pos13" />
       <label value="Planned Procedure Section" />
       <short value="Planned Procedure Section" />
-      <definition value="MAY contain zero or one [0..1] section (CONF:2219-1884) such that it" />
-      <comment value="Planned Procedure Section" />
       <max value="1" />
     </element>
     <element id="Composition.section:section_slice_pos13.title">
       <path value="Composition.section.title" />
       <short value="title" />
-      <definition value="SHALL contain exactly one [1..1] title (CONF:2219-1925)." />
+      <min value="1" />
+    </element>
+    <element id="Composition.section:section_slice_pos13.code">
+      <path value="Composition.section.code" />
+      <label value="Planned Procedure" />
+      <short value="Planned Procedure" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org" />
+          <code value="59772-4" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.section:section_slice_pos13.text">
+      <path value="Composition.section.text" />
+      <short value="text" />
       <min value="1" />
     </element>
     <element id="Composition.section:section_slice_pos14">
@@ -288,14 +465,28 @@
       <sliceName value="section_slice_pos14" />
       <label value="Procedure Disposition Section" />
       <short value="Procedure Disposition Section" />
-      <definition value="MAY contain zero or one [0..1] section (CONF:2219-1885) such that it" />
-      <comment value="Procedure Disposition Section" />
       <max value="1" />
     </element>
     <element id="Composition.section:section_slice_pos14.title">
       <path value="Composition.section.title" />
       <short value="title" />
-      <definition value="SHALL contain exactly one [1..1] title (CONF:2219-1928)." />
+      <min value="1" />
+    </element>
+    <element id="Composition.section:section_slice_pos14.code">
+      <path value="Composition.section.code" />
+      <label value="Procedure Disposition" />
+      <short value="Procedure Disposition" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org" />
+          <code value="59775-7" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.section:section_slice_pos14.text">
+      <path value="Composition.section.text" />
+      <short value="text" />
       <min value="1" />
     </element>
     <element id="Composition.section:section_slice_pos15">
@@ -306,14 +497,28 @@
       <sliceName value="section_slice_pos15" />
       <label value="Procedure Indications Section" />
       <short value="Procedure Indications Section" />
-      <definition value="MAY contain zero or one [0..1] section (CONF:2219-1887) such that it" />
-      <comment value="Procedure Indications Section" />
       <max value="1" />
     </element>
     <element id="Composition.section:section_slice_pos15.title">
       <path value="Composition.section.title" />
       <short value="title" />
-      <definition value="SHALL contain exactly one [1..1] title (CONF:2219-1934)." />
+      <min value="1" />
+    </element>
+    <element id="Composition.section:section_slice_pos15.code">
+      <path value="Composition.section.code" />
+      <label value="Procedure Indications" />
+      <short value="Procedure Indications" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org" />
+          <code value="59768-2" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.section:section_slice_pos15.text">
+      <path value="Composition.section.text" />
+      <short value="text" />
       <min value="1" />
     </element>
     <element id="Composition.section:section_slice_pos16">
@@ -324,14 +529,28 @@
       <sliceName value="section_slice_pos16" />
       <label value="Procedure Implants Section" />
       <short value="Procedure Implants Section" />
-      <definition value="MAY contain zero or one [0..1] section (CONF:2219-1880) such that it" />
-      <comment value="Procedure Implants Section" />
       <max value="1" />
     </element>
     <element id="Composition.section:section_slice_pos16.title">
       <path value="Composition.section.title" />
       <short value="title" />
-      <definition value="SHALL contain exactly one [1..1] title (CONF:2219-1913)." />
+      <min value="1" />
+    </element>
+    <element id="Composition.section:section_slice_pos16.code">
+      <path value="Composition.section.code" />
+      <label value="Procedure Implants" />
+      <short value="Procedure Implants" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org" />
+          <code value="59771-6" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.section:section_slice_pos16.text">
+      <path value="Composition.section.text" />
+      <short value="text" />
       <min value="1" />
     </element>
     <element id="Composition.section:section_slice_pos17">
@@ -342,14 +561,28 @@
       <sliceName value="section_slice_pos17" />
       <label value="Surgical Drains Section" />
       <short value="Surgical Drains Section" />
-      <definition value="MAY contain zero or one [0..1] section (CONF:2219-1886) such that it" />
-      <comment value="Surgical Drains Section" />
       <max value="1" />
     </element>
     <element id="Composition.section:section_slice_pos17.title">
       <path value="Composition.section.title" />
       <short value="title" />
-      <definition value="SHALL contain exactly one [1..1] title (CONF:2219-1931)." />
+      <min value="1" />
+    </element>
+    <element id="Composition.section:section_slice_pos17.code">
+      <path value="Composition.section.code" />
+      <label value="Surgical Drains" />
+      <short value="Surgical Drains" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org" />
+          <code value="11537-8" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.section:section_slice_pos17.text">
+      <path value="Composition.section.text" />
+      <short value="text" />
       <min value="1" />
     </element>
   </differential>

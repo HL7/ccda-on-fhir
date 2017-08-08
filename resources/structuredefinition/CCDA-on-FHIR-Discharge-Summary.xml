@@ -81,7 +81,7 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="urn:oid:2.16.840.1.113883.6.1" />
+          <system value="http://loinc.org" />
           <code value="48765-2" />
         </coding>
       </patternCodeableConcept>
@@ -121,7 +121,7 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="urn:oid:2.16.840.1.113883.6.1" />
+          <system value="http://loinc.org" />
           <code value="8648-8" />
         </coding>
       </patternCodeableConcept>
@@ -154,7 +154,7 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="urn:oid:2.16.840.1.113883.6.1" />
+          <system value="http://loinc.org" />
           <code value="11535-2" />
         </coding>
       </patternCodeableConcept>
@@ -187,7 +187,7 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="urn:oid:2.16.840.1.113883.6.1" />
+          <system value="http://loinc.org" />
           <code value="18776-5" />
         </coding>
       </patternCodeableConcept>
@@ -219,7 +219,7 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="urn:oid:2.16.840.1.113883.6.1" />
+          <system value="http://loinc.org" />
           <code value="10183-2" />
         </coding>
       </patternCodeableConcept>
@@ -251,7 +251,7 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="urn:oid:2.16.840.1.113883.6.1" />
+          <system value="http://loinc.org" />
           <code value="46241-6" />
         </coding>
       </patternCodeableConcept>
@@ -283,7 +283,7 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="urn:oid:2.16.840.1.113883.6.1" />
+          <system value="http://loinc.org" />
           <code value="42346-7" />
         </coding>
       </patternCodeableConcept>
@@ -314,7 +314,7 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="urn:oid:2.16.840.1.113883.6.1" />
+          <system value="http://loinc.org" />
           <code value="46239-0" />
         </coding>
       </patternCodeableConcept>
@@ -345,7 +345,7 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="urn:oid:2.16.840.1.113883.6.1" />
+          <system value="http://loinc.org" />
           <code value="10154-3" />
         </coding>
       </patternCodeableConcept>
@@ -376,7 +376,7 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="urn:oid:2.16.840.1.113883.6.1" />
+          <system value="http://loinc.org" />
           <code value="10157-6" />
         </coding>
       </patternCodeableConcept>
@@ -408,7 +408,7 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="urn:oid:2.16.840.1.113883.6.1" />
+          <system value="http://loinc.org" />
           <code value="47420-5" />
         </coding>
       </patternCodeableConcept>
@@ -439,7 +439,7 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="urn:oid:2.16.840.1.113883.6.1" />
+          <system value="http://loinc.org" />
           <code value="11348-0" />
         </coding>
       </patternCodeableConcept>
@@ -470,7 +470,7 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="urn:oid:2.16.840.1.113883.6.1" />
+          <system value="http://loinc.org" />
           <code value="10164-2" />
         </coding>
       </patternCodeableConcept>
@@ -502,7 +502,7 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="urn:oid:2.16.840.1.113883.6.1" />
+          <system value="http://loinc.org" />
           <code value="18841-7" />
         </coding>
       </patternCodeableConcept>
@@ -534,7 +534,7 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="urn:oid:2.16.840.1.113883.6.1" />
+          <system value="http://loinc.org" />
           <code value="8653-8" />
         </coding>
       </patternCodeableConcept>
@@ -566,7 +566,7 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="urn:oid:2.16.840.1.113883.6.1" />
+          <system value="http://loinc.org" />
           <code value="10184-0" />
         </coding>
       </patternCodeableConcept>
@@ -598,7 +598,7 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="urn:oid:2.16.840.1.113883.6.1" />
+          <system value="http://loinc.org" />
           <code value="11493-4" />
         </coding>
       </patternCodeableConcept>
@@ -630,7 +630,7 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="urn:oid:2.16.840.1.113883.6.1" />
+          <system value="http://loinc.org" />
           <code value="11369-6" />
         </coding>
       </patternCodeableConcept>
@@ -662,7 +662,7 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="urn:oid:2.16.840.1.113883.6.1" />
+          <system value="http://loinc.org" />
           <code value="61144-2" />
         </coding>
       </patternCodeableConcept>
@@ -694,7 +694,7 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="urn:oid:2.16.840.1.113883.6.1" />
+          <system value="http://loinc.org" />
           <code value="11450-4" />
         </coding>
       </patternCodeableConcept>
@@ -726,7 +726,7 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="urn:oid:2.16.840.1.113883.6.1" />
+          <system value="http://loinc.org" />
           <code value="47519-4" />
         </coding>
       </patternCodeableConcept>
@@ -757,7 +757,7 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="urn:oid:2.16.840.1.113883.6.1" />
+          <system value="http://loinc.org" />
           <code value="29299-5" />
         </coding>
       </patternCodeableConcept>
@@ -789,7 +789,7 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="urn:oid:2.16.840.1.113883.6.1" />
+          <system value="http://loinc.org" />
           <code value="10187-3" />
         </coding>
       </patternCodeableConcept>
@@ -852,7 +852,7 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="urn:oid:2.16.840.1.113883.6.1" />
+          <system value="http://loinc.org" />
           <code value="8716-3" />
         </coding>
       </patternCodeableConcept>

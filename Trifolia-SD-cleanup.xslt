@@ -3,10 +3,10 @@
 <xsl:stylesheet 
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	xmlns="http://hl7.org/fhir"
-	xmlns:lcg="http://www.lantanagroup.com"
 	xmlns:xslt="http://www.w3.org/1999/XSL/Transform"
 	xmlns:fhir="http://hl7.org/fhir"
-	version="2.0">
+	version="2.0"
+	exclude-result-prefixes="fhir">
    
    <xsl:output method="xml" indent="yes" encoding="UTF-8" />
    <xsl:strip-space elements="*"/>   
@@ -14,6 +14,10 @@
    <xsl:template match="fhir:element/@id">
       <!-- Suppress -->
    </xsl:template>   
+   
+   <xsl:template match="fhir:system[@value='urn:oid:2.16.840.1.113883.6.1']">
+      <system value="http://loinc.org"/>
+   </xsl:template>
    
    <xsl:template match="fhir:definition[parent::fhir:element]">
       <!-- Suppress -->
