@@ -27,6 +27,21 @@
       <!-- Suppress -->
    </xsl:template>
    
+   <xsl:template match="fhir:sliceName">
+      <xsl:choose>
+         <xsl:when test="parent::fhir:element/fhir:short/@value">
+            <xsl:variable name="lc-short" select="lower-case(parent::fhir:element/fhir:short/@value)"/>
+            <xsl:variable name="newSliceName" select="translate($lc-short,' ','_')"/>
+            <sliceName value="{$newSliceName}"/>
+         </xsl:when>
+         <xsl:otherwise>
+            <xsl:copy>
+               <xsl:apply-templates select="@*|node()"/>
+            </xsl:copy>
+         </xsl:otherwise>
+      </xsl:choose>
+   </xsl:template>
+   
    <xsl:template match="@*|node()" >
       <xsl:copy>
          <xsl:apply-templates select="@*|node()"/>
