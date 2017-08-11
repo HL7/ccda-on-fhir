@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="CCDA-on-FHIR-Transfer-Summary" />
   <meta>
-    <lastUpdated value="2017-08-11T12:49:43.047-04:00" />
+    <lastUpdated value="2017-08-11T17:49:52.078-04:00" />
   </meta>
   <url value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Transfer-Summary" />
   <name value="C-CDA on FHIR Transfer Summary" />
@@ -24,7 +24,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This profile describes constraints for a Transfer Summary. The Transfer Summary standardizes critical information for exchange of information between providers of care when a patient moves between health care settings. Standardization of information used in this form will promote interoperability; create information suitable for reuse in quality measurement, public health, research, and for reimbursement. " />
+  <description value="This profile describes constraints for a Transfer Summary. The Transfer Summary standardizes critical information for exchange of information between providers of care when a patient moves between health care settings. Standardization of information used in this form will promote interoperability; create information suitable for reuse in quality measurement, public health, research, and for reimbursement.  " />
   <kind value="resource" />
   <abstract value="false" />
   <contextType value="resource" />
