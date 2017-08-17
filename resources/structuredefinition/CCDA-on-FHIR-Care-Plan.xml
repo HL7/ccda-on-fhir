@@ -44,14 +44,15 @@
       <path value="Composition"/>
     </element>
     <element id="Composition.type">
-      <path value="Composition.type"/>
-      <short value="Overall Plan of Care/Advance Care Directives"/>
-      <patternCodeableConcept>
-        <coding>
-          <system value="http://loinc.org"/>
-          <code value="52521-2"/>
-        </coding>
-      </patternCodeableConcept>
+      <path value="Composition.type" />
+      <short value="Care Plan Document" />
+      <binding>
+        <strength value="preferred" />
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/us/ccda/ValueSet/care-plan-document-type" />
+          <display value="Care Plan Document Codes" />
+        </valueSetReference>
+      </binding>
     </element>
     <element id="Composition.section">
       <path value="Composition.section"/>

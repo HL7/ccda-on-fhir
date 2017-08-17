@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="CCDA-on-FHIR-Transfer-Summary" />
   <meta>
-    <lastUpdated value="2017-08-11T17:49:52.078-04:00" />
+    <lastUpdated value="2017-08-17T17:52:17.888-04:00" />
   </meta>
   <url value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Transfer-Summary" />
   <name value="C-CDA on FHIR Transfer Summary" />
@@ -24,7 +24,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="This profile describes constraints for a Transfer Summary. The Transfer Summary standardizes critical information for exchange of information between providers of care when a patient moves between health care settings. Standardization of information used in this form will promote interoperability; create information suitable for reuse in quality measurement, public health, research, and for reimbursement.  " />
+  <description value="This profile describes constraints for a Transfer Summary. The Transfer Summary standardizes critical information for exchange of information between providers of care when a patient moves between health care settings. Standardization of information used in this form will promote interoperability; create information suitable for reuse in quality measurement, public health, research, and for reimbursement. " />
   <kind value="resource" />
   <abstract value="false" />
   <contextType value="resource" />
@@ -707,36 +707,6 @@
       </patternCodeableConcept>
     </element>
     <element id="Composition.section:medical_equipment_section.text">
-      <path value="Composition.section.text" />
-      <short value="text" />
-      <min value="1" />
-    </element>
-    <element id="Composition.section:mental_status_section">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section" />
-      </extension>
-      <path value="Composition.section" />
-      <sliceName value="mental_status_section" />
-      <label value="Mental Status Section" />
-      <short value="Mental Status Section" />
-    </element>
-    <element id="Composition.section:mental_status_section.title">
-      <path value="Composition.section.title" />
-      <short value="title" />
-      <min value="1" />
-    </element>
-    <element id="Composition.section:mental_status_section.code">
-      <path value="Composition.section.code" />
-      <short value="code" />
-      <min value="1" />
-      <patternCodeableConcept>
-        <coding>
-          <system value="http://loinc.org" />
-          <code value="10190-7" />
-        </coding>
-      </patternCodeableConcept>
-    </element>
-    <element id="Composition.section:mental_status_section.text">
       <path value="Composition.section.text" />
       <short value="text" />
       <min value="1" />

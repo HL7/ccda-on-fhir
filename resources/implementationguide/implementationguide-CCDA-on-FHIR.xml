@@ -223,6 +223,13 @@
             </sourceReference>
         </resource>
         <resource>
+            <example value="false"/>
+            <sourceReference>
+                <reference value="ValueSet/care-plan-document-type"/>
+                <display value="CarePlanDocumentType"/>
+            </sourceReference>
+        </resource>
+        <resource>
             <example value="true"/>
             <sourceReference>
                 <reference value="Patient/patient-1"/>

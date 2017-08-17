@@ -121,6 +121,9 @@
     "ValueSet/2.16.840.1.113883.1.11.20.2.4": {
       "base": "ValueSet-2.16.840.1.113883.1.11.20.2.4.html"
     },
+    "ValueSet/care-plan-document-type": {
+      "base": "ValueSet-care-plan-document-type.html"
+    },
     "Composition/CCDA-on-FHIR-Continuity-of-Care-Document-Example": {
       "base": "Composition-CCDA-on-FHIR-Continuity-of-Care-Document-Example.html"
     },
