@@ -102,7 +102,7 @@
             <coding>
                 <system value="http://loinc.org"/>
                 <code value="75310-3"/>
-                <display value="Health concerns document"/>
+                <display value="Health concerns Document"/>
             </coding>
         </code>
         <text>
