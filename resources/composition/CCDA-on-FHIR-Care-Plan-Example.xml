@@ -49,7 +49,9 @@
         <coding>
             <system value="http://loinc.org"/>
             <code value="52521-2"/>
+            <!--  
             <display value="Overall Plan of Care/Advance Care Directives"/>
+            -->
         </coding>
     </type>
     <!--  Patient Resource -->
