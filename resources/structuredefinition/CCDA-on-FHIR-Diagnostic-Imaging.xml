@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="CCDA-on-FHIR-Diagnostic-Imaging" />
   <meta>
-    <lastUpdated value="2017-08-08T13:26:45.587-04:00" />
+    <lastUpdated value="2017-09-06T09:22:52.31-04:00" />
   </meta>
   <url value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Diagnostic-Imaging" />
   <name value="C-CDA on FHIR Diagnostic Imaging" />
@@ -58,48 +58,48 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Composition.section:section_slice_pos2">
+    <element id="Composition.section:findings_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
       </extension>
       <path value="Composition.section" />
-      <sliceName value="section_slice_pos2" />
+      <sliceName value="findings_section" />
       <label value="Findings Section" />
       <short value="Findings Section" />
       <min value="1" />
       <max value="1" />
     </element>
-    <element id="Composition.section:section_slice_pos2.title">
+    <element id="Composition.section:findings_section.title">
       <path value="Composition.section.title" />
       <short value="title" />
       <min value="1" />
     </element>
-    <element id="Composition.section:section_slice_pos2.code">
+    <element id="Composition.section:findings_section.code">
       <path value="Composition.section.code" />
       <short value="code" />
       <min value="1" />
     </element>
-    <element id="Composition.section:section_slice_pos2.text">
+    <element id="Composition.section:findings_section.text">
       <path value="Composition.section.text" />
       <short value="text" />
       <min value="1" />
     </element>
-    <element id="Composition.section:section_slice_pos3">
+    <element id="Composition.section:dicom_object_catalog_section1">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
       </extension>
       <path value="Composition.section" />
-      <sliceName value="section_slice_pos3" />
-      <label value="DICOM Object Catalog Section - DCM 121181" />
-      <short value="DICOM Object Catalog Section - DCM 121181" />
+      <sliceName value="dicom_object_catalog_section1" />
+      <label value="DICOM Object Catalog Section" />
+      <short value="DICOM Object Catalog Section" />
       <max value="1" />
     </element>
-    <element id="Composition.section:section_slice_pos3.title">
+    <element id="Composition.section:dicom_object_catalog_section1.title">
       <path value="Composition.section.title" />
       <short value="title" />
       <min value="1" />
     </element>
-    <element id="Composition.section:section_slice_pos3.code">
+    <element id="Composition.section:dicom_object_catalog_section1.code">
       <path value="Composition.section.code" />
       <label value="Dicom Object Catalog" />
       <short value="Dicom Object Catalog" />
@@ -111,24 +111,24 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Composition.section:section_slice_pos3.text">
+    <element id="Composition.section:dicom_object_catalog_section1.text">
       <path value="Composition.section.text" />
       <short value="text" />
       <min value="1" />
     </element>
-    <element id="Composition.section:section_slice_pos4">
+    <element id="Composition.section:section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
       </extension>
       <path value="Composition.section" />
-      <sliceName value="section_slice_pos4" />
+      <sliceName value="section" />
       <short value="section" />
     </element>
-    <element id="Composition.section:section_slice_pos4.title">
+    <element id="Composition.section:section.title">
       <path value="Composition.section.title" />
       <short value="title" />
     </element>
-    <element id="Composition.section:section_slice_pos4.code">
+    <element id="Composition.section:section.code">
       <path value="Composition.section.code" />
       <short value="code" />
       <min value="1" />
@@ -140,7 +140,7 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Composition.section:section_slice_pos4.text">
+    <element id="Composition.section:section.text">
       <path value="Composition.section.text" />
       <short value="text" />
     </element>
