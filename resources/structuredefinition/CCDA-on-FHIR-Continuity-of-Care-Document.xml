@@ -102,25 +102,25 @@
         <rules value="open"/>
       </slicing>
     </element>
-    <element id="Composition.section:allergy_intolerance_section">
+    <element id="Composition.section:allergies_and_intolerances_section">
       <extension
         url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section"/>
       </extension>
       <path value="Composition.section"/>
-      <sliceName value="allergy_intolerance_section"/>
+      <sliceName value="allergies_and_intolerances_section"/>
       <label value="Allergies and Intolerances Section"/>
       <short value="Allergies and Intolerances Section"/>
       <comment value="Allergies and Intolerances Section"/>
       <min value="1"/>
       <max value="1"/>
     </element>
-    <element id="Composition.section:allergy_intolerance_section.title">
+    <element id="Composition.section:allergies_and_intolerances_section.title">
       <path value="Composition.section.title"/>
       <short value="title"/>
       <min value="1"/>
     </element>
-    <element id="Composition.section:allergy_intolerance_section.code">
+    <element id="Composition.section:allergies_and_intolerances_section.code">
       <path value="Composition.section.code"/>
       <label value="Allergies and adverse reactions"/>
       <short value="Allergies and adverse reactions"/>
@@ -132,12 +132,12 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Composition.section:allergy_intolerance_section.text">
+    <element id="Composition.section:allergies_and_intolerances_section.text">
       <path value="Composition.section.text"/>
       <short value="text"/>
       <min value="1"/>
     </element>
-    <element id="Composition.section:allergy_intolerance_section.entry">
+    <element id="Composition.section:allergies_and_intolerances_section.entry">
       <path value="Composition.section.entry"/>
       <slicing>
         <discriminator>
@@ -148,7 +148,7 @@
       </slicing>
       <short value="entry"/>
     </element>
-    <element id="Composition.section:allergy_intolerance_section.entry:sliceEntry">
+    <element id="Composition.section:allergies_and_intolerances_section.entry:sliceEntry">
       <path value="Composition.section.entry"/>
       <sliceName value="sliceEntry"/>
       <type>
@@ -192,6 +192,7 @@
       <short value="text"/>
       <min value="1"/>
     </element>
+    
     <element id="Composition.section:medications_section.entry">
       <path value="Composition.section.entry"/>
       <slicing>
@@ -212,6 +213,7 @@
           value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationstatement"/>
       </type>
     </element>
+    
     <element id="Composition.section:problem_section">
       <extension
         url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
@@ -247,6 +249,8 @@
       <short value="text"/>
       <min value="1"/>
     </element>
+    
+    
     <element id="Composition.section:problem_section.entry">
       <path value="Composition.section.entry"/>
       <slicing>
@@ -266,6 +270,8 @@
         <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"/>
       </type>
     </element>
+    
+    
     <element id="Composition.section:results_section">
       <extension
         url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
@@ -356,6 +362,8 @@
       <short value="text"/>
       <min value="1"/>
     </element>
+    
+    
     <element id="Composition.section:social_history_section.entry">
       <path value="Composition.section.entry"/>
       <slicing>
@@ -376,6 +384,8 @@
         />
       </type>
     </element>
+    
+    
     <element id="Composition.section:vital_signs_section">
       <extension
         url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
@@ -411,6 +421,8 @@
       <short value="text"/>
       <min value="1"/>
     </element>
+    
+    
     <element id="Composition.section:vital_signs_section.entry">
       <path value="Composition.section.entry"/>
       <slicing>
@@ -430,6 +442,7 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/vitalsigns"/>
       </type>
     </element>
+    
     <element id="Composition.section:plan_of_treatment_section">
       <extension
         url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
@@ -524,6 +537,7 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/RequestGroup"/>
       </type>
     </element>
+    
     <element id="Composition.section:procedures_section">
       <extension
         url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
