@@ -228,6 +228,7 @@
       <short value="text" />
       <min value="1" />
     </element>
+    
     <element id="Composition.section:interventions_section.entry">
       <path value="Composition.section.entry" />
       <slicing>
@@ -252,6 +253,7 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/RequestGroup" />
       </type>
     </element>
+    
     <element id="Composition.section:eval_outcomes_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
