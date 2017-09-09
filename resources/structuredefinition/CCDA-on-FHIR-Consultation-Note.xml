@@ -288,6 +288,32 @@
       <short value="text"/>
       <min value="1"/>
     </element>
+    
+    
+    <element id="Composition.section:physical_exam_section.entry">
+      <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="reference"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="entry"/>
+    </element>
+    <element id="Composition.section:physical_exam_section.entry:sliceEntry">
+      <path value="Composition.section.entry"/>
+      <sliceName value="sliceEntry"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile
+          value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+      </type>
+    </element>
+    
+    
+    
+    
     <element id="Composition.section:results_section">
       <extension
         url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
@@ -322,6 +348,30 @@
       <short value="text"/>
       <min value="1"/>
     </element>
+    
+    
+    <element id="Composition.section:results_section.entry">
+      <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="reference"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="entry"/>
+    </element>
+    <element id="Composition.section:results_section.entry:sliceEntry">
+      <path value="Composition.section.entry"/>
+      <sliceName value="sliceEntry"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile
+          value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observationresults"/>
+      </type>
+    </element>
+    
+    
     <element id="Composition.section:advance_directive_section">
       <extension
         url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
