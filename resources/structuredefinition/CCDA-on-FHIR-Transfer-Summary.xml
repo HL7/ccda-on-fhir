@@ -66,46 +66,67 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Composition.section:allergies_and_adverse_reactions_section">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section" />
+    
+    
+    <element id="Composition.section:allergies_and_intolerances_section">
+      <extension
+        url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Section"/>
       </extension>
-      <path value="Composition.section" />
-      <sliceName value="allergies_and_adverse_reactions_section" />
-      <label value="Allergies and Adverse Reactions Section" />
-      <short value="Allergies and Adverse Reactions Section" />
-      <min value="1" />
-      <max value="1" />
+      <path value="Composition.section"/>
+      <sliceName value="allergies_and_intolerances_section"/>
+      <label value="Allergies and Intolerances Section"/>
+      <short value="Allergies and Intolerances Section"/>
+      <comment value="Allergies and Intolerances Section"/>
+      <min value="1"/>
+      <max value="1"/>
     </element>
-    <element id="Composition.section:allergies_and_adverse_reactions_section.title">
-      <path value="Composition.section.title" />
-      <short value="title" />
-      <min value="1" />
+    <element id="Composition.section:allergies_and_intolerances_section.title">
+      <path value="Composition.section.title"/>
+      <short value="title"/>
+      <min value="1"/>
     </element>
-    <element id="Composition.section:allergies_and_adverse_reactions_section.code">
-      <path value="Composition.section.code" />
-      <short value="code" />
-      <min value="1" />
+    <element id="Composition.section:allergies_and_intolerances_section.code">
+      <path value="Composition.section.code"/>
+      <label value="Allergies and adverse reactions"/>
+      <short value="Allergies and adverse reactions"/>
+      <min value="1"/>
       <patternCodeableConcept>
         <coding>
-          <system value="http://loinc.org" />
-          <code value="48765-2" />
+          <system value="http://loinc.org"/>
+          <code value="48765-2"/>
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Composition.section:allergies_and_adverse_reactions_section.text">
-      <path value="Composition.section.text" />
-      <short value="text" />
-      <min value="1" />
+    <element id="Composition.section:allergies_and_intolerances_section.text">
+      <path value="Composition.section.text"/>
+      <short value="text"/>
+      <min value="1"/>
     </element>
-    <element id="Composition.section:allergies_and_adverse_reactions_section.entry">
-      <path value="Composition.section.entry" />
-      <short value="entry" />
+    
+    
+    <element id="Composition.section:allergies_and_intolerances_section.entry">
+      <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="reference"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="entry"/>
+    </element>
+    <element id="Composition.section:allergies_and_intolerances_section.entry:sliceEntry">
+      <path value="Composition.section.entry"/>
+      <sliceName value="sliceEntry"/>
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory" />
+        <code value="Reference"/>
+        <targetProfile
+          value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance"/>
       </type>
     </element>
+    
+    
     <element id="Composition.section:medication_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />

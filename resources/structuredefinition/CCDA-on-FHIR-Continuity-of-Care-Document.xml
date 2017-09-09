@@ -102,6 +102,7 @@
         <rules value="open"/>
       </slicing>
     </element>
+    
     <element id="Composition.section:allergies_and_intolerances_section">
       <extension
         url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
