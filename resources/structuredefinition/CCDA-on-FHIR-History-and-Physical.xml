@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="CCDA-on-FHIR-History-and-Physical" />
   <meta>
-    <lastUpdated value="2017-09-08T17:57:52.926-04:00" />
+    <lastUpdated value="2017-09-11T15:13:50.293-04:00" />
   </meta>
   <url value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-History-and-Physical" />
   <name value="C-CDA on FHIR History and Physical" />
@@ -21,7 +21,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="A History and Physical (H&amp;P) note is a medical report that documents the current and past conditions of the patient. It contains essential information that helps determine an individual's health status.  &#xA;&#xA;The first portion of the report is a current collection of organized information unique to an individual. This is typically supplied by the patient or the caregiver, concerning the current medical problem or the reason for the patient encounter. This information is followed by a description of any past or ongoing medical issues, including current medications and allergies. Information is also obtained about the patient's lifestyle, habits, and diseases among family members.&#xA;The next portion of the report contains information obtained by physically examining the patient and gathering diagnostic information in the form of laboratory tests, imaging, or other diagnostic procedures.&#xA; &#xA;The report ends with the clinician's assessment of the patient's situation and the intended plan to address those issues.&#xA; &#xA;A History and Physical Examination is required upon hospital admission as well as before operative procedures. An initial evaluation in an ambulatory setting is often documented in the form of an H&amp;P note. " />
+  <description value="A History and Physical (H&amp;P) note is a medical report that documents the current and past conditions of the patient. It contains essential information that helps determine an individual's health status.  &#xA;&#xA;The first portion of the report is a current collection of organized information unique to an individual. This is typically supplied by the patient or the caregiver, concerning the current medical problem or the reason for the patient encounter. This information is followed by a description of any past or ongoing medical issues, including current medications and allergies. Information is also obtained about the patient's lifestyle, habits, and diseases among family members.&#xA;The next portion of the report contains information obtained by physically examining the patient and gathering diagnostic information in the form of laboratory tests, imaging, or other diagnostic procedures.&#xA; &#xA;The report ends with the clinician's assessment of the patient's situation and the intended plan to address those issues.&#xA; &#xA;A History and Physical Examination is required upon hospital admission as well as before operative procedures. An initial evaluation in an ambulatory setting is often documented in the form of an H&amp;P note." />
   <kind value="resource" />
   <abstract value="false" />
   <contextType value="resource" />
@@ -91,25 +91,23 @@
       <short value="text" />
       <min value="1" />
     </element>
-    
     <element id="Composition.section:allergies_and_intolerances_section.entry">
-      <path value="Composition.section.entry"/>
+      <path value="Composition.section.entry" />
       <slicing>
         <discriminator>
-          <type value="profile"/>
-          <path value="reference"/>
+          <type value="profile" />
+          <path value="reference" />
         </discriminator>
-        <rules value="open"/>
+        <rules value="open" />
       </slicing>
-      <short value="entry"/>
+      <short value="entry" />
     </element>
     <element id="Composition.section:allergies_and_intolerances_section.entry:sliceEntry">
-      <path value="Composition.section.entry"/>
-      <sliceName value="sliceEntry"/>
+      <path value="Composition.section.entry" />
+      <sliceName value="sliceEntry" />
       <type>
-        <code value="Reference"/>
-        <targetProfile
-          value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance"/>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance" />
       </type>
     </element>
     <element id="Composition.section:family_history_section">
@@ -145,29 +143,25 @@
       <short value="text" />
       <min value="1" />
     </element>
-    
-    
-    <element id="Composition.section:allergies_and_intolerances_section.entry">
-      <path value="Composition.section.entry"/>
+    <element id="Composition.section:family_history_section.entry">
+      <path value="Composition.section.entry" />
       <slicing>
         <discriminator>
-          <type value="profile"/>
-          <path value="reference"/>
+          <type value="profile" />
+          <path value="reference" />
         </discriminator>
-        <rules value="open"/>
+        <rules value="open" />
       </slicing>
-      <short value="entry"/>
+      <short value="entry" />
     </element>
-    <element id="Composition.section:allergies_and_intolerances_section.entry:sliceEntry">
-      <path value="Composition.section.entry"/>
-      <sliceName value="sliceEntry"/>
+    <element id="Composition.section:family_history_section.entry:sliceEntry">
+      <path value="Composition.section.entry" />
+      <sliceName value="sliceEntry" />
       <type>
-        <code value="Reference"/>
-        <targetProfile
-          value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance"/>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance" />
       </type>
     </element>
-    
     <element id="Composition.section:general_status_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
@@ -267,30 +261,25 @@
       <short value="text" />
       <min value="1" />
     </element>
-    
-    
     <element id="Composition.section:medications_section.entry">
-      <path value="Composition.section.entry"/>
+      <path value="Composition.section.entry" />
       <slicing>
         <discriminator>
-          <type value="profile"/>
-          <path value="reference"/>
+          <type value="profile" />
+          <path value="reference" />
         </discriminator>
-        <rules value="open"/>
+        <rules value="open" />
       </slicing>
-      <short value="entry"/>
+      <short value="entry" />
     </element>
     <element id="Composition.section:medications_section.entry:sliceEntry">
-      <path value="Composition.section.entry"/>
-      <sliceName value="sliceEntry"/>
+      <path value="Composition.section.entry" />
+      <sliceName value="sliceEntry" />
       <type>
-        <code value="Reference"/>
-        <targetProfile
-          value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationstatement"/>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationstatement" />
       </type>
     </element>
-    
-    
     <element id="Composition.section:physical_exam_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
@@ -357,30 +346,25 @@
       <short value="text" />
       <min value="1" />
     </element>
-    
-    
     <element id="Composition.section:results_section.entry">
-      <path value="Composition.section.entry"/>
+      <path value="Composition.section.entry" />
       <slicing>
         <discriminator>
-          <type value="profile"/>
-          <path value="reference"/>
+          <type value="profile" />
+          <path value="reference" />
         </discriminator>
-        <rules value="open"/>
+        <rules value="open" />
       </slicing>
-      <short value="entry"/>
+      <short value="entry" />
     </element>
     <element id="Composition.section:results_section.entry:sliceEntry">
-      <path value="Composition.section.entry"/>
-      <sliceName value="sliceEntry"/>
+      <path value="Composition.section.entry" />
+      <sliceName value="sliceEntry" />
       <type>
-        <code value="Reference"/>
-        <targetProfile
-          value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observationresults"/>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observationresults" />
       </type>
     </element>
-    
-    
     <element id="Composition.section:review_of_systems_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
@@ -446,30 +430,25 @@
       <short value="text" />
       <min value="1" />
     </element>
-    
-    
     <element id="Composition.section:social_history_section.entry">
-      <path value="Composition.section.entry"/>
+      <path value="Composition.section.entry" />
       <slicing>
         <discriminator>
-          <type value="profile"/>
-          <path value="reference"/>
+          <type value="profile" />
+          <path value="reference" />
         </discriminator>
-        <rules value="open"/>
+        <rules value="open" />
       </slicing>
-      <short value="entry"/>
+      <short value="entry" />
     </element>
     <element id="Composition.section:social_history_section.entry:sliceEntry">
-      <path value="Composition.section.entry"/>
-      <sliceName value="sliceEntry"/>
+      <path value="Composition.section.entry" />
+      <sliceName value="sliceEntry" />
       <type>
-        <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus"
-        />
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus" />
       </type>
     </element>
-    
-    
     <element id="Composition.section:vital_signs_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
@@ -503,29 +482,25 @@
       <short value="text" />
       <min value="1" />
     </element>
-    
-    
     <element id="Composition.section:vital_signs_section.entry">
-      <path value="Composition.section.entry"/>
+      <path value="Composition.section.entry" />
       <slicing>
         <discriminator>
-          <type value="profile"/>
-          <path value="reference"/>
+          <type value="profile" />
+          <path value="reference" />
         </discriminator>
-        <rules value="open"/>
+        <rules value="open" />
       </slicing>
-      <short value="entry"/>
+      <short value="entry" />
     </element>
     <element id="Composition.section:vital_signs_section.entry:sliceEntry">
-      <path value="Composition.section.entry"/>
-      <sliceName value="sliceEntry"/>
+      <path value="Composition.section.entry" />
+      <sliceName value="sliceEntry" />
       <type>
-        <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/vitalsigns"/>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/vitalsigns" />
       </type>
     </element>
-    
-    
     <element id="Composition.section:history_of_present_illness_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
@@ -718,30 +693,25 @@
       <short value="text" />
       <min value="1" />
     </element>
-    
-    
     <element id="Composition.section:immunizations_section.entry">
-      <path value="Composition.section.entry"/>
+      <path value="Composition.section.entry" />
       <slicing>
         <discriminator>
-          <type value="profile"/>
-          <path value="reference"/>
+          <type value="profile" />
+          <path value="reference" />
         </discriminator>
-        <rules value="open"/>
+        <rules value="open" />
       </slicing>
-      <short value="entry"/>
+      <short value="entry" />
     </element>
     <element id="Composition.section:immunizations_section.entry:sliceEntry">
-      <path value="Composition.section.entry"/>
-      <sliceName value="sliceEntry"/>
+      <path value="Composition.section.entry" />
+      <sliceName value="sliceEntry" />
       <type>
-        <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization"
-        />
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization" />
       </type>
     </element>
-    
-    
     <element id="Composition.section:plan_of_treatment_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
@@ -774,70 +744,65 @@
       <short value="text" />
       <min value="1" />
     </element>
-    
-    
     <element id="Composition.section:plan_of_treatment_section.entry">
-      <path value="Composition.section.entry"/>
+      <path value="Composition.section.entry" />
       <slicing>
         <discriminator>
-          <type value="profile"/>
-          <path value="reference"/>
+          <type value="profile" />
+          <path value="reference" />
         </discriminator>
-        <rules value="open"/>
+        <rules value="open" />
       </slicing>
-      <short value="entry"/>
+      <short value="entry" />
     </element>
     <element id="Composition.section:plan_of_treatment_section.entry:sliceEntry">
-      <path value="Composition.section.entry"/>
-      <sliceName value="sliceEntry"/>
+      <path value="Composition.section.entry" />
+      <sliceName value="sliceEntry" />
       <type>
-        <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal"/>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal" />
       </type>
       <type>
-        <code value="Reference"/>
-        <targetProfile
-          value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"/>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest" />
       </type>
       <type>
-        <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Communication"/>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Communication" />
       </type>
       <type>
-        <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Appointment"/>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Appointment" />
       </type>
       <type>
-        <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CommunicationRequest"/>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CommunicationRequest" />
       </type>
       <type>
-        <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DeviceRequest"/>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DeviceRequest" />
       </type>
       <type>
-        <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/NutritionOrder"/>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/NutritionOrder" />
       </type>
       <type>
-        <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Task"/>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Task" />
       </type>
       <type>
-        <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ProcedureRequest"/>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ProcedureRequest" />
       </type>
       <type>
-        <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/VisionPrescription"/>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/VisionPrescription" />
       </type>
       <type>
-        <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RequestGroup"/>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RequestGroup" />
       </type>
     </element>
-    
-    
     <element id="Composition.section:problem_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
@@ -870,29 +835,25 @@
       <short value="text" />
       <min value="1" />
     </element>
-    
-    
     <element id="Composition.section:problem_section.entry">
-      <path value="Composition.section.entry"/>
+      <path value="Composition.section.entry" />
       <slicing>
         <discriminator>
-          <type value="profile"/>
-          <path value="reference"/>
+          <type value="profile" />
+          <path value="reference" />
         </discriminator>
-        <rules value="open"/>
+        <rules value="open" />
       </slicing>
-      <short value="entry"/>
+      <short value="entry" />
     </element>
     <element id="Composition.section:problem_section.entry:sliceEntry">
-      <path value="Composition.section.entry"/>
-      <sliceName value="sliceEntry"/>
+      <path value="Composition.section.entry" />
+      <sliceName value="sliceEntry" />
       <type>
-        <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"/>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition" />
       </type>
     </element>
-    
-    
     <element id="Composition.section:procedures_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
@@ -925,29 +886,25 @@
       <short value="text" />
       <min value="1" />
     </element>
-    
-    
     <element id="Composition.section:procedures_section.entry">
-      <path value="Composition.section.entry"/>
+      <path value="Composition.section.entry" />
       <slicing>
         <discriminator>
-          <type value="profile"/>
-          <path value="reference"/>
+          <type value="profile" />
+          <path value="reference" />
         </discriminator>
-        <rules value="open"/>
+        <rules value="open" />
       </slicing>
-      <short value="entry"/>
+      <short value="entry" />
     </element>
     <element id="Composition.section:procedures_section.entry:sliceEntry">
-      <path value="Composition.section.entry"/>
-      <sliceName value="sliceEntry"/>
+      <path value="Composition.section.entry" />
+      <sliceName value="sliceEntry" />
       <type>
-        <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"/>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure" />
       </type>
     </element>
-    
-    
     <element id="Composition.section:reason_for_visit_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />

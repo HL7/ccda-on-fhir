@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="CCDA-on-FHIR-Continuity-of-Care-Document" />
   <meta>
-    <lastUpdated value="2017-09-11T15:05:16.041-04:00" />
+    <lastUpdated value="2017-09-11T15:39:49.876-04:00" />
   </meta>
   <url value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Continuity-of-Care-Document" />
   <name value="C-CDA on FHIR Continuity of Care Document" />
@@ -39,6 +39,9 @@
   <baseDefinition value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-US-Realm-Header" />
   <derivation value="constraint" />
   <differential>
+    <element id="Composition">
+      <path value="Composition"/>
+    </element>
     <element id="Composition.type">
       <path value="Composition.type" />
       <label value="Summary of episode note" />
@@ -865,7 +868,11 @@
       <sliceName value="sliceEntry" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/NutritionOrder" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ClinicalImpression" />
       </type>
     </element>
     <element id="Composition.section:mental_status_section">
