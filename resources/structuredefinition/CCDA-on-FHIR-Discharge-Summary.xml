@@ -176,6 +176,11 @@
         </coding>
       </patternCodeableConcept>
     </element>
+    <element id="Composition.section:discharge_diagnosis_section.text">
+      <path value="Composition.section.text" />
+      <short value="text" />
+      <min value="1" />
+    </element>
     
     <element id="Composition.section:plan_of_treatment_section">
       <extension
