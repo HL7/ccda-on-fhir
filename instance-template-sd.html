@@ -117,7 +117,7 @@ tcode: {{[type]}}
                     {% for example in examples %}
                     <li><a href="{{example.type}}-{{example.id}}.html">{{example.type}}/{{example.id}}</a></li>
                     {% endfor %}
-                    {% if !examples.length %}
+                    {% if examples.size == 0 %}
                     <li>No examples available.</li>
                     {% endif %}
                   </ul>
