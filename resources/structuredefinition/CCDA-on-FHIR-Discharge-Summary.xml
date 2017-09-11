@@ -21,6 +21,14 @@
       <use value="work" />
     </telecom>
   </contact>
+  <contact>
+    <name value="Rick Geimer" />
+    <telecom>
+      <system value="email" />
+      <value value="rick.geimer@lantanagroup.com" />
+      <use value="work" />
+    </telecom>
+  </contact>
   <description value="The Discharge Summary is a document which synopsizes a patient's admission to a hospital, LTPAC provider, or other setting. It provides information for the continuation of care following discharge. The Joint Commission requires the following information to be included in the Discharge Summary (http://www.jointcommission.org/):&#xA;&#xA;  The reason for hospitalization (the admission) &#xA;&#xA;  The procedures performed, as applicable&#xA;&#xA;  The care, treatment, and services provided&#xA;&#xA;  The patients condition and disposition at discharge&#xA;&#xA;  Information provided to the patient and family&#xA;&#xA;  Provisions for follow-up care&#xA;&#xA;The best practice for a Discharge Summary is to include the discharge disposition in the display of the header." />
   <kind value="resource" />
   <abstract value="false" />
@@ -148,6 +156,8 @@
       <short value="text" />
       <min value="1" />
     </element>
+    <!-- Hospital Course is narrative-only -->
+
     <element id="Composition.section:discharge_diagnosis_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
@@ -181,6 +191,28 @@
       <short value="text" />
       <min value="1" />
     </element>
+    
+    
+    <element id="Composition.section:discharge_diagnosis_section.entry">
+      <path value="Composition.section.entry" />
+      <slicing>
+        <discriminator>
+          <type value="profile" />
+          <path value="reference" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <short value="entry" />
+    </element>
+    <element id="Composition.section:discharge_diagnosis_section.entry:sliceEntry">
+      <path value="Composition.section.entry" />
+      <sliceName value="sliceEntry" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition" />
+      </type>
+    </element>
+    
     
     <element id="Composition.section:plan_of_treatment_section">
       <extension
@@ -365,6 +397,29 @@
       <short value="text" />
       <min value="1" />
     </element>
+    
+    
+    <element id="Composition.section:admission_diagnosis_section.entry">
+      <path value="Composition.section.entry" />
+      <slicing>
+        <discriminator>
+          <type value="profile" />
+          <path value="reference" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <short value="entry" />
+    </element>
+    <element id="Composition.section:admission_diagnosis_section.entry:sliceEntry">
+      <path value="Composition.section.entry" />
+      <sliceName value="sliceEntry" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition" />
+      </type>
+    </element>
+    
+    
     <element id="Composition.section:admission_medications_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
@@ -452,6 +507,9 @@
       <short value="text" />
       <min value="1" />
     </element>
+    
+    <!-- Chief Complaint and Reason for Visit section is narrative-only -->
+    
     <element id="Composition.section:chief_complaint_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
@@ -483,6 +541,8 @@
       <short value="text" />
       <min value="1" />
     </element>
+    <!-- Chief Complaint and Reason section is narrative-only -->
+    
     <element id="Composition.section:family_history_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
@@ -514,6 +574,29 @@
       <short value="text" />
       <min value="1" />
     </element>
+
+
+    <element id="Composition.section:family_history_section.entry">
+      <path value="Composition.section.entry" />
+      <slicing>
+        <discriminator>
+          <type value="profile" />
+          <path value="reference" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <short value="entry" />
+    </element>
+    <element id="Composition.section:family_history_section.entry:sliceEntry">
+      <path value="Composition.section.entry" />
+      <sliceName value="sliceEntry" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory" />
+      </type>
+    </element>
+    
+    
     <element id="Composition.section:functional_status_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />

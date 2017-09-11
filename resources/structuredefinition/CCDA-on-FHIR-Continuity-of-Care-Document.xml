@@ -132,6 +132,7 @@
       <short value="text" />
       <min value="1" />
     </element>
+    
     <element id="Composition.section:allergies_and_intolerances_section.entry">
       <path value="Composition.section.entry" />
       <slicing>
@@ -151,6 +152,7 @@
         <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance" />
       </type>
     </element>
+    
     <element id="Composition.section:medications_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
@@ -593,6 +595,7 @@
       <short value="text" />
       <min value="1" />
     </element>
+    
     <element id="Composition.section:family_history_section.entry">
       <path value="Composition.section.entry" />
       <slicing>
@@ -612,6 +615,7 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory" />
       </type>
     </element>
+    
     <element id="Composition.section:advance_directives_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
