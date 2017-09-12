@@ -151,7 +151,7 @@
     </section>
     <!--  Assessment Section Narrative -->
     <section>
-        <title value=" Assessment Section"/>
+        <title value="Assessment Section"/>
         <code>
             <coding>
                 <system value="http://loinc.org"/>
@@ -326,7 +326,7 @@
     </section>
     <!--  General Status Section Narrative -->
     <section>
-        <title value=" General Status Section"/>
+        <title value="General Status Section"/>
         <code>
             <coding>
                 <system value="http://loinc.org"/>
@@ -569,7 +569,7 @@
     </section>
     <!--  Nutrition Section Narrative -->
     <section>
-        <title value=" Nutrition Section"/>
+        <title value="Nutrition Section"/>
         <code>
             <coding>
                 <system value="http://loinc.org"/>

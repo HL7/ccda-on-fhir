@@ -535,7 +535,7 @@
     </section>
     <!--  Nutrition Section Narrative -->
     <section>
-        <title value=" Nutrition Section"/>
+        <title value="Nutrition Section"/>
         <code>
             <coding>
                 <system value="http://loinc.org"/>
