@@ -1,69 +1,70 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="CCDA-on-FHIR-Transfer-Summary" />
+  <id value="CCDA-on-FHIR-Transfer-Summary"/>
   <meta>
-    <lastUpdated value="2017-08-17T17:52:17.888-04:00" />
+    <lastUpdated value="2017-08-17T17:52:17.888-04:00"/>
   </meta>
-  <url value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Transfer-Summary" />
-  <name value="C-CDA on FHIR Transfer Summary" />
-  <status value="draft" />
-  <publisher value="Lantana Consulting Group" />
+  <url value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Transfer-Summary"/>
+  <name value="C-CDA on FHIR Transfer Summary"/>
+  <status value="draft"/>
+  <publisher value="Lantana Consulting Group"/>
   <contact>
-    <name value="Corey Spears" />
+    <name value="Corey Spears"/>
     <telecom>
-      <system value="email" />
-      <value value="spears.corey@gmail.com" />
-      <use value="work" />
+      <system value="email"/>
+      <value value="spears.corey@gmail.com"/>
+      <use value="work"/>
     </telecom>
   </contact>
   <contact>
-    <name value="Rick Geimer" />
+    <name value="Rick Geimer"/>
     <telecom>
-      <system value="email" />
-      <value value="rick.geimer@lantanagroup.com" />
-      <use value="work" />
+      <system value="email"/>
+      <value value="rick.geimer@lantanagroup.com"/>
+      <use value="work"/>
     </telecom>
   </contact>
-  <description value="This profile describes constraints for a Transfer Summary. The Transfer Summary standardizes critical information for exchange of information between providers of care when a patient moves between health care settings. Standardization of information used in this form will promote interoperability; create information suitable for reuse in quality measurement, public health, research, and for reimbursement. " />
-  <kind value="resource" />
-  <abstract value="false" />
-  <contextType value="resource" />
-  <context value="Composition" />
-  <type value="Composition" />
-  <baseDefinition value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-US-Realm-Header" />
-  <derivation value="constraint" />
+  <description value="This profile describes constraints for a Transfer Summary. The Transfer Summary standardizes critical information for exchange of information between providers of care when a patient moves between health care settings. Standardization of information used in this form will promote interoperability; create information suitable for reuse in quality measurement, public health, research, and for reimbursement."/>
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <contextType value="resource"/>
+  <context value="Composition"/>
+  <type value="Composition"/>
+  <baseDefinition value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-US-Realm-Header"/>
+  <derivation value="constraint"/>
   <differential>
     <element id="Composition">
       <path value="Composition"/>
     </element>
     <element id="Composition.type">
-      <path value="Composition.type" />
-      <short value="type" />
+      <path value="Composition.type"/>
+      <label value="Transfer Summary"/>
+      <short value="Transfer Summary"/>
       <binding>
-        <strength value="required" />
+        <strength value="required"/>
         <valueSetReference>
-          <reference value="http://hl7.org/fhir/us/ccda/ValueSet/2.16.840.1.113883.1.11.20.2.4" />
-          <display value="TransferDocumentType" />
+          <reference value="http://hl7.org/fhir/us/ccda/ValueSet/2.16.840.1.113883.1.11.20.2.4"/>
+          <display value="TransferDocumentType"/>
         </valueSetReference>
       </binding>
     </element>
     <element id="Composition.event">
-      <path value="Composition.event" />
-      <short value="event" />
-      <min value="1" />
-      <max value="1" />
+      <path value="Composition.event"/>
+      <short value="event"/>
+      <min value="1"/>
+      <max value="1"/>
     </element>
     <element id="Composition.section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section" />
+        <valueString value="Section"/>
       </extension>
-      <path value="Composition.section" />
+      <path value="Composition.section"/>
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="code" />
+          <type value="value"/>
+          <path value="code"/>
         </discriminator>
-        <rules value="open" />
+        <rules value="open"/>
       </slicing>
     </element>
     
@@ -359,34 +360,34 @@
 
     <element id="Composition.section:reason_for_referral_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section" />
+        <valueString value="Section"/>
       </extension>
-      <path value="Composition.section" />
-      <sliceName value="reason_for_referral_section" />
-      <label value="Reason for Referral Section" />
-      <short value="Reason for Referral Section" />
-      <min value="1" />
-      <max value="1" />
+      <path value="Composition.section"/>
+      <sliceName value="reason_for_referral_section"/>
+      <label value="Reason for Referral Section"/>
+      <short value="Reason for Referral Section"/>
+      <min value="1"/>
+      <max value="1"/>
     </element>
     <element id="Composition.section:reason_for_referral_section.title">
-      <path value="Composition.section.title" />
-      <short value="title" />
-      <min value="1" />
+      <path value="Composition.section.title"/>
+      <short value="title"/>
+      <min value="1"/>
     </element>
     <element id="Composition.section:reason_for_referral_section.code">
-      <path value="Composition.section.code" />
-      <short value="code" />
+      <path value="Composition.section.code"/>
+      <short value="code"/>
       <patternCodeableConcept>
         <coding>
-          <system value="http://loinc.org" />
-          <code value="42349-1" />
+          <system value="http://loinc.org"/>
+          <code value="42349-1"/>
         </coding>
       </patternCodeableConcept>
     </element>
     <element id="Composition.section:reason_for_referral_section.text">
-      <path value="Composition.section.text" />
-      <short value="text" />
-      <min value="1" />
+      <path value="Composition.section.text"/>
+      <short value="text"/>
+      <min value="1"/>
     </element>
  
     <element id="Composition.section:reason_for_referral_section.entry">
@@ -412,33 +413,33 @@
     
     <element id="Composition.section:advance_directives_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section" />
+        <valueString value="Section"/>
       </extension>
-      <path value="Composition.section" />
-      <sliceName value="advance_directives_section" />
-      <label value="Advance Directives Section" />
-      <short value="Advance Directives Section" />
+      <path value="Composition.section"/>
+      <sliceName value="advance_directives_section"/>
+      <label value="Advance Directives Section"/>
+      <short value="Advance Directives Section"/>
     </element>
     <element id="Composition.section:advance_directives_section.title">
-      <path value="Composition.section.title" />
-      <short value="title" />
-      <min value="1" />
+      <path value="Composition.section.title"/>
+      <short value="title"/>
+      <min value="1"/>
     </element>
     <element id="Composition.section:advance_directives_section.code">
-      <path value="Composition.section.code" />
-      <short value="code" />
-      <min value="1" />
+      <path value="Composition.section.code"/>
+      <short value="code"/>
+      <min value="1"/>
       <patternCodeableConcept>
         <coding>
-          <system value="http://loinc.org" />
-          <code value="42348-3" />
+          <system value="http://loinc.org"/>
+          <code value="42348-3"/>
         </coding>
       </patternCodeableConcept>
     </element>
     <element id="Composition.section:advance_directives_section.text">
-      <path value="Composition.section.text" />
-      <short value="text" />
-      <min value="1" />
+      <path value="Composition.section.text"/>
+      <short value="text"/>
+      <min value="1"/>
     </element>
       
     <element id="Composition.section:advance_directives_section.entry">
@@ -464,36 +465,36 @@
     
     <element id="Composition.section:discharge_diagnosis_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section" />
+        <valueString value="Section"/>
       </extension>
-      <path value="Composition.section" />
-      <sliceName value="discharge_diagnosis_section" />
-      <label value="Discharge Diagnosis Section" />
-      <short value="Discharge Diagnosis Section" />
-      <min value="1" />
-      <max value="1" />
+      <path value="Composition.section"/>
+      <sliceName value="discharge_diagnosis_section"/>
+      <label value="Discharge Diagnosis Section"/>
+      <short value="Discharge Diagnosis Section"/>
+      <min value="1"/>
+      <max value="1"/>
     </element>
     <element id="Composition.section:discharge_diagnosis_section.title">
-      <path value="Composition.section.title" />
-      <short value="title" />
-      <min value="1" />
+      <path value="Composition.section.title"/>
+      <short value="title"/>
+      <min value="1"/>
     </element>
     <element id="Composition.section:discharge_diagnosis_section.code">
-      <path value="Composition.section.code" />
-      <label value="Hospital discharge diagnosis" />
-      <short value="Hospital discharge diagnosis" />
-      <min value="1" />
+      <path value="Composition.section.code"/>
+      <label value="Hospital discharge diagnosis"/>
+      <short value="Hospital discharge diagnosis"/>
+      <min value="1"/>
       <patternCodeableConcept>
         <coding>
-          <system value="http://loinc.org" />
-          <code value="11535-2" />
+          <system value="http://loinc.org"/>
+          <code value="11535-2"/>
         </coding>
       </patternCodeableConcept>
     </element>
     <element id="Composition.section:discharge_diagnosis_section.text">
-      <path value="Composition.section.text" />
-      <short value="text" />
-      <min value="1" />
+      <path value="Composition.section.text"/>
+      <short value="text"/>
+      <min value="1"/>
     </element>
     
     <element id="Composition.section:discharge_diagnosis_section.entry">
@@ -745,32 +746,32 @@
     
     <element id="Composition.section:history_of_present_illness_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section" />
+        <valueString value="Section"/>
       </extension>
-      <path value="Composition.section" />
-      <sliceName value="history_of_present_illness_section" />
-      <label value="History of Present Illness Section" />
-      <short value="History of Present Illness Section" />
+      <path value="Composition.section"/>
+      <sliceName value="history_of_present_illness_section"/>
+      <label value="History of Present Illness Section"/>
+      <short value="History of Present Illness Section"/>
     </element>
     <element id="Composition.section:history_of_present_illness_section.title">
-      <path value="Composition.section.title" />
-      <short value="title" />
-      <min value="1" />
+      <path value="Composition.section.title"/>
+      <short value="title"/>
+      <min value="1"/>
     </element>
     <element id="Composition.section:history_of_present_illness_section.code">
-      <path value="Composition.section.code" />
-      <short value="code" />
-      <min value="1" />
+      <path value="Composition.section.code"/>
+      <short value="code"/>
+      <min value="1"/>
       <patternCodeableConcept>
         <coding>
-          <code value="10164-2" />
+          <code value="10164-2"/>
         </coding>
       </patternCodeableConcept>
     </element>
     <element id="Composition.section:history_of_present_illness_section.text">
-      <path value="Composition.section.text" />
-      <short value="text" />
-      <min value="1" />
+      <path value="Composition.section.text"/>
+      <short value="text"/>
+      <min value="1"/>
     </element>
     
     
@@ -832,67 +833,67 @@
     
     <element id="Composition.section:assessment_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section" />
+        <valueString value="Section"/>
       </extension>
-      <path value="Composition.section" />
-      <sliceName value="assessment_section" />
-      <label value="Assessment Section" />
-      <short value="Assessment Section" />
+      <path value="Composition.section"/>
+      <sliceName value="assessment_section"/>
+      <label value="Assessment Section"/>
+      <short value="Assessment Section"/>
     </element>
     <element id="Composition.section:assessment_section.title">
-      <path value="Composition.section.title" />
-      <short value="title" />
-      <min value="1" />
+      <path value="Composition.section.title"/>
+      <short value="title"/>
+      <min value="1"/>
     </element>
     <element id="Composition.section:assessment_section.code">
-      <path value="Composition.section.code" />
-      <short value="code" />
-      <min value="1" />
+      <path value="Composition.section.code"/>
+      <short value="code"/>
+      <min value="1"/>
       <patternCodeableConcept>
         <coding>
-          <system value="http://loinc.org" />
-          <code value="51848-0" />
+          <system value="http://loinc.org"/>
+          <code value="51848-0"/>
         </coding>
       </patternCodeableConcept>
     </element>
     <element id="Composition.section:assessment_section.text">
-      <path value="Composition.section.text" />
-      <short value="text" />
-      <min value="1" />
+      <path value="Composition.section.text"/>
+      <short value="text"/>
+      <min value="1"/>
     </element>
     
     
     <element id="Composition.section:admission_medications_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section" />
+        <valueString value="Section"/>
       </extension>
-      <path value="Composition.section" />
-      <sliceName value="admission_medications_section" />
-      <label value="Admission Medications Section" />
-      <short value="Admission Medications Section" />
-      <max value="1" />
+      <path value="Composition.section"/>
+      <sliceName value="admission_medications_section"/>
+      <label value="Admission Medications Section"/>
+      <short value="Admission Medications Section"/>
+      <max value="1"/>
     </element>
     <element id="Composition.section:admission_medications_section.title">
-      <path value="Composition.section.title" />
-      <short value="title" />
-      <min value="1" />
+      <path value="Composition.section.title"/>
+      <short value="title"/>
+      <min value="1"/>
     </element>
     <element id="Composition.section:admission_medications_section.code">
-      <path value="Composition.section.code" />
-      <label value="Medications on admission" />
-      <short value="Medications on admission" />
-      <min value="1" />
+      <path value="Composition.section.code"/>
+      <label value="Medications on admission"/>
+      <short value="Medications on admission"/>
+      <min value="1"/>
       <patternCodeableConcept>
         <coding>
-          <system value="http://loinc.org" />
-          <code value="42346-7" />
+          <system value="http://loinc.org"/>
+          <code value="42346-7"/>
         </coding>
       </patternCodeableConcept>
     </element>
     <element id="Composition.section:admission_medications_section.text">
-      <path value="Composition.section.text" />
-      <short value="text" />
-      <min value="1" />
+      <path value="Composition.section.text"/>
+      <short value="text"/>
+      <min value="1"/>
     </element>
     
     <element id="Composition.section:admission_medications_section.entry">
@@ -975,65 +976,65 @@
 
     <element id="Composition.section:general_status_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section" />
+        <valueString value="Section"/>
       </extension>
-      <path value="Composition.section" />
-      <sliceName value="general_status_section" />
-      <label value="General Status Section" />
-      <short value="General Status Section" />
+      <path value="Composition.section"/>
+      <sliceName value="general_status_section"/>
+      <label value="General Status Section"/>
+      <short value="General Status Section"/>
     </element>
     <element id="Composition.section:general_status_section.title">
-      <path value="Composition.section.title" />
-      <short value="title" />
-      <min value="1" />
+      <path value="Composition.section.title"/>
+      <short value="title"/>
+      <min value="1"/>
     </element>
     <element id="Composition.section:general_status_section.code">
-      <path value="Composition.section.code" />
-      <short value="code" />
-      <min value="1" />
+      <path value="Composition.section.code"/>
+      <short value="code"/>
+      <min value="1"/>
       <patternCodeableConcept>
         <coding>
-          <system value="http://loinc.org" />
-          <code value="10210-3" />
+          <system value="http://loinc.org"/>
+          <code value="10210-3"/>
         </coding>
       </patternCodeableConcept>
     </element>
     <element id="Composition.section:general_status_section.text">
-      <path value="Composition.section.text" />
-      <short value="text" />
-      <min value="1" />
+      <path value="Composition.section.text"/>
+      <short value="text"/>
+      <min value="1"/>
     </element>
     
 
     <element id="Composition.section:history_of_past_illness_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section" />
+        <valueString value="Section"/>
       </extension>
-      <path value="Composition.section" />
-      <sliceName value="history_of_past_illness_section" />
-      <label value=" History of Past Illness Section" />
-      <short value=" History of Past Illness Section" />
+      <path value="Composition.section"/>
+      <sliceName value="history_of_past_illness_section"/>
+      <label value="History of Past Illness Section"/>
+      <short value="History of Past Illness Section"/>
     </element>
     <element id="Composition.section:history_of_past_illness_section.title">
-      <path value="Composition.section.title" />
-      <short value="title" />
-      <min value="1" />
+      <path value="Composition.section.title"/>
+      <short value="title"/>
+      <min value="1"/>
     </element>
     <element id="Composition.section:history_of_past_illness_section.code">
-      <path value="Composition.section.code" />
-      <short value="code" />
-      <min value="1" />
+      <path value="Composition.section.code"/>
+      <short value="code"/>
+      <min value="1"/>
       <patternCodeableConcept>
         <coding>
-          <system value="http://loinc.org" />
-          <code value="11348-0" />
+          <system value="http://loinc.org"/>
+          <code value="11348-0"/>
         </coding>
       </patternCodeableConcept>
     </element>
     <element id="Composition.section:history_of_past_illness_section.text">
-      <path value="Composition.section.text" />
-      <short value="text" />
-      <min value="1" />
+      <path value="Composition.section.text"/>
+      <short value="text"/>
+      <min value="1"/>
     </element>
 
     <element id="Composition.section:history_of_past_illness_section.entry">
@@ -1172,33 +1173,33 @@
     
     <element id="Composition.section:payers_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section" />
+        <valueString value="Section"/>
       </extension>
-      <path value="Composition.section" />
-      <sliceName value="payers_section" />
-      <label value="Payers Section" />
-      <short value="Payers Section" />
+      <path value="Composition.section"/>
+      <sliceName value="payers_section"/>
+      <label value="Payers Section"/>
+      <short value="Payers Section"/>
     </element>
     <element id="Composition.section:payers_section.title">
-      <path value="Composition.section.title" />
-      <short value="title" />
-      <min value="1" />
+      <path value="Composition.section.title"/>
+      <short value="title"/>
+      <min value="1"/>
     </element>
     <element id="Composition.section:payers_section.code">
-      <path value="Composition.section.code" />
-      <short value="code" />
-      <min value="1" />
+      <path value="Composition.section.code"/>
+      <short value="code"/>
+      <min value="1"/>
       <patternCodeableConcept>
         <coding>
-          <system value="http://loinc.org" />
-          <code value="48768-6" />
+          <system value="http://loinc.org"/>
+          <code value="48768-6"/>
         </coding>
       </patternCodeableConcept>
     </element>
     <element id="Composition.section:payers_section.text">
-      <path value="Composition.section.text" />
-      <short value="text" />
-      <min value="1" />
+      <path value="Composition.section.text"/>
+      <short value="text"/>
+      <min value="1"/>
     </element>
 
     <element id="Composition.section:payers_section.entry">
@@ -1376,33 +1377,33 @@
 
     <element id="Composition.section:admission_diagnosis_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section" />
+        <valueString value="Section"/>
       </extension>
-      <path value="Composition.section" />
-      <sliceName value="admission_diagnosis_section" />
-      <label value="Admission Diagnosis Section" />
-      <short value="Admission Diagnosis Section" />
+      <path value="Composition.section"/>
+      <sliceName value="admission_diagnosis_section"/>
+      <label value="Admission Diagnosis Section"/>
+      <short value="Admission Diagnosis Section"/>
     </element>
     <element id="Composition.section:admission_diagnosis_section.title">
-      <path value="Composition.section.title" />
-      <short value="title" />
-      <min value="1" />
+      <path value="Composition.section.title"/>
+      <short value="title"/>
+      <min value="1"/>
     </element>
     <element id="Composition.section:admission_diagnosis_section.code">
-      <path value="Composition.section.code" />
-      <short value="code" />
-      <min value="1" />
+      <path value="Composition.section.code"/>
+      <short value="code"/>
+      <min value="1"/>
       <patternCodeableConcept>
         <coding>
-          <system value="http://loinc.org" />
-          <code value="46241-6" />
+          <system value="http://loinc.org"/>
+          <code value="46241-6"/>
         </coding>
       </patternCodeableConcept>
     </element>
     <element id="Composition.section:admission_diagnosis_section.text">
-      <path value="Composition.section.text" />
-      <short value="text" />
-      <min value="1" />
+      <path value="Composition.section.text"/>
+      <short value="text"/>
+      <min value="1"/>
     </element>
     
     <element id="Composition.section:admission_diagnosis_section.entry">
@@ -1428,33 +1429,33 @@
     
     <element id="Composition.section:assessment_and_plan_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section" />
+        <valueString value="Section"/>
       </extension>
-      <path value="Composition.section" />
-      <sliceName value="assessment_and_plan_section" />
-      <label value=" Assessment and Plan Section" />
-      <short value=" Assessment and Plan Section" />
+      <path value="Composition.section"/>
+      <sliceName value="assessment_and_plan_section"/>
+      <label value="Assessment and Plan Section"/>
+      <short value="Assessment and Plan Section"/>
     </element>
     <element id="Composition.section:assessment_and_plan_section.title">
-      <path value="Composition.section.title" />
-      <short value="title" />
-      <min value="1" />
+      <path value="Composition.section.title"/>
+      <short value="title"/>
+      <min value="1"/>
     </element>
     <element id="Composition.section:assessment_and_plan_section.code">
-      <path value="Composition.section.code" />
-      <short value="code" />
-      <min value="1" />
+      <path value="Composition.section.code"/>
+      <short value="code"/>
+      <min value="1"/>
       <patternCodeableConcept>
         <coding>
-          <system value="http://loinc.org" />
-          <code value="51847-2" />
+          <system value="http://loinc.org"/>
+          <code value="51847-2"/>
         </coding>
       </patternCodeableConcept>
     </element>
     <element id="Composition.section:assessment_and_plan_section.text">
-      <path value="Composition.section.text" />
-      <short value="text" />
-      <min value="1" />
+      <path value="Composition.section.text"/>
+      <short value="text"/>
+      <min value="1"/>
     </element>
   </differential>
 </StructureDefinition>
