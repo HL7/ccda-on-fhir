@@ -30,6 +30,9 @@
   <baseDefinition value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-US-Realm-Header" />
   <derivation value="constraint" />
   <differential>
+    <element id="Composition">
+      <path value="Composition"/>
+    </element>
     <element id="Composition.type">
       <path value="Composition.type" />
       <label value="Procedure Note" />
