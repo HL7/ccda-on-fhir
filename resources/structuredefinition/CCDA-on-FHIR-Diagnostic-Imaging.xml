@@ -22,6 +22,7 @@
     </telecom>
   </contact>
   <description value="A Diagnostic Imaging Report (DIR) is a document that contains a consulting specialists interpretation of image data. It conveys the interpretation to the referring (ordering) physician and becomes part of the patients medical record. It is for use in Radiology, Endoscopy, Cardiology, and other imaging specialties. " />
+  <fhirVersion value="3.0.1" />
   <kind value="resource" />
   <abstract value="false" />
   <contextType value="resource" />
