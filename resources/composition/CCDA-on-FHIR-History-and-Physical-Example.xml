@@ -4,8 +4,9 @@
     <meta>
         <versionId value="1"/>
         <lastUpdated value="2016-06-15T08:16:14Z"/>
-        <profile value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA_on_FHIR_History_and_Physical"/>
+        <profile value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-History-and-Physical"/>
     </meta>
+    <language value="en-US"/>
     <text>
         <status value="generated"/>
         <div
@@ -15,7 +16,7 @@
         </div>
     </text>
     <identifier>
-        <system value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA_on_FHIR_History_and_Physical"/>
+        <system value="urn:ietf:rfc:3986"/>
         <value value="1"/>
     </identifier>
     <status value="preliminary"/>

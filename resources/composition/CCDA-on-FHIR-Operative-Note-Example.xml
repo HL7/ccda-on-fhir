@@ -4,8 +4,9 @@
     <meta>
         <versionId value="1"/>
         <lastUpdated value="2016-06-15T08:16:14Z"/>
-        <profile value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA_on_FHIR_Operative_Note"/>
+        <profile value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Operative-Note"/>
     </meta>
+    <language value="en-US"/>
     <text>
         <status value="generated"/>
         <div
@@ -15,7 +16,7 @@
         </div>
     </text>
     <identifier>
-        <system value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA_on_FHIR_Operative_Note"/>
+        <system value="urn:ietf:rfc:3986"/>
         <value value="1"/>
     </identifier>
     <status value="preliminary"/>
@@ -139,9 +140,9 @@
                 <p>Conscious sedation with propofol 200 mg IV</p>
             </div>
         </text>
-        <!--  Anesthesia Section Medication Resource -->
+        <!--  Anesthesia Section Condition Resource -->
         <entry>
-            <reference value="MedicationStatement/medication-statement"/>
+            <reference value="Condition/condition-problem"/>
         </entry>
     </section>
     <!--  Assessment Section Narrative -->

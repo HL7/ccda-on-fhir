@@ -4,8 +4,9 @@
     <meta>
         <versionId value="1"/>
         <lastUpdated value="2016-06-15T08:16:14Z"/>
-        <profile value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA_on_FHIR_Consultation_Note"/>
+        <profile value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Consultation-Note"/>
     </meta>
+    <language value="en-US"/>
     <text>
         <status value="generated"/>
         <div
@@ -14,6 +15,10 @@
             <p>Managed by Community Health and Hospitals</p>
         </div>
     </text>
+    <identifier>
+        <system value="urn:ietf:rfc:3986"/>
+        <value value="1"/>
+    </identifier>
     <status value="preliminary"/>
     <type>
         <coding>
@@ -27,6 +32,10 @@
         <reference value="Patient/patient-1"/>
         <display value="Amy V. Shaw"/>
     </subject>
+    <!--  Encounter Resource -->
+    <encounter>
+        <reference value="Encounter/encounter"/>
+    </encounter>
     <date value="2016-02-28T09:10:14Z"/>
     <!--  Practitioner Resource -->
     <author>
@@ -61,8 +70,7 @@
             <end value="2015-12-12"/>
         </period>
     </event>
-    <!--  Encounter Resource -->
-    <!--  <encounter><reference value="http://fhirtest.uhn.ca/baseDstu3/Encounter/117630"/></encounter>-->
+
     <!--  Advance Directive Section Narrative -->
     <section>
         <title value="Advance Directives Section"/>

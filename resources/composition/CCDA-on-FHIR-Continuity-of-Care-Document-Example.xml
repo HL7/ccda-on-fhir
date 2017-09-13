@@ -4,6 +4,7 @@
     <meta>
         <profile value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Continuity-of-Care-Document"/>
     </meta>
+    <language value="en-US"/>
     <text>
         <status value="generated"/>
         <div
@@ -12,37 +13,11 @@
             <p>Managed by Community Health and Hospitals</p>
         </div>
     </text>
-    <extension url="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Data-Enterer">
-        <valueReference>
-            <reference value="Practitioner/practitioner-1"/>
-        </valueReference>
-    </extension>
-    <extension url="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Informant">
-        <valueReference>
-            <reference value="Practitioner/practitioner-1"/>
-        </valueReference>
-    </extension>
-    <extension url="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Information-Recipient">
-        <valueReference>
-            <reference value="Practitioner/practitioner-1"/>
-        </valueReference>
-    </extension>
-    <extension url="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Participant">
-        <valueReference>
-            <reference value="RelatedPerson/related-person"/>
-        </valueReference>
-    </extension>
-    <extension url="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Performer">
-        <valueReference>
-            <reference value="Practitioner/practitioner-1"/>
-        </valueReference>
-    </extension>
-    <status value="preliminary"/>
-    <language value="en-US"/>
     <identifier>
         <system value="urn:ietf:rfc:3986"/>
         <value value="urn:uuid:7e63fe21-7285-46c6-b72f-e58a61341195"/>
     </identifier>
+    <status value="preliminary"/>
     <type>
         <coding>
             <system value="http://loinc.org"/>

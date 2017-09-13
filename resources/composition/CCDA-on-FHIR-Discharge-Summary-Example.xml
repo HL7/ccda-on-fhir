@@ -4,8 +4,9 @@
     <meta>
         <versionId value="1"/>
         <lastUpdated value="2016-06-15T08:16:14Z"/>
-        <profile value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA_on_FHIR_Discharge_Summary"/>
+        <profile value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Discharge-Summary"/>
     </meta>
+    <language value="en-US"/>
     <text>
         <status value="generated"/>
         <div
@@ -15,7 +16,7 @@
         </div>
     </text>
     <identifier>
-        <system value="http://hl7.org/fhir/ccda/us/StructureDefinition/CCDA_on_FHIR_Discharge_Summary"/>
+        <system value="urn:ietf:rfc:3986"/>
         <value value="1"/>
     </identifier>
     <status value="preliminary"/>
@@ -638,53 +639,6 @@
             <div
                 xmlns="http://www.w3.org/1999/xhtml">
                 <p>Diverticula of intestine</p>
-            </div>
-        </text>
-    </section>
-    <!--  Discharge Medications Section (entries optional) Narrative -->
-    <section>
-        <title value="Discharge Medications Section (entries optional)"/>
-        <code>
-            <coding>
-                <system value="http://loinc.org"/>
-                <code value="10183-2"/>
-                <display value="Hospital discharge medications"/>
-            </coding>
-        </code>
-        <text>
-            <status value="generated"/>
-            <div
-                xmlns="http://www.w3.org/1999/xhtml">
-                <table>
-                    <tr>
-                        <td>
-                            <b>Medication</b>
-                        </td>
-                        <td>
-                            <b>Directions</b>
-                        </td>
-                        <td>
-                            <b>Start Date</b>
-                        </td>
-                        <td>
-                            <b>Status</b>
-                        </td>
-                        <td>
-                            <b>Indications</b>
-                        </td>
-                        <td>
-                            <b>Fill Instructions</b>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Proventil HFA</td>
-                        <td>Inhalant solution - 2 puffs QID PRN wheezing</td>
-                        <td>20151029</td>
-                        <td>Active</td>
-                        <td>Pneumonia</td>
-                        <td>Generic substitution allowed</td>
-                    </tr>
-                </table>
             </div>
         </text>
     </section>

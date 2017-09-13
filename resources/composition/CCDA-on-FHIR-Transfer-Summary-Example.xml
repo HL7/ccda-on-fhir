@@ -4,8 +4,9 @@
     <meta>
         <versionId value="1"/>
         <lastUpdated value="2016-06-15T08:16:14Z"/>
-        <profile value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA_on_FHIR_Transfer_Summary"/>
+        <profile value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Transfer-Summary"/>
     </meta>
+    <language value="en-US"/>
     <text>
         <status value="generated"/>
         <div
@@ -15,7 +16,7 @@
         </div>
     </text>
     <identifier>
-        <system value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA_on_FHIR_Transfer_Summary"/>
+        <system value="urn:ietf:rfc:3986"/>
         <value value="1"/>
     </identifier>
     <status value="preliminary"/>
@@ -23,7 +24,7 @@
         <coding>
             <system value="http://loinc.org"/>
             <code value="18761-7"/>
-            <display value="Transfer Summary"/>
+            <display value="Provider-unspecified Transfer summary"/>
         </coding>
     </type>
     <!--  Patient Resource -->
@@ -44,6 +45,19 @@
         <reference value="Organization/organization-1"/>
         <display value="Acme Labs"/>
     </custodian>
+    <event>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="73761001"/>
+                <display value="Colonoscopy"/>
+            </coding>
+        </code>
+        <period>
+            <start value="2015-11-18"/>
+            <end value="2015-12-12"/>
+        </period>
+    </event>
     <!--  Encounter Resource -->
     <!-- <encounter><reference value="http://fhirtest.uhn.ca/baseDstu3/Encounter/117630"/></encounter>-->
     <!--  Allergies and Intolerances Section Narrative -->
@@ -498,63 +512,6 @@
                         <td>Memory Impairment</td>
                         <td>2014/04/29</td>
                         <td>Active</td>
-                    </tr>
-                </table>
-            </div>
-        </text>
-    </section>
-    <!--  Mental Status Section Narrative -->
-    <section>
-        <title value="Mental Status Section"/>
-        <code>
-            <coding>
-                <system value="http://loinc.org"/>
-                <code value="10190-7"/>
-                <display value="Mental status"/>
-            </coding>
-        </code>
-        <text>
-            <status value="generated"/>
-            <div
-                xmlns="http://www.w3.org/1999/xhtml">
-                <table border="1" width="100%">
-                    <thead>
-                        <tr>
-                            <td>
-                                <b>Mental Status Findings</b>
-                            </td>
-                            <td>
-                                <b>Effective Dates</b>
-                            </td>
-                            <td>
-                                <b>Condition Status</b>
-                            </td>
-                        </tr>
-                    </thead>
-                    <tr>
-                        <td>Mental Function</td>
-                        <td>July 31, 2013</td>
-                        <td>Impaired</td>
-                    </tr>
-                    <tr>
-                        <td>Cognitive Abilities</td>
-                        <td>July 31, 2013</td>
-                        <td>Judgement, Intact</td>
-                    </tr>
-                    <tr>
-                        <td>Cognitive Function</td>
-                        <td>July 31, 2013</td>
-                        <td>Aggressive Behavior</td>
-                    </tr>
-                    <tr>
-                        <td>Cognitive Function</td>
-                        <td>July 31, 2013</td>
-                        <td>Difficulty understanding own emotions</td>
-                    </tr>
-                    <tr>
-                        <td>Cognitive Function</td>
-                        <td>July 31, 2013</td>
-                        <td>Difficulty communicating Thoughts </td>
                     </tr>
                 </table>
             </div>

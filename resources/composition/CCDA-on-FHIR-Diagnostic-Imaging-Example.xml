@@ -4,8 +4,9 @@
     <meta>
         <versionId value="1"/>
         <lastUpdated value="2016-06-15T08:16:14Z"/>
-        <profile value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA_on_FHIR_Diagnostic_Imaging"/>
+        <profile value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Diagnostic-Imaging"/>
     </meta>
+    <language value="en-US"/>
     <text>
         <status value="generated"/>
         <div
@@ -15,7 +16,7 @@
         </div>
     </text>
     <identifier>
-        <system value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA_on_FHIR_Diagnostic_Imaging"/>
+        <system value="urn:ietf:rfc:3986"/>
         <value value="1"/>
     </identifier>
     <status value="preliminary"/>
@@ -23,7 +24,7 @@
         <coding>
             <system value="http://loinc.org"/>
             <code value="18748-4"/>
-            <display value="Diagnostic Imaging Report"/>
+            <display value="Diagnostic imaging study"/>
         </coding>
     </type>
     <!--  Patient Resource -->

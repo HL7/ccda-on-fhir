@@ -4,8 +4,9 @@
     <meta>
         <versionId value="1"/>
         <lastUpdated value="2016-06-15T08:16:14Z"/>
-        <profile value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA_on_FHIR_Procedure_Note"/>
+        <profile value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Procedure-Note"/>
     </meta>
+    <language value="en-US"/>
     <text>
         <status value="generated"/>
         <div
@@ -15,7 +16,7 @@
         </div>
     </text>
     <identifier>
-        <system value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA_on_FHIR_Procedure_Note"/>
+        <system value="urn:ietf:rfc:3986"/>
         <value value="1"/>
     </identifier>
     <status value="preliminary"/>
@@ -23,7 +24,7 @@
         <coding>
             <system value="http://loinc.org"/>
             <code value="28570-0"/>
-            <display value="Procedure Note"/>
+            <display value="Provider-unspecified Procedure note"/>
         </coding>
     </type>
     <!--  Patient Resource -->
@@ -419,7 +420,7 @@
         </text>
         <!--  Complications Section Condition Resource -->
         <entry>
-            <reference value="Condition/condition-problem"/>
+            <reference value="Observation/observation-smoker"/>
         </entry>
     </section>
     <!--  Family History Section Narrative -->
