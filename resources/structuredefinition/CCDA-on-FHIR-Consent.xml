@@ -39,6 +39,9 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Contract" />
   <derivation value="constraint" />
   <differential>
+	<element id="Contract">
+      <path value="Contract"/>
+    </element>
     <element id="Contract.identifier">
       <path value="Contract.identifier" />
       <short value="identifier" />
