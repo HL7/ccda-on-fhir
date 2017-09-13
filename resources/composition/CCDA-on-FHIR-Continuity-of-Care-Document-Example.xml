@@ -2,9 +2,7 @@
     xmlns="http://hl7.org/fhir">
     <id value="CCDA-on-FHIR-Continuity-of-Care-Document-Example"/>
     <meta>
-        <versionId value="1"/>
-        <lastUpdated value="2016-06-15T08:16:14Z"/>
-        <profile value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA_on_FHIR_Continuity_of_Care_Document"/>
+        <profile value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Continuity-of-Care-Document"/>
     </meta>
     <text>
         <status value="generated"/>
@@ -40,6 +38,11 @@
         </valueReference>
     </extension>
     <status value="preliminary"/>
+    <language value="en-US"/>
+    <identifier>
+        <system value="urn:ietf:rfc:3986"/>
+        <value value="urn:uuid:7e63fe21-7285-46c6-b72f-e58a61341195"/>
+    </identifier>
     <type>
         <coding>
             <system value="http://loinc.org"/>
