@@ -454,6 +454,7 @@
       <sliceName value="physical_exam_section" />
       <label value="Physical Exam Section" />
       <short value="Physical Exam Section" />
+	  <comment value="Physical Exam Section"/>
       <max value="1" />
     </element>
     <element id="Composition.section:physical_exam_section.title">
@@ -478,6 +479,29 @@
       <short value="text" />
       <min value="1" />
     </element>
+
+    <element id="Composition.section:physical_exam_section.entry">
+      <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="reference"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="entry"/>
+    </element>
+    <element id="Composition.section:physical_exam_section.entry:sliceEntry">
+      <path value="Composition.section.entry"/>
+      <sliceName value="sliceEntry"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile
+          value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+      </type>
+    </element>
+	
+	
     <element id="Composition.section:plan_of_treatment_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
