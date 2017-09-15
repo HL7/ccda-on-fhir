@@ -7,10 +7,279 @@
     <language value="en-US"/>
     <text>
         <status value="generated"/>
-        <div
-            xmlns="http://www.w3.org/1999/xhtml">
-            <p>Continuity of Care document for Amy Shaw</p>
-            <p>Managed by Community Health and Hospitals</p>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <table class="header_table"
+                style="border: 1pt inset #00008b; line-height: 10pt; width: 100%;">
+                <tbody>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Document Id</span>
+                        </td>
+                        <td class="td_header_role_value">12345</td>
+                    </tr>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Document Created:</span>
+                        </td>
+                        <td class="td_header_role_value">June 15, 2016, 16:14, PST </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="header_table"
+                style="border: 1pt inset #00008b; line-height: 10pt; width: 100%;">
+                <tbody>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Care Provision</span>
+                        </td>
+                        <td class="td_header_role_value">Summary of Episode for Amy Shaw</td>
+                    </tr>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Performer </span>
+                        </td>
+                        <td class="td_header_role_value">Ronald Boone, MD</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="header_table"
+                style="border: 1pt inset #00008b; line-height: 10pt; width: 100%;">
+                <tbody>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Author</span>
+                        </td>
+                        <td class="td_header_role_value">Ronald Boone, MD</td>
+                    </tr>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Contact info</span>
+                        </td>
+                        <td class="td_header_role_value">1003 Healthcare Drive<br/>Amherst MA 01002, US<br/>Tel:  +1(555)555-1003<br/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="header_table"
+                style="border: 1pt inset #00008b; line-height: 10pt; width: 100%;">
+                <tbody>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Encounter Id</span>
+                        </td>
+                        <td class="td_header_role_value">9937012 2.16.840.1.113883.19</td>
+                    </tr>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Event Type</span>
+                        </td>
+                        <td class="td_header_role_value">Summary of Episode</td>
+                    </tr>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Event Date</span>
+                        </td>
+                        <td class="td_header_role_value"> From June 15, 2016, 16:20 to June 15, 2016, 18:20  </td>
+                    </tr>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Encounter Location</span>
+                        </td>
+                        <td class="td_header_role_value">Ambulatory Care at Community Health and Hospitals</td>
+                    </tr>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Responsible party</span>
+                        </td>
+                        <td class="td_header_role_value">Ronald Boone, MD</td>
+                    </tr>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Contact info</span>
+                        </td>
+                        <td class="td_header_role_value">1003 Healthcare Drive<br/>Amherst MA 01002, US<br/>Tel:  +1(555)555-1003<br/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="header_table"
+                style="border: 1pt inset #00008b; line-height: 10pt; width: 100%;">
+                <tbody>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Assigned entity</span>
+                        </td>
+                        <td class="td_header_role_value">Community Health and Hospitals<br/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Emergency contact</span>
+                        </td>
+                        <td class="td_header_role_value">Michael Shaw<br/>
+                            <br/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Contact info</span>
+                        </td>
+                        <td class="td_header_role_value">49 Meadow St<br/>Amherst MA 01003, US<br/>Tel:  (555)555-1212<br/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Care giver</span>
+                        </td>
+                        <td class="td_header_role_value">Mrs. Lillian White<br/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Contact info</span>
+                        </td>
+                        <td class="td_header_role_value">49 Meadow St<br/>Amherst MA 01003, US<br/>Tel:  (555)555-1215<br/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="header_table"
+                style="border: 1pt inset #00008b; line-height: 10pt; width: 100%;">
+                <tbody>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Entered by</span>
+                        </td>
+                        <td class="td_header_role_value">Sally Jones</td>
+                    </tr>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Contact info</span>
+                        </td>
+                        <td class="td_header_role_value">1003 Healthcare Drive<br/>Amherst MA 01002, US<br/>Tel:  +1(555)555-1003<br/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="header_table"
+                style="border: 1pt inset #00008b; line-height: 10pt; width: 100%;">
+                <tbody>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Signed </span>
+                        </td>
+                        <td class="td_header_role_value">Ronald Boone at June 15, 2016 </td>
+                    </tr>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Contact info</span>
+                        </td>
+                        <td class="td_header_role_value">1003 Healthcare Drive<br/>Amherst MA 01002, US<br/>Tel:  +1(555)555-1003<br/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="header_table"
+                style="border: 1pt inset #00008b; line-height: 10pt; width: 100%;">
+                <tbody>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Informant</span>
+                        </td>
+                        <td class="td_header_role_value">Henry Vincent, CPh</td>
+                    </tr>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Contact info</span>
+                        </td>
+                        <td class="td_header_role_value">1007 Pharmacy Drive<br/>Portland, OR 99123, US<br/>Tel:  +1(555)555-1215<br/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="header_table"
+                style="border: 1pt inset #00008b; line-height: 10pt; width: 100%;">
+                <tbody>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Information recipient:</span>
+                        </td>
+                        <td class="td_header_role_value">Primary Physician, MD</td>
+                    </tr>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Contact info</span>
+                        </td>
+                        <td class="td_header_role_value">1005 St. Clair Avenue<br/>Amherst MA 01002, US<br/>Tel:  +1(555)555-1666<br/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="header_table"
+                style="border: 1pt inset #00008b; line-height: 10pt; width: 100%;">
+                <tbody>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Legal authenticator</span>
+                        </td>
+                        <td class="td_header_role_value">Ronald Boone, MD signed at June 15, 2016 </td>
+                    </tr>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Contact info</span>
+                        </td>
+                        <td class="td_header_role_value">1003 Healthcare Drive<br/>Amherst MA 01002, US<br/>Tel:  +1(555)555-1003<br/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="header_table"
+                style="border: 1pt inset #00008b; line-height: 10pt; width: 100%;">
+                <tbody>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Document maintained by</span>
+                        </td>
+                        <td class="td_header_role_value">Community Health and Hospitals</td>
+                    </tr>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Contact info</span>
+                        </td>
+                        <td class="td_header_role_value">1003 Healthcare Drive<br/>Amherst MA 01002, US<br/>Tel:  +1(555)555-1003<br/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </text>
     <identifier>
@@ -40,7 +309,7 @@
     <confidentiality value="N"/>
     <attester>
         <mode value="legal"/>
-        <time value="2012-01-04T09:10:14Z"/>
+        <time value="2016-06-15T09:10:14Z"/>
         <party>
             <reference value="Practitioner/practitioner-1"/>
             <display value="Ronald Boone, MD"/>
@@ -49,7 +318,7 @@
     <!--  Organization Resource -->
     <custodian>
         <reference value="Organization/organization-1"/>
-        <display value="Acme Labs"/>
+        <display value="Community Health and Hospitals"/>
     </custodian>
     <event>
         <code>
@@ -60,8 +329,8 @@
             </coding>
         </code>
         <period>
-            <start value="2015-11-18"/>
-            <end value="2015-12-12"/>
+            <start value="2016-06-15"/>
+            <end value="2016-08-20"/>
         </period>
     </event>
     <!--  Encounter Resource -->
@@ -159,7 +428,7 @@
                     <tr>
                         <td>Amoxicillin</td>
                         <td>Amoxicillin Powder, for Suspension 250mg/5ml</td>
-                        <td>20160401</td>
+                        <td>2016/02/28</td>
                         <td>Active</td>
                         <td>Pneumonia</td>
                         <td>Generic substitution allowed</td>
@@ -207,8 +476,8 @@
                     <tr>
                         <td>Fever</td>
                         <td>Condition</td>
-                        <td>2016-04-01</td>
-                        <td>2016-04-14</td>
+                        <td>2016/02/28</td>
+                        <td>2016/03/01</td>
                         <td>Complete</td>
                     </tr>
                 </table>
@@ -255,7 +524,7 @@
                         <td>Appendectomy (Procedure)</td>
                         <td>Abdomen</td>
                         <td>Dr. Adam Everyman</td>
-                        <td>20160405</td>
+                        <td>2016/06/15</td>
                         <td>Generalized abdominal pain 24 hours. Localized in RIF with rebound and guarding</td>
                     </tr>
                 </table>
@@ -298,7 +567,7 @@
                     <tr>
                         <td>Glucose [Moles/volume] in Blood</td>
                         <td>6.3 mmol/l</td>
-                        <td>2016/04/01</td>
+                        <td>2016/06/15</td>
                         <td>Final</td>
                     </tr>
                 </table>
@@ -334,7 +603,7 @@
                     </tr>
                     <tr>
                         <td>Resuscitation</td>
-                        <td>2015/01/01 - 2016/12/31</td>
+                        <td>2010/01/01 - 2025/01/01</td>
                     </tr>
                 </table>
             </div>
@@ -373,7 +642,7 @@
                         <td>Checkup Examination</td>
                         <td>Dr. S. Steene</td>
                         <td>Community Urgent Care Center</td>
-                        <td>2015/09/26</td>
+                        <td>2016/04/18</td>
                     </tr>
                 </table>
             </div>
@@ -453,19 +722,19 @@
                     <tr>
                         <td>Ambulation (Dependent to Independent</td>
                         <td>Independently able</td>
-                        <td>2010/03/11</td>
+                        <td>2016/06/15</td>
                         <td>Active</td>
                     </tr>
                     <tr>
                         <td>Finding of Functional Performance and Activity</td>
                         <td>Dyspnea</td>
-                        <td>2008/02/16</td>
+                        <td>2016/06/15</td>
                         <td>Active</td>
                     </tr>
                     <tr>
                         <td>Cognitive Function Finding</td>
                         <td>Memory Impairment</td>
-                        <td>2014/04/29</td>
+                        <td>2010/04/17</td>
                         <td>Active</td>
                     </tr>
                 </table>
@@ -500,7 +769,7 @@
                     </tr>
                     <tr>
                         <td>Fluvax (Influenza)</td>
-                        <td>2016-04-05</td>
+                        <td>2014/05/29</td>
                         <td>Completed</td>
                     </tr>
                 </table>
@@ -538,12 +807,12 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>2005/12/29</td>
+                        <td>2016/06/15</td>
                         <td>Well nourished</td>
                         <td>Low sodium diet, excessive carbohydrate</td>
                     </tr>
                     <tr>
-                        <td>2010/05/26</td>
+                        <td>2016/06/15</td>
                         <td>Slight dehydration</td>
                         <td>High protein, low fibre</td>
                     </tr>
@@ -578,12 +847,12 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>2005/06/21</td>
+                        <td>2016/06/15</td>
                         <td>Good</td>
                         <td>Not required</td>
                     </tr>
                     <tr>
-                        <td>2015/12/29</td>
+                        <td>2012/04/29</td>
                         <td>Dimentia</td>
                         <td>Daily Home Care</td>
                     </tr>
@@ -620,7 +889,7 @@
                     <tr>
                         <td>Smoking</td>
                         <td>1 pack tobacco per day</td>
-                        <td>2005/05/01 - 2010/02/28</td>
+                        <td>2010/01/01 - 2016/06/15</td>
                     </tr>
                 </table>
             </div>
@@ -658,12 +927,12 @@
                     </tr>
                     <tr>
                         <td>Colonoscopy</td>
-                        <td>2010/08/16 - 2010/08/16</td>
+                        <td>2016/06/15 - 2015/06/15</td>
                         <td>Completed</td>
                     </tr>
                     <tr>
                         <td>Recommendation to Exercise</td>
-                        <td>2015/10/29</td>
+                        <td>2016/06/15</td>
                         <td>Ongoing</td>
                     </tr>
                 </table>
@@ -735,11 +1004,11 @@
                     </tr>
                     <tr>
                         <td>Automatic Implantable cardioverter/defbrillator</td>
-                        <td>2008/11/16</td>
+                        <td>2015/05/29</td>
                     </tr>
                     <tr>
                         <td>Wheelchair</td>
-                        <td>1999/12/01</td>
+                        <td>2016/06/15</td>
                     </tr>
                 </table>
             </div>
@@ -773,7 +1042,7 @@
                     </tr>
                     <tr>
                         <td>Temperature</td>
-                        <td>2016/04/05</td>
+                        <td>2016/06/15</td>
                         <td>39 Degrees Celcius</td>
                     </tr>
                 </table>

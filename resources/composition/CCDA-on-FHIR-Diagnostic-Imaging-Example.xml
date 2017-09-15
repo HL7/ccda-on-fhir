@@ -9,10 +9,279 @@
     <language value="en-US"/>
     <text>
         <status value="generated"/>
-        <div
-            xmlns="http://www.w3.org/1999/xhtml">
-            <p>Diagnostic Imaging Report document for Amy Shaw</p>
-            <p>Managed by Community Health and Hospitals</p>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <table class="header_table"
+                style="border: 1pt inset #00008b; line-height: 10pt; width: 100%;">
+                <tbody>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Document Id</span>
+                        </td>
+                        <td class="td_header_role_value">12345</td>
+                    </tr>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Document Created:</span>
+                        </td>
+                        <td class="td_header_role_value">June 15, 2016, 16:14, PST </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="header_table"
+                style="border: 1pt inset #00008b; line-height: 10pt; width: 100%;">
+                <tbody>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Evaluation</span>
+                        </td>
+                        <td class="td_header_role_value">Diagnostic Imaging Study for Amy Shaw</td>
+                    </tr>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Performer</span>
+                        </td>
+                        <td class="td_header_role_value">Ronald Boone, MD</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="header_table"
+                style="border: 1pt inset #00008b; line-height: 10pt; width: 100%;">
+                <tbody>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Author</span>
+                        </td>
+                        <td class="td_header_role_value">Ronald Boone, MD</td>
+                    </tr>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Contact info</span>
+                        </td>
+                        <td class="td_header_role_value">1003 Healthcare Drive<br/>Amherst MA 01002, US<br/>Tel:  +1(555)555-1003<br/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="header_table"
+                style="border: 1pt inset #00008b; line-height: 10pt; width: 100%;">
+                <tbody>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Encounter Id</span>
+                        </td>
+                        <td class="td_header_role_value">9937012 2.16.840.1.113883.19</td>
+                    </tr>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Event Type</span>
+                        </td>
+                        <td class="td_header_role_value">Diagnotic Imaging Study</td>
+                    </tr>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Event Date</span>
+                        </td>
+                        <td class="td_header_role_value"> From June 15, 2016, 16:20 to June 15, 2016, 18:20  </td>
+                    </tr>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Encounter Location</span>
+                        </td>
+                        <td class="td_header_role_value">Diagnostic Imaging Department at Acme Laboratories</td>
+                    </tr>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Responsible party</span>
+                        </td>
+                        <td class="td_header_role_value">Ronald Boone, MD</td>
+                    </tr>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Contact info</span>
+                        </td>
+                        <td class="td_header_role_value">1003 Healthcare Drive<br/>Amherst MA 01002, US<br/>Tel:  +1(555)555-1003<br/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="header_table"
+                style="border: 1pt inset #00008b; line-height: 10pt; width: 100%;">
+                <tbody>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Assigned entity</span>
+                        </td>
+                        <td class="td_header_role_value">Diagnostic Imaging Department at Acme Laboratories<br/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Emergency contact</span>
+                        </td>
+                        <td class="td_header_role_value">Michael Shaw<br/>
+                            <br/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Contact info</span>
+                        </td>
+                        <td class="td_header_role_value">49 Meadow St<br/>Amherst MA 01003, US<br/>Tel:  (555)555-1212<br/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Care giver</span>
+                        </td>
+                        <td class="td_header_role_value">Mrs. Lillian White<br/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Contact info</span>
+                        </td>
+                        <td class="td_header_role_value">49 Meadow St<br/>Amherst MA 01003, US<br/>Tel:  (555)555-1215<br/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="header_table"
+                style="border: 1pt inset #00008b; line-height: 10pt; width: 100%;">
+                <tbody>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Entered by</span>
+                        </td>
+                        <td class="td_header_role_value">Sally Jones</td>
+                    </tr>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Contact info</span>
+                        </td>
+                        <td class="td_header_role_value">1003 Healthcare Drive<br/>Amherst MA 01002, US<br/>Tel:  +1(555)555-1003<br/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="header_table"
+                style="border: 1pt inset #00008b; line-height: 10pt; width: 100%;">
+                <tbody>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Signed </span>
+                        </td>
+                        <td class="td_header_role_value">Ronald Boone at June 15, 2016 </td>
+                    </tr>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Contact info</span>
+                        </td>
+                        <td class="td_header_role_value">1003 Healthcare Drive<br/>Amherst MA 01002, US<br/>Tel:  +1(555)555-1003<br/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="header_table"
+                style="border: 1pt inset #00008b; line-height: 10pt; width: 100%;">
+                <tbody>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Informant</span>
+                        </td>
+                        <td class="td_header_role_value">Henry Vincent, CPh</td>
+                    </tr>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Contact info</span>
+                        </td>
+                        <td class="td_header_role_value">1007 Pharmacy Drive<br/>Portland, OR 99123, US<br/>Tel:  +1(555)555-1215<br/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="header_table"
+                style="border: 1pt inset #00008b; line-height: 10pt; width: 100%;">
+                <tbody>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Information recipient:</span>
+                        </td>
+                        <td class="td_header_role_value">Primary Physician, MD</td>
+                    </tr>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Contact info</span>
+                        </td>
+                        <td class="td_header_role_value">1005 St. Clair Avenue<br/>Amherst MA 01002, US<br/>Tel:  +1(555)555-1666<br/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="header_table"
+                style="border: 1pt inset #00008b; line-height: 10pt; width: 100%;">
+                <tbody>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Legal authenticator</span>
+                        </td>
+                        <td class="td_header_role_value">Ronald Boone, MD signed at June 15, 2016 </td>
+                    </tr>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Contact info</span>
+                        </td>
+                        <td class="td_header_role_value">1003 Healthcare Drive<br/>Amherst MA 01002, US<br/>Tel:  +1(555)555-1003<br/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="header_table"
+                style="border: 1pt inset #00008b; line-height: 10pt; width: 100%;">
+                <tbody>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Document maintained by</span>
+                        </td>
+                        <td class="td_header_role_value">Acme Laboratories</td>
+                    </tr>
+                    <tr>
+                        <td class="td_header_role_name"
+                            style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
+                            <span class="td_label">Contact info</span>
+                        </td>
+                        <td class="td_header_role_value">1003 Healthcare Drive<br/>Amherst MA 01002, US<br/>Tel:  +1(555)555-1003<br/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </text>
     <identifier>
@@ -32,7 +301,7 @@
         <reference value="Patient/patient-1"/>
         <display value="Amy V. Shaw"/>
     </subject>
-    <date value="2016-02-28T09:10:14Z"/>
+    <date value="2016-05-16T09:10:14Z"/>
     <!--  Practitioner Resource -->
     <author>
         <reference value="Practitioner/practitioner-1"/>
@@ -42,7 +311,7 @@
     <confidentiality value="N"/>
     <attester>
         <mode value="legal"/>
-        <time value="2012-01-04T09:10:14Z"/>
+        <time value="2016-06-15T09:10:14Z"/>
         <party>
             <reference value="Practitioner/practitioner-1"/>
             <display value="Ronald Boone, MD"/>
@@ -57,13 +326,13 @@
         <code>
             <coding>
                 <system value="http://snomed.info/sct"/>
-                <code value="73761001"/>
-                <display value="Colonoscopy"/>
+                <code value="168731009"/>
+                <display value="Standard Chest X-Ray"/>
             </coding>
         </code>
         <period>
-            <start value="2015-11-18"/>
-            <end value="2015-12-12"/>
+            <start value="2016-06-15"/>
+            <end value="2016-06-15"/>
         </period>
     </event>
     <!--  Encounter Resource -->

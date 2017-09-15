@@ -56,7 +56,7 @@
                             style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
                             <span class="td_label">Author</span>
                         </td>
-                        <td class="td_header_role_value">Community Health and Hospitals</td>
+                        <td class="td_header_role_value">Ronald Boone, MD</td>
                     </tr>
                     <tr>
                         <td class="td_header_role_name"
@@ -124,7 +124,7 @@
                             style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
                             <span class="td_label">Assigned entity</span>
                         </td>
-                        <td class="td_header_role_value">Review of Care Plan<br/>
+                        <td class="td_header_role_value">Community Health and Hospitals<br/>
                         </td>
                     </tr>
                     <tr>
@@ -250,7 +250,7 @@
                             style="width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;">
                             <span class="td_label">Legal authenticator</span>
                         </td>
-                        <td class="td_header_role_value">Community Health and Hospitals signed at June 15, 2016 </td>
+                        <td class="td_header_role_value">Ronald Boone, MD signed at June 15, 2016 </td>
                     </tr>
                     <tr>
                         <td class="td_header_role_name"
