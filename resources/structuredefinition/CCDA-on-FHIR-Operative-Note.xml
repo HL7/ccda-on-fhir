@@ -91,14 +91,28 @@
       <short value="text" />
       <min value="1" />
     </element>
+
     <element id="Composition.section:anesthesia_section.entry">
-      <path value="Composition.section.entry" />
-      <short value="entry" />
+      <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="reference"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="entry"/>
+    </element>
+    <element id="Composition.section:anesthesia_section.entry:sliceEntry">
+      <path value="Composition.section.entry"/>
+      <sliceName value="sliceEntry"/>
       <type>
-        <code value="Reference" />
+        <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition" />
       </type>
-    </element>
+    </element>	
+
+	
     <element id="Composition.section:complications_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
@@ -132,6 +146,29 @@
       <short value="text" />
       <min value="1" />
     </element>
+	
+    
+    <element id="Composition.section:complications_section.entry">
+      <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="reference"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="entry"/>
+    </element>
+    <element id="Composition.section:complications_section.entry:sliceEntry">
+      <path value="Composition.section.entry"/>
+      <sliceName value="sliceEntry"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+      </type>
+    </element>
+	
+	
     <element id="Composition.section:preoperative_diagnosis_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
@@ -165,6 +202,29 @@
       <short value="text" />
       <min value="1" />
     </element>
+	
+
+    <element id="Composition.section:preoperative_diagnosis_section.entry">
+      <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="reference"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="entry"/>
+    </element>
+    <element id="Composition.section:preoperative_diagnosis_section.entry:sliceEntry">
+      <path value="Composition.section.entry"/>
+      <sliceName value="sliceEntry"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition" />
+      </type>
+    </element>
+	
+	
     <element id="Composition.section:procedure_estimated_blood_loss_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
@@ -198,6 +258,8 @@
       <short value="text" />
       <min value="1" />
     </element>
+	
+	
     <element id="Composition.section:procedure_findings_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
@@ -231,6 +293,28 @@
       <short value="text" />
       <min value="1" />
     </element>
+    
+    <element id="Composition.section:procedure_findings_section.entry">
+      <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="reference"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="entry"/>
+    </element>
+    <element id="Composition.section:procedure_findings_section.entry:sliceEntry">
+      <path value="Composition.section.entry"/>
+      <sliceName value="sliceEntry"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition" />
+      </type>
+    </element>	
+	
+	
     <element id="Composition.section:procedure_specimens_taken_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
@@ -264,6 +348,8 @@
       <short value="text" />
       <min value="1" />
     </element>
+	
+	
     <element id="Composition.section:postoperative_diagnosis_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
@@ -297,6 +383,8 @@
       <short value="text" />
       <min value="1" />
     </element>
+	
+	
     <element id="Composition.section:procedure_description_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
@@ -330,6 +418,8 @@
       <short value="text" />
       <min value="1" />
     </element>
+	
+	
     <element id="Composition.section:operative_note_surgical_procedure_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
@@ -372,6 +462,8 @@
       <short value="Operative Note Fluids Section" />
       <max value="1" />
     </element>
+	
+	
     <element id="Composition.section:operative_note_fluids_section.title">
       <path value="Composition.section.title" />
       <short value="title" />
@@ -394,6 +486,8 @@
       <short value="text" />
       <min value="1" />
     </element>
+	
+	
     <element id="Composition.section:plan_of_treatment_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
@@ -426,7 +520,6 @@
       <short value="text" />
       <min value="1" />
     </element>
-    
     
     <element id="Composition.section:plan_of_treatment_section.entry">
       <path value="Composition.section.entry"/>
@@ -522,6 +615,28 @@
       <short value="text" />
       <min value="1" />
     </element>
+ 
+    <element id="Composition.section:planned_procedure_section.entry">
+      <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="reference"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="entry"/>
+    </element>
+    <element id="Composition.section:planned_procedure_section.entry:sliceEntry">
+      <path value="Composition.section.entry"/>
+      <sliceName value="sliceEntry"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ProcedureRequest"/>
+      </type>
+    </element>	
+	
+	
     <element id="Composition.section:procedure_disposition_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
@@ -554,6 +669,8 @@
       <short value="text" />
       <min value="1" />
     </element>
+	
+	
     <element id="Composition.section:procedure_indications_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
@@ -586,6 +703,27 @@
       <short value="text" />
       <min value="1" />
     </element>
+    
+    <element id="Composition.section:problem_section.entry">
+      <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="reference"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="entry"/>
+    </element>
+    <element id="Composition.section:problem_section.entry:sliceEntry">
+      <path value="Composition.section.entry"/>
+      <sliceName value="sliceEntry"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"/>
+      </type>
+    </element>	
+	
     <element id="Composition.section:procedure_implants_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
@@ -618,6 +756,8 @@
       <short value="text" />
       <min value="1" />
     </element>
+	
+	
     <element id="Composition.section:surgical_drains_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
@@ -650,5 +790,6 @@
       <short value="text" />
       <min value="1" />
     </element>
+	
   </differential>
 </StructureDefinition>
