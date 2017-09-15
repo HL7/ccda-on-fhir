@@ -53,6 +53,33 @@
         </valueSetReference>
       </binding>
     </element>
+    <element id="Composition.event">
+      <path value="Composition.event" />
+      <max value="1" />
+    </element>
+    <element id="Composition.event.period">
+      <path value="Composition.event.period" />
+      <min value="1" />
+    </element>
+    <element id="Composition.event.detail">
+      <path value="Composition.event.detail" />
+      <slicing>
+        <discriminator>
+          <type value="profile" />
+          <path value="reference" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Composition.event.detail:care_plan_slice">
+      <path value="Composition.event.detail"/>
+      <sliceName value="care_plan_slice"/>
+      <short value="Care Plan Detail"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan"/>
+      </type>
+    </element>
     <element id="Composition.section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
@@ -131,6 +158,10 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/vitalsigns" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ClinicalImpression" />
       </type>
       <type>
         <code value="Reference" />
