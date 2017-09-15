@@ -39,6 +39,9 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
   <differential>
+    <element id="Extension">
+      <path value="Extension" />
+    </element>
     <element id="Extension.value[x]:valueReference">
       <path value="Extension.valueReference" />
       <sliceName value="valueReference" />
