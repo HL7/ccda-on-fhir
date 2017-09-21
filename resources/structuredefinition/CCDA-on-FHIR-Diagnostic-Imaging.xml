@@ -34,6 +34,17 @@
     <element id="Composition">
       <path value="Composition"/>
     </element>
+    <element id="Composition.extension:informant_extension">
+      <path value="Composition.extension"/>
+      <sliceName value="informant_extension"/>
+      <label value="informant"/>
+      <short value="informant"/>
+	  <max value="0" />
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Informant"/>
+      </type>
+    </element>
     <element id="Composition.type">
       <path value="Composition.type" />
       <label value="Diagnostic Imaging Report" />
@@ -59,6 +70,8 @@
         <rules value="open" />
       </slicing>
     </element>
+	
+	
     <element id="Composition.section:findings_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
@@ -85,22 +98,24 @@
       <short value="text" />
       <min value="1" />
     </element>
-    <element id="Composition.section:dicom_object_catalog_section1">
+	
+	
+    <element id="Composition.section:dicom_object_catalog_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
       </extension>
       <path value="Composition.section" />
-      <sliceName value="dicom_object_catalog_section1" />
+      <sliceName value="dicom_object_catalog_section" />
       <label value="DICOM Object Catalog Section" />
       <short value="DICOM Object Catalog Section" />
       <max value="1" />
     </element>
-    <element id="Composition.section:dicom_object_catalog_section1.title">
+    <element id="Composition.section:dicom_object_catalog_section.title">
       <path value="Composition.section.title" />
       <short value="title" />
       <min value="1" />
     </element>
-    <element id="Composition.section:dicom_object_catalog_section1.code">
+    <element id="Composition.section:dicom_object_catalog_section.code">
       <path value="Composition.section.code" />
       <label value="Dicom Object Catalog" />
       <short value="Dicom Object Catalog" />
@@ -112,24 +127,46 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Composition.section:dicom_object_catalog_section1.text">
+    <element id="Composition.section:dicom_object_catalog_section.text">
       <path value="Composition.section.text" />
       <short value="text" />
       <min value="1" />
     </element>
-    <element id="Composition.section:section">
+	
+    <element id="Composition.section:dicom_object_catalog_section.entry">
+      <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="reference"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="entry"/>
+    </element>
+    <element id="Composition.section:dicom_object_catalog_section.entry:sliceEntry">
+      <path value="Composition.section.entry"/>
+      <sliceName value="sliceEntry"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ImagingManifest"/>
+      </type>
+    </element>
+	
+	
+    <element id="Composition.section:DIR_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section" />
+        <valueString value="DIR_section" />
       </extension>
       <path value="Composition.section" />
-      <sliceName value="section" />
-      <short value="section" />
+      <sliceName value="DIR_section" />
+      <short value="DIR Section" />
     </element>
-    <element id="Composition.section:section.title">
+    <element id="Composition.section:DIR_section.title">
       <path value="Composition.section.title" />
       <short value="title" />
     </element>
-    <element id="Composition.section:section.code">
+    <element id="Composition.section:DIR_section.code">
       <path value="Composition.section.code" />
       <short value="code" />
       <min value="1" />
@@ -141,9 +178,38 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Composition.section:section.text">
+    <element id="Composition.section:DIR_section.text">
       <path value="Composition.section.text" />
       <short value="text" />
     </element>
+
+    <element id="Composition.section:DIR_section.entry">
+      <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="reference"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="entry"/>
+    </element>
+    <element id="Composition.section:DIR_section.entry:DIR_section_slice_entry">
+      <path value="Composition.section.entry"/>
+      <sliceName value="DIR_section_slice_entry"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"/>
+      </type>
+	  <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observationresults"/>
+      </type>
+	  <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+      </type>
+    </element>
+	
   </differential>
 </StructureDefinition>
