@@ -99,8 +99,8 @@
         <resource>
             <example value="false"/>
             <sourceReference>
-                <reference value="StructureDefinition/CCDA-on-FHIR-Diagnostic-Imaging"/>
-                <display value="C-CDA on FHIR Diagnostic Imaging"/>
+                <reference value="StructureDefinition/CCDA-on-FHIR-Diagnostic-Imaging-Report"/>
+                <display value="C-CDA on FHIR Diagnostic Imaging Report"/>
             </sourceReference>
         </resource>
         <resource>
@@ -349,12 +349,12 @@
         <resource>
             <example value="true"/>
             <sourceReference>
-                <reference value="Composition/CCDA-on-FHIR-Diagnostic-Imaging-Example"/>
-                <display value="C-CDA_on_FHIR_Diagnostic_Imaging_Example"/>
+                <reference value="Composition/CCDA-on-FHIR-Diagnostic-Imaging-Report-Example"/>
+                <display value="C-CDA_on_FHIR_Diagnostic_Imaging_Report_Example"/>
             </sourceReference>
             <exampleFor>
-                <reference value="StructureDefinition/CCDA-on-FHIR-Diagnostic-Imaging"/>
-                <display value="C-CDA on FHIR Diagnostic Imaging"/>
+                <reference value="StructureDefinition/CCDA-on-FHIR-Diagnostic-Imaging-Report"/>
+                <display value="C-CDA on FHIR Diagnostic Imaging Report"/>
             </exampleFor>
         </resource>
         <resource>
