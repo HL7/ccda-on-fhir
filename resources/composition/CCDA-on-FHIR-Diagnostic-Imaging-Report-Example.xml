@@ -1,10 +1,10 @@
 <Composition
     xmlns="http://hl7.org/fhir">
-    <id value="CCDA-on-FHIR-Diagnostic-Imaging-Example"/>
+    <id value="CCDA-on-FHIR-Diagnostic-Imaging-Report-Example"/>
     <meta>
         <versionId value="1"/>
         <lastUpdated value="2016-06-15T08:16:14Z"/>
-        <profile value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Diagnostic-Imaging"/>
+        <profile value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Diagnostic-Imaging-Report"/>
     </meta>
     <language value="en-US"/>
     <text>
