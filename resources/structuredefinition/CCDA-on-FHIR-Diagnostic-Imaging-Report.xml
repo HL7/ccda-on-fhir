@@ -5,7 +5,7 @@
     <lastUpdated value="2017-09-06T09:22:52.31-04:00" />
   </meta>
   <url value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Diagnostic-Imaging-Report" />
-  <name value="C-CDA on FHIR Diagnostic Imaging" />
+  <name value="C-CDA on FHIR Diagnostic Imaging Report" />
   <status value="draft" />
   <publisher value="Lantana Consulting Group" />
   <contact>
