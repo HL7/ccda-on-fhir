@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="CCDA-on-FHIR-Diagnostic-Imaging" />
+  <id value="CCDA-on-FHIR-Diagnostic-Imaging-Report" />
   <meta>
     <lastUpdated value="2017-09-06T09:22:52.31-04:00" />
   </meta>
-  <url value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Diagnostic-Imaging" />
+  <url value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Diagnostic-Imaging-Report" />
   <name value="C-CDA on FHIR Diagnostic Imaging" />
   <status value="draft" />
   <publisher value="Lantana Consulting Group" />
@@ -45,6 +45,54 @@
         <profile value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Informant"/>
       </type>
     </element>
+	
+	<element id="Composition.extension:participant_extension">
+      <path value="Composition.extension"/>
+      <sliceName value="participant_extension"/>
+      <label value="participant"/>
+      <short value="participant"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Participant"/>
+      </type>
+    </element>
+    <element id="Composition.extension:participant_extension.url">
+      <path value="Composition.extension.url"/>
+      <fixedUri value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Participant"/>
+    </element>
+	
+	<element id="Composition.extension:performer_extension">
+      <path value="Composition.extension"/>
+      <sliceName value="performer_extension"/>
+      <label value="performer"/>
+      <short value="performer"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Performer"/>
+      </type>
+    </element>
+    <element id="Composition.extension:performer_extension.url">
+      <path value="Composition.extension.url"/>
+      <fixedUri value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Performer"/>
+    </element>
+	
+	<element id="Composition.extension:order_extension">
+      <path value="Composition.extension"/>
+      <sliceName value="order_extension"/>
+      <label value="authorization"/>
+      <short value="authorization"/>
+      <type>
+        <code value="Extension"/>
+        <profile
+          value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-In-Fulfillment-Of-Order" />
+      </type>
+    </element>
+    <element id="Composition.extension:order_extension.url">
+      <path value="Composition.extension.url"/>
+      <fixedUri
+        value="http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-In-Fulfillment-Of-Order" />
+    </element>
+	
     <element id="Composition.type">
       <path value="Composition.type" />
       <label value="Diagnostic Imaging Report" />
@@ -90,13 +138,41 @@
     </element>
     <element id="Composition.section:findings_section.code">
       <path value="Composition.section.code" />
-      <short value="code" />
+      <label value="Functional Status"/>
+      <short value="Functional Status"/>
       <min value="1" />
+	  <patternCodeableConcept>
+        <coding>
+          <system value="urn:oid:1.2.840.10008.2.16.4"/>
+          <code value="121070"/>
+        </coding>
+      </patternCodeableConcept>
     </element>
+	
     <element id="Composition.section:findings_section.text">
       <path value="Composition.section.text" />
       <short value="text" />
       <min value="1" />
+    </element>
+	
+	<element id="Composition.section:findings_section.entry">
+      <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="reference"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="entry"/>
+    </element>
+    <element id="Composition.section:findings_section.entry:DIR_section_slice_entry">
+      <path value="Composition.section.entry"/>
+      <sliceName value="findings_section_slice_entry"/>
+	  <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+      </type>
     </element>
 	
 	
@@ -200,10 +276,6 @@
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"/>
-      </type>
-	  <type>
-        <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observationresults"/>
       </type>
 	  <type>
         <code value="Reference"/>
