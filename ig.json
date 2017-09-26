@@ -52,8 +52,8 @@
     "StructureDefinition/CCDA-on-FHIR-History-and-Physical": {
       "base": "StructureDefinition-CCDA-on-FHIR-History-and-Physical.html"
     },
-    "StructureDefinition/CCDA-on-FHIR-Diagnostic-Imaging": {
-      "base": "StructureDefinition-CCDA-on-FHIR-Diagnostic-Imaging.html"
+    "StructureDefinition/CCDA-on-FHIR-Diagnostic-Imaging-Report": {
+      "base": "StructureDefinition-CCDA-on-FHIR-Diagnostic-Imaging-Report.html"
     },
     "StructureDefinition/CCDA-on-FHIR-Data-Enterer": {
       "base": "StructureDefinition-CCDA-on-FHIR-Data-Enterer.html"
@@ -145,8 +145,8 @@
     "Composition/CCDA-on-FHIR-History-and-Physical-Example": {
       "base": "Composition-CCDA-on-FHIR-History-and-Physical-Example.html"
     },
-    "Composition/CCDA-on-FHIR-Diagnostic-Imaging-Example": {
-      "base": "Composition-CCDA-on-FHIR-Diagnostic-Imaging-Example.html"
+    "Composition/CCDA-on-FHIR-Diagnostic-Imaging-Report-Example": {
+      "base": "Composition-CCDA-on-FHIR-Diagnostic-Imaging-Report-Example.html"
     },
     "Composition/CCDA-on-FHIR-Operative-Note-Example": {
       "base": "Composition-CCDA-on-FHIR-Operative-Note-Example.html"
