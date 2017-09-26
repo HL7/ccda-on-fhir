@@ -55,11 +55,11 @@
       }
     ]
   },
-  "CCDA-on-FHIR-Diagnostic-Imaging": {
+  "CCDA-on-FHIR-Diagnostic-Imaging-Report": {
     "examples": [
       {
         "type": "Composition",
-        "id": "CCDA-on-FHIR-Diagnostic-Imaging-Example"
+        "id": "CCDA-on-FHIR-Diagnostic-Imaging-Report-Example"
       }
     ]
   },
