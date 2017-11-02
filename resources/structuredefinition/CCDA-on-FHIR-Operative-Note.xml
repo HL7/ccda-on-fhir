@@ -91,7 +91,6 @@
       <short value="text" />
       <min value="1" />
     </element>
-
     <element id="Composition.section:anesthesia_section.entry">
       <path value="Composition.section.entry"/>
       <slicing>
@@ -146,8 +145,6 @@
       <short value="text" />
       <min value="1" />
     </element>
-	
-    
     <element id="Composition.section:complications_section.entry">
       <path value="Composition.section.entry"/>
       <slicing>
@@ -202,8 +199,6 @@
       <short value="text" />
       <min value="1" />
     </element>
-	
-
     <element id="Composition.section:preoperative_diagnosis_section.entry">
       <path value="Composition.section.entry"/>
       <slicing>
@@ -255,11 +250,9 @@
     </element>
     <element id="Composition.section:procedure_estimated_blood_loss_section.text">
       <path value="Composition.section.text" />
-      <short value="text" />
+      <short value="This section contains only human readable content" />
       <min value="1" />
     </element>
-	
-	
     <element id="Composition.section:procedure_findings_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
@@ -345,7 +338,7 @@
     </element>
     <element id="Composition.section:procedure_specimens_taken_section.text">
       <path value="Composition.section.text" />
-      <short value="text" />
+      <short value="This section contains only human readable content" />
       <min value="1" />
     </element>
 	
@@ -380,7 +373,7 @@
     </element>
     <element id="Composition.section:postoperative_diagnosis_section.text">
       <path value="Composition.section.text" />
-      <short value="text" />
+      <short value="This section contains only human readable content" />
       <min value="1" />
     </element>
 	
@@ -415,11 +408,9 @@
     </element>
     <element id="Composition.section:procedure_description_section.text">
       <path value="Composition.section.text" />
-      <short value="text" />
+      <short value="This section contains only human readable content" />
       <min value="1" />
     </element>
-	
-	
     <element id="Composition.section:operative_note_surgical_procedure_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
@@ -449,7 +440,7 @@
     </element>
     <element id="Composition.section:operative_note_surgical_procedure_section.text">
       <path value="Composition.section.text" />
-      <short value="text" />
+      <short value="This section contains only human readable content" />
       <min value="1" />
     </element>
     <element id="Composition.section:operative_note_fluids_section">
@@ -462,8 +453,6 @@
       <short value="Operative Note Fluids Section" />
       <max value="1" />
     </element>
-	
-	
     <element id="Composition.section:operative_note_fluids_section.title">
       <path value="Composition.section.title" />
       <short value="title" />
@@ -483,7 +472,7 @@
     </element>
     <element id="Composition.section:operative_note_fluids_section.text">
       <path value="Composition.section.text" />
-      <short value="text" />
+      <short value="This section contains only human readable content" />
       <min value="1" />
     </element>
 	
@@ -666,7 +655,7 @@
     </element>
     <element id="Composition.section:procedure_disposition_section.text">
       <path value="Composition.section.text" />
-      <short value="text" />
+      <short value="This section contains only human readable content" />
       <min value="1" />
     </element>
 	
@@ -700,7 +689,7 @@
     </element>
     <element id="Composition.section:procedure_indications_section.text">
       <path value="Composition.section.text" />
-      <short value="text" />
+      <short value="This section contains only human readable content" />
       <min value="1" />
     </element>
     
@@ -753,7 +742,7 @@
     </element>
     <element id="Composition.section:procedure_implants_section.text">
       <path value="Composition.section.text" />
-      <short value="text" />
+      <short value="This section contains only human readable content" />
       <min value="1" />
     </element>
 	
@@ -787,7 +776,7 @@
     </element>
     <element id="Composition.section:surgical_drains_section.text">
       <path value="Composition.section.text" />
-      <short value="text" />
+      <short value="This section contains only human readable content" />
       <min value="1" />
     </element>
 	

@@ -771,7 +771,7 @@
     </element>
     <element id="Composition.section:history_of_present_illness_section.text">
       <path value="Composition.section.text"/>
-      <short value="text"/>
+      <short value="This section contains only human readable content" />
       <min value="1"/>
     </element>
     
@@ -859,7 +859,7 @@
     </element>
     <element id="Composition.section:assessment_section.text">
       <path value="Composition.section.text"/>
-      <short value="text"/>
+      <short value="This section contains only human readable content" />
       <min value="1"/>
     </element>
     
@@ -1002,7 +1002,7 @@
     </element>
     <element id="Composition.section:general_status_section.text">
       <path value="Composition.section.text"/>
-      <short value="text"/>
+      <short value="This section contains only human readable content" />
       <min value="1"/>
     </element>
     
@@ -1455,7 +1455,7 @@
     </element>
     <element id="Composition.section:assessment_and_plan_section.text">
       <path value="Composition.section.text"/>
-      <short value="text"/>
+      <short value="This section contains only human readable content" />
       <min value="1"/>
     </element>
   </differential>

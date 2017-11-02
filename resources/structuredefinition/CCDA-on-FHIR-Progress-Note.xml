@@ -87,7 +87,7 @@
     </element>
     <element id="Composition.section:assessment_section.text">
       <path value="Composition.section.text" />
-      <short value="text" />
+      <short value="This section contains only human readable content" />
       <min value="1" />
     </element>
     <element id="Composition.section:allergies_and_intolerances_section">
@@ -176,7 +176,7 @@
     </element>
     <element id="Composition.section:assessment_and_plan_section.text">
       <path value="Composition.section.text" />
-      <short value="text" />
+      <short value="This section contains only human readable content" />
       <min value="1" />
     </element>
     <element id="Composition.section:chief_complaint_section">
@@ -208,7 +208,7 @@
     </element>
     <element id="Composition.section:chief_complaint_section.text">
       <path value="Composition.section.text" />
-      <short value="text" />
+      <short value="This section contains only human readable content" />
       <min value="1" />
     </element>
     <element id="Composition.section:instructions_section">
@@ -240,7 +240,7 @@
     </element>
     <element id="Composition.section:instructions_section.text">
       <path value="Composition.section.text" />
-      <short value="text" />
+      <short value="This section contains only human readable content" />
       <min value="1" />
     </element>
     <element id="Composition.section:interventions_section">
@@ -443,7 +443,7 @@
     </element>
     <element id="Composition.section:objective_section.text">
       <path value="Composition.section.text" />
-      <short value="text" />
+      <short value="This section contains only human readable content" />
       <min value="1" />
     </element>
     <element id="Composition.section:physical_exam_section">
@@ -738,7 +738,7 @@
     </element>
     <element id="Composition.section:review_of_systems_section.text">
       <path value="Composition.section.text" />
-      <short value="text" />
+      <short value="This section contains only human readable content" />
       <min value="1" />
     </element>
     <element id="Composition.section:subjective_section">
@@ -770,7 +770,7 @@
     </element>
     <element id="Composition.section:subjective_section.text">
       <path value="Composition.section.text" />
-      <short value="text" />
+      <short value="This section contains only human readable content" />
       <min value="1" />
     </element>
     <element id="Composition.section:vital_signs_section">

@@ -151,7 +151,7 @@
     </element>
     <element id="Composition.section:procedure_description_section.text">
       <path value="Composition.section.text" />
-      <short value="text" />
+      <short value="This section contains only human readable content" />
       <min value="1" />
     </element>
     <element id="Composition.section:procedure_indications_section">
@@ -184,7 +184,7 @@
     </element>
     <element id="Composition.section:procedure_indications_section.text">
       <path value="Composition.section.text" />
-      <short value="text" />
+      <short value="This section contains only human readable content" />
       <min value="1" />
     </element>
     <element id="Composition.section:postprocedure_diagnosis_section">
@@ -217,7 +217,7 @@
     </element>
     <element id="Composition.section:postprocedure_diagnosis_section.text">
       <path value="Composition.section.text" />
-      <short value="text" />
+      <short value="This section contains only human readable content" />
       <min value="1" />
     </element>
     <element id="Composition.section:allergies_and_intolerances_section">
@@ -300,7 +300,7 @@
     </element>
     <element id="Composition.section:assessment_section.text">
       <path value="Composition.section.text" />
-      <short value="text" />
+      <short value="This section contains only human readable content" />
       <min value="1" />
     </element>
     <element id="Composition.section:assessment_and_plan_section">
@@ -332,7 +332,7 @@
     </element>
     <element id="Composition.section:assessment_and_plan_section.text">
       <path value="Composition.section.text" />
-      <short value="text" />
+      <short value="This section contains only human readable content" />
       <min value="1" />
     </element>
     <element id="Composition.section:anesthesia_section">
@@ -364,7 +364,7 @@
     </element>
     <element id="Composition.section:anesthesia_section.text">
       <path value="Composition.section.text" />
-      <short value="text" />
+      <short value="This section contains only human readable content" />
       <min value="1" />
     </element>
     <element id="Composition.section:chief_complaint_and_reason_for_visit_section">
@@ -395,7 +395,7 @@
     </element>
     <element id="Composition.section:chief_complaint_and_reason_for_visit_section.text">
       <path value="Composition.section.text" />
-      <short value="text" />
+      <short value="This section contains only human readable content" />
       <min value="1" />
     </element>
     <element id="Composition.section:chief_complaint_section">
@@ -426,7 +426,7 @@
     </element>
     <element id="Composition.section:chief_complaint_section.text">
       <path value="Composition.section.text" />
-      <short value="text" />
+      <short value="This section contains only human readable content" />
       <min value="1" />
     </element>
     <element id="Composition.section:family_history_section">
@@ -507,7 +507,7 @@
     </element>
     <element id="Composition.section:history_of_past_illness_section.text">
       <path value="Composition.section.text" />
-      <short value="text" />
+      <short value="This section contains only human readable content" />
       <min value="1" />
     </element>
     <element id="Composition.section:history_of_present_illness_section">
@@ -538,7 +538,7 @@
     </element>
     <element id="Composition.section:history_of_present_illness_section.text">
       <path value="Composition.section.text" />
-      <short value="text" />
+      <short value="This section contains only human readable content" />
       <min value="1" />
     </element>
     <element id="Composition.section:medical_history_section">
@@ -570,7 +570,7 @@
     </element>
     <element id="Composition.section:medical_history_section.text">
       <path value="Composition.section.text" />
-      <short value="text" />
+      <short value="This section contains only human readable content" />
       <min value="1" />
     </element>
     <element id="Composition.section:medications_section">
@@ -656,6 +656,26 @@
       <short value="text" />
       <min value="1" />
     </element>
+    <element id="Composition.section:medications_administered_section.entry">
+      <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="reference"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="entry"/>
+    </element>
+    <element id="Composition.section:medications_administered_section.entry:sliceEntry">
+      <path value="Composition.section.entry"/>
+      <sliceName value="sliceEntry"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile
+          value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationstatement"/>
+      </type>
+    </element>
     <element id="Composition.section:physical_exam_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
@@ -688,6 +708,27 @@
       <short value="text" />
       <min value="1" />
     </element>
+    <element id="Composition.section:physical_exam_section.entry">
+      <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="reference"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="entry"/>
+    </element>
+    <element id="Composition.section:physical_exam_section.entry:sliceEntry">
+      <path value="Composition.section.entry"/>
+      <sliceName value="sliceEntry"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile
+          value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+      </type>
+    </element>
+    
     <element id="Composition.section:plan_of_treatment_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
@@ -840,7 +881,7 @@
     </element>
     <element id="Composition.section:procedure_disposition_section.text">
       <path value="Composition.section.text" />
-      <short value="text" />
+      <short value="This section contains only human readable content" />
       <min value="1" />
     </element>
     <element id="Composition.section:procedure_estimated_blood_loss_section">
@@ -872,7 +913,7 @@
     </element>
     <element id="Composition.section:procedure_estimated_blood_loss_section.text">
       <path value="Composition.section.text" />
-      <short value="text" />
+      <short value="This section contains only human readable content" />
       <min value="1" />
     </element>
     <element id="Composition.section:procedure_findings_section">
@@ -904,7 +945,7 @@
     </element>
     <element id="Composition.section:procedure_findings_section.text">
       <path value="Composition.section.text" />
-      <short value="text" />
+      <short value="This section contains only human readable content" />
       <min value="1" />
     </element>
     <element id="Composition.section:procedure_implants_section">
@@ -936,7 +977,7 @@
     </element>
     <element id="Composition.section:procedure_implants_section.text">
       <path value="Composition.section.text" />
-      <short value="text" />
+      <short value="This section contains only human readable content" />
       <min value="1" />
     </element>
     <element id="Composition.section:procedure_specimens_taken_section">
@@ -968,7 +1009,7 @@
     </element>
     <element id="Composition.section:procedure_specimens_taken_section.text">
       <path value="Composition.section.text" />
-      <short value="text" />
+      <short value="This section contains only human readable content" />
       <min value="1" />
     </element>
     <element id="Composition.section:procedures_section">
@@ -1003,6 +1044,25 @@
       <short value="text" />
       <min value="1" />
     </element>
+    <element id="Composition.section:procedures_section.entry">
+      <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="reference"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="entry"/>
+    </element>
+    <element id="Composition.section:procedures_section.entry:sliceEntry">
+      <path value="Composition.section.entry"/>
+      <sliceName value="sliceEntry"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"/>
+      </type>
+    </element>
     <element id="Composition.section:reason_for_visit_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
@@ -1031,7 +1091,7 @@
     </element>
     <element id="Composition.section:reason_for_visit_section.text">
       <path value="Composition.section.text" />
-      <short value="text" />
+      <short value="This section contains only human readable content" />
       <min value="1" />
     </element>
     <element id="Composition.section:review_of_systems_section">
@@ -1063,7 +1123,7 @@
     </element>
     <element id="Composition.section:review_of_systems_section.text">
       <path value="Composition.section.text" />
-      <short value="text" />
+      <short value="This section contains only human readable content" />
       <min value="1" />
     </element>
     <element id="Composition.section:social_history_section">
