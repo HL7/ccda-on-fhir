@@ -209,8 +209,6 @@
         <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition" />
       </type>
     </element>
-    
-    
     <element id="Composition.section:plan_of_treatment_section">
       <extension
         url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
