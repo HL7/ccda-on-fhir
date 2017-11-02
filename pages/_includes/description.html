@@ -1,11 +1,6 @@
 <div class="row">
   <div class="inner-wrapper">
     <div class="col-9">
-      <p style="background-color: #ffdddd; border:1px solid maroon; padding: 5px;"> This is a
-        pre-release of a future version of CCDA on FHIR (expected to be STU 1). There is no current
-        official version.<br/>For a full list of available versions, see the <a
-          href="http://hl7.org/fhir/us/ccda/history.html">Directory of published versions <img
-            src="external.png" style="text-align: baseline"/></a>. </p>
       <h2> C-CDA on FHIR Implementation Guide (IG) </h2>
       <h3> Summary </h3>
       <p>
@@ -20,10 +15,10 @@
         represent the various document types in C-CDA. This release does not directly map every
         C-CDA template to FHIR profiles, rather tries to accomplish the C-CDA use case using
         Composition resource profiles created under this project (the equivalent of Level 2 CDA
-        documents), and linking to the profiles created under the US Core project for any coded entries 
-		that would normally be included in C-CDA sections. The goal is that this results in a simpler, 
-		more streamlined standard that reuses existing work and focuses on the 80% that implementers 
-		actually need in production systems (the goal is that US Core represents that 80% needed for 
+        documents), and linking to the profiles created under the US Core project for any coded entries
+		that would normally be included in C-CDA sections. The goal is that this results in a simpler,
+		more streamlined standard that reuses existing work and focuses on the 80% that implementers
+		actually need in production systems (the goal is that US Core represents that 80% needed for
 		coded entries). </p>
       <p> The Composition profiles in this IG do not require coded data in any section. This is a
         departure from C-CDA, which requires coded data for Problems, Results, Medications, etc. This

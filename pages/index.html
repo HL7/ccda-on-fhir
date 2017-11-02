@@ -29,26 +29,26 @@ title:  Index page
           <div class="inner-wrapper">
             <div class="col-9">
               <a name="{{ site.data.fhir.igId }}"></a>
-              
+
               <ul class="nav nav-tabs" role="tablist">
                 <li role="presentation" class="active"><a href="#overview" aria-controls="home" role="tab" data-toggle="tab">Overview</a></li>
-                <li role="presentation"><a href="#resource-defs" aria-controls="profile" role="tab" data-toggle="tab">Resources</a></li>
+                <li role="presentation"><a href="#resource-defs" aria-controls="profile" role="tab" data-toggle="tab">Profiles</a></li>
                 <li role="presentation"><a href="#valuesets" aria-controls="profile" role="tab" data-toggle="tab">Value Sets</a></li>
                 <li role="presentation"><a href="#codesystems" aria-controls="profile" role="tab" data-toggle="tab">Code Systems</a></li>
                 <li role="presentation"><a href="#extensions" aria-controls="profile" role="tab" data-toggle="tab">Extensions</a></li>
               </ul>
-              
+
               <!-- Tab panes -->
               <div class="tab-content">
                 <div role="tabpanel" class="tab-pane active" id="overview">
                   {% include description.html %}
-                  
+
                   {% include authors.html %}
-                  
+
                   {% include overview.html %}
                 </div>
                 <div role="tabpanel" class="tab-pane" id="resource-defs">
-                  {% include resources.html %}
+                  {% include profiles.html %}
                 </div>
                 <div role="tabpanel" class="tab-pane" id="valuesets">
                   {% include valuesets.html %}

@@ -163,11 +163,9 @@
     </element>
     <element id="Composition.section:history_of_present_illness_section.text">
       <path value="Composition.section.text"/>
-      <short value="text"/>
+      <short value="This section contains only human readable content" />
       <min value="1"/>
     </element>
-    
-    
     <element id="Composition.section:problem_section">
       <extension
         url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
@@ -256,6 +254,26 @@
       <short value="text"/>
       <min value="1"/>
     </element>
+    <element id="Composition.section:medications_section.entry">
+      <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="reference"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="entry"/>
+    </element>
+    <element id="Composition.section:medications_section.entry:sliceEntry">
+      <path value="Composition.section.entry"/>
+      <sliceName value="sliceEntry"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile
+          value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationstatement"/>
+      </type>
+    </element>
     <element id="Composition.section:physical_exam_section">
       <extension
         url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
@@ -290,8 +308,6 @@
       <short value="text"/>
       <min value="1"/>
     </element>
-    
-    
     <element id="Composition.section:physical_exam_section.entry">
       <path value="Composition.section.entry"/>
       <slicing>
@@ -350,8 +366,6 @@
       <short value="text"/>
       <min value="1"/>
     </element>
-    
-    
     <element id="Composition.section:results_section.entry">
       <path value="Composition.section.entry"/>
       <slicing>
@@ -408,6 +422,24 @@
       <short value="text"/>
       <min value="1"/>
     </element>
+    <element id="Composition.section:advance_directives_section.entry">
+      <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="reference"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+    </element>
+    <element id="Composition.section:advance_directives_section.entry:sliceEntry">
+      <path value="Composition.section.entry"/>
+      <sliceName value="sliceEntry"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Consent"/>
+      </type>
+    </element>
     <element id="Composition.section:assessment_and_plan_section">
       <extension
         url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
@@ -439,7 +471,7 @@
     </element>
     <element id="Composition.section:assessment_and_plan_section.text">
       <path value="Composition.section.text"/>
-      <short value="text"/>
+      <short value="This section contains only human readable content" />
       <min value="1"/>
     </element>
     <element id="Composition.section:assessment_section">
@@ -473,7 +505,7 @@
     </element>
     <element id="Composition.section:assessment_section.text">
       <path value="Composition.section.text"/>
-      <short value="text"/>
+      <short value="This section contains only human readable content" />
       <min value="1"/>
     </element>
     <element id="Composition.section:chief_complaint_and_reason_for_visit_section">
@@ -507,7 +539,7 @@
     </element>
     <element id="Composition.section:chief_complaint_and_reason_for_visit_section.text">
       <path value="Composition.section.text"/>
-      <short value="text"/>
+      <short value="This section contains only human readable content" />
       <min value="1"/>
     </element>
     <element id="Composition.section:chief_complaint_section">
@@ -541,7 +573,7 @@
     </element>
     <element id="Composition.section:chief_complaint_section.text">
       <path value="Composition.section.text"/>
-      <short value="text"/>
+      <short value="This section contains only human readable content" />
       <min value="1"/>
     </element>
     <element id="Composition.section:family_history_section">
@@ -578,6 +610,25 @@
       <short value="text"/>
       <min value="1"/>
     </element>
+    <element id="Composition.section:family_history_section.entry">
+      <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="reference"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="entry"/>
+    </element>
+    <element id="Composition.section:family_history_section.entry:sliceEntry">
+      <path value="Composition.section.entry"/>
+      <sliceName value="sliceEntry"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory"/>
+      </type>
+    </element>
     <element id="Composition.section:functional_status_section">
       <extension
         url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
@@ -612,6 +663,25 @@
       <short value="text"/>
       <min value="1"/>
     </element>
+    <element id="Composition.section:functional_status_section.entry">
+      <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="reference"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="entry"/>
+    </element>
+    <element id="Composition.section:functional_status_section.entry:sliceEntry">
+      <path value="Composition.section.entry"/>
+      <sliceName value="sliceEntry"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+      </type>
+    </element>
     <element id="Composition.section:general_status_section">
       <extension
         url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
@@ -643,7 +713,7 @@
     </element>
     <element id="Composition.section:general_status_section.text">
       <path value="Composition.section.text"/>
-      <short value="text"/>
+      <short value="This section contains only human readable content" />
       <min value="1"/>
     </element>
     <element id="Composition.section:history_of_past_illness_section">
@@ -677,7 +747,7 @@
     </element>
     <element id="Composition.section:history_of_past_illness_section.text">
       <path value="Composition.section.text"/>
-      <short value="text"/>
+      <short value="This section contains only human readable content" />
       <min value="1"/>
     </element>
     <element id="Composition.section:immunizations_section">
@@ -714,6 +784,26 @@
       <short value="text"/>
       <min value="1"/>
     </element>
+    <element id="Composition.section:immunizations_section.entry">
+      <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="reference"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="entry"/>
+    </element>
+    <element id="Composition.section:immunizations_section.entry:sliceEntry">
+      <path value="Composition.section.entry"/>
+      <sliceName value="sliceEntry"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization"
+        />
+      </type>
+    </element>
     <element id="Composition.section:medical_equipment_section">
       <extension
         url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
@@ -748,6 +838,25 @@
       <short value="text"/>
       <min value="1"/>
     </element>
+    <element id="Composition.section:medical_equipment_section.entry">
+      <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="reference"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="entry"/>
+    </element>
+    <element id="Composition.section:medical_equipment_section.entry:sliceEntry">
+      <path value="Composition.section.entry"/>
+      <sliceName value="sliceEntry"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device"/>
+      </type>
+    </element>
     <element id="Composition.section:mental_status_section">
       <extension
         url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
@@ -779,8 +888,27 @@
     </element>
     <element id="Composition.section:mental_status_section.text">
       <path value="Composition.section.text"/>
-      <short value="text"/>
+      <short value="text" />
       <min value="1"/>
+    </element>
+    <element id="Composition.section:mental_status_section.entry">
+      <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="reference"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="entry"/>
+    </element>
+    <element id="Composition.section:mental_status_section.entry:sliceEntry">
+      <path value="Composition.section.entry"/>
+      <sliceName value="sliceEntry"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+      </type>
     </element>
     <element id="Composition.section:nutrition_section">
       <extension
@@ -816,6 +944,29 @@
       <short value="text"/>
       <min value="1"/>
     </element>
+    <element id="Composition.section:nutrition_section.entry">
+      <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="reference"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="entry"/>
+    </element>
+    <element id="Composition.section:nutrition_section.entry:sliceEntry">
+      <path value="Composition.section.entry"/>
+      <sliceName value="sliceEntry"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/NutritionOrder"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ClinicalImpression"/>
+      </type>
+    </element>
     <element id="Composition.section:plan_of_treatment_section">
       <extension
         url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
@@ -847,7 +998,7 @@
     </element>
     <element id="Composition.section:plan_of_treatment_section.text">
       <path value="Composition.section.text"/>
-      <short value="text"/>
+      <short value="This section contains only human readable content" />
       <min value="1"/>
     </element>
     <element id="Composition.section:procedures_section">
@@ -884,6 +1035,25 @@
       <short value="text"/>
       <min value="1"/>
     </element>
+    <element id="Composition.section:procedures_section.entry">
+      <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="reference"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="entry"/>
+    </element>
+    <element id="Composition.section:procedures_section.entry:sliceEntry">
+      <path value="Composition.section.entry"/>
+      <sliceName value="sliceEntry"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"/>
+      </type>
+    </element>
     <element id="Composition.section:reason_for_visit_section">
       <extension
         url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
@@ -915,7 +1085,7 @@
     </element>
     <element id="Composition.section:reason_for_visit_section.text">
       <path value="Composition.section.text"/>
-      <short value="text"/>
+      <short value="This section contains only human readable content" />
       <min value="1"/>
     </element>
     <element id="Composition.section:review_of_systems_section">
@@ -949,7 +1119,7 @@
     </element>
     <element id="Composition.section:review_of_systems_section.text">
       <path value="Composition.section.text"/>
-      <short value="text"/>
+      <short value="This section contains only human readable content" />
       <min value="1"/>
     </element>
     <element id="Composition.section:social_history_section">
@@ -985,6 +1155,26 @@
       <short value="text"/>
       <min value="1"/>
     </element>
+    <element id="Composition.section:social_history_section.entry">
+      <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="reference"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="entry"/>
+    </element>
+    <element id="Composition.section:social_history_section.entry:sliceEntry">
+      <path value="Composition.section.entry"/>
+      <sliceName value="sliceEntry"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus"
+        />
+      </type>
+    </element>
     <element id="Composition.section:vital_signs_section">
       <extension
         url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
@@ -1018,6 +1208,25 @@
       <path value="Composition.section.text"/>
       <short value="text"/>
       <min value="1"/>
+    </element>
+    <element id="Composition.section:vital_signs_section.entry">
+      <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="reference"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="entry"/>
+    </element>
+    <element id="Composition.section:vital_signs_section.entry:sliceEntry">
+      <path value="Composition.section.entry"/>
+      <sliceName value="sliceEntry"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/vitalsigns"/>
+      </type>
     </element>
   </differential>
 </StructureDefinition>

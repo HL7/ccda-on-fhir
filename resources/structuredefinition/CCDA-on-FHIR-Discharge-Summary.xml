@@ -154,11 +154,9 @@
     </element>
     <element id="Composition.section:hospital_course_section.text">
       <path value="Composition.section.text" />
-      <short value="text" />
+      <short value="This section contains only human readable content" />
       <min value="1" />
     </element>
-    <!-- Hospital Course is narrative-only -->
-
     <element id="Composition.section:discharge_diagnosis_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
@@ -192,8 +190,6 @@
       <short value="text" />
       <min value="1" />
     </element>
-    
-    
     <element id="Composition.section:discharge_diagnosis_section.entry">
       <path value="Composition.section.entry" />
       <slicing>
@@ -249,7 +245,6 @@
       <short value="text"/>
       <min value="1"/>
     </element>
-    
     <element id="Composition.section:plan_of_treatment_section.entry">
       <path value="Composition.section.entry"/>
       <slicing>
@@ -343,8 +338,6 @@
       <short value="text" />
       <min value="1" />
     </element>
-    
-    
     <element id="Composition.section:discharge_medications_section.entry">
       <path value="Composition.section.entry"/>
       <slicing>
@@ -399,8 +392,6 @@
       <short value="text" />
       <min value="1" />
     </element>
-    
-    
     <element id="Composition.section:admission_diagnosis_section.entry">
       <path value="Composition.section.entry" />
       <slicing>
@@ -454,8 +445,6 @@
       <short value="text" />
       <min value="1" />
     </element>
-    
-    
     <element id="Composition.section:admission_medications_section.entry">
       <path value="Composition.section.entry"/>
       <slicing>
@@ -506,12 +495,9 @@
     </element>
     <element id="Composition.section:chief_complaint_and_reason_for_visit_section.text">
       <path value="Composition.section.text" />
-      <short value="text" />
+      <short value="This section contains only human readable content" />
       <min value="1" />
     </element>
-    
-    <!-- Chief Complaint and Reason for Visit section is narrative-only -->
-    
     <element id="Composition.section:chief_complaint_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
@@ -540,11 +526,9 @@
     </element>
     <element id="Composition.section:chief_complaint_section.text">
       <path value="Composition.section.text" />
-      <short value="text" />
+      <short value="This section contains only human readable content" />
       <min value="1" />
     </element>
-    <!-- Chief Complaint and Reason section is narrative-only -->
-    
     <element id="Composition.section:family_history_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
@@ -576,8 +560,6 @@
       <short value="text" />
       <min value="1" />
     </element>
-
-
     <element id="Composition.section:family_history_section.entry">
       <path value="Composition.section.entry" />
       <slicing>
@@ -718,7 +700,7 @@
     </element>
     <element id="Composition.section:history_of_present_illness_section.text">
       <path value="Composition.section.text" />
-      <short value="text" />
+      <short value="This section contains only human readable content" />
       <min value="1" />
     </element>
     <element id="Composition.section:hospital_consultations_section">
@@ -750,7 +732,7 @@
     </element>
     <element id="Composition.section:hospital_consultations_section.text">
       <path value="Composition.section.text" />
-      <short value="text" />
+      <short value="This section contains only human readable content" />
       <min value="1" />
     </element>
     <element id="Composition.section:hospital_discharge_instructions_section">
@@ -782,7 +764,7 @@
     </element>
     <element id="Composition.section:hospital_discharge_instructions_section.text">
       <path value="Composition.section.text" />
-      <short value="text" />
+      <short value="This section contains only human readable content" />
       <min value="1" />
     </element>
     <element id="Composition.section:hospital_discharge_physical_section">
@@ -814,7 +796,7 @@
     </element>
     <element id="Composition.section:hospital_discharge_physical_section.text">
       <path value="Composition.section.text" />
-      <short value="text" />
+      <short value="This section contains only human readable content" />
       <min value="1" />
     </element>
     <element id="Composition.section:hospital_discharge_studies_section">
@@ -846,7 +828,7 @@
     </element>
     <element id="Composition.section:hospital_discharge_studies_section.text">
       <path value="Composition.section.text" />
-      <short value="text" />
+      <short value="This section contains only human readable content" />
       <min value="1" />
     </element>
     <element id="Composition.section:immunizations_section">
@@ -881,8 +863,6 @@
       <short value="text" />
       <min value="1" />
     </element>
-    
-    
     <element id="Composition.section:immunizations_section.entry">
       <path value="Composition.section.entry"/>
       <slicing>
@@ -937,8 +917,6 @@
       <short value="text" />
       <min value="1" />
     </element>
-    
-    
     <element id="Composition.section:nutrition_section.entry">
       <path value="Composition.section.entry"/>
       <slicing>
@@ -992,7 +970,6 @@
       <short value="text" />
       <min value="1" />
     </element>
-    
     <element id="Composition.section:problem_section.entry">
       <path value="Composition.section.entry"/>
       <slicing>
@@ -1046,8 +1023,6 @@
       <short value="text" />
       <min value="1" />
     </element>
-    
-    
     <element id="Composition.section:procedures_section.entry">
       <path value="Composition.section.entry"/>
       <slicing>
@@ -1097,7 +1072,7 @@
     </element>
     <element id="Composition.section:reason_for_visit_section.text">
       <path value="Composition.section.text" />
-      <short value="text" />
+      <short value="This section contains only human readable content" />
       <min value="1" />
     </element>
     <element id="Composition.section:review_of_systems_section">
@@ -1129,7 +1104,7 @@
     </element>
     <element id="Composition.section:review_of_systems_section.text">
       <path value="Composition.section.text" />
-      <short value="text" />
+      <short value="This section contains only human readable content" />
       <min value="1" />
     </element>
     <element id="Composition.section:social_history_section">
@@ -1163,8 +1138,6 @@
       <short value="text" />
       <min value="1" />
     </element>
-    
-    
     <element id="Composition.section:social_history_section.entry">
       <path value="Composition.section.entry"/>
       <slicing>
@@ -1219,8 +1192,6 @@
       <short value="text" />
       <min value="1" />
     </element>
-    
-    
     <element id="Composition.section:vital_signs_section.entry">
       <path value="Composition.section.entry"/>
       <slicing>
