@@ -1255,22 +1255,26 @@
       <min value="1" />
     </element>
     <element id="Composition.section:social_history_section.entry">
-      <path value="Composition.section.entry" />
+      <path value="Composition.section.entry"/>
       <slicing>
         <discriminator>
-          <type value="profile" />
-          <path value="reference" />
+          <type value="profile"/>
+          <path value="reference"/>
         </discriminator>
-        <rules value="open" />
+        <rules value="open"/>
       </slicing>
-      <short value="entry" />
+      <short value="entry"/>
     </element>
     <element id="Composition.section:social_history_section.entry:sliceEntry">
-      <path value="Composition.section.entry" />
-      <sliceName value="sliceEntry" />
+      <path value="Composition.section.entry"/>
+      <sliceName value="sliceEntry"/>
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus" />
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
       </type>
     </element>
   </differential>

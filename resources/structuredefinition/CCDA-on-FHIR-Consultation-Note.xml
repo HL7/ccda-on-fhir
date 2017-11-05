@@ -324,8 +324,7 @@
       <sliceName value="sliceEntry"/>
       <type>
         <code value="Reference"/>
-        <targetProfile
-          value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
       </type>
     </element>
     
@@ -1251,8 +1250,11 @@
       <sliceName value="sliceEntry"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus"
-        />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
       </type>
     </element>
     <element id="Composition.section:vital_signs_section">
