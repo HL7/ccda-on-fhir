@@ -1037,7 +1037,6 @@
       <short value="text"/>
       <min value="1"/>
     </element>
-
     <element id="Composition.section:history_of_past_illness_section.entry">
       <path value="Composition.section.entry"/>
       <slicing>

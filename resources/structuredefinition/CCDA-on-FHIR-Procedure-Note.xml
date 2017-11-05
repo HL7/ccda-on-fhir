@@ -545,10 +545,30 @@
       </patternCodeableConcept>
     </element>
     <element id="Composition.section:history_of_past_illness_section.text">
-      <path value="Composition.section.text" />
-      <short value="This section contains only human readable content" />
-      <min value="1" />
+      <path value="Composition.section.text"/>
+      <short value="text"/>
+      <min value="1"/>
     </element>
+    <element id="Composition.section:history_of_past_illness_section.entry">
+      <path value="Composition.section.entry"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="reference"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <short value="entry"/>
+    </element>
+    <element id="Composition.section:history_of_past_illness_section.entry:sliceEntry">
+      <path value="Composition.section.entry"/>
+      <sliceName value="sliceEntry"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"/>
+      </type>
+    </element>
+    
     <element id="Composition.section:history_of_present_illness_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />

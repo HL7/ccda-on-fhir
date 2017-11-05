@@ -1,6 +1,6 @@
 <div>
     <h4 id="value-sets">Value Sets</h4>
-    <p>This guide references the following value sets. Note: value sets defined in the base <a href="http://hl7.org/fhir/composition.html">Composition</a> resource are not included in this list. </p>
+    <p>This guide references the following value sets. Note: value sets defined in the base <a href="http://hl7.org/fhir/composition.html">Composition</a> resource or in US Core are not included in this list. </p>
     <table class="codes">
         <thead>
             <tr>
@@ -97,6 +97,11 @@
             </tr>
         </tbody>
     </table>
+    <p>Note: the value sets used in US Core are not fully aligned with those in C-CDA, though the differences are often minor.
+	    Likewise, the approaches for negation used in C-CDA and the Core FHIR specification are quite different. This project will not attempt to address such alignment issues.
+	    Rather, implementers moving from C-CDA to C-CDA on FHIR will need to review the US Core profiles and value sets and ensure that their instances FHIR instances are compliant.
+	    We hope that ongoing work in HL7 will better align US Core, C-CDA, and the Core FHIR specifications in the future. </p>
+
     <h4 id="code-systems">Code Systems</h4>
 
 	<p>See the <a href="http://hl7.org/fhir/terminologies-systems.html">FHIR terminology section</a> for a complete discussion on code systems and a list of codes system names used in FHIR. The following additional names (URIs) have been identified for this implementation guide,   If a URI is listed here, it <strong>SHALL</strong> be used in the US Core profiles in preference to any other code system name.</p>
