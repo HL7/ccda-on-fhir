@@ -416,6 +416,11 @@
         <targetProfile
           value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationstatement"/>
       </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile
+          value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"/>
+      </type>
     </element>
     <element id="Composition.section:chief_complaint_and_reason_for_visit_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">

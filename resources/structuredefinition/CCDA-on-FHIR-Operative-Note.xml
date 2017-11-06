@@ -107,11 +107,16 @@
       <sliceName value="sliceEntry"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition" />
+        <targetProfile
+          value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationstatement"/>
       </type>
-    </element>	
+      <type>
+        <code value="Reference"/>
+        <targetProfile
+          value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"/>
+      </type>
+    </element>
 
-	
     <element id="Composition.section:complications_section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
