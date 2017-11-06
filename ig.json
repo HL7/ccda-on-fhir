@@ -8,7 +8,7 @@
     "temp": "temp",
     "output": "output",
     "qa": "qa",
-    "specification": "http://hl7.org/fhir/STU3/"
+    "specification": "http://build.fhir.org/"
   },
   "dependencyList": [{
     "name": "USCore",

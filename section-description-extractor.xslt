@@ -30,27 +30,54 @@
             <ul>
                 <xsl:for-each select="//lcg:Template[@templateType='section']">
                     <xsl:sort select="@title"/>
-                    <li><a href="#{@bookmark}"><xsl:value-of select="@title"/></a></li>
+                    <xsl:variable name="sectitle">
+                        <xsl:choose>
+                            <xsl:when test="contains(@title,'(V')">
+                                <xsl:value-of select="substring-before(@title,'(V')"/>
+                            </xsl:when>
+                            <xsl:otherwise><xsl:value-of select="@title"/></xsl:otherwise>
+                        </xsl:choose>
+                    </xsl:variable>
+                    <li><a href="#{@bookmark}"><xsl:value-of select="$sectitle"/></a></li>
                 </xsl:for-each>
             </ul>
             <xsl:for-each select="//lcg:Template[@templateType='section']">
                 <xsl:sort select="@title"/>
                 <xsl:variable name="id" select="@identifier"/>
-                <div>
-                    <h3><a name="{@bookmark}"><xsl:value-of select="@title"/></a></h3>
-                    <xsl:apply-templates select="lcg:Description"/>
-                    <xsl:if test="//lcg:Template[@templateType='document'][descendant::lcg:ContainedTemplate[@identifier=$id]]">
-                        <p>Referenced in:
-                        <ul>
-                            <xsl:for-each select="//lcg:Template[@templateType='document'][descendant::lcg:ContainedTemplate[@identifier=$id]]">
-                                <xsl:variable name="docid" select="@identifier"/>
-                                <xsl:variable name="structuredefinition" select="$docs//lcg:doc[lcg:id=$docid]/lcg:structuredefinition"/>
-                                <li><a href="StructureDefinition-{$structuredefinition}.html"><xsl:value-of select="@title"/></a></li>
-                            </xsl:for-each>
-                        </ul>
-                        </p>
-                    </xsl:if>
-                </div>
+                <xsl:variable name="sectitle">
+                    <xsl:choose>
+                        <xsl:when test="contains(@title,'(V')">
+                            <xsl:value-of select="substring-before(@title,'(V')"/>
+                        </xsl:when>
+                        <xsl:otherwise><xsl:value-of select="@title"/></xsl:otherwise>
+                    </xsl:choose>
+                </xsl:variable>
+                
+                <xsl:if test="//lcg:Template[@templateType='document'][descendant::lcg:ContainedTemplate[@identifier=$id]]">
+                     <div>
+                         <h3><a name="{@bookmark}"><xsl:value-of select="$sectitle"/></a></h3>
+                         <xsl:apply-templates select="lcg:Description"/>
+                             <p>Referenced in:
+                             <ul>
+                                 <xsl:for-each select="//lcg:Template[@templateType='document'][descendant::lcg:ContainedTemplate[@identifier=$id]]">
+                                     <xsl:variable name="docid" select="@identifier"/>
+                                     <xsl:variable name="doctitle">
+                                         <xsl:choose>
+                                             <xsl:when test="contains(@title,'(V')">
+                                                 <xsl:value-of select="substring-before(@title,'(V')"/>
+                                             </xsl:when>
+                                             <xsl:otherwise><xsl:value-of select="@title"/></xsl:otherwise>
+                                         </xsl:choose>
+                                     </xsl:variable>
+                                     
+                                     <xsl:variable name="structuredefinition" select="$docs//lcg:doc[lcg:id=$docid]/lcg:structuredefinition"/>
+                                     <li><a href="StructureDefinition-{$structuredefinition}.html"><xsl:value-of select="$doctitle"/></a></li>
+                                 </xsl:for-each>
+                             </ul>
+                             </p>
+                         
+                     </div>
+                </xsl:if>
             </xsl:for-each>
         </div>
     </xsl:template>
