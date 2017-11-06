@@ -161,7 +161,7 @@
       <sliceName value="sliceEntry"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"/>
       </type>
     </element>
 	
