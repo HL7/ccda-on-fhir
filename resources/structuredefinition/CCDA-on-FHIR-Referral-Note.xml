@@ -580,7 +580,7 @@
       <path value="Composition.section" />
       <sliceName value="assessment_and_plan_section" />
       <label value="Assessment and Plan Section" />
-      <short value="Assessment and Plan Section" />
+      <short value="Assessment and Plan Section. This section represents the clinician’s conclusions and working assumptions that will guide treatment of the patient. The Assessment and Plan Section may be combined or separated to meet local policy requirements."/>
       <max value="1" />
     </element>
     <element id="Composition.section:assessment_and_plan_section.title">
