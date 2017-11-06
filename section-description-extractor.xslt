@@ -30,6 +30,7 @@
             <ul>
                 <xsl:for-each select="//lcg:Template[@templateType='section']">
                     <xsl:sort select="@title"/>
+                    <xsl:variable name="id" select="@identifier"/>
                     <xsl:variable name="sectitle">
                         <xsl:choose>
                             <xsl:when test="contains(@title,'(V')">
@@ -38,7 +39,9 @@
                             <xsl:otherwise><xsl:value-of select="@title"/></xsl:otherwise>
                         </xsl:choose>
                     </xsl:variable>
-                    <li><a href="#{@bookmark}"><xsl:value-of select="$sectitle"/></a></li>
+                    <xsl:if test="//lcg:Template[@templateType='document'][descendant::lcg:ContainedTemplate[@identifier=$id]]">
+                        <li><a href="#{@bookmark}"><xsl:value-of select="$sectitle"/></a></li>
+                    </xsl:if>
                 </xsl:for-each>
             </ul>
             <xsl:for-each select="//lcg:Template[@templateType='section']">
@@ -86,6 +89,26 @@
     <xsl:template match="lcg:Description[parent::lcg:Template[@identifier='urn:hl7ii:2.16.840.1.113883.10.20.22.2.17:2015-08-01']]">
         <p><xsl:value-of select="."/></p>
         <p>Note: in C-CDA birth sex is recorded in the social history section, but C-CDA on FHIR uses the US Core Patient profile for patient data, which itself contains a birth sex extension, so birth sex will be found on the Patient resource, not in this section. </p>
+    </xsl:template>    
+    
+    <xsl:template match="lcg:Description[parent::lcg:Template[@identifier='urn:hl7ii:2.16.840.1.113883.10.20.22.2.9:2014-06-09']]">
+        <p>This section represents the clinician’s conclusions and working assumptions that will guide treatment of the patient. The Assessment and Plan Section may be combined or separated to meet local policy requirements. See also the Assessment Section and Plan of Treatment Section</p>
+    </xsl:template>    
+    
+    <xsl:template match="lcg:Description[parent::lcg:Template[@identifier='urn:hl7ii:2.16.840.1.113883.10.20.22.2.56:2015-08-01']]">
+        <p>The Mental Status Section contains observations and evaluations related to a patient’s psychological and mental competency and deficits including, but not limited to any of the following types of information:</p>
+        <ul>
+            <li>Appearance (e.g., unusual grooming, clothing or body modifications)</li>
+            <li>Attitude (e.g., cooperative, guarded, hostile)</li>
+            <li>Behavior/psychomotor (e.g., abnormal movements, eye contact, tics)</li>
+            <li>Mood and affect (e.g., anxious, angry, euphoric)</li>
+            <li>Speech and Language (e.g., pressured speech, perseveration)</li>
+            <li>Thought process (e.g., logic, coherence)</li>
+            <li>Thought content (e.g., delusions, phobias)</li>
+            <li>Perception (e.g., voices, hallucinations)</li>
+            <li>Cognition (e.g., memory, alertness/consciousness, attention, orientation) – which were included in Cognitive Status Observation in earlier publications of C-CDA.</li>
+            <li>Insight and judgment (e.g., understanding of condition, decision making)</li>
+        </ul>
     </xsl:template>
     
     <xsl:template match="lcg:Description">

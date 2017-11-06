@@ -1,4 +1,4 @@
-<div xmlns="http://www.w3.org/1999/xhtml">
+<div>
    <h2>Section Descriptions</h2>
    <p>The section descriptions below are taken from Consolidated CDA R2.1, and are listed here for quick reference. In some cases minor modifications have been made where CDA specific concepts were mentioned that are not appropriate for FHIR.</p>
    <ul>
@@ -46,9 +46,6 @@
       </li>
       <li>
          <a href="#S_Discharge_Diagnosis_Section_V3">Discharge Diagnosis Section </a>
-      </li>
-      <li>
-         <a href="#S_Discharge_Diet_Section_DEPRECATED">Discharge Diet Section (DEPRECATED)</a>
       </li>
       <li>
          <a href="#S_Discharge_Meds_Sec_entries_Opt">Discharge Medications Section (entries optional) </a>
@@ -112,9 +109,6 @@
       </li>
       <li>
          <a href="#S_Immunizations_Section_entries_require">Immunizations Section (entries required) </a>
-      </li>
-      <li>
-         <a href="#S_Implants_Section_DEPRECATED">Implants Section (DEPRECATED)</a>
       </li>
       <li>
          <a href="#Instructions_Section_V2">Instructions Section </a>
@@ -229,9 +223,6 @@
       </li>
       <li>
          <a href="#S_Subjective_Section">Subjective Section</a>
-      </li>
-      <li>
-         <a href="#S_Surgery_Description_Section_DEPRECATED">Surgery Description Section (DEPRECATED)</a>
       </li>
       <li>
          <a href="#S_Surgical_Drains_Section">Surgical Drains Section</a>
@@ -409,8 +400,7 @@ This section differentiates between "advance directives" and "advance directive 
       <h3>
          <a name="S_Assessment_and_Plan_Section_V2">Assessment and Plan Section </a>
       </h3>
-      <p>This section represents the clinician&#x2019;s conclusions and working assumptions that will guide treatment of the patient. The Assessment and Plan Section may be combined or separated to meet local policy requirements.
-See also the Assessment Section: templateId 2.16.840.1.113883.10.20.22.2.8 and Plan of Treatment Section (V2): templateId 2.16.840.1.113883.10.20.22.2.10:2014-06-09</p>
+      <p>This section represents the clinician&#x2019;s conclusions and working assumptions that will guide treatment of the patient. The Assessment and Plan Section may be combined or separated to meet local policy requirements. See also the Assessment Section and Plan of Treatment Section</p>
       <p>Referenced in:
                              <ul>
             <li>
@@ -1041,17 +1031,19 @@ This section requires either an entry indicating the subject is not known to be 
       <h3>
          <a name="S_Mental_Status_Section_V2">Mental Status Section </a>
       </h3>
-      <p>The Mental Status Section contains observations and evaluations related to a patient&#x2019;s psychological and mental competency and deficits including, but not limited to any of the following types of information:
-&#x2022;  Appearance (e.g., unusual grooming, clothing or body modifications)
-&#x2022;  Attitude (e.g., cooperative, guarded, hostile)
-&#x2022;  Behavior/psychomotor (e.g., abnormal movements, eye contact, tics)
-&#x2022;  Mood and affect (e.g., anxious, angry, euphoric)
-&#x2022;  Speech and Language (e.g., pressured speech, perseveration)
-&#x2022;  Thought process (e.g., logic, coherence)
-&#x2022;  Thought content (e.g., delusions, phobias)
-&#x2022;  Perception (e.g., voices, hallucinations)
-&#x2022;  Cognition (e.g., memory, alertness/consciousness, attention, orientation) &#x2013; which were included in Cognitive Status Observation in earlier publications of C-CDA.
-&#x2022;  Insight and judgment (e.g., understanding of condition, decision making)</p>
+      <p>The Mental Status Section contains observations and evaluations related to a patient&#x2019;s psychological and mental competency and deficits including, but not limited to any of the following types of information:</p>
+      <ul>
+         <li>Appearance (e.g., unusual grooming, clothing or body modifications)</li>
+         <li>Attitude (e.g., cooperative, guarded, hostile)</li>
+         <li>Behavior/psychomotor (e.g., abnormal movements, eye contact, tics)</li>
+         <li>Mood and affect (e.g., anxious, angry, euphoric)</li>
+         <li>Speech and Language (e.g., pressured speech, perseveration)</li>
+         <li>Thought process (e.g., logic, coherence)</li>
+         <li>Thought content (e.g., delusions, phobias)</li>
+         <li>Perception (e.g., voices, hallucinations)</li>
+         <li>Cognition (e.g., memory, alertness/consciousness, attention, orientation) &#x2013; which were included in Cognitive Status Observation in earlier publications of C-CDA.</li>
+         <li>Insight and judgment (e.g., understanding of condition, decision making)</li>
+      </ul>
       <p>Referenced in:
                              <ul>
             <li>
