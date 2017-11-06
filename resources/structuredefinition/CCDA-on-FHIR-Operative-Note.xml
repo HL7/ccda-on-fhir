@@ -22,7 +22,7 @@
     </telecom>
   </contact>
   <description value="The Operative Note is a frequently used type of procedure note with specific requirements set forth by regulatory agencies.&#xA;&#xA;The Operative Note is created immediately following a surgical or other high-risk procedure. It records the pre- and post-surgical diagnosis, pertinent events of the procedure, as well as the condition of the patient following the procedure. The report should be sufficiently detailed to support the diagnoses, justify the treatment, document the course of the procedure, and provide continuity of care. " />
-  <fhirVersion value="3.0.1" />
+  <fhirVersion value="3.1.0"/>
   <kind value="resource" />
   <abstract value="false" />
   <contextType value="resource" />

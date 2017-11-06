@@ -26,7 +26,7 @@
 		</telecom>
 	</contact>
   <description value="The C-CDA on FHIR Authorization Extension contains the C-CDA on FHIR Consent profile which represents information about a patient's consent.&#xA;&#xA;For further information see the C-CDA specification here: http://www.hl7.org/implement/standards/product_brief.cfm?product_id=408."/>
-	<fhirVersion value="3.0.1" />
+	<fhirVersion value="3.1.0"/>
 	<kind value="complex-type"/>
 	<abstract value="false"/>
 	<contextType value="resource"/>
