@@ -6,9 +6,9 @@
         Composition resource and contained sections.</p>
     <p>Any coded data used by sections will be represented using relevant U.S. Core FHIR
         profiles where they exist. FHIR profiles defined by other work groups or unconstrained FHIR resources may also be referenced if no appropriate US Core Profile exist.</p>
-    <p>Note: the value sets used in US Core are not fully aligned with those in C-CDA, though the differences are often minor.
-    Likewise, the approaches for negation used in C-CDA and the Core FHIR specification are quite different. This project will not attempt to address such alignment issues.
-    Rather, implementers moving from C-CDA to C-CDA on FHIR will need to review the US Core profiles and value sets and ensure that their instances FHIR instances are compliant.
+    <p>Implementers should note that the value sets used in US Core and FHIR in general are not fully aligned with those in C-CDA.
+    Likewise, the approaches for negation used in C-CDA and the Core FHIR specification are quite different. Lastly, the level of granularity between C-CDA templates and FHIR resources/profiles is often different, so there will not be a 1:1 mapping between templates and profiles. For example, multiple templates like Health Concern and Problem Observation map to a single US Core Condition, and C-CDA has 3 kids of procedure templates that all map to the single US Core Procedure profile. This project will not attempt to address such alignment issues.
+    Rather, implementers moving from C-CDA to C-CDA on FHIR will need to review the US Core profiles and value sets in  core FHIR resources and ensure that their instances FHIR instances are compliant.
     We hope that ongoing work in HL7 will better align US Core, C-CDA, and the Core FHIR specifications in the future. </p>
 
     <h3>References<br/>
