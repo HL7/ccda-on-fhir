@@ -29,7 +29,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="C-CDA on FHIR Information Recipient Extension" />
+  <description value="The C-CDA on FHIR Information Recipient Extension records the intended recipient of the information at the time the document was created.&#xA;&#xA;For further information see the C-CDA specification here: http://www.hl7.org/implement/standards/product_brief.cfm?product_id=408." />
   <fhirVersion value="3.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />

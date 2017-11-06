@@ -29,7 +29,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="Extension for CDA data enterer (transcriptionist)." />
+  <description value="The C-CDA on FHIR Data Enterer Extension represents the person who transferred the content, written or dictated, into the clinical document. To clarify, an author provides the content, subject to their own interpretation; a dataEnterer adds an author's information to the electronic system.&#xA;&#xA;For further information see the C-CDA specification here: http://www.hl7.org/implement/standards/product_brief.cfm?product_id=408." />
   <fhirVersion value="3.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />

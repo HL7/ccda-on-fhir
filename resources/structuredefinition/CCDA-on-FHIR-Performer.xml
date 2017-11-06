@@ -17,7 +17,7 @@
             <use value="work"/>
         </telecom>
     </contact>
-    <description value="C-CDA on FHIR Performer Extension"/>
+  <description value="The C-CDA on FHIR Performer Extension represents clinicians who actually and principally carry out the clinical services being documented. In a transfer of care this represents the healthcare providers involved in the current or pertinent historical care of the patient. Preferably, the patient’s key healthcare care team members would be listed, particularly their primary physician and any active consulting physicians, therapists, and counselors.&#xA;&#xA;For further information see the C-CDA specification here: http://www.hl7.org/implement/standards/product_brief.cfm?product_id=408."/>
 	<fhirVersion value="3.0.1" />
 	<kind value="complex-type"/>
     <abstract value="false"/>
