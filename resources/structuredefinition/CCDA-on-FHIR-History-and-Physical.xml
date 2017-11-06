@@ -348,6 +348,7 @@
     <element id="Composition.section:physical_exam_section.entry:sliceEntry">
       <path value="Composition.section.entry"/>
       <sliceName value="sliceEntry"/>
+      <short value="This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc. "/>
       <type>
         <code value="Reference"/>
         <targetProfile
@@ -485,6 +486,7 @@
     <element id="Composition.section:social_history_section.entry:sliceEntry">
       <path value="Composition.section.entry"/>
       <sliceName value="sliceEntry"/>
+      <short value="This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc. "/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus"/>
@@ -541,6 +543,7 @@
     <element id="Composition.section:vital_signs_section.entry:sliceEntry">
       <path value="Composition.section.entry" />
       <sliceName value="sliceEntry" />
+      <short value="This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc. "/>
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/vitalsigns" />
@@ -623,6 +626,7 @@
     <element id="Composition.section:assessment_and_plan_section.entry:sliceEntry">
       <path value="Composition.section.entry"/>
       <sliceName value="sliceEntry"/>
+      <short value="This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc. "/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"/>
@@ -829,6 +833,7 @@
     <element id="Composition.section:plan_of_treatment_section.entry:sliceEntry">
       <path value="Composition.section.entry" />
       <sliceName value="sliceEntry" />
+      <short value="This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc. "/>
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal" />

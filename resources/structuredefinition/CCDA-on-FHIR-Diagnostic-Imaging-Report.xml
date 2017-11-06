@@ -169,7 +169,8 @@
     <element id="Composition.section:findings_section.entry:DIR_section_slice_entry">
       <path value="Composition.section.entry"/>
       <sliceName value="findings_section_slice_entry"/>
-	  <type>
+      <short value="This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc. "/>
+      <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
       </type>
@@ -223,6 +224,7 @@
     <element id="Composition.section:dicom_object_catalog_section.entry:sliceEntry">
       <path value="Composition.section.entry"/>
       <sliceName value="sliceEntry"/>
+      <short value="This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc. "/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/ImagingManifest"/>
@@ -273,6 +275,7 @@
     <element id="Composition.section:DIR_section.entry:DIR_section_slice_entry">
       <path value="Composition.section.entry"/>
       <sliceName value="DIR_section_slice_entry"/>
+      <short value="This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc. "/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"/>

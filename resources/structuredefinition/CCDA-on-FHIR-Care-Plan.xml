@@ -138,7 +138,7 @@
     <element id="Composition.section:health_concerns_section.entry:health_concerns_entry_slice">
       <path value="Composition.section.entry" />
       <sliceName value="health_concerns_entry_slice" />
-      <short value="entry" />
+      <short value="This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc. "/>
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance" />
@@ -276,7 +276,7 @@
     <element id="Composition.section:interventions_section.entry:interventions_section_slice">
       <path value="Composition.section.entry" />
       <sliceName value="interventions_section_slice" />
-      <short value="entry" />
+      <short value="This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc. "/>
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/List" />
@@ -331,7 +331,7 @@
     <element id="Composition.section:eval_outcomes_section.entry:eval_outcomes_entry_slice">
       <path value="Composition.section.entry" />
       <sliceName value="eval_outcomes_entry_slice" />
-      <short value="entry" />
+      <short value="This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc. "/>
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation" />

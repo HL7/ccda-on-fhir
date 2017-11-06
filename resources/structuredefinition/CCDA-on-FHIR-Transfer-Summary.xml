@@ -405,6 +405,7 @@
     <element id="Composition.section:reason_for_referral_section.entry:sliceEntry">
       <path value="Composition.section.entry"/>
       <sliceName value="sliceEntry"/>
+      <short value="This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc. "/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/ProcedureRequest"/>
@@ -457,6 +458,7 @@
     <element id="Composition.section:advance_directives_section.entry:sliceEntry">
       <path value="Composition.section.entry"/>
       <sliceName value="sliceEntry"/>
+      <short value="This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc. "/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Consent"/>
@@ -569,6 +571,7 @@
     <element id="Composition.section:social_history_section.entry:sliceEntry">
       <path value="Composition.section.entry"/>
       <sliceName value="sliceEntry"/>
+      <short value="This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc. "/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus"/>
@@ -685,6 +688,7 @@
     <element id="Composition.section:nutrition_section.entry:sliceEntry">
       <path value="Composition.section.entry"/>
       <sliceName value="sliceEntry"/>
+      <short value="This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc. "/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
@@ -741,6 +745,7 @@
     <element id="Composition.section:mental_status_section.entry:sliceEntry">
       <path value="Composition.section.entry"/>
       <sliceName value="sliceEntry"/>
+      <short value="This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc. "/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
@@ -828,6 +833,7 @@
     <element id="Composition.section:functional_status_section.entry:sliceEntry">
       <path value="Composition.section.entry"/>
       <sliceName value="sliceEntry"/>
+      <short value="This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc. "/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
@@ -971,6 +977,7 @@
     <element id="Composition.section:encounters_section.entry:sliceEntry">
       <path value="Composition.section.entry"/>
       <sliceName value="sliceEntry"/>
+      <short value="This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc. "/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Encounter"/>
@@ -1167,6 +1174,7 @@
     <element id="Composition.section:medical_equipment_section.entry:sliceEntry">
       <path value="Composition.section.entry"/>
       <sliceName value="sliceEntry"/>
+      <short value="This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc. "/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device"/>
@@ -1219,6 +1227,7 @@
     <element id="Composition.section:payers_section.entry:sliceEntry">
       <path value="Composition.section.entry"/>
       <sliceName value="sliceEntry"/>
+      <short value="This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc. "/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Coverage"/>
@@ -1274,6 +1283,7 @@
     <element id="Composition.section:plan_of_treatment_section.entry:sliceEntry">
       <path value="Composition.section.entry"/>
       <sliceName value="sliceEntry"/>
+      <short value="This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc. "/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal"/>
@@ -1371,6 +1381,7 @@
     <element id="Composition.section:family_history_section.entry:sliceEntry">
       <path value="Composition.section.entry"/>
       <sliceName value="sliceEntry"/>
+      <short value="This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc. "/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory"/>
@@ -1474,6 +1485,7 @@
     <element id="Composition.section:assessment_and_plan_section.entry:sliceEntry">
       <path value="Composition.section.entry"/>
       <sliceName value="sliceEntry"/>
+      <short value="This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc. "/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"/>
