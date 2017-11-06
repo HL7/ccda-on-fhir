@@ -675,7 +675,7 @@
       <path value="Composition.section" />
       <sliceName value="chief_complaint_and_reason_for_visit_section" />
       <label value="Chief Complaint and Reason for Visit Section" />
-      <short value="Chief Complaint and Reason for Visit Section" />
+      <short value="Chief Complaint and Reason for Visit Section. This section records the patient's chief complaint (the patient’s own description) and/or the reason for the patient's visit (the provider’s description of the reason for visit). Local policy determines whether the information is divided into two sections or recorded in one section serving both purposes."/>
       <max value="1" />
     </element>
     <element id="Composition.section:chief_complaint_and_reason_for_visit_section.title">
