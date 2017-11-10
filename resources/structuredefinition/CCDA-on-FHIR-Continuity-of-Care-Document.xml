@@ -1133,7 +1133,7 @@
       <path value="Composition.section" />
       <sliceName value="health_concerns_section" />
       <short value="Health Concerns Section" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
     </element>
     <element id="Composition.section:health_concerns_section.title">
