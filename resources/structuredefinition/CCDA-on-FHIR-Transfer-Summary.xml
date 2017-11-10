@@ -408,7 +408,7 @@
       <short value="This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc. "/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ProcedureRequest"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ServiceRequest"/>
       </type>
     </element>
     
@@ -1319,7 +1319,7 @@
       </type>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ProcedureRequest"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ServiceRequest"/>
       </type>
       <type>
         <code value="Reference"/>
@@ -1497,6 +1497,58 @@
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Communication"/>
+      </type>
+    </element>
+    
+    <element id="Composition.section:goals_section">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Section" />
+      </extension>
+      <path value="Composition.section" />
+      <sliceName value="goals_section" />
+      <short value="Goals Section" />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Composition.section:goals_section.title">
+      <path value="Composition.section.title" />
+      <short value="title" />
+      <min value="1" />
+    </element>
+    <element id="Composition.section:goals_section.code">
+      <path value="Composition.section.code" />
+      <short value="Goals" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org" />
+          <code value="61146-7" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.section:goals_section.text">
+      <path value="Composition.section.text" />
+      <short value="text" />
+      <min value="1" />
+    </element>
+    <element id="Composition.section:goals_section.entry">
+      <path value="Composition.section.entry" />
+      <slicing>
+        <discriminator>
+          <type value="profile" />
+          <path value="reference" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <short value="entry" />
+    </element>
+    <element id="Composition.section:goals_section.entry:goals_entry_slice">
+      <path value="Composition.section.entry" />
+      <sliceName value="goals_entry_slice" />
+      <short value="entry" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal" />
       </type>
     </element>
   </differential>

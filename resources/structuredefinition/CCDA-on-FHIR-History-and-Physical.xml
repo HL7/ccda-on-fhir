@@ -868,7 +868,7 @@
       </type>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ProcedureRequest" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ServiceRequest" />
       </type>
       <type>
         <code value="Reference" />
