@@ -304,7 +304,7 @@
     </subject>
     <!--  Encounter Resource -->
     <encounter>
-        <reference value="Encounter/encounter"/>
+        <reference value="Encounter/encounter-1"/>
     </encounter>
     <date value="2016-02-28T09:10:14Z"/>
     <!--  Practitioner Resource -->
