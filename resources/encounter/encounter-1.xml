@@ -2,9 +2,9 @@
     <id value="encounter-1"/> 
     <text> 
         <status value="generated"/> 
-        <div xmlns="http://www.w3.org/1999/xhtml">Encounter with patient @example</div> 
+        <div xmlns="http://www.w3.org/1999/xhtml">Encounter with patient Amy V. Shaw</div> 
     </text>  
-    <status value="in-progress"/> 
+    <status value="finished"/> 
     <class> 
         <system value="http://hl7.org/fhir/v3/ActCode"/> 
         <code value="IMP"/> 
