@@ -305,6 +305,7 @@
     <!--  Encounter Resource -->
     <encounter>
         <reference value="Encounter/encounter-1"/>
+        <display value="Encounter with patient Amy V. Shaw"/>
     </encounter>
     <date value="2016-02-28T09:10:14Z"/>
     <!--  Practitioner Resource -->

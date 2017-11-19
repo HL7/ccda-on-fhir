@@ -136,14 +136,15 @@
       <short value="title" />
       <min value="1" />
     </element>
+    
     <element id="Composition.section:findings_section.code">
       <path value="Composition.section.code" />
       <label value="Functional Status"/>
       <short value="Functional Status"/>
       <min value="1" />
-	  <patternCodeableConcept>
+      <patternCodeableConcept>
         <coding>
-          <system value="urn:oid:1.2.840.10008.2.16.4"/>
+          <system value="http://dicom.nema.org/resources/ontology/DCM"/>
           <code value="121070"/>
         </coding>
       </patternCodeableConcept>
@@ -199,7 +200,7 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="urn:oid:1.2.840.10008.2.16.4" />
+          <system value="http://dicom.nema.org/resources/ontology/DCM" />
           <code value="121181" />
         </coding>
       </patternCodeableConcept>
@@ -249,7 +250,7 @@
       <short value="code" />
       <min value="1" />
       <binding>
-        <strength value="preferred" />
+        <strength value="required" />
         <valueSetReference>
           <reference value="http://hl7.org/fhir/us/ccda/ValueSet/2.16.840.1.113883.11.20.9.59" />
           <display value="DIRSectionTypeCodes" />
