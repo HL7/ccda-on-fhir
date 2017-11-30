@@ -342,7 +342,7 @@
         <title value="Findings Section"/>
         <code>
             <coding>
-                <system value="urn:oid:1.2.840.10008.2.16.4"/>
+                <system value="http://dicom.nema.org/resources/ontology/DCM"/>
                 <code value="121070"/>
                 <display value="Findings"/>
             </coding>
@@ -365,7 +365,7 @@
         <title value="DICOM Object Catalog Section"/>
         <code>
             <coding>
-                <system value="urn:oid:1.2.840.10008.2.16.4"/>
+                <system value="http://dicom.nema.org/resources/ontology/DCM"/>
                 <code value="121181"/>
                 <display value="DICOM Object Catalog"/>
             </coding>
@@ -383,7 +383,7 @@
         <title value="Indications for Procedure Section"/>
         <code>
             <coding>
-                <system value="urn:oid:1.2.840.10008.2.16.4"/>
+                <system value="http://dicom.nema.org/resources/ontology/DCM"/>
                 <code value="121109"/>
                 <display value="Indications for Procedure"/>
             </coding>
