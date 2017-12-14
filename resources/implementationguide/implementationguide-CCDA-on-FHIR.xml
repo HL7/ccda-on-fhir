@@ -243,6 +243,7 @@
                 <display value="practitioner-1.xml"/>
             </sourceReference>
         </resource>
+        <!--
         <resource>
             <example value="true"/>
             <sourceReference>
@@ -250,6 +251,7 @@
                 <display value="related-person.xml"/>
             </sourceReference>
         </resource>
+        -->
         <resource>
             <example value="true"/>
             <sourceReference>
