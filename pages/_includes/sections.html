@@ -692,6 +692,7 @@ DICOM Object Catalog sections are not intended for viewing and contain empty sec
          <a name="S_Goals_Section">Goals Section</a>
       </h3>
       <p>This template represents patient Goals. A goal is a defined outcome or condition to be achieved in the process of patient care. Goals include patient-defined over-arching goals (e.g., alleviation of health concerns, desired/intended positive outcomes from interventions, longevity, function, symptom management, comfort) and health concern-specific or intervention-specific goals to achieve desired outcomes. </p>
+      <p>To satisfy the 2015 Edition Certification Criteria, Transition of Care documents should include the Assessment Section (2.7) and the Plan of Treatment Section31 (2.48), or the Assessment and Plan Section (2.6). They also should include the Goals Section (2.22). Content should be distinguished as described below when the Goals Section, and the Plan of Treatment Section or Assessment and Plan of Treatment Section, are both included within the same Transition of Care document. This guidance does not apply to the Goals Section within a Care Plan document. There is no additional guidance for the Assessment Section beyond what is already in Consolidated CDA.</p>
       <p>Referenced in:
                              <ul>
             <li>
@@ -704,10 +705,25 @@ DICOM Object Catalog sections are not intended for viewing and contain empty sec
       <h3>
          <a name="S_Health_Concerns_Section_V2">Health Concerns Section </a>
       </h3>
-      <p>This section contains data describing an interest or worry about a health state or process that could possibly require attention, intervention, or management. A Health Concern is a health related matter that is of interest, importance or worry to someone, who may be the patient, patient's family or patient's health care provider. Health concerns are derived from a variety of sources within an EHR (such as Problem List, Family History, Social History, Social Worker Note, etc.). Health concerns can be medical, surgical, nursing, allied health or patient-reported concerns.
-
-Problem Concerns are a subset of Health Concerns that have risen to the level of importance that they typically would belong on a classic &#x201c;Problem List&#x201d;, such as &#x201c;Diabetes Mellitus&#x201d; or &#x201c;Family History of Melanoma&#x201d; or &#x201c;Tobacco abuse&#x201d;. These are of broad interest to multiple members of the care team. Examples of other Health Concerns that might not typically be considered a Problem Concern include &#x201c;Risk of Hyperkalemia&#x201d; for a patient taking an ACE-inhibitor medication, or &#x201c;Transportation difficulties&#x201d; for someone who doesn't drive and has trouble getting to appointments, or &#x201c;Under-insured&#x201d; for someone who doesn't have sufficient insurance to properly cover their medical needs such as medications. These are typically most important to just a limited number of care team members.</p>
-      <p>Referenced in:
+      <p>This section contains data describing an interest or worry about a health state or process that could possibly require attention, 
+      intervention, or management. A Health Concern is a health related matter that is of interest, importance or worry to someone, who may 
+      be the patient, patient's family or patient's health care provider. Health concerns are derived from a variety of sources within an EHR 
+      (such as Problem List, Family History, Social History, Social Worker Note, etc.). Health concerns can be medical, surgical, nursing, 
+      allied health or patient-reported concerns. 
+      Problem Concerns are a subset of Health Concerns that have risen to the level of importance that they typically would belong on a 
+      classic &#x201c;Problem List&#x201d;, such as &#x201c;Diabetes Mellitus&#x201d; or &#x201c;Family History of Melanoma&#x201d; 
+      or &#x201c;Tobacco abuse&#x201d;. These are of broad interest to multiple members of the care team. 
+      Examples of other Health Concerns that might not typically be considered a Problem Concern include &#x201c;Risk of Hyperkalemia&#x201d; 
+      for a patient taking an ACE-inhibitor medication, or &#x201c;Transportation difficulties&#x201d; for someone who doesn't drive and 
+      has trouble getting to appointments, or &#x201c;Under-insured&#x201d; for someone who doesn't have sufficient insurance to properly 
+      cover their medical needs such as medications. These are typically most important to just a limited number of care team members.</p>
+      <p>The Health Concerns Section contains, when available, concerns as expressed by the patient and/or the patient's agent(s), and/or by the patient or other care team members. 
+When the Problem Section and Health Concerns Section both appear in a single document, then the Health Concerns section is titled "Additional Health Concerns" to distinguish it from the Problem List (the author's concerns). If it were simply titled Health Concerns, some would think that it contains all
+concerns, including the Problem List, which could cause confusion. Also, the Health Concerns Section appears after the Problem Section in the documents. 
+The Health Concerns Section does not duplicate the entries from the Problem List. However, it may include some of the same concerns in the Problem List. 
+It may be formatted as a "list" but may also be free form narrative not in any particular format. Whereas the Problems Section must contain both structured entries and narrative, the 2015 Edition Certification Criteria for Health Concerns section is only narrative. C-CDA conformance requires structured entries which may be populated with relevant data or the appropriate nullFlavor. 
+Patient concerns may be specific to an encounter, or overarching concerns not specific to an encounter. Patient concerns are not limited to medical problems. For example, they can include things like barriers (lack of transportation, lack of finances, difficulty communicating with provider) or anything else relevant to the document/care. 
+Also, the Additional Health Concerns section may contain concerns from members of the care team other than the author/attester of the document. The author/owner of each concern or group of concerns within the Additional Health Concerns section should be clearly labeled (e.g. Patient, Nurse, Therapist).</p><p>Referenced in:
                              <ul>
             <li>
                <a href="StructureDefinition-CCDA-on-FHIR-Care-Plan.html">Care Plan </a>
