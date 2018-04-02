@@ -10,6 +10,9 @@
     "qa": "qa",
     "specification": "http://build.fhir.org/"
   },
+  "version" : "3.0.1",
+  "license" : "cc0-1.0",
+  "npm-name" : "us-ccda",
   "dependencyList": [{
     "name": "USCore",
     "location": "http://hl7.org/fhir/us/core/" 
