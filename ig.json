@@ -8,9 +8,10 @@
     "temp": "temp",
     "output": "output",
     "qa": "qa",
-    "specification": "http://build.fhir.org/"
+    "specification": "http:/hl7.org/fhir"
   },
   "version" : "3.0.1",
+  "fixed-business-version": "1.0.0",
   "license" : "cc0-1.0",
   "npm-name" : "us-ccda",
   "dependencyList": [{
