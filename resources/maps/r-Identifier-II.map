@@ -1,0 +1,31 @@
+map "http://hl7.org/fhir/cda/StructureDeMap/Identifier-II" = Identifier-II
+
+uses "http://hl7.org/fhir/StructureDefinition/Identifier" as source
+uses "http://hl7.org/fhir/cda/StructureDefinition/II" as target
+
+// this mapping is invoked implicity when a FHIR Identifier is mapped to a CDA II
+group for types Identifier
+  input "source" : Identifier as source 
+  input "target" : II as target
+
+  nullFlavor: for source.extension as ext where ext.extension = 'http://hl7.org/fhir/StructureDefinition/iso21090-nullFlavor' 
+    make target.nullFlavor = ext.value
+
+  // this pair of mappings will not map FHIR identifiers where the system is urn:ietf:rfc:3986, and the value is 
+  // not an OID - there's no II capacity for that. Identifiers like this won't come from 
+  root1: for src.system as s where s != 'urn:ietf:rfc:3986' or src.value.startsWith('urn:oid:').not
+    make tgt.root = translate(r, "http://hl7.org/fhir/ConceptMap/special-uri2oid", "oid"),
+      tgt.extension = src.value
+
+  root1: for src.system as s where s = 'urn:ietf:rfc:3986' and src.value.startsWith('urn:oid:')
+    make tgt.root = evaluate(src.value.substring(8)) // drop the "urn:oid:" bit
+      
+  assigningAuthorityName: for src.sssigner as a then {
+    displya: for src.display make tgt.assigningAuthorityName
+  }
+  
+  nullFlavor: for source.extension as ext where ext.extension = 'http://hl7.org/fhir/cdaStructureDefinition/extension-displayable' 
+    make target.displayable = ext.value
+  
+endgroup
+

@@ -1,0 +1,37 @@
+map "http://hl7.org/fhir/cda/StructureDeMap/ClinicalDocument-Bundle" = ClinicalDocument-Bundle
+
+uses "http://hl7.org/fhir/cda/StructureDefinition/ClinicalDocument" as source
+uses "http://hl7.org/fhir/StructureDefinition/Bundle" as target
+
+// getting going: map to a bundle of type document
+group ClinicalDocoument
+  input "source" : ClinicalDocument as source 
+  // no target: this will produce a Bundle
+  start: for source make create("Bundle") as target, target.type = "document" then ClinicalDocumentContent(source, target)
+endgroup
+
+// mapping content from ClinicalDocument to Bundle
+group ClinicalDocoumentBundle
+  input "source" : ClinicalDocument as source 
+  input "target" : Bundle as target 
+
+  // some of the things from ClinicalDocument go into the bundle itself - id and effectiveTime
+  id: for source.id make target.identifier   // that will use the II -> Identifier mapping statement
+  timestamp: for source.effectiveTime make target.timestamp 
+  // todo here: some CDA documents have signatures... can they be carried over? does that make sense?
+  
+  entry: for source make target.entry as e {first}, // this entry in the bundle is the first one, the rest of the entries, order doesn't matter
+    e.resource = create("Composition") as cmp then ClinicalDocumentComposition(source, cmp, target)
+endgroup
+
+// mapping from ClinicalDocument to Composition
+group ClinicalDocoumentBundle
+  input "source" : ClinicalDocument as source 
+  input "target" : Composition as target 
+  input "bundle" : Bundle as target  // we'll need this as we map the Composition details to create more entries
+  
+  // there's no id on this Composition (all the other resources will have to have ids so they can be referenced
+  setId: for source.setId make target.identifer
+  status: for source make target.status = "final" // C-CDA doesn't have a status, though there's some extensions out there...
+  // etc  
+endgroup
