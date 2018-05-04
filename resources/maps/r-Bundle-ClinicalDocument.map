@@ -5,7 +5,7 @@ uses "http://hl7.org/fhir/cda/StructureDefinition/ClinicalDocument" as target
 
 // getting going: check bundle of type document, and make a ClinicalDocument
 group Bundle
-  input "source" : Bundle as source 
+  input source : Bundle as source 
   
   start: for source where source.type = 'bundle' make create("ClinicalDocument") as target
     then ClinicalDocumentContent(source, target)
@@ -13,8 +13,8 @@ endgroup
 
 // mapping content from Bundle to ClinicalDocument
 group ClinicalDocoumentBundle
-  input "source" : Bundle as source 
-  input "target" : ClinicalDocument as target 
+  input source : Bundle as source 
+  input target : ClinicalDocument as target 
 
   // some of the things from ClinicalDocument go into the bundle itself - id and effectiveTime
   id: for source.identifier make target.id   // that will use the Identifier -> II mapping statement
@@ -28,9 +28,9 @@ endgroup
 
 // mapping from ClinicalDocument to Composition
 group ClinicalDocoumentBundle
-  input "source" : Composition as source 
-  input "target" : ClinicalDocument as target 
-  input "bundle" : Bundle as source  // we'll need this as we map the Composition details to create more entries
+  input source : Composition as source 
+  input target : ClinicalDocument as target 
+  input bundle : Bundle as source  // we'll need this as we map the Composition details to create more entries
   
   // there's no id on this Composition (all the other resources will have to have ids so they can be referenced
   setId: for source.identifer make target.setId

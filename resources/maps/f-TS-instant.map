@@ -5,15 +5,15 @@ uses "http://hl7.org/fhir/StructureDefinition/instant" as target
 
 // this mapping is invoked implicity when a CDA TS is mapped to a FHIR instant. there's others for dateTime and date
 group for types TSInstant 
-  input "source" : TS as source 
-  input "target" : instant as target 
+  input source : TS as source 
+  input target : instant as target 
 
   // nullFlavor, we use the ISO nullFlavor extension
   nullFlavor: for source.nullFlavor make target.extension = ext, 
       ext.url = "http://hl7.org/fhir/StructureDefinition/iso21090-nullFlavor",
       ext.value = nullFlavor.value // that's already a code
       
-  value: for source.value as s make target.value
+  value: for source.value as v make target.value = cast(v, "string")
   
 endgroup
 

@@ -5,12 +5,12 @@ uses "http://hl7.org/fhir/cda/StructureDefinition/TS" as target
 
 // this mapping is invoked implicity when a FHIR instant is mapped to a CDA TS. 
 group for types Instant
-  input "source" : instant as source 
-  input "target" : TS as target 
+  input source : instant as source 
+  input target : TS as target 
 
   nullFlavor: for source.extension as ext where ext.extension = 'http://hl7.org/fhir/StructureDefinition/iso21090-nullFlavor' 
     make target.nullFlavor = ext.value
     
-  value: for source.value as s make target.value
+  value: for source.value make target.value
 endgroup
 

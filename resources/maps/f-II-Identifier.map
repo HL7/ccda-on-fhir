@@ -5,18 +5,18 @@ uses "http://hl7.org/fhir/StructureDefinition/Identifier" as target
 
 // this mapping is invoked implicity when a CDA II is mapped to a FHIR Identifier
 group for types II
-  input "source" : II as source 
-  input "target" : Identifier as target 
+  input source : II as source 
+  input target : Identifier as target 
 
   // nullFlavor, we use the ISO nullFlavor extension
   nullFlavor: for source.nullFlavor make target.extension = ext, 
       ext.url = "http://hl7.org/fhir/StructureDefinition/iso21090-nullFlavor",
       ext.value = nullFlavor.value // that's already a code
       
-  root1: for src.root as r where extension.exists() make tgt.system = translate(r, "http://hl7.org/fhir/ConceptMap/special-oid2uri", "uri")  
-  root2: for src.root as r where extension.empty() make tgt.system = "urn:ietf:rfc:3986", tgt.value = append("urn:oid:", r)
-  extension: for src.extension as e make tgt.value = e
-  assigningAuthorityName: for src.assigningAuthorityName as s make tgt.assigner as a, a.display = s
+  root1: for source.root as r where extension.exists() make target.system = translate(r, "http://hl7.org/fhir/ConceptMap/special-oid2uri", "uri")  
+  root2: for source.root as r where extension.empty() make target.system = "urn:ietf:rfc:3986", target.value = append("urn:oid:", r)
+  extension: for source.extension as e make target.value = e
+  assigningAuthorityName: for source.assigningAuthorityName as s make target.assigner as a, a.display = s
   
   // there's no equivalent for displayable in FHIR - and it probably will never matter, but if it does, it might map to Identifier.use. 
   // otherwise, it's just going to be an extension

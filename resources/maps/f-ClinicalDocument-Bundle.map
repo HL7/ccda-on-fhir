@@ -3,17 +3,20 @@ map "http://hl7.org/fhir/cda/StructureDeMap/ClinicalDocument-Bundle" = "Clinical
 uses "http://hl7.org/fhir/cda/StructureDefinition/ClinicalDocument" as source
 uses "http://hl7.org/fhir/StructureDefinition/Bundle" as target
 
+imports "http://hl7.org/fhir/cda/StructureDeMap/II-Identifier"
+imports "http://hl7.org/fhir/cda/StructureDeMap/TS-instant"
+
 // getting going: map to a bundle of type document
 group ClinicalDocument
-  input "source" : ClinicalDocument as source 
+  input source : ClinicalDocument as source 
   // no target: this will produce a Bundle
-  start: for source make create("Bundle") as target, target.type = "document" then ClinicalDocumentContent(source, target)
+  start: for source make create("Bundle") as target, target.type = "document" then ClinicalDocumentBundle(source, target)
 endgroup
 
 // mapping content from ClinicalDocument to Bundle
 group ClinicalDocumentBundle
-  input "source" : ClinicalDocument as source 
-  input "target" : Bundle as target 
+  input source : ClinicalDocument as source 
+  input target : Bundle as target 
 
   // some of the things from ClinicalDocument go into the bundle itself - id and effectiveTime
   id: for source.id make target.identifier   // that will use the II -> Identifier mapping statement
@@ -25,13 +28,13 @@ group ClinicalDocumentBundle
 endgroup
 
 // mapping from ClinicalDocument to Composition
-group ClinicalDocumentBundle
-  input "source" : ClinicalDocument as source 
-  input "target" : Composition as target 
-  input "bundle" : Bundle as target  // we'll need this as we map the Composition details to create more entries
+group ClinicalDocumentComposition
+  input source : ClinicalDocument as source 
+  input target : Composition as target 
+  input bundle : Bundle as target  // we'll need this as we map the Composition details to create more entries
   
   // there's no id on this Composition (all the other resources will have to have ids so they can be referenced
-  setId: for source.setId make target.identifer
+  setId: for source.setId make target.identifier
   status: for source make target.status = "final" // C-CDA doesn't have a status, though there's some extensions out there...
   // etc  
 endgroup
