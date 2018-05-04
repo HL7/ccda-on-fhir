@@ -1,10 +1,10 @@
-map "http://hl7.org/fhir/cda/StructureDeMap/TS-instant" = TS-instant
+map "http://hl7.org/fhir/cda/StructureDeMap/TS-instant" = "TS to instant"
 
 uses "http://hl7.org/fhir/cda/StructureDefinition/TS" as source
 uses "http://hl7.org/fhir/StructureDefinition/instant" as target
 
 // this mapping is invoked implicity when a CDA TS is mapped to a FHIR instant. there's others for dateTime and date
-group for types TS-Instant 
+group for types TSInstant 
   input "source" : TS as source 
   input "target" : instant as target 
 

@@ -1,4 +1,4 @@
-map "http://hl7.org/fhir/cda/StructureDeMap/instant-TS" = instant-TS
+map "http://hl7.org/fhir/cda/StructureDeMap/instant-TS" = "instant to TS"
 
 uses "http://hl7.org/fhir/StructureDefinition/instant" as source
 uses "http://hl7.org/fhir/cda/StructureDefinition/TS" as target

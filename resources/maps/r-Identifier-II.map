@@ -1,4 +1,4 @@
-map "http://hl7.org/fhir/cda/StructureDeMap/Identifier-II" = Identifier-II
+map "http://hl7.org/fhir/cda/StructureDeMap/Identifier-II" = "Identifier to II"
 
 uses "http://hl7.org/fhir/StructureDefinition/Identifier" as source
 uses "http://hl7.org/fhir/cda/StructureDefinition/II" as target
@@ -18,10 +18,10 @@ group for types Identifier
       tgt.extension = src.value
 
   root1: for src.system as s where s = 'urn:ietf:rfc:3986' and src.value.startsWith('urn:oid:')
-    make tgt.root = evaluate(src.value.substring(8)) // drop the "urn:oid:" bit
+    make tgt.root = (src.value.substring(8)) // drop the "urn:oid:" bit
       
   assigningAuthorityName: for src.sssigner as a then {
-    displya: for src.display make tgt.assigningAuthorityName
+    display: for src.display make tgt.assigningAuthorityName
   }
   
   nullFlavor: for source.extension as ext where ext.extension = 'http://hl7.org/fhir/cdaStructureDefinition/extension-displayable' 

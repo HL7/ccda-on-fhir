@@ -1,17 +1,17 @@
-map "http://hl7.org/fhir/cda/StructureDeMap/ClinicalDocument-Bundle" = ClinicalDocument-Bundle
+map "http://hl7.org/fhir/cda/StructureDeMap/ClinicalDocument-Bundle" = "ClinicalDocument to Bundle"
 
 uses "http://hl7.org/fhir/cda/StructureDefinition/ClinicalDocument" as source
 uses "http://hl7.org/fhir/StructureDefinition/Bundle" as target
 
 // getting going: map to a bundle of type document
-group ClinicalDocoument
+group ClinicalDocument
   input "source" : ClinicalDocument as source 
   // no target: this will produce a Bundle
   start: for source make create("Bundle") as target, target.type = "document" then ClinicalDocumentContent(source, target)
 endgroup
 
 // mapping content from ClinicalDocument to Bundle
-group ClinicalDocoumentBundle
+group ClinicalDocumentBundle
   input "source" : ClinicalDocument as source 
   input "target" : Bundle as target 
 
@@ -20,12 +20,12 @@ group ClinicalDocoumentBundle
   timestamp: for source.effectiveTime make target.timestamp 
   // todo here: some CDA documents have signatures... can they be carried over? does that make sense?
   
-  entry: for source make target.entry as e {first}, // this entry in the bundle is the first one, the rest of the entries, order doesn't matter
-    e.resource = create("Composition") as cmp then ClinicalDocumentComposition(source, cmp, target)
+  // this entry in the bundle is the first one, the rest of the entries, order doesn't matter
+  entry: for source make target.entry as e first, e.resource = create("Composition") as cmp then ClinicalDocumentComposition(source, cmp, target)
 endgroup
 
 // mapping from ClinicalDocument to Composition
-group ClinicalDocoumentBundle
+group ClinicalDocumentBundle
   input "source" : ClinicalDocument as source 
   input "target" : Composition as target 
   input "bundle" : Bundle as target  // we'll need this as we map the Composition details to create more entries

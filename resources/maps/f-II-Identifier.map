@@ -1,4 +1,4 @@
-map "http://hl7.org/fhir/cda/StructureDeMap/II-Identifier" = II-Identifier
+map "http://hl7.org/fhir/cda/StructureDeMap/II-Identifier" = "II to Identifier"
 
 uses "http://hl7.org/fhir/cda/StructureDefinition/II" as source
 uses "http://hl7.org/fhir/StructureDefinition/Identifier" as target

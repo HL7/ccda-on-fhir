@@ -1,4 +1,4 @@
-map "http://hl7.org/fhir/cda/StructureDeMap/ClinicalDocument" = ClinicalDocument-Bundle
+map "http://hl7.org/fhir/cda/StructureDeMap/Bundle-ClinicalDocument" = "Bundle to ClinicalDocument"
 
 uses "http://hl7.org/fhir/StructureDefinition/Bundle" as source
 uses "http://hl7.org/fhir/cda/StructureDefinition/ClinicalDocument" as target
@@ -20,7 +20,7 @@ group ClinicalDocoumentBundle
   id: for source.identifier make target.id   // that will use the Identifier -> II mapping statement
   timestamp: for source.timestamp make target.effectiveTime
     
-  entry: for source.entry {first} as s then {
+  entry: for source.entry first as s then {
    resource: for s.resource as s2 then ClinicalDocumentComposition(s2, target, source)
   }
   
