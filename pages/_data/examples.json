@@ -1,89 +1,17 @@
 {
-  "CCDA-on-FHIR-Continuity-of-Care-Document": {
+  "hai-report-questionnaire": {
     "examples": [
       {
-        "type": "Composition",
-        "id": "CCDA-on-FHIR-Continuity-of-Care-Document-Example"
+        "type": "Questionnaire",
+        "id": "hai-questionnaire-los-event"
       }
     ]
   },
-  "CCDA-on-FHIR-Discharge-Summary": {
+  "hai-report-questionnaire-response": {
     "examples": [
       {
-        "type": "Composition",
-        "id": "CCDA-on-FHIR-Discharge-Summary-Example"
-      }
-    ]
-  },
-  "CCDA-on-FHIR-Consultation-Note": {
-    "examples": [
-      {
-        "type": "Composition",
-        "id": "CCDA-on-FHIR-Consultation-Note-Example"
-      }
-    ]
-  },
-  "CCDA-on-FHIR-Referral-Note": {
-    "examples": [
-      {
-        "type": "Composition",
-        "id": "CCDA-on-FHIR-Referral-Note-Example"
-      }
-    ]
-  },
-  "CCDA-on-FHIR-Care-Plan": {
-    "examples": [
-      {
-        "type": "Composition",
-        "id": "CCDA-on-FHIR-Care-Plan-Example"
-      }
-    ]
-  },
-  "CCDA-on-FHIR-Procedure-Note": {
-    "examples": [
-      {
-        "type": "Composition",
-        "id": "CCDA-on-FHIR-Procedure-Note-Example"
-      }
-    ]
-  },
-  "CCDA-on-FHIR-History-and-Physical": {
-    "examples": [
-      {
-        "type": "Composition",
-        "id": "CCDA-on-FHIR-History-and-Physical-Example"
-      }
-    ]
-  },
-  "CCDA-on-FHIR-Diagnostic-Imaging-Report": {
-    "examples": [
-      {
-        "type": "Composition",
-        "id": "CCDA-on-FHIR-Diagnostic-Imaging-Report-Example"
-      }
-    ]
-  },
-  "CCDA-on-FHIR-Operative-Note": {
-    "examples": [
-      {
-        "type": "Composition",
-        "id": "CCDA-on-FHIR-Operative-Note-Example"
-      }
-    ]
-  },
-  "CCDA-on-FHIR-Progress-Note": {
-    "examples": [
-      {
-        "type": "Composition",
-        "id": "CCDA-on-FHIR-Progress-Note-Example"
-      }
-    ]
-  },
-  "CCDA-on-FHIR-Transfer-Summary": {
-    "examples": [
-      {
-        "type": "Composition",
-        "id": "CCDA-on-FHIR-Transfer-Summary-Example"
+        "type": "QuestionnaireResponse",
+        "id": "hai-questionnaireResponse-los-event"
       }
     ]
   }

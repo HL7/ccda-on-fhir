@@ -1,0 +1,88 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "CCDA-on-FHIR-Consent",
+	"meta": {
+		"versionId": "1",
+		"lastUpdated": "2018-10-04T19:42:52.061-04:00"
+	},
+	"url": "http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Consent",
+	"name": "C-CDA on FHIR Consent",
+	"status": "draft",
+	"publisher": "Lantana Consulting Group",
+	"contact": [
+		{
+			"name": "Sarah Gaunt",
+			"telecom": [
+				{
+					"system": "phone",
+					"value": "+6 141-029-2506",
+					"use": "work"
+				},
+				{
+					"system": "email",
+					"value": "sarah.gaunt@lantanagroup.com",
+					"use": "work"
+				}
+			]
+		},
+		{
+			"name": "Rick Geimer",
+			"telecom": [
+				{
+					"system": "email",
+					"value": "rick.geimer@lantanagroup.com",
+					"use": "work"
+				}
+			]
+		}
+	],
+	"description": "This profile represents information about the patients consent.\n\nThe type of consent is conveyed in type. Consents in the header have been finalized and should be on file. This specification does not address how 'Privacy Consent' is represented, but does not preclude the inclusion of Privacy Consent.\n\nThe authorization consent is used for referring to consents that are documented elsewhere in the EHR or medical record for a health condition and/or treatment that is described in the document. ",
+	"fhirVersion": "3.1.0",
+	"kind": "resource",
+	"abstract": false,
+	"contextType": "resource",
+	"context": [
+		"Contract"
+	],
+	"type": "Contract",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Contract",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Contract",
+				"path": "Contract"
+			},
+			{
+				"id": "Contract.identifier",
+				"path": "Contract.identifier",
+				"short": "identifier",
+				"definition": "MAY contain zero or one [0..1] identifier (CONF:2219-2007)."
+			},
+			{
+				"id": "Contract.type",
+				"path": "Contract.type",
+				"label": "Consent",
+				"short": "Consent",
+				"definition": "SHALL contain exactly one [1..1] type=\"CONS\" (CodeSystem: HL7ActClass urn:oid:2.16.840.1.113883.5.6) (CONF:2219-2008).",
+				"min": 1,
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "urn:oid:2.16.840.1.113883.5.6",
+							"code": "CONS"
+						}
+					]
+				}
+			},
+			{
+				"id": "Contract.subType",
+				"path": "Contract.subType",
+				"label": "Type of consent",
+				"short": "Type of consent",
+				"definition": "MAY contain zero or one [0..1] subType (CONF:2219-2009).",
+				"max": "1"
+			}
+		]
+	}
+}

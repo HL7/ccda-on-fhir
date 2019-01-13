@@ -1,0 +1,539 @@
+{
+	"resourceType": "Composition",
+	"id": "CCDA-on-FHIR-Consultation-Note-Example",
+	"meta": {
+		"versionId": "1",
+		"lastUpdated": "2018-10-04T19:42:52.061-04:00",
+		"profile": [
+			"http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Consultation-Note"
+		]
+	},
+	"language": "en-US",
+	"text": {
+		"status": "generated",
+		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table style=\"border: 1pt inset #00008b; line-height: 10pt; width: 100%;\" class=\"header_table\"><tbody><tr><td style=\"width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;\" class=\"td_header_role_name\"><span class=\"td_label\">Document Id</span></td><td class=\"td_header_role_value\">12345</td></tr><tr><td style=\"width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;\" class=\"td_header_role_name\"><span class=\"td_label\">Document Created:</span></td><td class=\"td_header_role_value\">June 15, 2016, 16:14, PST </td></tr></tbody></table><table style=\"border: 1pt inset #00008b; line-height: 10pt; width: 100%;\" class=\"header_table\"><tbody><tr><td style=\"width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;\" class=\"td_header_role_name\"><span class=\"td_label\">Care Provision</span></td><td class=\"td_header_role_value\">Consultation for Amy Shaw</td></tr><tr><td style=\"width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;\" class=\"td_header_role_name\"><span class=\"td_label\">Performer </span></td><td class=\"td_header_role_value\">Ronald Boone, MD</td></tr></tbody></table><table style=\"border: 1pt inset #00008b; line-height: 10pt; width: 100%;\" class=\"header_table\"><tbody><tr><td style=\"width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;\" class=\"td_header_role_name\"><span class=\"td_label\">Author</span></td><td class=\"td_header_role_value\">Ronald Boone, MD</td></tr><tr><td style=\"width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;\" class=\"td_header_role_name\"><span class=\"td_label\">Contact info</span></td><td class=\"td_header_role_value\">1003 Healthcare Drive<br/>Amherst MA 01002,&nbsp;US<br/>Tel:  +1(555)555-1003<br/></td></tr></tbody></table><table style=\"border: 1pt inset #00008b; line-height: 10pt; width: 100%;\" class=\"header_table\"><tbody><tr><td style=\"width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;\" class=\"td_header_role_name\"><span class=\"td_label\">Encounter Id</span></td><td class=\"td_header_role_value\">9937012 2.16.840.1.113883.19</td></tr><tr><td style=\"width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;\" class=\"td_header_role_name\"><span class=\"td_label\">Encounter Type</span></td><td class=\"td_header_role_value\">Consultation</td></tr><tr><td style=\"width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;\" class=\"td_header_role_name\"><span class=\"td_label\">Encounter Date</span></td><td class=\"td_header_role_value\">&nbsp;From&nbsp;June 15, 2016, 16:20 to June 15, 2016, 18:20  </td></tr><tr><td style=\"width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;\" class=\"td_header_role_name\"><span class=\"td_label\">Encounter Location</span></td><td class=\"td_header_role_value\">Ambulatory Care at Community Health and Hospitals</td></tr><tr><td style=\"width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;\" class=\"td_header_role_name\"><span class=\"td_label\">Responsible party</span></td><td class=\"td_header_role_value\">Ronald Boone, MD</td></tr><tr><td style=\"width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;\" class=\"td_header_role_name\"><span class=\"td_label\">Contact info</span></td><td class=\"td_header_role_value\">1003 Healthcare Drive<br/>Amherst MA 01002,&nbsp;US<br/>Tel:  +1(555)555-1003<br/></td></tr></tbody></table><table style=\"border: 1pt inset #00008b; line-height: 10pt; width: 100%;\" class=\"header_table\"><tbody><tr><td style=\"width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;\" class=\"td_header_role_name\"><span class=\"td_label\">Assigned entity</span></td><td class=\"td_header_role_value\">Community Health and Hospitals<br/></td></tr><tr><td style=\"width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;\" class=\"td_header_role_name\"><span class=\"td_label\">Emergency contact</span></td><td class=\"td_header_role_value\">Michael Shaw<br/><br/></td></tr><tr><td style=\"width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;\" class=\"td_header_role_name\"><span class=\"td_label\">Contact info</span></td><td class=\"td_header_role_value\">49 Meadow St<br/>Amherst MA 01003,&nbsp;US<br/>Tel:  (555)555-1212<br/></td></tr><tr><td style=\"width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;\" class=\"td_header_role_name\"><span class=\"td_label\">Care giver</span></td><td class=\"td_header_role_value\">Mrs. Lillian White<br/></td></tr><tr><td style=\"width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;\" class=\"td_header_role_name\"><span class=\"td_label\">Contact info</span></td><td class=\"td_header_role_value\">49 Meadow St<br/>Amherst MA 01003,&nbsp;US<br/>Tel:  (555)555-1215<br/></td></tr></tbody></table><table style=\"border: 1pt inset #00008b; line-height: 10pt; width: 100%;\" class=\"header_table\"><tbody><tr><td style=\"width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;\" class=\"td_header_role_name\"><span class=\"td_label\">Entered by</span></td><td class=\"td_header_role_value\">Sally Jones</td></tr><tr><td style=\"width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;\" class=\"td_header_role_name\"><span class=\"td_label\">Contact info</span></td><td class=\"td_header_role_value\">1003 Healthcare Drive<br/>Amherst MA 01002,&nbsp;US<br/>Tel:  +1(555)555-1003<br/></td></tr></tbody></table><table style=\"border: 1pt inset #00008b; line-height: 10pt; width: 100%;\" class=\"header_table\"><tbody><tr><td style=\"width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;\" class=\"td_header_role_name\"><span class=\"td_label\">Signed </span></td><td class=\"td_header_role_value\">Ronald Boone at June 15, 2016 </td></tr><tr><td style=\"width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;\" class=\"td_header_role_name\"><span class=\"td_label\">Contact info</span></td><td class=\"td_header_role_value\">1003 Healthcare Drive<br/>Amherst MA 01002,&nbsp;US<br/>Tel:  +1(555)555-1003<br/></td></tr></tbody></table><table style=\"border: 1pt inset #00008b; line-height: 10pt; width: 100%;\" class=\"header_table\"><tbody><tr><td style=\"width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;\" class=\"td_header_role_name\"><span class=\"td_label\">Informant</span></td><td class=\"td_header_role_value\">Henry Vincent, CPh</td></tr><tr><td style=\"width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;\" class=\"td_header_role_name\"><span class=\"td_label\">Contact info</span></td><td class=\"td_header_role_value\">1007 Pharmacy Drive<br/>Portland,&nbsp;OR&nbsp;99123,&nbsp;US<br/>Tel:  +1(555)555-1215<br/></td></tr></tbody></table><table style=\"border: 1pt inset #00008b; line-height: 10pt; width: 100%;\" class=\"header_table\"><tbody><tr><td style=\"width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;\" class=\"td_header_role_name\"><span class=\"td_label\">Information recipient:</span></td><td class=\"td_header_role_value\">Primary Physician, MD</td></tr><tr><td style=\"width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;\" class=\"td_header_role_name\"><span class=\"td_label\">Contact info</span></td><td class=\"td_header_role_value\">1005 St. Clair Avenue<br/>Amherst MA 01002,&nbsp;US<br/>Tel:  +1(555)555-1666<br/></td></tr></tbody></table><table style=\"border: 1pt inset #00008b; line-height: 10pt; width: 100%;\" class=\"header_table\"><tbody><tr><td style=\"width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;\" class=\"td_header_role_name\"><span class=\"td_label\">Legal authenticator</span></td><td class=\"td_header_role_value\">Ronald Boone, MD signed at June 15, 2016 </td></tr><tr><td style=\"width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;\" class=\"td_header_role_name\"><span class=\"td_label\">Contact info</span></td><td class=\"td_header_role_value\">1003 Healthcare Drive<br/>Amherst MA 01002,&nbsp;US<br/>Tel:  +1(555)555-1003<br/></td></tr></tbody></table><table style=\"border: 1pt inset #00008b; line-height: 10pt; width: 100%;\" class=\"header_table\"><tbody><tr><td style=\"width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;\" class=\"td_header_role_name\"><span class=\"td_label\">Document maintained by</span></td><td class=\"td_header_role_value\">Community Health and Hospitals</td></tr><tr><td style=\"width: 20%; background-color: #3399ff; padding: 0.1cm 0.2cm; vertical-align: top; background-color: #ffffcc;\" class=\"td_header_role_name\"><span class=\"td_label\">Contact info</span></td><td class=\"td_header_role_value\">1003 Healthcare Drive<br/>Amherst MA 01002,&nbsp;US<br/>Tel:  +1(555)555-1003<br/></td></tr></tbody></table></div>"
+	},
+	"identifier": {
+		"system": "urn:ietf:rfc:3986",
+		"value": "12345"
+	},
+	"status": "preliminary",
+	"type": {
+		"coding": [
+			{
+				"system": "http://loinc.org",
+				"code": "11488-4",
+				"display": "Consult Note"
+			}
+		]
+	},
+	"subject": {
+		"reference": "Patient/patient-1",
+		"display": "Amy V. Shaw"
+	},
+	"encounter": {
+		"reference": "Encounter/encounter-1",
+		"display": "Encounter with patient Amy V. Shaw"
+	},
+	"date": "2016-02-28T09:10:14Z",
+	"author": [
+		{
+			"reference": "Practitioner/practitioner-1",
+			"display": "Ronald Boone, MD"
+		}
+	],
+	"title": "Consultation Note",
+	"confidentiality": "N",
+	"attester": [
+		{
+			"mode": [
+				"legal"
+			],
+			"time": "2012-01-04T09:10:14Z",
+			"party": {
+				"reference": "Practitioner/practitioner-1",
+				"display": "Ronald Boone, MD"
+			}
+		}
+	],
+	"custodian": {
+		"reference": "Organization/organization-1",
+		"display": "Acme Labs"
+	},
+	"event": [
+		{
+			"code": [
+				{
+					"coding": [
+						{
+							"system": "http://hl7.org/fhir/v3/ActClass",
+							"code": "PCPR",
+							"display": "Care Provision"
+						}
+					]
+				}
+			],
+			"period": {
+				"start": "2015-11-18",
+				"end": "2015-12-12"
+			}
+		}
+	],
+	"section": [
+		{
+			"title": "Advance Directives Section",
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "42348-3",
+						"display": "Advance directives"
+					}
+				]
+			},
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Name</b></td><td><b>Applies Period</b></td></tr><tr><td>Resuscitation</td><td>2015/01/01 - 2016/12/31</td></tr></table></div>"
+			}
+		},
+		{
+			"title": "Allergies and Intolerances Section",
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "48765-2",
+						"display": "Allergies and adverse reactions"
+					}
+				]
+			},
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Substance</b></td><td><b>Overall Severity</b></td><td><b>Reaction</b></td><td><b>Reaction Severity</b></td><td><b>Status</b></td></tr><tr><td>Cashew Nut</td><td>Severe</td><td>Anaphylactic reaction</td><td>Mild</td><td>Active</td></tr></table></div>"
+			},
+			"mode": "snapshot",
+			"orderedBy": {
+				"coding": [
+					{
+						"system": "http://hl7.org/fhir/list-order",
+						"code": "event-date",
+						"display": "Sorted by Event Date"
+					}
+				]
+			},
+			"entry": [
+				{
+					"reference": "AllergyIntolerance/allergy-intolerance"
+				}
+			]
+		},
+		{
+			"title": "Assessment Section",
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "51848-0",
+						"display": "Assessment (evaluation)"
+					}
+				]
+			},
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Obesity.</p><p>Uncontrolled brittle Type II diabetic.</p><p>Shortness of breath, mild wheezing.</p><p>Pressure ulder on left knee.</p></div>"
+			}
+		},
+		{
+			"title": "Assessment and Plan Section",
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "51847-2",
+						"display": "Assessment (evaluation) and plan"
+					}
+				]
+			},
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Recurrent GI bleed of unknown etiology; hypotension perhaps\n                    secondary to this but as likely secondary to polypharmacy</p><p>Acute on chronic anemia secondary to #1.</p><p>Azotemia, acute renal failure with volume loss secondary tom#1.</p><p>Hyperkalemia secondary to #3 and on ACE and K+ supplement.</p><p>Other chronic diagnoses as noted above, currently stable.</p></div>"
+			}
+		},
+		{
+			"title": "Chief Complaint and Reason for Visit Section",
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "46239-0",
+						"display": "Chief complaint and reason for visit"
+					}
+				]
+			},
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Cramping, bloating, and constipation.</p></div>"
+			}
+		},
+		{
+			"title": "Chief Complaint Section",
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "10154-3",
+						"display": "Chief complaint"
+					}
+				]
+			},
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Dark Stools</p></div>"
+			}
+		},
+		{
+			"title": "Family History Section",
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "10157-6",
+						"display": "History of family member diseases"
+					}
+				]
+			},
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Relationship</b></td><td><b>Diagnosis</b></td><td><b>Age at Onset</b></td></tr><tr><td>Father</td><td>Myocardial Infarction(cause of Death)</td><td>57</td></tr><tr><td>Father</td><td>Diabetes</td><td>40</td></tr></table></div>"
+			},
+			"entry": [
+				{
+					"reference": "http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory"
+				}
+			]
+		},
+		{
+			"title": "Functional Status Section",
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "47420-5",
+						"display": "Functional status"
+					}
+				]
+			},
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Functional or Cognitive Finding</b></td><td><b>Observation</b></td><td><b>Observation Date</b></td><td><b>Condition Status</b></td></tr><tr><td>Ambulation (Dependent to Independent</td><td>Independently able</td><td>2010/03/11</td><td>Active</td></tr><tr><td>Finding of Functional Performance and Activity</td><td>Dyspnea</td><td>2008/02/16</td><td>Active</td></tr><tr><td>Cognitive Function Finding</td><td>Memory Impairment</td><td>2014/04/29</td><td>Active</td></tr></table></div>"
+			}
+		},
+		{
+			"title": "General Status Section",
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "10210-3",
+						"display": "Physical findings of General status"
+					}
+				]
+			},
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Alert and in good spirits, no acute distress.</p></div>"
+			}
+		},
+		{
+			"title": "History of Past Illness Section",
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "11348-0",
+						"display": "History of past illness"
+					}
+				]
+			},
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>See History of Present Illness</p></div>"
+			}
+		},
+		{
+			"title": "History of Present Illness Section",
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "10164-2",
+						"display": "History of present illness"
+					}
+				]
+			},
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This patient was only recently discharged for a recurrent GI bleed as described below. </p><p>He presented to the ER today c/o a dark stool yesterday but a normal brown\n                    stool today. On exam he was hypotensive in the 80?s resolved after .... .... .... </p><p>Lab at discharge: Glucose 112, BUN 16, creatinine 1.1, electrolytes normal.\n                    H. pylori antibody pending. Admission hematocrit 16%, discharge hematocrit 29%. WBC\n                    7300, platelet count 256,000. Urinalysis normal. Urine culture: No growth. INR 1.1,\n                    PTT 40. </p><p>He was transfused with 6 units of packed red blood cells with .... .... .... </p><p>GI evaluation 12 September: Colonoscopy showed single red clot in .... ........ </p></div>"
+			}
+		},
+		{
+			"title": "Immunizations Section",
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "11369-6",
+						"display": "History of immunization"
+					}
+				]
+			},
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Vaccine</b></td><td><b>Date</b></td><td><b>Status</b></td></tr><tr><td>Fluvax (Influenza)</td><td>2016-04-05</td><td>Completed</td></tr></table></div>"
+			},
+			"entry": [
+				{
+					"reference": "Immunization/immunization"
+				}
+			]
+		},
+		{
+			"title": "Medical Equipment Section",
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "46264-8",
+						"display": "Medical equipment"
+					}
+				]
+			},
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Supply/Device</b></td><td><b>Date Supplied</b></td></tr><tr><td>Automatic Implantable cardioverter/defbrillator</td><td>2008/11/16</td></tr><tr><td>Wheelchair</td><td>1999/12/01</td></tr></table></div>"
+			}
+		},
+		{
+			"title": "Medication Section",
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "10160-0",
+						"display": "History of Medication Use"
+					}
+				]
+			},
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Medication</b></td><td><b>Directions</b></td><td><b>Start Date</b></td><td><b>Status</b></td><td><b>Indications</b></td><td><b>Fill Instructions</b></td></tr><tr><td>Amoxicillin</td><td>Amoxicillin Powder, for Suspension 250mg/5ml</td><td>20160401</td><td>Active</td><td>Pneumonia</td><td>Generic substitution allowed</td></tr></table></div>"
+			},
+			"entry": [
+				{
+					"reference": "MedicationStatement/medication-statement"
+				}
+			]
+		},
+		{
+			"title": "Mental Status Section",
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "10190-7",
+						"display": "Mental status"
+					}
+				]
+			},
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table border=\"1\" width=\"100%\"><thead><tr><td><b>Mental Status Findings</b></td><td><b>Effective Dates</b></td><td><b>Condition Status</b></td></tr></thead><tr><td>Mental Function</td><td>July 31, 2013</td><td>Impaired</td></tr><tr><td>Cognitive Abilities</td><td>July 31, 2013</td><td>Judgement, Intact</td></tr><tr><td>Cognitive Function</td><td>July 31, 2013</td><td>Aggressive Behavior</td></tr><tr><td>Cognitive Function</td><td>July 31, 2013</td><td>Difficulty understanding own emotions</td></tr><tr><td>Cognitive Function</td><td>July 31, 2013</td><td>Difficulty communicating Thoughts </td></tr></table></div>"
+			}
+		},
+		{
+			"title": "Nutrition Section",
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "61144-2",
+						"display": "Diet and nutrition"
+					}
+				]
+			},
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Date</b></td><td><b>Nutritional Status</b></td><td><b>Diet</b></td></tr><tr><td>2005/12/29</td><td>Well nourished</td><td>Low sodium diet, excessive carbohydrate</td></tr><tr><td>2010/05/26</td><td>Slight dehydration</td><td>High protein, low fibre</td></tr></table></div>"
+			}
+		},
+		{
+			"title": "Physical Exam Section",
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "29545-1",
+						"display": "Physical findings"
+					}
+				]
+			},
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>HEENT: All normal to examination.</p><p>&gt;HEART: RRR, no murmur.</p><p>THORAX &amp; LUNGS: Clear without rhonchi or wheeze.</p><p>ABDOMEN: Marked distension and tenderness, slightly obese, pos bowelsounds.</p><p>BACK: Normal to inspection and palpation, without tenderness; no presacral edema.</p><p>EXTREMITIES: Doughy edema bilaterally, chronic stasis changes, no asymmetrical swelling.</p></div>"
+			}
+		},
+		{
+			"title": "Plan of Treatment Section",
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "18776-5",
+						"display": "Plan of treatment"
+					}
+				]
+			},
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Planned Activity</b></td><td><b>Period</b></td><td><b>Status</b></td></tr><tr><td>Colonoscopy</td><td>2010/08/16 - 2010/08/16</td><td>Completed</td></tr><tr><td>Recommendation to Exercise</td><td>2015/10/29</td><td>Ongoing</td></tr></table></div>"
+			}
+		},
+		{
+			"title": "Problem Section",
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "11450-4",
+						"display": "Problem list"
+					}
+				]
+			},
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Problem Name</b></td><td><b>Type</b></td><td><b>Onset Date</b></td><td><b>Abatement Date</b></td><td><b>Status</b></td></tr><tr><td>Fever</td><td>Condition</td><td>2016-04-01</td><td>2016-04-14</td><td>Complete</td></tr></table></div>"
+			},
+			"entry": [
+				{
+					"reference": "Condition/condition-problem"
+				}
+			]
+		},
+		{
+			"title": "Procedures Section",
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "47519-4",
+						"display": "History of procedures"
+					}
+				]
+			},
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Procedure Name</b></td><td><b>Body Site</b></td><td><b>Performer</b></td><td><b>Date Performed</b></td><td><b>Reason</b></td></tr><tr><td>Appendectomy (Procedure)</td><td>Abdomen</td><td>Dr. Adam Everyman</td><td>20160405</td><td>Generalized abdominal pain 24 hours. Localized in RIF with rebound and guarding</td></tr></table></div>"
+			},
+			"entry": [
+				{
+					"reference": "Procedure/procedure-rehab"
+				}
+			]
+		},
+		{
+			"title": "Reason for Visit Section",
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "29299-5",
+						"display": "Reason for visit"
+					}
+				]
+			},
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Tenderness of lower abdomen</p></div>"
+			}
+		},
+		{
+			"title": "Results Section",
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "30954-2",
+						"display": "Relevant diagnostic tests and laboratory data"
+					}
+				]
+			},
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Result Type</b></td><td><b>Quantity Value</b></td><td><b>Date</b></td><td><b>Status</b></td></tr><tr><td>Glucose [Moles/volume] in Blood</td><td>6.3 mmol/l</td><td>2016/04/01</td><td>Final</td></tr></table></div>"
+			},
+			"entry": [
+				{
+					"reference": "Observation/observation-lab-urine"
+				}
+			]
+		},
+		{
+			"title": "Review of Systems Section",
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "10187-3",
+						"display": "Review of systems"
+					}
+				]
+			},
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Patient denies recent history of fever or malaise. Positive for weakness and\n                   shortness of breath. Several episodes of abdominal tenderness. No recent headaches. \n                   Positive for osteoarthritis in hips, knees and hands. </p></div>"
+			}
+		},
+		{
+			"title": "Social History Section",
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "29762-2",
+						"display": "Social history"
+					}
+				]
+			},
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Social History Element</b></td><td><b>Description</b></td><td><b>Effective Dates</b></td></tr><tr><td>Smoking</td><td>1 pack tobacco per day</td><td>2005/05/01 - 2010/02/28</td></tr></table></div>"
+			},
+			"entry": [
+				{
+					"reference": "Observation/observation-smoker"
+				}
+			]
+		},
+		{
+			"title": "Vital Signs Section",
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "8716-3",
+						"display": "Vital signs"
+					}
+				]
+			},
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Vital Sign</b></td><td><b>Date</b></td><td><b>Value</b></td></tr><tr><td>Temperature</td><td>2016/04/05</td><td>39 Degrees Celcius</td></tr></table></div>"
+			},
+			"entry": [
+				{
+					"reference": "Observation/observation-vitals-temp"
+				}
+			]
+		}
+	]
+}

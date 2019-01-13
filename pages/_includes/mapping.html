@@ -1,0 +1,148 @@
+<div>
+  <h2>Mapping to CDA</h2>
+  <p>This implementation guide is the first FHIR release of the HAI reporting profiles and is being balloted in the same cycle as the HL7 CDA® R2 Implementation Guide: NHSN Healthcare Associated Infection (HAI) Reports, Release 3, STU 3—US Realm.</p>
+  <p>The following table shows the mapping between FHIR Questionnaire items and the corresponding CDA templates</p>
+  <h3><a href="Questionnaire-hai-questionnaire-los-event.html">Late Onset Sepsis/Meningitis Event (LOS) Report</a></h3>
+  <table class="codes">
+    <thead>
+      <tr>
+        <td>
+          <b>FHIR Questionnaire Item</b>
+        </td>
+        <td>
+          <b>FHIR Questionnaire Item linkId</b>
+        </td>
+        <td>
+          <b>CDA Mapping</b>
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Facility ID</td>
+        <td>facility</td>
+        <td>ClinicalDocument/componentOf/encompassingEncounter/location/healthCareFacility/id</td>
+      </tr>
+      <tr>
+        <td>Event #</td>
+        <td>event-number</td>
+        <td>ClinicalDocument/componentOf/encompassingEncounter/id</td>
+      </tr>
+      <tr>
+        <td>Event Type</td>
+        <td>event-type</td>
+        <td>Infection-Type Observation/value</td>
+      </tr>
+      <tr>
+        <td>Date of Event</td>
+        <td>date-of-event</td>
+        <td>Infection-Type Observation/effectiveTime</td>
+      </tr>
+      <tr>
+        <td>Facility Location</td>
+        <td>facility-location</td>
+        <td>ClinicalDocument/componentOf/encompassingEncounter/location/healthcareFacility/code</td>
+      </tr>
+      <tr>
+        <td>Date Admitted to Facility</td>
+        <td>date-admitted-to-facility</td>
+        <td>ClinicalDocument/componentOf/encompassingEncounter/effectiveTime/low</td>
+      </tr>
+      <tr>
+        <td>Select: Inborn or Outborn</td>
+        <td>inborn-outborn-observation</td>
+        <td>Inborn/Outborn Observation</td>
+      </tr>
+      <tr>
+        <td>Patient</td>
+        <td>questionnaire-patient</td>
+        <td>ClinicalDocument/recordTarget</td>
+      </tr>
+      <tr>
+        <td>Risk Factors</td>
+        <td>risk-factors</td>
+        <td>Risk Factors Section (LOS/Men)</td>
+      </tr>
+      <tr>
+        <td>Central line present prior to event, including umbilical catheter</td>
+        <td>risk-factor-central-line</td>
+        <td>Infection Risk Factors Observation/value="1006-6"</td>
+      </tr>
+      <tr>
+        <td>Birth Weight (grams)</td>
+        <td>risk-factor-birth-weight</td>
+        <td>Infection Risk Factors Measurement Observation/value</td>
+      </tr>
+      <tr>
+        <td>Gestational Age</td>
+        <td>gestational-age</td>
+        <td>Gestational Age Observation/value</td>
+      </tr>
+      <tr>
+        <td>Event Details</td>
+        <td>event-details</td>
+        <td>Infection Details in Late Onset Sepsis Report</td>
+      </tr>
+      <tr>
+        <td>Specific Event</td>
+        <td>infection-condition</td>
+        <td>Infection Condition Observation/value</td>
+      </tr>
+      <tr>
+        <td>Laboratory Criteria Used</td>
+        <td>criteria-used</td>
+        <td>Criterion of Diagnosis Observation/value</td>
+      </tr>
+      <tr>
+        <td>Died</td>
+        <td>died</td>
+        <td>Death Observation in an Infection-type Report/value</td>
+      </tr>
+      <tr>
+        <td>Infection contrubuted to death</td>
+        <td>los-contributed-to-death</td>
+        <td>Infection Contributed to Death Observation</td>
+      </tr>
+      <tr>
+        <td>Discharge Date</td>
+        <td>discharge-date</td>
+        <td>ClinicalDocument/componentOf/encompassingEncounter/effectiveTime/high</td>
+      </tr>
+      <tr>
+        <td>Findings Group</td>
+        <td>findings-group</td>
+        <td>Findings Section in an Infection-Type Report</td>
+      </tr>
+      <tr>
+        <td>Pathogen Identified</td>
+        <td>pathogen-identified</td>
+        <td>Pathogen Identified Observation</td>
+      </tr>
+      <tr>
+        <td>Pathogen Ranking</td>
+        <td>pathogen-ranking</td>
+        <td>Pathogen Ranking Observation</td>
+      </tr>
+      <tr>
+        <td>Drug Susceptibility Test Group</td>
+        <td>drug-susceptibility-test-group</td>
+        <td>Drug Susceptibility Test Observation</td>
+      </tr>
+      <tr>
+        <td>Drug Susceptibility Test</td>
+        <td>drug-susceptibility-test</td>
+        <td>Drug-Susceptibility Test Observation/code</td>
+      </tr>
+      <tr>
+        <td>Drug Susceptibility Test Interpretation</td>
+        <td>drug-susceptibility-test-interpretation</td>
+        <td>Drug-Susceptibility Test Observation/interpretationCode</td>
+      </tr>
+      <tr>
+        <td>NHSN Comment</td>
+        <td>NHSN Comment</td>
+        <td>NHSN Comment Section/NHSN Comment</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

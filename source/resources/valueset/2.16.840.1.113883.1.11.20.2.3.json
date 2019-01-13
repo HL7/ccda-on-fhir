@@ -1,0 +1,432 @@
+{
+	"resourceType": "ValueSet",
+	"id": "2.16.840.1.113883.1.11.20.2.3",
+	"meta": {
+		"versionId": "1",
+		"lastUpdated": "2019-01-13T09:59:59.257-05:00"
+	},
+	"url": "http://hl7.org/fhir/us/ccda/ValueSet/2.16.840.1.113883.1.11.20.2.3",
+	"name": "ReferralDocumentType",
+	"status": "active",
+	"description": "A referral note provides a consulting physician specified patient information about the patient referred. Specific URL Pending",
+	"compose": {
+		"include": [
+			{
+				"system": "http://loinc.org",
+				"concept": [
+					{
+						"code": "57133-1",
+						"display": "Referral note"
+					},
+					{
+						"code": "57170-3",
+						"display": "Cardiovascular disease Referral note"
+					},
+					{
+						"code": "57178-6",
+						"display": "Critical Care Medicine Referral note"
+					},
+					{
+						"code": "57134-9",
+						"display": "Dentistry Referral note"
+					},
+					{
+						"code": "57135-6",
+						"display": "Dermatology Referral note"
+					},
+					{
+						"code": "57136-4",
+						"display": "Diabetology Referral note"
+					},
+					{
+						"code": "57137-2",
+						"display": "Endocrinology Referral note"
+					},
+					{
+						"code": "57138-0",
+						"display": "Gastroenterology Referral note"
+					},
+					{
+						"code": "57139-8",
+						"display": "General medicine Referral note"
+					},
+					{
+						"code": "57171-1",
+						"display": "Geriatric medicine Referral note"
+					},
+					{
+						"code": "57141-4",
+						"display": "Infectious disease Referral note"
+					},
+					{
+						"code": "57142-2",
+						"display": "Kinesiotherapy Referral note"
+					},
+					{
+						"code": "57143-0",
+						"display": "Mental health Referral note"
+					},
+					{
+						"code": "57144-8",
+						"display": "Nephrology Referral note"
+					},
+					{
+						"code": "57146-3",
+						"display": "Neurological surgery Referral note"
+					},
+					{
+						"code": "57145-5",
+						"display": "Neurology Referral note"
+					},
+					{
+						"code": "57173-7",
+						"display": "Nutrition and dietetics Referral note"
+					},
+					{
+						"code": "57179-4",
+						"display": "Obstetrics and Gynecology Referral note"
+					},
+					{
+						"code": "57147-1",
+						"display": "Occupational health Referral note"
+					},
+					{
+						"code": "57148-9",
+						"display": "Occupational therapy Referral note"
+					},
+					{
+						"code": "57149-7",
+						"display": "Oncology Referral note"
+					},
+					{
+						"code": "57150-5",
+						"display": "Ophthalmology Referral note"
+					},
+					{
+						"code": "57151-3",
+						"display": "Optometry Referral note"
+					},
+					{
+						"code": "57174-5",
+						"display": "Oral surgery Referral note"
+					},
+					{
+						"code": "57175-2",
+						"display": "Orthopedic surgery Referral note"
+					},
+					{
+						"code": "57176-0",
+						"display": "Otolaryngology Referral note"
+					},
+					{
+						"code": "57152-1",
+						"display": "Pharmacy Referral note"
+					},
+					{
+						"code": "57153-9",
+						"display": "Physical medicine and rehabilitation Referral note"
+					},
+					{
+						"code": "57154-7",
+						"display": "Physical therapy Referral note"
+					},
+					{
+						"code": "57155-4",
+						"display": "Plastic surgery Referral note"
+					},
+					{
+						"code": "57156-2",
+						"display": "Podiatry Referral note"
+					},
+					{
+						"code": "57157-0",
+						"display": "Psychiatry Referral note"
+					},
+					{
+						"code": "57158-8",
+						"display": "Psychology Referral note"
+					},
+					{
+						"code": "57177-8",
+						"display": "Pulmonary disease Referral note"
+					},
+					{
+						"code": "57159-6",
+						"display": "Radiation oncology Referral note"
+					},
+					{
+						"code": "57160-4",
+						"display": "Recreational therapy Referral note"
+					},
+					{
+						"code": "57161-2",
+						"display": "Rehabilitation Referral note"
+					},
+					{
+						"code": "57162-0",
+						"display": "Respiratory therapy Referral note"
+					},
+					{
+						"code": "57163-8",
+						"display": "Rheumatology Referral note"
+					},
+					{
+						"code": "57164-6",
+						"display": "Social work Referral note"
+					},
+					{
+						"code": "57166-1",
+						"display": "Surgery Referral note"
+					},
+					{
+						"code": "57167-9",
+						"display": "Thoracic surgery Referral note"
+					},
+					{
+						"code": "57168-7",
+						"display": "Urology Referral note"
+					},
+					{
+						"code": "57169-5",
+						"display": "Vascular surgery Referral note"
+					},
+					{
+						"code": "69438-0",
+						"display": "Forensic medicine Referral note"
+					}
+				]
+			}
+		]
+	},
+	"expansion": {
+		"identifier": "urn:uuid:f2a26749-1506-41c7-9064-bcaa5317cd8c",
+		"timestamp": "2017-07-13T09:33:07.7324386-04:00",
+		"contains": [
+			{
+				"system": "http://loinc.org",
+				"code": "57133-1",
+				"display": "Referral note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "57170-3",
+				"display": "Cardiovascular disease Referral note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "57178-6",
+				"display": "Critical Care Medicine Referral note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "57134-9",
+				"display": "Dentistry Referral note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "57135-6",
+				"display": "Dermatology Referral note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "57136-4",
+				"display": "Diabetology Referral note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "57137-2",
+				"display": "Endocrinology Referral note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "57138-0",
+				"display": "Gastroenterology Referral note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "57139-8",
+				"display": "General medicine Referral note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "57171-1",
+				"display": "Geriatric medicine Referral note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "57141-4",
+				"display": "Infectious disease Referral note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "57142-2",
+				"display": "Kinesiotherapy Referral note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "57143-0",
+				"display": "Mental health Referral note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "57144-8",
+				"display": "Nephrology Referral note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "57146-3",
+				"display": "Neurological surgery Referral note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "57145-5",
+				"display": "Neurology Referral note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "57173-7",
+				"display": "Nutrition and dietetics Referral note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "57179-4",
+				"display": "Obstetrics and Gynecology Referral note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "57147-1",
+				"display": "Occupational health Referral note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "57148-9",
+				"display": "Occupational therapy Referral note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "57149-7",
+				"display": "Oncology Referral note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "57150-5",
+				"display": "Ophthalmology Referral note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "57151-3",
+				"display": "Optometry Referral note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "57174-5",
+				"display": "Oral surgery Referral note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "57175-2",
+				"display": "Orthopedic surgery Referral note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "57176-0",
+				"display": "Otolaryngology Referral note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "57152-1",
+				"display": "Pharmacy Referral note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "57153-9",
+				"display": "Physical medicine and rehabilitation Referral note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "57154-7",
+				"display": "Physical therapy Referral note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "57155-4",
+				"display": "Plastic surgery Referral note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "57156-2",
+				"display": "Podiatry Referral note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "57157-0",
+				"display": "Psychiatry Referral note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "57158-8",
+				"display": "Psychology Referral note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "57177-8",
+				"display": "Pulmonary disease Referral note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "57159-6",
+				"display": "Radiation oncology Referral note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "57160-4",
+				"display": "Recreational therapy Referral note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "57161-2",
+				"display": "Rehabilitation Referral note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "57162-0",
+				"display": "Respiratory therapy Referral note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "57163-8",
+				"display": "Rheumatology Referral note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "57164-6",
+				"display": "Social work Referral note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "57166-1",
+				"display": "Surgery Referral note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "57167-9",
+				"display": "Thoracic surgery Referral note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "57168-7",
+				"display": "Urology Referral note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "57169-5",
+				"display": "Vascular surgery Referral note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "69438-0",
+				"display": "Forensic medicine Referral note"
+			}
+		]
+	}
+}

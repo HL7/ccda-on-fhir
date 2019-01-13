@@ -1,0 +1,180 @@
+{
+	"resourceType": "ValueSet",
+	"id": "2.16.840.1.113883.11.20.6.1",
+	"meta": {
+		"versionId": "1",
+		"lastUpdated": "2019-01-13T09:59:59.278-05:00"
+	},
+	"url": "http://hl7.org/fhir/us/ccda/ValueSet/2.16.840.1.113883.11.20.6.1",
+	"name": "ProcedureNoteDocumentTypeCodes",
+	"status": "active",
+	"description": "A value set of LOINC document codes for Procedure Notes.\r\n\r\nSpecific URL Pending",
+	"compose": {
+		"include": [
+			{
+				"system": "http://loinc.org",
+				"concept": [
+					{
+						"code": "28570-0",
+						"display": "Provider-unspecified Procedure note"
+					},
+					{
+						"code": "11505-5",
+						"display": "Physician procedure note"
+					},
+					{
+						"code": "18744-3",
+						"display": "Bronchoscopy study"
+					},
+					{
+						"code": "18745-0",
+						"display": "Cardiac catheterization study"
+					},
+					{
+						"code": "18746-8",
+						"display": "Colonoscopy study"
+					},
+					{
+						"code": "18751-8",
+						"display": "Endoscopy study"
+					},
+					{
+						"code": "18753-4",
+						"display": "Flexible sigmoidoscopy study"
+					},
+					{
+						"code": "18836-7",
+						"display": "Cardiac stress study Procedure"
+					},
+					{
+						"code": "28577-5",
+						"display": "Dentist procedure note"
+					},
+					{
+						"code": "28625-2",
+						"display": "Podiatry procedure note"
+					},
+					{
+						"code": "29757-2",
+						"display": "Colposcopy study"
+					},
+					{
+						"code": "33721-2",
+						"display": "Bone marrow Pathology biopsy report"
+					},
+					{
+						"code": "34121-4",
+						"display": "Interventional procedure note"
+					},
+					{
+						"code": "34896-1",
+						"display": "Cardiovascular disease Interventional procedure note"
+					},
+					{
+						"code": "34899-5",
+						"display": "Gastroenterology Interventional procedure note"
+					},
+					{
+						"code": "47048-4",
+						"display": "Diagnostic interventional study report Interventional radiology"
+					},
+					{
+						"code": "48807-2",
+						"display": "Bone marrow aspiration report"
+					}
+				]
+			}
+		]
+	},
+	"expansion": {
+		"identifier": "urn:uuid:d6b555c3-8127-4987-a1f6-264a6965fd3d",
+		"timestamp": "2017-07-13T09:33:07.7949511-04:00",
+		"contains": [
+			{
+				"system": "http://loinc.org",
+				"code": "28570-0",
+				"display": "Provider-unspecified Procedure note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "11505-5",
+				"display": "Physician procedure note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "18744-3",
+				"display": "Bronchoscopy study"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "18745-0",
+				"display": "Cardiac catheterization study"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "18746-8",
+				"display": "Colonoscopy study"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "18751-8",
+				"display": "Endoscopy study"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "18753-4",
+				"display": "Flexible sigmoidoscopy study"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "18836-7",
+				"display": "Cardiac stress study Procedure"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "28577-5",
+				"display": "Dentist procedure note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "28625-2",
+				"display": "Podiatry procedure note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "29757-2",
+				"display": "Colposcopy study"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "33721-2",
+				"display": "Bone marrow Pathology biopsy report"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "34121-4",
+				"display": "Interventional procedure note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "34896-1",
+				"display": "Cardiovascular disease Interventional procedure note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "34899-5",
+				"display": "Gastroenterology Interventional procedure note"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "47048-4",
+				"display": "Diagnostic interventional study report Interventional radiology"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "48807-2",
+				"display": "Bone marrow aspiration report"
+			}
+		]
+	}
+}

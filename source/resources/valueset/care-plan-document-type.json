@@ -1,0 +1,29 @@
+{
+	"resourceType": "ValueSet",
+	"id": "care-plan-document-type",
+	"meta": {
+		"versionId": "1",
+		"lastUpdated": "2019-01-13T09:59:58.662-05:00"
+	},
+	"url": "http://hl7.org/fhir/us/ccda/ValueSet/care-plan-document-type",
+	"name": "Care Plan Document Codes",
+	"status": "active",
+	"description": "A value set of LOINC document type codes for Care Plan documents.",
+	"compose": {
+		"include": [
+			{
+				"system": "http://loinc.org",
+				"concept": [
+					{
+						"code": "52521-2",
+						"display": "Overall Plan of Care/​Advance Care Directives"
+					},
+					{
+						"code": "18776-5",
+						"display": "Plan of Care"
+					}
+				]
+			}
+		]
+	}
+}

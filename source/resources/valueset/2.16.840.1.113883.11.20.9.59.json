@@ -1,0 +1,311 @@
+{
+	"resourceType": "ValueSet",
+	"id": "2.16.840.1.113883.11.20.9.59",
+	"meta": {
+		"versionId": "1",
+		"lastUpdated": "2019-01-13T09:59:58.761-05:00"
+	},
+	"url": "http://hl7.org/fhir/us/ccda/ValueSet/2.16.840.1.113883.11.20.9.59",
+	"name": "DIRSectionTypeCodes",
+	"status": "active",
+	"description": "The Section Type codes used by DIR are all narrative document sections. The codes in this table are drawn from LOINC (http://www.loinc.org/) and DICOM (http://medical.nema.org/). The section/code should be selected from LOINC or DICOM for sections not listed in this table.",
+	"compose": {
+		"include": [
+			{
+				"system": "urn:oid:1.2.840.10008.2.16.4",
+				"concept": [
+					{
+						"code": "121181",
+						"display": "DICOM Object Catalog"
+					},
+					{
+						"code": "121060",
+						"display": "History"
+					},
+					{
+						"code": "121062",
+						"display": "Request"
+					},
+					{
+						"code": "121064",
+						"display": "Current Procedure Descriptions"
+					},
+					{
+						"code": "121066",
+						"display": "Prior Procedure Descriptions"
+					},
+					{
+						"code": "121068",
+						"display": "Previous Findings"
+					},
+					{
+						"code": "121070",
+						"display": "Findings (DIR)"
+					},
+					{
+						"code": "121072",
+						"display": "Impressions"
+					},
+					{
+						"code": "121074",
+						"display": "Recommendations"
+					},
+					{
+						"code": "121076",
+						"display": "Conclusions"
+					},
+					{
+						"code": "121078",
+						"display": "Addendum"
+					},
+					{
+						"code": "121109",
+						"display": "Indications for Procedure"
+					},
+					{
+						"code": "121110",
+						"display": "Patient Presentation"
+					},
+					{
+						"code": "121113",
+						"display": "Complications"
+					},
+					{
+						"code": "121111",
+						"display": "Summary"
+					},
+					{
+						"code": "121180",
+						"display": "Key Images"
+					}
+				]
+			},
+			{
+				"system": "http://loinc.org",
+				"concept": [
+					{
+						"code": "11329-0",
+						"display": "HISTORY GENERAL"
+					},
+					{
+						"code": "55115-0",
+						"display": "REQUESTED IMAGING STUDIES INFORMATION"
+					},
+					{
+						"code": "55111-9",
+						"display": "CURRENT IMAGING PROCEDURE DESCRIPTIONS"
+					},
+					{
+						"code": "55114-3",
+						"display": "PRIOR IMAGING PROCEDURE DESCRIPTIONS"
+					},
+					{
+						"code": "18834-2",
+						"display": "RADIOLOGY COMPARISON STUDY - OBSERVATION"
+					},
+					{
+						"code": "18782-3",
+						"display": "RADIOLOGY STUDY OBSERVATION"
+					},
+					{
+						"code": "19005-8",
+						"display": "RADIOLOGY - IMPRESSION"
+					},
+					{
+						"code": "18783-1",
+						"display": "RADIOLOGY STUDY - RECOMMENDATION"
+					},
+					{
+						"code": "55110-1",
+						"display": "CONCLUSIONS"
+					},
+					{
+						"code": "55107-7",
+						"display": "ADDENDUM"
+					},
+					{
+						"code": "18785-6",
+						"display": "RADIOLOGY REASON FOR STUDY"
+					},
+					{
+						"code": "55108-5",
+						"display": "CLINICAL PRESENTATION"
+					},
+					{
+						"code": "55109-3",
+						"display": "COMPLICATIONS"
+					},
+					{
+						"code": "55112-7",
+						"display": "DOCUMENT SUMMARY"
+					},
+					{
+						"code": "55113-5",
+						"display": "KEY IMAGES"
+					}
+				]
+			}
+		]
+	},
+	"expansion": {
+		"identifier": "urn:uuid:e869358b-afbe-4443-921b-8d564265d045",
+		"timestamp": "2017-07-13T09:33:08.4160753-04:00",
+		"contains": [
+			{
+				"system": "urn:oid:1.2.840.10008.2.16.4",
+				"code": "121181",
+				"display": "DICOM Object Catalog"
+			},
+			{
+				"system": "urn:oid:1.2.840.10008.2.16.4",
+				"code": "121060",
+				"display": "History"
+			},
+			{
+				"system": "urn:oid:1.2.840.10008.2.16.4",
+				"code": "121062",
+				"display": "Request"
+			},
+			{
+				"system": "urn:oid:1.2.840.10008.2.16.4",
+				"code": "121064",
+				"display": "Current Procedure Descriptions"
+			},
+			{
+				"system": "urn:oid:1.2.840.10008.2.16.4",
+				"code": "121066",
+				"display": "Prior Procedure Descriptions"
+			},
+			{
+				"system": "urn:oid:1.2.840.10008.2.16.4",
+				"code": "121068",
+				"display": "Previous Findings"
+			},
+			{
+				"system": "urn:oid:1.2.840.10008.2.16.4",
+				"code": "121070",
+				"display": "Findings (DIR)"
+			},
+			{
+				"system": "urn:oid:1.2.840.10008.2.16.4",
+				"code": "121072",
+				"display": "Impressions"
+			},
+			{
+				"system": "urn:oid:1.2.840.10008.2.16.4",
+				"code": "121074",
+				"display": "Recommendations"
+			},
+			{
+				"system": "urn:oid:1.2.840.10008.2.16.4",
+				"code": "121076",
+				"display": "Conclusions"
+			},
+			{
+				"system": "urn:oid:1.2.840.10008.2.16.4",
+				"code": "121078",
+				"display": "Addendum"
+			},
+			{
+				"system": "urn:oid:1.2.840.10008.2.16.4",
+				"code": "121109",
+				"display": "Indications for Procedure"
+			},
+			{
+				"system": "urn:oid:1.2.840.10008.2.16.4",
+				"code": "121110",
+				"display": "Patient Presentation"
+			},
+			{
+				"system": "urn:oid:1.2.840.10008.2.16.4",
+				"code": "121113",
+				"display": "Complications"
+			},
+			{
+				"system": "urn:oid:1.2.840.10008.2.16.4",
+				"code": "121111",
+				"display": "Summary"
+			},
+			{
+				"system": "urn:oid:1.2.840.10008.2.16.4",
+				"code": "121180",
+				"display": "Key Images"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "11329-0",
+				"display": "HISTORY GENERAL"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "55115-0",
+				"display": "REQUESTED IMAGING STUDIES INFORMATION"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "55111-9",
+				"display": "CURRENT IMAGING PROCEDURE DESCRIPTIONS"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "55114-3",
+				"display": "PRIOR IMAGING PROCEDURE DESCRIPTIONS"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "18834-2",
+				"display": "RADIOLOGY COMPARISON STUDY - OBSERVATION"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "18782-3",
+				"display": "RADIOLOGY STUDY OBSERVATION"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "19005-8",
+				"display": "RADIOLOGY - IMPRESSION"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "18783-1",
+				"display": "RADIOLOGY STUDY - RECOMMENDATION"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "55110-1",
+				"display": "CONCLUSIONS"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "55107-7",
+				"display": "ADDENDUM"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "18785-6",
+				"display": "RADIOLOGY REASON FOR STUDY"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "55108-5",
+				"display": "CLINICAL PRESENTATION"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "55109-3",
+				"display": "COMPLICATIONS"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "55112-7",
+				"display": "DOCUMENT SUMMARY"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "55113-5",
+				"display": "KEY IMAGES"
+			}
+		]
+	}
+}

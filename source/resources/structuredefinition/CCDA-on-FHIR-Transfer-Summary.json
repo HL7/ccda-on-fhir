@@ -1,0 +1,1801 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "CCDA-on-FHIR-Transfer-Summary",
+	"meta": {
+		"versionId": "1",
+		"lastUpdated": "2018-10-04T19:42:52.061-04:00"
+	},
+	"url": "http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-Transfer-Summary",
+	"name": "C-CDA on FHIR Transfer Summary",
+	"status": "draft",
+	"publisher": "Lantana Consulting Group",
+	"contact": [
+		{
+			"name": "Corey Spears",
+			"telecom": [
+				{
+					"system": "email",
+					"value": "spears.corey@gmail.com",
+					"use": "work"
+				}
+			]
+		},
+		{
+			"name": "Rick Geimer",
+			"telecom": [
+				{
+					"system": "email",
+					"value": "rick.geimer@lantanagroup.com",
+					"use": "work"
+				}
+			]
+		}
+	],
+	"description": "This profile describes constraints for a Transfer Summary. The Transfer Summary standardizes critical information for exchange of information between providers of care when a patient moves between health care settings. Standardization of information used in this form will promote interoperability; create information suitable for reuse in quality measurement, public health, research, and for reimbursement.",
+	"fhirVersion": "3.1.0",
+	"kind": "resource",
+	"abstract": false,
+	"contextType": "resource",
+	"context": [
+		"Composition"
+	],
+	"type": "Composition",
+	"baseDefinition": "http://hl7.org/fhir/us/ccda/StructureDefinition/CCDA-on-FHIR-US-Realm-Header",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Composition",
+				"path": "Composition"
+			},
+			{
+				"id": "Composition.type",
+				"path": "Composition.type",
+				"label": "Transfer Summary",
+				"short": "Transfer Summary",
+				"binding": {
+					"strength": "required",
+					"valueSetReference": {
+						"reference": "http://hl7.org/fhir/us/ccda/ValueSet/2.16.840.1.113883.1.11.20.2.4",
+						"display": "TransferDocumentType"
+					}
+				}
+			},
+			{
+				"id": "Composition.event",
+				"path": "Composition.event",
+				"short": "event",
+				"min": 1,
+				"max": "1"
+			},
+			{
+				"id": "Composition.section",
+				"extension": [
+					{
+						"url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
+						"valueString": "Section"
+					}
+				],
+				"path": "Composition.section",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "code"
+						}
+					],
+					"rules": "open"
+				}
+			},
+			{
+				"id": "Composition.section:allergies_and_intolerances_section",
+				"extension": [
+					{
+						"url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
+						"valueString": "Section"
+					}
+				],
+				"path": "Composition.section",
+				"sliceName": "allergies_and_intolerances_section",
+				"label": "Allergies and Intolerances Section",
+				"short": "Allergies and Intolerances Section",
+				"comment": "Allergies and Intolerances Section",
+				"min": 1,
+				"max": "1"
+			},
+			{
+				"id": "Composition.section:allergies_and_intolerances_section.title",
+				"path": "Composition.section.title",
+				"short": "title",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:allergies_and_intolerances_section.code",
+				"path": "Composition.section.code",
+				"label": "Allergies and adverse reactions",
+				"short": "Allergies and adverse reactions",
+				"min": 1,
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "48765-2"
+						}
+					]
+				}
+			},
+			{
+				"id": "Composition.section:allergies_and_intolerances_section.text",
+				"path": "Composition.section.text",
+				"short": "text",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:allergies_and_intolerances_section.entry",
+				"path": "Composition.section.entry",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "profile",
+							"path": "reference"
+						}
+					],
+					"rules": "open"
+				},
+				"short": "entry"
+			},
+			{
+				"id": "Composition.section:allergies_and_intolerances_section.entry:sliceEntry",
+				"path": "Composition.section.entry",
+				"sliceName": "sliceEntry",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance"
+					}
+				]
+			},
+			{
+				"id": "Composition.section:medications_section",
+				"extension": [
+					{
+						"url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
+						"valueString": "Section"
+					}
+				],
+				"path": "Composition.section",
+				"sliceName": "medications_section",
+				"label": "Medications Section",
+				"short": "Medications Section",
+				"comment": "Medications Section",
+				"min": 1,
+				"max": "1"
+			},
+			{
+				"id": "Composition.section:medications_section.title",
+				"path": "Composition.section.title",
+				"short": "title",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:medications_section.code",
+				"path": "Composition.section.code",
+				"label": "History of medication use",
+				"short": "History of medication use",
+				"min": 1,
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "10160-0"
+						}
+					]
+				}
+			},
+			{
+				"id": "Composition.section:medications_section.text",
+				"path": "Composition.section.text",
+				"short": "text",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:medications_section.entry",
+				"path": "Composition.section.entry",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "profile",
+							"path": "reference"
+						}
+					],
+					"rules": "open"
+				},
+				"short": "entry"
+			},
+			{
+				"id": "Composition.section:medications_section.entry:sliceEntry",
+				"path": "Composition.section.entry",
+				"sliceName": "sliceEntry",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationstatement"
+					}
+				]
+			},
+			{
+				"id": "Composition.section:problem_section",
+				"extension": [
+					{
+						"url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
+						"valueString": "Section"
+					}
+				],
+				"path": "Composition.section",
+				"sliceName": "problem_section",
+				"label": "Problem Section",
+				"short": "Problem Section",
+				"comment": "Problem Section",
+				"min": 1,
+				"max": "1"
+			},
+			{
+				"id": "Composition.section:problem_section.title",
+				"path": "Composition.section.title",
+				"short": "title",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:problem_section.code",
+				"path": "Composition.section.code",
+				"label": "Problem list",
+				"short": "Problem list",
+				"min": 1,
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "11450-4"
+						}
+					]
+				}
+			},
+			{
+				"id": "Composition.section:problem_section.text",
+				"path": "Composition.section.text",
+				"short": "text",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:problem_section.entry",
+				"path": "Composition.section.entry",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "profile",
+							"path": "reference"
+						}
+					],
+					"rules": "open"
+				},
+				"short": "entry"
+			},
+			{
+				"id": "Composition.section:problem_section.entry:sliceEntry",
+				"path": "Composition.section.entry",
+				"sliceName": "sliceEntry",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"
+					}
+				]
+			},
+			{
+				"id": "Composition.section:results_section",
+				"extension": [
+					{
+						"url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
+						"valueString": "Section"
+					}
+				],
+				"path": "Composition.section",
+				"sliceName": "results_section",
+				"label": "Results Section",
+				"short": "Results Section",
+				"comment": "Results Section",
+				"min": 1,
+				"max": "1"
+			},
+			{
+				"id": "Composition.section:results_section.title",
+				"path": "Composition.section.title",
+				"short": "title",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:results_section.code",
+				"path": "Composition.section.code",
+				"label": "Relevant diagnostic tests and laboratory data",
+				"short": "Relevant diagnostic tests and laboratory data",
+				"min": 1,
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "30954-2"
+						}
+					]
+				}
+			},
+			{
+				"id": "Composition.section:results_section.text",
+				"path": "Composition.section.text",
+				"short": "text",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:results_section.entry",
+				"path": "Composition.section.entry",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "profile",
+							"path": "reference"
+						}
+					],
+					"rules": "open"
+				},
+				"short": "entry"
+			},
+			{
+				"id": "Composition.section:results_section.entry:sliceEntry",
+				"path": "Composition.section.entry",
+				"sliceName": "sliceEntry",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observationresults"
+					}
+				]
+			},
+			{
+				"id": "Composition.section:vital_signs_section",
+				"extension": [
+					{
+						"url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
+						"valueString": "Section"
+					}
+				],
+				"path": "Composition.section",
+				"sliceName": "vital_signs_section",
+				"label": "Vital Signs Section",
+				"short": "Vital Signs Section",
+				"comment": "Vital Signs Section",
+				"min": 1,
+				"max": "1"
+			},
+			{
+				"id": "Composition.section:vital_signs_section.title",
+				"path": "Composition.section.title",
+				"short": "title",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:vital_signs_section.code",
+				"path": "Composition.section.code",
+				"label": "Vital signs",
+				"short": "Vital signs",
+				"min": 1,
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "8716-3"
+						}
+					]
+				}
+			},
+			{
+				"id": "Composition.section:vital_signs_section.text",
+				"path": "Composition.section.text",
+				"short": "text",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:vital_signs_section.entry",
+				"path": "Composition.section.entry",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "profile",
+							"path": "reference"
+						}
+					],
+					"rules": "open"
+				},
+				"short": "entry"
+			},
+			{
+				"id": "Composition.section:vital_signs_section.entry:sliceEntry",
+				"path": "Composition.section.entry",
+				"sliceName": "sliceEntry",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": "http://hl7.org/fhir/StructureDefinition/vitalsigns"
+					}
+				]
+			},
+			{
+				"id": "Composition.section:reason_for_referral_section",
+				"extension": [
+					{
+						"url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
+						"valueString": "Section"
+					}
+				],
+				"path": "Composition.section",
+				"sliceName": "reason_for_referral_section",
+				"label": "Reason for Referral Section",
+				"short": "Reason for Referral Section",
+				"min": 1,
+				"max": "1"
+			},
+			{
+				"id": "Composition.section:reason_for_referral_section.title",
+				"path": "Composition.section.title",
+				"short": "title",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:reason_for_referral_section.code",
+				"path": "Composition.section.code",
+				"short": "code",
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "42349-1"
+						}
+					]
+				}
+			},
+			{
+				"id": "Composition.section:reason_for_referral_section.text",
+				"path": "Composition.section.text",
+				"short": "text",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:reason_for_referral_section.entry",
+				"path": "Composition.section.entry",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "profile",
+							"path": "reference"
+						}
+					],
+					"rules": "open"
+				},
+				"short": "entry"
+			},
+			{
+				"id": "Composition.section:reason_for_referral_section.entry:sliceEntry",
+				"path": "Composition.section.entry",
+				"sliceName": "sliceEntry",
+				"short": "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc. ",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": "http://hl7.org/fhir/StructureDefinition/ServiceRequest"
+					}
+				]
+			},
+			{
+				"id": "Composition.section:advance_directives_section",
+				"extension": [
+					{
+						"url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
+						"valueString": "Section"
+					}
+				],
+				"path": "Composition.section",
+				"sliceName": "advance_directives_section",
+				"label": "Advance Directives Section",
+				"short": "Advance Directives Section"
+			},
+			{
+				"id": "Composition.section:advance_directives_section.title",
+				"path": "Composition.section.title",
+				"short": "title",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:advance_directives_section.code",
+				"path": "Composition.section.code",
+				"short": "code",
+				"min": 1,
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "42348-3"
+						}
+					]
+				}
+			},
+			{
+				"id": "Composition.section:advance_directives_section.text",
+				"path": "Composition.section.text",
+				"short": "text",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:advance_directives_section.entry",
+				"path": "Composition.section.entry",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "profile",
+							"path": "reference"
+						}
+					],
+					"rules": "open"
+				},
+				"short": "entry"
+			},
+			{
+				"id": "Composition.section:advance_directives_section.entry:sliceEntry",
+				"path": "Composition.section.entry",
+				"sliceName": "sliceEntry",
+				"short": "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc. ",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": "http://hl7.org/fhir/StructureDefinition/Consent"
+					}
+				]
+			},
+			{
+				"id": "Composition.section:discharge_diagnosis_section",
+				"extension": [
+					{
+						"url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
+						"valueString": "Section"
+					}
+				],
+				"path": "Composition.section",
+				"sliceName": "discharge_diagnosis_section",
+				"label": "Discharge Diagnosis Section",
+				"short": "Discharge Diagnosis Section",
+				"min": 1,
+				"max": "1"
+			},
+			{
+				"id": "Composition.section:discharge_diagnosis_section.title",
+				"path": "Composition.section.title",
+				"short": "title",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:discharge_diagnosis_section.code",
+				"path": "Composition.section.code",
+				"label": "Hospital discharge diagnosis",
+				"short": "Hospital discharge diagnosis",
+				"min": 1,
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "11535-2"
+						}
+					]
+				}
+			},
+			{
+				"id": "Composition.section:discharge_diagnosis_section.text",
+				"path": "Composition.section.text",
+				"short": "text",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:discharge_diagnosis_section.entry",
+				"path": "Composition.section.entry",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "profile",
+							"path": "reference"
+						}
+					],
+					"rules": "open"
+				},
+				"short": "entry"
+			},
+			{
+				"id": "Composition.section:discharge_diagnosis_section.entry:sliceEntry",
+				"path": "Composition.section.entry",
+				"sliceName": "sliceEntry",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"
+					}
+				]
+			},
+			{
+				"id": "Composition.section:social_history_section",
+				"extension": [
+					{
+						"url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
+						"valueString": "Section"
+					}
+				],
+				"path": "Composition.section",
+				"sliceName": "social_history_section",
+				"label": "Social History Section",
+				"short": "Social History Section",
+				"comment": "Social History Section",
+				"min": 1,
+				"max": "1"
+			},
+			{
+				"id": "Composition.section:social_history_section.title",
+				"path": "Composition.section.title",
+				"short": "title",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:social_history_section.code",
+				"path": "Composition.section.code",
+				"label": "Social history",
+				"short": "Social history",
+				"min": 1,
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "29762-2"
+						}
+					]
+				}
+			},
+			{
+				"id": "Composition.section:social_history_section.text",
+				"path": "Composition.section.text",
+				"short": "text",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:social_history_section.entry",
+				"path": "Composition.section.entry",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "profile",
+							"path": "reference"
+						}
+					],
+					"rules": "open"
+				},
+				"short": "entry"
+			},
+			{
+				"id": "Composition.section:social_history_section.entry:sliceEntry",
+				"path": "Composition.section.entry",
+				"sliceName": "sliceEntry",
+				"short": "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc. ",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus"
+					},
+					{
+						"code": "Reference",
+						"targetProfile": "http://hl7.org/fhir/StructureDefinition/Observation"
+					}
+				]
+			},
+			{
+				"id": "Composition.section:procedures_section",
+				"extension": [
+					{
+						"url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
+						"valueString": "Section"
+					}
+				],
+				"path": "Composition.section",
+				"sliceName": "procedures_section",
+				"label": "Procedures Section",
+				"short": "Procedures Section",
+				"comment": "Procedures Section",
+				"max": "1"
+			},
+			{
+				"id": "Composition.section:procedures_section.title",
+				"path": "Composition.section.title",
+				"short": "title",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:procedures_section.code",
+				"path": "Composition.section.code",
+				"label": "History of procedures",
+				"short": "History of procedures",
+				"min": 1,
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "47519-4"
+						}
+					]
+				}
+			},
+			{
+				"id": "Composition.section:procedures_section.text",
+				"path": "Composition.section.text",
+				"short": "text",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:procedures_section.entry",
+				"path": "Composition.section.entry",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "profile",
+							"path": "reference"
+						}
+					],
+					"rules": "open"
+				},
+				"short": "entry"
+			},
+			{
+				"id": "Composition.section:procedures_section.entry:sliceEntry",
+				"path": "Composition.section.entry",
+				"sliceName": "sliceEntry",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"
+					}
+				]
+			},
+			{
+				"id": "Composition.section:nutrition_section",
+				"extension": [
+					{
+						"url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
+						"valueString": "Section"
+					}
+				],
+				"path": "Composition.section",
+				"sliceName": "nutrition_section",
+				"label": "Nutrition Section",
+				"short": "Nutrition Section",
+				"comment": "Nutrition Section",
+				"max": "1"
+			},
+			{
+				"id": "Composition.section:nutrition_section.title",
+				"path": "Composition.section.title",
+				"short": "title",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:nutrition_section.code",
+				"path": "Composition.section.code",
+				"label": "Diet and nutrition",
+				"short": "Diet and nutrition",
+				"min": 1,
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "61144-2"
+						}
+					]
+				}
+			},
+			{
+				"id": "Composition.section:nutrition_section.text",
+				"path": "Composition.section.text",
+				"short": "text",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:nutrition_section.entry",
+				"path": "Composition.section.entry",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "profile",
+							"path": "reference"
+						}
+					],
+					"rules": "open"
+				},
+				"short": "entry"
+			},
+			{
+				"id": "Composition.section:nutrition_section.entry:sliceEntry",
+				"path": "Composition.section.entry",
+				"sliceName": "sliceEntry",
+				"short": "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc. ",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": "http://hl7.org/fhir/StructureDefinition/Observation"
+					}
+				]
+			},
+			{
+				"id": "Composition.section:mental_status_section",
+				"extension": [
+					{
+						"url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
+						"valueString": "Section"
+					}
+				],
+				"path": "Composition.section",
+				"sliceName": "mental_status_section",
+				"label": "Mental Status Section",
+				"short": "Mental Status Section",
+				"comment": "Mental Status Section",
+				"max": "1"
+			},
+			{
+				"id": "Composition.section:mental_status_section.title",
+				"path": "Composition.section.title",
+				"short": "title",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:mental_status_section.code",
+				"path": "Composition.section.code",
+				"label": "Mental status",
+				"short": "Mental status",
+				"min": 1,
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "10190-7"
+						}
+					]
+				}
+			},
+			{
+				"id": "Composition.section:mental_status_section.text",
+				"path": "Composition.section.text",
+				"short": "text",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:mental_status_section.entry",
+				"path": "Composition.section.entry",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "profile",
+							"path": "reference"
+						}
+					],
+					"rules": "open"
+				},
+				"short": "entry"
+			},
+			{
+				"id": "Composition.section:mental_status_section.entry:sliceEntry",
+				"path": "Composition.section.entry",
+				"sliceName": "sliceEntry",
+				"short": "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc. ",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": "http://hl7.org/fhir/StructureDefinition/Observation"
+					}
+				]
+			},
+			{
+				"id": "Composition.section:history_of_present_illness_section",
+				"extension": [
+					{
+						"url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
+						"valueString": "Section"
+					}
+				],
+				"path": "Composition.section",
+				"sliceName": "history_of_present_illness_section",
+				"label": "History of Present Illness Section",
+				"short": "History of Present Illness Section"
+			},
+			{
+				"id": "Composition.section:history_of_present_illness_section.title",
+				"path": "Composition.section.title",
+				"short": "title",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:history_of_present_illness_section.code",
+				"path": "Composition.section.code",
+				"short": "code",
+				"min": 1,
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"code": "10164-2"
+						}
+					]
+				}
+			},
+			{
+				"id": "Composition.section:history_of_present_illness_section.text",
+				"path": "Composition.section.text",
+				"short": "This section contains only human readable content",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:functional_status_section",
+				"extension": [
+					{
+						"url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
+						"valueString": "Section"
+					}
+				],
+				"path": "Composition.section",
+				"sliceName": "functional_status_section",
+				"label": "Functional Status Section",
+				"short": "Functional Status Section",
+				"comment": "Functional Status Section",
+				"max": "1"
+			},
+			{
+				"id": "Composition.section:functional_status_section.title",
+				"path": "Composition.section.title",
+				"short": "title",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:functional_status_section.code",
+				"path": "Composition.section.code",
+				"label": "Functional status assessment",
+				"short": "Functional status assessment",
+				"min": 1,
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "47420-5"
+						}
+					]
+				}
+			},
+			{
+				"id": "Composition.section:functional_status_section.text",
+				"path": "Composition.section.text",
+				"short": "text",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:functional_status_section.entry",
+				"path": "Composition.section.entry",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "profile",
+							"path": "reference"
+						}
+					],
+					"rules": "open"
+				},
+				"short": "entry"
+			},
+			{
+				"id": "Composition.section:functional_status_section.entry:sliceEntry",
+				"path": "Composition.section.entry",
+				"sliceName": "sliceEntry",
+				"short": "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc. ",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": "http://hl7.org/fhir/StructureDefinition/Observation"
+					}
+				]
+			},
+			{
+				"id": "Composition.section:assessment_section",
+				"extension": [
+					{
+						"url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
+						"valueString": "Section"
+					}
+				],
+				"path": "Composition.section",
+				"sliceName": "assessment_section",
+				"label": "Assessment Section",
+				"short": "Assessment Section"
+			},
+			{
+				"id": "Composition.section:assessment_section.title",
+				"path": "Composition.section.title",
+				"short": "title",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:assessment_section.code",
+				"path": "Composition.section.code",
+				"short": "code",
+				"min": 1,
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "51848-0"
+						}
+					]
+				}
+			},
+			{
+				"id": "Composition.section:assessment_section.text",
+				"path": "Composition.section.text",
+				"short": "This section contains only human readable content",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:admission_medications_section",
+				"extension": [
+					{
+						"url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
+						"valueString": "Section"
+					}
+				],
+				"path": "Composition.section",
+				"sliceName": "admission_medications_section",
+				"label": "Admission Medications Section",
+				"short": "Admission Medications Section",
+				"max": "1"
+			},
+			{
+				"id": "Composition.section:admission_medications_section.title",
+				"path": "Composition.section.title",
+				"short": "title",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:admission_medications_section.code",
+				"path": "Composition.section.code",
+				"label": "Medications on admission",
+				"short": "Medications on admission",
+				"min": 1,
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "42346-7"
+						}
+					]
+				}
+			},
+			{
+				"id": "Composition.section:admission_medications_section.text",
+				"path": "Composition.section.text",
+				"short": "text",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:admission_medications_section.entry",
+				"path": "Composition.section.entry",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "profile",
+							"path": "reference"
+						}
+					],
+					"rules": "open"
+				},
+				"short": "entry"
+			},
+			{
+				"id": "Composition.section:admission_medications_section.entry:sliceEntry",
+				"path": "Composition.section.entry",
+				"sliceName": "sliceEntry",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationstatement"
+					}
+				]
+			},
+			{
+				"id": "Composition.section:encounters_section",
+				"extension": [
+					{
+						"url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
+						"valueString": "Section"
+					}
+				],
+				"path": "Composition.section",
+				"sliceName": "encounters_section",
+				"label": "Encounters Section",
+				"short": "Encounters Section",
+				"comment": "Encounters Section",
+				"max": "1"
+			},
+			{
+				"id": "Composition.section:encounters_section.title",
+				"path": "Composition.section.title",
+				"short": "title",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:encounters_section.code",
+				"path": "Composition.section.code",
+				"label": "Encounters",
+				"short": "Encounters",
+				"min": 1,
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "46240-8"
+						}
+					]
+				}
+			},
+			{
+				"id": "Composition.section:encounters_section.text",
+				"path": "Composition.section.text",
+				"short": "text",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:encounters_section.entry",
+				"path": "Composition.section.entry",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "profile",
+							"path": "reference"
+						}
+					],
+					"rules": "open"
+				},
+				"short": "entry"
+			},
+			{
+				"id": "Composition.section:encounters_section.entry:sliceEntry",
+				"path": "Composition.section.entry",
+				"sliceName": "sliceEntry",
+				"short": "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc. ",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": "http://hl7.org/fhir/StructureDefinition/Encounter"
+					}
+				]
+			},
+			{
+				"id": "Composition.section:general_status_section",
+				"extension": [
+					{
+						"url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
+						"valueString": "Section"
+					}
+				],
+				"path": "Composition.section",
+				"sliceName": "general_status_section",
+				"label": "General Status Section",
+				"short": "General Status Section"
+			},
+			{
+				"id": "Composition.section:general_status_section.title",
+				"path": "Composition.section.title",
+				"short": "title",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:general_status_section.code",
+				"path": "Composition.section.code",
+				"short": "code",
+				"min": 1,
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "10210-3"
+						}
+					]
+				}
+			},
+			{
+				"id": "Composition.section:general_status_section.text",
+				"path": "Composition.section.text",
+				"short": "This section contains only human readable content",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:history_of_past_illness_section",
+				"extension": [
+					{
+						"url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
+						"valueString": "Section"
+					}
+				],
+				"path": "Composition.section",
+				"sliceName": "history_of_past_illness_section",
+				"label": "History of Past Illness Section",
+				"short": "History of Past Illness Section"
+			},
+			{
+				"id": "Composition.section:history_of_past_illness_section.title",
+				"path": "Composition.section.title",
+				"short": "title",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:history_of_past_illness_section.code",
+				"path": "Composition.section.code",
+				"short": "code",
+				"min": 1,
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "11348-0"
+						}
+					]
+				}
+			},
+			{
+				"id": "Composition.section:history_of_past_illness_section.text",
+				"path": "Composition.section.text",
+				"short": "text",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:history_of_past_illness_section.entry",
+				"path": "Composition.section.entry",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "profile",
+							"path": "reference"
+						}
+					],
+					"rules": "open"
+				},
+				"short": "entry"
+			},
+			{
+				"id": "Composition.section:history_of_past_illness_section.entry:sliceEntry",
+				"path": "Composition.section.entry",
+				"sliceName": "sliceEntry",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"
+					}
+				]
+			},
+			{
+				"id": "Composition.section:immunizations_section",
+				"extension": [
+					{
+						"url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
+						"valueString": "Section"
+					}
+				],
+				"path": "Composition.section",
+				"sliceName": "immunizations_section",
+				"label": "Immunizations Section",
+				"short": "Immunizations Section",
+				"comment": "Immunizations Section",
+				"max": "1"
+			},
+			{
+				"id": "Composition.section:immunizations_section.title",
+				"path": "Composition.section.title",
+				"short": "title",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:immunizations_section.code",
+				"path": "Composition.section.code",
+				"label": "History of immunization",
+				"short": "History of immunization",
+				"min": 1,
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "11369-6"
+						}
+					]
+				}
+			},
+			{
+				"id": "Composition.section:immunizations_section.text",
+				"path": "Composition.section.text",
+				"short": "text",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:immunizations_section.entry",
+				"path": "Composition.section.entry",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "profile",
+							"path": "reference"
+						}
+					],
+					"rules": "open"
+				},
+				"short": "entry"
+			},
+			{
+				"id": "Composition.section:immunizations_section.entry:sliceEntry",
+				"path": "Composition.section.entry",
+				"sliceName": "sliceEntry",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization"
+					}
+				]
+			},
+			{
+				"id": "Composition.section:medical_equipment_section",
+				"extension": [
+					{
+						"url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
+						"valueString": "Section"
+					}
+				],
+				"path": "Composition.section",
+				"sliceName": "medical_equipment_section",
+				"label": "Medical Equipment Section",
+				"short": "Medical Equipment Section",
+				"comment": "Medical Equipment Section",
+				"max": "1"
+			},
+			{
+				"id": "Composition.section:medical_equipment_section.title",
+				"path": "Composition.section.title",
+				"short": "title",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:medical_equipment_section.code",
+				"path": "Composition.section.code",
+				"label": "Medical equipment",
+				"short": "Medical equipment",
+				"min": 1,
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "46264-8"
+						}
+					]
+				}
+			},
+			{
+				"id": "Composition.section:medical_equipment_section.text",
+				"path": "Composition.section.text",
+				"short": "text",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:medical_equipment_section.entry",
+				"path": "Composition.section.entry",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "profile",
+							"path": "reference"
+						}
+					],
+					"rules": "open"
+				},
+				"short": "entry"
+			},
+			{
+				"id": "Composition.section:medical_equipment_section.entry:sliceEntry",
+				"path": "Composition.section.entry",
+				"sliceName": "sliceEntry",
+				"short": "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc. ",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": "http://hl7.org/fhir/StructureDefinition/Device"
+					}
+				]
+			},
+			{
+				"id": "Composition.section:payers_section",
+				"extension": [
+					{
+						"url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
+						"valueString": "Section"
+					}
+				],
+				"path": "Composition.section",
+				"sliceName": "payers_section",
+				"label": "Payers Section",
+				"short": "Payers Section"
+			},
+			{
+				"id": "Composition.section:payers_section.title",
+				"path": "Composition.section.title",
+				"short": "title",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:payers_section.code",
+				"path": "Composition.section.code",
+				"short": "code",
+				"min": 1,
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "48768-6"
+						}
+					]
+				}
+			},
+			{
+				"id": "Composition.section:payers_section.text",
+				"path": "Composition.section.text",
+				"short": "text",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:payers_section.entry",
+				"path": "Composition.section.entry",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "profile",
+							"path": "reference"
+						}
+					],
+					"rules": "open"
+				},
+				"short": "entry"
+			},
+			{
+				"id": "Composition.section:payers_section.entry:sliceEntry",
+				"path": "Composition.section.entry",
+				"sliceName": "sliceEntry",
+				"short": "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc. ",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": "http://hl7.org/fhir/StructureDefinition/Coverage"
+					}
+				]
+			},
+			{
+				"id": "Composition.section:plan_of_treatment_section",
+				"extension": [
+					{
+						"url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
+						"valueString": "Section"
+					}
+				],
+				"path": "Composition.section",
+				"sliceName": "plan_of_treatment_section",
+				"label": "Plan of Treatment Section",
+				"short": "Plan of Treatment Section",
+				"comment": "Plan of Treatment Section",
+				"max": "1"
+			},
+			{
+				"id": "Composition.section:plan_of_treatment_section.title",
+				"path": "Composition.section.title",
+				"short": "title",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:plan_of_treatment_section.code",
+				"path": "Composition.section.code",
+				"label": "Plan of treatment",
+				"short": "Plan of treatment",
+				"min": 1,
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "18776-5"
+						}
+					]
+				}
+			},
+			{
+				"id": "Composition.section:plan_of_treatment_section.text",
+				"path": "Composition.section.text",
+				"short": "text",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:plan_of_treatment_section.entry",
+				"path": "Composition.section.entry",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "profile",
+							"path": "reference"
+						}
+					],
+					"rules": "open"
+				},
+				"short": "entry"
+			},
+			{
+				"id": "Composition.section:plan_of_treatment_section.entry:sliceEntry",
+				"path": "Composition.section.entry",
+				"sliceName": "sliceEntry",
+				"short": "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc. ",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal"
+					},
+					{
+						"code": "Reference",
+						"targetProfile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+					},
+					{
+						"code": "Reference",
+						"targetProfile": "http://hl7.org/fhir/StructureDefinition/Communication"
+					},
+					{
+						"code": "Reference",
+						"targetProfile": "http://hl7.org/fhir/StructureDefinition/Appointment"
+					},
+					{
+						"code": "Reference",
+						"targetProfile": "http://hl7.org/fhir/StructureDefinition/CommunicationRequest"
+					},
+					{
+						"code": "Reference",
+						"targetProfile": "http://hl7.org/fhir/StructureDefinition/DeviceRequest"
+					},
+					{
+						"code": "Reference",
+						"targetProfile": "http://hl7.org/fhir/StructureDefinition/NutritionOrder"
+					},
+					{
+						"code": "Reference",
+						"targetProfile": "http://hl7.org/fhir/StructureDefinition/Task"
+					},
+					{
+						"code": "Reference",
+						"targetProfile": "http://hl7.org/fhir/StructureDefinition/ServiceRequest"
+					},
+					{
+						"code": "Reference",
+						"targetProfile": "http://hl7.org/fhir/StructureDefinition/VisionPrescription"
+					},
+					{
+						"code": "Reference",
+						"targetProfile": "http://hl7.org/fhir/StructureDefinition/RequestGroup"
+					}
+				]
+			},
+			{
+				"id": "Composition.section:family_history_section",
+				"extension": [
+					{
+						"url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
+						"valueString": "Section"
+					}
+				],
+				"path": "Composition.section",
+				"sliceName": "family_history_section",
+				"label": "Family History Section",
+				"short": "Family History Section",
+				"comment": "Family History Section",
+				"max": "1"
+			},
+			{
+				"id": "Composition.section:family_history_section.title",
+				"path": "Composition.section.title",
+				"short": "title",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:family_history_section.code",
+				"path": "Composition.section.code",
+				"label": "History of family member diseases",
+				"short": "History of family member diseases",
+				"min": 1,
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "10157-6"
+						}
+					]
+				}
+			},
+			{
+				"id": "Composition.section:family_history_section.text",
+				"path": "Composition.section.text",
+				"short": "text",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:family_history_section.entry",
+				"path": "Composition.section.entry",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "profile",
+							"path": "reference"
+						}
+					],
+					"rules": "open"
+				},
+				"short": "entry"
+			},
+			{
+				"id": "Composition.section:family_history_section.entry:sliceEntry",
+				"path": "Composition.section.entry",
+				"sliceName": "sliceEntry",
+				"short": "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc. ",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": "http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory"
+					}
+				]
+			},
+			{
+				"id": "Composition.section:admission_diagnosis_section",
+				"extension": [
+					{
+						"url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
+						"valueString": "Section"
+					}
+				],
+				"path": "Composition.section",
+				"sliceName": "admission_diagnosis_section",
+				"label": "Admission Diagnosis Section",
+				"short": "Admission Diagnosis Section"
+			},
+			{
+				"id": "Composition.section:admission_diagnosis_section.title",
+				"path": "Composition.section.title",
+				"short": "title",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:admission_diagnosis_section.code",
+				"path": "Composition.section.code",
+				"short": "code",
+				"min": 1,
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "46241-6"
+						}
+					]
+				}
+			},
+			{
+				"id": "Composition.section:admission_diagnosis_section.text",
+				"path": "Composition.section.text",
+				"short": "text",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:admission_diagnosis_section.entry",
+				"path": "Composition.section.entry",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "profile",
+							"path": "reference"
+						}
+					],
+					"rules": "open"
+				},
+				"short": "entry"
+			},
+			{
+				"id": "Composition.section:admission_diagnosis_section.entry:sliceEntry",
+				"path": "Composition.section.entry",
+				"sliceName": "sliceEntry",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"
+					}
+				]
+			},
+			{
+				"id": "Composition.section:assessment_and_plan_section",
+				"extension": [
+					{
+						"url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
+						"valueString": "Section"
+					}
+				],
+				"path": "Composition.section",
+				"sliceName": "assessment_and_plan_section",
+				"label": "Assessment and Plan Section",
+				"short": "Assessment and Plan Section. This section represents the clinician’s conclusions and working assumptions that will guide treatment of the patient. The Assessment and Plan Section may be combined or separated to meet local policy requirements.",
+				"max": "1"
+			},
+			{
+				"id": "Composition.section:assessment_and_plan_section.title",
+				"path": "Composition.section.title",
+				"short": "title",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:assessment_and_plan_section.code",
+				"path": "Composition.section.code",
+				"short": "code",
+				"min": 1,
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "51847-2"
+						}
+					]
+				}
+			},
+			{
+				"id": "Composition.section:assessment_and_plan_section.text",
+				"path": "Composition.section.text",
+				"short": "text",
+				"min": 1
+			},
+			{
+				"id": "Composition.section:assessment_and_plan_section.entry",
+				"path": "Composition.section.entry",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "profile",
+							"path": "reference"
+						}
+					],
+					"rules": "open"
+				}
+			},
+			{
+				"id": "Composition.section:assessment_and_plan_section.entry:sliceEntry",
+				"path": "Composition.section.entry",
+				"sliceName": "sliceEntry",
+				"short": "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc. ",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"
+					},
+					{
+						"code": "Reference",
+						"targetProfile": "http://hl7.org/fhir/StructureDefinition/Observation"
+					},
+					{
+						"code": "Reference",
+						"targetProfile": "http://hl7.org/fhir/StructureDefinition/Communication"
+					}
+				]
+			}
+		]
+	}
+}

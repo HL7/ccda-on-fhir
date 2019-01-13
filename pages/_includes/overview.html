@@ -1,66 +1,80 @@
-<div>
-    <h3> Scope </h3>
-    <p> To represent Consolidated CDA Templates for Clinical Notes (C-CDA) 2.1 templates using FHIR
-        profiles.</p>
-    <p>This first stage of the project defines all the C-CDA document-level profiles on the
-        Composition resource and contained sections.</p>
-    <p>Any coded data used by sections will be represented using relevant U.S. Core FHIR
-        profiles where they exist. FHIR profiles defined by other work groups or unconstrained FHIR resources may also be referenced if no appropriate US Core Profile exist.</p>
-    <h3>Implementation Notes</h3>
-    <p>Implementers moving from C-CDA to FHIR need to be aware that the goal of this project is to address the same use case as Consolidated CDA (clinical documentation for primary and transfer of care scenarios in the US), but the syntax, methodologies, and value sets in FHIR are often quite different from those in C-CDA. In particular, implementers need to be aware of the issues listed below:</p>
-    <ul>
-    	<li>The value sets used in US Core and FHIR in general are not fully aligned with those in C-CDA.</li>
-    	<li>The approaches for negation used in C-CDA and the Core FHIR specification are quite different.</li>
-    	<li>The level of granularity between C-CDA templates and FHIR resources/profiles is often different, so there will not be a 1:1 mapping between templates and profiles. Some examples include:
-    	    <ul>
-    	        <li>Multiple templates like Health Concern and Problem Observation map to a single US Core Condition</li>
-    	        <li>C-CDA has 3 kids of procedure templates that all map to the single US Core Procedure profile</li>
-    	        <li>In C-CDA the use the moodCode attribute can differentiate between events and planned acts using a single template but in FHIR these are often separate resources (event vs. request resources)</li>
-    	        <li>In C-CDA multiple observations such as lab results are wrapped in an Organizer, whereas in FHIR the Observation resource itself can contain multiple Observations as subcomponents</li>
-    	    </ul>
-    	</li>
 
-    </ul>
-    <p>Implementers need to follow the rules and apply the value sets used by the target specification, and this will often require significant data and vocabulary mapping. implementers moving from C-CDA to C-CDA on FHIR will need to review the US Core profiles and value sets in  core FHIR resources and ensure that their instances FHIR instances are compliant.
-    We hope that ongoing work in HL7 will better align US Core, C-CDA, and the Core FHIR specifications in the future. </p>
-    <p>We encourage implementers to refer to the ongoing C-CDA to FHIR mapping work that is described on the <a href="http://wiki.hl7.org/index.php?title=C-CDA_on_FHIR#C-CDA.2FFHIR_Mapping">C-CDA on FHIR wiki page</a> for assistance when moving from C-CDA to FHIR. </p>
+  <div>
+    <h2>Introduction</h2>
+    <h3>Purpose</h3>
+    <p>
+  The purpose of this implementation guide (IG) is to specify standards for electronic submission of Healthcare Associated Infection (HAI) reports to the National Healthcare Safety Network (NHSN) of the Centers for Disease Control and Prevention (CDC). This IG contains a library of FHIR profiles for electronic submission of HAI reports to the NHSN.
+</p>
+    <p>As reports are modified and new report types are defined, CDC and Health Level Seven (HL7) will develop and publish additional constraints.</p>
+    <p>Throughout this process, CDC remains the authority on NHSN data collection protocols. When healthcare enterprises choose to participate in NHSN, they must report to CDC occurrences such as specific reportable procedures, even those without complications, and events such as a bloodstream infection, either confirmed by a positive blood culture or supported by a patient’s clinical symptoms. This specification opens the channel for data submission by all applications compliant with the data coding requirements defined here.</p>
+    <p>Note that participation in the NHSN requires enrollment and filing of reporting plans, which are not defined by this specification. For an overview of NHSN and full information on NHSN participation requirements, see: <a
+        href="http://www.cdc.gov/nhsn"
+      >http://www.cdc.gov/nhsn</a>. Provisions of the Public Health Service Act protect all data reported to NHSN from discovery through the Freedom of Information Act (FOIA).</p>
+    <div>
+      <h3>Relationship to Another Standard</h3>
 
-    <h3>References<br/>
-    </h3>
-    <table class="codes">
-        <tbody>
+      <p>Starting in the May 2018 ballot cycle, HL7 will develop this FHIR Implementation Guide in parallel with the existing CDA Implementation Guide. This new standard will include all new forms as they are added to the HAI work. We anticipate several STU releases on the path to a Normative Release 1 of the <em
+            style="mso-bidi-font-style:normal"
+          >HL7 Implmentaion Guide for FHIR Release 4: Healthcare Associated Infection Reports</em>. The FHIR and CDA implementation guides will align. A change to one standard will require the same change in the other standard. In this release, the new form included in both the CDA and FHIR standards is the Late Onset Sepsis/Meningitis Event (LOS) Report numerator.
+      </p>
+
+      <div>
+        <h3>Audience</h3>
+        <p>The audience for this work is all developers of software systems who want to enable their systems for reporting HAI data to the NHSN.</p>
+      </div>
+      <div>
+        <h2>Design Considerations</h2>
+        <ul>
+          <li>This IG specifies a FHIR Questionnaire-based approach. This approach takes advantage of the FHIR Questionnaire resource that has been desigened as an organized collection of questions intended to solicit information from individuals involved in the healthcare domain. This closely mirrors the actual NHSN forms.</li>
+          <ul>
+            <li>The Questionnaire profile <a href="StructureDefinition-hai-report-questionnaire.html">Healthcare Associated Infection Report Questionnaire</a> defines constraints that all HAI NHSN Forms (Questionnaire instances) must conform to.</li>
+            <li>The QuestionnaireResponse profile <a href="StructureDefinition-hai-report-questionnaire.html">Healthcare Associated Infection Report Questionnaire</a> defines constraints that all hospital-completed responses (QuestionnaireResponse instances) must conform to.</li>
+            <li>The Questionnaire instance <a href="Questionnaire-hai-questionnaire-los-event.html">Questionnaire/hai-questionnaire-los-event</a> defines the questions and possible answers in the Late Onset Sepsis/Meningitis Event (LOS) Report.</li>
+            <li>The QuestionnaireResponse instance <a href="QuestionnaireResponse-hai-questionnaireResponse-los-event.html">Questionnaire/hai-questionnaireResponse-los-event</a> is an example of a completed Late Onset Sepsis/Meningitis Event (LOS) Report.</li>
+          </ul>
+          <li>As this IG is based on the Current FHIR Build, at the current time it is not technically possible to reference the US Core Profiles and as such the base FHIR resources have been referenced instead. It is expected that the US Core profiles will be updated to the current release before publication of this IG and at that time, the base FHIR resource references will be replaced with the US Core profiles.</li>
+        </ul>
+      </div>
+      <div>
+        <h2>References</h2>
+
+        <p>Note: Where possible, the profiles contained in this prototype implementation guide are based on the US Core profiles. (See Design Considerations above).</p>
+        <table class="codes">
+          <tbody>
             <tr>
-                <td>
-                    <strong>Name</strong>
-                </td>
-                <td>
-                    <strong>Definition</strong>
-                </td>
+              <td>
+                <strong>Name</strong>
+              </td>
+              <td>
+                <strong>Definition</strong>
+              </td>
             </tr>
             <tr>
-                <td>
-                    <a href="http://hl7.org/implement/standards/product_brief.cfm?product_id=379"
-                        >HL7 Implementation Guide for CDA Release 2: Consolidated CDA Templates for
-                        Clinical Notes</a>
-                </td>
-                <td> The Consolidated CDA (C-CDA) implementation guide contains a library of CDA
-                    templates, incorporating and harmonizing previous efforts from Health Level
-                    Seven (HL7), Integrating the Healthcare Enterprise (IHE), and Health Information
-                    Technology Standards Panel (HITSP). It represents harmonization of the HL7
-                    Health Story guides, HITSP C32, related components of IHE Patient Care
-                    Coordination (IHE PCC), and Continuity of Care (CCD). C-CDA Release 1 included
-                    all required CDA templates in Final Rules for Stage 1 Meaningful Use and 45 CFR
-                    Part 170 Health Information Technology: Initial Set of Standards, Implementation
-                    Specifications, and Certification Criteria for Electronic Health Record
-                    Technology; Final Rule. </td>
+              <td>
+                <a href="https://www.hl7.org/implement/standards/product_brief.cfm?product_id=426"
+                  >HL7 CDA® R2 Implementation Guide: NHSN Healthcare Associated Infection Reports, Release 3 - US Realm</a>
+              </td>
+              <td>
+          This project developed an implementation guide constraining CDA Release 2. The implementation guide supports electronic submission of HAI data to the National Healthcare Safety Network. CDC provided NHSN developers, vocabulary experts and CDA experts to support this project. SDWG reviewed the design and draft specification before ballot. 
+        </td>
             </tr>
             <tr>
-                <td>
-                    <a href="http://hl7.org/fhir/us/core">U.S. Core FHIR Implementation Guide</a>
-                </td>
-                <td> A U.S. Realm guide for making use of FHIR resources to support queries between
-                    systems within an enterprise and across enterprises </td>
+              <td>
+                <a href="http://hl7.org/fhir/us/core/index.html">US Core Implementation Guide (Release 1)</a>
+              </td>
+              <td>
+          The US Core Implementation Guide is based on <a href="http://hl7.org/fhir/STU3"
+                  >FHIR Version 3.0.0</a> and defines the minimum conformance requirements for accessing patient data as defined by the <a
+                  href="http://argonautwiki.hl7.org/index.php?title=Main_Page">Argonaut</a> pilot implementations and the <a
+                  href="https://www.healthit.gov/sites/default/files/2015Ed_CCG_CCDS.pdf"
+                  >ONC 2015 Edition Common Clinical Data Set (CCDS)</a>. These profiles are intended to be the foundation for future US Realm FHIR implementation guides. In addition to Argonaut, they are used by <a
+                  href="http://hl7.org/fhir/us/daf-research/index.html">DAF-Research</a>, <a
+                  href="https://oncprojectracking.healthit.gov/wiki/display/TechLabSC/CQF+Home">QI-Core</a>, and <a href="http://www.opencimi.org"
+                  >CIMI</a>. Under the guidance of HL7 and the HL7 US Realm Steering Committee, the content will expand in future versions to meet the needs specific to the US Realm. 
+        </td>
             </tr>
-        </tbody>
-    </table>
-</div>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
