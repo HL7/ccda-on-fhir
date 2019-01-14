@@ -175,7 +175,7 @@ For further information see the C-CDA specification here: http://www.hl7.org/imp
 </tr>
 <tr>
 <td><a href="StructureDefinition-CCDA-on-FHIR-In-Fulfillment-Of-Order.html">C-CDA on FHIR In Fulfillment Of Order</a></td>
-<td>The C-CDA on FHIR In Fulfillment Of Order Extension represents orders that are fulfilled by this document such as a radiologists’ report of an x-ray.
+<td>The C-CDA on FHIR In Fulfillment Of Order Extension represents orders that are fulfilled by this document such as a radiologists report of an x-ray.
 
 For further information see the C-CDA specification here: http://www.hl7.org/implement/standards/product_brief.cfm?product_id=408.</td>
 </tr>
@@ -199,7 +199,7 @@ For further information see the C-CDA specification here: http://www.hl7.org/imp
 </tr>
 <tr>
 <td><a href="StructureDefinition-CCDA-on-FHIR-Performer.html">C-CDA on FHIR Performer</a></td>
-<td>The C-CDA on FHIR Performer Extension represents clinicians who actually and principally carry out the clinical services being documented. In a transfer of care this represents the healthcare providers involved in the current or pertinent historical care of the patient. Preferably, the patient’s key healthcare care team members would be listed, particularly their primary physician and any active consulting physicians, therapists, and counselors.
+<td>The C-CDA on FHIR Performer Extension represents clinicians who actually and principally carry out the clinical services being documented. In a transfer of care this represents the healthcare providers involved in the current or pertinent historical care of the patient. Preferably, the patients key healthcare care team members would be listed, particularly their primary physician and any active consulting physicians, therapists, and counselors.
 
 For further information see the C-CDA specification here: http://www.hl7.org/implement/standards/product_brief.cfm?product_id=408.</td>
 </tr>
