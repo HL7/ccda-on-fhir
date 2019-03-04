@@ -1,0 +1,35 @@
+{
+ "package-id" : "hl7.fhir.us.ccda",
+ "title" : "C-CDA on FHIR Implementation Guide", 
+ "canonical" : "http://hl7.org/fhir/us/ccda", 
+ "introduction" : "The C-CDA on FHIR Implementation Guide is a US Realm Implementation Guide of the FHIR Specification addressing the key aspects of Consolidated CDA (C-CDA) required for Meaningful Use (MU). This IG focuses on the clinical document header and narrative constraints necessary for human readability, and references the Data Access Framework (DAF) implementation guide for coded data representation",
+ "list" : [{
+  "version" : "current",
+  "desc" : "Continuous Integration Build (latest in version control)",
+  "path" : "http://build.fhir.org/ig/HL7/ccda-on-fhir",
+  "status" : "ci-build",
+  "current" : true
+ },{
+  "version" : "1.0.0",  
+  "date" : "2018-04-07", 
+  "desc" : "STU 1 Published version (permanent home). Note that the version number was reset to 1.0.0 for this version since the IG acquired its own version separate to the main FHIR version)",   
+  "path" : "http://hl7.org/fhir/us/ccda/STU1",   
+  "status" : "trial-use",   
+  "sequence" : "STU 1",
+  "current" : true
+ },{
+  "version" : "1.8.0",  
+  "date" : "2016-12-06", 
+  "desc" : "STU 1 2nd Ballot",   
+  "path" : "http://hl7.org/fhir/us/ccda/2017Jan",   
+  "status" : "ballot",   
+  "sequence" : "STU 1"
+ },{
+  "version" : "1.6.0",  
+  "date" : "2016-08-11", 
+  "desc" : "STU 1 1st Ballot",   
+  "path" : "http://hl7.org/fhir/us/ccda/2016Sep",   
+  "status" : "ballot",   
+  "sequence" : "STU 1"
+ }]
+}
