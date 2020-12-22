@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Practitioner
+    xmlns="http://hl7.org/fhir">
+    <id value="ccda-practitioner-example"/>
+    <meta>
+        <versionId value="6"/>
+        <lastUpdated value="2020-08-12T21:30:18.070+00:00"/>
+        <source value="#csn482LCsnDWyxbW"/>
+        <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"/>
+    </meta>
+    <identifier>
+        <use value="official"/>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+                <code value="PRN"/>
+                <display value="Provider number"/>
+            </coding>
+            <text value="US National Provider Identifier"/>
+        </type>
+        <system value="http://hl7.org/fhir/sid/us-npi"/>
+        <value value="9999991011"/>
+    </identifier>
+    <name>
+        <family value="Richard"/>
+        <given value="Brenda"/>
+        <given value="Jennings"/>
+        <suffix value="MD"/>
+    </name>
+    <telecom>
+        <system value="phone"/>
+        <value value="313-555-6868"/>
+        <use value="home"/>
+    </telecom>
+    <telecom>
+        <system value="phone"/>
+        <value value="313-555-6443"/>
+        <use value="work"/>
+    </telecom>
+    <address>
+        <text value="346 W Plum Avenu Dearborn MI 48123"/>
+        <line value="346 W Plum Avenue"/>
+        <city value="Dearborn"/>
+        <state value="MI"/>
+        <postalCode value="48126"/>
+    </address>
+    <gender value="female"/>
+    <birthDate value="1976-11-15"/>
+</Practitioner>

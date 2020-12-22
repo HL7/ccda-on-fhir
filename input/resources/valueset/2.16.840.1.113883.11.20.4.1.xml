@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet
+    xmlns="http://hl7.org/fhir">
+    <id value="2.16.840.1.113883.11.20.4.1"/>
+    <meta>
+        <versionId value="6"/>
+        <lastUpdated value="2020-08-19T06:35:09.726+00:00"/>
+        <source value="#8awj3JDXaUCFNlQA"/>
+    </meta>
+    <url value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.11.20.4.1"/>
+    <name value="DischargeSummaryDocumentTypeCode"/>
+    <title value="DischargeSummaryDocumentTypeCode"/>
+    <status value="active"/>
+    <publisher value="HL7 Terminology"/>
+    <description value="(Clinical Focus: Kind of discharge summary document classified by author role),(Data Element Scope: ),(Inclusion Criteria: A list of LOINC terms, intended to identify Discharge Summary Notes where component contains &quot;Discharge Summary Note&quot;, Timing = &quot;Patient&quot;, Property = Find&quot; , scale = &quot;Doc&quot;),(Exclusion Criteria: )&#xA;&#xA;This value set was imported on 6/24/2019 with a version of 20190425."/>
+    <copyright value="This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"/>
+    <compose>
+        <include>
+            <system value="http://loinc.org"/>
+            <concept>
+                <code value="11490-0"/>
+                <display value="Physician Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="18842-5"/>
+                <display value="Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="28655-9"/>
+                <display value="Attending Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="29761-4"/>
+                <display value="Dentistry Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="34105-7"/>
+                <display value="Hospital Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="34106-5"/>
+                <display value="Physician Hospital Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="34745-0"/>
+                <display value="Nurse Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="57058-0"/>
+                <display value="Maternal discharge summary note"/>
+            </concept>
+            <concept>
+                <code value="59258-4"/>
+                <display value="Emergency department Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="59259-2"/>
+                <display value="Psychiatry Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="68558-6"/>
+                <display value="Obstetrics and Gynecology Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="68572-7"/>
+                <display value="Ophthalmology Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="68578-4"/>
+                <display value="Orthopaedic surgery Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="68591-7"/>
+                <display value="Plastic surgery Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="68612-1"/>
+                <display value="Adolescent medicine Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="68626-1"/>
+                <display value="Allergy and immunology Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="68642-8"/>
+                <display value="Child and adolescent psychiatry Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="68653-5"/>
+                <display value="Clinical genetics Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="68663-4"/>
+                <display value="Developmental-behavioral pediatrics Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="68674-1"/>
+                <display value="Multi-specialty program Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="68688-1"/>
+                <display value="Neurological surgery Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="68697-2"/>
+                <display value="Neurology with special qualifications in child neurology Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="68709-5"/>
+                <display value="Pain medicine Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="68719-4"/>
+                <display value="Pediatric cardiology Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="68733-5"/>
+                <display value="Pediatric endocrinology Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="68738-4"/>
+                <display value="Pediatric gastroenterology Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="68749-1"/>
+                <display value="Pediatric hematology-oncology Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="68768-1"/>
+                <display value="Pediatric nephrology Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="68773-1"/>
+                <display value="Pediatric otolaryngology Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="68779-8"/>
+                <display value="Pediatric pulmonology Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="68795-4"/>
+                <display value="Pediatric surgery Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="68805-1"/>
+                <display value="Pediatric urology Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="68815-0"/>
+                <display value="Pediatrics Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="68823-4"/>
+                <display value="Pediatrics Hospital Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="68831-7"/>
+                <display value="Primary care Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="68841-6"/>
+                <display value="Speech-language pathology Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="68856-4"/>
+                <display value="Pediatric transplant hepatology Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="77409-1"/>
+                <display value="Cardiology Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="77417-4"/>
+                <display value="Critical care medicine Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="78263-1"/>
+                <display value="Mental health Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="78264-9"/>
+                <display value="General medicine Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="78418-1"/>
+                <display value="Neonatal perinatal medicine Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="78419-9"/>
+                <display value="Nephrology Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="78420-7"/>
+                <display value="Neurology Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="78421-5"/>
+                <display value="Oncology Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="78585-7"/>
+                <display value="Palliative care Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="80811-3"/>
+                <display value="Geriatric medicine Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="83523-1"/>
+                <display value="Cardiology Intensive care unit Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="83551-2"/>
+                <display value="Nurse practitioner Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="83712-0"/>
+                <display value="Physical medicine and rehab Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="83810-2"/>
+                <display value="Physician assistant Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="83898-7"/>
+                <display value="Psychology Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="83921-7"/>
+                <display value="Recreational therapy Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="83932-4"/>
+                <display value="Research Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="83956-3"/>
+                <display value="Social worker Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="83961-3"/>
+                <display value="Social worker Patient's home Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="83968-8"/>
+                <display value="Social worker Long term care facility Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="83993-6"/>
+                <display value="Spinal cord injury medicine Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="84013-2"/>
+                <display value="Surgery Intensive care unit Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="84017-3"/>
+                <display value="Surgery Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="84018-1"/>
+                <display value="Surgery Outpatient Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="84024-9"/>
+                <display value="Team Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="84040-5"/>
+                <display value="Urology Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="84132-0"/>
+                <display value="Primary care Patient's home Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="84139-5"/>
+                <display value="Hematology+Medical oncology Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="84179-1"/>
+                <display value="Kinesiotherapy Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="84248-4"/>
+                <display value="Nurse Emergency department Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="84254-2"/>
+                <display value="Nurse Hospital Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="84257-5"/>
+                <display value="Nurse Long term care facility Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="84262-5"/>
+                <display value="Nurse Observation unit Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="84278-1"/>
+                <display value="Nutrition and dietetics Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="84310-2"/>
+                <display value="Vocational rehabilitation Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="84321-9"/>
+                <display value="Physical therapy Outpatient Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="84328-4"/>
+                <display value="Physical therapy Hospital Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="84331-8"/>
+                <display value="Physical therapy Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="84367-2"/>
+                <display value="Otolaryngology Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="84393-8"/>
+                <display value="Occupational therapy Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="85154-3"/>
+                <display value="Pharmacology Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="85176-6"/>
+                <display value="Custodial care facility Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="85192-3"/>
+                <display value="Long term care facility Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="85200-4"/>
+                <display value="Observation unit Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="85223-6"/>
+                <display value="Case manager Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="85240-0"/>
+                <display value="Internal medicine Intensive care unit Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="85243-4"/>
+                <display value="Internal medicine Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="85433-1"/>
+                <display value="Respiratory therapy Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="85434-9"/>
+                <display value="Rheumatology Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="85440-6"/>
+                <display value="Vascular surgery Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="85442-2"/>
+                <display value="Hematology Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="85514-8"/>
+                <display value="Bariatric surgery Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="85520-5"/>
+                <display value="Child and adolescent psychology Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="85849-8"/>
+                <display value="Anesthesiology Recovery room Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="85875-3"/>
+                <display value="Nurse Recovery room Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="85878-7"/>
+                <display value="Neuropsychology Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="87235-8"/>
+                <display value="Dialysis Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="87256-4"/>
+                <display value="Addiction medicine Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="88641-6"/>
+                <display value="Community health care Adult day care center Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="88645-7"/>
+                <display value="Outpatient hospital Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="88693-7"/>
+                <display value="Patient's home Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="89214-1"/>
+                <display value="Obstetrics Discharge summary"/>
+            </concept>
+            <concept>
+                <code value="89218-2"/>
+                <display value="Gynecology Discharge summary"/>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>

@@ -1,0 +1,815 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="Progress-Note"/>
+    <meta>
+        <versionId value="8"/>
+        <lastUpdated value="2020-08-19T06:55:19.264+00:00"/>
+        <source value="#A9Jys0rnZ6U9uQpr"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/ccda/StructureDefinition/Progress-Note"/>
+    <name value="ProgressNote"/>
+    <title value="Progress Note"/>
+    <status value="active"/>
+    <publisher value="Lantana Consulting Group"/>
+    <contact>
+        <name value="Sarah Gaunt"/>
+        <telecom>
+            <system value="phone"/>
+            <value value="+6 141-029-2506"/>
+            <use value="work"/>
+        </telecom>
+        <telecom>
+            <system value="email"/>
+            <value value="sarah.gaunt@lantanagroup.com"/>
+            <use value="work"/>
+        </telecom>
+    </contact>
+    <description value="This profile represents a patient's clinical status during a hospitalization, outpatient visit, treatment with a LTPAC provider, or other healthcare encounter.&#xA;&#xA;Taber's medical dictionary defines a Progress Note as An ongoing record of a patient's illness and treatment. Physicians, nurses, consultants, and therapists record their notes concerning the progress or lack of progress made by the patient between the time of the previous note and the most recent note.&#xA;&#xA;Mosby's medical dictionary defines a Progress Note as Notes made by a nurse, physician, social worker, physical therapist, and other health care professionals that describe the patient's condition and the treatment given or planned.&#xA;&#xA;A Progress Note is not a re-evaluation note. A Progress Note is not intended to be a Progress Report for Medicare. Medicare B Section 1833(e) defines the requirements of a Medicare Progress Report."/>
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+        </coding>
+    </jurisdiction>
+    <fhirVersion value="4.0.1"/>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="Composition"/>
+    <baseDefinition value="http://hl7.org/fhir/us/ccda/StructureDefinition/US-Realm-Header"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Composition">
+            <path value="Composition"/>
+        </element>
+        <element id="Composition.type">
+            <path value="Composition.type"/>
+            <short value="type"/>
+            <mustSupport value="true"/>
+            <binding>
+                <strength value="required"/>
+                <valueSet value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.11.20.8.1"/>
+            </binding>
+        </element>
+        <element id="Composition.section">
+            <path value="Composition.section"/>
+            <slicing>
+                <discriminator>
+                    <type value="value"/>
+                    <path value="code"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+        </element>
+        <element id="Composition.section:assessment_section">
+            <path value="Composition.section"/>
+            <sliceName value="assessment_section"/>
+            <label value="Assessment Section"/>
+            <short value="Assessment Section"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:assessment_section.title">
+            <path value="Composition.section.title"/>
+            <short value="title"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:assessment_section.code">
+            <path value="Composition.section.code"/>
+            <label value="Assessments"/>
+            <short value="Assessments"/>
+            <min value="1"/>
+            <patternCodeableConcept>
+                <coding>
+                    <system value="http://loinc.org"/>
+                    <code value="51848-0"/>
+                </coding>
+            </patternCodeableConcept>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:assessment_section.text">
+            <path value="Composition.section.text"/>
+            <short value="This section contains only human readable content"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:allergies_and_intolerances_section">
+            <path value="Composition.section"/>
+            <sliceName value="allergies_and_intolerances_section"/>
+            <label value="Allergies and Intolerances Section"/>
+            <short value="Allergies and Intolerances Section"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:allergies_and_intolerances_section.title">
+            <path value="Composition.section.title"/>
+            <short value="title"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:allergies_and_intolerances_section.code">
+            <path value="Composition.section.code"/>
+            <label value="Allergies, adverse reactions, alerts"/>
+            <short value="Allergies, adverse reactions, alerts"/>
+            <min value="1"/>
+            <patternCodeableConcept>
+                <coding>
+                    <system value="http://loinc.org"/>
+                    <code value="48765-2"/>
+                </coding>
+            </patternCodeableConcept>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:allergies_and_intolerances_section.text">
+            <path value="Composition.section.text"/>
+            <short value="text"/>
+            <min value="1"/>
+        </element>
+        <element id="Composition.section:allergies_and_intolerances_section.entry">
+            <path value="Composition.section.entry"/>
+            <slicing>
+                <discriminator>
+                    <type value="profile"/>
+                    <path value="resolve()"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <short value="entry"/>
+        </element>
+        <element id="Composition.section:allergies_and_intolerances_section.entry:allergies_and_intolerances_entry">
+            <path value="Composition.section.entry"/>
+            <sliceName value="allergies_and_intolerances_entry"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:assessment_and_plan_section">
+            <path value="Composition.section"/>
+            <sliceName value="assessment_and_plan_section"/>
+            <label value="Assessment and Plan Section"/>
+            <short value="Assessment and Plan Section. This section represents the clinicianâs conclusions and working assumptions that will guide treatment of the patient. The Assessment and Plan Section may be combined or separated to meet local policy requirements."/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:assessment_and_plan_section.title">
+            <path value="Composition.section.title"/>
+            <short value="title"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:assessment_and_plan_section.code">
+            <path value="Composition.section.code"/>
+            <label value="Assessment and plan"/>
+            <short value="Assessment and plan"/>
+            <min value="1"/>
+            <patternCodeableConcept>
+                <coding>
+                    <system value="http://loinc.org"/>
+                    <code value="51847-2"/>
+                </coding>
+            </patternCodeableConcept>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:assessment_and_plan_section.text">
+            <path value="Composition.section.text"/>
+            <short value="text"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:assessment_and_plan_section.entry">
+            <path value="Composition.section.entry"/>
+            <slicing>
+                <discriminator>
+                    <type value="profile"/>
+                    <path value="resolve()"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+        </element>
+        <element id="Composition.section:assessment_and_plan_section.entry:assessment_and_plan_entry">
+            <path value="Composition.section.entry"/>
+            <sliceName value="assessment_and_plan_entry"/>
+            <short value="This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Communication"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:chief_complaint_section">
+            <path value="Composition.section"/>
+            <sliceName value="chief_complaint_section"/>
+            <label value="Chief Complaint Section"/>
+            <short value="Chief Complaint Section"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:chief_complaint_section.title">
+            <path value="Composition.section.title"/>
+            <short value="title"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:chief_complaint_section.code">
+            <path value="Composition.section.code"/>
+            <label value="Chief complaint"/>
+            <short value="Chief complaint"/>
+            <min value="1"/>
+            <patternCodeableConcept>
+                <coding>
+                    <system value="http://loinc.org"/>
+                    <code value="10154-3"/>
+                </coding>
+            </patternCodeableConcept>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:chief_complaint_section.text">
+            <path value="Composition.section.text"/>
+            <short value="This section contains only human readable content"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:instructions_section">
+            <path value="Composition.section"/>
+            <sliceName value="instructions_section"/>
+            <label value="Instructions Section"/>
+            <short value="Instructions Section"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:instructions_section.title">
+            <path value="Composition.section.title"/>
+            <short value="title"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:instructions_section.code">
+            <path value="Composition.section.code"/>
+            <label value="Instructions"/>
+            <short value="Instructions"/>
+            <min value="1"/>
+            <patternCodeableConcept>
+                <coding>
+                    <system value="http://loinc.org"/>
+                    <code value="69730-0"/>
+                </coding>
+            </patternCodeableConcept>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:instructions_section.text">
+            <path value="Composition.section.text"/>
+            <short value="This section contains only human readable content"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:interventions_section">
+            <path value="Composition.section"/>
+            <sliceName value="interventions_section"/>
+            <label value="Interventions Section"/>
+            <short value="Interventions Section"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:interventions_section.title">
+            <path value="Composition.section.title"/>
+            <short value="title"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:interventions_section.code">
+            <path value="Composition.section.code"/>
+            <label value="Interventions provided"/>
+            <short value="Interventions provided"/>
+            <min value="1"/>
+            <patternCodeableConcept>
+                <coding>
+                    <system value="http://loinc.org"/>
+                    <code value="62387-6"/>
+                </coding>
+            </patternCodeableConcept>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:interventions_section.text">
+            <path value="Composition.section.text"/>
+            <short value="text"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:interventions_section.entry">
+            <path value="Composition.section.entry"/>
+            <slicing>
+                <discriminator>
+                    <type value="profile"/>
+                    <path value="resolve()"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <short value="entry"/>
+        </element>
+        <element id="Composition.section:interventions_section.entry:interventions_section">
+            <path value="Composition.section.entry"/>
+            <sliceName value="interventions_section"/>
+            <short value="This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/List"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/RequestGroup"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:medications_section">
+            <path value="Composition.section"/>
+            <sliceName value="medications_section"/>
+            <label value="Medications Section"/>
+            <short value="Medications Section"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:medications_section.title">
+            <path value="Composition.section.title"/>
+            <short value="title"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:medications_section.code">
+            <path value="Composition.section.code"/>
+            <label value="History of medication use"/>
+            <short value="History of medication use"/>
+            <min value="1"/>
+            <patternCodeableConcept>
+                <coding>
+                    <system value="http://loinc.org"/>
+                    <code value="10160-0"/>
+                </coding>
+            </patternCodeableConcept>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:medications_section.text">
+            <path value="Composition.section.text"/>
+            <short value="text"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:medications_section.entry">
+            <path value="Composition.section.entry"/>
+            <slicing>
+                <discriminator>
+                    <type value="profile"/>
+                    <path value="resolve()"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <short value="entry"/>
+        </element>
+        <element id="Composition.section:medications_section.entry:medications_entry">
+            <path value="Composition.section.entry"/>
+            <sliceName value="medications_entry"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/MedicationStatement"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:nutrition_section">
+            <path value="Composition.section"/>
+            <sliceName value="nutrition_section"/>
+            <label value="Nutrition Section"/>
+            <short value="Nutrition Section"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:nutrition_section.title">
+            <path value="Composition.section.title"/>
+            <short value="title"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:nutrition_section.code">
+            <path value="Composition.section.code"/>
+            <label value="Diet and nutrition"/>
+            <short value="Diet and nutrition"/>
+            <min value="1"/>
+            <patternCodeableConcept>
+                <coding>
+                    <system value="http://loinc.org"/>
+                    <code value="61144-2"/>
+                </coding>
+            </patternCodeableConcept>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:nutrition_section.text">
+            <path value="Composition.section.text"/>
+            <short value="text"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:nutrition_section.entry">
+            <path value="Composition.section.entry"/>
+            <slicing>
+                <discriminator>
+                    <type value="profile"/>
+                    <path value="resolve()"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <short value="entry"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:nutrition_section.entry:nutrition_entry">
+            <path value="Composition.section.entry"/>
+            <sliceName value="nutrition_entry"/>
+            <short value="This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:objective_section">
+            <path value="Composition.section"/>
+            <sliceName value="objective_section"/>
+            <label value="Objective Section"/>
+            <short value="Objective Section"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:objective_section.title">
+            <path value="Composition.section.title"/>
+            <short value="title"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:objective_section.code">
+            <path value="Composition.section.code"/>
+            <label value="Objective"/>
+            <short value="Objective"/>
+            <min value="1"/>
+            <patternCodeableConcept>
+                <coding>
+                    <system value="http://loinc.org"/>
+                    <code value="61149-1"/>
+                </coding>
+            </patternCodeableConcept>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:objective_section.text">
+            <path value="Composition.section.text"/>
+            <short value="This section contains only human readable content"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:physical_exam_section">
+            <path value="Composition.section"/>
+            <sliceName value="physical_exam_section"/>
+            <label value="Physical Exam Section"/>
+            <short value="Physical Exam Section"/>
+            <comment value="Physical Exam Section"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:physical_exam_section.title">
+            <path value="Composition.section.title"/>
+            <short value="title"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:physical_exam_section.code">
+            <path value="Composition.section.code"/>
+            <label value="Physical findings"/>
+            <short value="Physical findings"/>
+            <min value="1"/>
+            <patternCodeableConcept>
+                <coding>
+                    <system value="http://loinc.org"/>
+                    <code value="29545-1"/>
+                </coding>
+            </patternCodeableConcept>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:physical_exam_section.text">
+            <path value="Composition.section.text"/>
+            <short value="text"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:physical_exam_section.entry">
+            <path value="Composition.section.entry"/>
+            <slicing>
+                <discriminator>
+                    <type value="profile"/>
+                    <path value="resolve()"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <short value="entry"/>
+        </element>
+        <element id="Composition.section:physical_exam_section.entry:physical_exam_entry">
+            <path value="Composition.section.entry"/>
+            <sliceName value="physical_exam_entry"/>
+            <short value="This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:plan_of_treatment_section">
+            <path value="Composition.section"/>
+            <sliceName value="plan_of_treatment_section"/>
+            <label value="Plan of Treatment Section"/>
+            <short value="Plan of Treatment Section"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:plan_of_treatment_section.title">
+            <path value="Composition.section.title"/>
+            <short value="title"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:plan_of_treatment_section.code">
+            <path value="Composition.section.code"/>
+            <label value="Plan of Treatment"/>
+            <short value="Plan of Treatment"/>
+            <min value="1"/>
+            <patternCodeableConcept>
+                <coding>
+                    <system value="http://loinc.org"/>
+                    <code value="18776-5"/>
+                </coding>
+            </patternCodeableConcept>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:plan_of_treatment_section.text">
+            <path value="Composition.section.text"/>
+            <short value="text"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:plan_of_treatment_section.entry">
+            <path value="Composition.section.entry"/>
+            <slicing>
+                <discriminator>
+                    <type value="profile"/>
+                    <path value="resolve()"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <short value="entry"/>
+        </element>
+        <element id="Composition.section:plan_of_treatment_section.entry:plan_of_treatment_entry">
+            <path value="Composition.section.entry"/>
+            <sliceName value="sliceEntry"/>
+            <short value="This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Communication"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Appointment"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/CommunicationRequest"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/DeviceRequest"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/NutritionOrder"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Task"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/ServiceRequest"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/VisionPrescription"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/RequestGroup"/>
+            </type>
+        </element>
+        <element id="Composition.section:problems_section">
+            <path value="Composition.section"/>
+            <sliceName value="problems_section"/>
+            <label value="Problems Section"/>
+            <short value="Problems Section"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:problems_section.title">
+            <path value="Composition.section.title"/>
+            <short value="title"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:problems_section.code">
+            <path value="Composition.section.code"/>
+            <label value="Problem list"/>
+            <short value="Problem list"/>
+            <min value="1"/>
+            <patternCodeableConcept>
+                <coding>
+                    <system value="http://loinc.org"/>
+                    <code value="11450-4"/>
+                </coding>
+            </patternCodeableConcept>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:problems_section.text">
+            <path value="Composition.section.text"/>
+            <short value="text"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:problem_section.entry">
+            <path value="Composition.section.entry"/>
+            <slicing>
+                <discriminator>
+                    <type value="profile"/>
+                    <path value="resolve()"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <short value="entry"/>
+        </element>
+        <element id="Composition.section:problem_section.entry:problem_entry">
+            <path value="Composition.section.entry"/>
+            <sliceName value="problem_entry"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:results_section">
+            <path value="Composition.section"/>
+            <sliceName value="results_section"/>
+            <label value="Results Section"/>
+            <short value="Results Section"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:results_section.title">
+            <path value="Composition.section.title"/>
+            <short value="title"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:results_section.code">
+            <path value="Composition.section.code"/>
+            <label value="Relevant diagnostic tests and/or laboratory data"/>
+            <short value="Relevant diagnostic tests and/or laboratory data"/>
+            <min value="1"/>
+            <patternCodeableConcept>
+                <coding>
+                    <system value="http://loinc.org"/>
+                    <code value="30954-2"/>
+                </coding>
+            </patternCodeableConcept>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:results_section.text">
+            <path value="Composition.section.text"/>
+            <short value="text"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:results_section.entry">
+            <path value="Composition.section.entry"/>
+            <slicing>
+                <discriminator>
+                    <type value="profile"/>
+                    <path value="resolve()"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <short value="entry"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:results_section.entry:results_entry">
+            <path value="Composition.section.entry"/>
+            <sliceName value="results_entry"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:review_of_systems_section">
+            <path value="Composition.section"/>
+            <sliceName value="review_of_systems_section"/>
+            <label value="Review of Systems Section"/>
+            <short value="Review of Systems Section"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:review_of_systems_section.title">
+            <path value="Composition.section.title"/>
+            <short value="title"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:review_of_systems_section.code">
+            <path value="Composition.section.code"/>
+            <label value="Review of systems"/>
+            <short value="Review of systems"/>
+            <min value="1"/>
+            <patternCodeableConcept>
+                <coding>
+                    <system value="http://loinc.org"/>
+                    <code value="10187-3"/>
+                </coding>
+            </patternCodeableConcept>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:review_of_systems_section.text">
+            <path value="Composition.section.text"/>
+            <short value="This section contains only human readable content"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:subjective_section">
+            <path value="Composition.section"/>
+            <sliceName value="subjective_section"/>
+            <label value="Subjective Section"/>
+            <short value="Subjective Section"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:subjective_section.title">
+            <path value="Composition.section.title"/>
+            <short value="title"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:subjective_section.code">
+            <path value="Composition.section.code"/>
+            <label value="Subjective"/>
+            <short value="Subjective"/>
+            <min value="1"/>
+            <patternCodeableConcept>
+                <coding>
+                    <system value="http://loinc.org"/>
+                    <code value="61150-9"/>
+                </coding>
+            </patternCodeableConcept>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:subjective_section.text">
+            <path value="Composition.section.text"/>
+            <short value="This section contains only human readable content"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:vital_signs_section">
+            <path value="Composition.section"/>
+            <sliceName value="vital_signs_section"/>
+            <label value="Vital Signs Section"/>
+            <short value="Vital Signs Section"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:vital_signs_section.title">
+            <path value="Composition.section.title"/>
+            <short value="title"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:vital_signs_section.code">
+            <path value="Composition.section.code"/>
+            <label value="Vital signs"/>
+            <short value="Vital signs"/>
+            <min value="1"/>
+            <patternCodeableConcept>
+                <coding>
+                    <system value="http://loinc.org"/>
+                    <code value="8716-3"/>
+                </coding>
+            </patternCodeableConcept>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:vital_signs_section.text">
+            <path value="Composition.section.text"/>
+            <short value="text"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.section:vital_signs_section.entry">
+            <path value="Composition.section.entry"/>
+            <slicing>
+                <discriminator>
+                    <type value="profile"/>
+                    <path value="resolve()"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <short value="entry"/>
+        </element>
+        <element id="Composition.section:vital_signs_section.entry:vital_signs_entry">
+            <path value="Composition.section.entry"/>
+            <sliceName value="vital_signs_entry"/>
+            <short value="This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/vitalsigns"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+    </differential>
+</StructureDefinition>

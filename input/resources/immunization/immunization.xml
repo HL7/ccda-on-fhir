@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Immunization
+    xmlns="http://hl7.org/fhir">
+    <id value="immunization"/>
+    <meta>
+        <versionId value="4"/>
+        <lastUpdated value="2020-08-12T19:18:13.351+00:00"/>
+        <source value="#GZdcyuPrL6zv6dDA"/>
+        <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization"/>
+    </meta>
+    <status value="completed"/>
+    <vaccineCode>
+        <coding>
+            <system value="http://hl7.org/fhir/sid/cvx"/>
+            <code value="158"/>
+            <display value="influenza, injectable, quadrivalent"/>
+        </coding>
+    </vaccineCode>
+    <patient>
+        <reference value="Patient/example"/>
+        <display value="Amy Shaw"/>
+    </patient>
+    <occurrenceDateTime value="2016-01-08"/>
+    <primarySource value="false"/>
+</Immunization>

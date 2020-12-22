@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PractitionerRole
+    xmlns="http://hl7.org/fhir">
+    <id value="ccda-practitionerrole-example"/>
+    <meta>
+        <versionId value="5"/>
+        <lastUpdated value="2020-08-12T19:18:13.336+00:00"/>
+        <source value="#kub40Eilc2HLDH2p"/>
+        <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"/>        
+		<security>
+            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
+            <code value="everyone^write"/>
+        </security>
+        <security>
+            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
+            <code value="everyone^read"/>
+        </security>
+    </meta>
+    <practitioner>
+        <reference value="Practitioner/ccda-practitioner-example"/>
+        <display value="Brenda Jennings Richard MD"/>
+    </practitioner>
+    <organization>
+        <reference value="Organization/acme-lab"/>
+        <display value="Acme Lab"/>
+    </organization>
+    <telecom>
+        <system value="phone"/>
+        <value value="313-555-6868"/>
+        <use value="home"/>
+    </telecom>
+    <telecom>
+        <system value="phone"/>
+        <value value="313-555-6443"/>
+        <use value="work"/>
+    </telecom>
+</PractitionerRole>

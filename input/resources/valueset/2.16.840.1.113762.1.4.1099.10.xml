@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet
+    xmlns="http://hl7.org/fhir">
+    <id value="2.16.840.1.113762.1.4.1099.10"/>
+    <meta>
+        <versionId value="6"/>
+        <lastUpdated value="2020-08-19T06:34:51.720+00:00"/>
+        <source value="#49QzE2rZjBWNk32p"/>
+    </meta>
+    <url value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1099.10"/>
+    <name value="CarePlanDocumentType"/>
+    <title value="Care Plan Document Type"/>
+    <status value="active"/>
+    <publisher value="HL7 Terminology"/>
+    <description value="(Clinical Focus: Terms used to identify documents that represent a Care Plan),(Data Element Scope: ),(Inclusion Criteria: This value set expansion is currently missing two pending LOINC concepts: &#xA;93023-0  Pharmacist Plan of care note&#xA;and 93024-8 Pharmacist Consult Note.),(Exclusion Criteria: )&#xA;&#xA;This value set was imported on 6/24/2019 with a version of 20190425."/>
+    <copyright value="This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"/>
+    <compose>
+        <include>
+            <system value="http://loinc.org"/>
+            <concept>
+                <code value="18776-5"/>
+                <display value="Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="64295-9"/>
+                <display value="Nurse Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="74156-1"/>
+                <display value="Oncology Plan of care and summary note"/>
+            </concept>
+            <concept>
+                <code value="77442-2"/>
+                <display value="Cardiology Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="77443-0"/>
+                <display value="Allergy and immunology Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="77444-8"/>
+                <display value="Audiology Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="77445-5"/>
+                <display value="Critical care medicine Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="77446-3"/>
+                <display value="Child and adolescent psychiatry Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80739-6"/>
+                <display value="Infectious disease Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80740-4"/>
+                <display value="Hematology Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80741-2"/>
+                <display value="Emergency medicine Emergency department Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80742-0"/>
+                <display value="Mental health Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80743-8"/>
+                <display value="Dentistry Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80744-6"/>
+                <display value="Colon and rectal surgery Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80745-3"/>
+                <display value="General medicine Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80746-1"/>
+                <display value="Emergency department Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80747-9"/>
+                <display value="Endocrinology Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80748-7"/>
+                <display value="Clinical genetics Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80749-5"/>
+                <display value="Cardiothoracic surgery Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80750-3"/>
+                <display value="Gastroenterology Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80751-1"/>
+                <display value="Dermatology Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80752-9"/>
+                <display value="Family medicine Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80753-7"/>
+                <display value="Surgery Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80754-5"/>
+                <display value="Multi-specialty program Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80755-2"/>
+                <display value="Nephrology Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80756-0"/>
+                <display value="Neurological surgery Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80757-8"/>
+                <display value="Nurse practitioner Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80758-6"/>
+                <display value="Occupational therapy Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80759-4"/>
+                <display value="Oncology Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80760-2"/>
+                <display value="Neonatal perinatal medicine Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80761-0"/>
+                <display value="Neurology Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80762-8"/>
+                <display value="Physical therapy Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80763-6"/>
+                <display value="Transplant surgery Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80764-4"/>
+                <display value="Pain medicine Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80765-1"/>
+                <display value="Psychiatry Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80766-9"/>
+                <display value="Orthopaedic surgery Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80767-7"/>
+                <display value="Pediatric surgery Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80768-5"/>
+                <display value="Vascular surgery Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80769-3"/>
+                <display value="Oral and Maxillofacial Surgery Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80770-1"/>
+                <display value="Psychology Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80771-9"/>
+                <display value="Pediatrics Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80772-7"/>
+                <display value="Respiratory therapy Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80773-5"/>
+                <display value="Optometry Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80774-3"/>
+                <display value="Rheumatology Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80775-0"/>
+                <display value="Podiatry Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80776-8"/>
+                <display value="Plastic surgery Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80777-6"/>
+                <display value="Primary care Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80778-4"/>
+                <display value="Otolaryngology Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80779-2"/>
+                <display value="Ophthalmology Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80780-0"/>
+                <display value="Palliative care Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80781-8"/>
+                <display value="Sports medicine Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80782-6"/>
+                <display value="Speech-language pathology Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80783-4"/>
+                <display value="Urology Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80784-2"/>
+                <display value="Recreational therapy Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80785-9"/>
+                <display value="Radiation oncology Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80786-7"/>
+                <display value="Physical medicine and rehab Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80787-5"/>
+                <display value="Obstetrics and Gynecology Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80788-3"/>
+                <display value="Social worker Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80789-1"/>
+                <display value="Cardiac surgery Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80790-9"/>
+                <display value="Surgical critical care Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80791-7"/>
+                <display value="Nutrition and dietetics Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80796-6"/>
+                <display value="Pulmonary Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80797-4"/>
+                <display value="Pharmacology Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80804-8"/>
+                <display value="Surgical oncology Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="80818-8"/>
+                <display value="Geriatric medicine Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="81200-8"/>
+                <display value="Interdisciplinary Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="82364-1"/>
+                <display value="Reproductive endocrinology and infertility Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="83635-3"/>
+                <display value="Mental health Nurse Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="83734-4"/>
+                <display value="Physical medicine and rehabilitation Interdisciplinary Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="83895-3"/>
+                <display value="Psychiatry Interdisciplinary Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="84011-6"/>
+                <display value="Spinal cord injury medicine Interdisciplinary Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="84034-8"/>
+                <display value="Team Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="84070-2"/>
+                <display value="Multi-specialty program Telehealth Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="84094-2"/>
+                <display value="Diabetology Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="84117-1"/>
+                <display value="Geriatric medicine Long term care facility Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="84124-7"/>
+                <display value="Geriatric medicine Interdisciplinary Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="84135-3"/>
+                <display value="Primary care Interdisciplinary Patient's home Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="84136-1"/>
+                <display value="Primary care Patient's home Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="84151-0"/>
+                <display value="Hematology+Medical oncology Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="84164-3"/>
+                <display value="Interdisciplinary Patient's home Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="84165-0"/>
+                <display value="Patient's home Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="84172-6"/>
+                <display value="Interdisciplinary Hospital Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="84183-3"/>
+                <display value="Kinesiotherapy Long term care facility Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="84185-8"/>
+                <display value="Kinesiotherapy Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="84187-4"/>
+                <display value="Interdisciplinary Long term care facility Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="84197-3"/>
+                <display value="Mental health Custodial care facility Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="84203-9"/>
+                <display value="Mental health Hospital Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="84210-4"/>
+                <display value="Mental health Outpatient Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="84217-9"/>
+                <display value="Mental health Interdisciplinary Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="84244-3"/>
+                <display value="Nurse Intensive care unit Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="84295-5"/>
+                <display value="Nutrition and dietetics Interdisciplinary Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="84306-0"/>
+                <display value="Vocational rehabilitation Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="84314-4"/>
+                <display value="Physical therapy Interdisciplinary Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="84337-5"/>
+                <display value="Pastoral care Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="85182-4"/>
+                <display value="Custodial care facility Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="85186-5"/>
+                <display value="Long term care facility Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="85228-5"/>
+                <display value="Case manager Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="85254-1"/>
+                <display value="Internal medicine Interdisciplinary Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="87237-4"/>
+                <display value="Dialysis Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="87253-1"/>
+                <display value="Addiction medicine Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="87265-5"/>
+                <display value="Dialysis Interdisciplinary Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="87629-2"/>
+                <display value="Brain injury Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="89239-8"/>
+                <display value="Gynecology Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="89240-6"/>
+                <display value="Obstetrics Plan of care note"/>
+            </concept>
+            <concept>
+                <code value="90769-1"/>
+                <display value="Heart failure Plan of care note"/>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>

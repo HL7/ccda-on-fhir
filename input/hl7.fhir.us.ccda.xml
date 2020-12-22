@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ImplementationGuide
+    xmlns="http://hl7.org/fhir">
+    <id value="hl7.fhir.us.ccda"/>
+    <meta>
+        <versionId value="132"/>
+        <lastUpdated value="2020-10-21T21:13:08.798+00:00"/>
+        <source value="#dMBMcvZsrSDFhHb1"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/ccda/ImplementationGuide/hl7.fhir.us.ccda"/>
+    <version value="1.1.0"/>
+    <name value="CCDAonFHIR"/>
+    <title value="C-CDA on FHIR"/>
+    <status value="active"/>
+    <date value="2020-10-19T00:00:00.000Z"/>
+    <publisher value="HL7 Structured Documents Working Group"/>
+    <contact>
+        <name value="HL7 Structured Documents Working Group"/>
+        <telecom>
+            <system value="url"/>
+            <value value="http://hl7.org/Special/committees/structure/index.cfm"/>
+        </telecom>
+    </contact>
+    <contact>
+        <name value="Rick Geimer"/>
+        <telecom>
+            <system value="email"/>
+            <value value="rick.geimer@lantanagroup.com"/>
+        </telecom>
+    </contact>
+    <contact>
+        <name value="Sarah Gaunt"/>
+        <telecom>
+            <system value="email"/>
+            <value value="sarah.gaunt@lantanagroup.com"/>
+        </telecom>
+    </contact>
+    <contact>
+        <name value="Brett Marquard"/>
+        <telecom>
+            <system value="email"/>
+            <value value="brett@riverrockassociates.com"/>
+        </telecom>
+    </contact>
+    <contact>
+        <name value="Corey Spears"/>
+        <telecom>
+            <system value="email"/>
+            <value value="spears.corey@gmail.com"/>
+        </telecom>
+    </contact>
+    <contact>
+        <name value="Meenaxi Gosai"/>
+        <telecom>
+            <system value="email"/>
+            <value value="meenaxi.gosai@lantanagroup.com"/>
+        </telecom>
+    </contact>
+    <contact>
+        <name value="HL7 International - Structured Documents"/>
+        <telecom>
+            <system value="url"/>
+            <value value="http://www.hl7.org/Special/committees/structure"/>
+        </telecom>
+    </contact>
+    <description value="Consolidated CDA (C-CDA) is one of the most widely implemented implementation guides for CDA and covers a significant scope of clinical care. Its target of the 'common/essential' elements of healthcare is closely aligned with FHIR's focus on the '80%'. There is significant interest in industry and government in the ability to interoperate between CDA and FHIR and C-CDA is a logical starting point. Implementers and regulators have both expressed an interest in the ability to map between FHIR and C-CDA.&#xA;&#xA;This Implementation Guide (IG) defines a series of FHIR profiles on the Composition resource to represent the various document types in C-CDA. This release does not directly map every C-CDA template to FHIR profiles, rather tries to accomplish the C-CDA use case using Composition resource profiles created under this project (the equivalent of Level 2 CDA documents), and begins by linking to the profiles created under the US Core project for any coded entries that would normally be included in C-CDA sections. To have a simpler, more streamlined standard that reuses existing work and focuses on the 80% that implementers actually need in production systems, the resources of US Core represents a portion of the 80% needed for coded entries for coded entries of CCD, Care Plan &amp; Discharge Summary).&#xA;&#xA;The Composition profiles in this IG do not require coded data in any section. This is a departure from C-CDA, which requires coded data for Problems, Results, Medications, etc. This departure is intentional, as the C-CDA requirement for one or more coded entries in these sections resulted in some very complicated workarounds using nullFlavors to handle the fact that sometimes a patient is not on any medications, or has no current problems. In general, FHIR takes the approach that if something is nullable, it should simply be optional to ease the burden on implementers, thus C-CDA on FHIR does not require any coded entries, but rather uses the &quot;required if known&quot; approach, meaning that if an implementer's system has data for a section that requires data under Meaningful Use, they need to send it, but if they have no data there is no need for a null entry.&#xA;&#xA;We encourage feedback on these Composition profiles, and the general approach to the project as a whole. We also encourage implementers who wish to see more of the coded data from C-CDA mapped to FHIR to comment on the US Core project and make their requests known there. Once US Core creates new profiles, this project can reference them.&#xA;&#xA;### Scope&#xA;&#xA;To represent Consolidated CDA Templates for Clinical Notes (C-CDA) 2.1 templates using FHIR profiles.&#xA;&#xA;This first stage of the project defines all the C-CDA document-level profiles on the Composition resource and contained sections.&#xA;&#xA;Any coded data used by sections will be represented using relevant U.S. Core FHIR profiles where they exist. FHIR profiles defined by other work groups or unconstrained FHIR resources may also be referenced if no appropriate US Core Profile exist.&#xA;&#xA;For further information see the C-CDA specification here: http://www.hl7.org/implement/standards/product_brief.cfm?product_id=408."/>
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+        </coding>
+    </jurisdiction>
+    <packageId value="hl7.fhir.us.ccda"/>
+    <fhirVersion value="4.0.1"/>
+    <dependsOn>
+        <uri value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"/>
+        <packageId value="hl7.fhir.us.core"/>
+        <version value="3.1.0"/>
+    </dependsOn>
+    <definition>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/US-Realm-Header"/>
+                <display value="C-CDA on FHIR US Realm Header"/>
+            </reference>
+            <name value="US Realm Header"/>
+            <description value="This profile defines constraints that represent common administrative and demographic concepts for US Realm clinical documents. Further specification, such as type, are provided in document profiles that conform to this profile."/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/Care-Plan-Document"/>
+                <display value="Care Plan Document"/>
+            </reference>
+            <name value="Care Plan Document"/>
+            <description value="CARE PLAN FRAMEWORK: A Care Plan (including Home Health Plan of Care (HHPoC)) is a consensus-driven dynamic plan that represents a patient and Care Team Members prioritized concerns, goals, and planned interventions. It serves as a blueprint shared by all Care Team Members (including the patient, their caregivers and providers), to guide the patients care. A Care Plan integrates multiple interventions proposed by multiple providers and disciplines for multiple conditions.&#xA;&#xA;A Care Plan represents one or more Plan(s) of Care and serves to reconcile and resolve conflicts between the various Plans of Care developed for a specific patient by different providers. While both a plan of care and a care plan include the patient's life goals and require Care Team Members (including patients) to prioritize goals and interventions, the reconciliation process becomes more complex as the number of plans of care increases. The Care Plan also serves to enable longitudinal coordination of care.&#xA;&#xA;The Care Plan represents an instance of this dynamic Care Plan at a point in time. The composition itself is NOT dynamic.&#xA;&#xA;Key differentiators between a Care Plan profile and CCD  profile (another snapshot in time document):&#xA;&#xA;*  Requires relationships between various concepts:&#xA;&#xA;        *  Health Concerns&#xA;&#xA;        *  Interventions&#xA;&#xA;        *  Goals&#xA;&#xA;        *  Outcomes&#xA;&#xA;*  Provides the ability to identify patient and provider priorities with each act&#xA;&#xA;*  Provides a header participant to indicate occurrences of Care Plan review"/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/Consultation-Note"/>
+                <display value="Consultation Note"/>
+            </reference>
+            <name value="Consultation Note"/>
+            <description value="The Consultation Note is generated by a request from a clinician for an opinion or advice from another clinician. Consultations may involve face-to-face time with the patient or may fall under the auspices of telemedicine visits. Consultations may occur while the patient is inpatient or ambulatory. The Consultation Note should also be used to summarize an Emergency Room or Urgent Care encounter.&#xA;&#xA;A Consultation Note includes the reason for the referral, history of present illness, physical examination, and decision-making components (Assessment and Plan)."/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/Continuity-of-Care-Document"/>
+                <display value="Continuity of Care Document"/>
+            </reference>
+            <name value="Continuity of Care Document"/>
+            <description value="This profile was originally based on the Continuity of Care Document (CCD) Release 1.1 which itself was derived from HITSP C32 and CCD Release 1.0.&#xA;&#xA;The Continuity of Care Document (CCD) profile represents a core data set of the most relevant administrative, demographic, and clinical information facts about a patient's healthcare, covering one or more healthcare encounters. It provides a means for one healthcare practitioner, system, or setting to aggregate all of the pertinent data about a patient and forward it to another to support the continuity of care.  &#xA;&#xA;The primary use case for the CCD is to provide a snapshot in time containing the germane clinical, demographic, and administrative data for a specific patient. The key characteristic of a CCD is that the Composition.event.code is constrained to &quot;PCPR&quot;. This means it does not function to report new services associated with performing care. It reports on care that has already been provided. The CCD provides a historical tally of the care over a range of time and is not a record of new services delivered.&#xA;&#xA;More specific use cases, such as a Discharge Summary, Transfer Summary, Referral Note, Consultation Note, or Progress Note, are available as alternative profiles."/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/Diagnostic-Imaging-Report"/>
+                <display value="Diagnostic Imaging Report"/>
+            </reference>
+            <name value="Diagnostic Imaging Report"/>
+            <description value="A Diagnostic Imaging Report (DIR) is a document that contains a consulting specialist's interpretation of image data. It conveys the interpretation to the referring (ordering) physician and becomes part of the patient's medical record. It is for use in Radiology, Endoscopy, Cardiology, and other imaging specialties. Note: this document type overlaps with the FHIR DiagnosticReport resource. Most use cases will want to use the specific resource type, but this document type is still useful for CDA to FHIR conversion and other such use cases."/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/Discharge-Summary"/>
+                <display value="Discharge Summary"/>
+            </reference>
+            <name value="Discharge Summary"/>
+            <description value="The Discharge Summary is a document which synopsizes a patient's admission to a hospital, LTPAC provider, or other setting. It provides information for the continuation of care following discharge. The Joint Commission requires the following information to be included in the Discharge Summary (http://www.jointcommission.org/):&#xA;&#xA;  The reason for hospitalization (the admission) &#xA;&#xA;  The procedures performed, as applicable&#xA;&#xA;  The care, treatment, and services provided&#xA;&#xA;  The patients condition and disposition at discharge&#xA;&#xA;  Information provided to the patient and family&#xA;&#xA;  Provisions for follow-up care&#xA;&#xA;The best practice for a Discharge Summary is to include the discharge disposition in the display of the header."/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/History-and-Physical"/>
+                <display value="History and Physical"/>
+            </reference>
+            <name value="History and Physical"/>
+            <description value="A History and Physical (H&amp;P) note is a medical report that documents the current and past conditions of the patient. It contains essential information that helps determine an individual's health status.  &#xA;&#xA;The first portion of the report is a current collection of organized information unique to an individual. This is typically supplied by the patient or the caregiver, concerning the current medical problem or the reason for the patient encounter. This information is followed by a description of any past or ongoing medical issues, including current medications and allergies. Information is also obtained about the patient's lifestyle, habits, and diseases among family members.&#xA;The next portion of the report contains information obtained by physically examining the patient and gathering diagnostic information in the form of laboratory tests, imaging, or other diagnostic procedures.&#xA; &#xA;The report ends with the clinician's assessment of the patient's situation and the intended plan to address those issues.&#xA; &#xA;A History and Physical Examination is required upon hospital admission as well as before operative procedures. An initial evaluation in an ambulatory setting is often documented in the form of an H&amp;P note."/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/Operative-Note"/>
+                <display value="Operative Note"/>
+            </reference>
+            <name value="Operative Note"/>
+            <description value="The Operative Note is a frequently used type of procedure note with specific requirements set forth by regulatory agencies.&#xA;&#xA;The Operative Note is created immediately following a surgical or other high-risk procedure. It records the pre- and post-surgical diagnosis, pertinent events of the procedure, as well as the condition of the patient following the procedure. The report should be sufficiently detailed to support the diagnoses, justify the treatment, document the course of the procedure, and provide continuity of care."/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/Procedure-Note"/>
+                <display value="C-CDA on FHIR Procedure Note"/>
+            </reference>
+            <name value="Procedure Note"/>
+            <description value="A Procedure Note encompasses many types of non-operative procedures including interventional cardiology, gastrointestinal endoscopy, osteopathic manipulation, and many other specialty fields. Procedure Notes are differentiated from Operative Notes because they do not involve incision or excision as the primary act.&#xA;&#xA;The Procedure Note is created immediately following a non-operative procedure. It records the indications for the procedure and, when applicable, postprocedure diagnosis, pertinent events of the procedure, and the patients tolerance for the procedure. It should be detailed enough to justify the procedure, describe the course of the procedure, and provide continuity of care."/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/Progress-Note"/>
+                <display value="Progress Note"/>
+            </reference>
+            <name value="Progress Note"/>
+            <description value="This profile represents a patient's clinical status during a hospitalization, outpatient visit, treatment with a LTPAC provider, or other healthcare encounter.&#xA;&#xA;Taber's medical dictionary defines a Progress Note as An ongoing record of a patient's illness and treatment. Physicians, nurses, consultants, and therapists record their notes concerning the progress or lack of progress made by the patient between the time of the previous note and the most recent note.&#xA;&#xA;Mosby's medical dictionary defines a Progress Note as Notes made by a nurse, physician, social worker, physical therapist, and other health care professionals that describe the patient's condition and the treatment given or planned.&#xA;&#xA;A Progress Note is not a re-evaluation note. A Progress Note is not intended to be a Progress Report for Medicare. Medicare B Section 1833(e) defines the requirements of a Medicare Progress Report."/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/Referral-Note"/>
+                <display value="Referral Note"/>
+            </reference>
+            <name value="Referral Note"/>
+            <description value="A Referral Note communicates pertinent information from a provider who is requesting services of another provider of clinical or non-clinical services. The information in this document includes the reason for the referral and additional information that would augment decision making and care delivery.&#xA; &#xA;Examples of referral situations are: &#xA;* When a patient is referred from a family physician to a cardiologist for cardiac evaluation.&#xA;* When patient is sent by a cardiologist to an emergency department for angina.&#xA;* When a patient is referred by a nurse practitioner to an audiologist for hearing screening.&#xA;* When a patient is referred by a hospitalist to social services."/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/Transfer-Summary"/>
+                <display value="Transfer Summary"/>
+            </reference>
+            <name value="Transfer Summary"/>
+            <description value="This profile describes constraints for a Transfer Summary. The Transfer Summary standardizes critical information for exchange of information between providers of care when a patient moves between health care settings. Standardization of information used in this form will promote interoperability; create information suitable for reuse in quality measurement, public health, research, and for reimbursement."/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="ValueSet/2.16.840.1.113883.1.11.20.2.3"/>
+                <display value="ReferralDocumentType"/>
+            </reference>
+            <name value="ReferralDocumentType"/>
+            <description value="ReferralDocumentType"/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="ValueSet/2.16.840.1.113883.1.11.20.2.4"/>
+                <display value="TransferDocumentType"/>
+            </reference>
+            <name value="TransferDocumentType"/>
+            <description value="TransferDocumentType"/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="ValueSet/2.16.840.1.113883.1.11.20.22"/>
+                <display value="HPDocumentType"/>
+            </reference>
+            <name value="HPDocumentType"/>
+            <description value="HPDocumentType"/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="ValueSet/2.16.840.1.113883.11.20.1.1"/>
+                <display value="SurgicalOperationNoteDocumentTypeCode"/>
+            </reference>
+            <name value="SurgicalOperationNoteDocumentTypeCode"/>
+            <description value="SurgicalOperationNoteDocumentTypeCode"/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="ValueSet/2.16.840.1.113883.11.20.4.1"/>
+                <display value="DischargeSummaryDocumentTypeCode"/>
+            </reference>
+            <name value="DischargeSummaryDocumentTypeCode"/>
+            <description value="DischargeSummaryDocumentTypeCode"/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="ValueSet/2.16.840.1.113883.11.20.6.1"/>
+                <display value="ProcedureNoteDocumentTypeCodes"/>
+            </reference>
+            <name value="ProcedureNoteDocumentTypeCodes"/>
+            <description value="ProcedureNoteDocumentTypeCodes"/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="ValueSet/2.16.840.1.113883.11.20.8.1"/>
+                <display value="ProgressNoteDocumentTypeCode"/>
+            </reference>
+            <name value="ProgressNoteDocumentTypeCode"/>
+            <description value="ProgressNoteDocumentTypeCode"/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="ValueSet/2.16.840.1.113883.11.20.9.31"/>
+                <display value="ConsultDocumentType"/>
+            </reference>
+            <name value="ConsultDocumentType"/>
+            <description value="ConsultDocumentType"/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="ValueSet/1.3.6.1.4.1.12009.10.2.5"/>
+                <display value="LOINC Imaging Document Codes"/>
+            </reference>
+            <name value="LOINC Imaging Document Codes"/>
+            <description value="LOINC Imaging Document Codes"/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="ValueSet/2.16.840.1.113762.1.4.1099.10"/>
+                <display value="Care Plan Document Type"/>
+            </reference>
+            <name value="Care Plan Document Type"/>
+            <description value="Care Plan Document Type"/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Composition/Care-Plan-Example"/>
+                <display value="Care Plan"/>
+            </reference>
+            <name value="Care Plan"/>
+            <description value="Care Plan"/>
+            <exampleBoolean value="true"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="PractitionerRole/ccda-practitionerrole-example"/>
+                <display value="ccda-practitionerrole-example"/>
+            </reference>
+            <name value="ccda-practitionerrole-example"/>
+            <description value="ccda-practitionerrole-example"/>
+            <exampleBoolean value="true"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Practitioner/ccda-practitioner-example"/>
+                <display value="Practitioner Brenda Jennings Richard"/>
+            </reference>
+            <name value="Practitioner Brenda Jennings Richard"/>
+            <description value="Practitioner Brenda Jennings Richard"/>
+            <exampleBoolean value="true"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Organization/acme-lab"/>
+                <display value="Acme Lab"/>
+            </reference>
+            <name value="Acme Lab"/>
+            <description value="Acme Lab"/>
+            <exampleBoolean value="true"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Patient/example"/>
+                <display value="Patient Amy V. Shaw"/>
+            </reference>
+            <name value="Patient Amy V. Shaw"/>
+            <description value="Patient Amy V. Shaw"/>
+            <exampleBoolean value="true"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Composition/Consultation-Note-Example"/>
+                <display value="Consultation Note"/>
+            </reference>
+            <name value="Consultation Note"/>
+            <description value="Consultation Note"/>
+            <exampleBoolean value="true"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Composition/Continuity-of-Care-Document-Example"/>
+                <display value="Continuity of Care Document"/>
+            </reference>
+            <name value="Continuity of Care Document"/>
+            <description value="Continuity of Care Document"/>
+            <exampleBoolean value="true"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Composition/Diagnostic-Imaging-Report-Example"/>
+                <display value="Diagnostic Imaging Report"/>
+            </reference>
+            <name value="Diagnostic Imaging Report"/>
+            <description value="Diagnostic Imaging Report"/>
+            <exampleBoolean value="true"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Composition/Discharge-Summary-Example"/>
+                <display value="Discharge Summary"/>
+            </reference>
+            <name value="Discharge Summary"/>
+            <description value="Discharge Summary"/>
+            <exampleBoolean value="true"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Composition/History-and-Physical-Example"/>
+                <display value="History and Physical Note"/>
+            </reference>
+            <name value="History and Physical Note"/>
+            <description value="History and Physical Note"/>
+            <exampleBoolean value="true"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Composition/Operative-Note-Example"/>
+                <display value="Operative Note"/>
+            </reference>
+            <name value="Operative Note"/>
+            <description value="Operative Note"/>
+            <exampleBoolean value="true"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Composition/Procedure-Note-Example"/>
+                <display value="Procedure Note"/>
+            </reference>
+            <name value="Procedure Note"/>
+            <description value="Procedure Note"/>
+            <exampleBoolean value="true"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Composition/Progress-Note-Example"/>
+                <display value="Progress Note"/>
+            </reference>
+            <name value="Progress Note"/>
+            <description value="Progress Note"/>
+            <exampleBoolean value="true"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Composition/Referral-Note-Example"/>
+                <display value="Referral Note"/>
+            </reference>
+            <name value="Referral Note"/>
+            <description value="Referral Note"/>
+            <exampleBoolean value="true"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Composition/Transfer-Summary-Example"/>
+                <display value="Transfer Summary"/>
+            </reference>
+            <name value="Transfer Summary"/>
+            <description value="Transfer Summary"/>
+            <exampleBoolean value="true"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Practitioner/practitioner-1"/>
+                <display value="Ronald Boone, MD"/>
+            </reference>
+            <name value="Ronald Boone, MD"/>
+            <description value="Ronald Boone, MD"/>
+            <exampleBoolean value="true"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Encounter/example-1"/>
+                <display value="example-1"/>
+            </reference>
+            <name value="example-1"/>
+            <description value="example-1"/>
+            <exampleBoolean value="true"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Encounter/encounter-1"/>
+                <display value="encounter-1"/>
+            </reference>
+            <name value="encounter-1"/>
+            <description value="encounter-1"/>
+            <exampleBoolean value="true"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="AllergyIntolerance/allergy-intolerance"/>
+                <display value="allergy-intolerance"/>
+            </reference>
+            <name value="allergy-intolerance"/>
+            <description value="allergy-intolerance"/>
+            <exampleBoolean value="true"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Immunization/immunization"/>
+                <display value="immunization"/>
+            </reference>
+            <name value="immunization"/>
+            <description value="immunization"/>
+            <exampleBoolean value="true"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="MedicationStatement/medication-statement"/>
+                <display value="medication-statement"/>
+            </reference>
+            <name value="medication-statement"/>
+            <description value="medication-statement"/>
+            <exampleBoolean value="true"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Condition/condition-problem"/>
+                <display value="condition-problem"/>
+            </reference>
+            <name value="condition-problem"/>
+            <description value="condition-problem"/>
+            <exampleBoolean value="true"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/observation-lab-urine"/>
+                <display value="observation-lab-urine"/>
+            </reference>
+            <name value="observation-lab-urine"/>
+            <description value="observation-lab-urine"/>
+            <exampleBoolean value="true"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/observation-smoker"/>
+                <display value="observation-smoker"/>
+            </reference>
+            <name value="observation-smoker"/>
+            <description value="observation-smoker"/>
+            <exampleBoolean value="true"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Observation/observation-vitals-temp"/>
+                <display value="observation-vitals-temp"/>
+            </reference>
+            <name value="observation-vitals-temp"/>
+            <description value="observation-vitals-temp"/>
+            <exampleBoolean value="true"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Procedure/procedure-rehab"/>
+                <display value="procedure-rehab"/>
+            </reference>
+            <name value="procedure-rehab"/>
+            <description value="procedure-rehab"/>
+            <exampleBoolean value="true"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Procedure/rehab"/>
+                <display value="rehab"/>
+            </reference>
+            <name value="rehab"/>
+            <description value="rehab"/>
+            <exampleBoolean value="true"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Organization/organization-2"/>
+                <display value="Acme Clinic"/>
+            </reference>
+            <name value="Acme Clinic"/>
+            <description value="Acme Clinic"/>
+            <exampleBoolean value="true"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Organization/organization-1"/>
+                <display value="Acme Labs"/>
+            </reference>
+            <name value="Acme Labs"/>
+            <description value="Acme Labs"/>
+            <exampleBoolean value="true"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="ServiceRequest/colonoscopy"/></reference>
+            <name value="Colonoscopy"/>
+            <description value="Colonoscopy"/>
+            <exampleBoolean value="true"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Consent/consent-example-basic"/></reference>
+            <name value="Consent Example Basic"/>
+            <description value="Basic consent"/>
+            <exampleBoolean value="true"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/AuthorizationExtension"/>
+                <display value="Authorization Extension"/>
+            </reference>
+            <name value="Authorization Extension"/>
+            <description value="The C-CDA on FHIR Authorization Extension contains the C-CDA on FHIR Consent profile which represents information about a patient's consents."/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/InformantExtension"/>
+                <display value="Informant Extension"/>
+            </reference>
+            <name value="Informant Extension"/>
+            <description value="The C-CDA on FHIR Informant Extension describes an information source for any content within the clinical document. This informant is constrained for use when the source of information is an assigned health care provider for the patient."/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/ParticipantExtension"/>
+                <display value="Participant Extension"/>
+            </reference>
+            <name value="Participant Extension"/>
+            <description value="The C-CDA on FHIR Participant Extension identifies supporting entities, including parents, relatives, caregivers, insurance policyholders, guarantors, and others related in some way to the patient. A supporting person or organization is an individual or an organization with a relationship to the patient. A supporting person who is playing multiple roles would be recorded in multiple participants (e.g., emergency contact and next-of-kin)."/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/PerformerExtension"/>
+                <display value="Performer Extension"/>
+            </reference>
+            <name value="Performer Extension"/>
+            <description value="The Performer Extension represents clinicians who actually and principally carry out the clinical services being documented. In a transfer of care this represents the healthcare providers involved in the current or pertinent historical care of the patient. Preferably, the patients key healthcare care team members would be listed, particularly their primary physician and any active consulting physicians, therapists, and counselors."/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/DataEntererExtension"/>
+                <display value="Data Enterer Extension"/>
+            </reference>
+            <name value="Data Enterer Extension"/>
+            <description value="The Data Enterer Extension represents the person who transferred the content, written or dictated, into the clinical document. To clarify, an author provides the content, subject to their own interpretation; a dataEnterer adds an author's information to the electronic system.&#xA;&#xA;For further information see the C-CDA specification here: http://www.hl7.org/implement/standards/product_brief.cfm?product_id=408."/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/InformationRecipientExtension"/>
+                <display value="Information Recipient Extension"/>
+            </reference>
+            <name value="Information Recipient Extension"/>
+            <description value="The Information Recipient Extension records the intended recipient of the information at the time the document was created.&#xA;&#xA;For further information see the C-CDA specification here: http://www.hl7.org/implement/standards/product_brief.cfm?product_id=408."/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/OrderExtension"/>
+                <display value="Order Extension"/>
+            </reference>
+            <name value="Order Extension"/>
+            <description value="The Order Extension represents orders that are fulfilled by this document such as a radiologists report of an x-ray."/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/VersionNumber"/>
+                <display value="Version Number"/>
+            </reference>
+            <name value="Version Number"/>
+            <description value="The CCDA on FHIR VersionNumber Extension represents a numeric value used to version successive replacement documents.&#xA;&#xA;For further information see the C-CDA specification here: http://www.hl7.org/implement/standards/product_brief.cfm?product_id=408."/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="CapabilityStatement/CcdaOnFhirClient"/>
+                <display value="CCDA on FHIR Client"/>
+            </reference>
+            <name value="CCDA on FHIR Client"/>
+            <description value="This describes the expected capabilities of the C-CDA on FHIR Document Consumer (aka client) actor which is responsible for creating and initiating the queries for clinical documents provided by a C-CDA on FHIR Document Source (aka server) actors. This CapabilityStatement imports and extends the [us-core-client CapabilityStatement](https://www.hl7.org/fhir/us/core/CapabilityStatement-us-core-client.html)"/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="CapabilityStatement/CcdaOnFhirServer"/>
+                <display value="CCDA on FHIR Server"/>
+            </reference>
+            <name value="CCDA on FHIR Server"/>
+            <description value="This describes the expected capabilities of the C-CDA on FHIR Document Source (aka server) actor which is responsible for responding to the queries for clinical documents provided by a C-CDA on FHIR Document Consumer (aka client) actor. This CapabilityStatement imports and extends the [us-core-server CapabilityStatement](https://www.hl7.org/fhir/us/core/CapabilityStatement-us-core-server.html)"/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Bundle/Complete-Document-Bundle-Example"/></reference>
+            <name value="Complete Document Bundle Example"/>
+            <description value="Complete Document Bundle Example"/>
+            <exampleBoolean value="true"/>
+        </resource>
+        <page>
+            <nameUrl value="index.html"/>
+            <title value="Home Page"/>
+            <generation value="markdown"/>
+            <page>
+                <nameUrl value="background.html"/>
+                <title value="Background"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="the_specification.html"/>
+                <title value="The Specification"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="downloads.html"/>
+                <title value="Downloads"/>
+                <generation value="markdown"/>
+            </page>
+        </page>
+        <parameter>
+            <code value="releaselabel"/>
+            <value value="STU Release 1.1.0 for FHIR R4"/>
+        </parameter>
+        <parameter>
+            <code value="copyrightyear"/>
+            <value value="2020+"/>
+        </parameter>
+    </definition>
+</ImplementationGuide>

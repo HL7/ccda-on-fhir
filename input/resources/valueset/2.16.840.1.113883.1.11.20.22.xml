@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet
+    xmlns="http://hl7.org/fhir">
+    <id value="2.16.840.1.113883.1.11.20.22"/>
+    <meta>
+        <versionId value="6"/>
+        <lastUpdated value="2020-08-19T06:35:26.180+00:00"/>
+        <source value="#UQHxYsUhbLhPRes1"/>
+    </meta>
+    <url value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.1.11.20.22"/>
+    <name value="HPDocumentType"/>
+    <title value="HPDocumentType"/>
+    <status value="active"/>
+    <publisher value="HL7 Terminology"/>
+    <description value="(Clinical Focus: Subclassification of history &amp; physical document by setting, author role, and author specialty),(Data Element Scope: ClinicalDocument.code@code in H&amp;P Document template in C-CDA R2.1),(Inclusion Criteria: Some selected LOINC codes for information that uses H&amp;P Document template to represent the information in CDA),(Exclusion Criteria: )&#xA;&#xA;This value set was imported on 6/25/2019 with a version of 20190517."/>
+    <copyright value="This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"/>
+    <compose>
+        <include>
+            <system value="http://loinc.org"/>
+            <concept>
+                <code value="11492-6"/>
+                <display value="Provider-unspecifed, History and physical note"/>
+            </concept>
+            <concept>
+                <code value="28626-0"/>
+                <display value="Physician History and physical note"/>
+            </concept>
+            <concept>
+                <code value="34094-3"/>
+                <display value="Cardiology Hospital Admission history and physical note"/>
+            </concept>
+            <concept>
+                <code value="34095-0"/>
+                <display value="Comprehensive history and physical note"/>
+            </concept>
+            <concept>
+                <code value="34096-8"/>
+                <display value="Nursing facility Comprehensive history and physical note"/>
+            </concept>
+            <concept>
+                <code value="34115-6"/>
+                <display value="Medical student Hospital History and physical note"/>
+            </concept>
+            <concept>
+                <code value="34116-4"/>
+                <display value="Physician Nursing facility History and physical note"/>
+            </concept>
+            <concept>
+                <code value="34117-2"/>
+                <display value="History and physical note"/>
+            </concept>
+            <concept>
+                <code value="34138-8"/>
+                <display value="Targeted history and physical note"/>
+            </concept>
+            <concept>
+                <code value="34763-3"/>
+                <display value="General medicine Admission history and physical note"/>
+            </concept>
+            <concept>
+                <code value="34774-0"/>
+                <display value="Surgery History and physical note"/>
+            </concept>
+            <concept>
+                <code value="47039-3"/>
+                <display value="Hospital Admission history and physical note"/>
+            </concept>
+            <concept>
+                <code value="51849-8"/>
+                <display value="Admission history and physical note"/>
+            </concept>
+            <concept>
+                <code value="57056-4"/>
+                <display value="Labor and delivery admission history and physical note"/>
+            </concept>
+            <concept>
+                <code value="67856-5"/>
+                <display value="Nursing facility History and physical note"/>
+            </concept>
+            <concept>
+                <code value="68560-2"/>
+                <display value="Obstetrics and Gynecology History and physical note"/>
+            </concept>
+            <concept>
+                <code value="68573-5"/>
+                <display value="Ophthalmology History and physical note"/>
+            </concept>
+            <concept>
+                <code value="68580-0"/>
+                <display value="Orthopaedic surgery History and physical note"/>
+            </concept>
+            <concept>
+                <code value="68592-5"/>
+                <display value="Plastic surgery History and physical note"/>
+            </concept>
+            <concept>
+                <code value="68599-0"/>
+                <display value="Psychiatry History and physical note"/>
+            </concept>
+            <concept>
+                <code value="68614-7"/>
+                <display value="Adolescent medicine History and physical note"/>
+            </concept>
+            <concept>
+                <code value="68622-0"/>
+                <display value="Heart failure+Transplant cardiology History and physical note"/>
+            </concept>
+            <concept>
+                <code value="68628-7"/>
+                <display value="Allergy and immunology History and physical note"/>
+            </concept>
+            <concept>
+                <code value="68637-8"/>
+                <display value="Audiology History and physical note"/>
+            </concept>
+            <concept>
+                <code value="68644-4"/>
+                <display value="Child and adolescent psychiatry History and physical note"/>
+            </concept>
+            <concept>
+                <code value="68655-0"/>
+                <display value="Clinical genetics History and physical note"/>
+            </concept>
+            <concept>
+                <code value="68665-9"/>
+                <display value="Developmental-behavioral pediatrics History and physical note"/>
+            </concept>
+            <concept>
+                <code value="68676-6"/>
+                <display value="Multi-specialty program History and physical note"/>
+            </concept>
+            <concept>
+                <code value="68683-2"/>
+                <display value="Neonatal perinatal medicine History and physical note"/>
+            </concept>
+            <concept>
+                <code value="68690-7"/>
+                <display value="Neurological surgery History and physical note"/>
+            </concept>
+            <concept>
+                <code value="68699-8"/>
+                <display value="Neurology with special qualifications in child neurology History and physical note"/>
+            </concept>
+            <concept>
+                <code value="68711-1"/>
+                <display value="Pain medicine History and physical note"/>
+            </concept>
+            <concept>
+                <code value="68721-0"/>
+                <display value="Pediatric cardiology History and physical note"/>
+            </concept>
+            <concept>
+                <code value="68731-9"/>
+                <display value="Pediatric dermatology History and physical note"/>
+            </concept>
+            <concept>
+                <code value="68735-0"/>
+                <display value="Pediatric endocrinology History and physical note"/>
+            </concept>
+            <concept>
+                <code value="68740-0"/>
+                <display value="Pediatric gastroenterology History and physical note"/>
+            </concept>
+            <concept>
+                <code value="68751-7"/>
+                <display value="Pediatric hematology-oncology History and physical note"/>
+            </concept>
+            <concept>
+                <code value="68760-8"/>
+                <display value="Pediatric infectious diseases History and physical note"/>
+            </concept>
+            <concept>
+                <code value="68770-7"/>
+                <display value="Pediatric nephrology History and physical note"/>
+            </concept>
+            <concept>
+                <code value="68775-6"/>
+                <display value="Pediatric otolaryngology History and physical note"/>
+            </concept>
+            <concept>
+                <code value="68781-4"/>
+                <display value="Pediatric pulmonology History and physical note"/>
+            </concept>
+            <concept>
+                <code value="68791-3"/>
+                <display value="Pediatric rheumatology History and physical note"/>
+            </concept>
+            <concept>
+                <code value="68797-0"/>
+                <display value="Pediatric surgery History and physical note"/>
+            </concept>
+            <concept>
+                <code value="68807-7"/>
+                <display value="Pediatric urology History and physical note"/>
+            </concept>
+            <concept>
+                <code value="68817-6"/>
+                <display value="Pediatrics History and physical note"/>
+            </concept>
+            <concept>
+                <code value="68825-9"/>
+                <display value="Pediatrics Hospital History and physical note"/>
+            </concept>
+            <concept>
+                <code value="68833-3"/>
+                <display value="Primary care History and physical note"/>
+            </concept>
+            <concept>
+                <code value="68843-2"/>
+                <display value="Speech-language pathology History and physical note"/>
+            </concept>
+            <concept>
+                <code value="68849-9"/>
+                <display value="Transplant surgery History and physical note"/>
+            </concept>
+            <concept>
+                <code value="68858-0"/>
+                <display value="Pediatric transplant hepatology History and physical note"/>
+            </concept>
+            <concept>
+                <code value="77401-8"/>
+                <display value="Anesthesiology Admission history and physical note"/>
+            </concept>
+            <concept>
+                <code value="77412-5"/>
+                <display value="Cardiology History and physical note"/>
+            </concept>
+            <concept>
+                <code value="77415-8"/>
+                <display value="Critical care medicine Admission history and physical note"/>
+            </concept>
+            <concept>
+                <code value="77420-8"/>
+                <display value="Critical care medicine History and physical note"/>
+            </concept>
+            <concept>
+                <code value="78246-6"/>
+                <display value="Mental health Admission history and physical note"/>
+            </concept>
+            <concept>
+                <code value="78247-4"/>
+                <display value="Surgery Admission history and physical note"/>
+            </concept>
+            <concept>
+                <code value="78248-2"/>
+                <display value="Colon and rectal surgery Admission history and physical note"/>
+            </concept>
+            <concept>
+                <code value="78249-0"/>
+                <display value="Emergency department Admission history and physical note"/>
+            </concept>
+            <concept>
+                <code value="78306-8"/>
+                <display value="Mental health History and physical note"/>
+            </concept>
+            <concept>
+                <code value="78307-6"/>
+                <display value="Emergency department History and physical note"/>
+            </concept>
+            <concept>
+                <code value="78308-4"/>
+                <display value="General medicine History and physical note"/>
+            </concept>
+            <concept>
+                <code value="78386-0"/>
+                <display value="Neonatal perinatal medicine Admission history and physical note"/>
+            </concept>
+            <concept>
+                <code value="78387-8"/>
+                <display value="Nephrology Admission history and physical note"/>
+            </concept>
+            <concept>
+                <code value="78388-6"/>
+                <display value="Neurological surgery Admission history and physical note"/>
+            </concept>
+            <concept>
+                <code value="78389-4"/>
+                <display value="Neurology Admission history and physical note"/>
+            </concept>
+            <concept>
+                <code value="78390-2"/>
+                <display value="Nurse Admission history and physical note"/>
+            </concept>
+            <concept>
+                <code value="78391-0"/>
+                <display value="Nurse practitioner Admission history and physical note"/>
+            </concept>
+            <concept>
+                <code value="78392-8"/>
+                <display value="Oncology Admission history and physical note"/>
+            </concept>
+            <concept>
+                <code value="78463-7"/>
+                <display value="Nephrology History and physical note"/>
+            </concept>
+            <concept>
+                <code value="78464-5"/>
+                <display value="Neurology History and physical note"/>
+            </concept>
+            <concept>
+                <code value="78465-2"/>
+                <display value="Oncology History and physical note"/>
+            </concept>
+            <concept>
+                <code value="78497-5"/>
+                <display value="Cardiopulmonary Admission history and physical note"/>
+            </concept>
+            <concept>
+                <code value="78507-1"/>
+                <display value="Pediatrics Admission history and physical note"/>
+            </concept>
+            <concept>
+                <code value="78508-9"/>
+                <display value="Cardiothoracic surgery Admission history and physical note"/>
+            </concept>
+            <concept>
+                <code value="78509-7"/>
+                <display value="Orthopaedic surgery Admission history and physical note"/>
+            </concept>
+            <concept>
+                <code value="78510-5"/>
+                <display value="Vascular surgery Admission history and physical note"/>
+            </concept>
+            <concept>
+                <code value="78511-3"/>
+                <display value="Oral and Maxillofacial Surgery Admission history and physical note"/>
+            </concept>
+            <concept>
+                <code value="78538-6"/>
+                <display value="Palliative care Admission history and physical note"/>
+            </concept>
+            <concept>
+                <code value="78643-4"/>
+                <display value="Palliative care History and physical note"/>
+            </concept>
+            <concept>
+                <code value="78713-5"/>
+                <display value="Ophthalmology Admission history and physical note"/>
+            </concept>
+            <concept>
+                <code value="78718-4"/>
+                <display value="Obstetrics and Gynecology Admission history and physical note"/>
+            </concept>
+            <concept>
+                <code value="78724-2"/>
+                <display value="Pediatric surgery Admission history and physical note"/>
+            </concept>
+            <concept>
+                <code value="78727-5"/>
+                <display value="Plastic surgery Admission history and physical note"/>
+            </concept>
+            <concept>
+                <code value="78731-7"/>
+                <display value="Transplant surgery Admission history and physical note"/>
+            </concept>
+            <concept>
+                <code value="78733-3"/>
+                <display value="Urology Admission history and physical note"/>
+            </concept>
+            <concept>
+                <code value="80574-7"/>
+                <display value="Cardiac surgery Admission history and physical note"/>
+            </concept>
+            <concept>
+                <code value="80733-9"/>
+                <display value="Otolaryngology Admission history and physical note"/>
+            </concept>
+            <concept>
+                <code value="80799-0"/>
+                <display value="Surgical oncology Admission history and physical note"/>
+            </concept>
+            <concept>
+                <code value="80809-7"/>
+                <display value="Geriatric medicine Admission history and physical note"/>
+            </concept>
+            <concept>
+                <code value="80813-9"/>
+                <display value="Geriatric medicine History and physical note"/>
+            </concept>
+            <concept>
+                <code value="83552-0"/>
+                <display value="Nurse practitioner History and physical note"/>
+            </concept>
+            <concept>
+                <code value="83715-3"/>
+                <display value="Physical medicine and rehab History and physical note"/>
+            </concept>
+            <concept>
+                <code value="83786-4"/>
+                <display value="Primary care Physician History and physical note"/>
+            </concept>
+            <concept>
+                <code value="83812-8"/>
+                <display value="Physician assistant History and physical note"/>
+            </concept>
+            <concept>
+                <code value="83819-3"/>
+                <display value="Attending History and physical note"/>
+            </concept>
+            <concept>
+                <code value="83830-0"/>
+                <display value="Dentistry History and physical note"/>
+            </concept>
+            <concept>
+                <code value="83858-1"/>
+                <display value="Podiatry History and physical note"/>
+            </concept>
+            <concept>
+                <code value="83886-2"/>
+                <display value="Psychiatry Hospital History and physical note"/>
+            </concept>
+            <concept>
+                <code value="83901-9"/>
+                <display value="Psychology History and physical note"/>
+            </concept>
+            <concept>
+                <code value="83959-7"/>
+                <display value="Social worker History and physical note"/>
+            </concept>
+            <concept>
+                <code value="83995-1"/>
+                <display value="Spinal cord injury medicine History and physical note"/>
+            </concept>
+            <concept>
+                <code value="84019-9"/>
+                <display value="Surgery Outpatient History and physical note"/>
+            </concept>
+            <concept>
+                <code value="84041-3"/>
+                <display value="Urology History and physical note"/>
+            </concept>
+            <concept>
+                <code value="84048-8"/>
+                <display value="Vascular surgery History and physical note"/>
+            </concept>
+            <concept>
+                <code value="84077-7"/>
+                <display value="Dermatology History and physical note"/>
+            </concept>
+            <concept>
+                <code value="84097-5"/>
+                <display value="Endocrinology History and physical note"/>
+            </concept>
+            <concept>
+                <code value="84104-9"/>
+                <display value="Gastroenterology History and physical note"/>
+            </concept>
+            <concept>
+                <code value="84366-4"/>
+                <display value="Otolaryngology History and physical note"/>
+            </concept>
+            <concept>
+                <code value="85179-0"/>
+                <display value="Custodial care facility History and physical note"/>
+            </concept>
+            <concept>
+                <code value="85196-4"/>
+                <display value="Long term care facility History and physical note"/>
+            </concept>
+            <concept>
+                <code value="85201-2"/>
+                <display value="Observation unit History and physical note"/>
+            </concept>
+            <concept>
+                <code value="85203-8"/>
+                <display value="Patient's home History and physical note"/>
+            </concept>
+            <concept>
+                <code value="85245-9"/>
+                <display value="Internal medicine History and physical note"/>
+            </concept>
+            <concept>
+                <code value="85850-6"/>
+                <display value="Cardiothoracic surgery History and physical note"/>
+            </concept>
+            <concept>
+                <code value="85860-5"/>
+                <display value="Womens health Outpatient History and physical note"/>
+            </concept>
+            <concept>
+                <code value="85867-0"/>
+                <display value="Womens health History and physical note"/>
+            </concept>
+            <concept>
+                <code value="87259-8"/>
+                <display value="Addiction medicine History and physical note"/>
+            </concept>
+            <concept>
+                <code value="88353-8"/>
+                <display value="Polytrauma History and physical note"/>
+            </concept>
+            <concept>
+                <code value="89213-3"/>
+                <display value="Obstetrics History and physical note"/>
+            </concept>
+            <concept>
+                <code value="89215-8"/>
+                <display value="Gynecology Admission history and physical note"/>
+            </concept>
+            <concept>
+                <code value="89221-6"/>
+                <display value="Gynecology History and physical note"/>
+            </concept>
+            <concept>
+                <code value="89443-6"/>
+                <display value="Obstetrics Admission history and physical note"/>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>

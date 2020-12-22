@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet
+    xmlns="http://hl7.org/fhir">
+    <id value="2.16.840.1.113883.1.11.20.2.4"/>
+    <meta>
+        <versionId value="6"/>
+        <lastUpdated value="2020-08-19T06:18:55.577+00:00"/>
+        <source value="#J5leCsKPn0gyItgS"/>
+    </meta>
+    <url value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.1.11.20.2.4"/>
+    <version value="20180517"/>
+    <name value="TransferDocumentType"/>
+    <title value="TransferDocumentType"/>
+    <status value="active"/>
+    <date value="2018-05-17T01:00:04-04:00"/>
+    <publisher value="HL7 Terminology"/>
+    <copyright value="This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"/>
+    <compose>
+        <include>
+            <system value="http://loinc.org"/>
+            <concept>
+                <code value="18761-7"/>
+                <display value="Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="28616-1"/>
+                <display value="Physician Transfer note"/>
+            </concept>
+            <concept>
+                <code value="28651-8"/>
+                <display value="Nurse Transfer note"/>
+            </concept>
+            <concept>
+                <code value="34755-9"/>
+                <display value="Critical care medicine Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="34770-8"/>
+                <display value="General medicine Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="68482-9"/>
+                <display value="Nurse Hospital Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="68565-1"/>
+                <display value="Obstetrics and Gynecology Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="68569-3"/>
+                <display value="Occupational therapy Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="68583-4"/>
+                <display value="Orthopaedic surgery Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="68596-6"/>
+                <display value="Plastic surgery Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="68618-8"/>
+                <display value="Adolescent medicine Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="68632-9"/>
+                <display value="Allergy and immunology Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="68647-7"/>
+                <display value="Child and adolescent psychiatry Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="68660-0"/>
+                <display value="Clinical genetics Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="68669-1"/>
+                <display value="Developmental-behavioral pediatrics Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="68680-8"/>
+                <display value="Multi-specialty program Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="68704-6"/>
+                <display value="Neurology with special qualifications in child neurology Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="68715-2"/>
+                <display value="Pain medicine Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="68726-9"/>
+                <display value="Pediatric cardiology Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="68737-6"/>
+                <display value="Pediatric endocrinology Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="68745-9"/>
+                <display value="Pediatric gastroenterology Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="68756-6"/>
+                <display value="Pediatric hematology-oncology Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="68764-0"/>
+                <display value="Pediatric infectious diseases Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="68772-3"/>
+                <display value="Pediatric nephrology Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="68777-2"/>
+                <display value="Pediatric otolaryngology Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="68786-3"/>
+                <display value="Pediatric pulmonology Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="68793-9"/>
+                <display value="Pediatric rheumatology Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="68801-0"/>
+                <display value="Pediatric surgery Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="68811-9"/>
+                <display value="Pediatric urology Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="68863-0"/>
+                <display value="Pediatric transplant hepatology Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="68883-8"/>
+                <display value="Pediatrics Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="68884-6"/>
+                <display value="Pediatrics Hospital Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="68887-9"/>
+                <display value="Ophthalmology Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="77406-7"/>
+                <display value="Anesthesiology Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="77414-1"/>
+                <display value="Cardiology Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="78340-7"/>
+                <display value="Colon and rectal surgery Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="78341-5"/>
+                <display value="Emergency department Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="78488-4"/>
+                <display value="Mental health Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="78489-2"/>
+                <display value="Neonatal perinatal medicine Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="78490-0"/>
+                <display value="Nephrology Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="78491-8"/>
+                <display value="Neurology Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="78492-6"/>
+                <display value="Neurological surgery Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="78493-4"/>
+                <display value="Oncology Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="78502-2"/>
+                <display value="Cardiopulmonary Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="78680-6"/>
+                <display value="Vascular surgery Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="78681-4"/>
+                <display value="Cardiothoracic surgery Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="78682-2"/>
+                <display value="Palliative care Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="78683-0"/>
+                <display value="Transplant surgery Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="78684-8"/>
+                <display value="Oral and Maxillofacial Surgery Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="78729-1"/>
+                <display value="Surgery Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="78736-6"/>
+                <display value="Urology Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="80580-4"/>
+                <display value="Cardiac surgery Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="80735-4"/>
+                <display value="Otolaryngology Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="80808-9"/>
+                <display value="Surgical oncology Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="80816-2"/>
+                <display value="Geriatric medicine Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="83526-4"/>
+                <display value="Cardiology Intensive care unit Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="83865-6"/>
+                <display value="Podiatry Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="83914-2"/>
+                <display value="Pulmonary Hospital Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="83950-6"/>
+                <display value="Rheumatology Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="83981-1"/>
+                <display value="Social work Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="84016-5"/>
+                <display value="Surgery Intensive care unit Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="84083-5"/>
+                <display value="Dermatology Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="84221-1"/>
+                <display value="Nephrology Hospital Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="84228-6"/>
+                <display value="Neurology Hospital Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="85181-6"/>
+                <display value="Custodial care facility Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="85184-0"/>
+                <display value="Hospital Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="85187-3"/>
+                <display value="Long term care facility Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="85219-4"/>
+                <display value="Internal medicine Intensive care unit Transfer summary note"/>
+            </concept>
+            <concept>
+                <code value="85253-3"/>
+                <display value="Internal medicine Transfer summary note"/>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>

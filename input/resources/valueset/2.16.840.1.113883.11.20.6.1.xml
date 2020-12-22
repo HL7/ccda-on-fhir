@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet
+    xmlns="http://hl7.org/fhir">
+    <id value="2.16.840.1.113883.11.20.6.1"/>
+    <meta>
+        <versionId value="7"/>
+        <lastUpdated value="2020-08-19T06:15:59.748+00:00"/>
+        <source value="#af5tUShc5DIhxYJS"/>
+    </meta>
+    <url value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.11.20.6.1"/>
+    <version value="20180517"/>
+    <name value="ProcedureNoteDocumentTypeCodes"/>
+    <title value="ProcedureNoteDocumentTypeCodes"/>
+    <status value="active"/>
+    <date value="2018-05-17T01:00:04-04:00"/>
+    <publisher value="HL7 Terminology"/>
+    <copyright value="This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"/>
+    <compose>
+        <include>
+            <system value="http://loinc.org"/>
+            <concept>
+                <code value="11505-5"/>
+                <display value="Physician procedure note"/>
+            </concept>
+            <concept>
+                <code value="18744-3"/>
+                <display value="Bronchoscopy study"/>
+            </concept>
+            <concept>
+                <code value="18745-0"/>
+                <display value="Cardiac catheterization study"/>
+            </concept>
+            <concept>
+                <code value="18746-8"/>
+                <display value="Colonoscopy study"/>
+            </concept>
+            <concept>
+                <code value="18751-8"/>
+                <display value="Endoscopy study"/>
+            </concept>
+            <concept>
+                <code value="18753-4"/>
+                <display value="Flexible sigmoidoscopy study"/>
+            </concept>
+            <concept>
+                <code value="18836-7"/>
+                <display value="Cardiac stress study Procedure"/>
+            </concept>
+            <concept>
+                <code value="28570-0"/>
+                <display value="Procedure note"/>
+            </concept>
+            <concept>
+                <code value="28577-5"/>
+                <display value="Dentistry procedure note"/>
+            </concept>
+            <concept>
+                <code value="28625-2"/>
+                <display value="Podiatry procedure note"/>
+            </concept>
+            <concept>
+                <code value="29757-2"/>
+                <display value="Colposcopy study"/>
+            </concept>
+            <concept>
+                <code value="33721-2"/>
+                <display value="Bone marrow Pathology biopsy report"/>
+            </concept>
+            <concept>
+                <code value="34121-4"/>
+                <display value="Interventional procedure note"/>
+            </concept>
+            <concept>
+                <code value="34896-1"/>
+                <display value="Cardiology Interventional procedure note"/>
+            </concept>
+            <concept>
+                <code value="34899-5"/>
+                <display value="Gastroenterology Interventional procedure note"/>
+            </concept>
+            <concept>
+                <code value="47048-4"/>
+                <display value="Diagnostic interventional study report Interventional radiology"/>
+            </concept>
+            <concept>
+                <code value="48807-2"/>
+                <display value="Bone marrow aspiration report"/>
+            </concept>
+            <concept>
+                <code value="68563-6"/>
+                <display value="Obstetrics and Gynecology procedure note"/>
+            </concept>
+            <concept>
+                <code value="68630-3"/>
+                <display value="Allergy and immunology procedure note"/>
+            </concept>
+            <concept>
+                <code value="68658-4"/>
+                <display value="Clinical genetics procedure note"/>
+            </concept>
+            <concept>
+                <code value="68667-5"/>
+                <display value="Developmental-behavioral pediatrics procedure note"/>
+            </concept>
+            <concept>
+                <code value="68692-3"/>
+                <display value="Neurological surgery procedure note"/>
+            </concept>
+            <concept>
+                <code value="68702-0"/>
+                <display value="Neurology with special qualifications in child neurology procedure note"/>
+            </concept>
+            <concept>
+                <code value="68714-5"/>
+                <display value="Pain medicine procedure note"/>
+            </concept>
+            <concept>
+                <code value="68724-4"/>
+                <display value="Pediatric cardiology procedure note"/>
+            </concept>
+            <concept>
+                <code value="68729-3"/>
+                <display value="Pediatric critical care medicine Hospital procedure note"/>
+            </concept>
+            <concept>
+                <code value="68743-4"/>
+                <display value="Pediatric gastroenterology procedure note"/>
+            </concept>
+            <concept>
+                <code value="68754-1"/>
+                <display value="Pediatric hematology-oncology procedure note"/>
+            </concept>
+            <concept>
+                <code value="68784-8"/>
+                <display value="Pediatric pulmonology procedure note"/>
+            </concept>
+            <concept>
+                <code value="68799-6"/>
+                <display value="Pediatric surgery procedure note"/>
+            </concept>
+            <concept>
+                <code value="68809-3"/>
+                <display value="Pediatric urology procedure note"/>
+            </concept>
+            <concept>
+                <code value="68820-0"/>
+                <display value="Pediatrics procedure note"/>
+            </concept>
+            <concept>
+                <code value="68829-1"/>
+                <display value="Pediatrics Hospital procedure note"/>
+            </concept>
+            <concept>
+                <code value="68836-6"/>
+                <display value="Primary care procedure note"/>
+            </concept>
+            <concept>
+                <code value="68851-5"/>
+                <display value="Transplant surgery procedure note"/>
+            </concept>
+            <concept>
+                <code value="68861-4"/>
+                <display value="Pediatric transplant hepatology procedure note"/>
+            </concept>
+            <concept>
+                <code value="68868-9"/>
+                <display value="Pediatric nephrology procedure note"/>
+            </concept>
+            <concept>
+                <code value="68872-1"/>
+                <display value="Pediatric otolaryngology procedure note"/>
+            </concept>
+            <concept>
+                <code value="68877-0"/>
+                <display value="Pediatric rheumatology procedure note"/>
+            </concept>
+            <concept>
+                <code value="68890-3"/>
+                <display value="Pediatric dermatology procedure note"/>
+            </concept>
+            <concept>
+                <code value="68895-2"/>
+                <display value="Pediatric endocrinology procedure note"/>
+            </concept>
+            <concept>
+                <code value="75238-6"/>
+                <display value="Interventional radiology procedure note"/>
+            </concept>
+            <concept>
+                <code value="75426-7"/>
+                <display value="Cardiology procedure note"/>
+            </concept>
+            <concept>
+                <code value="75455-6"/>
+                <display value="Nurse procedure note"/>
+            </concept>
+            <concept>
+                <code value="77422-4"/>
+                <display value="Critical care medicine procedure note"/>
+            </concept>
+            <concept>
+                <code value="77425-7"/>
+                <display value="Audiology procedure note"/>
+            </concept>
+            <concept>
+                <code value="78314-2"/>
+                <display value="Dermatology procedure note"/>
+            </concept>
+            <concept>
+                <code value="78315-9"/>
+                <display value="Family medicine procedure note"/>
+            </concept>
+            <concept>
+                <code value="78316-7"/>
+                <display value="Emergency department procedure note"/>
+            </concept>
+            <concept>
+                <code value="78317-5"/>
+                <display value="Gastroenterology procedure note"/>
+            </concept>
+            <concept>
+                <code value="78318-3"/>
+                <display value="Infectious disease procedure note"/>
+            </concept>
+            <concept>
+                <code value="78319-1"/>
+                <display value="Hematology procedure note"/>
+            </concept>
+            <concept>
+                <code value="78320-9"/>
+                <display value="General medicine procedure note"/>
+            </concept>
+            <concept>
+                <code value="78321-7"/>
+                <display value="Endocrinology procedure note"/>
+            </concept>
+            <concept>
+                <code value="78322-5"/>
+                <display value="Surgery procedure note"/>
+            </concept>
+            <concept>
+                <code value="78472-8"/>
+                <display value="Mental health procedure note"/>
+            </concept>
+            <concept>
+                <code value="78473-6"/>
+                <display value="Neonatal perinatal medicine procedure note"/>
+            </concept>
+            <concept>
+                <code value="78474-4"/>
+                <display value="Nephrology procedure note"/>
+            </concept>
+            <concept>
+                <code value="78475-1"/>
+                <display value="Neurology procedure note"/>
+            </concept>
+            <concept>
+                <code value="78476-9"/>
+                <display value="Nurse practitioner procedure note"/>
+            </concept>
+            <concept>
+                <code value="78477-7"/>
+                <display value="Occupational therapy procedure note"/>
+            </concept>
+            <concept>
+                <code value="78478-5"/>
+                <display value="Oncology procedure note"/>
+            </concept>
+            <concept>
+                <code value="78494-2"/>
+                <display value="Nutrition and dietetics procedure note"/>
+            </concept>
+            <concept>
+                <code value="78654-1"/>
+                <display value="Speech-language pathology procedure note"/>
+            </concept>
+            <concept>
+                <code value="78655-8"/>
+                <display value="Otolaryngology procedure note"/>
+            </concept>
+            <concept>
+                <code value="78656-6"/>
+                <display value="Radiation oncology procedure note"/>
+            </concept>
+            <concept>
+                <code value="78657-4"/>
+                <display value="Ophthalmology procedure note"/>
+            </concept>
+            <concept>
+                <code value="78658-2"/>
+                <display value="Respiratory therapy procedure note"/>
+            </concept>
+            <concept>
+                <code value="78659-0"/>
+                <display value="Urology procedure note"/>
+            </concept>
+            <concept>
+                <code value="78660-8"/>
+                <display value="Rheumatology procedure note"/>
+            </concept>
+            <concept>
+                <code value="78661-6"/>
+                <display value="Optometry procedure note"/>
+            </concept>
+            <concept>
+                <code value="78662-4"/>
+                <display value="Physical therapy procedure note"/>
+            </concept>
+            <concept>
+                <code value="79267-1"/>
+                <display value="Sports medicine procedure note"/>
+            </concept>
+            <concept>
+                <code value="80669-5"/>
+                <display value="Vascular neurology procedure note"/>
+            </concept>
+            <concept>
+                <code value="80670-3"/>
+                <display value="Clinical neurophysiology procedure note"/>
+            </concept>
+            <concept>
+                <code value="80798-2"/>
+                <display value="Pulmonary procedure note"/>
+            </concept>
+            <concept>
+                <code value="82355-9"/>
+                <display value="Geriatric medicine procedure note"/>
+            </concept>
+            <concept>
+                <code value="82357-5"/>
+                <display value="Palliative care procedure note"/>
+            </concept>
+            <concept>
+                <code value="82366-6"/>
+                <display value="Reproductive endocrinology and infertility procedure note"/>
+            </concept>
+            <concept>
+                <code value="83525-6"/>
+                <display value="Cardiology Intensive care unit procedure note"/>
+            </concept>
+            <concept>
+                <code value="83533-0"/>
+                <display value="Cardiology Nurse procedure note"/>
+            </concept>
+            <concept>
+                <code value="83577-7"/>
+                <display value="Gastroenterology Nurse procedure note"/>
+            </concept>
+            <concept>
+                <code value="83599-1"/>
+                <display value="Urology Nurse procedure note"/>
+            </concept>
+            <concept>
+                <code value="83616-3"/>
+                <display value="Surgery Nurse Outpatient procedure note"/>
+            </concept>
+            <concept>
+                <code value="83617-1"/>
+                <display value="Surgery Nurse procedure note"/>
+            </concept>
+            <concept>
+                <code value="83640-3"/>
+                <display value="Pulmonary Nurse procedure note"/>
+            </concept>
+            <concept>
+                <code value="83651-0"/>
+                <display value="Pain medicine Outpatient procedure note"/>
+            </concept>
+            <concept>
+                <code value="83728-6"/>
+                <display value="Physical medicine and rehab procedure note"/>
+            </concept>
+            <concept>
+                <code value="83789-8"/>
+                <display value="Pulmonary Physician attending procedure note"/>
+            </concept>
+            <concept>
+                <code value="83854-0"/>
+                <display value="Plastic surgery procedure note"/>
+            </concept>
+            <concept>
+                <code value="83891-2"/>
+                <display value="Psychiatry procedure note"/>
+            </concept>
+            <concept>
+                <code value="83938-1"/>
+                <display value="Research procedure note"/>
+            </concept>
+            <concept>
+                <code value="84006-6"/>
+                <display value="Spinal cord injury medicine procedure note"/>
+            </concept>
+            <concept>
+                <code value="84015-7"/>
+                <display value="Surgery Intensive care unit procedure note"/>
+            </concept>
+            <concept>
+                <code value="84021-5"/>
+                <display value="Surgery Outpatient procedure note"/>
+            </concept>
+            <concept>
+                <code value="84044-7"/>
+                <display value="Urology Outpatient procedure note"/>
+            </concept>
+            <concept>
+                <code value="84053-8"/>
+                <display value="Vascular surgery procedure note"/>
+            </concept>
+            <concept>
+                <code value="84062-9"/>
+                <display value="Anesthesiology procedure note"/>
+            </concept>
+            <concept>
+                <code value="84074-4"/>
+                <display value="Colon and rectal surgery procedure note"/>
+            </concept>
+            <concept>
+                <code value="84081-9"/>
+                <display value="Dermatology Outpatient procedure note"/>
+            </concept>
+            <concept>
+                <code value="84147-8"/>
+                <display value="Hematology+Medical oncology procedure note"/>
+            </concept>
+            <concept>
+                <code value="84158-5"/>
+                <display value="Hepatology procedure note"/>
+            </concept>
+            <concept>
+                <code value="84374-8"/>
+                <display value="Orthopaedic surgery procedure note"/>
+            </concept>
+            <concept>
+                <code value="84375-5"/>
+                <display value="Orthopaedic surgery Outpatient procedure note"/>
+            </concept>
+            <concept>
+                <code value="84379-7"/>
+                <display value="Oral and Maxillofacial Surgery procedure note"/>
+            </concept>
+            <concept>
+                <code value="84391-2"/>
+                <display value="Occupational medicine procedure note"/>
+            </concept>
+            <concept>
+                <code value="84408-4"/>
+                <display value="Ophthalmology Outpatient procedure note"/>
+            </concept>
+            <concept>
+                <code value="85230-1"/>
+                <display value="Medical genetics Nurse procedure note"/>
+            </concept>
+            <concept>
+                <code value="85236-8"/>
+                <display value="Internal medicine procedure note"/>
+            </concept>
+            <concept>
+                <code value="85242-6"/>
+                <display value="Internal medicine Intensive care unit procedure note"/>
+            </concept>
+            <concept>
+                <code value="85260-8"/>
+                <display value="Radiology Nurse procedure note"/>
+            </concept>
+            <concept>
+                <code value="85261-6"/>
+                <display value="Radiology procedure note"/>
+            </concept>
+            <concept>
+                <code value="85854-8"/>
+                <display value="Cardiothoracic surgery procedure note"/>
+            </concept>
+            <concept>
+                <code value="85857-1"/>
+                <display value="Womens health procedure note"/>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>
