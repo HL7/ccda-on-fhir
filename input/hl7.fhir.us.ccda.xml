@@ -670,7 +670,7 @@
         </page>
         <parameter>
             <code value="releaselabel"/>
-            <value value="STU Release 1.1.0 for FHIR R4"/>
+            <value value="CI Build"/>
         </parameter>
         <parameter>
             <code value="copyrightyear"/>
