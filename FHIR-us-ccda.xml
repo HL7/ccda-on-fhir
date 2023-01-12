@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/ccda/2017Jan" ciUrl="http://build.fhir.org/ig/HL7/ccda-on-fhir-r4" defaultVersion="1.1.0" defaultWorkgroup="sd" gitUrl="https://github.com/HL7/ccda-on-fhir" url="http://hl7.org/fhir/us/ccda">
+<version code="current" url="http://build.fhir.org/ig/HL7/ccda-on-fhir-r4"/>
+<version code="1.1.0" url="http://hl7.org/fhir/us/ccda/STU1.1"/>
+<version code="1.0.0" url="http://hl7.org/fhir/us/ccda/STU1"/>
+<version code="1.8.0" url="http://hl7.org/fhir/us/ccda/2017Jan"/>
+<version code="1.6.0" deprecated="true" url="http://hl7.org/fhir/us/ccda/2016Sep"/>
+<version code="1.0" deprecated="true"/>
+<artifactPageExtension value="-definitions"/>
+<artifactPageExtension value="-examples"/>
+<artifactPageExtension value="-mappings"/>
+<artifact id="Organization/organization-2" key="Organization-organization-2" name="Acme Clinic"/>
+<artifact id="Organization/acme-lab" key="Organization-acme-lab" name="Acme Lab"/>
+<artifact id="Organization/organization-1" key="Organization-organization-1" name="Acme Labs"/>
+<artifact id="AllergyIntolerance/allergy-intolerance" key="AllergyIntolerance-allergy-intolerance" name="allergy-intolerance"/>
+<artifact deprecated="true" key="AuditEvent" name="AuditEvent"/>
+<artifact id="StructureDefinition/AuthorizationExtension" key="StructureDefinition-AuthorizationExtension" name="Authorization Extension"/>
+<artifact id="Composition/Care-Plan-Example" key="Composition-Care-Plan-Example" name="Care Plan"/>
+<artifact id="StructureDefinition/Care-Plan-Document" key="StructureDefinition-Care-Plan-Document" name="Care Plan Document"/>
+<artifact id="ValueSet/2.16.840.1.113762.1.4.1099.10" key="ValueSet-2.16.840.1.113762.1.4.1099.10" name="Care Plan Document Type"/>
+<artifact id="CapabilityStatement/CcdaOnFhirClient" key="CapabilityStatement-CcdaOnFhirClient" name="CCDA on FHIR Client"/>
+<artifact id="CapabilityStatement/CcdaOnFhirServer" key="CapabilityStatement-CcdaOnFhirServer" name="CCDA on FHIR Server"/>
+<artifact id="PractitionerRole/ccda-practitionerrole-example" key="PractitionerRole-ccda-practitionerrole-example" name="ccda-practitionerrole-example"/>
+<artifact deprecated="true" id="ConceptMap/C2F-AllergyIntolerance" key="ConceptMap-C2F-AllergyIntolerance" name="CCDA-to-FHIR map for AllergyIntolerance"/>
+<artifact deprecated="true" id="ConceptMap/C2F-Condition" key="ConceptMap-C2F-Condition" name="CCDA-to-FHIR map for Condition"/>
+<artifact deprecated="true" id="ConceptMap/C2F-Immunization" key="ConceptMap-C2F-Immunization" name="CCDA-to-FHIR map for Immunization"/>
+<artifact deprecated="true" id="ConceptMap/C2F-MedicationRequest" key="ConceptMap-C2F-MedicationRequest" name="CCDA-to-FHIR map for MedicationRequest"/>
+<artifact deprecated="true" id="ConceptMap/C2F-Patient" key="ConceptMap-C2F-Patient" name="CCDA-to-FHIR map for Patient"/>
+<artifact deprecated="true" id="ConceptMap/C2F-Procedure" key="ConceptMap-C2F-Procedure" name="CCDA-to-FHIR map for Procedure"/>
+<artifact id="ServiceRequest/colonoscopy" key="ServiceRequest-colonoscopy" name="Colonoscopy"/>
+<artifact id="Bundle/Complete-Document-Bundle-Example" key="Bundle-Complete-Document-Bundle-Example" name="Complete Document Bundle Example"/>
+<artifact deprecated="true" key="Composition" name="Composition"/>
+<artifact id="Condition/condition-problem" key="Condition-condition-problem" name="condition-problem"/>
+<artifact id="Consent/consent-example-basic" key="Consent-consent-example-basic" name="Consent Example Basic"/>
+<artifact id="StructureDefinition/Consultation-Note" key="StructureDefinition-Consultation-Note" name="Consultation Note"/>
+<artifact id="Composition/Consultation-Note-Example" key="Composition-Consultation-Note-Example" name="Consultation Note"/>
+<artifact id="ValueSet/2.16.840.1.113883.11.20.9.31" key="ValueSet-2.16.840.1.113883.11.20.9.31" name="ConsultDocumentType"/>
+<artifact id="StructureDefinition/Continuity-of-Care-Document" key="StructureDefinition-Continuity-of-Care-Document" name="Continuity of Care Document"/>
+<artifact id="Composition/Continuity-of-Care-Document-Example" key="Composition-Continuity-of-Care-Document-Example" name="Continuity of Care Document"/>
+<artifact id="StructureDefinition/DataEntererExtension" key="StructureDefinition-DataEntererExtension" name="Data Enterer Extension"/>
+<artifact id="StructureDefinition/Diagnostic-Imaging-Report" key="StructureDefinition-Diagnostic-Imaging-Report" name="Diagnostic Imaging Report"/>
+<artifact id="Composition/Diagnostic-Imaging-Report-Example" key="Composition-Diagnostic-Imaging-Report-Example" name="Diagnostic Imaging Report"/>
+<artifact id="StructureDefinition/Discharge-Summary" key="StructureDefinition-Discharge-Summary" name="Discharge Summary"/>
+<artifact id="Composition/Discharge-Summary-Example" key="Composition-Discharge-Summary-Example" name="Discharge Summary"/>
+<artifact id="ValueSet/2.16.840.1.113883.11.20.4.1" key="ValueSet-2.16.840.1.113883.11.20.4.1" name="DischargeSummaryDocumentTypeCode"/>
+<artifact id="Encounter/encounter-1" key="Encounter-encounter-1" name="encounter-1"/>
+<artifact id="Encounter/example-1" key="Encounter-example-1" name="example-1"/>
+<artifact deprecated="true" id="ConceptMap/F2C-AllergyIntolerance" key="ConceptMap-F2C-AllergyIntolerance" name="FHIR-to-CCDA map for AllergyIntolerance"/>
+<artifact deprecated="true" id="ConceptMap/F2C-Condition" key="ConceptMap-F2C-Condition" name="FHIR-to-CCDA map for Condition"/>
+<artifact deprecated="true" id="ConceptMap/F2C-Immunization" key="ConceptMap-F2C-Immunization" name="FHIR-to-CCDA map for Immunization"/>
+<artifact deprecated="true" id="ConceptMap/F2C-MedicationRequest" key="ConceptMap-F2C-MedicationRequest" name="FHIR-to-CCDA map for MedicationRequest"/>
+<artifact deprecated="true" id="ConceptMap/F2C-Patient" key="ConceptMap-F2C-Patient" name="FHIR-to-CCDA map for Patient"/>
+<artifact deprecated="true" id="ConceptMap/F2C-Procedure" key="ConceptMap-F2C-Procedure" name="FHIR-to-CCDA map for Procedure"/>
+<artifact id="StructureDefinition/History-and-Physical" key="StructureDefinition-History-and-Physical" name="History and Physical"/>
+<artifact id="Composition/History-and-Physical-Example" key="Composition-History-and-Physical-Example" name="History and Physical Note"/>
+<artifact id="ValueSet/2.16.840.1.113883.1.11.20.22" key="ValueSet-2.16.840.1.113883.1.11.20.22" name="HPDocumentType"/>
+<artifact id="Immunization/immunization" key="Immunization-immunization" name="immunization"/>
+<artifact id="StructureDefinition/InformantExtension" key="StructureDefinition-InformantExtension" name="Informant Extension"/>
+<artifact id="StructureDefinition/InformationRecipientExtension" key="StructureDefinition-InformationRecipientExtension" name="Information Recipient Extension"/>
+<artifact id="ValueSet/1.3.6.1.4.1.12009.10.2.5" key="ValueSet-1.3.6.1.4.1.12009.10.2.5" name="LOINC Imaging Document Codes"/>
+<artifact id="MedicationStatement/medication-statement" key="MedicationStatement-medication-statement" name="medication-statement"/>
+<artifact id="Observation/observation-lab-urine" key="Observation-observation-lab-urine" name="observation-lab-urine"/>
+<artifact id="Observation/observation-smoker" key="Observation-observation-smoker" name="observation-smoker"/>
+<artifact id="Observation/observation-vitals-temp" key="Observation-observation-vitals-temp" name="observation-vitals-temp"/>
+<artifact id="StructureDefinition/Operative-Note" key="StructureDefinition-Operative-Note" name="Operative Note"/>
+<artifact id="Composition/Operative-Note-Example" key="Composition-Operative-Note-Example" name="Operative Note"/>
+<artifact id="StructureDefinition/OrderExtension" key="StructureDefinition-OrderExtension" name="Order Extension"/>
+<artifact id="StructureDefinition/ParticipantExtension" key="StructureDefinition-ParticipantExtension" name="Participant Extension"/>
+<artifact id="Patient/example" key="Patient-example" name="Patient Amy V. Shaw"/>
+<artifact id="StructureDefinition/PerformerExtension" key="StructureDefinition-PerformerExtension" name="Performer Extension"/>
+<artifact id="Practitioner/ccda-practitioner-example" key="Practitioner-ccda-practitioner-example" name="Practitioner Brenda Jennings Richard"/>
+<artifact id="StructureDefinition/Procedure-Note" key="StructureDefinition-Procedure-Note" name="Procedure Note"/>
+<artifact id="Composition/Procedure-Note-Example" key="Composition-Procedure-Note-Example" name="Procedure Note"/>
+<artifact id="ValueSet/2.16.840.1.113883.11.20.6.1" key="ValueSet-2.16.840.1.113883.11.20.6.1" name="ProcedureNoteDocumentTypeCodes"/>
+<artifact id="Procedure/procedure-rehab" key="Procedure-procedure-rehab" name="procedure-rehab"/>
+<artifact id="StructureDefinition/Progress-Note" key="StructureDefinition-Progress-Note" name="Progress Note"/>
+<artifact id="Composition/Progress-Note-Example" key="Composition-Progress-Note-Example" name="Progress Note"/>
+<artifact id="ValueSet/2.16.840.1.113883.11.20.8.1" key="ValueSet-2.16.840.1.113883.11.20.8.1" name="ProgressNoteDocumentTypeCode"/>
+<artifact deprecated="true" key="Provenance" name="Provenance"/>
+<artifact id="ValueSet/2.16.840.1.113883.1.11.20.2.3" key="ValueSet-2.16.840.1.113883.1.11.20.2.3" name="ReferralDocumentType"/>
+<artifact id="StructureDefinition/Referral-Note" key="StructureDefinition-Referral-Note" name="Referral Note"/>
+<artifact id="Composition/Referral-Note-Example" key="Composition-Referral-Note-Example" name="Referral Note"/>
+<artifact id="Procedure/rehab" key="Procedure-rehab" name="rehab"/>
+<artifact id="Practitioner/practitioner-1" key="Practitioner-practitioner-1" name="Ronald Boone, MD"/>
+<artifact deprecated="true" key="StructureDefinition" name="StructureDefinition"/>
+<artifact id="ValueSet/2.16.840.1.113883.11.20.1.1" key="ValueSet-2.16.840.1.113883.11.20.1.1" name="SurgicalOperationNoteDocumentTypeCode"/>
+<artifact id="ValueSet/2.16.840.1.113883.1.11.20.2.4" key="ValueSet-2.16.840.1.113883.1.11.20.2.4" name="TransferDocumentType"/>
+<artifact id="StructureDefinition/Transfer-Summary" key="StructureDefinition-Transfer-Summary" name="Transfer Summary"/>
+<artifact id="Composition/Transfer-Summary-Example" key="Composition-Transfer-Summary-Example" name="Transfer Summary"/>
+<artifact id="StructureDefinition/US-Realm-Header" key="StructureDefinition-US-Realm-Header" name="US Realm Header"/>
+<artifact deprecated="true" key="ValueSet" name="ValueSet"/>
+<artifact id="StructureDefinition/VersionNumber" key="StructureDefinition-VersionNumber" name="Version Number"/>
+<page key="many" name="(many)"/>
+<page deprecated="true" key="methodology" name="(methodology)"/>
+<page key="NA" name="(NA)"/>
+<page deprecated="true" key="profiles" name="(profiles)"/>
+<page key="artifacts" name="Artifacts Summary"/>
+<page key="background" name="Background"/>
+<page key="downloads" name="Downloads"/>
+<page deprecated="true" key="Guidance" name="Guidance"/>
+<page key="index" name="Home Page"/>
+<page deprecated="true" key="implementation" name="Implementation (see Documentation)" url="implementation"/>
+<page key="toc" name="Table of Contents"/>
+<page deprecated="true" key="Terminology" name="Terminology"/>
+<page key="the_specification" name="The Specification"/>
+</specification>
