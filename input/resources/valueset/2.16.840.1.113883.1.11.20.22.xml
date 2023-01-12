@@ -7,10 +7,11 @@
         <lastUpdated value="2020-08-19T06:35:26.180+00:00"/>
         <source value="#UQHxYsUhbLhPRes1"/>
     </meta>
-    <url value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.1.11.20.22"/>
+    <url value="http://hl7.org/fhir/us/ccda/ValueSet/2.16.840.1.113883.1.11.20.22"/>
     <name value="HPDocumentType"/>
     <title value="HPDocumentType"/>
     <status value="active"/>
+	<experimental value="false"/>
     <publisher value="HL7 Terminology"/>
     <description value="(Clinical Focus: Subclassification of history &amp; physical document by setting, author role, and author specialty),(Data Element Scope: ClinicalDocument.code@code in H&amp;P Document template in C-CDA R2.1),(Inclusion Criteria: Some selected LOINC codes for information that uses H&amp;P Document template to represent the information in CDA),(Exclusion Criteria: )&#xA;&#xA;This value set was imported on 6/25/2019 with a version of 20190517."/>
     <copyright value="This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"/>

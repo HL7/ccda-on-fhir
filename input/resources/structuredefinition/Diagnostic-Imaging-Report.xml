@@ -49,7 +49,7 @@
             <mustSupport value="true"/>
             <binding>
                 <strength value="preferred"/>
-                <valueSet value="http://cts.nlm.nih.gov/fhir/ValueSet/1.3.6.1.4.1.12009.10.2.5"/>
+                <valueSet value="http://hl7.org/fhir/us/ccda/ValueSet/1.3.6.1.4.1.12009.10.2.5"/>
             </binding>
         </element>
         <element id="Composition.section">

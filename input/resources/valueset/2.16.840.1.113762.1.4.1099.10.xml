@@ -7,10 +7,11 @@
         <lastUpdated value="2020-08-19T06:34:51.720+00:00"/>
         <source value="#49QzE2rZjBWNk32p"/>
     </meta>
-    <url value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1099.10"/>
+    <url value="http://hl7.org/fhir/us/ccda/ValueSet/2.16.840.1.113762.1.4.1099.10"/>
     <name value="CarePlanDocumentType"/>
     <title value="Care Plan Document Type"/>
     <status value="active"/>
+	<experimental value="false"/>
     <publisher value="HL7 Terminology"/>
     <description value="(Clinical Focus: Terms used to identify documents that represent a Care Plan),(Data Element Scope: ),(Inclusion Criteria: This value set expansion is currently missing two pending LOINC concepts: &#xA;93023-0  Pharmacist Plan of care note&#xA;and 93024-8 Pharmacist Consult Note.),(Exclusion Criteria: )&#xA;&#xA;This value set was imported on 6/24/2019 with a version of 20190425."/>
     <copyright value="This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"/>
