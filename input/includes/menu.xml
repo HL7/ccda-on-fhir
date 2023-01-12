@@ -4,7 +4,6 @@
   <li><a href="background.html">Background</a></li>
 
   <li><a href="the_specification.html">The Specification</a></li>
-  <!-- 
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Mapping<b class="caret">
       </b>
@@ -30,7 +29,6 @@
       </li>
     </ul>
   </li>
-  -->
   <li><a href="downloads.html">Downloads</a></li>
   <li><a href="artifacts.html">Artifact Index</a></li>
 </ul>

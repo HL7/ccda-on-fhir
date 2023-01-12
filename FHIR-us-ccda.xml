@@ -94,12 +94,18 @@
 <page deprecated="true" key="methodology" name="(methodology)"/>
 <page key="NA" name="(NA)"/>
 <page deprecated="true" key="profiles" name="(profiles)"/>
+<page key="allergies" name="Allergies"/>
 <page key="artifacts" name="Artifacts Summary"/>
 <page key="background" name="Background"/>
 <page key="downloads" name="Downloads"/>
 <page deprecated="true" key="Guidance" name="Guidance"/>
 <page key="index" name="Home Page"/>
+<page key="immunizations" name="Immunizations"/>
 <page deprecated="true" key="implementation" name="Implementation (see Documentation)" url="implementation"/>
+<page key="mapping" name="Mapping Index"/>
+<page key="medications" name="Medications"/>
+<page key="patient" name="Patient"/>
+<page key="problems" name="Problems"/>
 <page key="toc" name="Table of Contents"/>
 <page deprecated="true" key="Terminology" name="Terminology"/>
 <page key="the_specification" name="The Specification"/>

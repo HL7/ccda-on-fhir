@@ -658,6 +658,36 @@
                 <generation value="markdown"/>
             </page>
             <page>
+                <nameUrl value="mapping.html"/>
+                <title value="Mapping Index"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="patient.html"/>
+                <title value="Patient"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="allergies.html"/>
+                <title value="Allergies"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="immunizations.html"/>
+                <title value="Immunizations"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="medications.html"/>
+                <title value="Medications"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="problems.html"/>
+                <title value="Problems"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
                 <nameUrl value="the_specification.html"/>
                 <title value="The Specification"/>
                 <generation value="markdown"/>
