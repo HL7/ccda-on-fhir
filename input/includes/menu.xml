@@ -4,7 +4,33 @@
   <li><a href="background.html">Background</a></li>
 
   <li><a href="the_specification.html">The Specification</a></li>
-
+  <!-- 
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Mapping<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="mapping.html">Map Index</a>
+      </li>
+      <li>
+        <a href="patient.html">Patient</a>
+      </li>
+      <li>
+        <a href="allergies.html">Allergies</a>
+      </li>
+      <li>
+        <a href="immunizations.html">Immunizations</a>
+      </li>
+      <li>
+        <a href="medications.html">Medications</a>
+      </li>
+      <li>
+        <a href="problems.html">Problems</a>
+      </li>
+    </ul>
+  </li>
+  -->
   <li><a href="downloads.html">Downloads</a></li>
   <li><a href="artifacts.html">Artifact Index</a></li>
 </ul>
