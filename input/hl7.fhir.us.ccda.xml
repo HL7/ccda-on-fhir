@@ -449,6 +449,15 @@
         </resource>
         <resource>
             <reference>
+                <reference value="AllergyIntolerance/allergy-intolerance-mapped-to-FHIR"/>
+                <display value="allergy-intolerance-mapped-to-FHIR"/>
+            </reference>
+            <name value="allergy-intolerance-mapped-to-FHIR"/>
+            <description value="allergy-intolerance-mapped-to-FHIR"/>
+            <exampleBoolean value="true"/>
+        </resource>
+        <resource>
+            <reference>
                 <reference value="Immunization/immunization"/>
                 <display value="immunization"/>
             </reference>

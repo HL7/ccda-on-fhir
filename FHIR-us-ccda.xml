@@ -13,6 +13,7 @@
 <artifact id="Organization/acme-lab" key="Organization-acme-lab" name="Acme Lab"/>
 <artifact id="Organization/organization-1" key="Organization-organization-1" name="Acme Labs"/>
 <artifact id="AllergyIntolerance/allergy-intolerance" key="AllergyIntolerance-allergy-intolerance" name="allergy-intolerance"/>
+<artifact id="AllergyIntolerance/allergy-intolerance-mapped-to-FHIR" key="AllergyIntolerance-allergy-intolerance-mapped-to-FHIR" name="allergy-intolerance-mapped-to-FHIR"/>
 <artifact deprecated="true" key="AuditEvent" name="AuditEvent"/>
 <artifact id="StructureDefinition/AuthorizationExtension" key="StructureDefinition-AuthorizationExtension" name="Authorization Extension"/>
 <artifact id="Composition/Care-Plan-Example" key="Composition-Care-Plan-Example" name="Care Plan"/>
