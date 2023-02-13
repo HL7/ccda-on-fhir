@@ -672,6 +672,11 @@
                 <generation value="markdown"/>
             </page>
             <page>
+                <nameUrl value="mappingGuidance.html"/>
+                <title value="General Guidance"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
                 <nameUrl value="patient.html"/>
                 <title value="Patient"/>
                 <generation value="markdown"/>
@@ -694,6 +699,11 @@
             <page>
                 <nameUrl value="problems.html"/>
                 <title value="Problems"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="conceptMaps.html"/>
+                <title value="Concept Maps"/>
                 <generation value="markdown"/>
             </page>
             <page>

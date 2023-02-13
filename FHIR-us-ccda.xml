@@ -98,7 +98,9 @@
 <page key="allergies" name="Allergies"/>
 <page key="artifacts" name="Artifacts Summary"/>
 <page key="background" name="Background"/>
+<page key="conceptMaps" name="Concept Maps"/>
 <page key="downloads" name="Downloads"/>
+<page key="mappingGuidance" name="General Guidance"/>
 <page deprecated="true" key="Guidance" name="Guidance"/>
 <page key="index" name="Home Page"/>
 <page key="immunizations" name="Immunizations"/>

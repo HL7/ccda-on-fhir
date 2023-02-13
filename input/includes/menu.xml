@@ -10,7 +10,10 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="mapping.html">Map Index</a>
+        <a href="mapping.html">Mapping Index</a>
+      </li>
+      <li>
+        <a href="mappingGuidance.html">General Guidance</a>
       </li>
       <li>
         <a href="patient.html">Patient</a>
@@ -26,6 +29,9 @@
       </li>
       <li>
         <a href="problems.html">Problems</a>
+      </li>
+      <li>
+        <a href="conceptMaps.html">Concept Maps</a>
       </li>
     </ul>
   </li>

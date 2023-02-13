@@ -1,3 +1,3 @@
 ## Heading
 
-Sample text
+Mapping index 
