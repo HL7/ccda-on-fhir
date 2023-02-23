@@ -4,6 +4,8 @@ td, th {
 }
 </style>
 
+For guidance on how to read the table below, see [Reading the C-CDA ↔ FHIR Mapping Pages](./mappingGuidance.html)
+
 ### C-CDA to FHIR
 
 | C-CDA¹ <br/>([Allergy Intolerance Observation](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.7.html)) | FHIR <br/>([AllergyIntolerance](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-allergyintolerance.html))| Transform Steps & Notes<br />([How to read](mappingGuidance.html#how-to-read-transform-steps-column)) |
@@ -24,7 +26,7 @@ td, th {
 
 ### FHIR to C-CDA
 
-<span style="color:red; font-weight:bold; font-size:2em">Table Below Proposed for removal</span> 
+<span style="color:red; font-weight:bold; font-size:2em">This section and table below proposed for removal</span> 
 
 | FHIR <br/>([AllergyIntolerance](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-allergyintolerance.html))| C-CDA <br/>([observation](http://hl7.org/cda/stds/core/draft1/StructureDefinition-Observation.html))| Transform Steps & Notes|
 |:-------|:------|:---------|
@@ -42,13 +44,10 @@ td, th {
 
 ### Illustrative example
 
-Make example expandable
-https://build.fhir.org/ig/HL7/US-Core/screening-and-assessments.html#searching-for-screening-and-assessment-data
+{% include examplebutton.html example="allergy_example" b_title = "Click on Here To See Highlighted Example" %}
 
-An illustrative example with higlighting is shown below based on the consensus of mapping and guidance above. Not all possible elements in CDA or FHIR may be represented 
+#### Links to example content
 
-<img src="allergy_example.png" />
-
-Source data for the above example is available: 
-* [LEFT: Allergy CDA example]()
-* [RIGHT: Allergy FHIR example](./AllergyIntolerance-allergy-intolerance-mapped-to-FHIR.html)
+The consensus mapping example developed through multiple vendors are available below:
+* [Allergy CDA example]()
+* [Allergy FHIR example](./AllergyIntolerance-allergy-intolerance-mapped-to-FHIR.html)
