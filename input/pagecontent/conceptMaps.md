@@ -15,7 +15,7 @@ Links to conceptMap resources
 - [Administrative Gender (CDA) → Patient gender (FHIR)]
 - [Name Use Parts (CDA) → (FHIR)]
 - [Name Qualifier (CDA) → (FHIR)]
-- [NullFlavor (CDA) → Data Absent Reason code (FHIR)](./ConceptMap-CF-NullFlavorDataAbsentReason)
+- [NullFlavor (CDA) → Data Absent Reason code (FHIR)](./ConceptMap-CF-NullFlavorDataAbsentReason.html)
 - [Telecom use (CDA) → telecom contact point use (FHIR)]
 - [Telecom use (CDA) → telecom contact point use (FHIR)]
 

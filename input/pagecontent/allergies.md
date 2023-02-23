@@ -22,7 +22,7 @@ For guidance on how to read the table below, see [Reading the C-CDA ↔ FHIR Map
 |[/entryRelationship/observation/value]()|[.reaction[x].manifestation]()|[CDA CD ↔ FHIR CodeableConcept]()<br/>Both  use SNOMED clinical findings with minor valueSet definition differences
 |**Criticality**<br/>(```observation/code@code="82606-5"```)<br/>[/entryRelationship/observation/value]()|[.criticality]()|[CDA CD ↔ FHIR CodeableConcept]()<br/>[Allergy Criticality value → criticality]()
 
-1\. XPath abbrievated for CDA Allergy Intolerance as: ```ClinicalDocument/structuredBody/component/structuredBody/component/section[(@code="48765-2")]/entry/act/entryRelationship/observation```
+1\. XPath abbrievated for CDA Allergy Intolerance as: <br/> ```ClinicalDocument/structuredBody/component/structuredBody/component/section[(@code="48765-2")]/entry/act/entryRelationship/observation```
 
 ### FHIR to C-CDA
 
