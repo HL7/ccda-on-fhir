@@ -21,4 +21,4 @@ Links to conceptMap resources
 
 
 ### **Not Planned for P+PAMI Inclusion**
-- [Procedure Status (CDA) → Procedure status (FHIR)]()
+- [Procedure Status (CDA) → Procedure status (FHIR)]
