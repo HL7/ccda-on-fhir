@@ -10,7 +10,7 @@ td, th {
 |:-------|:------|:---------|
 |[/id](https://build.fhir.org/ig/HL7/CDA-ccda-2.1-sd/StructureDefinition-2.16.840.1.113883.10.20.22.4.7-definitions.html#diff_Observation.id)|[.identifier](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-allergyintolerance-definitions.html#AllergyIntolerance.id)| [CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
 |[/effectiveTime/low]()|[.onsetDateTime]()|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)<br/>EffectiveTime/high should not be mapped within onset (DateTime or Period)|
-|[/value]()|[.type]()<br/>&<br/> [.category]()|[CDA CD ↔ FHIR CodeableConcept]()<br/>[CDA value → FHIR type]() <br/> [CDA value → FHIR category]()|
+|[/value]()|[.type]()<br/>&<br/> [.category]()|[CDA CD ↔ FHIR CodeableConcept]()<br/>[CDA value → FHIR type]() <br/> [CDA value → FHIR category](./ConceptMap-CF-AllergyIntoleranceCategory.html)|
 |[/author]()|[.recorder]()<br/>&<br/>[Provenance]()|**Constraint:** Only map single CDA author to FHIR recorder<br/>[Guidance on CDA ↔ FHIR Provenance]()|
 |[/author/time]()|[.recorded]()|**Constraint:** Only map earliest author/time <br/>[CDA ↔ FHIR Time/Dates]()|
 |[/participant/participantRole<br/>/playingEntity/code]()|[.code]()|**Constraint:** Only when CDA negation not present<br/>[CDA CD ↔ FHIR CodeableConcept]()|

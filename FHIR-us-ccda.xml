@@ -19,6 +19,7 @@
 <artifact id="Composition/Care-Plan-Example" key="Composition-Care-Plan-Example" name="Care Plan"/>
 <artifact id="StructureDefinition/Care-Plan-Document" key="StructureDefinition-Care-Plan-Document" name="Care Plan Document"/>
 <artifact id="ValueSet/2.16.840.1.113762.1.4.1099.10" key="ValueSet-2.16.840.1.113762.1.4.1099.10" name="Care Plan Document Type"/>
+<artifact id="ConceptMap/CF-NullFlavorDataAbsentReason" key="ConceptMap-CF-NullFlavorDataAbsentReason" name="C-CDA NullFlavor to FHIR Data Absent Reason"/>
 <artifact id="CapabilityStatement/CcdaOnFhirClient" key="CapabilityStatement-CcdaOnFhirClient" name="CCDA on FHIR Client"/>
 <artifact id="CapabilityStatement/CcdaOnFhirServer" key="CapabilityStatement-CcdaOnFhirServer" name="CCDA on FHIR Server"/>
 <artifact id="PractitionerRole/ccda-practitionerrole-example" key="PractitionerRole-ccda-practitionerrole-example" name="ccda-practitionerrole-example"/>
