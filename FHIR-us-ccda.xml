@@ -22,6 +22,7 @@
 <artifact id="CapabilityStatement/CcdaOnFhirClient" key="CapabilityStatement-CcdaOnFhirClient" name="CCDA on FHIR Client"/>
 <artifact id="CapabilityStatement/CcdaOnFhirServer" key="CapabilityStatement-CcdaOnFhirServer" name="CCDA on FHIR Server"/>
 <artifact id="PractitionerRole/ccda-practitionerrole-example" key="PractitionerRole-ccda-practitionerrole-example" name="ccda-practitionerrole-example"/>
+<artifact id="ConceptMap/CF-AllergyIntoleranceCategory" key="ConceptMap-CF-AllergyIntoleranceCategory" name="CCDA to FHIR Allergy Intolerance Category"/>
 <artifact deprecated="true" id="ConceptMap/C2F-AllergyIntolerance" key="ConceptMap-C2F-AllergyIntolerance" name="CCDA-to-FHIR map for AllergyIntolerance"/>
 <artifact deprecated="true" id="ConceptMap/C2F-Condition" key="ConceptMap-C2F-Condition" name="CCDA-to-FHIR map for Condition"/>
 <artifact deprecated="true" id="ConceptMap/C2F-Immunization" key="ConceptMap-C2F-Immunization" name="CCDA-to-FHIR map for Immunization"/>
