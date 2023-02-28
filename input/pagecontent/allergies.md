@@ -15,7 +15,8 @@ For guidance on how to read the table below, see [Reading the C-CDA ↔ FHIR Map
 |[/value]()|[.type]()<br/>&<br/> [.category]()|[CDA CD ↔ FHIR CodeableConcept]()<br/>[CDA value → FHIR type]() <br/> [CDA value → FHIR category](./ConceptMap-CF-AllergyIntoleranceCategory.html)|
 |[/author]()|[.recorder]()<br/>&<br/>[Provenance]()|**Constraint:** Only map single CDA author to FHIR recorder<br/>[Guidance on CDA ↔ FHIR Provenance]()|
 |[/author/time]()|[.recorded]()|**Constraint:** Only map earliest author/time <br/>[CDA ↔ FHIR Time/Dates]()|
-|[/participant/participantRole<br/>/playingEntity/code]()|[.code]()|**Constraint:** Only when CDA negation not present<br/>[CDA CD ↔ FHIR CodeableConcept]()|
+|[/participant/participantRole<br/>/playingEntity/code]()|[.code]()|**Constraint:** When CDA negation is absent or false<br/>[CDA CD ↔ FHIR CodeableConcept]()|
+|[/participant/participantRole<br/>/playingEntity/code]()|[.code]()|**Constraint:** When CDA negation is true<br/>[Negated CDA allergy codes → FHIR allergy codes]() |
 |**Status**<br/>(```observation/code@code="33999-4"```)<br/>[/entryRelationship/observation/value]()|[.clinicalStatus]()|[CDA CD ↔ FHIR CodeableConcept]()
 |**Reaction**<br/>(```entryRelationship@typeCode="MFST"```)<br/>[/entryRelationship/observation/id]()|[.reaction[x].id]()<br/>
 |[/entryRelationship/observation<br/>/effectiveTime/low]()|[.reaction[x].onset]()|[CDA ↔ FHIR Time/Dates]()<br/>effectiveTime/high should not be mapped within onset
