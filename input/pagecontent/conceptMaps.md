@@ -1,6 +1,8 @@
-Links to conceptMap resources
+This page includes terminology mapping from CDA to FHIR and FHIR to CDA in two separate sections. This is terminology mapping. For structural transformations, please refer to the [general guidance](mappingGuidance.html) 
 
-### **Entry Specific CDA to FHIR ConceptMaps** 
+### CDA to FHIR Terminology Mapping
+
+#### **Entry Specific CDA to FHIR ConceptMaps** 
 - [Allergy Intolerance Observation value (CDA) → AllergyIntolerance type (FHIR)]
 - [Allergy Intolerance Observation value (CDA) → AllergyIntolerance category (FHIR)](./ConceptMap-CF-AllergyIntoleranceCategory.html)
 - [Criticality value (CDA) → criticality (FHIR)]
@@ -8,17 +10,36 @@ Links to conceptMap resources
 - [Immunization Refusal Reason (CDA) → Immunization statusReason (FHIR)]
 - [Medication Activity statusCode (CDA) → (FHIR)]
 - [Problem Status (CDA) → Condition clinicalStatus (FHIR)]
+- [Procedure Status (CDA) → Procedure status (FHIR)]
 - [Section code (CDA) → Condition category (FHIR)]
 - [Severity Observation value (CDA) → Reaction Event severity (FHIR)]
 
-### **General CDA to FHIR ConceptMaps** 
+#### **General CDA to FHIR ConceptMaps** 
 - [Administrative Gender (CDA) → Patient gender (FHIR)]
 - [Name Use Parts (CDA) → (FHIR)]
 - [Name Qualifier (CDA) → (FHIR)]
 - [NullFlavor (CDA) → Data Absent Reason code (FHIR)](./ConceptMap-CF-NullFlavorDataAbsentReason.html)
 - [Telecom use (CDA) → telecom contact point use (FHIR)]
-- [Telecom use (CDA) → telecom contact point use (FHIR)]
+- [Telecom value (CDA) → telecom contact point type (FHIR)]
 
+### FHIR to CDA Terminology Mapping
 
-### **Not Planned for P+PAMI Inclusion**
-- [Procedure Status (CDA) → Procedure status (FHIR)]
+#### **Resource Specific FHIR to CDA ConceptMaps** 
+- [AllergyIntolerance type (FHIR) → Allergy Intolerance Observation value (CDA)]
+- [AllergyIntolerance category (FHIR) → Allergy Intolerance Observation value (CDA)]
+- [criticality (FHIR) → Criticality value (CDA) ]
+- [Immunization status (FHIR) → Immunization Activity statusCode (CDA)]
+- [Immunization statusReason (FHIR) → Immunization Refusal Reason (CDA)]
+- [ MedicationRequest status(FHIR) → Medication Activity statusCode (CDA)]
+- [Condition clinicalStatus (FHIR) → Problem Status (CDA)]
+- [Procedure status (FHIR) → Procedure Status (CDA)]
+- [Condition category (FHIR) → Section code (CDA)]
+- [Reaction Event severity (FHIR) → Severity Observation value (CDA)]
+
+#### **General FHIR to CDA ConceptMaps** 
+- [ Patient gender (FHIR) → Administrative Gender (CDA)]
+- [(FHIR) → Name Use Parts (CDA)]
+- [(FHIR) → Name Qualifier (CDA)]
+- [Data Absent Reason code (FHIR) → NullFlavor (CDA)]
+- [Telecom contact point type (FHIR) → Telecom value (CDA)] 
+- [Telecom contact point use (FHIR) → Telecom use (CDA)] 

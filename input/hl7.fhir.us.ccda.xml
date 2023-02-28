@@ -667,43 +667,88 @@
                 <generation value="markdown"/>
             </page>
             <page>
-                <nameUrl value="mapping.html"/>
-                <title value="Mapping Index"/>
+                <nameUrl value="mappingBackground.html"/>
+                <title value="Mapping Background"/>
                 <generation value="markdown"/>
             </page>
             <page>
                 <nameUrl value="mappingGuidance.html"/>
-                <title value="General Guidance"/>
+                <title value="Mapping General Guidance"/>
                 <generation value="markdown"/>
             </page>
             <page>
-                <nameUrl value="patient.html"/>
-                <title value="Patient"/>
+                <nameUrl value="CF-index.html"/>
+                <title value="C-CDA → FHIR Index"/>
                 <generation value="markdown"/>
             </page>
             <page>
-                <nameUrl value="allergies.html"/>
-                <title value="Allergies"/>
+                <nameUrl value="FC-index.html"/>
+                <title value="FHIR → C-CDA Index"/>
                 <generation value="markdown"/>
             </page>
             <page>
-                <nameUrl value="immunizations.html"/>
-                <title value="Immunizations"/>
+                <nameUrl value="CF-patient.html"/>
+                <title value="C-CDA to FHIR Patient"/>
                 <generation value="markdown"/>
             </page>
             <page>
-                <nameUrl value="medications.html"/>
-                <title value="Medications"/>
+                <nameUrl value="CF-allergies.html"/>
+                <title value="C-CDA to FHIR Allergies"/>
                 <generation value="markdown"/>
             </page>
             <page>
-                <nameUrl value="problems.html"/>
-                <title value="Problems"/>
+                <nameUrl value="CF-immunizations.html"/>
+                <title value="C-CDA to FHIR Immunizations"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="CF-medications.html"/>
+                <title value="C-CDA to FHIR Medications"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="CF-problems.html"/>
+                <title value="C-CDA to FHIR Problems"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="CF-procedures.html"/>
+                <title value="C-CDA to FHIR Procedures"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="FC-patient.html"/>
+                <title value="FHIR to C-CDA Patient"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="FC-allergies.html"/>
+                <title value="FHIR to C-CDAAllergies"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="FC-immunizations.html"/>
+                <title value="FHIR to C-CDAImmunizations"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="FC-medications.html"/>
+                <title value="FHIR to C-CDAMedications"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="FC-problems.html"/>
+                <title value="FHIR to C-CDA Problems"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="FC-procedures.html"/>
+                <title value="FHIR to C-CDA Procedures"/>
                 <generation value="markdown"/>
             </page>
             <page>
                 <nameUrl value="conceptMaps.html"/>
-                <title value="Concept Maps"/>
+                <title value="Terminology Maps (Concept Maps)"/>
                 <generation value="markdown"/>
             </page>
             <page>

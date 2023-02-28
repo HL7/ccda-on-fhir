@@ -1,6 +1,6 @@
 ### Reading the C-CDA ↔ FHIR Mapping Pages 
 
-#### How to Read "Transform Steps" Column? 
+#### How to Read Mapping Tables and Transform Steps? 
 
 When specific steps are included for mapping content between C-CDA and FHIR, those steps will be listed in the "Transform Steps" column in the following order: 
 

@@ -10,28 +10,19 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="mapping.html">Mapping Index</a>
+        <a href="mappingBackground.html">Background</a>
       </li>
       <li>
         <a href="mappingGuidance.html">General Guidance</a>
       </li>
       <li>
-        <a href="patient.html">Patient</a>
+        <a href="CF-index.html">C-CDA → FHIR</a>
       </li>
       <li>
-        <a href="allergies.html">Allergies</a>
+        <a href="FC-index.html">FHIR to C-CDA</a>
       </li>
       <li>
-        <a href="immunizations.html">Immunizations</a>
-      </li>
-      <li>
-        <a href="medications.html">Medications</a>
-      </li>
-      <li>
-        <a href="problems.html">Problems</a>
-      </li>
-      <li>
-        <a href="conceptMaps.html">Concept Maps</a>
+        <a href="conceptMaps.html">Terminology Maps</a>
       </li>
     </ul>
   </li>

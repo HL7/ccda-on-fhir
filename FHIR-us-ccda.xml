@@ -97,21 +97,30 @@
 <page deprecated="true" key="methodology" name="(methodology)"/>
 <page key="NA" name="(NA)"/>
 <page deprecated="true" key="profiles" name="(profiles)"/>
-<page key="allergies" name="Allergies"/>
 <page key="artifacts" name="Artifacts Summary"/>
 <page key="background" name="Background"/>
-<page key="conceptMaps" name="Concept Maps"/>
+<page key="CF-allergies" name="C-CDA to FHIR Allergies"/>
+<page key="CF-immunizations" name="C-CDA to FHIR Immunizations"/>
+<page key="CF-medications" name="C-CDA to FHIR Medications"/>
+<page key="CF-patient" name="C-CDA to FHIR Patient"/>
+<page key="CF-problems" name="C-CDA to FHIR Problems"/>
+<page key="CF-procedures" name="C-CDA to FHIR Procedures"/>
+<page key="CF-index" name="C-CDA → FHIR Index"/>
 <page key="downloads" name="Downloads"/>
-<page key="mappingGuidance" name="General Guidance"/>
+<page key="FC-allergies" name="FHIR to C-CDAAllergies"/>
+<page key="FC-immunizations" name="FHIR to C-CDAImmunizations"/>
+<page key="FC-medications" name="FHIR to C-CDAMedications"/>
+<page key="FC-patient" name="FHIR to C-CDA Patient"/>
+<page key="FC-problems" name="FHIR to C-CDA Problems"/>
+<page key="FC-procedures" name="FHIR to C-CDA Procedures"/>
+<page key="FC-index" name="FHIR → C-CDA Index"/>
 <page deprecated="true" key="Guidance" name="Guidance"/>
 <page key="index" name="Home Page"/>
-<page key="immunizations" name="Immunizations"/>
 <page deprecated="true" key="implementation" name="Implementation (see Documentation)" url="implementation"/>
-<page key="mapping" name="Mapping Index"/>
-<page key="medications" name="Medications"/>
-<page key="patient" name="Patient"/>
-<page key="problems" name="Problems"/>
+<page key="mappingBackground" name="Mapping Background"/>
+<page key="mappingGuidance" name="Mapping General Guidance"/>
 <page key="toc" name="Table of Contents"/>
 <page deprecated="true" key="Terminology" name="Terminology"/>
+<page key="conceptMaps" name="Terminology Maps (Concept Maps)"/>
 <page key="the_specification" name="The Specification"/>
 </specification>
