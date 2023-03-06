@@ -1,5 +1,3 @@
-## Heading
-
 This [project's](https://confluence.hl7.org/display/CGP/C-CDA+to+and+from+US+Core+Mapping) goals, which were scoped independent of the original document-level profiles, are to establish prescriptive HL7 mapping transformation guidance for a round trip of the structural and vocabulary concept transformations between C-CDA and FHIR, with the CDA content scoped by using document types in C-CDA R2.1 and the C-CDA Companion Guide R2 and FHIR content scoped by US Core R4 and US Core Data for Interoperability (USCDI). 
 
 In our first publication, we focused on the subset of domains that are recognized as the most exchangeable concepts in the industry. We decided to limit our first publication to Allergies, Problems, Medications, Immunizations, Procedures, Patient (PAMPI+) domains, acknowledging the various stages of each concept maturity, we included the entire work for these concepts.
