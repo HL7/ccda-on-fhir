@@ -1,4 +1,4 @@
-### Reading the C-CDA ↔ FHIR Mapping Pages 
+### Reading the C-CDA ↔ FHIR Mapping and Structural Guidance 
 
 #### How to Read Mapping Tables and Transform Steps? 
 
@@ -15,7 +15,7 @@ Examples for C-CDA to FHIR transforms are provided based on a consensus of vario
 
 The highlighted outputs were created using an open source tool for C-CDA ↔ FHIR Mapping developed as part of this project.  
 
-### Guidance
+### Structural Guidance
 
 #### CDA id ↔ FHIR identifier
 
@@ -61,3 +61,7 @@ Text about what to do
 ####  Guidance on CDA ↔ FHIR Provenance
 
 Text about what to do
+
+### Terminology Mapping ###
+
+[Access terminology mapping between C-CDA and FHIR](conceptMaps.html)  

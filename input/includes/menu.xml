@@ -13,13 +13,13 @@
         <a href="mappingBackground.html">Background</a>
       </li>
       <li>
-        <a href="mappingGuidance.html">General Guidance</a>
-      </li>
-      <li>
         <a href="CF-index.html">C-CDA → FHIR</a>
       </li>
       <li>
         <a href="FC-index.html">FHIR → C-CDA</a>
+      </li>
+      <li>
+        <a href="mappingGuidance.html">Structural Guidance</a>
       </li>
       <li>
         <a href="conceptMaps.html">Terminology Maps</a>
