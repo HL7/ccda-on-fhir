@@ -74,7 +74,7 @@ For further information see the C-CDA specification here: http://www.hl7.org/imp
 <tbody>
 <tr>
 <td>HL7 Cross Group Projects</td>
-<td><a href="http://www.hl7.org/Special/committees/cgp/index.cfm" target="_new">http://www.hl7.org/Special/committees/cgp/index.cfm</a></td>
+<td><a href="http://hl7.org/Special/committees/cgp/index.cfm" target="_new">http://www.hl7.org/Special/committees/cgp/index.cfm</a></td>
 </tr>
 <tr>
 <td>HL7 Structured Documents Working Group</td>
@@ -100,6 +100,15 @@ For further information see the C-CDA specification here: http://www.hl7.org/imp
 <td>Ken Lord</td>
 <td><a href="mailto:klord@mdixinc.com">klord@mdixinc.com</a></td>
 </tr>
+<tr>
+<td>Catherine Hoang</td>
+<td><a href="mailto:Catherine.Hoang2@va.gov">Catherine.Hoang2@va.gov</a></td>
+</tr>
+<tr>
+<td>Bill Ormerod</td>
+<td><a href="mailto:william.ormerod@oracle.com">william.ormerod@oracle.com</a></td>
+</tr>
+
 </tbody>
 </table>
 
