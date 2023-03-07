@@ -1,4 +1,10 @@
-### Reading the C-CDA ↔ FHIR Mapping and Structural Guidance 
+<style>
+td, th {
+   border: 1px solid black!important;
+}
+</style>
+
+### Reading the C-CDA ↔ FHIR Mapping Tables 
 
 #### How to Read Mapping Tables and Transform Steps? 
 
@@ -56,11 +62,11 @@ CDA date-time values are based on a pattern of YYYYMMDDHHmmss+zzzz and [FHIR dat
 
 To convert between the standards, systems should deploy programming logic that converts formats and preserves the level of precision. For example, "20230531" from CDA would become "2023-05-31" in FHIR (not 2023-05-31T00:00:00+00:00). 
 
-#### CDA xsi:type=CD ↔ FHIR CodeableConcept
+#### CDA Coding ↔ FHIR CodeableConcept
 
 The structure for coding in CDA and FHIR are fundamentally different. CDA  employs a mechanism (xsi:type [CD](http://hl7.org/cda/stds/core/draft1/StructureDefinition-CD.html) or [CE](http://hl7.org/cda/stds/core/draft1/StructureDefinition-CE.html)) where the code is included in the element and then originalText and translations elements may be provided and children elements. In FHIR, [CodeableConcept](http://hl7.org/fhir/datatypes.html#codeableconcept) places all codes in a coding list with a separate element for the text representation. 
 
-##### CDA Coding → FHIR Coding
+##### CDA Coding → FHIR CodeableConcept
 
 |CDA Property|FHIR Target|Notes|
 |:-----|:-----|:-------------|
@@ -72,7 +78,7 @@ The structure for coding in CDA and FHIR are fundamentally different. CDA  emplo
 |translation@codeSystem|coding.system|May require mapping OID → URL|
 |translation@displayName|coding.display|
 
-##### FHIR Coding → CDA Coding
+##### FHIR CodeableConcept → CDA Coding
 
 |FHIR Property|CDA Target|Notes|
 |:-----|:-----|:-------------|
@@ -105,7 +111,7 @@ CDA referenced typically point to section/text which may include embedded lists 
 
 Implementers transforming a CDA document may wish to dereference the text and provide it in the target FHIR resource as text. This is appropriate, but we do not provide instructions for doing so. Implementers may also provide referenced text along with the reference. 
 
-####  Guidance on CDA ↔ FHIR Provenance
+#### CDA ↔ FHIR Provenance
 
 CDA provides a repeated set of elements within each activity for information on data provenance: 
 
@@ -125,6 +131,84 @@ FHIR, however, provides different elements within different resources that conve
 
 At a minimum, it is recommended that when [US CORE Provenance](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-provenance.html) resources are present in a FHIR document, that they should be mapped to provenance as defined in the [C-CDA Companion Guide](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=447). 
 
+#### Name, Address, Telecom ####
+
+The mappings of name, address and telecom information is useful in many part of C-CDA ↔ FHIR mapping. These are a combination of string, code and date mappings as shown below and may be re-used across many templates/resources.   
+
+##### CDA name → FHIR name #####
+
+|CDA name|FHIR name|Transform Steps
+|:-----|:-----|:---------
+|@use|.use|[Name use (CDA) → Name use (FHIR)]()
+|prefix|.prefix|
+|given|.given|
+|family|.family|
+|suffix|.suffix|
+|validTime/low@value|.period.start|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)
+|validTime/high@value|.period.end|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)
+
+##### CDA addr → FHIR address #####
+
+|CDA addr|FHIR address|Transform Steps
+|:-----|:-----|:---------
+|@use|.use|[Addr use  (CDA) → Address use (FHIR)]()
+|streetAddressLine|.line|
+|city|.city|
+|state|.state|
+|postalCode|.postalCode|
+|country|.country|
+|useablePeriod/low@value|.period.start|
+|useablePeriod/high@value|.period.end|
+
+##### CDA telecom → FHIR telecom #####
+
+|CDA telecom|FHIR telecom|Transform Steps
+|:-----|:-----|:---------
+|@use|.use|[CDA telecom use → FHIR contact point use]()
+|@value|.system<br/>&<br/>.value|[CDA telecom value → FHIR contact point system]()<br/>Only include information in FHIR value which comes after the CDA system prefix
+
+##### FHIR name → CDA name #####
+
+|FHIR name|CDA name|Transform Steps
+|:-----|:-----|:---------
+|.use|@use|[Name use (FHIR) → Name use (CDA)]()
+|.family|family|
+|.given|given|
+|.prefix|prefix|
+|.suffix|suffix|
+|.period.start|validTime/low@value|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)
+|.period.end|validTime/high@value|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)
+
+##### FHIR address  → CDA addr #####
+
+|FHIR address|CDA addr|Transform Steps
+|:-----|:-----|:---------
+|.use|@use|[Address use (FHIR) → Addr use (CDA)]()
+|.line|streetAddressLine|
+|.city|city|
+|.state|state|
+|.postalCode|postalCode|
+|.country|country|
+|.period.start|useablePeriod/low@value|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)
+|.period.end|useablePeriod/high@value|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)
+
+##### FHIR telecom → CDA telecom #####
+
+|FHIR telecom|CDA telecom|Comments
+|:-----|:-----|:---------
+|.system<br/>&<br/>.value |@value|[FHIR contact point system → CDA telecom value]()<br/>Insert FHIR value after the CDA system prefix mapped from FHIR system
+|.use|@use|[FHIR contact point use → CDA use]()
+
+#### Missing Data in C-CDA vs. FHIR ####
+
+The use of nullFlavor in CDA is explained in depth in Volume 1 of the [C-CDA Implementation Guide](http://hl7.org/cda/stds/ccda/draft1/designconsiderations.html#unknown-and-no-known-information) and in the [C-CDA Companion Guide](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=447). 
+
+The use of the data absent reason extension is explained in depth in the [US CORE Implementation Guide](https://build.fhir.org/ig/HL7/US-Core/general-requirements.html#missing-data) and also in the [base extension](http://hl7.org/fhir/extension-data-absent-reason.html).
+
+In this publication, we include a mapping between missing data concepts. **Importantly, it should be noted that several mappings include non-equivalence (wider or narrower or unsupported)**. Additional implementer guidance is welcome on the handling of missing data between C-CDA and FHIR:
+- [NullFlavor (CDA) → Data Absent Reason code (FHIR)](./ConceptMap-CF-NullFlavorDataAbsentReason.html) 
+- [Data Absent Reason code (FHIR) → NullFlavor (CDA)]()
+
 ### Terminology Mapping ###
 
-[Access terminology mapping between C-CDA and FHIR](conceptMaps.html)  
+[Access terminology mappings between C-CDA and FHIR](conceptMaps.html)  
