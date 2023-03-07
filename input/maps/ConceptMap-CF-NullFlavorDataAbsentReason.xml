@@ -1,141 +1,141 @@
 <ConceptMap xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<id value="CF-NullFlavorDataAbsentReason"/>
-	<url value="http://hl7.org/fhir/us/ccda/ConceptMap/CF-NullFlavorDataAbsentReason"/>
-	<version value="4.0.1"/>
-	<name value="CCDAtoFHIRNullFlavorDataAbsentReason"/>
-	<title value="C-CDA NullFlavor to FHIR Data Absent Reason"/>
-	<status value="active"/>
-	<experimental value="false"/>
-	<publisher value="HL7 International"/>
-	<description value="C-CDA NullFlavor to FHIR Data Absent Reason"/>
-	<contact>
-		<name value="HL7 International"/>
-		<telecom>
-			<system value="phone"/>
-			<value value="+1 734 677 7777"/>
-		</telecom>
-		<telecom>
-			<system value="fax"/>
-			<value value="+1 734 677 6622"/>
-		</telecom>
-		<telecom>
-			<system value="email"/>
-			<value value="info@hl7.org"/>
-		</telecom>
-	</contact>
-	<sourceUri value="http://terminology.hl7.org/ValueSet/v3-NullFlavor"/>
-	<targetUri value="http://hl7.org/fhir/ValueSet/data-absent-reason"/>
-	<group>
-		<source value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
-		<target value="http://terminology.hl7.org/CodeSystem/data-absent-reason"/>
-		<element>
-			<code value="NI"/>
-			<display value="No Information"/>
-			<target>
-				<code value="unknown"/>
-				<display value="Unknown"/>
-				<equivalence value="inexact"/>
-				<comment value="When the item is not required, US CORE guidance is to omit the element and not include data-absent-reason. When the item is required, US CORE guidance is to use unknown as the broadest concept"/> 
-			</target>
-		</element>
-		<element>
-			<code value="OTH"/>
-			<display value="Other"/>
-			<target>
-				<code value="unsupported"/>
-				<display value="Unsupported"/>
-				<equivalence value="wider"/>
-			</target>
-		</element>
-		<element>
-			<code value="NINF"/>
-			<display value="Negative Infinity"/>
-			<target>
-				<code value="negative-infinity"/>
-				<display value="Negative Infinity"/>
-				<equivalence value="equivalent"/>
-			</target>
-		</element>
-		<element>
-			<code value="PINF"/>
-			<display value="Positive Infinity"/>
-			<target>
-				<code value="positive-infinity"/>
-				<display value="Positive Infinity"/>
-				<equivalence value="equivalent"/>
-			</target>
-		</element>
-		<element>
-			<code value="MSK"/>
-			<display value="Masked"/>
-			<target>
-				<code value="masked"/>
-				<display value="Masked"/>
-				<equivalence value="equivalent"/>
-			</target>
-		</element>
-		<element>
-			<code value="NA"/>
-			<display value="Not Applicable"/>
-			<target>
-				<code value="not-applicable"/>
-				<display value="Not Applicable"/>
-				<equivalence value="equivalent"/>
-			</target>
-		</element>
-		<element>
-			<code value="UNK"/>
-			<display value="Unknown"/>
-			<target>
-				<code value="unknown"/>
-				<display value="Unknown"/>
-				<equivalence value="wider"/>
-			</target>
-		</element>
-		<element>
-			<code value="ASKU"/>
-			<display value="Asked But Unknown"/>
-			<target>
-				<code value="asked-unknown"/>
-				<display value="Asked But Unknown"/>
-				<equivalence value="equivalent"/>
-			</target>
-		</element>
-		<element>
-			<code value="NAV"/>
-			<display value="Temporarily Unavailable"/>
-			<target>
-				<code value="temp-unknown"/>
-				<display value="Temporarily Unknown"/>
-				<equivalence value="equivalent"/>
-			</target>
-		</element>
-		<element>
-			<code value="NASK"/>
-			<display value="Not Asked"/>
-			<target>
-				<code value="not-asked"/>
-				<display value="Not Asked"/>
-				<equivalence value="equivalent"/>
-			</target>
-		</element>
-		<element>
-			<code value="TRC"/>
-			<display value="Trace"/>
-			<target>
-				<code value="unsupported"/>
-				<display value="Unsupported"/>
-				<equivalence value="wider"/>
-			</target>
-		</element>
-		<element>
-			<code value="NP"/>
-			<display value="Not Present"/>
-			<target>
-				<code value="unknown"/>
-				<display value="Unknown"/>
-				<equivalence value="wider"/>
-			</target>
-		</element>
-	</group>
+  <id value="CF-NullFlavorDataAbsentReason"/>
+  <url value="http://hl7.org/fhir/us/ccda/ConceptMap/CF-NullFlavorDataAbsentReason"/>
+  <version value="4.0.1"/>
+  <name value="CCDAtoFHIRNullFlavorDataAbsentReason"/>
+  <title value="C-CDA NullFlavor to FHIR Data Absent Reason"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <publisher value="HL7 International"/>
+  <description value="C-CDA NullFlavor to FHIR Data Absent Reason"/>
+  <contact>
+    <name value="HL7 International"/>
+    <telecom>
+      <system value="phone"/>
+      <value value="+1 734 677 7777"/>
+    </telecom>
+    <telecom>
+      <system value="fax"/>
+      <value value="+1 734 677 6622"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@hl7.org"/>
+    </telecom>
+  </contact>
+  <sourceUri value="http://terminology.hl7.org/ValueSet/v3-NullFlavor"/>
+  <targetUri value="http://hl7.org/fhir/ValueSet/data-absent-reason"/>
+  <group>
+    <source value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
+    <target value="http://terminology.hl7.org/CodeSystem/data-absent-reason"/>
+    <element>
+      <code value="NI"/>
+      <display value="No Information"/>
+      <target>
+        <code value="unknown"/>
+        <display value="Unknown"/>
+        <equivalence value="inexact"/>
+        <comment value="When the item is not required, US CORE guidance is to omit the element and not include data-absent-reason. When the item is required, US CORE guidance is to use unknown as the broadest concept"/>
+      </target>
+    </element>
+    <element>
+      <code value="OTH"/>
+      <display value="Other"/>
+      <target>
+        <code value="unsupported"/>
+        <display value="Unsupported"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="NINF"/>
+      <display value="Negative Infinity"/>
+      <target>
+        <code value="negative-infinity"/>
+        <display value="Negative Infinity"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="PINF"/>
+      <display value="Positive Infinity"/>
+      <target>
+        <code value="positive-infinity"/>
+        <display value="Positive Infinity"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="MSK"/>
+      <display value="Masked"/>
+      <target>
+        <code value="masked"/>
+        <display value="Masked"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="NA"/>
+      <display value="Not Applicable"/>
+      <target>
+        <code value="not-applicable"/>
+        <display value="Not Applicable"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="UNK"/>
+      <display value="Unknown"/>
+      <target>
+        <code value="unknown"/>
+        <display value="Unknown"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="ASKU"/>
+      <display value="Asked But Unknown"/>
+      <target>
+        <code value="asked-unknown"/>
+        <display value="Asked But Unknown"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="NAV"/>
+      <display value="Temporarily Unavailable"/>
+      <target>
+        <code value="temp-unknown"/>
+        <display value="Temporarily Unknown"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="NASK"/>
+      <display value="Not Asked"/>
+      <target>
+        <code value="not-asked"/>
+        <display value="Not Asked"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="TRC"/>
+      <display value="Trace"/>
+      <target>
+        <code value="unsupported"/>
+        <display value="Unsupported"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="NP"/>
+      <display value="Not Present"/>
+      <target>
+        <code value="unknown"/>
+        <display value="Unknown"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+  </group>
 </ConceptMap>

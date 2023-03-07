@@ -1,0 +1,59 @@
+<ConceptMap xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="CF-CriticalityCriticality"/>
+  <url value="http://hl7.org/fhir/us/ccda/ConceptMap/CF-CriticalityCriticality"/>
+  <version value="4.0.1"/>
+  <name value="CCDAtoFHIRCriticalityCriticality"/>
+  <title value="CCDA Criticality to FHIR Criticality"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <publisher value="HL7 International"/>
+  <description value="C-CDA Criticality to FHIR Criticality"/>
+  <contact>
+    <name value="HL7 International"/>
+    <telecom>
+      <system value="phone"/>
+      <value value="+1 734 677 7777"/>
+    </telecom>
+    <telecom>
+      <system value="fax"/>
+      <value value="+1 734 677 6622"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@hl7.org"/>
+    </telecom>
+  </contact>
+  <sourceUri value="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.1.11.20549"/>
+  <targetUri value="http://hl7.org/fhir/ValueSet/allergy-intolerance-criticality"/>
+  <group>
+    <source value="http://terminology.hl7.org/CodeSystem/v3-ObservationValue"/>
+    <target value="http://hl7.org/fhir/allergy-intolerance-criticality"/>
+    <element>
+      <code value="CRITH"/>
+      <display value="High Criticality"/>
+      <target>
+        <code value="high"/>
+        <display value="High Risk"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="CRITL"/>
+      <display value="Low Criticality"/>
+      <target>
+        <code value="low"/>
+        <display value="Low Risk"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="CRITU"/>
+      <display value="Unable to Assess Criticality"/>
+      <target>
+        <code value="unable-to-assess"/>
+        <display value="Unable to Assess Risk"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

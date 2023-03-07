@@ -1,107 +1,105 @@
 <ConceptMap xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<id value="CF-AllergyIntoleranceCategory"/>
-	<url value="http://hl7.org/fhir/us/ccda/ConceptMap/CF-AllergyIntoleranceCategory"/>
-	<version value="4.0.1"/>
-	<name value="CCDAtoFHIRAllergyIntoleranceCategory"/>
-	<title value="CCDA to FHIR Allergy Intolerance Category"/>
-	<status value="active"/>
-	<experimental value="false"/>
-	<publisher value="HL7 International"/>
-	<description value="A map of C-CDA Allergy Intolerance Observation value elements to FHIR category codes"/>
-	<contact>
-		<name value="HL7 International"/>
-		<telecom>
-			<system value="phone"/>
-			<value value="+1 734 677 7777"/>
-		</telecom>
-		<telecom>
-			<system value="fax"/>
-			<value value="+1 734 677 6622"/>
-		</telecom>
-		<telecom>
-			<system value="email"/>
-			<value value="info@hl7.org"/>
-		</telecom>
-	</contact>
-	<sourceUri value="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.3221.6.2"/>
-	<targetUri value="http://hl7.org/fhir/ValueSet/allergy-intolerance-category"/>
-	<group>
-		<source value="http://snomed.info/sct"/>
-		<target value="http://hl7.org/fhir/allergy-intolerance-category"/>
-		<element>
-			<code value="418038007"/>
-			<display value="Propensity to adverse reactions to substance"/>
-			<target>
-				<equivalence value="unmatched"/>
-			</target>
-		</element>
-		<element>
-			<code value="419199007"/>
-			<display value="Allergy to substance"/>
-			<target>
-				<equivalence value="unmatched"/>
-			</target>
-		</element>
-		<element>
-			<code value="420134006"/>
-			<display value="Propensity to adverse reaction"/>
-			<target>
-				<equivalence value="unmatched"/>
-			</target>
-		</element>
-		<element>
-			<code value="235719002"/>
-			<display value="Intolerance to food"/>
-			<target>
-				<code value="food"/>
-				<display value="Food"/>
-				<equivalence value="equivalent"/>
-			</target>
-		</element>
-		<element>
-			<code value="414285001"/>
-			<display value="Allergy to food"/>
-			<target>
-				<code value="food"/>
-				<display value="Food"/>
-				<equivalence value="equivalent"/>
-			</target>
-		</element>
-		<element>
-			<code value="418471000"/>
-			<display value="Propensity to adverse reactions to food"/>
-			<target>
-				<code value="food"/>
-				<display value="Food"/>
-				<equivalence value="equivalent"/>
-			</target>
-		</element>
-		<element>
-			<code value="416098002"/>
-			<display value="Allergy to drug"/>
-			<target>
-				<code value="medication"/>
-				<display value="Medication"/>
-				<equivalence value="equivalent"/>
-			</target>
-		</element>
-		<element>
-			<code value="419511003"/>
-			<display value="Propensity to adverse reactions to drug"/>
-			<target>
-				<code value="medication"/>
-				<display value="Medication"/>
-				<equivalence value="equivalent"/>
-			</target>
-		</element>
-		<element>
-			<code value="59037007"/>
-			<display value="Intolerance to drug"/>
-			<target>
-				<code value="medication"/>
-				<display value="Medication"/>
-				<equivalence value="equivalent"/>
-			</target>
-		</element>
-	</group>
+  <id value="CF-AllergyIntoleranceType"/>
+  <url value="http://hl7.org/fhir/us/ccda/ConceptMap/CF-AllergyIntoleranceType"/>
+  <version value="4.0.1"/>
+  <name value="CCDAtoFHIRAllergyIntoleranceType"/>
+  <title value="CCDA to FHIR Allergy Intolerance Type"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <publisher value="HL7 International"/>
+  <description value="C-CDA Allergy Intolerance Observation value elements to FHIR type codes"/>
+  <contact>
+    <name value="HL7 International"/>
+    <telecom>
+      <system value="phone"/>
+      <value value="+1 734 677 7777"/>
+    </telecom>
+    <telecom>
+      <system value="fax"/>
+      <value value="+1 734 677 6622"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@hl7.org"/>
+    </telecom>
+  </contact>
+  <sourceUri value="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.3221.6.2"/>
+  <targetUri value="http://hl7.org/fhir/ValueSet/allergy-intolerance-type"/>
+  <group>
+    <source value="http://snomed.info/sct"/>
+    <target value="http://hl7.org/fhir/allergy-intolerance-type"/>
+    <element>
+      <code value="235719002"/>
+      <display value="Intolerance to food"/>
+      <target>
+        <code value="intolerance"/>
+        <display value="Intolerance"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="414285001"/>
+      <display value="Allergy to food"/>
+      <target>
+        <code value="allergy"/>
+        <display value="Allergy"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="416098002"/>
+      <display value="Allergy to drug"/>
+      <target>
+        <code value="allergy"/>
+        <display value="Allergy"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="418038007"/>
+      <display value="Propensity to adverse reactions to substance"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="418471000"/>
+      <display value="Propensity to adverse reactions to food"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="419199007"/>
+      <display value="Allergy to substance"/>
+      <target>
+        <code value="allergy"/>
+        <display value="Allergy"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="419511003"/>
+      <display value="Propensity to adverse reactions to drug"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="420134006"/>
+      <display value="Propensity to adverse reaction"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="59037007"/>
+      <display value="Intolerance to drug"/>
+      <target>
+        <code value="intolerance"/>
+        <display value="Intolerance"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
 </ConceptMap>
