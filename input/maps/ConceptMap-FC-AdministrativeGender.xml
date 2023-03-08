@@ -1,7 +1,7 @@
 <ConceptMap xmlns="http://hl7.org/fhir"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <id value="CF-AdministrativeGender"/>
-  <url value="http://hl7.org/fhir/us/ccda/ConceptMap/CF-AdministrativeGender"/>
+  <id value="FC-AdministrativeGender"/>
+  <url value="http://hl7.org/fhir/us/ccda/ConceptMap/FC-AdministrativeGender"/>
   <version value="4.0.1"/>
   <name value="CCDAtoFHIRAdminsitrativeGender"/>
   <title value="C-CDA to FHIR Adminmistrative Gender"/>
@@ -35,7 +35,7 @@
       <target>
         <code value="M"/>
         <display value="Male"/>
-        <equivalence value="equivalence"/>
+        <equivalence value="equivalent"/>
       </target>
     </element>
     <element>
@@ -44,7 +44,7 @@
       <target>
         <code value="female"/>
         <display value="Female"/>
-        <equivalence value="equivalence"/>
+        <equivalence value="equivalent"/>
       </target>
     </element>
     <element>

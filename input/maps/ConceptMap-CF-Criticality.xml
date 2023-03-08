@@ -1,6 +1,6 @@
 <ConceptMap xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="CF-Criticality"/>
-  <url value="http://hl7.org/fhir/us/ccda/ConceptMap/CF-Criticalityy"/>
+  <url value="http://hl7.org/fhir/us/ccda/ConceptMap/CF-Criticality"/>
   <version value="4.0.1"/>
   <name value="CCDAtoFHIRCriticality"/>
   <title value="CCDA Criticality to FHIR Criticality"/>

@@ -1,7 +1,7 @@
 <ConceptMap xmlns="http://hl7.org/fhir"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <id value="CF-AllergyIntoleranceCategory"/>
-  <url value="http://hl7.org/fhir/us/ccda/ConceptMap/CF-AllergyIntoleranceCategory"/>
+  <id value="FC-AllergyIntoleranceCategory"/>
+  <url value="http://hl7.org/fhir/us/ccda/ConceptMap/FC-AllergyIntoleranceCategory"/>
   <version value="4.0.1"/>
   <name value="CCDAtoFHIRAllergyIntoleranceCategory"/>
   <title value="CCDA to FHIR Allergy Intolerance Category"/>

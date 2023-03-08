@@ -35,7 +35,7 @@
       <target>
         <code value="male"/>
         <display value="Male"/>
-        <equivalence value="equivalence"/>
+        <equivalence value="equivalent"/>
       </target>
     </element>
     <element>
@@ -44,7 +44,7 @@
       <target>
         <code value="female"/>
         <display value="Female"/>
-        <equivalence value="equivalence"/>
+        <equivalence value="equivalent"/>
       </target>
     </element>
     <element>
