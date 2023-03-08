@@ -55,6 +55,12 @@
         <display value="Completed"/>
         <equivalence value="equivalent"/>
       </target>
+      <target>
+        <code value="not-done"/>
+        <display value="Not Done"/>
+        <equivalence value="wider"/>
+        <comment value="Only map to not-done when CDA negation is present and true." />
+      </target>
     </element>
     <element>
       <code value="held"/>
