@@ -1,0 +1,60 @@
+<ConceptMap xmlns="http://hl7.org/fhir"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="FC-Severity"/>
+  <url value="http://hl7.org/fhir/us/ccda/ConceptMap/FC-Severity"/>
+  <version value="4.0.1"/>
+  <name value="FHIRtoCCDASeverity"/>
+  <title value="FHIR Severity to C-CDA Severity"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <publisher value="HL7 International"/>
+  <description value="FHIR Severity to C-CDA Severity"/>
+  <contact>
+    <name value="HL7 International"/>
+    <telecom>
+      <system value="phone"/>
+      <value value="+1 734 677 7777"/>
+    </telecom>
+    <telecom>
+      <system value="fax"/>
+      <value value="+1 734 677 6622"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@hl7.org"/>
+    </telecom>
+  </contact>
+  <sourceUri value="http://hl7.org/fhir/ValueSet/reaction-event-severity"/>
+  <targetUri value="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.3221.6.8"/>
+  <group>
+    <source value="http://hl7.org/fhir/reaction-event-severity"/>
+    <target value="http://snomed.info/sct"/>
+    <element>
+      <code value="mild"/>
+      <display value="Mild"/>
+      <target>
+        <code value="255604002"/>
+        <display value="Mild"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="moderate"/>
+      <display value="Moderate"/>
+      <target>
+        <code value="6736007"/>
+        <display value="Moderate"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="severe"/>
+      <display value="Severe"/>
+      <target>
+        <code value="24484000"/>
+        <display value="Severe"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

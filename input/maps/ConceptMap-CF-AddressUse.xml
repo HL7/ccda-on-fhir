@@ -1,0 +1,135 @@
+<ConceptMap xmlns="http://hl7.org/fhir"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="CF-AddressUse"/>
+  <url value="http://hl7.org/fhir/us/ccda/ConceptMap/CF-AddressUse"/>
+  <version value="4.0.1"/>
+  <name value="CCDAtoFHIRAddressUse"/>
+  <title value="C-CDA to FHIR Address Use"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <publisher value="HL7 International"/>
+  <description value="C-CDA to FHIR Address Use"/>
+  <contact>
+    <name value="HL7 International"/>
+    <telecom>
+      <system value="phone"/>
+      <value value="+1 734 677 7777"/>
+    </telecom>
+    <telecom>
+      <system value="fax"/>
+      <value value="+1 734 677 6622"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@hl7.org"/>
+    </telecom>
+  </contact>
+  <sourceUri value="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.1.11.10637"/>
+  <targetUri value="http://hl7.org/fhir/ValueSet/address-use"/>
+  <group>
+    <source value="http://terminology.hl7.org/CodeSystem/v3-AddressUse"/>
+    <target value="http://hl7.org/fhir/address-use"/>
+    <element>
+      <code value="BAD"/>
+      <display value="Bad Address"/>
+      <target>
+        <code value="old"/>
+        <display value="Old / Incorrect"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="CONF"/>
+      <display value="Confidential Address"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="H"/>
+      <display value="Home Address"/>
+      <target>
+        <code value="home"/>
+        <display value="Home"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="HP"/>
+      <display value="Primary Home"/>
+      <target>
+        <code value="home"/>
+        <display value="Home"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="HV"/>
+      <display value="Vacation Home"/>
+      <target>
+        <code value="home"/>
+        <display value="Home"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="OLD"/>
+      <display value="No Longer in Use"/>
+      <target>
+        <code value="old"/>
+        <display value="Old / Incorrect"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="TMP"/>
+      <display value="Temporary"/>
+      <target>
+        <code value="temp"/>
+        <display value="Temporary"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="WP"/>
+      <display value="Work Place"/>
+      <target>
+        <code value="work"/>
+        <display value="Work"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="DIR"/>
+      <display value="Direct"/>
+      <target>
+        <code value="work"/>
+        <display value="Work"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="PUB"/>
+      <display value="Public"/>
+      <target>
+        <code value="work"/>
+        <display value="Work"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="PHYS"/>
+      <display value="Physical Visit Address"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="PST"/>
+      <display value="Postal Address"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

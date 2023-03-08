@@ -1,0 +1,68 @@
+<ConceptMap xmlns="http://hl7.org/fhir"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="CF-TelecomType"/>
+  <url value="http://hl7.org/fhir/us/ccda/ConceptMap/CF-TelecomType"/>
+  <version value="4.0.1"/>
+  <name value="CCDAtoFHIRTelecomType"/>
+  <title value="C-CDA to FHIR Telecom Type"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <publisher value="HL7 International"/>
+  <description value="C-CDA to FHIR Telecom Type"/>
+  <contact>
+    <name value="HL7 International"/>
+    <telecom>
+      <system value="phone"/>
+      <value value="+1 734 677 7777"/>
+    </telecom>
+    <telecom>
+      <system value="fax"/>
+      <value value="+1 734 677 6622"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@hl7.org"/>
+    </telecom>
+  </contact>
+  <targetUri value="http://hl7.org/fhir/ValueSet/contact-point-system"/>
+  <group>
+    <source value="http://terminology.hl7.org/CodeSystem/v3-URLScheme" />
+    <target value="http://hl7.org/fhir/contact-point-system"/>
+    <element>
+      <code value="mailto"/>
+      <display value="MailTo"/>
+      <target>
+        <code value="email"/>
+        <display value="Email"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="http"/>
+      <display value="HTTP"/>
+      <target>
+        <code value="url"/>
+        <display value="URL"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="tel"/>
+      <display value="Telephone"/>
+      <target>
+        <code value="phone"/>
+        <display value="Phone"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="fax"/>
+      <display value="Fax"/>
+      <target>
+        <code value="fax"/>
+        <display value="Fax"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

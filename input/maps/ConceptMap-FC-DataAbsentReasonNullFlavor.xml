@@ -7,7 +7,7 @@
   <status value="active"/>
   <experimental value="false"/>
   <publisher value="HL7 International"/>
-  <description value="FHIR Data Absent Reason to C-CDA NullFlavor"/>
+  <description value="FHIR Data Absent Reason to C-CDA NullFlavor. Adapted from http://hl7.org/fhir/cm-data-absent-reason-v3.html"/>
   <contact>
     <name value="HL7 International"/>
     <telecom>
@@ -158,8 +158,8 @@
       <code value="not-permitted"/>
       <display value="Not Permitted"/>
       <target>
-        <code value="MSK"/>
-        <display value="Masked"/>
+        <code value="OTH"/>
+        <display value="Other"/>
         <equivalence value="wider"/>
       </target>
     </element>

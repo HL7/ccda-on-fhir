@@ -5,41 +5,41 @@ This page includes terminology mapping from CDA to FHIR and FHIR to CDA in two s
 #### **Entry Specific CDA to FHIR ConceptMaps** 
 - [Allergy Intolerance Observation value (CDA) → AllergyIntolerance type (FHIR)](./ConceptMap-CF-AllergyIntoleranceType.html)
 - [Allergy Intolerance Observation value (CDA) → AllergyIntolerance category (FHIR)](./ConceptMap-CF-AllergyIntoleranceCategory.html)
-- [Criticality value (CDA) → criticality (FHIR)](./ConceptMap-CF-CriticalityCriticality.html)
-- [Immunization Activity statusCode (CDA) → Immunization status (FHIR)]
-- [Immunization Refusal Reason (CDA) → Immunization statusReason (FHIR)]
+- [Criticality value (CDA) → criticality (FHIR)](./ConceptMap-CF-Criticality.html)
+- [Immunization Activity statusCode (CDA) → Immunization status (FHIR)](./ConceptMap-CF-ImmunizationStatus.html)
+- [Immunization Refusal Reason (CDA) → Immunization statusReason (FHIR)](./ConceptMap-CF-ImmunizationRefusal.html)
 - [Medication Activity statusCode (CDA) → (FHIR)]
 - [Problem Status (CDA) → Condition clinicalStatus (FHIR)]
-- [Procedure Status (CDA) → Procedure status (FHIR)]
+- [Procedure Status (CDA) → Procedure status (FHIR)](./ConceptMap-FC-ProcedureStatus.html)
 - [Section code (CDA) → Condition category (FHIR)]
-- [Severity Observation value (CDA) → Reaction Event severity (FHIR)]
+- [Severity Observation value (CDA) → Reaction Event severity (FHIR)](./ConceptMap-CF-Severity.html)
 
 #### **General CDA to FHIR ConceptMaps** 
-- [Administrative Gender (CDA) → Patient gender (FHIR)]
-- [Addr use  (CDA) → Address use (FHIR)]
-- [Name use (CDA) → Name use (FHIR)]
+- [Administrative Gender (CDA) → Patient gender (FHIR)](./ConceptMap-CF-AdministrativeGender.html)
+- [Addr use  (CDA) → Address use (FHIR)](./ConceptMap-CF-AddressUse.html)
+- [Name use (CDA) → Name use (FHIR)](./ConceptMap-CF-NameUse.html)
 - [NullFlavor (CDA) → Data Absent Reason code (FHIR)](./ConceptMap-CF-NullFlavorDataAbsentReason.html)
-- [Telecom use (CDA) → telecom contact point use (FHIR)]
-- [Telecom value (CDA) → telecom contact point type (FHIR)]
+- [Telecom use (CDA) → telecom contact point use (FHIR)](./ConceptMap-CF-TelecomUse.html)
+- [Telecom value (CDA) → telecom contact point type (FHIR)](./ConceptMap-CF-TelecomType.html)
 
 ### FHIR to CDA Terminology Mapping
 
 #### **Resource Specific FHIR to CDA ConceptMaps** 
-- [AllergyIntolerance type (FHIR) → Allergy Intolerance Observation value (CDA)]
-- [AllergyIntolerance category (FHIR) → Allergy Intolerance Observation value (CDA)]
-- [Criticality (FHIR) → Criticality value (CDA)](./ConceptMap-FC-CriticalityCriticality.html)
-- [Immunization status (FHIR) → Immunization Activity statusCode (CDA)]
-- [Immunization statusReason (FHIR) → Immunization Refusal Reason (CDA)]
+- [AllergyIntolerance type (FHIR) → Allergy Intolerance Observation value (CDA)](./ConceptMap-FC-AllergyIntoleranceType.html)
+- [AllergyIntolerance category (FHIR) → Allergy Intolerance Observation value (CDA)](./ConceptMap-FC-AllergyIntoleranceCategory.html)
+- [Criticality (FHIR) → Criticality value (CDA)](./ConceptMap-FC-Criticality.html)
+- [Immunization status (FHIR) → Immunization Activity statusCode (CDA)](./ConceptMap-FC-ImmunizationStatus)
+- [Immunization statusReason (FHIR) → Immunization Refusal Reason (CDA)](./ConceptMap-FC-ImmunizationRefusal.html)
 - [MedicationRequest status(FHIR) → Medication Activity statusCode (CDA)]
 - [Condition clinicalStatus (FHIR) → Problem Status (CDA)]
-- [Procedure status (FHIR) → Procedure Status (CDA)]
+- [Procedure status (FHIR) → Procedure Status (CDA)](./ConceptMap-FC-ProcedureStatus.html)
 - [Condition category (FHIR) → Section code (CDA)]
-- [Reaction Event severity (FHIR) → Severity Observation value (CDA)]
+- [Reaction Event severity (FHIR) → Severity Observation value (CDA)](./ConceptMap-FC-Severity.html)
 
 #### **General FHIR to CDA ConceptMaps** 
-- [Patient gender (FHIR) → Administrative Gender (CDA)]
-- [Address use (FHIR) → Addr use (CDA)]
-- [Name use (FHIR) → Name use (CDA)]
+- [Patient gender (FHIR) → Administrative Gender (CDA)](./ConceptMap-FC-AdministrativeGender.html)
+- [Address use (FHIR) → Addr use (CDA)](./ConceptMap-FC-AddressUse.html)
+- [Name use (FHIR) → Name use (CDA)](./ConceptMap-FC-NameUse.html)
 - [Data Absent Reason code (FHIR) → NullFlavor (CDA)](./ConceptMap-FC-DataAbsentReasonNullFlavor.html)
-- [Telecom contact point type (FHIR) → Telecom value (CDA)] 
-- [Telecom contact point use (FHIR) → Telecom use (CDA)] 
+- [Telecom contact point type (FHIR) → Telecom value (CDA)](./ConceptMap-FC-TelecomUse.html) 
+- [Telecom contact point use (FHIR) → Telecom use (CDA)](./ConceptMap-FC-TelecomType.html) 

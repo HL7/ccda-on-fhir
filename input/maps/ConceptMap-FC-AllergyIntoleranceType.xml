@@ -1,0 +1,95 @@
+<ConceptMap xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="FC-AllergyIntoleranceType"/>
+  <url value="http://hl7.org/fhir/us/ccda/ConceptMap/FC-AllergyIntoleranceType"/>
+  <version value="4.0.1"/>
+  <name value="FHIRtoCCDAAllergyIntoleranceType"/>
+  <title value="FHIR Allergy Intolerance Type to CCDA value"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <publisher value="HL7 International"/>
+  <description value="FHIR type codes to C-CDA Allergy Intolerance Observation value"/>
+  <contact>
+    <name value="HL7 International"/>
+    <telecom>
+      <system value="phone"/>
+      <value value="+1 734 677 7777"/>
+    </telecom>
+    <telecom>
+      <system value="fax"/>
+      <value value="+1 734 677 6622"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@hl7.org"/>
+    </telecom>
+  </contact>
+  <sourceUri value="http://hl7.org/fhir/ValueSet/allergy-intolerance-type"/>
+  <targetUri value="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.3221.6.2"/>
+  <group>
+    <source value="http://hl7.org/fhir/allergy-intolerance-type"/>
+    <target value="http://snomed.info/sct"/>
+    <element>
+      <code value="intolerance"/>
+      <display value="Intolerance"/>
+      <target>
+        <code value="235719002"/>
+        <display value="Intolerance to food"/>
+        <equivalence value="narrower"/>
+        <comment value="Use this when .category is food" />
+      </target>
+      <target>
+        <code value="59037007"/>
+        <display value="Intolerance to drug"/>
+        <equivalence value="narrower"/>
+        <comment value="Use this when .category is medication" />
+      </target>
+    </element>
+    <element>
+      <code value="allergy"/>
+      <display value="Allergy"/>
+      <target>
+        <code value="414285001"/>
+        <display value="Allergy to food"/>
+        <equivalence value="narrower"/>
+        <comment value="Use this when .category is food" />
+      </target>
+      <target>
+        <code value="416098002"/>
+        <display value="Allergy to drug"/>
+        <equivalence value="narrower"/>
+        <comment value="Use this when .category is medication" />
+      </target>
+      <target>
+        <code value="419199007"/>
+        <display value="Allergy to substance"/>
+        <equivalence value="narrower"/>
+        <comment value="Use this when .category is biologic or environmental" />
+      </target>
+    </element>
+    <element>
+      <target>
+        <code value="418471000"/>
+        <display value="Propensity to adverse reactions to food"/>  
+        <equivalence value="narrower"/>
+        <comment value="Use this when .category is food" />
+      </target>
+      <target>
+        <code value="419511003"/>
+        <display value="Propensity to adverse reactions to drug"/>
+        <equivalence value="narrower"/>
+        <comment value="Use this when .category is medication" />
+      </target>
+      <target>
+        <code value="418038007"/>
+        <display value="Propensity to adverse reactions to substance"/>
+        <equivalence value="narrower"/>
+        <comment value="Use this when .category is biologic or environmental" />
+      </target>
+    </element>
+    <unmapped>
+      <mode value="fixed" />
+      <code value="420134006"/>
+      <display value="Propensity to adverse reaction"/>
+    </unmapped>
+  </group>
+</ConceptMap>

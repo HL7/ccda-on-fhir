@@ -1,0 +1,96 @@
+<ConceptMap xmlns="http://hl7.org/fhir"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="CF-ImmunizationRefusal"/>
+  <url value="http://hl7.org/fhir/us/ccda/ConceptMap/CF-ImmunizationRefusal"/>
+  <version value="4.0.1"/>
+  <name value="CCDAtoFHIRImmunizationRefusal"/>
+  <title value="C-CDA Immunization Refusal to FHIR Immunization Status Reason"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <publisher value="HL7 International"/>
+  <description value="C-CDA Immunization Refusal to FHIR Immunization Status Reason"/>
+  <contact>
+    <name value="HL7 International"/>
+    <telecom>
+      <system value="phone"/>
+      <value value="+1 734 677 7777"/>
+    </telecom>
+    <telecom>
+      <system value="fax"/>
+      <value value="+1 734 677 6622"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@hl7.org"/>
+    </telecom>
+  </contact>
+  <sourceUri value="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.1.11.19717"/>
+  <targetUri value="http://hl7.org/fhir/ValueSet/immunization-status-reason"/>
+  <group>
+    <source value="https://terminology.hl7.org/CodeSystem-v3-ActReason.html"/>
+    <target value="https://terminology.hl7.org/CodeSystem-v3-ActReason.html"/>
+    <element>
+      <code value="IMMUNE"/>
+      <display value="Immunity"/>
+      <target>
+        <code value="IMMUNE"/>
+        <display value="Immunity"/>
+      </target>
+    </element>
+    <element>
+      <code value="MEDPREC"/>
+      <display value="Medical Precaution"/>
+      <target>
+        <code value="MEDPREC"/>
+        <display value="Medical Precaution"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OSTOCK"/>
+      <display value="Out of Stock"/>
+      <target>
+        <code value="OSTOCK"/>
+        <display value="Out of Stock"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="PATOBJ"/>
+      <display value="Patient Objection"/>
+      <target>
+        <code value="PATOBJ"/>
+        <display value="Patient Objection"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="PHILISOP"/>
+      <display value="Philosophical Objection"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="RELIG"/>
+      <display value="Religious Objection"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="VACEFF"/>
+      <display value="Vaccine Efficacy Concerns"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="VACSAF"/>
+      <display value="Vaccine Safety Concerns"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>
