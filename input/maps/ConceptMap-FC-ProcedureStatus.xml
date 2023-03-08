@@ -62,11 +62,11 @@
       </target>
     </element>
     <element>
-      <code value="aborted"/>
-      <display value="Aborted"/>
-      <target>
         <code value="stopped"/>
         <display value="Stopped"/>
+      <target>
+        <code value="aborted"/>
+        <display value="Aborted"/>
         <equivalence value="equivalent"/>
       </target>
     </element>

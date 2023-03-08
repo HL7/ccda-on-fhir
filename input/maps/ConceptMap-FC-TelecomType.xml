@@ -33,7 +33,7 @@
       <display value="Email"/>
       <target>
         <code value="mailto"/>
-        <display value="MailTo"/>
+        <display value="Mailto"/>
         <equivalence value="equivalent"/>
       </target>
     </element>

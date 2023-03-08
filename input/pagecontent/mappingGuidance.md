@@ -105,7 +105,7 @@ Additional guidance on [FHIR terminologies available here](http://hl7.org/fhir/t
 
 ##### Text Linking in CDA and FHIR 
 
-CDA has one mechanism for references; FHIR has two: the [narrativeLink extension](http://hl7.org/fhir/R4B/extension-narrativelink.html) and the [originalText extension](http://hl7.org/fhir/R4B/extension-originaltext.html). Since CDA does not distinguish between the "original" and "representation" cases, we use the more general "representation" (narrativeLink) extension for these maps. Note also that the CDA use of reference points to generated text, which may not fit the definition of "original."
+CDA has one mechanism for references; FHIR has two: the [narrativeLink extension](http://hl7.org/fhir/StructureDefinition/narrativeLink) and the [originalText extension](http://hl7.org/fhir/StructureDefinition/originalText). Since CDA does not distinguish between the "original" and "representation" cases, we use the more general "representation" (narrativeLink) extension for these maps. Note also that the CDA use of reference points to generated text, which may not fit the definition of "original."
 
 CDA referenced typically point to section/text which may include embedded lists or tables. Issues with text reference technical capabilities are not addressed here (e.g., referencing a table row without an agreed convention for identifying table header data).
 

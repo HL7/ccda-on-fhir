@@ -66,8 +66,8 @@
     </element>
   </group>
   <group>
-    <source value="https://terminology.hl7.org/CodeSystem-v3-ActReason.html"/>
-    <target value="http://snomed.info/sct"/>
+    <source value="http://snomed.info/sct"/>
+    <target value="https://terminology.hl7.org/CodeSystem-v3-ActReason.html"/>
     <element>
       <code value="171257003" />
       <display value="No consent - Tetanus/low dose diphtheria vaccine" />
