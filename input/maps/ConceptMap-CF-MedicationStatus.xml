@@ -1,0 +1,77 @@
+<ConceptMap xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="CF-MedicationStatus"/>
+  <url value="http://hl7.org/fhir/us/ccda/ConceptMap/CF-MedicationStatus"/>
+  <version value="4.0.1"/>
+  <name value="CCDAtoFHIRMedicationStatus"/>
+  <title value="C-CDA to FHIR Medication Status"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <publisher value="HL7 International"/>
+  <description value="C-CDA to FHIR Medication Status. Based on http://cdasearch.hl7.org/examples/view/Medications/Medication%20statusCodes"/>
+  <contact>
+    <name value="HL7 International"/>
+    <telecom>
+      <system value="phone"/>
+      <value value="+1 734 677 7777"/>
+    </telecom>
+    <telecom>
+      <system value="fax"/>
+      <value value="+1 734 677 6622"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@hl7.org"/>
+    </telecom>
+  </contact>
+  <sourceUri value="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1099.11"/>
+  <targetUri value="	http://hl7.org/fhir/ValueSet/medicationrequest-status"/>
+  <group>
+    <source value="http://terminology.hl7.org/CodeSystem/v3-ActStatus"/>
+    <target value="http://hl7.org/fhir/CodeSystem/medicationrequest-status"/>
+    <element>
+      <code value="active"/>
+      <display value="Active"/>
+      <target>
+        <code value="active"/>
+        <display value="active"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="suspended"/>
+      <display value="suspended"/>
+      <target>
+        <code value="on-hold"/>
+        <display value="On Hold"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="aborted"/>
+      <display value="aborted"/>
+      <target>
+        <code value="stopped"/>
+        <display value="stopped"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="completed"/>
+      <display value="completed"/>
+      <target>
+        <code value="completed"/>
+        <display value="completed"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="nullified"/>
+      <display value="nullified"/>
+      <target>
+        <code value="entered-in-error"/>
+        <display value="Entered in Error"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

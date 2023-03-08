@@ -8,10 +8,10 @@ This page includes terminology mapping from CDA to FHIR and FHIR to CDA in two s
 - [Criticality value (CDA) → criticality (FHIR)](./ConceptMap-CF-Criticality.html)
 - [Immunization Activity statusCode (CDA) → Immunization status (FHIR)](./ConceptMap-CF-ImmunizationStatus.html)
 - [Immunization Refusal Reason (CDA) → Immunization statusReason (FHIR)](./ConceptMap-CF-ImmunizationRefusal.html)
-- [Medication Activity statusCode (CDA) → (FHIR)]
-- [Problem Status (CDA) → Condition clinicalStatus (FHIR)]
-- [Procedure Status (CDA) → Procedure status (FHIR)](./ConceptMap-FC-ProcedureStatus.html)
-- [Section code (CDA) → Condition category (FHIR)]
+- [Medication Activity statusCode (CDA) → MedicationRequest status (FHIR)](./ConceptMap-CF-MedicationStatus.html)
+- [Problem Status Observation value (CDA) → Condition clinicalStatus (FHIR)](./ConceptMap-CF-ProblemStatus.html)
+- [Procedure Status (CDA) → Procedure status (FHIR)](./ConceptMap-CF-ProcedureStatus.html)
+- [Section code (CDA) → Condition category (FHIR)](./ConceptMap-CF-ProblemCategory.html)
 - [Severity Observation value (CDA) → Reaction Event severity (FHIR)](./ConceptMap-CF-Severity.html)
 
 #### **General CDA to FHIR ConceptMaps** 
@@ -30,10 +30,10 @@ This page includes terminology mapping from CDA to FHIR and FHIR to CDA in two s
 - [Criticality (FHIR) → Criticality value (CDA)](./ConceptMap-FC-Criticality.html)
 - [Immunization status (FHIR) → Immunization Activity statusCode (CDA)](./ConceptMap-FC-ImmunizationStatus.html)
 - [Immunization statusReason (FHIR) → Immunization Refusal Reason (CDA)](./ConceptMap-FC-ImmunizationRefusal.html)
-- [MedicationRequest status(FHIR) → Medication Activity statusCode (CDA)]
-- [Condition clinicalStatus (FHIR) → Problem Status (CDA)]
+- [MedicationRequest status(FHIR) → Medication Activity statusCode (CDA)](./ConceptMap-FC-MedicationStatus.html)
+- [Condition clinicalStatus (FHIR) → Problem Status Observation value (CDA)](./ConceptMap-FC-ProblemStatus.html)
 - [Procedure status (FHIR) → Procedure Status (CDA)](./ConceptMap-FC-ProcedureStatus.html)
-- [Condition category (FHIR) → Section code (CDA)]
+- [Condition category (FHIR) → Section code (CDA)](./ConceptMap-FC-ProblemCategory.html)
 - [Reaction Event severity (FHIR) → Severity Observation value (CDA)](./ConceptMap-FC-Severity.html)
 
 #### **General FHIR to CDA ConceptMaps** 
