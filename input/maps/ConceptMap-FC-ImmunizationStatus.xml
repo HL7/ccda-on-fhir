@@ -4,7 +4,7 @@
   <url value="http://hl7.org/fhir/us/ccda/ConceptMap/FC-ImmunizationStatus"/>
   <version value="4.0.1"/>
   <name value="FHIRtoCCDAImmunizationStatus"/>
-  <title value=" FHIR to C-CDA Immunization Status"/>
+  <title value="FHIR to C-CDA Immunization Status"/>
   <status value="active"/>
   <experimental value="false"/>
   <publisher value="HL7 International"/>
@@ -32,6 +32,12 @@
     <element>
       <code value="not-done"/>
       <display value="Not Done"/>
+      <target>
+        <code value="completed"/>
+        <display value="Completed"/>
+        <equivalence value="wider"/>
+        <comment value="Only use when paired with negation indication and a refusal reason in CDA. Use negation when activity is no longer planned but documentation of refusal is desired." />
+      </target>
       <target>
         <code value="aborted"/>
         <display value="Aborted"/>
