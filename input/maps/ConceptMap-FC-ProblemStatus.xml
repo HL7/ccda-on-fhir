@@ -33,7 +33,7 @@
       <display value="recurrence"/>
       <target>
         <code value="246455001" />
-        <display ="Recurrence" />
+        <display value="Recurrence" />
         <equivalence value="equivalent"/>
       </target>
     </element>
@@ -42,7 +42,7 @@
       <display value="Relapse"/>
       <target>
         <code value="263855007" />
-        <display ="Relapse phase" />
+        <display value="Relapse phase" />
         <equivalence value="equivalent"/>
       </target>
     </element>
@@ -51,7 +51,7 @@
       <display value="Remission"/>
       <target>
         <code value="277022003" />
-        <display ="Remission phase" />
+        <display value="Remission phase" />
         <equivalence value="equivalent"/>
       </target>
     </element>
@@ -60,7 +60,7 @@
       <display value="Resolved"/>
       <target>
         <code value="413322009" />
-        <display ="Problem resolved" />
+        <display value="Problem resolved" />
         <equivalence value="equivalent"/>
       </target>
     </element>
@@ -69,7 +69,7 @@
       <display value="Active"/>
       <target>
         <code value="55561003" />
-        <display ="Active" />
+        <display value="Active" />
         <equivalence value="equivalent"/>
       </target>
     </element>
@@ -78,7 +78,7 @@
       <display value="Inactive"/>
       <target>
         <code value="73425007" />
-        <display ="Inactive" />
+        <display value="Inactive" />
         <equivalence value="equivalent"/>
       </target>
     </element>
