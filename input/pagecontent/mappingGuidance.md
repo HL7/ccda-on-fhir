@@ -60,7 +60,14 @@ In some cases, a CDA template requires an id, and the source FHIR resource may n
 
 CDA date-time values are based on a pattern of YYYYMMDDHHmmss+zzzz and [FHIR date-time values](https://hl7.org/fhir/datatypes.html#dateTime) are based on a YYYY-MM-DDThh:mm:ss+zz:zz. Partial expressions (e.g. 202305 for CDA or 2023-05 for FHIR) are allowed in both standards. 
 
-To convert between the standards, systems should deploy programming logic that converts formats and preserves the level of precision. For example, "20230531" from CDA would become "2023-05-31" in FHIR (not 2023-05-31T00:00:00+00:00). 
+To convert between the standards, systems should deploy programming logic that converts formats and preserves the level of precision. For example, "20230531" from CDA would become "2023-05-31" in FHIR (not 2023-05-31T00:00:00+00:00). Additional examples below: 
+
+|CDA Date Time|FHIR Date Time|
+|:-----|:-----|:-------------|
+|2023|2023|
+|202305|2023-05|
+|20230531|2023-05-31|
+|202305312205-0500|2023-05-31T22:05-05:00|
 
 #### CDA Coding ↔ FHIR CodeableConcept
 
@@ -71,11 +78,11 @@ The structure for coding in CDA and FHIR are fundamentally different. CDA  emplo
 |CDA Property|FHIR Target|Notes|
 |:-----|:-----|:-------------|
 |@code|coding.code||
-|@codeSystem|coding.system|May require mapping OID → URL|
+|@codeSystem|coding.system|Requires mapping OID → URL or adding `urn:oid:` prefix|
 |@displayName|coding.display|
 |originalText|text|CDA references must be resolved since [text](http://hl7.org/fhir/datatypes-definitions.html#CodeableConcept.text) is a string in FHIR|
 |translation@code|coding.code||
-|translation@codeSystem|coding.system|May require mapping OID → URL|
+|translation@codeSystem|coding.system|Requires mapping OID → URL or adding `urn:oid:` prefix|
 |translation@displayName|coding.display|
 
 ##### FHIR CodeableConcept → CDA Coding
@@ -84,22 +91,25 @@ The structure for coding in CDA and FHIR are fundamentally different. CDA  emplo
 |:-----|:-----|:-------------|
 |coding.code|@code<br/>or<br/>translation@code|The criteria for mapping to @code varies by valueset binding within CDA templates. When no coding.code matches the target valueset, the @code should be omitted and @nullFlavor="OTH" used placing all coding as translation elements|
 |coding.display|coding.displayName<br/>or<br/>translation@displayName|
-|coding.system|@codeSystem<br/>or<br/>translation@codeSystem|Always requires URL → OID mapping|
+|coding.system|@codeSystem<br/>or<br/>translation@codeSystem|Requires URL → OID mapping or removal or `urn:oid:` prefix|
 |text|originalText|
 
 ##### Mapping OID ↔ URL
 
-FHIR requires that certain terminologies use a specific URL while CDA always uses OIDs for codeSystems. This means: 
-  - For CDA → FHIR mapping, translation to URLs may be required from [select OIDs defined here](http://hl7.org/fhir/terminologies-systems.html)
+FHIR requires that certain terminologies use a specific uniform resource locator (URL) while CDA always uses object identifiers (OIDs) for codeSystems. This means: 
   - For CDA → FHIR mapping
-  -   - Translation to OIDs is always required for FHIR → CDA mapping.
+    - Translation to URLs is required for [select OIDs defined here](http://hl7.org/fhir/terminologies-systems.html)
+    - For OIDs not in the above list and where no URL equivalent is known, add the `urn:oid:` prefix to OID
+  - For FHIR → CDA mapping
+     - Translation or URLs to OIDs is always required for FHIR → CDA mapping
+     - Removal or `urn:oid:` prefix for OIDs
 
-For example, here is how the mapping of the LOINC terminology works as well as an example (fictional) OID.
+Two example are shown in the table below. Since LOINC is a terminology with a defined URL in FHIR, it is not allowed to add `urn:oid:` when mapping from CDA (~~urn:oid:2.16.840.1.113883.6.1~~). This is allowed, however, for other terminologies where no URL is known. 
 
-|FHIR coding.system|CDA @codeSystem|
+|CDA @codeSystem|FHIR coding.system|
 |:----|:----|
-|http://loinc.org|2.16.840.1.113883.6.1|
-|urn:oid:2.16.840.1.113883.4.123456789|2.16.840.1.113883.4.123456789|
+|2.16.840.1.113883.6.1|http://loinc.org|
+|2.16.840.1.113883.4.123456789|urn:oid:2.16.840.1.113883.4.123456789|
 
 Additional guidance on [FHIR terminologies available here](http://hl7.org/fhir/terminologies-systems.html)
 
