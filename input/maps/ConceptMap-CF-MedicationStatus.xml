@@ -24,7 +24,7 @@
     </telecom>
   </contact>
   <sourceUri value="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1099.11"/>
-  <targetUri value="	http://hl7.org/fhir/ValueSet/medicationrequest-status"/>
+  <targetUri value="http://hl7.org/fhir/ValueSet/medicationrequest-status"/>
   <group>
     <source value="http://terminology.hl7.org/CodeSystem/v3-ActStatus"/>
     <target value="http://hl7.org/fhir/CodeSystem/medicationrequest-status"/>

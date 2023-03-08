@@ -30,36 +30,31 @@
     <source value="http://hl7.org/fhir/administrative-gender"/>
     <target value="http://terminology.hl7.org/CodeSystem/v3-AdministrativeGender"/>
     <element>
-      <code value="male"/>
+      <code value="M"/>
       <display value="Male"/>
       <target>
-        <code value="M"/>
+        <code value="male"/>
         <display value="Male"/>
         <equivalence value="equivalent"/>
       </target>
     </element>
     <element>
-      <code value="F"/>
+      <code value="female"/>
       <display value="Female"/>
       <target>
-        <code value="female"/>
+        <code value="F"/>
         <display value="Female"/>
         <equivalence value="equivalent"/>
       </target>
     </element>
     <element>
-      <code value="UN"/>
-      <display value="Undifferentiated"/>
-      <target>
         <code value="other"/>
         <display value="Other"/>
+      <target>
+      <code value="UN"/>
+      <display value="Undifferentiated"/>
         <equivalence value="wider"/>
       </target>
     </element>
-    <unmapped>
-      <mode value="fixed" />
-      <code value="unknown"/>
-      <display value="Unknown"/>
-    </unmapped>
   </group>
 </ConceptMap>

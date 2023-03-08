@@ -78,11 +78,13 @@
         <code value="usual"/>
         <display value="Usual"/>
         <equivalence value="narrower"/>
+        <comment value="Known as/conventional/the one you normally use" />
       </target>
       <target>
         <code value="official"/>
         <display value="Official"/>
         <equivalence value="narrower"/>
+        <comment value="The formal name as registered in an official (government) registry, but which name might not be commonly used." />
       </target>
     </element>
     <element>

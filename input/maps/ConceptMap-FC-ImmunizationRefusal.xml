@@ -27,8 +27,8 @@
   <sourceUri value="http://hl7.org/fhir/ValueSet/immunization-status-reason"/>
   <targetUri value="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.1.11.19717"/>
   <group>
-    <source value="https://terminology.hl7.org/CodeSystem-v3-ActReason.html"/>
-    <target value="https://terminology.hl7.org/CodeSystem-v3-ActReason.html"/>
+    <source value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+    <target value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
     <element>
       <code value="IMMUNE"/>
       <display value="Immunity"/>

@@ -30,7 +30,7 @@
     <target value="http://hl7.org/fhir/contact-point-system"/>
     <element>
       <code value="mailto"/>
-      <display value="MailTo"/>
+      <display value="Mailto"/>
       <target>
         <code value="email"/>
         <display value="Email"/>

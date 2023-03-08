@@ -27,7 +27,7 @@
   <sourceUri value="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.20"/>
   <targetUri value="http://hl7.org/fhir/ValueSet/contact-point-use"/>
   <group>
-    <source value="https://terminology.hl7.org/CodeSystem-v3-AddressUse.html"/>
+    <source value="http://terminology.hl7.org/CodeSystem/v3-AddressUse"/>
     <target value="http://hl7.org/fhir/contact-point-use"/>
     <element>
       <code value="AS"/>
