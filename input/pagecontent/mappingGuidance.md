@@ -33,7 +33,7 @@ If there is no such OID, and if the FHIR identifier is a URL, we can use the URL
 
 Cases where the FHIR system uses a scheme with no OID present a problem. The UID type is primitive, represented only as an XML attribute, and it cannot have a null flavor. One solution may be to generate a UUID, but expectations around the UUID's persistence and recognizability may vary.
 
-##### CDA → FHIR Identifier
+##### CDA id → FHIR Identifier with Example Mapping
 
 |Case|Approach|CDA id@root|CDA id@extension|identifier.system|identifier.value|
 |:--|:--|:--|:--|:--|:--|
@@ -41,7 +41,7 @@ Cases where the FHIR system uses a scheme with no OID present a problem. The UID
 |No URL exists|use OID|2.16.840.1.113883.4.500|1234567890V123456|urn:oid:2.16.840.1.113883.4.500|1234567890V123456
 |One-value pattern|use OID specification URI for system|2.16.840.1.113883.4.500.123456789||urn:ietf:rfc:3986|urn:oid:2.16.840.1.113883.4.500.123456789
 
-##### FHIR → CDA Identifier Example Mapping
+##### FHIR Identifier → CDA id with Example Mapping
 
 |Case|Approach|identifier.system|identifier.value|CDA id@root|CDA id@extension|
 |:--|:--|:--|:--|:--|:--|
@@ -50,7 +50,7 @@ Cases where the FHIR system uses a scheme with no OID present a problem. The UID
 |No OID exists|invent|urn:myNID:myOrganization|123456789|f9a48f2a-0f86-11ed-861d-0242ac120002|urn:myNID:myOrganization:123456789
 |One-value pattern|introspect steward organization OID||123456789|2.16.840.1.113883.4.349|123456789
 
-##### FHIR IDs ######
+#### FHIR IDs
 
 FHIR ids are strings: they have no system. We propose not preserving them. They could be used in II.extension but we have no way to identify a root. If someone can ascertain a reliable, repeatable way to do that, we might be able to keep the id.
 
