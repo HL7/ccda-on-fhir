@@ -35,6 +35,7 @@
       <target>
         <code value="IMMUNE"/>
         <display value="Immunity"/>
+        <equivalence value="equivalent"/>
       </target>
     </element>
     <element>
