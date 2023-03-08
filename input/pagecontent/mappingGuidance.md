@@ -149,7 +149,7 @@ The mappings of name, address and telecom information is useful in many part of 
 
 |CDA name|FHIR name|Transform Steps
 |:-----|:-----|:---------
-|@use|.use|[Name use (CDA) → Name use (FHIR)]()
+|@use|.use|[Name use (CDA) → Name use (FHIR)](./ConceptMap-CF-NameUse.html)
 |prefix|.prefix|
 |given|.given|
 |family|.family|
@@ -161,7 +161,7 @@ The mappings of name, address and telecom information is useful in many part of 
 
 |CDA addr|FHIR address|Transform Steps
 |:-----|:-----|:---------
-|@use|.use|[Addr use  (CDA) → Address use (FHIR)]()
+|@use|.use|[Addr use  (CDA) → Address use (FHIR)](./ConceptMap-CF-AddressUse.html)
 |streetAddressLine|.line|
 |city|.city|
 |state|.state|
@@ -174,40 +174,40 @@ The mappings of name, address and telecom information is useful in many part of 
 
 |CDA telecom|FHIR telecom|Transform Steps
 |:-----|:-----|:---------
-|@use|.use|[CDA telecom use → FHIR contact point use]()
-|@value|.system<br/>&<br/>.value|[CDA telecom value → FHIR contact point system]()<br/>Only include information in FHIR value which comes after the CDA system prefix
+|@use|.use|[CDA telecom use → FHIR contact point use](./ConceptMap-CF-TelecomUse.html)|
+|@value|.system<br/>&<br/>.value|[CDA telecom value → FHIR contact point system](./ConceptMap-CF-TelecomType.html)<br/>Only include information in FHIR value which comes after the CDA system prefix|
 
 ##### FHIR name → CDA name #####
 
 |FHIR name|CDA name|Transform Steps
 |:-----|:-----|:---------
-|.use|@use|[Name use (FHIR) → Name use (CDA)]()
+|.use|@use|[Name use (FHIR) → Name use (CDA)]((./ConceptMap-FC-NameUse.html))|
 |.family|family|
 |.given|given|
 |.prefix|prefix|
 |.suffix|suffix|
-|.period.start|validTime/low@value|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)
-|.period.end|validTime/high@value|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)
+|.period.start|validTime/low@value|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
+|.period.end|validTime/high@value|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
 
 ##### FHIR address  → CDA addr #####
 
 |FHIR address|CDA addr|Transform Steps
 |:-----|:-----|:---------
-|.use|@use|[Address use (FHIR) → Addr use (CDA)]()
+|.use|@use|[Address use (FHIR) → Addr use (CDA)](./ConceptMap-FC-AddressUse.html)|
 |.line|streetAddressLine|
 |.city|city|
 |.state|state|
 |.postalCode|postalCode|
 |.country|country|
-|.period.start|useablePeriod/low@value|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)
-|.period.end|useablePeriod/high@value|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)
+|.period.start|useablePeriod/low@value|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
+|.period.end|useablePeriod/high@value|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
 
 ##### FHIR telecom → CDA telecom #####
 
 |FHIR telecom|CDA telecom|Comments
 |:-----|:-----|:---------
-|.system<br/>&<br/>.value |@value|[FHIR contact point system → CDA telecom value]()<br/>Insert FHIR value after the CDA system prefix mapped from FHIR system
-|.use|@use|[FHIR contact point use → CDA use]()
+|.system<br/>&<br/>.value |@value|[FHIR contact point system → CDA telecom value](./ConceptMap-FC-TelecomType.html)<br/>Insert FHIR value after the CDA system prefix mapped from FHIR system|
+|.use|@use|[FHIR contact point use → CDA use](./ConceptMap-FC-TelecomUse.html)|
 
 #### Missing Data in C-CDA vs. FHIR ####
 
@@ -217,7 +217,7 @@ The use of the data absent reason extension is explained in depth in the [US COR
 
 In this publication, we include a mapping between missing data concepts. **Importantly, it should be noted that several mappings include non-equivalence (wider or narrower or unsupported)**. Additional implementer guidance is welcome on the handling of missing data between C-CDA and FHIR:
 - [NullFlavor (CDA) → Data Absent Reason code (FHIR)](./ConceptMap-CF-NullFlavorDataAbsentReason.html) 
-- [Data Absent Reason code (FHIR) → NullFlavor (CDA)]()
+- [Data Absent Reason code (FHIR) → NullFlavor (CDA)](./ConceptMap-FC-NullFlavorDataAbsentReason.html)
 
 ### Terminology Mapping ###
 
