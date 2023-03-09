@@ -21,7 +21,7 @@ This first stage of the project defines all the C-CDA document-level profiles on
 
 Any coded data used by sections will be represented using relevant U.S. Core FHIR profiles where they exist. FHIR profiles defined by other work groups or unconstrained FHIR resources may also be referenced if no appropriate US Core Profile exist.
 
-For further information see the C-CDA specification here: http://www.hl7.org/implement/standards/product_brief.cfm?product_id=408.
+For further information see the C-CDA specification here: <a href="[https://jira.hl7.org/browse/PSS-1811](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=408.)">http://www.hl7.org/implement/standards/product_brief.cfm?product_id=408.</a>.
 
 
 
