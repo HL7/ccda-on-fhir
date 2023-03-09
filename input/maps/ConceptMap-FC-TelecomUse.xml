@@ -28,7 +28,7 @@
   <targetUri value="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.20"/>
   <group>
     <source value="http://hl7.org/fhir/contact-point-use"/>
-    <target value="https://terminology.hl7.org/CodeSystem-v3-AddressUse.html"/>
+    <target value="http://terminology.hl7.org/CodeSystem/v3-AddressUse"/>
     <element>
       <code value="home"/>
       <display value="Home"/>
@@ -36,11 +36,13 @@
         <code value="HP"/>
         <display value="Primary Home"/>
         <equivalence value="narrower"/>
+        <comment value="Primary home would be recommended default." />
       </target>
       <target>
         <code value="HV"/>
         <display value="Vacation Home"/>
         <equivalence value="narrower"/>
+        <comment value="Primary home would be recommended default." />
       </target>
     </element>
     <element>

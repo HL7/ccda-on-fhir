@@ -181,7 +181,7 @@ The mappings of name, address and telecom information is useful in many part of 
 
 |FHIR name|CDA name|Transform Steps
 |:-----|:-----|:---------
-|.use|@use|[Name use (FHIR) → Name use (CDA)]((./ConceptMap-FC-NameUse.html))|
+|.use|@use|[Name use (FHIR) → Name use (CDA)](./ConceptMap-FC-NameUse.html)|
 |.family|family|
 |.given|given|
 |.prefix|prefix|
@@ -217,7 +217,7 @@ The use of the data absent reason extension is explained in depth in the [US COR
 
 In this publication, we include a mapping between missing data concepts. **Importantly, it should be noted that several mappings include non-equivalence (wider or narrower or unsupported)**. Additional implementer guidance is welcome on the handling of missing data between C-CDA and FHIR:
 - [NullFlavor (CDA) → Data Absent Reason code (FHIR)](./ConceptMap-CF-NullFlavorDataAbsentReason.html) 
-- [Data Absent Reason code (FHIR) → NullFlavor (CDA)](./ConceptMap-FC-NullFlavorDataAbsentReason.html)
+- [Data Absent Reason code (FHIR) → NullFlavor (CDA)](./ConceptMap-FC-DataAbsentReasonNullFlavor.html)
 
 ### Terminology Mapping ###
 

@@ -23,7 +23,7 @@
       <value value="info@hl7.org"/>
     </telecom>
   </contact>
-  <sourceUri value="	http://hl7.org/fhir/ValueSet/medicationrequest-status"/>
+  <sourceUri value="http://hl7.org/fhir/ValueSet/medicationrequest-status"/>
   <targetUri value="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1099.11"/>
   <group>
     <source value="http://hl7.org/fhir/CodeSystem/medicationrequest-status"/>

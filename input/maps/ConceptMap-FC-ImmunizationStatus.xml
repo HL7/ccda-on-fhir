@@ -42,31 +42,37 @@
         <code value="aborted"/>
         <display value="Aborted"/>
         <equivalence value="narrower"/>
+        <comment value="When negation is not intended, cancelled would be recommended status although this code may be appropriate in some circumstances." />
       </target>
       <target>
         <code value="cancelled"/>
         <display value="Cancelled"/>  
         <equivalence value="narrower"/>
+        <comment value="When negation is not intended, cancelled would be recommended status although this code may be appropriate in some circumstances." />
       </target>
       <target>
         <code value="held"/>
         <display value="Held"/>  
         <equivalence value="narrower"/>
+        <comment value="When negation is not intended, cancelled would be recommended status although this code may be appropriate in some circumstances." />
       </target>
       <target>
         <code value="new"/>
         <display value="New"/>  
         <equivalence value="narrower"/>
+        <comment value="When negation is not intended, cancelled would be recommended status although this code may be appropriate in some circumstances." />
       </target>
       <target>
         <code value="obsolete"/>
         <display value="Obsolete"/>
         <equivalence value="narrower"/>
+        <comment value="When negation is not intended, cancelled would be recommended status although this code may be appropriate in some circumstances." />
       </target>
       <target>
         <code value="suspended"/>
         <display value="Suspended"/>
         <equivalence value="narrower"/>
+        <comment value="When negation is not intended, cancelled would be recommended status although this code may be appropriate in some circumstances." />
       </target>
     </element>
     <element>
