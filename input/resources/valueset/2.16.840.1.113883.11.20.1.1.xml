@@ -7,13 +7,15 @@
         <lastUpdated value="2020-08-19T06:18:31.162+00:00"/>
         <source value="#TGF9CHNWdziFGXop"/>
     </meta>
-    <url value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.11.20.1.1"/>
+    <url value="http://hl7.org/fhir/us/ccda/ValueSet/2.16.840.1.113883.11.20.1.1"/>
     <version value="20180518"/>
     <name value="SurgicalOperationNoteDocumentTypeCode"/>
     <title value="SurgicalOperationNoteDocumentTypeCode"/>
     <status value="active"/>
     <date value="2018-05-18T01:00:03-04:00"/>
+	<experimental value="false"/>
     <publisher value="HL7 Terminology"/>
+	<description value="Surival Operation Note Doucment Type Code" />
     <copyright value="This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"/>
     <compose>
         <include>

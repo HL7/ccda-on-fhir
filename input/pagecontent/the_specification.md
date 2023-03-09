@@ -95,6 +95,8 @@ Implementers moving from C-CDA to FHIR need to be aware that the goal of this pr
 * Implementers need to follow the rules and apply the value sets used by the target specification, and this will often require significant data and vocabulary mapping. implementers moving from C-CDA to C-CDA on FHIR will need to review the US Core profiles and value sets in core FHIR resources and ensure that their instances FHIR instances are compliant. We hope that ongoing work in HL7 will better align US Core, C-CDA, and the Core FHIR specifications in the future.
 
 #### Mapping between C-CDA and C-CDA on FHIR
-We encourage implementers to refer to the ongoing C-CDA to FHIR mapping work that is described on the [Model Based Transformation Service](https://confluence.hl7.org/display/SOA/Model-Based+Transformation+Service) project page.
+
+The mappings which have been developed as part of an independent project, which was performed independently of the original document-level profiles, are included [here](mappingBackground.html) and in the menu dropdown under "Mapping" 
+
 
 [Next Page - Downloads](downloads.html)

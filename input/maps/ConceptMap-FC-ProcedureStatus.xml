@@ -1,0 +1,97 @@
+<ConceptMap xmlns="http://hl7.org/fhir"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="FC-ProcedureStatus"/>
+  <url value="http://hl7.org/fhir/us/ccda/ConceptMap/FC-ProcedureStatus"/>
+  <version value="4.0.1"/>
+  <name value="FHIRtoCCDAProcedureStatus"/>
+  <title value="FHIR to C-CDA Procedure Status"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <publisher value="HL7 International"/>
+  <description value="FHIR to C-CDA Procedure Status"/>
+  <contact>
+    <name value="HL7 International"/>
+    <telecom>
+      <system value="phone"/>
+      <value value="+1 734 677 7777"/>
+    </telecom>
+    <telecom>
+      <system value="fax"/>
+      <value value="+1 734 677 6622"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@hl7.org"/>
+    </telecom>
+  </contact>
+  <sourceUri value="http://hl7.org/fhir/ValueSet/event-status"/>
+  <targetUri value="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.22"/>
+  <group>
+    <source value="http://hl7.org/fhir/event-status"/>
+    <target value="http://terminology.hl7.org/CodeSystem/v3-ActStatus"/>
+    <element>
+      <code value="preparation"/>
+      <display value="Preparation"/>
+      <target>
+        <equivalence value="unmatched" />
+      </target>
+    </element>
+    <element>
+      <code value="in-progress"/>
+      <display value="In Progress"/>
+      <target>
+        <code value="active"/>
+        <display value="Active"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="not-done"/>
+      <display value="Not Done"/>
+      <target>
+        <code value="cancelled"/>
+        <display value="Cancelled"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="on-hold"/>
+      <display value="On Hold"/>
+      <target>
+        <equivalence value="unmatched" />
+      </target>
+    </element>
+    <element>
+        <code value="stopped"/>
+        <display value="Stopped"/>
+      <target>
+        <code value="aborted"/>
+        <display value="Aborted"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="completed"/>
+      <display value="Completed"/>
+      <target>
+        <code value="completed"/>
+        <display value="Completed"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="entered-in-error"/>
+      <display value="Entered in Error"/>
+      <target>
+        <equivalence value="unmatched" />
+      </target>
+    </element>
+    <element>
+      <code value="unknown"/>
+      <display value="Unknown"/>
+      <target>
+        <equivalence value="unmatched" />
+      </target>
+    </element>
+  </group>
+</ConceptMap>

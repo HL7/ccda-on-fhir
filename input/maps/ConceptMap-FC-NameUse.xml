@@ -1,0 +1,88 @@
+<ConceptMap xmlns="http://hl7.org/fhir"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="FC-NameUse"/>
+  <url value="http://hl7.org/fhir/us/ccda/ConceptMap/FC-NameUse"/>
+  <version value="4.0.1"/>
+  <name value="FHIRtoCCDANameUse"/>
+  <title value="FHIR to C-CDA NameUse"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <publisher value="HL7 International"/>
+  <description value="FHIR to C-CDA NameUse. Based on http://hl7.org/fhir/cm-name-use-v3.html"/>
+  <contact>
+    <name value="HL7 International"/>
+    <telecom>
+      <system value="phone"/>
+      <value value="+1 734 677 7777"/>
+    </telecom>
+    <telecom>
+      <system value="fax"/>
+      <value value="+1 734 677 6622"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@hl7.org"/>
+    </telecom>
+  </contact>
+  <sourceUri value="http://hl7.org/fhir/ValueSet/name-use"/>
+  <targetUri value="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.1.11.15913"/>
+  <group>
+    <source value="http://hl7.org/fhir/name-use"/>
+    <target value="http://terminology.hl7.org/CodeSystem/v3-EntityNameUse"/>
+    <element>
+      <code value="usual"/>
+      <display value="Usual"/>
+      <target>
+        <code value="L"/>
+        <display value="Legal"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="official"/>
+      <display value="Official"/>
+      <target>
+        <code value="OR"/>
+        <display value="Official Registry"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="temp"/>
+      <display value="Temporary"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="nickname"/>
+      <display value="Nickname"/>
+      <target>
+        <code value="P"/>
+        <display value="Pseudonym"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="anonymous"/>
+      <display value="Anonymous"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="old"/>
+      <display value="Old"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="maiden"/>
+      <display value="Maiden"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

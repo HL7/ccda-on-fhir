@@ -48,7 +48,7 @@
             <short value="History and Physical"/>
             <binding>
                 <strength value="required"/>
-                <valueSet value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.1.11.20.22"/>
+                <valueSet value="http://hl7.org/fhir/us/ccda/ValueSet/2.16.840.1.113883.1.11.20.22"/>
             </binding>
         </element>
         <element id="Composition.section">

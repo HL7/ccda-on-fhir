@@ -1,0 +1,74 @@
+<ConceptMap xmlns="http://hl7.org/fhir"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="CF-TelecomUse"/>
+  <url value="http://hl7.org/fhir/us/ccda/ConceptMap/CF-TelecomUse"/>
+  <version value="4.0.1"/>
+  <name value="CCDAtoFHIRTelecomUse"/>
+  <title value="C-CDA to FHIR Telecom Use"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <publisher value="HL7 International"/>
+  <description value="C-CDA to FHIR Telecom Use"/>
+  <contact>
+    <name value="HL7 International"/>
+    <telecom>
+      <system value="phone"/>
+      <value value="+1 734 677 7777"/>
+    </telecom>
+    <telecom>
+      <system value="fax"/>
+      <value value="+1 734 677 6622"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@hl7.org"/>
+    </telecom>
+  </contact>
+  <sourceUri value="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.20"/>
+  <targetUri value="http://hl7.org/fhir/ValueSet/contact-point-use"/>
+  <group>
+    <source value="http://terminology.hl7.org/CodeSystem/v3-AddressUse"/>
+    <target value="http://hl7.org/fhir/contact-point-use"/>
+    <element>
+      <code value="AS"/>
+      <display value="Answering Service"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="EC"/>
+      <display value="Emergency Contact"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="HP"/>
+      <display value="Primary Home"/>
+      <target>
+        <code value="home"/>
+        <display value="Home"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="HV"/>
+      <display value="Vacation Home"/>
+      <target>
+        <code value="home"/>
+        <display value="Home"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="MC"/>
+      <display value="Mobile Contact"/>
+      <target>
+        <code value="mobile"/>
+        <display value="Mobile"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

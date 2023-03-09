@@ -7,13 +7,15 @@
         <lastUpdated value="2020-08-19T06:15:22.571+00:00"/>
         <source value="#B2h6It7KXxCCSmY6"/>
     </meta>
-    <url value="http://cts.nlm.nih.gov/fhir/ValueSet/1.3.6.1.4.1.12009.10.2.5"/>
+    <url value="http://hl7.org/fhir/us/ccda/ValueSet/1.3.6.1.4.1.12009.10.2.5"/>
     <version value="20180517"/>
     <name value="LOINCImagingDocumentCodes"/>
     <title value="LOINC Imaging Document Codes"/>
     <status value="active"/>
     <date value="2018-05-17T01:00:04-04:00"/>
+	<experimental value="false"/>
     <publisher value="HL7 Terminology"/>
+	<description value="LOINC Imaging Document Codes" />
     <copyright value="This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"/>
     <compose>
         <include>

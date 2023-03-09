@@ -1,0 +1,81 @@
+<ConceptMap xmlns="http://hl7.org/fhir"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="FC-TelecomUse"/>
+  <url value="http://hl7.org/fhir/us/ccda/ConceptMap/FC-TelecomUse"/>
+  <version value="4.0.1"/>
+  <name value="FHIRtoCCDATelecomUse"/>
+  <title value="FHIR to C-CDA Telecom Use"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <publisher value="HL7 International"/>
+  <description value="FHIR to C-CDA Telecom Use"/>
+  <contact>
+    <name value="HL7 International"/>
+    <telecom>
+      <system value="phone"/>
+      <value value="+1 734 677 7777"/>
+    </telecom>
+    <telecom>
+      <system value="fax"/>
+      <value value="+1 734 677 6622"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@hl7.org"/>
+    </telecom>
+  </contact>
+  <sourceUri value="http://hl7.org/fhir/ValueSet/contact-point-use"/>
+  <targetUri value="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.20"/>
+  <group>
+    <source value="http://hl7.org/fhir/contact-point-use"/>
+    <target value="http://terminology.hl7.org/CodeSystem/v3-AddressUse"/>
+    <element>
+      <code value="home"/>
+      <display value="Home"/>
+      <target>
+        <code value="HP"/>
+        <display value="Primary Home"/>
+        <equivalence value="narrower"/>
+        <comment value="Primary home would be recommended default." />
+      </target>
+      <target>
+        <code value="HV"/>
+        <display value="Vacation Home"/>
+        <equivalence value="narrower"/>
+        <comment value="Primary home would be recommended default." />
+      </target>
+    </element>
+    <element>
+      <code value="work"/>
+      <display value="Work"/>
+      <target>
+        <code value="WP"/>
+        <display value="Work Place"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="temp"/>
+      <display value="Temp"/>
+      <target>
+        <equivalence value="unmatched" />
+      </target> 
+    </element>
+    <element>
+      <code value="old"/>
+      <display value="Old"/>
+      <target>
+        <equivalence value="unmatched" />
+      </target> 
+    </element>
+    <element>
+      <code value="mobile"/>
+      <display value="Mobile"/>
+      <target>
+        <code value="MC"/>
+        <display value="Mobile Contact"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

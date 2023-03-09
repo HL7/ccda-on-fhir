@@ -21,48 +21,6 @@
             <value value="http://hl7.org/Special/committees/structure/index.cfm"/>
         </telecom>
     </contact>
-    <contact>
-        <name value="Rick Geimer"/>
-        <telecom>
-            <system value="email"/>
-            <value value="rick.geimer@lantanagroup.com"/>
-        </telecom>
-    </contact>
-    <contact>
-        <name value="Sarah Gaunt"/>
-        <telecom>
-            <system value="email"/>
-            <value value="sarah.gaunt@lantanagroup.com"/>
-        </telecom>
-    </contact>
-    <contact>
-        <name value="Brett Marquard"/>
-        <telecom>
-            <system value="email"/>
-            <value value="brett@riverrockassociates.com"/>
-        </telecom>
-    </contact>
-    <contact>
-        <name value="Corey Spears"/>
-        <telecom>
-            <system value="email"/>
-            <value value="spears.corey@gmail.com"/>
-        </telecom>
-    </contact>
-    <contact>
-        <name value="Meenaxi Gosai"/>
-        <telecom>
-            <system value="email"/>
-            <value value="meenaxi.gosai@lantanagroup.com"/>
-        </telecom>
-    </contact>
-    <contact>
-        <name value="HL7 International - Structured Documents"/>
-        <telecom>
-            <system value="url"/>
-            <value value="http://www.hl7.org/Special/committees/structure"/>
-        </telecom>
-    </contact>
     <description value="Consolidated CDA (C-CDA) is one of the most widely implemented implementation guides for CDA and covers a significant scope of clinical care. Its target of the 'common/essential' elements of healthcare is closely aligned with FHIR's focus on the '80%'. There is significant interest in industry and government in the ability to interoperate between CDA and FHIR and C-CDA is a logical starting point. Implementers and regulators have both expressed an interest in the ability to map between FHIR and C-CDA.&#xA;&#xA;This Implementation Guide (IG) defines a series of FHIR profiles on the Composition resource to represent the various document types in C-CDA. This release does not directly map every C-CDA template to FHIR profiles, rather tries to accomplish the C-CDA use case using Composition resource profiles created under this project (the equivalent of Level 2 CDA documents), and begins by linking to the profiles created under the US Core project for any coded entries that would normally be included in C-CDA sections. To have a simpler, more streamlined standard that reuses existing work and focuses on the 80% that implementers actually need in production systems, the resources of US Core represents a portion of the 80% needed for coded entries for coded entries of CCD, Care Plan &amp; Discharge Summary).&#xA;&#xA;The Composition profiles in this IG do not require coded data in any section. This is a departure from C-CDA, which requires coded data for Problems, Results, Medications, etc. This departure is intentional, as the C-CDA requirement for one or more coded entries in these sections resulted in some very complicated workarounds using nullFlavors to handle the fact that sometimes a patient is not on any medications, or has no current problems. In general, FHIR takes the approach that if something is nullable, it should simply be optional to ease the burden on implementers, thus C-CDA on FHIR does not require any coded entries, but rather uses the &quot;required if known&quot; approach, meaning that if an implementer's system has data for a section that requires data under Meaningful Use, they need to send it, but if they have no data there is no need for a null entry.&#xA;&#xA;We encourage feedback on these Composition profiles, and the general approach to the project as a whole. We also encourage implementers who wish to see more of the coded data from C-CDA mapped to FHIR to comment on the US Core project and make their requests known there. Once US Core creates new profiles, this project can reference them.&#xA;&#xA;### Scope&#xA;&#xA;To represent Consolidated CDA Templates for Clinical Notes (C-CDA) 2.1 templates using FHIR profiles.&#xA;&#xA;This first stage of the project defines all the C-CDA document-level profiles on the Composition resource and contained sections.&#xA;&#xA;Any coded data used by sections will be represented using relevant U.S. Core FHIR profiles where they exist. FHIR profiles defined by other work groups or unconstrained FHIR resources may also be referenced if no appropriate US Core Profile exist.&#xA;&#xA;For further information see the C-CDA specification here: http://www.hl7.org/implement/standards/product_brief.cfm?product_id=408."/>
     <jurisdiction>
         <coding>
@@ -449,6 +407,15 @@
         </resource>
         <resource>
             <reference>
+                <reference value="AllergyIntolerance/allergy-intolerance-mapped-to-FHIR"/>
+                <display value="allergy-intolerance-mapped-to-FHIR"/>
+            </reference>
+            <name value="allergy-intolerance-mapped-to-FHIR"/>
+            <description value="allergy-intolerance-mapped-to-FHIR"/>
+            <exampleBoolean value="true"/>
+        </resource>
+        <resource>
+            <reference>
                 <reference value="Immunization/immunization"/>
                 <display value="immunization"/>
             </reference>
@@ -655,6 +622,91 @@
             <page>
                 <nameUrl value="background.html"/>
                 <title value="Background"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="mappingBackground.html"/>
+                <title value="Mapping Background"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="mappingGuidance.html"/>
+                <title value="Mapping General and Structural Guidance"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="CF-index.html"/>
+                <title value="C-CDA → FHIR Index"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="FC-index.html"/>
+                <title value="FHIR → C-CDA Index"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="CF-patient.html"/>
+                <title value="C-CDA to FHIR Patient"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="CF-allergies.html"/>
+                <title value="C-CDA to FHIR Allergies"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="CF-immunizations.html"/>
+                <title value="C-CDA to FHIR Immunizations"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="CF-medications.html"/>
+                <title value="C-CDA to FHIR Medications"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="CF-problems.html"/>
+                <title value="C-CDA to FHIR Problems"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="CF-procedures.html"/>
+                <title value="C-CDA to FHIR Procedures"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="FC-patient.html"/>
+                <title value="FHIR to C-CDA Patient"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="FC-allergies.html"/>
+                <title value="FHIR to C-CDAAllergies"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="FC-immunizations.html"/>
+                <title value="FHIR to C-CDAImmunizations"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="FC-medications.html"/>
+                <title value="FHIR to C-CDAMedications"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="FC-problems.html"/>
+                <title value="FHIR to C-CDA Problems"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="FC-procedures.html"/>
+                <title value="FHIR to C-CDA Procedures"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="conceptMaps.html"/>
+                <title value="Terminology Maps (Concept Maps)"/>
                 <generation value="markdown"/>
             </page>
             <page>

@@ -1,0 +1,280 @@
+<ConceptMap xmlns="http://hl7.org/fhir"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="FC-ImmunizationRefusal"/>
+  <url value="http://hl7.org/fhir/us/ccda/ConceptMap/FC-ImmunizationRefusal"/>
+  <version value="4.0.1"/>
+  <name value="FHIRtoCCDAImmunizationRefusal"/>
+  <title value="FHIR Immunization Status Reason to C-CDA Immunization Refusal"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <publisher value="HL7 International"/>
+  <description value="FHIR Immunization Status Reason to C-CDA Immunization Refusal"/>
+  <contact>
+    <name value="HL7 International"/>
+    <telecom>
+      <system value="phone"/>
+      <value value="+1 734 677 7777"/>
+    </telecom>
+    <telecom>
+      <system value="fax"/>
+      <value value="+1 734 677 6622"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@hl7.org"/>
+    </telecom>
+  </contact>
+  <sourceUri value="http://hl7.org/fhir/ValueSet/immunization-status-reason"/>
+  <targetUri value="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.1.11.19717"/>
+  <group>
+    <source value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+    <target value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+    <element>
+      <code value="IMMUNE"/>
+      <display value="Immunity"/>
+      <target>
+        <code value="IMMUNE"/>
+        <display value="Immunity"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="MEDPREC"/>
+      <display value="Medical Precaution"/>
+      <target>
+        <code value="MEDPREC"/>
+        <display value="Medical Precaution"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OSTOCK"/>
+      <display value="Out of Stock"/>
+      <target>
+        <code value="OSTOCK"/>
+        <display value="Out of Stock"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="PATOBJ"/>
+      <display value="Patient Objection"/>
+      <target>
+        <code value="PATOBJ"/>
+        <display value="Patient Objection"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="http://snomed.info/sct"/>
+    <target value="https://terminology.hl7.org/CodeSystem-v3-ActReason.html"/>
+    <element>
+      <code value="171257003" />
+      <display value="No consent - Tetanus/low dose diphtheria vaccine" />
+      <target>
+        <code value="PATOBJ"/>
+        <display value="Patient Objection"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="171265000" />
+      <display value="Pertussis vaccine refused" />
+      <target>
+        <code value="PATOBJ"/>
+        <display value="Patient Objection"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="171266004" />
+      <display value="No consent - diphtheria immunization" />
+      <target>
+        <code value="PATOBJ"/>
+        <display value="Patient Objection"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="171267008" />
+      <display value="No consent - tetanus immunization" />
+      <target>
+        <code value="PATOBJ"/>
+        <display value="Patient Objection"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="171268003" />
+      <display value="Polio immunization refused" />
+      <target>
+        <code value="PATOBJ"/>
+        <display value="Patient Objection"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="171269006" />
+      <display value="No consent - measles immunization" />
+      <target>
+        <code value="PATOBJ"/>
+        <display value="Patient Objection"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="171270007" />
+      <display value="No consent - rubella immunization" />
+      <target>
+        <code value="PATOBJ"/>
+        <display value="Patient Objection"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="171271006" />
+      <display value="No consent - BCG" />
+      <target>
+        <code value="PATOBJ"/>
+        <display value="Patient Objection"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="171272004" />
+      <display value="No consent - influenza immunization" />
+      <target>
+        <code value="PATOBJ"/>
+        <display value="Patient Objection"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="171280006" />
+      <display value="No consent for MMR" />
+      <target>
+        <code value="PATOBJ"/>
+        <display value="Patient Objection"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="171283008" />
+      <display value="No consent for any primary immunization" />
+      <target>
+        <code value="PATOBJ"/>
+        <display value="Patient Objection"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="171285001" />
+      <display value="No consent - pre-school vaccinations" />
+      <target>
+        <code value="PATOBJ"/>
+        <display value="Patient Objection"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="171286000" />
+      <display value="No consent - school exit vaccinations" />
+      <target>
+        <code value="PATOBJ"/>
+        <display value="Patient Objection"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="171291004" />
+      <display value="No consent - Haemophilus influenzae type B immunization" />
+      <target>
+        <code value="PATOBJ"/>
+        <display value="Patient Objection"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="171292006" />
+      <display value="No consent pneumococcal immunization" />
+      <target>
+        <code value="PATOBJ"/>
+        <display value="Patient Objection"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="171293001" />
+      <display value="No consent for MR - Measles/rubella vaccine" />
+      <target>
+        <code value="PATOBJ"/>
+        <display value="Patient Objection"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="268559007" />
+      <display value="No consent for any immunization" />
+      <target>
+        <code value="PATOBJ"/>
+        <display value="Patient Objection"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="310839003" />
+      <display value="No consent for MMR1" />
+      <target>
+        <code value="PATOBJ"/>
+        <display value="Patient Objection"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="310840001" />
+      <display value="No consent for second measles, mumps and rubella vaccine" />
+      <target>
+        <code value="PATOBJ"/>
+        <display value="Patient Objection"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="314768003" />
+      <display value="No consent diphtheria, tetanus, pertussis immunization" />
+      <target>
+        <code value="PATOBJ"/>
+        <display value="Patient Objection"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="314769006" />
+      <display value="No consent tetanus plus diphtheria immunization" />
+      <target>
+        <code value="PATOBJ"/>
+        <display value="Patient Objection"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="314936001" />
+      <display value="No consent for meningitis C immunization" />
+      <target>
+        <code value="PATOBJ"/>
+        <display value="Patient Objection"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="407598009" />
+      <display value="No consent for 3rd HIB booster" />
+      <target>
+        <code value="PATOBJ"/>
+        <display value="Patient Objection"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

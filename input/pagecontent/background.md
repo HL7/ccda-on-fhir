@@ -35,16 +35,10 @@ Since C-CDA exists and has seen widespread implementation, one may question why 
 
 Efforts to map from CDA to FHIR began shortly after FHIR DSTU 1 (aka FHIR R1) was published. The initial work compared the CDA header to the FHIR Composition resource to identify any discrepancies. This work resulted in some key changes to the Composition resource in FHIR DSTU 2 (aka FHIR R2). This initial mapping work is still available via a Google Docs Spreadsheet located [here](https://docs.google.com/spreadsheets/d/1KctdexG3oB2QBiBQNH1Rbt2uJ6DxQFROyIFKo5q95WU/edit#gid=1223244219). 
 
-#### Argonaut Project C-CDA Templates to FHIR Resource Mappings
-
-The Argonaut Project is a private sector initiative to advance industry adoption of modern, open interoperability standards. More information on Argonaut can be found [here](https://argonautwiki.hl7.org/Main_Page). 
-
-One of the earliest efforts of the Argonaut Project was a comparison of C-CDA templates to available FHIR resources, with the goal of determining if FHIR could handle the C-CDA use case, and if not make the necessary changes to FHIR so that it could. This work was done in advance of FHIR DSTU 2, and resulted in a number of changes before the publication of that version of FHIR. The work was done via Google Docs Spreadsheets that compared C-CDA templates section by section to the corresponding FHIR resources. The mapping work is still available [here](https://drive.google.com/drive/u/1/folders/0B44mVoChqHDtaEl4ZGtvclhtRGs). 
-
 ### The C-CDA on FHIR Project
 
 The C-CDA on FHIR Project is a volunteer effort that picked up where the Argonaut analytical mappings left off. The initial goal of the project was to represent Consolidated CDA Templates for Clinical Notes (C-CDA) 2.1 templates using FHIR profiles. The first stage of the project defined C-CDA document-level profiles on the Composition resource and contained sections. All coded data used by sections was accomplished by referencing relevant US-Core FHIR profiles. This work was completed and the IG was published in April 2018. 
 
-The current work represented in this implementation guide has proceeded as an unballoted STU update to upgrade the FHIR STU 3 profiles to FHIR R4 and make any other necessary changes to comply with the latest FHIR quality criteria.
+Subsequent work represented in this implementation guide has proceeded as an unballoted STU update to upgrade the FHIR STU 3 profiles to FHIR R4 and make any other necessary changes to comply with the latest FHIR quality criteria.
 
 [Next Page - The Specification](the_specification.html)

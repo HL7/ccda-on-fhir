@@ -1,0 +1,60 @@
+<ConceptMap xmlns="http://hl7.org/fhir"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="FC-AdministrativeGender"/>
+  <url value="http://hl7.org/fhir/us/ccda/ConceptMap/FC-AdministrativeGender"/>
+  <version value="4.0.1"/>
+  <name value="CCDAtoFHIRAdminsitrativeGender"/>
+  <title value="C-CDA to FHIR Adminmistrative Gender"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <publisher value="HL7 International"/>
+  <description value="C-CDA to FHIR Adminmistrative Gender. Based on http://hl7.org/fhir/cm-administrative-gender-v3.html"/>
+  <contact>
+    <name value="HL7 International"/>
+    <telecom>
+      <system value="phone"/>
+      <value value="+1 734 677 7777"/>
+    </telecom>
+    <telecom>
+      <system value="fax"/>
+      <value value="+1 734 677 6622"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@hl7.org"/>
+    </telecom>
+  </contact>
+  <sourceUri value="http://hl7.org/fhir/ValueSet/administrative-gender"/>
+  <targetUri value="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.1.11.1"/>
+  <group>
+    <source value="http://hl7.org/fhir/administrative-gender"/>
+    <target value="http://terminology.hl7.org/CodeSystem/v3-AdministrativeGender"/>
+    <element>
+      <code value="M"/>
+      <display value="Male"/>
+      <target>
+        <code value="male"/>
+        <display value="Male"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="female"/>
+      <display value="Female"/>
+      <target>
+        <code value="F"/>
+        <display value="Female"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+        <code value="other"/>
+        <display value="Other"/>
+      <target>
+      <code value="UN"/>
+      <display value="Undifferentiated"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>
