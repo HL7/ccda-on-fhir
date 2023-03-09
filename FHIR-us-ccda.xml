@@ -16,6 +16,7 @@
 <artifact id="StructureDefinition/AuthorizationExtension" key="StructureDefinition-AuthorizationExtension" name="Authorization Extension"/>
 <artifact id="ConceptMap/CF-ImmunizationRefusal" key="ConceptMap-CF-ImmunizationRefusal" name="C-CDA Immunization Refusal to FHIR Immunization Status Reason"/>
 <artifact id="ConceptMap/CF-NullFlavorDataAbsentReason" key="ConceptMap-CF-NullFlavorDataAbsentReason" name="C-CDA NullFlavor to FHIR Data Absent Reason"/>
+<artifact id="ConceptMap/CF-ProblemStatus" key="ConceptMap-CF-ProblemStatus" name="C-CDA Problem Status value to FHIR Condition clinicalStatus"/>
 <artifact id="ConceptMap/CF-Severity" key="ConceptMap-CF-Severity" name="C-CDA Severity to FHIR Severity"/>
 <artifact id="ConceptMap/CF-ProblemCategory" key="ConceptMap-CF-ProblemCategory" name="C-CDA section to FHIR Condition category code"/>
 <artifact id="ConceptMap/CF-AddressUse" key="ConceptMap-CF-AddressUse" name="C-CDA to FHIR Address Use"/>
@@ -59,6 +60,7 @@
 <artifact id="ValueSet/2.16.840.1.113883.11.20.4.1" key="ValueSet-2.16.840.1.113883.11.20.4.1" name="DischargeSummaryDocumentTypeCode"/>
 <artifact id="ConceptMap/FC-AllergyIntoleranceType" key="ConceptMap-FC-AllergyIntoleranceType" name="FHIR Allergy Intolerance Type to CCDA value"/>
 <artifact id="ConceptMap/FC-ProblemCategory" key="ConceptMap-FC-ProblemCategory" name="FHIR Condition category to C-CDA section code"/>
+<artifact id="ConceptMap/FC-ProblemStatus" key="ConceptMap-FC-ProblemStatus" name="FHIR Condition clinicalStatus to C-CDA Problem Status value"/>
 <artifact id="ConceptMap/FC-Criticality" key="ConceptMap-FC-Criticality" name="FHIR Criticality to C-CDA Criticality"/>
 <artifact id="ConceptMap/FC-DataAbsentReasonNullFlavor" key="ConceptMap-FC-DataAbsentReasonNullFlavor" name="FHIR Data Absent Reason to C-CDA NullFlavor"/>
 <artifact id="ConceptMap/FC-ImmunizationRefusal" key="ConceptMap-FC-ImmunizationRefusal" name="FHIR Immunization Status Reason to C-CDA Immunization Refusal"/>
