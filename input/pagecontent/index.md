@@ -108,6 +108,10 @@ For further information see the C-CDA specification here: http://www.hl7.org/imp
 <td>Bill Ormerod</td>
 <td><a href="mailto:william.ormerod@oracle.com">william.ormerod@oracle.com</a></td>
 </tr>
+<tr>
+<td>Benjamin Flessner</td>
+<td><a href="mailto:benjamin@redoxengine.com">benjamin@redoxengine.com</a></td>
+</tr>
 
 </tbody>
 </table>
