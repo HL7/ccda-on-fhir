@@ -31,7 +31,7 @@
     <target value="http://terminology.hl7.org/CodeSystem/data-absent-reason"/>
     <element>
       <code value="NI"/>
-      <display value="No Information"/>
+      <display value="NoInformation"/>
       <target>
         <code value="unknown"/>
         <display value="Unknown"/>
@@ -41,7 +41,7 @@
     </element>
     <element>
       <code value="OTH"/>
-      <display value="Other"/>
+      <display value="other"/>
       <target>
         <code value="unsupported"/>
         <display value="Unsupported"/>
@@ -50,25 +50,25 @@
     </element>
     <element>
       <code value="NINF"/>
-      <display value="Negative Infinity"/>
+      <display value="negative infinity"/>
       <target>
         <code value="negative-infinity"/>
-        <display value="Negative Infinity"/>
+        <display value="Negative Infinity (NINF)"/>
         <equivalence value="equivalent"/>
       </target>
     </element>
     <element>
       <code value="PINF"/>
-      <display value="Positive Infinity"/>
+      <display value="positive infinity"/>
       <target>
         <code value="positive-infinity"/>
-        <display value="Positive Infinity"/>
+        <display value="Positive Infinity (PINF)"/>
         <equivalence value="equivalent"/>
       </target>
     </element>
     <element>
       <code value="MSK"/>
-      <display value="Masked"/>
+      <display value="masked"/>
       <target>
         <code value="masked"/>
         <display value="Masked"/>
@@ -77,7 +77,7 @@
     </element>
     <element>
       <code value="NA"/>
-      <display value="Not Applicable"/>
+      <display value="not applicable"/>
       <target>
         <code value="not-applicable"/>
         <display value="Not Applicable"/>
@@ -86,7 +86,7 @@
     </element>
     <element>
       <code value="UNK"/>
-      <display value="Unknown"/>
+      <display value="unknown"/>
       <target>
         <code value="unknown"/>
         <display value="Unknown"/>
@@ -95,7 +95,7 @@
     </element>
     <element>
       <code value="ASKU"/>
-      <display value="Asked But Unknown"/>
+      <display value="asked but unknown"/>
       <target>
         <code value="asked-unknown"/>
         <display value="Asked But Unknown"/>
@@ -104,7 +104,7 @@
     </element>
     <element>
       <code value="NAV"/>
-      <display value="Temporarily Unavailable"/>
+      <display value="temporarily unavailable"/>
       <target>
         <code value="temp-unknown"/>
         <display value="Temporarily Unknown"/>
@@ -113,7 +113,7 @@
     </element>
     <element>
       <code value="NASK"/>
-      <display value="Not Asked"/>
+      <display value="not asked"/>
       <target>
         <code value="not-asked"/>
         <display value="Not Asked"/>
@@ -122,7 +122,7 @@
     </element>
     <element>
       <code value="TRC"/>
-      <display value="Trace"/>
+      <display value="trace"/>
       <target>
         <code value="unsupported"/>
         <display value="Unsupported"/>
@@ -131,7 +131,7 @@
     </element>
     <element>
       <code value="NP"/>
-      <display value="Not Present"/>
+      <display value="not present"/>
       <target>
         <code value="unknown"/>
         <display value="Unknown"/>

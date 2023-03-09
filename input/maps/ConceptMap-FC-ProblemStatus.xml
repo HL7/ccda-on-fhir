@@ -30,7 +30,7 @@
     <target value="http://snomed.info/sct"/>
     <element>
       <code value="recurrence"/>
-      <display value="recurrence"/>
+      <display value="Recurrence"/>
       <target>
         <code value="246455001" />
         <display value="Recurrence" />

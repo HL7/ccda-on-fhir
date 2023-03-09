@@ -31,63 +31,63 @@
     <target value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
     <element>
       <code value="IMMUNE"/>
-      <display value="Immunity"/>
+      <display value="immunity"/>
       <target>
         <code value="IMMUNE"/>
-        <display value="Immunity"/>
+        <display value="immunity"/>
       </target>
     </element>
     <element>
       <code value="MEDPREC"/>
-      <display value="Medical Precaution"/>
+      <display value="medical precaution"/>
       <target>
         <code value="MEDPREC"/>
-        <display value="Medical Precaution"/>
+        <display value="medical precaution"/>
         <equivalence value="equivalent"/>
       </target>
     </element>
     <element>
       <code value="OSTOCK"/>
-      <display value="Out of Stock"/>
+      <display value="product out of stock"/>
       <target>
         <code value="OSTOCK"/>
-        <display value="Out of Stock"/>
+        <display value="product out of stock"/>
         <equivalence value="equivalent"/>
       </target>
     </element>
     <element>
       <code value="PATOBJ"/>
-      <display value="Patient Objection"/>
+      <display value="patient objection"/>
       <target>
         <code value="PATOBJ"/>
-        <display value="Patient Objection"/>
+        <display value="patient objection"/>
         <equivalence value="equivalent"/>
       </target>
     </element>
     <element>
       <code value="PHILISOP"/>
-      <display value="Philosophical Objection"/>
+      <display value="philosophical objection"/>
       <target>
         <equivalence value="unmatched"/>
       </target>
     </element>
     <element>
       <code value="RELIG"/>
-      <display value="Religious Objection"/>
+      <display value="religious objection"/>
       <target>
         <equivalence value="unmatched"/>
       </target>
     </element>
     <element>
       <code value="VACEFF"/>
-      <display value="Vaccine Efficacy Concerns"/>
+      <display value="vaccine efficacy concerns"/>
       <target>
         <equivalence value="unmatched"/>
       </target>
     </element>
     <element>
       <code value="VACSAF"/>
-      <display value="Vaccine Safety Concerns"/>
+      <display value="vaccine safety concerns"/>
       <target>
         <equivalence value="unmatched"/>
       </target>

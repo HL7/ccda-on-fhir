@@ -34,43 +34,43 @@
       <display value="Not Done"/>
       <target>
         <code value="completed"/>
-        <display value="Completed"/>
+        <display value="completed"/>
         <equivalence value="wider"/>
         <comment value="Only use when paired with negation indication and a refusal reason in CDA. Use negation when activity is no longer planned but documentation of refusal is desired." />
       </target>
       <target>
         <code value="aborted"/>
-        <display value="Aborted"/>
+        <display value="aborted"/>
         <equivalence value="narrower"/>
         <comment value="When negation is not intended, cancelled would be recommended status although this code may be appropriate in some circumstances." />
       </target>
       <target>
         <code value="cancelled"/>
-        <display value="Cancelled"/>  
+        <display value="cancelled"/>  
         <equivalence value="narrower"/>
         <comment value="When negation is not intended, cancelled would be recommended status although this code may be appropriate in some circumstances." />
       </target>
       <target>
         <code value="held"/>
-        <display value="Held"/>  
+        <display value="held"/>  
         <equivalence value="narrower"/>
         <comment value="When negation is not intended, cancelled would be recommended status although this code may be appropriate in some circumstances." />
       </target>
       <target>
         <code value="new"/>
-        <display value="New"/>  
+        <display value="new"/>  
         <equivalence value="narrower"/>
         <comment value="When negation is not intended, cancelled would be recommended status although this code may be appropriate in some circumstances." />
       </target>
       <target>
         <code value="obsolete"/>
-        <display value="Obsolete"/>
+        <display value="obsolete"/>
         <equivalence value="narrower"/>
         <comment value="When negation is not intended, cancelled would be recommended status although this code may be appropriate in some circumstances." />
       </target>
       <target>
         <code value="suspended"/>
-        <display value="Suspended"/>
+        <display value="suspended"/>
         <equivalence value="narrower"/>
         <comment value="When negation is not intended, cancelled would be recommended status although this code may be appropriate in some circumstances." />
       </target>
@@ -80,7 +80,7 @@
       <display value="Entered in Error"/>
       <target>
         <code value="nullified"/>
-        <display value="Nullified"/>
+        <display value="nullified"/>
         <equivalence value="equivalent"/>
       </target>
     </element>
@@ -89,7 +89,7 @@
       <display value="Completed"/>
       <target>
         <code value="completed"/>
-        <display value="Completed"/>
+        <display value="completed"/>
         <equivalence value="equivalent"/>
       </target>
     </element>

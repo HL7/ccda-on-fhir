@@ -41,7 +41,7 @@
       <display value="In Progress"/>
       <target>
         <code value="active"/>
-        <display value="Active"/>
+        <display value="active"/>
         <equivalence value="equivalent"/>
       </target>
     </element>
@@ -50,7 +50,7 @@
       <display value="Not Done"/>
       <target>
         <code value="cancelled"/>
-        <display value="Cancelled"/>
+        <display value="cancelled"/>
         <equivalence value="equivalent"/>
       </target>
     </element>
@@ -66,7 +66,7 @@
         <display value="Stopped"/>
       <target>
         <code value="aborted"/>
-        <display value="Aborted"/>
+        <display value="aborted"/>
         <equivalence value="equivalent"/>
       </target>
     </element>
@@ -75,7 +75,7 @@
       <display value="Completed"/>
       <target>
         <code value="completed"/>
-        <display value="Completed"/>
+        <display value="completed"/>
         <equivalence value="equivalent"/>
       </target>
     </element>

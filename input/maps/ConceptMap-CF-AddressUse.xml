@@ -31,7 +31,7 @@
     <target value="http://hl7.org/fhir/address-use"/>
     <element>
       <code value="BAD"/>
-      <display value="Bad Address"/>
+      <display value="bad address"/>
       <target>
         <code value="old"/>
         <display value="Old / Incorrect"/>
@@ -40,14 +40,14 @@
     </element>
     <element>
       <code value="CONF"/>
-      <display value="Confidential Address"/>
+      <display value="confidential address"/>
       <target>
         <equivalence value="unmatched"/>
       </target>
     </element>
     <element>
       <code value="H"/>
-      <display value="Home Address"/>
+      <display value="home address"/>
       <target>
         <code value="home"/>
         <display value="Home"/>
@@ -56,7 +56,7 @@
     </element>
     <element>
       <code value="HP"/>
-      <display value="Primary Home"/>
+      <display value="primary home"/>
       <target>
         <code value="home"/>
         <display value="Home"/>
@@ -65,7 +65,7 @@
     </element>
     <element>
       <code value="HV"/>
-      <display value="Vacation Home"/>
+      <display value="vacation home"/>
       <target>
         <code value="home"/>
         <display value="Home"/>
@@ -74,7 +74,7 @@
     </element>
     <element>
       <code value="OLD"/>
-      <display value="No Longer in Use"/>
+      <display value="no longer in use"/>
       <target>
         <code value="old"/>
         <display value="Old / Incorrect"/>
@@ -83,7 +83,7 @@
     </element>
     <element>
       <code value="TMP"/>
-      <display value="Temporary"/>
+      <display value="temporary address"/>
       <target>
         <code value="temp"/>
         <display value="Temporary"/>
@@ -92,7 +92,7 @@
     </element>
     <element>
       <code value="WP"/>
-      <display value="Work Place"/>
+      <display value="work place"/>
       <target>
         <code value="work"/>
         <display value="Work"/>
@@ -101,7 +101,7 @@
     </element>
     <element>
       <code value="DIR"/>
-      <display value="Direct"/>
+      <display value="direct"/>
       <target>
         <code value="work"/>
         <display value="Work"/>
@@ -110,7 +110,7 @@
     </element>
     <element>
       <code value="PUB"/>
-      <display value="Public"/>
+      <display value="public"/>
       <target>
         <code value="work"/>
         <display value="Work"/>
@@ -119,14 +119,14 @@
     </element>
     <element>
       <code value="PHYS"/>
-      <display value="Physical Visit Address"/>
+      <display value="physical visit address"/>
       <target>
         <equivalence value="unmatched"/>
       </target>
     </element>
     <element>
       <code value="PST"/>
-      <display value="Postal Address"/>
+      <display value="postal address"/>
       <target>
         <equivalence value="unmatched"/>
       </target>

@@ -33,7 +33,7 @@
       <display value="Unknown"/>
       <target>
         <code value="NI"/>
-        <display value="No Information"/>
+        <display value="NoInformation"/>
         <equivalence value="wider"/>
       </target>
     </element>
@@ -42,7 +42,7 @@
       <display value="Asked But Unknown"/>
       <target>
         <code value="ASKU"/>
-        <display value="Asked But Unknown"/>
+        <display value="asked but unknown"/>
         <equivalence value="equivalent"/>
       </target>
     </element>
@@ -51,7 +51,7 @@
       <display value="Temporarily Unknown"/>
       <target>
         <code value="NAV"/>
-        <display value="Temporarily Unavailable"/>
+        <display value="temporarily unavailable"/>
         <equivalence value="equivalent"/>
       </target>
     </element>
@@ -60,16 +60,16 @@
       <display value="Not Asked"/>
       <target>
         <code value="NASK"/>
-        <display value="Not Asked"/>
+        <display value="not asked"/>
         <equivalence value="equivalent"/>
       </target>
     </element>
     <element>
       <code value="asked-declined"/>
-      <display value="Asked Declined"/>
+      <display value="Asked But Declined"/>
       <target>
         <code value="UNK"/>
-        <display value="Unknown"/>
+        <display value="unknown"/>
         <equivalence value="wider"/>
       </target>
     </element>
@@ -78,7 +78,7 @@
       <display value="Masked"/>
       <target>
         <code value="MSK"/>
-        <display value="Masked"/>
+        <display value="masked"/>
         <equivalence value="equivalent"/>
       </target>
     </element>
@@ -87,7 +87,7 @@
       <display value="Not Applicable"/>
       <target>
         <code value="NA"/>
-        <display value="Not Applicable"/>
+        <display value="not applicable"/>
         <equivalence value="equivalent"/>
       </target>
     </element>
@@ -96,7 +96,7 @@
       <display value="Unsupported"/>
       <target>
         <code value="NI"/>
-        <display value="No Information"/>
+        <display value="NoInformation"/>
         <equivalence value="wider"/>
       </target>
     </element>
@@ -105,7 +105,7 @@
       <display value="As Text"/>
       <target>
         <code value="OTH"/>
-        <display value="Other"/>
+        <display value="other"/>
         <equivalence value="wider"/>
       </target>
     </element>
@@ -114,43 +114,43 @@
       <display value="Error"/>
       <target>
         <code value="NI"/>
-        <display value="No Information"/>
+        <display value="NoInformation"/>
         <equivalence value="wider"/>
       </target>
     </element>
     <element>
       <code value="not-a-number"/>
-      <display value="Not a Number"/>
+      <display value="Not a Number (NaN)"/>
       <target>
         <code value="OTH"/>
-        <display value="Other"/>
+        <display value="other"/>
         <equivalence value="wider"/>
       </target>
     </element>
     <element>
       <code value="negative-infinity"/>
-      <display value="Negative Infinity"/>
+      <display value="Negative Infinity (NINF)"/>
       <target>
         <code value="NINF"/>
-        <display value="Negative Infinity"/>
+        <display value="negative infinity"/>
         <equivalence value="equivalent"/>
       </target>
     </element>
     <element>
       <code value="positive-infinity"/>
-      <display value="Positive Infinity"/>
+      <display value="Positive Infinity (PINF)"/>
       <target>
         <code value="PINF"/>
-        <display value="Positive Infinity"/>
+        <display value="positive infinity"/>
         <equivalence value="equivalent"/>
       </target>
     </element>
     <element>
       <code value="not-performed"/>
-      <display value="Not Performer"/>
+      <display value="Not Performed"/>
       <target>
         <code value="NASK"/>
-        <display value="Not Asked"/>
+        <display value="not asked"/>
         <equivalence value="wider"/>
       </target>
     </element>
@@ -159,7 +159,7 @@
       <display value="Not Permitted"/>
       <target>
         <code value="OTH"/>
-        <display value="Other"/>
+        <display value="other"/>
         <equivalence value="wider"/>
       </target>
     </element>

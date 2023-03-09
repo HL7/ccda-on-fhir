@@ -33,7 +33,7 @@
       <display value="Recurrence" />
       <target>
         <code value="recurrence"/>
-        <display value="recurrence"/>
+        <display value="Recurrence"/>
         <equivalence value="equivalent"/>
       </target>
     </element>

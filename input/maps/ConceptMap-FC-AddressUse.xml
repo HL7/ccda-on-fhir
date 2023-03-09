@@ -34,7 +34,7 @@
       <display value="Home"/>
       <target>
         <code value="H"/>
-        <display value="Home Address"/>
+        <display value="home address"/>
         <equivalence value="equivalent"/>
       </target>
     </element>
@@ -43,7 +43,7 @@
       <display value="Work"/>
       <target>
         <code value="WP"/>
-        <display value="Work Place"/>
+        <display value="work place"/>
         <equivalence value="equivalent"/>
       </target>
     </element>
@@ -52,7 +52,7 @@
       <display value="Temporary"/>
       <target>
         <code value="TMP"/>
-        <display value="Temporary"/>
+        <display value="temporary address"/>
         <equivalence value="equivalent"/>
       </target>
     </element>
@@ -61,13 +61,13 @@
       <display value="Old / Incorrect"/>
       <target>
         <code value="OLD"/>
-        <display value="No Longer in Use"/>
+        <display value="no longer in use"/>
         <equivalence value="narrower"/>
         <comment value="Incorrect is not included in the CDA definition" />
       </target>
       <target>
         <code value="BAD"/>
-        <display value="Bad Address"/>
+        <display value="bad address"/>
         <equivalence value="narrower"/>
         <comment value="Old is not included in the CDA definition" />
       </target>

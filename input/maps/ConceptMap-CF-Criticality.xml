@@ -30,7 +30,7 @@
     <target value="http://hl7.org/fhir/allergy-intolerance-criticality"/>
     <element>
       <code value="CRITH"/>
-      <display value="High Criticality"/>
+      <display value="high criticality"/>
       <target>
         <code value="high"/>
         <display value="High Risk"/>
@@ -39,7 +39,7 @@
     </element>
     <element>
       <code value="CRITL"/>
-      <display value="Low Criticality"/>
+      <display value="low criticality"/>
       <target>
         <code value="low"/>
         <display value="Low Risk"/>
@@ -48,7 +48,7 @@
     </element>
     <element>
       <code value="CRITU"/>
-      <display value="Unable to Assess Criticality"/>
+      <display value="unable to assess criticality"/>
       <target>
         <code value="unable-to-assess"/>
         <display value="Unable to Assess Risk"/>

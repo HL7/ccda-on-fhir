@@ -30,10 +30,10 @@
     <source value="http://hl7.org/fhir/administrative-gender"/>
     <target value="http://terminology.hl7.org/CodeSystem/v3-AdministrativeGender"/>
     <element>
-      <code value="M"/>
+      <code value="male"/>
       <display value="Male"/>
       <target>
-        <code value="male"/>
+        <code value="M"/>
         <display value="Male"/>
         <equivalence value="equivalent"/>
       </target>

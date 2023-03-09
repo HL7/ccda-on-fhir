@@ -89,7 +89,7 @@
     </element>
     <element>
       <code value="OR"/>
-      <display value="Official Registry"/>
+      <display value="official registry"/>
       <target>
         <code value="official"/>
         <display value="Official"/>
@@ -98,7 +98,7 @@
     </element>
     <element>
       <code value="P"/>
-      <display value="Pseudonym"/>
+      <display value="pseudonym"/>
       <target>
         <code value="nickname"/>
         <display value="Nickname"/>
@@ -107,7 +107,7 @@
     </element>
     <element>
       <code value="PHON"/>
-      <display value="Phonetic"/>
+      <display value="phonetic"/>
       <target>
         <equivalence value="unmatched"/>
       </target>
@@ -128,7 +128,7 @@
     </element>
     <element>
       <code value="SRCH"/>
-      <display value="Search"/>
+      <display value="search"/>
       <target>
         <equivalence value="unmatched"/>
       </target>

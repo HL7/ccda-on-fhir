@@ -30,10 +30,10 @@
     <target value="http://hl7.org/fhir/CodeSystem/medicationrequest-status"/>
     <element>
       <code value="active"/>
-      <display value="Active"/>
+      <display value="active"/>
       <target>
         <code value="active"/>
-        <display value="active"/>
+        <display value="Active"/>
         <equivalence value="equivalent"/>
       </target>
     </element>
@@ -51,7 +51,7 @@
       <display value="aborted"/>
       <target>
         <code value="stopped"/>
-        <display value="stopped"/>
+        <display value="Stopped"/>
         <equivalence value="equivalent"/>
       </target>
     </element>
@@ -60,7 +60,7 @@
       <display value="completed"/>
       <target>
         <code value="completed"/>
-        <display value="completed"/>
+        <display value="Completed"/>
         <equivalence value="equivalent"/>
       </target>
     </element>

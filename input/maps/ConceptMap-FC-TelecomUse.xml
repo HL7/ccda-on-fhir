@@ -34,13 +34,13 @@
       <display value="Home"/>
       <target>
         <code value="HP"/>
-        <display value="Primary Home"/>
+        <display value="primary home"/>
         <equivalence value="narrower"/>
         <comment value="Primary home would be recommended default." />
       </target>
       <target>
         <code value="HV"/>
-        <display value="Vacation Home"/>
+        <display value="vacation home"/>
         <equivalence value="narrower"/>
         <comment value="Primary home would be recommended default." />
       </target>
@@ -50,7 +50,7 @@
       <display value="Work"/>
       <target>
         <code value="WP"/>
-        <display value="Work Place"/>
+        <display value="work place"/>
         <equivalence value="equivalent"/>
       </target>
     </element>
@@ -73,7 +73,7 @@
       <display value="Mobile"/>
       <target>
         <code value="MC"/>
-        <display value="Mobile Contact"/>
+        <display value="mobile contact)"/>
         <equivalence value="equivalent"/>
       </target>
     </element>

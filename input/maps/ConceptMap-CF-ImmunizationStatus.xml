@@ -31,7 +31,7 @@
     <target value="http://hl7.org/fhir/event-status"/>
     <element>
       <code value="aborted"/>
-      <display value="Aborted"/>
+      <display value="aborted"/>
       <target>
         <code value="not-done"/>
         <display value="Not Done"/>
@@ -40,7 +40,7 @@
     </element>
     <element>
       <code value="cancelled"/>
-      <display value="Cancelled"/>
+      <display value="cancelled"/>
       <target>
         <code value="not-done"/>
         <display value="Not Done"/>
@@ -49,7 +49,7 @@
     </element>
     <element>
       <code value="completed"/>
-      <display value="Completed"/>
+      <display value="completed"/>
       <target>
         <code value="completed"/>
         <display value="Completed"/>
@@ -64,7 +64,7 @@
     </element>
     <element>
       <code value="held"/>
-      <display value="Held"/>
+      <display value="held"/>
       <target>
         <code value="not-done"/>
         <display value="Not Done"/>
@@ -73,7 +73,7 @@
     </element>
     <element>
       <code value="new"/>
-      <display value="New"/>
+      <display value="new"/>
       <target>
         <code value="not-done"/>
         <display value="Not Done"/>
@@ -82,7 +82,7 @@
     </element>
     <element>
       <code value="nullified"/>
-      <display value="Nullified"/>
+      <display value="nullified"/>
       <target>
         <code value="entered-in-error"/>
         <display value="Entered in Error"/>
@@ -91,7 +91,7 @@
     </element>
     <element>
       <code value="obsolete"/>
-      <display value="Obsolete"/>
+      <display value="obsolete"/>
       <target>
         <code value="not-done"/>
         <display value="Not Done"/>
@@ -100,7 +100,7 @@
     </element>
     <element>
       <code value="suspended"/>
-      <display value="Suspended"/>
+      <display value="suspended"/>
       <target>
         <code value="not-done"/>
         <display value="Not Done"/>

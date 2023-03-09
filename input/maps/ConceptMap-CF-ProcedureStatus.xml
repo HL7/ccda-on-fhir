@@ -31,7 +31,7 @@
     <target value="http://hl7.org/fhir/event-status"/>
     <element>
       <code value="aborted"/>
-      <display value="Aborted"/>
+      <display value="aborted"/>
       <target>
         <code value="stopped"/>
         <display value="Stopped"/>
@@ -40,7 +40,7 @@
     </element>
     <element>
       <code value="active"/>
-      <display value="Active"/>
+      <display value="active"/>
       <target>
         <code value="in-progress"/>
         <display value="In Progress"/>
@@ -49,7 +49,7 @@
     </element>
     <element>
       <code value="cancelled"/>
-      <display value="Cancelled"/>
+      <display value="cancelled"/>
       <target>
         <code value="not-done"/>
         <display value="Not Done"/>
@@ -58,7 +58,7 @@
     </element>
     <element>
       <code value="completed"/>
-      <display value="Completed"/>
+      <display value="completed"/>
       <target>
         <code value="completed"/>
         <display value="Completed"/>

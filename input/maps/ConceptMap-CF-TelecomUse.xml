@@ -31,21 +31,21 @@
     <target value="http://hl7.org/fhir/contact-point-use"/>
     <element>
       <code value="AS"/>
-      <display value="Answering Service"/>
+      <display value="answering service"/>
       <target>
         <equivalence value="unmatched"/>
       </target>
     </element>
     <element>
       <code value="EC"/>
-      <display value="Emergency Contact"/>
+      <display value="emergency contact"/>
       <target>
         <equivalence value="unmatched"/>
       </target>
     </element>
     <element>
       <code value="HP"/>
-      <display value="Primary Home"/>
+      <display value="primary home"/>
       <target>
         <code value="home"/>
         <display value="Home"/>
@@ -54,7 +54,7 @@
     </element>
     <element>
       <code value="HV"/>
-      <display value="Vacation Home"/>
+      <display value="vacation home"/>
       <target>
         <code value="home"/>
         <display value="Home"/>
@@ -63,7 +63,7 @@
     </element>
     <element>
       <code value="MC"/>
-      <display value="Mobile Contact"/>
+      <display value="mobile contact)"/>
       <target>
         <code value="mobile"/>
         <display value="Mobile"/>

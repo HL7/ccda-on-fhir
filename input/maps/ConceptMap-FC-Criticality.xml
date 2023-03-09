@@ -33,7 +33,7 @@
       <display value="High Risk"/>
       <target>
         <code value="CRITH"/>
-        <display value="High Criticality"/>
+        <display value="high criticality"/>
         <equivalence value="equivalent"/>
       </target>
     </element>
@@ -42,7 +42,7 @@
       <display value="Low Risk"/>
       <target>
         <code value="CRITL"/>
-        <display value="Low Criticality"/>
+        <display value="low criticality"/>
         <equivalence value="equivalent"/>
       </target>
     </element>
@@ -51,7 +51,7 @@
       <display value="Unable to Assess Risk"/>
       <target>
         <code value="CRITU"/>
-        <display value="Unable to Assess Criticality"/>
+        <display value="unable to assess criticality"/>
         <equivalence value="equivalent"/>
       </target>
     </element>
