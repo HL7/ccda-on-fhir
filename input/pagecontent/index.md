@@ -49,7 +49,7 @@ For further information see the C-CDA specification here: http://www.hl7.org/imp
 </tr>
 <tr>
 <td>Brett Marquard</td>
-<td><a href="mailto:brett@riverrockassociates.com">brett@riverrockassociates.com</a></td>
+<td><a href="mailto:brett@waveoneassociates.com">brett@waveoneassociates.com</a></td>
 </tr>
 <tr>
 <td>Corey Spears</td>
@@ -112,6 +112,15 @@ For further information see the C-CDA specification here: http://www.hl7.org/imp
 <td>Benjamin Flessner</td>
 <td><a href="mailto:benjamin@redoxengine.com">benjamin@redoxengine.com</a></td>
 </tr>
+<tr>
+<td>Brett Marquard</td>
+<td><a href="mailto:brett@waveoneassociates.com">brett@waveoneassociates.com</a></td>
+</tr>
+<tr>
+<td>Christopher Vitale</td>
+<td><a href="mailto:Christopher.Vitale@availity.com">Christopher.Vitale@availity.com</a></td>
+</tr>
+
 
 </tbody>
 </table>
