@@ -2,7 +2,7 @@
 
 Consolidated CDA (C-CDA) is one of the most widely implemented implementation guides for CDA and covers a significant scope of clinical care. Its target of the 'common/essential' elements of healthcare is closely aligned with FHIR's focus on the '80%'. There is significant interest in industry and government in the ability to interoperate between CDA and FHIR and C-CDA is a logical starting point. Implementers and regulators have both expressed an interest in the ability to map between FHIR and C-CDA.
 
-This Implementation Guide (IG) defines a series of FHIR profiles on the Composition resource to represent the various document types in C-CDA and provides an initial mapping of C-CDA and FHIR content. To do the former, this IG profiles Composition for various document types and link the profiles created under the US Core project for any coded entries that would normally be included in C-CDA sections. To have a simpler, more streamlined standard that reuses existing work and focuses on the 80% that implementers actually need in production systems, the resources of US Core represents a portion of the 80% needed for coded entries for coded entries of CCD, Care Plan & Discharge Summary.
+This Implementation Guide (IG) defines a series of FHIR profiles on the Composition resource to represent the various document types in C-CDA and provides an initial mapping of C-CDA and FHIR content. To do the former, this IG profiles Composition for various document types and link the profiles created under the US Core project for any coded entries that would normally be included in C-CDA sections. To have a simpler, more streamlined standard that reuses existing work and focuses on the 80% that implementers actually need in production systems, the resources of US Core represents a portion of the 80% needed for coded entries of CCD, Care Plan & Discharge Summary.
 
 The Composition profiles in this IG do not require coded data in any section. This is a departure from C-CDA, which requires coded data for Problems, Results, Medications, etc. This departure is intentional, as the C-CDA requirement for one or more coded entries in these sections resulted in some very complicated workarounds using nullFlavors to handle the fact that sometimes a patient is not on any medications, or has no current problems. In general, FHIR takes the approach that if something is nullable, it should simply be optional to ease the burden on implementers, thus C-CDA on FHIR does not require any coded entries, but rather uses the "required if known" approach, meaning that if an implementer's system has data for a section that requires data under Meaningful Use, they need to send it, but if they have no data there is no need for a null entry.
 
@@ -21,7 +21,7 @@ This first stage of the project defines all the C-CDA document-level profiles on
 
 Any coded data used by sections will be represented using relevant U.S. Core FHIR profiles where they exist. FHIR profiles defined by other work groups or unconstrained FHIR resources may also be referenced if no appropriate US Core Profile exist.
 
-For further information see the C-CDA specification here: http://www.hl7.org/implement/standards/product_brief.cfm?product_id=408.
+For further information see the C-CDA specification here: <a href="[https://jira.hl7.org/browse/PSS-1811](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=408.)">http://www.hl7.org/implement/standards/product_brief.cfm?product_id=408.</a>.
 
 
 
