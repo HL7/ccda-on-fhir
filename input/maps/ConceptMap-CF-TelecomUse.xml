@@ -70,23 +70,5 @@
         <equivalence value="equivalent"/>
       </target>
     </element>
-    <element>
-      <code value=""/>
-      <display value=""/>
-      <target>
-        <code value=""/>
-        <display value=""/>
-        <equivalence value="equivalent"/>
-      </target>
-    </element>
-    <element>
-      <code value=""/>
-      <display value=""/>
-      <target>
-        <code value=""/>
-        <display value=""/>
-        <equivalence value="equivalent"/>
-      </target>
-    </element>
   </group>
 </ConceptMap>
