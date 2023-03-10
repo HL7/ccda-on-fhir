@@ -3,12 +3,12 @@
   <id value="FC-AllergyIntoleranceCategory"/>
   <url value="http://hl7.org/fhir/us/ccda/ConceptMap/FC-AllergyIntoleranceCategory"/>
   <version value="4.0.1"/>
-  <name value="CCDAtoFHIRAllergyIntoleranceCategory"/>
-  <title value="CCDA to FHIR Allergy Intolerance Category"/>
+  <name value="FHIRtoCCDAAllergyIntoleranceCategory"/>
+  <title value="FHIR to CCDA Allergy Intolerance Category"/>
   <status value="active"/>
   <experimental value="false"/>
   <publisher value="HL7 International"/>
-  <description value="C-CDA Allergy Intolerance Observation value elements to FHIR category codes"/>
+  <description value="FHIR AllergyIntolerance category code to C-CDA Allergy Intolerance Observation value"/>
   <contact>
     <name value="HL7 International"/>
     <telecom>
