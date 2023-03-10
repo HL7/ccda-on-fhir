@@ -3,12 +3,12 @@
   <id value="FC-AdministrativeGender"/>
   <url value="http://hl7.org/fhir/us/ccda/ConceptMap/FC-AdministrativeGender"/>
   <version value="4.0.1"/>
-  <name value="CCDAtoFHIRAdminsitrativeGender"/>
-  <title value="C-CDA to FHIR Adminmistrative Gender"/>
+  <name value="FHIRtoCCDAAdminsitrativeGender"/>
+  <title value="FHIR to C-CDA Adminmistrative Gender"/>
   <status value="active"/>
   <experimental value="false"/>
   <publisher value="HL7 International"/>
-  <description value="C-CDA to FHIR Adminmistrative Gender. Based on http://hl7.org/fhir/cm-administrative-gender-v3.html"/>
+  <description value="FHIR to C-CDA Adminmistrative Gender. Based on http://hl7.org/fhir/cm-administrative-gender-v3.html"/>
   <contact>
     <name value="HL7 International"/>
     <telecom>
@@ -53,7 +53,8 @@
       <target>
       <code value="UN"/>
       <display value="Undifferentiated"/>
-        <equivalence value="wider"/>
+        <equivalence value="narrower"/>
+        <comment value="Consider using CDA nullFlavor concepts in this instance" />
       </target>
     </element>
   </group>
