@@ -15,8 +15,8 @@ This page includes terminology mapping from CDA to FHIR and FHIR to CDA in two s
 - [Severity Observation value (CDA) → Reaction Event severity (FHIR)](./ConceptMap-CF-Severity.html)
 
 #### **General CDA to FHIR ConceptMaps** 
-- [Administrative Gender (CDA) → Patient gender (FHIR)](./ConceptMap-CF-AdministrativeGender.html)
 - [Addr use  (CDA) → Address use (FHIR)](./ConceptMap-CF-AddressUse.html)
+- [Administrative Gender (CDA) → Patient gender (FHIR)](./ConceptMap-CF-AdministrativeGender.html)
 - [Name use (CDA) → Name use (FHIR)](./ConceptMap-CF-NameUse.html)
 - [NullFlavor (CDA) → Data Absent Reason code (FHIR)](./ConceptMap-CF-NullFlavorDataAbsentReason.html)
 - [Telecom use (CDA) → telecom contact point use (FHIR)](./ConceptMap-CF-TelecomUse.html)
@@ -37,9 +37,9 @@ This page includes terminology mapping from CDA to FHIR and FHIR to CDA in two s
 - [Reaction Event severity (FHIR) → Severity Observation value (CDA)](./ConceptMap-FC-Severity.html)
 
 #### **General FHIR to CDA ConceptMaps** 
-- [Patient gender (FHIR) → Administrative Gender (CDA)](./ConceptMap-FC-AdministrativeGender.html)
 - [Address use (FHIR) → Addr use (CDA)](./ConceptMap-FC-AddressUse.html)
-- [Name use (FHIR) → Name use (CDA)](./ConceptMap-FC-NameUse.html)
+- [Administrative gender (FHIR) → Administrative Gender (CDA)](./ConceptMap-FC-AdministrativeGender.html)
 - [Data Absent Reason code (FHIR) → NullFlavor (CDA)](./ConceptMap-FC-DataAbsentReasonNullFlavor.html)
+- [Name use (FHIR) → Name use (CDA)](./ConceptMap-FC-NameUse.html)
 - [Telecom contact point type (FHIR) → Telecom value (CDA)](./ConceptMap-FC-TelecomUse.html) 
 - [Telecom contact point use (FHIR) → Telecom use (CDA)](./ConceptMap-FC-TelecomType.html) 
