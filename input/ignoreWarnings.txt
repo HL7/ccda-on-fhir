@@ -1,5 +1,4 @@
 == Suppressed Messages ==
 
 # The following are because of terminology not supported by terminology server
-Internal error: Unknown Code http://hl7.org/fhir/sid/cvx#158 in http://hl7.org/fhir/sid/cvx - note that the code system is labelled as a fragment, so the code may be valid in some other fragment
 Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated
