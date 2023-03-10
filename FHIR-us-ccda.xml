@@ -21,7 +21,6 @@
 <artifact id="ConceptMap/CF-ProblemCategory" key="ConceptMap-CF-ProblemCategory" name="C-CDA section to FHIR Condition category code"/>
 <artifact id="ConceptMap/CF-AddressUse" key="ConceptMap-CF-AddressUse" name="C-CDA to FHIR Address Use"/>
 <artifact id="ConceptMap/CF-AdministrativeGender" key="ConceptMap-CF-AdministrativeGender" name="C-CDA to FHIR Adminmistrative Gender"/>
-<artifact id="ConceptMap/FC-AdministrativeGender" key="ConceptMap-FC-AdministrativeGender" name="C-CDA to FHIR Adminmistrative Gender"/>
 <artifact id="ConceptMap/CF-ImmunizationStatus" key="ConceptMap-CF-ImmunizationStatus" name="C-CDA to FHIR Immunization Status"/>
 <artifact id="ConceptMap/CF-MedicationStatus" key="ConceptMap-CF-MedicationStatus" name="C-CDA to FHIR Medication Status"/>
 <artifact id="ConceptMap/CF-NameUse" key="ConceptMap-CF-NameUse" name="C-CDA to FHIR NameUse"/>
@@ -32,7 +31,6 @@
 <artifact id="CapabilityStatement/CcdaOnFhirClient" key="CapabilityStatement-CcdaOnFhirClient" name="CCDA on FHIR Client"/>
 <artifact id="CapabilityStatement/CcdaOnFhirServer" key="CapabilityStatement-CcdaOnFhirServer" name="CCDA on FHIR Server"/>
 <artifact id="ConceptMap/CF-AllergyIntoleranceCategory" key="ConceptMap-CF-AllergyIntoleranceCategory" name="CCDA to FHIR Allergy Intolerance Category"/>
-<artifact id="ConceptMap/FC-AllergyIntoleranceCategory" key="ConceptMap-FC-AllergyIntoleranceCategory" name="CCDA to FHIR Allergy Intolerance Category"/>
 <artifact id="ConceptMap/CF-AllergyIntoleranceType" key="ConceptMap-CF-AllergyIntoleranceType" name="CCDA to FHIR Allergy Intolerance Type"/>
 <artifact deprecated="true" id="ConceptMap/C2F-AllergyIntolerance" key="ConceptMap-C2F-AllergyIntolerance" name="CCDA-to-FHIR map for AllergyIntolerance"/>
 <artifact deprecated="true" id="ConceptMap/C2F-Condition" key="ConceptMap-C2F-Condition" name="CCDA-to-FHIR map for Condition"/>
@@ -66,12 +64,14 @@
 <artifact id="ConceptMap/FC-ImmunizationRefusal" key="ConceptMap-FC-ImmunizationRefusal" name="FHIR Immunization Status Reason to C-CDA Immunization Refusal"/>
 <artifact id="ConceptMap/FC-Severity" key="ConceptMap-FC-Severity" name="FHIR Severity to C-CDA Severity"/>
 <artifact id="ConceptMap/FC-AddressUse" key="ConceptMap-FC-AddressUse" name="FHIR to C-CDA Address Use"/>
+<artifact id="ConceptMap/FC-AdministrativeGender" key="ConceptMap-FC-AdministrativeGender" name="FHIR to C-CDA Adminmistrative Gender"/>
 <artifact id="ConceptMap/FC-ImmunizationStatus" key="ConceptMap-FC-ImmunizationStatus" name="FHIR to C-CDA Immunization Status"/>
 <artifact id="ConceptMap/FC-MedicationStatus" key="ConceptMap-FC-MedicationStatus" name="FHIR to C-CDA Medication Status"/>
 <artifact id="ConceptMap/FC-NameUse" key="ConceptMap-FC-NameUse" name="FHIR to C-CDA NameUse"/>
 <artifact id="ConceptMap/FC-ProcedureStatus" key="ConceptMap-FC-ProcedureStatus" name="FHIR to C-CDA Procedure Status"/>
 <artifact id="ConceptMap/FC-TelecomType" key="ConceptMap-FC-TelecomType" name="FHIR to C-CDA Telecom Type"/>
 <artifact id="ConceptMap/FC-TelecomUse" key="ConceptMap-FC-TelecomUse" name="FHIR to C-CDA Telecom Use"/>
+<artifact id="ConceptMap/FC-AllergyIntoleranceCategory" key="ConceptMap-FC-AllergyIntoleranceCategory" name="FHIR to CCDA Allergy Intolerance Category"/>
 <artifact deprecated="true" id="ConceptMap/F2C-AllergyIntolerance" key="ConceptMap-F2C-AllergyIntolerance" name="FHIR-to-CCDA map for AllergyIntolerance"/>
 <artifact deprecated="true" id="ConceptMap/F2C-Condition" key="ConceptMap-F2C-Condition" name="FHIR-to-CCDA map for Condition"/>
 <artifact deprecated="true" id="ConceptMap/F2C-Immunization" key="ConceptMap-F2C-Immunization" name="FHIR-to-CCDA map for Immunization"/>
