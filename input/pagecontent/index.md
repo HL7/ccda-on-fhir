@@ -124,6 +124,21 @@ For further information see the [pdf-based C-CDA specification](http://www.hl7.o
 </tbody>
 </table>
 
+### Dependencies
+
+{% include dependency-table.xhtml %}
+
+### Cross Version Analysis
+
+{% include cross-version-analysis.xhtml %}
+
+### Global Profiles
+
+{% include globals-table.xhtml %}
+
+### IP Statements
+
+{% include ip-statements.xhtml %}
 
 
 [Next Page - Background](background.html)
