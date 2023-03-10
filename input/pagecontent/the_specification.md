@@ -1,3 +1,5 @@
+{% include stu-note.xml %}
+
 [Previous Page - Background](background.html)
 
 ### FHIR Documents

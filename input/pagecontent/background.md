@@ -1,5 +1,7 @@
 [Previous Page - Home Page](index.html)
 
+{% include stu-note.xml %}
+
 ### Clinical Documents
 
 Clinical documents come in many forms, from paper documents in a filing cabinet to electronic documents shared via Health Information Exchanges (HIEs). Regardless of their form, clinical documents share key characteristics that differentiate them from messages or queries for discrete data elements. 
