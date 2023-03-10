@@ -1,0 +1,68 @@
+FHIR field,Case,Approach,CCDA template,Element,Value,Parameter,xpath,comment,Back to Index,CDA-FHIR,class
+Immunization,,,Immunization Activity,,,@moodCode = EVN,ClinicalDocument/component/structuredBody/component/section[templateId/@root='2.16.840.1.113883.10.20.22.2.2']/entry/substanceAdministration[templateId/@root='2.16.840.1.113883.10.20.22.4.52'],"Using entries optional section, per CDA on FHIR guidance
+FHIR does not put orders in Immunization: mood is EVN",,,
+identifier,,source value,Immunization Activity,id,,,/id,"Add null flavor rule to general guidance, not every row for a required map",,,
+status,status = completed | entered-in-error,transform,Immunization Activity,statusCode,FC_ImmunizationStatus,negationInd = False,/statusCode/@code,,,,Data type assumptions
+status,staus = not-done,transform,Immunization Activity,statusCode,FC_ImmunizationStatus,"
+negationInd = True",/statusCode/@code,,,,
+statusReason,value in 2.16.840.1.113883.1.11.19717,source value,.Immunization Refusal Reason,code,,,/entryRelationship/observation[templateId/@root='2.16.840.1.113883.10.20.22.4.53']/code,"Codes are the same. CDA has more, so no translation necessary in the F-to-C direction. Some maps provided based on implementer request at FC_ImmunizationStatusReasonCodes",,,
+statusReason,value in http://hl7.org/fhir/ValueSet/immunization-status-reason,transform,.Immunization Refusal Reason,code,FC_ImmunizationStatusReasonCodes,,,,,,
+statusReason,value in neither value set,not supported by target,,,,,,,,,
+vaccineCode,,source value,.Immunization Medication Information,manufacturedMaterial,,,/consumable/manufacturedProduct/manufacturedMaterial/code,CVX codes are used in both,,,
+patient,,header context,,,,,,,,,
+encounter,,reference,Entry Reference,id,,,/entryRelationship/act[templateid/@root='2.16.840.1.113883.10.20.22.4.122']/id,Create Encounter in Encounter section; link using Entry Reference template,,,Mismatch in structures
+occurrence[x],,[backbone],,,,,,,,,
+occurrenceDateTime,,source value,Immunization Activity,effectiveTime,,,/effectiveTime,,,,
+occurrenceString,,not supported by target,,,,,,,,,
+recorded,,not supported by target,,,,,,"Proposal to use author time, which will often be correct, but may be incorrect if the author is not the original author.",,,
+primarySource,,not supported by target,,,,,,"Required element not supported: OK F2C
+C2F (later):  Possible to use DAR, but difficult on primitives.
+John to ask Q (CCDA-FHiR) 07/18. Also possibly to be relaxed in US Core. ",,,
+reportOrigin,,not supported by target,,,,,,,,,
+location,,source value,Encounters section/encounter/Service Delivery Location,,,,,"Possible to use entryReference from Encounter, if present. Specify the Reference, the referenced Encounter, or the Location?",,,Mismatch in structures
+manufacturer,,source value,".Immunization Medication Information
+",manufacturedProduct/manufacturerOrganization,,,/consumable/manufacturedProduct/manufacturerOrganization,Properties not defined in either specification,,,
+lotNumber,,source value,".Immunization Medication Information
+",manufacturedProduct/manufacturedMaterial/lotNumberText,,,/consumable/manufacturedProduct/manufacturedMaterial/lotNumberText,,,,
+expirationDate,,not supported by target,,,,,,..Expiration Date Observation would depend from the immunization not the material: incorrect,,,
+site,in CodesForImmunizationSiteOfAdministration ,transform,Immunization Activity,approachSiteCode,FC_ImmunizationSite,,/approachSiteCode,No FHIR constraints: use source system values to create map. Target is very large SNOMED set.,,,Mismatch in terminology semantics
+site,in 2.16.840.1.113883.3.88.12.3221.8.9,source value,Immunization Activity,approachSiteCode,,,/approachSiteCode,,,,
+site,not in either set,not supported by target,,,,,,,,,
+route,route.coding.code in 2.16.840.1.113883.3.88.12.3221.8.7,source value,Immunization Activity,routeCode,,,/routeCode,,,,
+route,route.coding.code not in 2.16.840.1.113883.3.88.12.3221.8.7,transform,Immunization Activity,routeCode,FC_ImmunizationRoute,,/routeCode,FHIR value set is small and example,,,Mismatch in terminology semantics
+doseQuantity,,source value,Immunization Activity,doseQuantity,,,/doseQuantity,,,,
+performer,performer.function = AP,[backbone],,,,,,"Alternative: use PRF code, but no obvious matches",,,
+.function,,not supported by target,,,,,,role is implicit,,,Mismatch in structures
+.actor,,source value,Immunization Activity,performer,,,/performer,,,,
+performer,performer.function = OP,[backbone],,,,,,"Alternative: use PRF code, but no obvious matches",,,
+.function,,not supported by target,,,,,,role is implicit,,,Mismatch in structures
+.actor,,source value,.Medication Supply Order,author,,statusCode = completed,/entryRelationship/author,Supply itself is empty; requires id,,,
+performer,"performer.function <> OP, AP",not supported by target,,,,,,,,,
+note,,not supported by target,,,,,,,,,
+reasonCode,,source value,.Indication,value,,code = 404684003 - Clinical finding (finding),/entryRelationship/observation[templateid/@root='2.16.840.1.113883.10.20.22.4.19']/value,,,,
+reasonReference,,not supported by target,,,,,,Or: instantiate a Problem and use Entry Reference?,,,
+isSubpotent,,not supported by target,,,,,,,,,
+subpotentReason,,not supported by target,,,,,,,,,
+education,,[backbone],,,,,,,,,
+.documentType,,source value,,.reference.ExternalDocument.code,,"reference.typeCode=REFR
+ExternalDocument.id.root= 2.16.840.1.113883.4.873",/reference/ExternalDocument/code,,,,Mismatch in structures
+.reference,,source value,,.reference.ExternalDocument.id,,"reference.typeCode=REFR
+ExternalDocument.id.root= 2.16.840.1.113883.4.873",/reference/ExternalDocument,,,,Mismatch in structures
+.publicationDate,,not supported by target,,,,,,,,,
+.presentationDate,,not supported by target,,,,,,,,,
+programEligibility,,not supported by target,,,,,,,,,
+fundingSource,,not supported by target,,,,,,,,,
+reaction,,[backbone],,,,,,,,,
+.date,,source value,.Reaction Observation,effectiveTime,,,/entryRelationship/observation[templateid/@root='2.16.840.1.113883.10.20.22.4.9']/effectiveTime,,,,
+.detail,,source value,.Reaction Observation,,,,/entryRelationship/observation[templateid/@root='2.16.840.1.113883.10.20.22.4.9']/,Elements not specified,,,guidance required
+.reported,,not supported by target,,,,,,,,,
+protocolApplied,,not supported by target,,,,,,,,,
+.series,,not supported by target,,,,,,,,,
+.authority,,not supported by target,,,,,,,,,
+.targetDisease,,not supported by target,,,,,,,,,
+.doseNumber[x],,[backbone],,,,,,,,,
+.doseNumberPositiveInt,,source value,Immunization Activity,repeatNumber,,,/repeatNumber,,,,
+.doseNumberString,,not supported by target,,,,,,,,,
+.seriesDoses[x],,[backbone],,,,,,,,,
+.seriesDosesPositiveInt,,not supported by target,,,,,,,,,
+.seriesDosesString,,not supported by target,,,,,,,,,
