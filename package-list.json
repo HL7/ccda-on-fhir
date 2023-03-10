@@ -5,7 +5,7 @@
 			"desc": "Continuous Integration Build (latest in version control)",
 			"path": "http://build.fhir.org/ig/HL7/ccda-on-fhir-r4",
 			"status": "ci-build",
-			"sequence": "STU 2",
+			"sequence": "STU 1.2",
 			"current": true,
 			"fhirversion": "4.0.1"
 		},
