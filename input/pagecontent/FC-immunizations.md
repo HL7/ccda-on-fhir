@@ -4,7 +4,7 @@ td, th {
 }
 </style>
 
-{% include stu-note.xml %}
+{% include stu-note-cerner.xml %}
 
 This page provides a mapping from FHIR to CDA. For the CDA to FHIR mapping, please refer to [Immunizations CDA → FHIR](./CF-immunizations.html). For guidance on how to read the table below, see [Reading the C-CDA ↔ FHIR Mapping Pages](./mappingGuidance.html)
 
@@ -16,14 +16,15 @@ This page provides a mapping from FHIR to CDA. For the CDA to FHIR mapping, plea
 |.status|/statusCode|**Constraint** when ```status.value="not-done"```<br/>Set negationInd to true in CDA observation|
 |.status|/statusCode|**Constraint** other values of status<br/>[FHIR status → CDA statusCode](ConceptMap-FC-ImmunizationStatus.html)|
 |.statusReason|**[Immunization Refusal Reason]()**<br/>```entryRelationship@typeCode="RSON"```<br/>/entryRelationship/observation/code|[FHIR statusReason → CDA refusal](ConceptMap-FC-ImmunizationRefusal.html)|
-|.vaccineCode|/consumable/manufacturedProduct/manufacturedMaterial/code|[CDA CD ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
+|.vaccineCode|/consumable/manufacturedProduct/manufacturedMaterial/code|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 |.occurrenceDateTime|/effectiveTime@value|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
 |.location||"Possible to use entryReference from Encounter|
 |.manufacturer|/consumable/manufacturedProduct/manufacturerOrganization||
 |.lotNumber|/consumable/manufacturedMaterial/lotNumberText||
-|.route|/routeCode|[CDA CD ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
+|.route|/routeCode|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 |.doseQuantity|/doseQuantity||
-|.performer.actor|/performer|**Constraint** when ```.performer.function="AP"``|
+|.performer.actor|/performer|**Constraint** when ```.performer.function="AP"```<br/>[CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)|
+|.note|**[Comment Activity]()**<br/>```entryRelationship/act/code@code="48767-8"```<br/>/entryRelationship/act/text||
 |.reasonCode|**[Indication]()**<br/>``` entryRelationship@typeCode="RSON"```<br/>[/entryRelationship/observation/value]()||
 |.education.documentType|reference/ExternalDocument/code||
 |.education.reference|.reference.ExternalDocument.id|/reference/ExternalDocument/code|

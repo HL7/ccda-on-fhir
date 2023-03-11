@@ -4,7 +4,7 @@ td, th {
 }
 </style>
 
-{% include stu-note.xml %}
+{% include stu-note-cerner.xml %}
 
 This page provides a mapping from FHIR to CDA. For the CDA to FHIR mapping, please refer to [Procedures CDA → FHIR](./CF-procedures.html). For guidance on how to read the table below, see [Reading the C-CDA ↔ FHIR Mapping Pages](./mappingGuidance.html)
 
@@ -12,19 +12,18 @@ This page provides a mapping from FHIR to CDA. For the CDA to FHIR mapping, plea
 
 |FHIR<br/>[Procedure]()|C-CDA<br/>[Procedure Activity Procedure]()|Transform Steps|
 |:----|:----|:----|
-|id|identifier||
-|identifier|identifier||
-|status|statusCode||
-|code|code||
-|[performed[x]]performedDateTime|effectiveTime||
-|performedPeriod.start|effectiveTime.low||
-|performedPeriod.end|effectiveTime.high||
-|[performer]actor|performer||
-|onBehalfOf|perfomer.assignedEntity.representedOrganization||
-|location|participant.serviceDeliveryLocation||
-|reasonCode|entryRelationship.Indication.value||
-|bodySite|targetSiteCode||
-|report|reference.externalDocument||
+|.identifier|/id|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
+|.status|/statusCode|[FHIR status → CDA statusCode](./ConceptMap-FC-ProcedureStatus.html)|
+|.code|/code|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
+|.performedDateTime|/effectiveTime@value|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
+|.performedPeriod.start|/effectiveTime/low|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
+|.performedPeriod.end|/effectiveTime/high|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
+|.performer.actor|/performer|[CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)|
+|.performer.onBehalfOf|/perfomer/assignedEntity/representedOrganization|[CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)|
+|.location|**[Service Delivery Location]()**<br/>```participant@typeCode="LOC"```<br/>participant/participantRole||
+|.reasonCode|**[Indication]()**<br/>```entryRelationship@typeCode="RSON"```<br/>[/entryRelationship/observation/value]()|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
+|.bodySite|/targetSiteCode|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
+|.report|/reference/externalDocument||
 
 ### Illustrative example
 

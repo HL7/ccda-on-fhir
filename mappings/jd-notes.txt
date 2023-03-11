@@ -4,18 +4,33 @@ In multiple places, you vary between dot notation, slashes and nothing for CDA. 
 In multiple places, you use templateId in selecting CDA elements. templateIds change over time and are generally frowned upon in programming since technically they have no semantic meaning (i.e. they are primarily used in conformance testing). Generally I've changed these to use code and typeCode attributes (which is what we piloted in January demo of allergies) which carry semantic and also will be more stable over time (and more portable to other mappings). Since all the links will show the template being used, this shouldn't matter a lot.  
 
 Allergies: 
+Status affects the act/concern and entryRelationship. Added both
 reaction.substance - not sure if I agree with that mapping
 CDA routeCode doesn't exist on Allergy Intolerance observation, removed
+Added .note...I think you had mentioned this as a to-do previously
 
 Immunizations: 
 consolidate statusReason since logic in conceptMap
 approachSiteCode doesn't exist on Immunization Activity, removed
 performer in CDA is the person who carried out the act, so don't agree with the performer if function is not AP. Only included one line here. 
-reaction.detail
+reaction.detail was removed as you had no guidance on where it went
+Added .note...I think you had mentioned this as a to-do previously
 
 Medications
 status and @moodCode. It's pretty unclear what was recommended here. When would information in a MedRequest cause the system to generate moodCode EVN. 
 I added a bit more detail on some of the dosageInstruction.timing elements
 .quantity would need to go into a dispense or supply order. See https://www.hl7.org/ccdasearch/templates/2.16.840.1.113883.10.20.22.4.18.html & https://www.hl7.org/ccdasearch/templates/2.16.840.1.113883.10.20.22.4.17.html Since you didn't model that, I've just removed for now
 
+Patient
+Added prefix to CDA for all path off record target
+Made edits to make raceCode and ethinicity extensions clear. Make use of SDTC extensions cleark
+gender, this really only needs one row. Logic of nulls can be managed in conceptMap
+You mapping for deceased date is wrong. There's a header extension for this https://confluence.hl7.org/display/SD/CDA+Extensions
+I haven't been on any calls for patient but diagree with mapping of generalPractitioner and managingOrganization. Can discuss Monday. Left blank for now
 
+Problems
+Status affects the act/concern and entryRelationship. Added both
+.note provided more details on use of Comment Activity template
+
+Procedure
+Not much adjusted here. Minor fixes on Service Delivery Location 
