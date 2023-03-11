@@ -11,9 +11,11 @@ td, th {
 When specific steps are included for mapping content between C-CDA and FHIR, those steps will be listed in the "Transform Steps" column in the following order: 
 
 1. **Constraint (labeled in bold)**: Only perform the action when this constraint is fulfilled
-2. **Structural Guidance (Bidirectional guidance shown as ↔)**: Generalized narrative guidance on structural transform between CDA and FHIR elements. This links to section on this current page
+2. **Structural Guidance (Bidirectional guidance shown as ↔)**: Generalized narrative guidance on structural transform between CDA and FHIR elements. This links to sections on this current page
 3. **ConceptMap (Terminology mapping direction shown as →)**: Link to a computable map between CDA and FHIR vocabularies. This links to conceptMaps listed on this [page](conceptMaps.html)
 4. **Notes (no label)**: Other notes specific to this element mapping
+
+Rather than repeating cardinality, conformance, and other criteria from FHIR Resources or a C-CDA Templates outside of this implementaiton guide, references will be shown as a bold hyperlinks ((e.g. **[US Core AllergyIntolerance](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-allergyintolerance.html)** or **[C-CDA Reaction Observation](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.9.html)**) ) within mapping tables. Unbolded links will be to guidance contained within this guide (e.g. [CDA ↔ FHIR Name, Address, and Telecom mapping](mappingGuidance.html#name-address-telecom))
 
 #### What Examples are Included?
 
@@ -139,7 +141,7 @@ FHIR, however, provides different elements within different resources that conve
 	</blockquote>
 </div>
 
-At a minimum, it is recommended that when [US CORE Provenance](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-provenance.html) resources are present in a FHIR document, that they should be mapped to provenance as defined in the [C-CDA Companion Guide](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=447). 
+At a minimum, it is recommended that when [US Core Provenance](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-provenance.html) resources are present in a FHIR document, that they should be mapped to provenance as defined in the [C-CDA Companion Guide](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=447). 
 
 #### Name, Address, Telecom ####
 
@@ -213,7 +215,7 @@ The mappings of name, address and telecom information is useful in many part of 
 
 The use of nullFlavor in CDA is explained in depth in Volume 1 of the [C-CDA Implementation Guide](http://hl7.org/cda/stds/ccda/draft1/designconsiderations.html#unknown-and-no-known-information) and in the [C-CDA Companion Guide](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=447). 
 
-The use of the data absent reason extension is explained in depth in the [US CORE Implementation Guide](https://build.fhir.org/ig/HL7/US-Core/general-requirements.html#missing-data) and also in the [base extension](http://hl7.org/fhir/extension-data-absent-reason.html).
+The use of the data absent reason extension is explained in depth in the [US Core Implementation Guide](https://build.fhir.org/ig/HL7/US-Core/general-requirements.html#missing-data) and also in the [base extension](http://hl7.org/fhir/extension-data-absent-reason.html).
 
 In this publication, we include a mapping between missing data concepts. **Importantly, it should be noted that several mappings include non-equivalence (wider or narrower or unsupported)**. Additional implementer guidance is welcome on the handling of missing data between C-CDA and FHIR:
 - [NullFlavor (CDA) → Data Absent Reason code (FHIR)](./ConceptMap-CF-NullFlavorDataAbsentReason.html) 
