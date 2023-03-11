@@ -1,0 +1,14 @@
+As previously stated, not supported rows weren't extracted and aren't shown in tables 
+In multiple places, remove translation case mapping. that is covered in structual guide 
+
+Allergies: 
+reaction.substance - not sure if I agree with that mapping
+CDA routeCode doesn't exist on Allergy Intolerance observation, removed
+
+Immunizations: 
+consolidate statusReason since logic in conceptMap
+approachSiteCode doesn't exist on Immunization Activity, removed
+performer in CDA is the person who carried out the act, so don't agree with the performer if function is not AP. Only included one line here. 
+reaction.detail
+
+
