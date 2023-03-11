@@ -10,7 +10,7 @@ This page provides a mapping from FHIR to CDA. For the CDA to FHIR mapping, plea
 
 ### FHIR to C-CDA
 
-|FHIR|CDA|Transform Steps|
+|FHIR<br/>[Patient]()|C-CDA<br/>[US Realm Header]()|Transform Steps|
 |:----|:----|:----|
 |us-core-race|raceCode||
 |us-core-race|raceCode|First value goes in schema element; additional values go in extension|

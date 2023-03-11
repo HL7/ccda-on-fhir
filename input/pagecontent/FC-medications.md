@@ -10,33 +10,28 @@ This page provides a mapping from FHIR to CDA. For the CDA to FHIR mapping, plea
 
 ### FHIR to C-CDA
 
-|FHIR|CDA|Transform Steps|
+|FHIR<br>[MedicationRequest]()|C-CDA<br>[Medication Activity]()|Transform Steps|
 |:----|:----|:----|
-|identifier|/id||
-|status|/status||
-|status|@moodCode||
-|category|/code|"code is not generally used|
-|doNotPerform|@negationInd||
-|.medicationCodeableConcept|/manufacturedMaterial||
-|medicationReference|/consumable||
-|authoredOn|/time||
-|requester|/assignedAuthor||
-|performer|performer|CDA unclear|
-|reasonCode|/value||
-|dosageInstruction.text|/text||
-|dosageInstruction.additionalInstruction|/code||
-|dosageInstruction.patientInstruction|/text||
-|dosageInstruction.timing|effectiveTime|This can be complex|
-|dosageInstruction.site|/approachSiteCode|both use SNOMED CT|
-|dosageInstruction.route|/routeCode||
-|dosageInstruction.route|/routeCode||
-|dosageInstruction.route|/routeCode/translation||
-|[dosageInstruction.doseAndRate]dosageInstruction...doseRange|doseQuantity|do we need a type map for IVL[PQ]?|
-|dosageInstruction...doseQuantity|doseQuantity||
-|dosageInstruction...rateRange|rateQuantity||
-|dosageInstruction...rateQuantity|rateQuantity||
-|dosageInstruction.maxDosePerPeriod|maxDoseQuantity||
-|[dispenseRequest].quantity|quantity||
+|.identifier|/id|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
+|.status|/status|[FHIR status → CDA statusCode](ConceptMap-FC-MedicationsStatus.html)|
+|.category|/code|[CDA CD ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)<br/>code is not generally used in CDA|
+|.doNotPerform|@negationInd||
+|.medicationCodeableConcept|consumable/manufacturedProduct/manufacturedMaterial/code|[CDA CD ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
+|.medicationReference|(see above)|CDA embeds medication codes directly inside medication activity|
+|.authoredOn|/author/time|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
+|.requester|/assignedAuthor|[CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)|
+|.performer|/performer|[CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)|
+|.reasonCode|**[Indication]()**<br/>```entryRelationship@typeCode="RSON"```<br/>[/entryRelationship/observation/value]()|[CDA CD ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
+|.dosageInstruction.text<br/>&<br/>.dosageInstruction.patientInstruction|**[Free text sig]()**<br/>```entryRelationship/substanceAdministration/code@code="76662-6"```<br/>/entryRelationship/substanceAdministration/text||
+|.dosageInstruction.additionalInstruction|**[Instruction]()**<br/>```entryRelationship@typeCode="SUBJ"```<br/>/entryRelationship/act/code|[CDA CD ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
+|.dosageInstruction.timing.repeat.boundsPeriod.start|effectiveTime[0]/low|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)v|
+|.dosageInstruction.timing.repeat.boundsPeriod.end|effectiveTime[0]/high|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
+|.dosageInstruction.timing.repeat.frequency<br/>&<br/>.dosageInstruction.timing.repeat.period<br/>&<br/>.dosageInstruction.timing.repeat.periodUnit<br/>|/effectiveTime[1]|This can be complex|
+|.dosageInstruction.site|/approachSiteCode|[CDA CD ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
+|.dosageInstruction.route|/routeCode|[CDA CD ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
+|.dosageInstruction.doseAndRate.doseQuantity|/doseQuantity||
+|.dosageInstruction.doseAndRate.rateQuantity|/rateQuantity||
+|.dosageInstruction.maxDosePerPeriod|/maxDoseQuantity||
 
 ### Illustrative example
 

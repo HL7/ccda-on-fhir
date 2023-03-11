@@ -1,5 +1,7 @@
 As previously stated, not supported rows weren't extracted and aren't shown in tables 
 In multiple places, remove translation case mapping. that is covered in structual guide 
+In multiple places, you vary between dot notation, slashes and nothing for CDA. I tried to make consistent as shown on the Allergies page we've all been reviewing
+In multiple places, you use templateId in selecting CDA elements. templateIds change over time and are generally frowned upon in programming since technically they have no semantic meaning (i.e. they are primarily used in conformance testing). Generally I've changed these to use code and typeCode attributes (which is what we piloted in January demo of allergies) which carry semantic and also will be more stable over time (and more portable to other mappings). Since all the links will show the template being used, this shouldn't matter a lot.  
 
 Allergies: 
 reaction.substance - not sure if I agree with that mapping
@@ -10,5 +12,10 @@ consolidate statusReason since logic in conceptMap
 approachSiteCode doesn't exist on Immunization Activity, removed
 performer in CDA is the person who carried out the act, so don't agree with the performer if function is not AP. Only included one line here. 
 reaction.detail
+
+Medications
+status and @moodCode. It's pretty unclear what was recommended here. When would information in a MedRequest cause the system to generate moodCode EVN. 
+I added a bit more detail on some of the dosageInstruction.timing elements
+.quantity would need to go into a dispense or supply order. See https://www.hl7.org/ccdasearch/templates/2.16.840.1.113883.10.20.22.4.18.html & https://www.hl7.org/ccdasearch/templates/2.16.840.1.113883.10.20.22.4.17.html Since you didn't model that, I've just removed for now
 
 

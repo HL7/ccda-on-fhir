@@ -10,7 +10,7 @@ This page provides a mapping from FHIR to CDA. For the CDA to FHIR mapping, plea
 
 ### FHIR to C-CDA
 
-|FHIR|CDA|Transform Steps|
+|FHIR<br/>[Procedure]()|C-CDA<br/>[Procedure Activity Procedure]()|Transform Steps|
 |:----|:----|:----|
 |id|identifier||
 |identifier|identifier||

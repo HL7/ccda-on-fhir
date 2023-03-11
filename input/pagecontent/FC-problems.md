@@ -10,7 +10,7 @@ This page provides a mapping from FHIR to CDA. For the CDA to FHIR mapping, plea
 
 ### FHIR to C-CDA
 
-|FHIR|CDA|Transform Steps|
+|FHIR<br/>[Condition]()|C-CDA<br/>[Problem Observation]()|Transform Steps|
 |:----|:----|:----|
 |identifier|id||
 |Condition.clinicalStatus|value||
