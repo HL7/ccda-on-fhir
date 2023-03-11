@@ -5,6 +5,7 @@ This page includes terminology mapping from CDA to FHIR and FHIR to CDA in two s
 #### **Entry Specific CDA to FHIR ConceptMaps** 
 - [Allergy Intolerance Observation value (CDA) → AllergyIntolerance type (FHIR)](./ConceptMap-CF-AllergyIntoleranceType.html)
 - [Allergy Intolerance Observation value (CDA) → AllergyIntolerance category (FHIR)](./ConceptMap-CF-AllergyIntoleranceCategory.html)
+- [Allergy Status Observation (CDA) → AllergyIntolerance clinicalStatus (FHIR)](./ConceptMap-CF-AllergyStatus.html)
 - [Criticality value (CDA) → criticality (FHIR)](./ConceptMap-CF-Criticality.html)
 - [Immunization Activity statusCode (CDA) → Immunization status (FHIR)](./ConceptMap-CF-ImmunizationStatus.html)
 - [Immunization Refusal Reason (CDA) → Immunization statusReason (FHIR)](./ConceptMap-CF-ImmunizationRefusal.html)
@@ -27,6 +28,7 @@ This page includes terminology mapping from CDA to FHIR and FHIR to CDA in two s
 #### **Resource Specific FHIR to CDA ConceptMaps** 
 - [AllergyIntolerance type (FHIR) → Allergy Intolerance Observation value (CDA)](./ConceptMap-FC-AllergyIntoleranceType.html)
 - [AllergyIntolerance category (FHIR) → Allergy Intolerance Observation value (CDA)](./ConceptMap-FC-AllergyIntoleranceCategory.html)
+- [AllergyIntolerance clinicalStatus (FHIR) → Allergy Status Observation (CDA)](./ConceptMap-FC-AllergyStatus.html) 
 - [Criticality (FHIR) → Criticality value (CDA)](./ConceptMap-FC-Criticality.html)
 - [Immunization status (FHIR) → Immunization Activity statusCode (CDA)](./ConceptMap-FC-ImmunizationStatus.html)
 - [Immunization statusReason (FHIR) → Immunization Refusal Reason (CDA)](./ConceptMap-FC-ImmunizationRefusal.html)

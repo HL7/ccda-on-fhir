@@ -13,7 +13,7 @@ This page provides a mapping from FHIR to CDA. For the CDA to FHIR mapping, plea
 |FHIR|CDA|Transform Steps|
 |:----|:----|:----|
 |.identifier|id|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
-|.clinicalStatus|act/statusCode<br/>&<br />**Allergy Status**<br/>```observation/code@code="33999-4"```<br/>entryRelationship/observation/value|Missing conceptMap for clinicalStatus to Allergy Status|
+|.clinicalStatus|act/statusCode<br/>&<br />**Allergy Status**<br/>```observation/code@code="33999-4"```<br/>entryRelationship/observation/value|[FHIR clinicalStatus → CDA Allergy Status Observation value (CDA)](./ConceptMap-FC-AllergyStatus.html)|
 |.type<br/>&<br/>.category|value|[FHIR type → CDA value](ConceptMap-FC-AllergyIntoleranceType.html)<br/>[FHIR category → CDA value](ConceptMap-FC-AllergyIntoleranceCategory.html)|
 |AllergyIntolerance.criticality|**Criticality**<br/>```observation/code@code="82606-5"```<br/>entryRelationship/observation/value|[CDA CD ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)<br/>[FHIR criticality → CDA Criticality value ](ConceptMap-FC-Criticality.html)|
 |.code|participant/participantRole/playingEntity/code|**Constraint**: When FHIR concept is not a negation|
