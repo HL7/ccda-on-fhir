@@ -13,7 +13,7 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
 |/id|.identifier| [CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
 |/effectiveTime/low|.onsetDateTime|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)<br/>effectiveTime/high should not be mapped within onset (DateTime or Period)|
 |/value|.type<br/>&<br/>.category|[CDA coding ↔ FHIR CodeableConcept]()<br/>[CDA value → FHIR type]() <br/> [CDA value → FHIR category](./ConceptMap-CF-AllergyIntoleranceCategory.html)|
-|/author|.recorder<br/>&<br/>**[Provenance]()**|**Constraint:** Only map single CDA author to FHIR recorder<br/>[Guidance on CDA ↔ FHIR Provenance]()|
+|/author|.recorder<br/>&<br/>**[Provenance](http://hl7.org/fhir/us/core/StructureDefinition-us-core-provenance.html)**|**Constraint:** Only map single CDA author to FHIR recorder<br/>[Guidance on CDA ↔ FHIR Provenance]()|
 |/author/time|.recorded|**Constraint:** Only map earliest author/time <br/>[CDA ↔ FHIR Time/Dates]()|
 |/participant/participantRole<br/>/playingEntity/code|.code|**Constraint:** When CDA negation is absent or false<br/>[CDA coding ↔ FHIR CodeableConcept]()|
 |/participant/participantRole<br/>/playingEntity/code|.code|**Constraint:** When CDA negation is true<br/>[Negated CDA allergy codes → FHIR allergy codes]() |
