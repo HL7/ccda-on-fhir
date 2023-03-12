@@ -13,7 +13,7 @@ This page provides a mapping from FHIR to CDA. For the CDA to FHIR mapping, plea
 |FHIR<br>[MedicationRequest]()|C-CDA¹<br>[Medication Activity substanceAdministration]()|Transform Steps|
 |:----|:----|:----|
 |.identifier|/id|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
-|.status|/status|[FHIR status → CDA statusCode](ConceptMap-FC-MedicationsStatus.html)|
+|.status|/status|[FHIR status → CDA statusCode](ConceptMap-FC-MedicationStatus.html)|
 |.category|/code|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)<br/>code is not generally used in CDA|
 |.doNotPerform|@negationInd||
 |.medicationCodeableConcept|consumable/manufacturedProduct/manufacturedMaterial/code|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
