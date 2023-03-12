@@ -16,7 +16,7 @@ In our first publication, we focused on the subset of domains that are recognize
     </ul>
     </p>
     <p>
-    <b>The FHIR → C-CDA mappings transforms were limited to only two companies and have not undergone major exposure testing in the connectathons yet.</b>
+    <b>The FHIR → C-CDA mappings have only been piloted by a single company (Cerner/Oracle) at this time and have not achieved multi-vendor consensus or connectathon testing yet.</b>
     </p>
 	</blockquote>
 </div>
