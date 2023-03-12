@@ -10,28 +10,29 @@ This page provides a mapping from FHIR to CDA. For the CDA to FHIR mapping, plea
 
 ### FHIR to C-CDA
 
-|FHIR<br/>Immunization|C-CDA<br/>Immunization Activity|Transform Steps|
+|FHIR<br/>[Immunization](http://hl7.org/fhir/us/core/StructureDefinition-us-core-immunization.html#profile)|C-CDA¹<br/>[Immunization Activity substanceAdministration](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.52.html)|Transform Steps|
 |:----|:----|:----|
 |.identifier|/id|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
 |.status|/statusCode|**Constraint** when ```status.value="not-done"```<br/>Set negationInd to true in CDA observation|
-|.status|/statusCode|**Constraint** other values of status<br/>[FHIR status → CDA statusCode](ConceptMap-FC-ImmunizationStatus.html)|
+|.status|/statusCode|**Constraint** all other values of status<br/>[FHIR status → CDA statusCode](ConceptMap-FC-ImmunizationStatus.html)|
 |.statusReason|**[Immunization Refusal Reason]()**<br/>```entryRelationship@typeCode="RSON"```<br/>/entryRelationship/observation/code|[FHIR statusReason → CDA refusal](ConceptMap-FC-ImmunizationRefusal.html)|
 |.vaccineCode|/consumable/manufacturedProduct/manufacturedMaterial/code|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 |.occurrenceDateTime|/effectiveTime@value|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
-|.location||"Possible to use entryReference from Encounter|
+|.location||<mark>Possible to use entryReference from Encounter</mark>|
 |.manufacturer|/consumable/manufacturedProduct/manufacturerOrganization||
 |.lotNumber|/consumable/manufacturedMaterial/lotNumberText||
 |.route|/routeCode|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 |.doseQuantity|/doseQuantity||
 |.performer.actor|/performer|**Constraint** when ```.performer.function="AP"```<br/>[CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)|
 |.note|**[Comment Activity]()**<br/>```entryRelationship/act/code@code="48767-8"```<br/>/entryRelationship/act/text||
-|.reasonCode|**[Indication]()**<br/>``` entryRelationship@typeCode="RSON"```<br/>[/entryRelationship/observation/value]()||
+|.reasonCode|**[Indication]()**<br/>``` entryRelationship@typeCode="RSON"```<br/>/entryRelationship/observation/value||
 |.education.documentType|reference/ExternalDocument/code||
-|.education.reference|.reference.ExternalDocument.id|/reference/ExternalDocument/code|
-|.reaction.id|**[Reaction]()**<br/>```entryRelationship@typeCode="MFST"```<br/>[/entryRelationship/observation/id]()||
-|.reaction.date|[/entryRelationship/observation/effectiveTime]()||
+|.education.reference|/reference/ExternalDocument/id||
+|.reaction.id|**[Reaction]()**<br/>```entryRelationship@typeCode="MFST"```<br/>/entryRelationship/observation/id|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
+|.reaction.date|/entryRelationship/observation/effectiveTime|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
 |.doseNumber[x].doseNumberPositiveInt|/repeatNumber||
 
+1\. XPath abbrievated for C-CDA Immunization Activity as: <br/> ```ClinicalDocument/component/structuredBody/component/section[(@code="11369-6")]/entry/substanceAdministration```
 
 ### Illustrative example
 

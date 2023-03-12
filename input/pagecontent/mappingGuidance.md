@@ -8,20 +8,24 @@ td, th {
 
 #### How to Read Mapping Tables and Transform Steps? 
 
-When specific steps are included for mapping content between C-CDA and FHIR, those steps will be listed in the "Transform Steps" column in the following order: 
+The header row of the mapping table provides links to the respective profiles in FHIR (e.g. **[US Core AllergyIntolerance](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-allergyintolerance.html)**) and templates in C-CDA (e.g. **[Allergy Intolerance observation](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.7.html)**)and specifies the "base" that each of the rows will build one.  All FHIR elements use a simplified dot notation and the CDA elements use simplified slash notation. Always use the underlying standards, provided via header row links, to ensure conformance when building FHIR resource or C-CDA clinical documents. 
+
+Rather than repeating cardinality, conformance, and other criteria from FHIR Resources or a C-CDA templates defined outside this implementaiton guide, external references are shown in tables as bold hyperlinks ((e.g. **[US Core Patient](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-patient.html)** or **[C-CDA US Realm Header](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.1.1.html)**) ). Unbold links refer to guidance contained within this guide (e.g. [CDA ↔ FHIR Name, Address, and Telecom mapping](mappingGuidance.html#name-address-telecom))
+
+
+The "Transform Steps" column of the table will provide guidance for mapping content between C-CDA and FHIR, those steps will be listed in the following order: 
 
 1. **Constraint (labeled in bold)**: Only perform the action when this constraint is fulfilled
 2. **Structural Guidance (Bidirectional guidance shown as ↔)**: Generalized narrative guidance on structural transform between CDA and FHIR elements. This links to sections on this current page
-3. **ConceptMap (Terminology mapping direction shown as →)**: Link to a computable map between CDA and FHIR vocabularies. This links to conceptMaps listed on this [page](conceptMaps.html)
+3. **ConceptMap (Terminology mapping direction shown as →)**: Link to a computable map between CDA and FHIR vocabularies. This links to [conceptMaps developed in this guide](conceptMaps.html)
 4. **Notes (no label)**: Other notes specific to this element mapping
 
-Rather than repeating cardinality, conformance, and other criteria from FHIR Resources or a C-CDA Templates outside of this implementaiton guide, references will be shown as a bold hyperlinks ((e.g. **[US Core AllergyIntolerance](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-allergyintolerance.html)** or **[C-CDA Reaction Observation](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.9.html)**) ) within mapping tables. Unbolded links will be to guidance contained within this guide (e.g. [CDA ↔ FHIR Name, Address, and Telecom mapping](mappingGuidance.html#name-address-telecom))
 
 #### What Examples are Included?
 
-Examples for C-CDA to FHIR transforms are provided based on a consensus of various vendors performing mappings. All vendors received the sample input (e.g. C-CDA Document) and generated output (e.g. FHIR Resource) which were then iterated through group discussion to a consensus. 
+Examples for C-CDA to FHIR transforms are provided based on a consensus of various vendors performing mappings. All vendors received the sample input (e.g. C-CDA Document) and generated output (e.g. FHIR Resource) which were then iterated through group discussion to a consensus. For FHIR to C-CDA, a single vendor provided examples which are included. 
 
-The highlighted output images were created using an open source tool for C-CDA ↔ FHIR Mapping developed as part of this project.  
+The highlighted output images were created using an [open source tool for C-CDA ↔ FHIR Mapping](https://github.com/jddamore/cda-fhir-compare) developed as part of this project.  
 
 ### Structural Guidance
 

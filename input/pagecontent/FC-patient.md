@@ -10,7 +10,7 @@ This page provides a mapping from FHIR to CDA. For the CDA to FHIR mapping, plea
 
 ### FHIR to C-CDA
 
-|FHIR<br/>[Patient]()|C-CDA<br/>[US Realm Header recordTarget]()|Transform Steps|
+|FHIR<br/>[Patient](http://hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html#profile)|C-CDA¹<br/>[US Realm Header recordTarget]()|Transform Steps|
 |:----|:----|:----|
 |.extension.extension (race)<br/>```url=http://hl7.org/fhir/us/core/StructureDefinition/us-core-race```|/patientRole/patient/raceCode<br/>&<br/>/patientRole/patient/sdtc:raceCode|ombCategory extension goes in raceCode; other values go in sdtc:raceCode|
 |.extension.extension (ethnicity)<br/>```url=http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity```|/patientRole/patient/ethnicGroupCode<br/>&<br/>/patientRole/patient/sdtc:ethnicGroupCode|ombCategory extension goes in ethnicGroupCode; other values go in sdtc:ethnicGroupCode|
@@ -22,12 +22,13 @@ This page provides a mapping from FHIR to CDA. For the CDA to FHIR mapping, plea
 |.birthdate|/patientRole/patient/birthTime|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
 |.deceasedDateTime|/patientRole/patient/sdtc:deceasedTime|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
 |.address|/patientRole/patient//addr|[CDA addr ↔ FHIR address ](mappingGuidance.html#fhir-address---cda-addr)|
-|.maritalStatus|/patientRole/patient//maritalStatus|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
-|.communication.language|/languageCommunication/languageCode||
-|.communication.preferred|/languageCommunication/preferenceInd||
-|.generalPractitioner|||
-|.managingOrganization|||
+|.maritalStatus|/patientRole/patient/maritalStatus|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
+|.communication.language|/patientRole/patient/languageCommunication/languageCode||
+|.communication.preferred|/patientRole/patient/languageCommunication/preferenceInd||
+|.generalPractitioner||<mark>**Needs clarification**</mark>|
+|.managingOrganization||<mark>**Needs clarification**</mark>|
 
+1\. XPath abbrievated for C-CDA US Realm recordTarget as: <br/> ```ClinicalDocument/recordTarget/```
 
 ### Illustrative example
 

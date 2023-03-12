@@ -10,7 +10,7 @@ This page provides a mapping from FHIR to CDA. For the CDA to FHIR mapping, plea
 
 ### FHIR to C-CDA
 
-|FHIR<br>[MedicationRequest]()|C-CDA<br>[Medication Activity]()|Transform Steps|
+|FHIR<br>[MedicationRequest]()|C-CDA¹<br>[Medication Activity substanceAdministration]()|Transform Steps|
 |:----|:----|:----|
 |.identifier|/id|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
 |.status|/status|[FHIR status → CDA statusCode](ConceptMap-FC-MedicationsStatus.html)|
@@ -21,7 +21,7 @@ This page provides a mapping from FHIR to CDA. For the CDA to FHIR mapping, plea
 |.authoredOn|/author/time|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
 |.requester|/assignedAuthor|[CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)|
 |.performer|/performer|[CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)|
-|.reasonCode|**[Indication]()**<br/>```entryRelationship@typeCode="RSON"```<br/>[/entryRelationship/observation/value]()|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
+|.reasonCode|**[Indication]()**<br/>```entryRelationship@typeCode="RSON"```<br/>/entryRelationship/observation/value|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 |.note|**[Comment Activity]()**<br/>```entryRelationship/act/code@code="48767-8"```<br/>/entryRelationship/act/text||
 |.dosageInstruction.text<br/>&<br/>.dosageInstruction.patientInstruction|**[Free text sig]()**<br/>```entryRelationship/substanceAdministration/code@code="76662-6"```<br/>/entryRelationship/substanceAdministration/text||
 |.dosageInstruction.additionalInstruction|**[Instruction]()**<br/>```entryRelationship@typeCode="SUBJ"```<br/>/entryRelationship/act/code|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
@@ -33,6 +33,8 @@ This page provides a mapping from FHIR to CDA. For the CDA to FHIR mapping, plea
 |.dosageInstruction.doseAndRate.doseQuantity|/doseQuantity||
 |.dosageInstruction.doseAndRate.rateQuantity|/rateQuantity||
 |.dosageInstruction.maxDosePerPeriod|/maxDoseQuantity||
+
+1\. XPath abbrievated for C-CDA Medication Activity as: <br/> ```ClinicalDocument/component/structuredBody/component/section[(@code="10160-0")]/entry/substanceAdministration```
 
 ### Illustrative example
 

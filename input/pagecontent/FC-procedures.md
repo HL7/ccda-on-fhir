@@ -10,7 +10,7 @@ This page provides a mapping from FHIR to CDA. For the CDA to FHIR mapping, plea
 
 ### FHIR to C-CDA
 
-|FHIR<br/>[Procedure]()|C-CDA<br/>[Procedure Activity Procedure]()|Transform Steps|
+|FHIR<br/>[Procedure]()|C-CDA¹<br/>[Procedure Activity procedure]()|Transform Steps|
 |:----|:----|:----|
 |.identifier|/id|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
 |.status|/statusCode|[FHIR status → CDA statusCode](./ConceptMap-FC-ProcedureStatus.html)|
@@ -24,6 +24,8 @@ This page provides a mapping from FHIR to CDA. For the CDA to FHIR mapping, plea
 |.reasonCode|**[Indication]()**<br/>```entryRelationship@typeCode="RSON"```<br/>[/entryRelationship/observation/value]()|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 |.bodySite|/targetSiteCode|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 |.report|/reference/externalDocument||
+
+1\. XPath abbrievated for C-CDA Procedure as: <br/> ```ClinicalDocument/component/structuredBody/component/section[(@code="47519-4")]/entry/procedure```
 
 ### Illustrative example
 

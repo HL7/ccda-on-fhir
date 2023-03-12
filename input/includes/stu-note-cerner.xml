@@ -1,6 +1,6 @@
 <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<blockquote class="stu-note">
 		<b>FHIR → CDA Mapping</b>
-		<p>While, multiple vendors participated in CDA → FHIR mappings, only a single vendor (Cerner/Oracle) has participated in the FHIR → CDA mapping outside of a FHIR connectathon. We welcome feedback on these mappings but they may represent less than a multi-vendor consensus at this time.</p>  
+		<p>While multiple vendors participated in CDA → FHIR mappings at a connectathon, only a single vendor (Cerner/Oracle) has participated in the FHIR → CDA mapping. We welcome feedback on these mappings which represent less than a multi-vendor consensus at this time.</p>
 	</blockquote>
 </div>

@@ -10,7 +10,7 @@ This page provides a mapping from FHIR to CDA. For the CDA to FHIR mapping, plea
 
 ### FHIR to C-CDA
 
-|FHIR<br/>[Condition]()|C-CDA<br/>[Problem Observation]()|Transform Steps|
+|FHIR<br/>[Condition]()|C-CDA¹<br/>[Problem observation]()|Transform Steps|
 |:----|:----|:----|
 |.identifier|/id|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
 |.clinicalStatus|/act/statusCode (parent to observation)<br/>&<br/>**[Problem Status]()**<br/>```observation/code@code="33999-4"```<br/>/entryRelationship/observation/value|[FHIR clinicalStatus → CDA Problem Status Observation value](./ConceptMap-FC-ProblemStatus.html)|
@@ -24,6 +24,8 @@ This page provides a mapping from FHIR to CDA. For the CDA to FHIR mapping, plea
 |.recorder|/assignedAuthor|[CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)|
 |.asserter|/informant|[CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)|
 |.note|**[Comment Activity]()**<br/>```entryRelationship/act/code@code="48767-8"```<br/>/entryRelationship/act/text||
+1\. XPath abbrievated for C-CDA Problem observation as: <br/> ```ClinicalDocument/component/structuredBody/component/section[(@code="11450-4")]/entry/act/entryRelationship/observation```
+
 
 ### Illustrative example
 
