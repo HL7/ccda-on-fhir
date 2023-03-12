@@ -21,6 +21,7 @@
 <artifact id="ConceptMap/CF-ProblemCategory" key="ConceptMap-CF-ProblemCategory" name="C-CDA section to FHIR Condition category code"/>
 <artifact id="ConceptMap/CF-AddressUse" key="ConceptMap-CF-AddressUse" name="C-CDA to FHIR Address Use"/>
 <artifact id="ConceptMap/CF-AdministrativeGender" key="ConceptMap-CF-AdministrativeGender" name="C-CDA to FHIR Adminmistrative Gender"/>
+<artifact id="ConceptMap/CF-AllergyStatus" key="ConceptMap-CF-AllergyStatus" name="C-CDA to FHIR Allergy Status"/>
 <artifact id="ConceptMap/CF-ImmunizationStatus" key="ConceptMap-CF-ImmunizationStatus" name="C-CDA to FHIR Immunization Status"/>
 <artifact id="ConceptMap/CF-MedicationStatus" key="ConceptMap-CF-MedicationStatus" name="C-CDA to FHIR Medication Status"/>
 <artifact id="ConceptMap/CF-NameUse" key="ConceptMap-CF-NameUse" name="C-CDA to FHIR NameUse"/>
@@ -65,6 +66,7 @@
 <artifact id="ConceptMap/FC-Severity" key="ConceptMap-FC-Severity" name="FHIR Severity to C-CDA Severity"/>
 <artifact id="ConceptMap/FC-AddressUse" key="ConceptMap-FC-AddressUse" name="FHIR to C-CDA Address Use"/>
 <artifact id="ConceptMap/FC-AdministrativeGender" key="ConceptMap-FC-AdministrativeGender" name="FHIR to C-CDA Adminmistrative Gender"/>
+<artifact id="ConceptMap/FC-AllergyStatus" key="ConceptMap-FC-AllergyStatus" name="FHIR to C-CDA Allergy Status"/>
 <artifact id="ConceptMap/FC-ImmunizationStatus" key="ConceptMap-FC-ImmunizationStatus" name="FHIR to C-CDA Immunization Status"/>
 <artifact id="ConceptMap/FC-MedicationStatus" key="ConceptMap-FC-MedicationStatus" name="FHIR to C-CDA Medication Status"/>
 <artifact id="ConceptMap/FC-NameUse" key="ConceptMap-FC-NameUse" name="FHIR to C-CDA NameUse"/>
