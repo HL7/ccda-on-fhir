@@ -15,13 +15,13 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
 |/statusCode|status|[CDA statusCode → FHIR status](./ConceptMap-CF-ImmunizationStatus.html)|
 |/effectiveTime|occurrenceDateTime|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
 |/repeatNumber|protocolApplied.doseNumberPositiveInt|<mark>Not in examples</mark>|
-|/routeCode|route|[CDA coding ↔ FHIR CodeableConcept]()|
+|/routeCode|route|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 |/doseQuantity|doseQuantity||
 |/consumable/manufacturedProduct/manufacturedMaterial/code|.vaccineCode|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)
 |/consumable/manufacturedMaterial/lotNumberText|.lotNumber||
-|/author|**[Provenance]()**|<mark>Not in examples</mark><br/>[CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)|
+|/author|**[Provenance](http://hl7.org/fhir/us/core/StructureDefinition-us-core-procedure.html)**|<mark>Not in examples</mark><br/>[CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)|
 |/performer|.performer|
-|**[Immunization Refusal Reason]()**<br/>```entryRelationship@typeCode="RSON"```<br/>/entryRelationship/observation/code|statusReason|[CDA refusal → FHIR statusReason](ConceptMap-CF-ImmunizationRefusal.html)|
+|**[Immunization Refusal Reason](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.53.html)**<br/>```entryRelationship@typeCode="RSON"```<br/>/entryRelationship/observation/code|statusReason|[CDA refusal → FHIR statusReason](ConceptMap-CF-ImmunizationRefusal.html)|
 
 1\. XPath abbrievated for C-CDA Immunization Activity as: <br/> ```ClinicalDocument/component/structuredBody/component/section[(@code="11369-6")]/entry/substanceAdministration```
 
