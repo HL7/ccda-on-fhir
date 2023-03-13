@@ -7,10 +7,11 @@
         <lastUpdated value="2020-08-19T06:35:09.726+00:00"/>
         <source value="#8awj3JDXaUCFNlQA"/>
     </meta>
-    <url value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.11.20.4.1"/>
+    <url value="http://hl7.org/fhir/us/ccda/ValueSet/2.16.840.1.113883.11.20.4.1"/>
     <name value="DischargeSummaryDocumentTypeCode"/>
     <title value="DischargeSummaryDocumentTypeCode"/>
     <status value="active"/>
+	<experimental value="false"/>
     <publisher value="HL7 Terminology"/>
     <description value="(Clinical Focus: Kind of discharge summary document classified by author role),(Data Element Scope: ),(Inclusion Criteria: A list of LOINC terms, intended to identify Discharge Summary Notes where component contains &quot;Discharge Summary Note&quot;, Timing = &quot;Patient&quot;, Property = Find&quot; , scale = &quot;Doc&quot;),(Exclusion Criteria: )&#xA;&#xA;This value set was imported on 6/24/2019 with a version of 20190425."/>
     <copyright value="This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"/>

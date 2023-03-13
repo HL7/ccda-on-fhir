@@ -1,0 +1,42 @@
+{
+  "resourceType": "Immunization",
+  "id": "CF-immunization",
+  "identifier": [
+    {
+      "value": "urn:uuid:e6f1ba43-c0ed-4b9b-9f12-f435d8ad8f92",
+      "system": "urn:ietf:rfc:3986"
+    }
+  ],
+  "status": "completed",
+  "vaccineCode": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/sid/cvx",
+        "code": "88",
+        "display": "influenza virus vaccine, unspecified formulation"
+      }
+    ],
+    "text": "Influenza Virus Vaccine"
+  },
+  "patient": {
+    "reference": "Patient/CF-patient"
+  },
+  "occurrenceDateTime": "2010-08-15",
+  "recorded": "2010-08-15",
+  "_primarySource": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+        "valueCode": "unknown"
+      }
+    ]
+  },
+  "lotNumber": "1",
+  "performer": [
+    {
+      "actor": {
+        "reference": "PractitionerRole/ccda-practitionerrole-example"
+      }
+    }
+  ]
+}

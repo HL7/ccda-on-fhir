@@ -73,12 +73,6 @@
         <element id="Composition.event.code">
             <path value="Composition.event.code"/>
             <short value="code"/>
-            <patternCodeableConcept>
-                <coding>
-                    <system value="http://terminology.hl7.org/CodeSystem/v3-ActClass"/>
-                    <code value="PCPR"/>
-                </coding>
-            </patternCodeableConcept>
         </element>
         <element id="Composition.event.period">
             <path value="Composition.event.period"/>

@@ -1,0 +1,37 @@
+Header,Case,Approach,Resource,Element,value,parameter,path,comment
+Header: Record Target (Patient),,,,,,,,compare prior work
+.recordTarget,,backbone,,,,,,
+..patientRole,,backbone,,,,,,
+..id,,source value,Patient,identifier,,,Patient.identifier,
+..addr,,source value,Patient,address,,,Patient.address,
+..telecom,,source value,Patient,telecom,,,Patient.telecom,
+..patient,,backbone,,,,,,
+...name,,source value,Patient,name,,,Patient.name,
+...administrativeGenderCode,,transform,Patient,gender,CF_AdminstrativeGender,,Patient.gender,
+...birthTime,,source value,Patient,birthDate,,,Patient.birthDate,
+...maritalStatusCode,code = C,transform,Patient,maritalStatus,CF_MaritalStatus,,Patient.maritalStatus,
+...maritalStatusCode,else,source value,Patient,maritalStatus,,,Patient.maritalStatus,
+...religiousAffiliationCode,,not supported by target,,,,,,
+...raceCode,,source value,Patient,extension: us-core-race,,,Patient.extension: us-core-race,
+...sdtc:raceCode,,source value,Patient,extension: us-core-race,,,Patient.extension: us-core-race,
+...ethnicGroupCode,,source value,Patient,extension: us-core-ethnicity,,,Patient.extension: us-core-ethnicity,
+...sdtc:ethnicGroupCode,,source value,Patient,extension: us-core-ethnicity,,,Patient.extension: us-core-ethnicity,
+...guardian,,backbone,,,,,Patient.contact.relationship,
+....code,,source value,Patient,contact.relationship,,relationship = GUARD; http://terminology.hl7.org/CodeSystem/v3-RoleCode,Patient.contact.relationship,
+....addr,,source value,Patient,contact.address,,,Patient.contact.address,source card 0..*; target 0..1
+....guardianPerson,,backbone,,,,,,
+.....name,,source value,Patient,contact.name,,,Patient.contact.name,source card 0..*; target 0..1
+....guardianOrganization,,reference,Patient,contact.organization,,,,
+...birthplace,,not supported by target,,,,,,Core extension patient-birthPlace
+....place,,not supported by target,,,,,,
+.....addr,,not supported by target,,,,,,
+...languageCommunication,,backbone,,,,,,
+....languageCode,,source value,Patient,communication.language,,,Patient.communication.language,
+....modeCode,,not supported by target,,,,,,Core extension patient-preferenceType
+....proficiencyLevelCode,,not supported by target,,,,,,Core extension patient-proficiency
+....preferenceInd,,source value,Patient,communication.preferred,,,Patient.communication.preferred,
+..providerOrganization,,backbone,Patient,managingOrganization,,,Patient.managingOrganization,Provider Org will usually be Managing Org; will it always?
+...id,,source value,Organization,identifier,,,Patient.managingOrganization.identifier,
+..name,,source value,Organization,name,,,Patient.managingOrganization.name,source card 0..*; target 0..1
+..telecom,,source value,Organization,telecom,,,Patient.managingOrganization.telecom,
+..addr,,source value,Organization,address,,,Patient.managingOrganization.address,

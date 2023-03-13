@@ -1,0 +1,48 @@
+<ConceptMap xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<id value=""/>
+	<url value="http://hl7.org/fhir/us/ccda/ConceptMap/CF-"/>
+	<version value="4.0.1"/>
+	<name value=""/>
+	<title value=""/>
+	<status value="active"/>
+	<experimental value="false"/>
+	<publisher value="HL7 International"/>
+	<description value=""/>
+	<contact>
+		<name value="HL7 International"/>
+		<telecom>
+			<system value="phone"/>
+			<value value="+1 734 677 7777"/>
+		</telecom>
+		<telecom>
+			<system value="fax"/>
+			<value value="+1 734 677 6622"/>
+		</telecom>
+		<telecom>
+			<system value="email"/>
+			<value value="info@hl7.org"/>
+		</telecom>
+	</contact>
+	<sourceUri value=""/>
+	<targetUri value=""/>
+	<group>
+		<source value=""/>
+		<target value=""/>
+		<element>
+			<code value=""/>
+			<display value=""/>
+			<target>
+				<equivalence value="unmatched"/>
+			</target>
+		</element>
+		<element>
+			<code value=""/>
+			<display value=""/>
+			<target>
+				<code value=""/>
+				<display value=""/>
+				<equivalence value="equivalent"/>
+			</target>
+		</element>
+	</group>
+</ConceptMap>

@@ -7,14 +7,6 @@
         <lastUpdated value="2020-08-12T19:18:13.336+00:00"/>
         <source value="#kub40Eilc2HLDH2p"/>
         <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"/>        
-		<security>
-            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
-            <code value="everyone^write"/>
-        </security>
-        <security>
-            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
-            <code value="everyone^read"/>
-        </security>
     </meta>
     <practitioner>
         <reference value="Practitioner/ccda-practitioner-example"/>

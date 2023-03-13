@@ -1,0 +1,40 @@
+{
+  "resourceType": "MedicationRequest",
+  "id": "CF-medication",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:uuid:cdbd33f0-6cde-11db-9fe1-0800200c9a66"
+    }
+  ],
+  "status": "active",
+  "intent": "order",
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "252298",
+        "display": "albuterol 0.1 MG Inhalation Powder"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/CF-patient"
+  },
+  "dosageInstruction": [
+    {
+      "sequence": 1,
+      "asNeededBoolean": false,
+      "doseAndRate": [
+        {
+          "doseQuantity": {
+            "value": 1
+          }
+        }
+      ]
+    }
+  ],
+  "requester": {
+    "reference": "PractitionerRole/ccda-practitionerrole-example"
+  }
+}

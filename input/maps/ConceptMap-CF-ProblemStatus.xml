@@ -1,0 +1,86 @@
+<ConceptMap xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="CF-ProblemStatus"/>
+  <url value="http://hl7.org/fhir/us/ccda/ConceptMap/CF-ProblemStatus"/>
+  <version value="4.0.1"/>
+  <name value="CCDAtoFHIRProblemStatus"/>
+  <title value="C-CDA Problem Status value to FHIR Condition clinicalStatus"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <publisher value="HL7 International"/>
+  <description value="C-CDA Problem Status value to FHIR Condition clinicalStatus"/>
+  <contact>
+    <name value="HL7 International"/>
+    <telecom>
+      <system value="phone"/>
+      <value value="+1 734 677 7777"/>
+    </telecom>
+    <telecom>
+      <system value="fax"/>
+      <value value="+1 734 677 6622"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@hl7.org"/>
+    </telecom>
+  </contact>
+  <sourceUri value="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.80.68"/>
+  <targetUri value="http://hl7.org/fhir/ValueSet/condition-clinical"/>
+  <group>
+    <source value="http://snomed.info/sct"/>
+    <target value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+    <element>
+      <code value="246455001" />
+      <display value="Recurrence" />
+      <target>
+        <code value="recurrence"/>
+        <display value="Recurrence"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="263855007" />
+      <display value="Relapse phase" />
+      <target>
+        <code value="relapse"/>
+        <display value="Relapse"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="277022003" />
+      <display value="Remission phase" />
+      <target>
+        <code value="remission"/>
+        <display value="Remission"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="413322009" />
+      <display value="Problem resolved" />
+      <target>
+        <code value="resolved"/>
+        <display value="Resolved"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="55561003" />
+      <display value="Active" />
+      <target>
+        <code value="active"/>
+        <display value="Active"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="73425007" />
+      <display value="Inactive" />
+      <target>
+        <code value="inactive"/>
+        <display value="Inactive"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

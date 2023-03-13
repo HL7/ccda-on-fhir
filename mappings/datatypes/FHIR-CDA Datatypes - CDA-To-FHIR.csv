@@ -1,0 +1,39 @@
+CCDA Type,Property,PropertyType,Case,FHIR Type,Property,PropertyType,Transform,Parameter,Note
+II,root,UID,extension not null; URI exists,Identifier,system,uri,Look up HTTP URI,,See thread
+II,root,UID,extension not null; no URI exists,Identifier,system,uri,"prepend ""urn:oid:""",,Are there any compound uuid instances?
+II,root,UID,extension null; root OID,Identifier,value,string,"prepend ""urn:oid:""",system = 'urn:ietf:rfc:3986',
+II,root,UID,extension null; root UUID,Identifier,value,string,"prepend ""urn:uuid:""",system = 'urn:ietf:rfc:3986',Not 4122
+II,extension,ST,,Identifier,value,string,,,
+II,assigningAuthorityName,ST,,Identifier,assigner.display,Reference,,,
+II,displayable,BL,,,,,,,Not supported
+CD,code,ST,"unconstrained, or value found in term map",CodeableConcept,coding.code,code,,,
+CD,code,ST,"element constrained, value not found in map",CodeableConcept,translation.code,code,nullFlavor=OTH,,
+CD,code,ST,"attribute constrained, value not found in map",not supported,,,,,
+CD,codeSystem,UID,,CodeableConcept,coding.system,uri,,,Map to URL if available
+CD,codeSystemName,ST,,,,,,,Not supported
+CD,codeSystemVersion,ST,,CodeableConcept,coding.system,uri,Assemble with system,,
+CD,displayName,ST,,CodeableConcept,coding.display,string,,,
+CD,originalText,ED,,CodeableConcept,text,string,,,
+CD,qualifier,LIST<CR>,,,,,,,Not supported
+CD,translation,SET<CD>,,CodeableConcept,coding,Coding,userSelected = False,,
+CE,code,ST,,CodeableConcept,coding.code,code,,,
+CE,codeSystem,UID,,CodeableConcept,coding.system,uri,,,
+CE,codeSystemName,ST,,,,,,,Not supported
+CE,codeSystemVersion,ST,,CodeableConcept,coding.system,uri,Assemble with system,,
+CE,displayName,ST,,CodeableConcept,coding.display,string,,,
+CE,originalText,ED,,CodeableConcept,text,string,,,
+CE,translation,SET<CD>,,CodeableConcept,coding,Coding,userSelected = False,,
+PN,use,SET<CS>,,HumanName,use,code,CF_NameUse,,
+PN,validTime,IVL<TS>,,HumanName,period,Period,,,
+PN,formatted,ST,,not supported,,,,,
+PN,entity name part,ENXP,type = FAM,HumanName,family,string,,,
+PN,entity name part,ENXP,type = GIV,HumanName,given,string,,,
+PN,entity name part,ENXP,type = PFX,HumanName,prefix,string,,,
+PN,entity name part,ENXP,type = SFX,HumanName,suffix,string,,,
+PN,entity name part,ENXP,type = DEL,not supported,,,,,
+TS,,,,,,,,,
+,,,,,,,,,
+IVL_TS,low,,,,,,,,
+IVL_TS,high,,,,,,,,
+PIVL_TS,period.value,,,,,,,,
+PIVL_TS,period.unit,,,,,,,,

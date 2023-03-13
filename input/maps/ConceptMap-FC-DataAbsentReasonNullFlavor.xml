@@ -1,0 +1,167 @@
+<ConceptMap xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="FC-DataAbsentReasonNullFlavor"/>
+  <url value="http://hl7.org/fhir/us/ccda/ConceptMap/FC-DataAbsentReasonNullFlavor"/>
+  <version value="4.0.1"/>
+  <name value="FHIRtoCCDADataAbsentReasonNullFlavor"/>
+  <title value="FHIR Data Absent Reason to C-CDA NullFlavor"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <publisher value="HL7 International"/>
+  <description value="FHIR Data Absent Reason to C-CDA NullFlavor. Adapted from http://hl7.org/fhir/cm-data-absent-reason-v3.html"/>
+  <contact>
+    <name value="HL7 International"/>
+    <telecom>
+      <system value="phone"/>
+      <value value="+1 734 677 7777"/>
+    </telecom>
+    <telecom>
+      <system value="fax"/>
+      <value value="+1 734 677 6622"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@hl7.org"/>
+    </telecom>
+  </contact>
+  <sourceUri value="http://hl7.org/fhir/ValueSet/data-absent-reason"/>
+  <targetUri value="http://terminology.hl7.org/ValueSet/v3-NullFlavor"/>
+  <group>
+    <source value="http://terminology.hl7.org/CodeSystem/data-absent-reason"/>
+    <target value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
+    <element>
+      <code value="unknown"/>
+      <display value="Unknown"/>
+      <target>
+        <code value="NI"/>
+        <display value="NoInformation"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="asked-unknown"/>
+      <display value="Asked But Unknown"/>
+      <target>
+        <code value="ASKU"/>
+        <display value="asked but unknown"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="temp-unknown"/>
+      <display value="Temporarily Unknown"/>
+      <target>
+        <code value="NAV"/>
+        <display value="temporarily unavailable"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="not-asked"/>
+      <display value="Not Asked"/>
+      <target>
+        <code value="NASK"/>
+        <display value="not asked"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="asked-declined"/>
+      <display value="Asked But Declined"/>
+      <target>
+        <code value="UNK"/>
+        <display value="unknown"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="masked"/>
+      <display value="Masked"/>
+      <target>
+        <code value="MSK"/>
+        <display value="masked"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="not-applicable"/>
+      <display value="Not Applicable"/>
+      <target>
+        <code value="NA"/>
+        <display value="not applicable"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="unsupported"/>
+      <display value="Unsupported"/>
+      <target>
+        <code value="NI"/>
+        <display value="NoInformation"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="as-text"/>
+      <display value="As Text"/>
+      <target>
+        <code value="OTH"/>
+        <display value="other"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="error"/>
+      <display value="Error"/>
+      <target>
+        <code value="NI"/>
+        <display value="NoInformation"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="not-a-number"/>
+      <display value="Not a Number (NaN)"/>
+      <target>
+        <code value="OTH"/>
+        <display value="other"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="negative-infinity"/>
+      <display value="Negative Infinity (NINF)"/>
+      <target>
+        <code value="NINF"/>
+        <display value="negative infinity"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="positive-infinity"/>
+      <display value="Positive Infinity (PINF)"/>
+      <target>
+        <code value="PINF"/>
+        <display value="positive infinity"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="not-performed"/>
+      <display value="Not Performed"/>
+      <target>
+        <code value="NASK"/>
+        <display value="not asked"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="not-permitted"/>
+      <display value="Not Permitted"/>
+      <target>
+        <code value="OTH"/>
+        <display value="other"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

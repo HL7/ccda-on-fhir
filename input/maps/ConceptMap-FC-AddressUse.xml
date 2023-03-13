@@ -1,0 +1,83 @@
+<ConceptMap xmlns="http://hl7.org/fhir"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="FC-AddressUse"/>
+  <url value="http://hl7.org/fhir/us/ccda/ConceptMap/FC-AddressUse"/>
+  <version value="4.0.1"/>
+  <name value="FHIRtoCCDAAddressUse"/>
+  <title value="FHIR to C-CDA Address Use"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <publisher value="HL7 International"/>
+  <description value="FHIR to C-CDA Address Use. Based on http://hl7.org/fhir/cm-address-use-v3.html"/>
+  <contact>
+    <name value="HL7 International"/>
+    <telecom>
+      <system value="phone"/>
+      <value value="+1 734 677 7777"/>
+    </telecom>
+    <telecom>
+      <system value="fax"/>
+      <value value="+1 734 677 6622"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@hl7.org"/>
+    </telecom>
+  </contact>
+  <sourceUri value="http://hl7.org/fhir/ValueSet/address-use"/>
+  <targetUri value="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.1.11.10637"/>
+  <group>
+    <source value="http://hl7.org/fhir/address-use"/>
+    <target value="http://terminology.hl7.org/CodeSystem/v3-AddressUse"/>
+    <element>
+      <code value="home"/>
+      <display value="Home"/>
+      <target>
+        <code value="H"/>
+        <display value="home address"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="work"/>
+      <display value="Work"/>
+      <target>
+        <code value="WP"/>
+        <display value="work place"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="temp"/>
+      <display value="Temporary"/>
+      <target>
+        <code value="TMP"/>
+        <display value="temporary address"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="old"/>
+      <display value="Old / Incorrect"/>
+      <target>
+        <code value="OLD"/>
+        <display value="no longer in use"/>
+        <equivalence value="narrower"/>
+        <comment value="Incorrect is not included in the CDA definition" />
+      </target>
+      <target>
+        <code value="BAD"/>
+        <display value="bad address"/>
+        <equivalence value="narrower"/>
+        <comment value="Old is not included in the CDA definition" />
+      </target>
+    </element>
+    <element>
+      <code value="billing"/>
+      <display value="Billing"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

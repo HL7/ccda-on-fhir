@@ -48,7 +48,7 @@
             <mustSupport value="true"/>
             <binding>
                 <strength value="required"/>
-                <valueSet value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.11.20.1.1"/>
+                <valueSet value="http://hl7.org/fhir/us/ccda/ValueSet/2.16.840.1.113883.11.20.1.1"/>
             </binding>
         </element>
         <element id="Composition.section">

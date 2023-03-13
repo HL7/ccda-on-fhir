@@ -1,0 +1,71 @@
+C-CDA to FHIR Notes
+
+General changes
+•	Simplified author/performer elements
+•	Added author/performer in most places
+
+Allergy
+•	 Mostly just kept what we had previously
+
+Immunization 
+•	 site doesn't exist in CDA. Removed
+•	 Simplified doseQuantity to alignw tih F to C mapping
+•	 Added lot number since in F to C mapping
+•	 Added refusal reason since in F to C mapping
+
+Medications
+•	 Removed repeatNumber. Not in samples and never seen in real-world C-CDA 
+•	 Adjusted instructions to align with F to C mapping
+
+Patient
+•	 managingOrganization. I think this is the correct mapping. Add to F to C?? 
+
+Problems
+•	 Category mapping used from section
+
+Procedures
+•	 Added notes around time@value vs. low/high
+•	 Removed medication reference. Not in examples and seems edge case
+•	 Added service delivery location since that's in reverse
+
+
+FHIR to C-CDA Notes
+
+General changes
+•	As previously stated, not supported rows weren't extracted and aren't shown in tables 
+•	In multiple places, remove translation case mapping. that is covered in structural guide 
+•	In multiple places, you vary between dot notation, slashes and nothing for CDA. I tried to make consistent as shown on the Allergies page we've all been reviewing
+•	In multiple places, you use templateId in selecting CDA elements. templateIds change over time and are generally frowned upon in logic/programming since they technically have no semantic meaning (i.e. they are primarily used in conformance declaration). Generally I've changed these to use code and typeCode attributes (which is what we piloted in January demo of allergies) that carry semantic and also will be more stable over time (and more portable to other mappings). Since all the links will show the template being used, this shouldn't matter a lot.  
+
+Allergies: 
+•	Status affects the act/concern and entryRelationship. Added both
+•	reaction.substance - not sure if I agree with that mapping. Left TBD
+•	CDA routeCode doesn't exist on Allergy Intolerance observation, removed
+•	Added .note...I think you had mentioned this as a to-do previously
+
+Immunizations: 
+•	consolidate statusReason since logic in conceptMap
+•	approachSiteCode doesn't exist on Immunization Activity, removed
+•	performer in CDA is the person who carried out the act, so don't agree with the performer if function is not AP. So only included portion of your mapping for that element
+•	reaction.detail was removed as you had no guidance on where it went
+•	Added .note...I think you had mentioned this as a to-do previously
+
+Medications:
+•	status and @moodCode. It's pretty unclear what was recommended here. When would information in a MedRequest cause the system to generate moodCode EVN. Removed that row for now
+•	I added a bit more detail on some of the dosageInstruction.timing elements (hopefully all straightforward stuff) 
+•	.quantity would need to go into a dispense or supply order. See https://www.hl7.org/ccdasearch/templates/2.16.840.1.113883.10.20.22.4.18.html & https://www.hl7.org/ccdasearch/templates/2.16.840.1.113883.10.20.22.4.17.html Since you didn't model that, I've just removed for now
+
+Patient
+•	Added prefix to CDA for all path off record target
+•	Made edits to make raceCode and ethinicity extensions clear. Make use of SDTC extensions clearer
+•	gender, this really only needs one row. Logic of nulls can be managed in conceptMap
+•	Your mapping for deceased date is wrong. There's a header extension for this https://confluence.hl7.org/display/SD/CDA+Extensions
+•	I haven't been on any calls for patient but disagree with mapping of generalPractitioner and managingOrganization. Can discuss Monday. Left blank for now
+
+Problems
+•	Status affects the act/concern and entryRelationship. Added both
+•	.note provided more details on use of Comment Activity template
+
+Procedure
+•	Not much adjusted here. Minor fixes on Service Delivery Location
+•	.note provided more details on use of Comment Activity template

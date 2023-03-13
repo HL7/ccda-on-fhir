@@ -1,0 +1,55 @@
+FHIR Type,Property,Property Type,Case,CCDA Type,Property,Property Type,Transform,Parameter,Note
+any,,,Required in CDA; no valid value available,ANY,nullFlavor,,OTH,,
+any,,,Required in CDA; no valid value available,CD,nullFlavor,,OTH,CD.translation = FHIR value,
+id,<primitive>,string,,II,extension,ST,id value,root = OID or UUID for sending system,
+Identifier,use,code,,,<gap>,,,,Not supported
+Identifier,type,CodeableConcept,,,<gap>,,,,Not supported
+Identifier,system,uri,System & value populated; system is OID or UUID,II,root,UID,trim scheme,,See thread
+Identifier,value,string,System & value populated; system is OID or UUID,II,extension,ST,,,
+Identifier,system,uri,System & value populated; system is URL,II,root,ST,,Use OID 2.16.840.1.113883.4.873 in root,
+Identifier,value,string,System & value populated; system is URL,II,extension,ST,Concatenate system/value,,
+Identifier,system,uri,System & value populated; value OID implies system,II,extension,ST,NULL,,
+Identifier,value,string,System & value populated; value OID implies system,II,root,ST,,,
+Identifier,system,uri,System & value populated; system is Other & has map,II,root,ST,system-to-OID map,,
+Identifier,value,string,System & value populated; system is Other & has map,II,extension,ST,,,
+Identifier,system,uri,System & value populated; system is Other,II,<gap>,,,,
+Identifier,value,string,System & value populated; system is Other,II,<gap>,,,,
+Identifier,value,string,"Only value populated, URL",II,extension,ST,,Use OID 2.16.840.1.113883.4.873 in root,
+Identifier,value,string,"Only value populated, Other",II,root,UID,"Look up or create OID or UUID, or don't support",,
+Identifier,period,period,,,<gap>,,,,Not supported
+Identifier,assigner,Reference,,II,assigningAuthorityName,ST,,,"Reference.display, or target.name"
+CodeableConcept,coding,Coding,"One coding, or user selected = true",CD,CD,,,,
+CodeableConcept,coding,Coding,Multiple codings,CD,translation,SET<CD>,"if one is userSelected, put in root",,
+CodeableConcept,text,string,,CD,originalText,ED,,,
+Coding,system,uri,code value valid in CCDA; system is UUID or OID,CD,codeSystem,UID,,,
+Coding,system,uri,code value valid in CCDA; system is HTTP URI,CD,codeSystem,UID,"Look up or create OID or UUID, or don't support",,
+Coding,version,string,code value valid in CCDA,CD,codeSystemVersion,ST,,,
+Coding,code,code,code value valid in CCDA,CD,code,ST,,,
+Coding,display,string,code value valid in CCDA,CD,displayName,ST,,,
+Coding,userSelected,boolean,,,<gap>,,,,Not supported
+Coding,code,code,code value not valid in CCDA,CD,translation.code,ST,,"attribute nullFlavor=""OTH""",
+Coding,display,string,code value not valid in CCDA,CD,translation.displayName,ST,,,
+Coding,version,string,code value not valid in CCDA,CD,translation.codeSystemVersion,ST,,,
+Coding,system,uri,code value not valid in CCDA; system is UUID or OID,CD,translation.codeSystem,UID,,,
+Coding,system,uri,code value not valid in CCDA; system is HTTP URI,CD,translation.codeSystem,UID,"Look up or create OID or UUID, or don't support",,
+Meta,versionId,id,,,See Header Map - version,,,,Not supported
+Meta,lastUpdated,instant,,,<gap>,,,,Not supported
+Meta,source,uri,,,<gap>,,,,Not supported
+Meta,profile,canonical,,,<gap>,,,,Not supported
+Meta,security,coding,,,See Header Map - Confidentiality code,,,,
+Meta,tag,coding,,,<gap>,,,,Not supported
+Annotation,author,Reference,,Comment Activity,Author assignedAuthor,,,,
+Annotation,time,datetime,,Comment Activity,Author time,,,,
+Annotation,text,markdown,,Comment Activity,text (reference to section),,,,
+Quantity,value,decimal,,PQ,value,REAL,,,
+Quantity,comparator,code,,PQ,<gap>,,,,
+Quantity,unit,string,,PQ,<gap>,,,,
+Quantity,system,uri,,PQ,<gap>,,,,
+Quantity,code,code,,PQ,unit,CS,,,
+HumanName,use,code,,PN,use,SET<CS>,FC_NameUse,,
+HumanName,text,string,,PN,<gap>,,,,
+HumanName,family,string,,PN,family,,,,
+HumanName,given,string,,PN,given,,,,
+HumanName,prefix,string,,PN,prefix,,,,
+HumanName,suffix,string,,PN,suffix,,,,
+HumanName,period,Period,,PN,validTime,IVL<TS>,,,

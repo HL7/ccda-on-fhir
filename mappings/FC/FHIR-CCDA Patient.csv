@@ -1,0 +1,32 @@
+Patient,Case,Approach,CCDA template,Element,Value,Parameter,xpath,comment,Back to Index,CDA-FHIR,Issue Class,Issue impact
+Patient,,,US Realm Header,,,,ClinicalDocument/recordTarget/patientRole/patient/,,,,,
+us-core-race,absent,transform,US Realm Header,raceCode,UNK,,ClinicalDocument/recordTarget/patientRole/patient/raceCode,,,,Mismatched strength,Solvable
+us-core-race,First value,source value,US Realm Header,raceCode,,,ClinicalDocument/recordTarget/patientRole/patient/raceCode,First value goes in schema element; additional values go in extension,,,,
+us-core-race,Additional values,source value,US Realm Header,sdtc:raceCode,,,ClinicalDocument/recordTarget/patientRole/patient/sdtc:raceCode,,,,Mismatch in structures,Solvable
+us-core-ethnicity,absent,transform,US Realm Header,ethnicGroupCode,UNK,,ClinicalDocument/recordTarget/patientRole/patient/ethnicGroupCode,,,,Mismatched strength,Solvable
+us-core-ethnicity,First value,source value,US Realm Header,ethnicGroupCode,,,ClinicalDocument/recordTarget/patientRole/patient/ethnicGroupCode,,,,,
+us-core-ethnicity,Additional values,source value,US Realm Header,sdtc:ethnicGroupCode,,,ClinicalDocument/recordTarget/patientRole/patient/sdtc:ethnicGroupCode,,,,Mismatch in structures,Solvable
+us-core-birthsex,,source value,Birth Sex Observation,value,,,ClinicalDocument/component/structuredBody/component/section[templateId/@root='2.16.840.1.113883.10.20.22.2.17']/entry/observation[templateId/@root = '2.16.840.1.113883.10.20.22.4.200']/value,Confirm Social History is the right section,,,,
+Identifer,,source value,US Realm Header,id,,,ClinicalDocument/recordTarget/patientRole/id,,,,,
+active,,not supported by target,,,,,,,,,,
+name,,source value,US Realm Header,/name,,,ClinicalDocument/recordTarget/patientRole/patient/name,,,,,
+telecom,,source value,US Realm Header,/telecom,,,ClinicalDocument/recordTarget/patientRole/telecom,,,,,
+gender,gender = 'male' or 'female',transform,US Realm Header,/administrativeGenderCode,FC_Gender,,ClinicalDocument/recordTarget/patientRole/patient/administrativeGenderCode,,,,,
+gender,gender = 'unknown',transform,US Realm Header,,null,nullFlavor = UNK,ClinicalDocument/recordTarget/patientRole/patient/administrativeGenderCode@nullFlavor,We could leave these two out and rely on the Null/Absent map,,,,
+gender,gender = 'other',transform,US Realm Header,,null,nullFlavor = OTH,ClinicalDocument/recordTarget/patientRole/patient/administrativeGenderCode@nullFlavor,,,,,
+birthdate,,source value,US Realm Header,/birthTime,,,ClinicalDocument/recordTarget/patientRole/patient/birthTime,,,,,
+deceasedBoolean,,not supported by target,,,,,,Deceased Observation requires time,,,,
+deceasedDateTime,,source value,Deceased Observation,/effectiveTime,,,ClinicalDocument/component/structuredBody/component/section[templateId/@root='2.16.840.1.113883.10.20.22.2.17']/entry/observation[templateId/@root = '2.16.840.1.113883.10.20.22.4.79']/effectiveTime,,,,,
+address,,source value,US Realm Header,/addr,,,ClinicalDocument/recordTarget/patientRole/addr,,,,,
+maritalStatus,UNK,transform,US Realm Header,/maritalStatus,null,nullFlavor=UNK,ClinicalDocument/recordTarget/patientRole/patient/maritalStatusCode,,,,,
+maritalStatus,else,source value,US Realm Header,/maritalStatus,,system = 2.16.840.1.113883.5.2,ClinicalDocument/recordTarget/patientRole/patient/maritalStatusCode,"C-to-F will have one more value, but F-to-C needs no translation",,,,
+multipleBirthBoolean,,not supported by target,,,,,,,,,Gap,gap
+multipleBirthInteger,,not supported by target,,,,,,,,,Gap,gap
+Photo,,not supported by target,,,,,,,,,Gap,gap
+Contact,,not supported by target,,,,,,"In some cases, a Contact will be a Guardian, but FHIR does not so designate, so we can't make the assignment",,,Gap,gap
+communication.language,,source value,US Realm Header,/languageCommunication/languageCode,,,ClinicalDocument/recordTarget/patientRole/patient/languageCommunication/languageCode,,,,,
+communication.preferred,,source value,US Realm Header,/languageCommunication/preferenceInd,,,ClinicalDocument/recordTarget/patientRole/patient/languageCommunication/preferenceInd,,,,,
+generalPractitioner,type = Organization,source value,US Realm Header,/providerOrganization,,,ClinicalDocument/recordTarget/patientRole/providerOrganization,,,,Mismatch in element semantics,
+generalPractitioner,type  ≠ Organization,not supported by target,,,,,,,,,,
+managingOrganization,,source value,US Realm Header,/custodian,,,ClinicalDocument/custodian,,,,,
+link,,not supported by target,,,,,,,,,,

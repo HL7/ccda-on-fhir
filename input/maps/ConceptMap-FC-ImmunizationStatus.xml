@@ -1,0 +1,97 @@
+<ConceptMap xmlns="http://hl7.org/fhir"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="FC-ImmunizationStatus"/>
+  <url value="http://hl7.org/fhir/us/ccda/ConceptMap/FC-ImmunizationStatus"/>
+  <version value="4.0.1"/>
+  <name value="FHIRtoCCDAImmunizationStatus"/>
+  <title value="FHIR to C-CDA Immunization Status"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <publisher value="HL7 International"/>
+  <description value="FHIR to C-CDA Immunization Status"/>
+  <contact>
+    <name value="HL7 International"/>
+    <telecom>
+      <system value="phone"/>
+      <value value="+1 734 677 7777"/>
+    </telecom>
+    <telecom>
+      <system value="fax"/>
+      <value value="+1 734 677 6622"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@hl7.org"/>
+    </telecom>
+  </contact>
+  <sourceUri value="https://hl7.org/fhir/valueset-immunization-status.html"/>
+  <targetUri value="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.1.11.15933"/>
+  <group>
+    <source value="http://hl7.org/fhir/event-status"/>
+    <target value="http://terminology.hl7.org/CodeSystem/v3-ActStatus"/>
+    <element>
+      <code value="not-done"/>
+      <display value="Not Done"/>
+      <target>
+        <code value="completed"/>
+        <display value="completed"/>
+        <equivalence value="wider"/>
+        <comment value="Only use when paired with negation indication and a refusal reason in CDA. Use negation when activity is no longer planned but documentation of refusal is desired." />
+      </target>
+      <target>
+        <code value="aborted"/>
+        <display value="aborted"/>
+        <equivalence value="narrower"/>
+        <comment value="When negation is not intended, cancelled would be recommended status although this code may be appropriate in some circumstances." />
+      </target>
+      <target>
+        <code value="cancelled"/>
+        <display value="cancelled"/>  
+        <equivalence value="narrower"/>
+        <comment value="When negation is not intended, cancelled would be recommended status although this code may be appropriate in some circumstances." />
+      </target>
+      <target>
+        <code value="held"/>
+        <display value="held"/>  
+        <equivalence value="narrower"/>
+        <comment value="When negation is not intended, cancelled would be recommended status although this code may be appropriate in some circumstances." />
+      </target>
+      <target>
+        <code value="new"/>
+        <display value="new"/>  
+        <equivalence value="narrower"/>
+        <comment value="When negation is not intended, cancelled would be recommended status although this code may be appropriate in some circumstances." />
+      </target>
+      <target>
+        <code value="obsolete"/>
+        <display value="obsolete"/>
+        <equivalence value="narrower"/>
+        <comment value="When negation is not intended, cancelled would be recommended status although this code may be appropriate in some circumstances." />
+      </target>
+      <target>
+        <code value="suspended"/>
+        <display value="suspended"/>
+        <equivalence value="narrower"/>
+        <comment value="When negation is not intended, cancelled would be recommended status although this code may be appropriate in some circumstances." />
+      </target>
+    </element>
+    <element>
+      <code value="entered-in-error"/>
+      <display value="Entered in Error"/>
+      <target>
+        <code value="nullified"/>
+        <display value="nullified"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="completed"/>
+      <display value="Completed"/>
+      <target>
+        <code value="completed"/>
+        <display value="completed"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

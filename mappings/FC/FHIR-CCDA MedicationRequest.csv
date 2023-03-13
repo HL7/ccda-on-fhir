@@ -1,0 +1,71 @@
+MedicationRequest,case,approach,CCDA template,Element,Value,xpath,Parameter,Comment,Status ,Index,CDA-FHIR,,class
+MedicationRequest,,,Medication Activity,,,/entry/act[templateId/@root = '2.16.840.1.113883.10.20.22.4.16'],,,,,,,Mismatch in element semantics
+identifier,,source value,Medication Activity,/id,,/id,,,,,,,
+status,unknown or draft,not supported by target,,,,,,,,,,,
+status,else,transform,Medication Activity,/status,FC_MedicationStatus,/status,,,,,,,Mismatch in terminology semantics
+status,,transform,Medication Activity,@moodCode,FC_MedicationMood,@moodCode,,,,,,,Mismatch in terminology semantics
+statusReason,,not supported by target,,,,,,,,,,,
+intent,,not supported by target,,,,,,Mood,,,,,
+category,,source value,Medication Activity,/code,,/code,,"code is not generally used, but this context code could be useful",,,,,Mismatch in structures
+priority,,not supported by target,,,,,,,,,,,
+doNotPerform,,source value,Medication Activity,@negationInd,,@negationInd,,,,,,,Data type assumptions
+.reportedBoolean,,not supported by target,,,,,,,,,,,
+.reportedReference,,not supported by target,,,,,,,,,,,
+.medicationCodeableConcept,,source value,Medication Activity,/manufacturedMaterial,,/consumable/manufacturedMaterial,,,,,,,
+medicationReference,,source value,.Medication Information,/consumable,,/consumable,,,,,,,
+subject,,header,,,,,,,,,,,
+encounter,,not supported by target,,,,,,,,,,,
+supportingInformation,,not supported by target,,,,,,,,,,,
+authoredOn,,source value,.Author Participation,/time,,/author/time,,,,,,,Mismatch in element semantics
+requester,,source value,.Author Participation,/assignedAuthor,,/author/assignedAuthr,,,,,,,
+performer,,source value,Medication Activity,performer,,/performer,,CDA unclear,,,,,
+performerType,,not supported by target,,,,,,,,,,,
+recorder,,not supported by target,,,,,,,,,,,
+reasonCode,,source value,.Indication,/value,,/entryRelationship/observation[templateId/@root='2.16.840.1.113883.10.20.22.4.19']/value,/code = 404684003	Clinical finding (finding),,,,,,
+reasonReference,,not supported by target,,,,,,This is FHIR specific construct maybe a FHIR representation of the reason elaborated above.,,,,,
+instantiatesCanonical,,not supported by target,,,,,,,,,,,
+instantiatesUri,,not supported by target,,,,,,,,,,,
+basedOn,,not supported by target,,,,,,,,,,,
+groupIdentifier,,not supported by target,,,,,,,,,,,
+courseOfTherapyType,,not supported by target,,,,,,,,,,,
+insurance,,not supported by target,,,,,,,,,,,
+note,,not supported by target,,,,,,,,,,,
+dosageInstruction.sequence,,not supported by target,,,,,,,,,,,
+dosageInstruction.text,,source value,.Medication Free Text Sig,/text,,/entryRelationship/substanceAdministration[templateId/@root='2.16.840.1.113883.10.20.22.4.147']/value,,,,,,,Mismatch in element semantics
+dosageInstruction.additionalInstruction,,source value,.Instruction,/code,,/entryRelationship/act[templateId/@root='2.16.840.1.113883.10.20.22.4.20']/value,,,,,,,Mismatch in element semantics
+dosageInstruction.patientInstruction,,source value,.Medication Free Text Sig,/text,,/entryRelationship/substanceAdministration[templateId/@root='2.16.840.1.113883.10.20.22.4.147']/value,,,,,,,Mismatch in element semantics
+dosageInstruction.timing,,source value,Medication Activity,effectiveTime,,/effectiveTime,,This can be complex,,,,,Mismatch in structures
+dosageInstruction..asNeededBoolean,,not supported by target,,,,,,,,,,,
+dosageInstruction..asNeededCodeableConcept,,not supported by target,,,,,,,,,,,
+dosageInstruction.site,,source value,Medication Activity,/approachSiteCode,,/approachSiteCode,,both use SNOMED CT,,,,,
+dosageInstruction.route,route.coding.code in  2.16.840.1.113883.3.88.12.3221.8.7,source value,Medication Activity,/routeCode,,,,,,,,,
+dosageInstruction.route,route.coding.code in http://hl7.org/fhir/ValueSet/route-codes,transform,Medication Activity,/routeCode,FC_RouteOfAdministration,,,,,,,,
+dosageInstruction.route,else,source value,Medication Activity,/routeCode/translation,,,,,,,,,Mismatch in terminology semantics
+dosageInstruction.method,,not supported by target,,,,,,,,,,,
+dosageInstruction.doseAndRate,,[backbone],,,,,,,,,,,
+dosageInstruction..type,,not supported by target,,,,,,,,,,,
+dosageInstruction...doseRange,,source value,Medication Activity,doseQuantity,,,,do we need a type map for IVL[PQ]?,,,,,
+dosageInstruction...doseQuantity,,source value,Medication Activity,doseQuantity,,,,,,,,,
+dosageInstruction...rateRatio,,not supported by target,,,,,,,,,,,
+dosageInstruction...rateRange,,source value,Medication Activity,rateQuantity,,,,,,,,,
+dosageInstruction...rateQuantity,,source value,Medication Activity,rateQuantity,,,,,,,,,
+dosageInstruction.maxDosePerPeriod,,source value,Medication Activity,maxDoseQuantity,,,,,,,,,
+dosageInstruction.maxDosePerAdministration,,not supported by target,,,,,,,,,,,
+dosageInstruction.maxDosePerLifetime,,not supported by target,,,,,,,,,,,
+dispenseRequest,,[backbone],,,,,,,,,,,
+.initialFill,,not supported by target,,,,,,,,,,,
+..quantity,,not supported by target,,,,,,,,,,,
+..duration,,not supported by target,,,,,,,,,,,
+.dispenseInterval,,not supported by target,,,,,,,,,,,
+.validityPeriod,,not supported by target,,,,,,,,,,,
+.numberOfRepeatsAllowed,,not supported by target,,,,,,"Med Activity repeatNumber looks right (with a +/- 1 rule for including/not including the 1st), but guide stipulates this is administrations, not fills. As does, oddly enough, Supply Order.",,,,,Mismatch in element semantics
+.quantity,,source value,Medication Activity,quantity,,,,,,,,,
+.expectedSupplyDuration,,not supported by target,,,,,,,,,,,
+performer,,not supported by target,,,,,,"Medication Dispense performer looks right, but FHIR is ""intended"", where as the CDA has allowed status of ""completed"" or ""aborted""",,,,,Mismatch in element semantics
+substitution,,not supported by target,,,,,,,,,,,
+..allowedBoolean,,not supported by target,,,,,,,,,,,
+..allowedCodeableConcept,,not supported by target,,,,,,,,,,,
+.reason,,not supported by target,,,,,,,,,,,
+priorPrescription,,not supported by target,,,,,,,,,,,
+detectedIssue,,not supported by target,,,,,,,,,,,
+eventHistory,,not supported by target,,,,,,,,,,,

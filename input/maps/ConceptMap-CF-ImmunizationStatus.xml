@@ -1,0 +1,111 @@
+<ConceptMap xmlns="http://hl7.org/fhir"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="CF-ImmunizationStatus"/>
+  <url value="http://hl7.org/fhir/us/ccda/ConceptMap/CF-ImmunizationStatus"/>
+  <version value="4.0.1"/>
+  <name value="CCDAtoFHIRImmunizationStatus"/>
+  <title value="C-CDA to FHIR Immunization Status"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <publisher value="HL7 International"/>
+  <description value="C-CDA to FHIR Immunization Status"/>
+  <contact>
+    <name value="HL7 International"/>
+    <telecom>
+      <system value="phone"/>
+      <value value="+1 734 677 7777"/>
+    </telecom>
+    <telecom>
+      <system value="fax"/>
+      <value value="+1 734 677 6622"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@hl7.org"/>
+    </telecom>
+  </contact>
+  <sourceUri value="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.1.11.15933"/>
+  <targetUri value="https://hl7.org/fhir/valueset-immunization-status.html"/>
+  <group>
+    <source value="http://terminology.hl7.org/CodeSystem/v3-ActStatus"/>
+    <target value="http://hl7.org/fhir/event-status"/>
+    <element>
+      <code value="aborted"/>
+      <display value="aborted"/>
+      <target>
+        <code value="not-done"/>
+        <display value="Not Done"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="cancelled"/>
+      <display value="cancelled"/>
+      <target>
+        <code value="not-done"/>
+        <display value="Not Done"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="completed"/>
+      <display value="completed"/>
+      <target>
+        <code value="completed"/>
+        <display value="Completed"/>
+        <equivalence value="equivalent"/>
+      </target>
+      <target>
+        <code value="not-done"/>
+        <display value="Not Done"/>
+        <equivalence value="wider"/>
+        <comment value="Only map to not-done when CDA negation is present and true." />
+      </target>
+    </element>
+    <element>
+      <code value="held"/>
+      <display value="held"/>
+      <target>
+        <code value="not-done"/>
+        <display value="Not Done"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="new"/>
+      <display value="new"/>
+      <target>
+        <code value="not-done"/>
+        <display value="Not Done"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="nullified"/>
+      <display value="nullified"/>
+      <target>
+        <code value="entered-in-error"/>
+        <display value="Entered in Error"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="obsolete"/>
+      <display value="obsolete"/>
+      <target>
+        <code value="not-done"/>
+        <display value="Not Done"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="suspended"/>
+      <display value="suspended"/>
+      <target>
+        <code value="not-done"/>
+        <display value="Not Done"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>
