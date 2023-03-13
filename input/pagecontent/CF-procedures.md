@@ -28,9 +28,13 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
 1\. XPath abbrievated for C-CDA Procedure as: <br/> ```ClinicalDocument/component/structuredBody/component/section[(@code="47519-4")]/entry/procedure```
 
 ### Illustrative example
-
+* [Procedure CDA example](./Binary-CF-procedure.html)
+* [Procedure FHIR example](./Procedure-CF-procedure.html)
 
 #### Links to example content
+
+The consensus mapping example developed through multiple vendors are available below:
+
 
 ### Prior work and Expanded Spreadsheets
 

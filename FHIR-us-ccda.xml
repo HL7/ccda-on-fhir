@@ -39,6 +39,17 @@
 <artifact deprecated="true" id="ConceptMap/C2F-MedicationRequest" key="ConceptMap-C2F-MedicationRequest" name="CCDA-to-FHIR map for MedicationRequest"/>
 <artifact deprecated="true" id="ConceptMap/C2F-Patient" key="ConceptMap-C2F-Patient" name="CCDA-to-FHIR map for Patient"/>
 <artifact deprecated="true" id="ConceptMap/C2F-Procedure" key="ConceptMap-C2F-Procedure" name="CCDA-to-FHIR map for Procedure"/>
+<artifact id="AllergyIntolerance/CF-allergy" key="AllergyIntolerance-CF-allergy" name="CF-allergy"/>
+<artifact id="Immunization/CF-immunization" key="Immunization-CF-immunization" name="CF-immunization"/>
+<artifact id="Binary/CF-immunization" key="Binary-CF-immunization" name="CF-immunization"/>
+<artifact id="MedicationRequest/CF-medication" key="MedicationRequest-CF-medication" name="CF-medication"/>
+<artifact id="Binary/CF-medication" key="Binary-CF-medication" name="CF-medication"/>
+<artifact id="Patient/CF-patient" key="Patient-CF-patient" name="CF-patient"/>
+<artifact id="Binary/CF-patient" key="Binary-CF-patient" name="CF-patient"/>
+<artifact id="Condition/CF-problem" key="Condition-CF-problem" name="CF-problem"/>
+<artifact id="Binary/CF-problem" key="Binary-CF-problem" name="CF-problem"/>
+<artifact id="Procedure/CF-procedure" key="Procedure-CF-procedure" name="CF-procedure"/>
+<artifact id="Binary/CF-procedure" key="Binary-CF-procedure" name="CF-procedure"/>
 <artifact id="Composition/Care-Plan-Example" key="Composition-Care-Plan-Example" name="Care Plan"/>
 <artifact id="StructureDefinition/Care-Plan-Document" key="StructureDefinition-Care-Plan-Document" name="Care Plan Document"/>
 <artifact id="ValueSet/2.16.840.1.113762.1.4.1099.10" key="ValueSet-2.16.840.1.113762.1.4.1099.10" name="Care Plan Document Type"/>
@@ -113,8 +124,8 @@
 <artifact deprecated="true" key="ValueSet" name="ValueSet"/>
 <artifact id="StructureDefinition/VersionNumber" key="StructureDefinition-VersionNumber" name="Version Number"/>
 <artifact id="AllergyIntolerance/allergy-intolerance" key="AllergyIntolerance-allergy-intolerance" name="allergy-intolerance"/>
-<artifact id="AllergyIntolerance/allergy-intolerance-mapped-to-FHIR" key="AllergyIntolerance-allergy-intolerance-mapped-to-FHIR" name="allergy-intolerance-mapped-to-FHIR"/>
 <artifact id="PractitionerRole/ccda-practitionerrole-example" key="PractitionerRole-ccda-practitionerrole-example" name="ccda-practitionerrole-example"/>
+<artifact id="Binary/CF-allergy" key="Binary-CF-allergy" name="ccda-to-fhir-allergy"/>
 <artifact id="Condition/condition-problem" key="Condition-condition-problem" name="condition-problem"/>
 <artifact id="Encounter/encounter-1" key="Encounter-encounter-1" name="encounter-1"/>
 <artifact id="Encounter/example-1" key="Encounter-example-1" name="example-1"/>

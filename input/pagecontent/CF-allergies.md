@@ -34,8 +34,8 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
 #### Links to example content
 
 The consensus mapping example developed through multiple vendors are available below:
-* [Allergy CDA example]()
-* [Allergy FHIR example](./AllergyIntolerance-allergy-intolerance-mapped-to-FHIR.html)
+* [Allergy CDA example](./Binary-CF-allergy.html)
+* [Allergy FHIR example](./AllergyIntolerance-CF-allergy.html)
 
 ### Prior work and Expanded Spreadsheets
 

@@ -1,0 +1,37 @@
+<entry typeCode="DRIV">
+  <substanceAdministration classCode="SBADM" moodCode="EVN">
+    <templateId root="2.16.840.1.113883.10.20.22.4.16" extension="2014-06-09"/>
+    <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+    <id root="cdbd33f0-6cde-11db-9fe1-0800200c9a66"/>
+    <statusCode code="active"/>
+    <effectiveTime xsi:type="IVL_TS">
+      <low value="20120806"/>
+      <high nullFlavor="UNK"/>
+    </effectiveTime>
+    <effectiveTime xsi:type="PIVL_TS" institutionSpecified="true" operator="A">
+      <period nullFlavor="UNK"/>
+    </effectiveTime>
+    <repeatNumber value="1"/>
+    <doseQuantity value="1"/>
+    <consumable>
+      <manufacturedProduct classCode="MANU">
+        <templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09"/>
+        <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+        <id root="2a620155-9d11-439e-92b3-5d9815ff4ee8"/>
+        <manufacturedMaterial>
+          <code code="252298" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RxNorm" displayName="albuterol 0.1 MG Inhalation Powder"/>
+        </manufacturedMaterial>
+      </manufacturedProduct>
+    </consumable>
+    <performer>
+      <assignedEntity>
+        <id root="2.16.840.1.113883.4.6" extension="2222222222"/>
+        <addr nullFlavor="UNK"/>
+        <telecom use="WP" value="tel:+1(555)555-1002"/>
+        <representedOrganization>
+          <name>Agastha Medical Center</name>
+        </representedOrganization>
+      </assignedEntity>
+    </performer>
+  </substanceAdministration>
+</entry>

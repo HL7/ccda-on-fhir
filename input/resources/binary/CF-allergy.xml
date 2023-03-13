@@ -1,0 +1,67 @@
+<entry>
+  <act classCode="ACT" moodCode="EVN">
+    <templateId root="2.16.840.1.113883.10.20.22.4.30" extension="2015-08-01" />
+    <templateId root="2.16.840.1.113883.10.20.22.4.30" />
+    <id root="1.3.6.1.4.1.22812.3.2009316.3.4.10" extension="545077400001" />
+    <id root="1.3.6.1.4.1.22812.3.2009316.3.4.10" extension="545077400003" />
+    <code code="CONC" codeSystem="2.16.840.1.113883.5.6" />
+    <statusCode code="active" />
+    <effectiveTime xsi:type="IVL_TS">
+      <low nullFlavor="NI" />
+    </effectiveTime>
+    <entryRelationship typeCode="SUBJ">
+      <observation classCode="OBS" moodCode="EVN">
+        <templateId root="2.16.840.1.113883.10.20.22.4.7" extension="2014-06-09" />
+        <templateId root="2.16.840.1.113883.10.20.22.4.7" />
+        <id root="1.3.6.1.4.1.22812.3.2009316.3.4.10.2" extension="545077400001" />
+        <id root="1.3.6.1.4.1.22812.3.2009316.3.4.10.2" extension="545077400003" />
+        <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" />
+        <statusCode code="completed" />
+        <effectiveTime xsi:type="IVL_TS">
+          <low value="20080501" />
+        </effectiveTime>
+        <value xsi:type="CD" code="419511003" codeSystem="2.16.840.1.113883.6.96">
+          <originalText>
+            <reference value="#_6db75b62-deb2-4bab-b597-00c8ae86f6b4" />
+          </originalText>
+        </value>
+        <participant typeCode="CSM">
+          <participantRole classCode="MANU">
+            <playingEntity classCode="MMAT">
+              <code code="1191" codeSystem="2.16.840.1.113883.6.88">
+                <translation code="293586001" codeSystem="2.16.840.1.113883.6.96" />
+              </code>
+            </playingEntity>
+          </participantRole>
+        </participant>
+        <entryRelationship typeCode="MFST" inversionInd="true">
+          <observation classCode="OBS" moodCode="EVN">
+            <templateId root="2.16.840.1.113883.10.20.22.4.9" extension="2014-06-09" />
+            <templateId root="2.16.840.1.113883.10.20.22.4.9" />
+            <id nullFlavor="NI" />
+            <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" />
+            <text>
+              <reference value="#_8a7ed342-967a-400e-88d5-2f8c2b7cdda0" />
+            </text>
+            <statusCode code="completed" />
+            <value xsi:type="CD" code="247472004" codeSystem="2.16.840.1.113883.6.96">
+              <originalText>
+                <reference value="#_8a7ed342-967a-400e-88d5-2f8c2b7cdda0" />
+              </originalText>
+            </value>
+            <entryRelationship typeCode="SUBJ" inversionInd="true">
+              <observation classCode="OBS" moodCode="EVN">
+                <templateId root="2.16.840.1.113883.10.20.22.4.8" extension="2014-06-09" />
+                <templateId root="2.16.840.1.113883.10.20.22.4.8" />
+                <code code="SEV" codeSystem="2.16.840.1.113883.5.4" />
+                <text>Severe</text>
+                <statusCode code="completed" />
+                <value xsi:type="CD" code="24484000" codeSystem="2.16.840.1.113883.6.96" />
+              </observation>
+            </entryRelationship>
+          </observation>
+        </entryRelationship>
+      </observation>
+    </entryRelationship>
+  </act>
+</entry>

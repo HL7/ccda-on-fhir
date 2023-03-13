@@ -1,6 +1,6 @@
 {
   "resourceType": "AllergyIntolerance",
-  "id": "allergy-intolerance-mapped-to-FHIR",
+  "id": "CF-allergy",
   "identifier": [
     {
       "system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.4.10.2",
@@ -36,8 +36,7 @@
     "text": "aspirin"
   },
   "patient": {
-    "reference": "Patient/example",
-    "display": "Amy V. Shaw"
+    "reference": "Patient/CF-patient"
   },
   "onsetDateTime": "2008-05-01",
   "reaction": [
