@@ -29,10 +29,14 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
 
 ### Illustrative example
 
-{% include examplebutton.html example="CF-allergy_example" b_title = "Click on Here To See Highlighted Example" %}
+{% include examplebutton.html example="CF_allergy_example" b_title = "Click on Here To See Highlighted Example" %}
 
 #### Links to example content
 
 The consensus mapping example developed through multiple vendors are available below:
 * [Allergy CDA example]()
 * [Allergy FHIR example](./AllergyIntolerance-allergy-intolerance-mapped-to-FHIR.html)
+
+### Prior work and Expanded Spreadsheets
+
+As reviewed in the methodology, a more comprehensive review was performed via spreadsheets. These spreadsheets have been consolidated and further revised in the tables above but are provided for [reference here](https://github.com/HL7/ccda-on-fhir/blob/Feb2023/mappings/CF/CCDA-FHIR%20Allergy.csv)

@@ -3,8 +3,6 @@ C-CDA to FHIR Notes
 General changes
 •	Simplified author/performer elements
 •	Added author/performer in most places
-•	 
-•	 
 
 Allergy
 •	 Mostly just kept what we had previously
@@ -17,13 +15,13 @@ Immunization
 
 Medications
 •	 Removed repeatNumber. Not in samples and never seen in real-world C-CDA 
+•	 Adjusted instructions to align with F to C mapping
 
 Patient
-managingOrganization 
+•	 managingOrganization. I think this is the correct mapping. Add to F to C?? 
 
 Problems
 •	 Category mapping used from section
-
 
 Procedures
 •	 Added notes around time@value vs. low/high
