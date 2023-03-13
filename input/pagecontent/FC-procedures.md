@@ -20,7 +20,7 @@ This page provides a mapping from FHIR to CDA. For the CDA to FHIR mapping, plea
 |.performedPeriod.end|/effectiveTime/high|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
 |.performer.actor|/performer|[CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)|
 |.performer.onBehalfOf|/perfomer/assignedEntity/representedOrganization|[CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)|
-|.location|**[Service Delivery Location]()**<br/>```participant@typeCode="LOC"```<br/>participant/participantRole||
+|.location|**[Service Delivery Location]()**<br/>```participant@typeCode="LOC"```<br/>/participant/participantRole||
 |.reasonCode|**[Indication]()**<br/>```entryRelationship@typeCode="RSON"```<br/>[/entryRelationship/observation/value]()|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 |.bodySite|/targetSiteCode|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 |.report|/reference/externalDocument||

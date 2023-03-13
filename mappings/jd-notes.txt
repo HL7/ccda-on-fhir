@@ -1,3 +1,38 @@
+C-CDA to FHIR Notes
+
+General changes
+•	Simplified author/performer elements
+•	Added author/performer in most places
+•	 
+•	 
+
+Allergy
+•	 Mostly just kept what we had previously
+
+Immunization 
+•	 site doesn't exist in CDA. Removed
+•	 Simplified doseQuantity to alignw tih F to C mapping
+•	 Added lot number since in F to C mapping
+•	 Added refusal reason since in F to C mapping
+
+Medications
+•	 Removed repeatNumber. Not in samples and never seen in real-world C-CDA 
+
+Patient
+managingOrganization 
+
+Problems
+•	 Category mapping used from section
+
+
+Procedures
+•	 Added notes around time@value vs. low/high
+•	 Removed medication reference. Not in examples and seems edge case
+•	 Added service delivery location since that's in reverse
+
+
+FHIR to C-CDA Notes
+
 General changes
 •	As previously stated, not supported rows weren't extracted and aren't shown in tables 
 •	In multiple places, remove translation case mapping. that is covered in structural guide 

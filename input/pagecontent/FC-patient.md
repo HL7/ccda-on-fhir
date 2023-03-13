@@ -17,11 +17,11 @@ This page provides a mapping from FHIR to CDA. For the CDA to FHIR mapping, plea
 |.extension.extension (birth sex)<br/>```url=http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex```|**[Birth Sex]()**|This is not in the header recordTarget in CDA|
 |.identifer|/patientRole/id|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
 |.name|/patientRole/patient/name|[CDA name ↔ FHIR name ](mappingGuidance.html#fhir-name--cda-name)|
-|.telecom|/patientRole/patient/telecom|[CDA telecom ↔ FHIR telecom](mappingGuidance.html#fhir-telecom--cda-telecom)|
+|.telecom|/patientRole/telecom|[CDA telecom ↔ FHIR telecom](mappingGuidance.html#fhir-telecom--cda-telecom)|
 |.gender|/patientRole/patient/administrativeGenderCode|[FHIR gender → CDA administrativeGender]()|
 |.birthdate|/patientRole/patient/birthTime|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
 |.deceasedDateTime|/patientRole/patient/sdtc:deceasedTime|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
-|.address|/patientRole/patient//addr|[CDA addr ↔ FHIR address ](mappingGuidance.html#fhir-address---cda-addr)|
+|.address|/patientRole/addr|[CDA addr ↔ FHIR address ](mappingGuidance.html#fhir-address---cda-addr)|
 |.maritalStatus|/patientRole/patient/maritalStatus|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 |.communication.language|/patientRole/patient/languageCommunication/languageCode||
 |.communication.preferred|/patientRole/patient/languageCommunication/preferenceInd||

@@ -8,6 +8,23 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
 
 ### C-CDA to FHIR
 
+|C-CDA¹<br/>[Immunization Activity substanceAdministration](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.52.html)|FHIR<br/>[Immunization](http://hl7.org/fhir/us/core/StructureDefinition-us-core-immunization.html#profile)|Transform Steps|
+|:----|:----|:----|
+|@negationInd="true"|set status="not-done"||
+|/id|identifier|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
+|/statusCode|status|[CDA statusCode → FHIR status](./ConceptMap-CF-ImmunizationStatus.html)|
+|/effectiveTime|occurrenceDateTime|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
+|/repeatNumber|protocolApplied.doseNumberPositiveInt|<mark>Not in examples</mark>|
+|/routeCode|route|[CDA coding ↔ FHIR CodeableConcept]()|
+|/doseQuantity|doseQuantity||
+|/consumable/manufacturedProduct/manufacturedMaterial/code|.vaccineCode|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)
+|/consumable/manufacturedMaterial/lotNumberText|.lotNumber||
+|/author|**[Provenance]()**|<mark>Not in examples</mark><br/>[CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)|
+|/performer|.performer|
+|**[Immunization Refusal Reason]()**<br/>```entryRelationship@typeCode="RSON"```<br/>/entryRelationship/observation/code|statusReason|[CDA refusal → FHIR statusReason](ConceptMap-CF-ImmunizationRefusal.html)|
+
+1\. XPath abbrievated for C-CDA Immunization Activity as: <br/> ```ClinicalDocument/component/structuredBody/component/section[(@code="11369-6")]/entry/substanceAdministration```
+
 ### Illustrative example
 
 #### Links to example content

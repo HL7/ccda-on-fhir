@@ -15,6 +15,28 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
 
 ### C-CDA to FHIR
 
+|C-CDA¹<br>[Medication Activity substanceAdministration]()|FHIR<br>[MedicationRequest]()|Transform Steps|
+|:----|:----|:----|
+|@negationInd="true"|set .doNotPerform=true||
+|/id|.identifier|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
+|/statusCode|.status|[CDA statusCode → FHIR status](./ConceptMap-CF-MedicationStatus.html)|
+|/effectiveTime@value|.dosageInstruction.timing.event|**Constraint**: Use this when effectiveTime@value is populated<br/>[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
+|/effectiveTime.low|.dosageInstruction.timing.repeat.boundsPeriod.start|**Constraint**: Use this when effectiveTime@value is not populated<br/>[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
+|/effectiveTime.high|.dosageInstruction.timing.repeat.boundsPeriod.end|**Constraint**: Use this when effectiveTime@value is not populated<br/>[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
+|/routeCode|.dosageInstruction.route|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
+|/doseQuantity|.dosageInstruction.doseAndRate.doseQuantity||
+|/rateQuantity|.dosageInstruction.doseAndRate.rateQuantity||
+|/maxDoseQuantity|.dosageInstruction.maxDosePerAdministration||
+|/consumable/manufacturedProduct/manufacturedMaterial/code|.medicationCodeableConcept|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
+|/author|.requester<br/>&<br/>**[Provenance]()**|[CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)|
+|**[Indication]()**<br/>```entryRelationship@typeCode="RSON"```<br/>/entryRelationship/observation/value|.reasonCode|<mark>not in samples</mark><br/>[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
+|**[Instruction]()**<br/>```entryRelationship@typeCode="SUBJ"```<br/>/entryRelationship/act/code|.dosageInstruction.additionalInstruction|<mark>not in samples</mark><br/>[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
+|**[Free text sig]()**<br/>```entryRelationship/substanceAdministration/code@code="76662-6"```<br/>/entryRelationship/substanceAdministration/text|.dosageInstruction.patientInstruction||
+
+
+1\. XPath abbrievated for C-CDA Medication Activity as: <br/> ```ClinicalDocument/component/structuredBody/component/section[(@code="10160-0")]/entry/substanceAdministration```
+
+
 ### Illustrative example
 
 #### Links to example content
