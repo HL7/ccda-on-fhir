@@ -12,6 +12,7 @@
       <translation code="Z92.89" codeSystem="2.16.840.1.113883.6.90" />
       <translation code="2782946" codeSystem="2.16.840.1.113883.3.247.1.1" />
     </code>
-    <statusCode code="active" />
+    <statusCode code="completed" />
+    <effectiveTime value="20120806"/>
   </procedure>
 </entry>

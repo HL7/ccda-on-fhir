@@ -11,7 +11,7 @@
       "value": "545069400003"
     }
   ],
-  "status": "in-progress",
+  "status": "completed",
   "code": {
     "text": "H/O chest x-ray",
     "coding": [
@@ -36,12 +36,5 @@
   "subject": {
     "reference": "Patient/CF-patient"
   },
-  "_performedDateTime": {
-    "extension": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-        "valueCode": "unknown"
-      }
-    ]
-  }
+  "performedDateTime": "2012-08-06"
 }
