@@ -9,7 +9,7 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
 
 ### C-CDA to FHIR
 
-|C-CDA¹<br/>[Problem observation](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.4.html)|FHIR<br/>[Condition](http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-condition-problems-health-concerns.html)|Transform Steps|
+|C-CDA¹<br/>[Problem observation](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.4.html)|FHIR<br/>[Condition and Health Concern](https://hl7.org/fhir/us/core/StructureDefinition-us-core-condition-problems-health-concerns.html)|Transform Steps|
 |:----|:----|:----|
 |@negationInd=true|set verificationStatus="refuted" or adjust .code for negated concept| 
 |(parent)section@code |.category|[CDA section → FHIR category](ConceptMap-CF-ProblemCategory.html)|
