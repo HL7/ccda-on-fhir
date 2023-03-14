@@ -4,12 +4,12 @@
     <templateId root="2.16.840.1.113883.10.20.22.4.14" />
     <id root="1.3.6.1.4.1.22812.3.2009316.3.4.7" extension="545069400001" />
     <id root="1.3.6.1.4.1.22812.3.2009316.3.4.7" extension="545069400003" />
-    <code code="416940007" codeSystem="2.16.840.1.113883.6.96" displayName="H/O chest x-ray">
+    <code code="80146002" codeSystem="2.16.840.1.113883.6.96" displayName="Excision of appendix">
       <originalText>
         <reference value="#_dfcf353c-538f-498a-9a53-80dda209e456" />
       </originalText>
-      <translation code="V15.89" codeSystem="2.16.840.1.113883.6.103" />
-      <translation code="Z92.89" codeSystem="2.16.840.1.113883.6.90" />
+      <translation code="47.0" codeSystem="2.16.840.1.113883.6.103" displayName="Appendectomy"/>
+      <translation code="0DBJ4ZZ" codeSystem="2.16.840.1.113883.6.90" displayName="Excision of Appendix, Percutaneous Endoscopic Approach"/>
       <translation code="2782946" codeSystem="2.16.840.1.113883.3.247.1.1" />
     </code>
     <statusCode code="completed" />
