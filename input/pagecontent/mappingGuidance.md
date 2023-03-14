@@ -105,7 +105,7 @@ In addition to the context of the previous section, CDA often requires elements 
 |:-----|:-----|:-------------|
 |coding.code|@code<br/>or<br/>translation@code|The criteria for mapping to @code varies by valueset binding within CDA templates. When no coding.code matches the target valueset, the @code should be omitted and @nullFlavor="OTH" used placing all coding as translation elements|
 |coding.display|coding.displayName<br/>or<br/>translation@displayName|
-|coding.system|@codeSystem<br/>or<br/>translation@codeSystem|Requires [URL → OID mapping]((mappingGuidance.html#mapping-oid--url)) or removing `urn:oid:` prefix|
+|coding.system|@codeSystem<br/>or<br/>translation@codeSystem|Requires [URL → OID mapping](mappingGuidance.html#mapping-oid--url) or removing `urn:oid:` prefix|
 |text|originalText|
 
 ##### Mapping OID ↔ URL
