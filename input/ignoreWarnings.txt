@@ -4,6 +4,7 @@
 Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated
 The system "" http://hl7.org/fhir/sid/icd-9-cm was found but did not contain enough information to properly validate the code (mode = fragment) (from http://tx.fhir.org/r4) for 'http://hl7.org/fhir/sid/icd-9-cm#486'
 The system "" http://hl7.org/fhir/sid/icd-9-cm was found but did not contain enough information to properly validate the code (mode = fragment) (from http://tx.fhir.org/r4) for 'http://hl7.org/fhir/sid/icd-9-cm#V15.89'
+The system "Pneumonia, organism unspecified" http://hl7.org/fhir/sid/icd-9-cm was found but did not contain enough information to properly validate the code (mode = fragment); The display "Pneumonia, organism unspecified" is not a valid display for the code {http://hl7.org/fhir/sid/icd-9-cm}486 - should be one of [] (from http://tx.fhir.org/r4) for 'http://hl7.org/fhir/sid/icd-9-cm#486'
 
 # The following example codeSystem OID is meant to illustrate how to map when no URL is available and is not known by terminology server
 Code System URI 'urn:oid:2.16.840.1.113883.3.247.1.1' is unknown so the code cannot be validated
