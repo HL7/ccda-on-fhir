@@ -28,8 +28,8 @@
         <participant typeCode="CSM">
           <participantRole classCode="MANU">
             <playingEntity classCode="MMAT">
-              <code code="1191" codeSystem="2.16.840.1.113883.6.88">
-                <translation code="293586001" codeSystem="2.16.840.1.113883.6.96" />
+              <code code="1191" codeSystem="2.16.840.1.113883.6.88" displayName="Aspirin">
+                <translation code="293586001" codeSystem="2.16.840.1.113883.6.96" displayName="Allergy to aspirin"/>
               </code>
             </playingEntity>
           </participantRole>
@@ -44,7 +44,7 @@
               <reference value="#_8a7ed342-967a-400e-88d5-2f8c2b7cdda0" />
             </text>
             <statusCode code="completed" />
-            <value xsi:type="CD" code="247472004" codeSystem="2.16.840.1.113883.6.96">
+            <value xsi:type="CD" code="247472004" codeSystem="2.16.840.1.113883.6.96" displayName="Wheal">
               <originalText>
                 <reference value="#_8a7ed342-967a-400e-88d5-2f8c2b7cdda0" />
               </originalText>
@@ -56,7 +56,7 @@
                 <code code="SEV" codeSystem="2.16.840.1.113883.5.4" />
                 <text>Severe</text>
                 <statusCode code="completed" />
-                <value xsi:type="CD" code="24484000" codeSystem="2.16.840.1.113883.6.96" />
+                <value xsi:type="CD" code="24484000" codeSystem="2.16.840.1.113883.6.96" displayName="Severe" />
               </observation>
             </entryRelationship>
           </observation>
