@@ -15,6 +15,7 @@
 <artifact deprecated="true" key="AuditEvent" name="AuditEvent"/>
 <artifact id="StructureDefinition/AuthorizationExtension" key="StructureDefinition-AuthorizationExtension" name="Authorization Extension"/>
 <artifact id="ConceptMap/CF-ImmunizationRefusal" key="ConceptMap-CF-ImmunizationRefusal" name="C-CDA Immunization Refusal to FHIR Immunization Status Reason"/>
+<artifact id="ConceptMap/CF-ImmunizationSite" key="ConceptMap-CF-ImmunizationSite" name="C-CDA Immunization approachSiteCode to FHIR Immunization Site"/>
 <artifact id="ConceptMap/CF-NullFlavorDataAbsentReason" key="ConceptMap-CF-NullFlavorDataAbsentReason" name="C-CDA NullFlavor to FHIR Data Absent Reason"/>
 <artifact id="ConceptMap/CF-ProblemStatus" key="ConceptMap-CF-ProblemStatus" name="C-CDA Problem Status value to FHIR Condition clinicalStatus"/>
 <artifact id="ConceptMap/CF-Severity" key="ConceptMap-CF-Severity" name="C-CDA Severity to FHIR Severity"/>
@@ -74,6 +75,7 @@
 <artifact id="ConceptMap/FC-ProblemStatus" key="ConceptMap-FC-ProblemStatus" name="FHIR Condition clinicalStatus to C-CDA Problem Status value"/>
 <artifact id="ConceptMap/FC-Criticality" key="ConceptMap-FC-Criticality" name="FHIR Criticality to C-CDA Criticality"/>
 <artifact id="ConceptMap/FC-DataAbsentReasonNullFlavor" key="ConceptMap-FC-DataAbsentReasonNullFlavor" name="FHIR Data Absent Reason to C-CDA NullFlavor"/>
+<artifact id="ConceptMap/FC-ImmunizationSite" key="ConceptMap-FC-ImmunizationSite" name="FHIR Immunization Site to C-CDA Immunization approachSiteCode"/>
 <artifact id="ConceptMap/FC-ImmunizationRefusal" key="ConceptMap-FC-ImmunizationRefusal" name="FHIR Immunization Status Reason to C-CDA Immunization Refusal"/>
 <artifact id="ConceptMap/FC-Severity" key="ConceptMap-FC-Severity" name="FHIR Severity to C-CDA Severity"/>
 <artifact id="ConceptMap/FC-AddressUse" key="ConceptMap-FC-AddressUse" name="FHIR to C-CDA Address Use"/>

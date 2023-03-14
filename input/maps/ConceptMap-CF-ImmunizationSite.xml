@@ -1,0 +1,50 @@
+<ConceptMap xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="CF-ImmunizationSite"/>
+  <url value="http://hl7.org/fhir/us/ccda/ConceptMap/CF-ImmunizationSite"/>
+  <version value="4.0.1"/>
+  <name value="CCDAtoFHIRImmunizationSite"/>
+  <title value="C-CDA Immunization approachSiteCode to FHIR Immunization Site"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <publisher value="HL7 International"/>
+  <description value="C-CDA Immunization approachSiteCode to FHIR Immunization Site. Note that the FHIR valueset is example and may be incomplete (only 2 codes)"/>
+  <contact>
+    <name value="HL7 International"/>
+    <telecom>
+      <system value="phone"/>
+      <value value="+1 734 677 7777"/>
+    </telecom>
+    <telecom>
+      <system value="fax"/>
+      <value value="+1 734 677 6622"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@hl7.org"/>
+    </telecom>
+  </contact>
+  <sourceUri value="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.3221.8.9"/>
+  <targetUri value="https://hl7.org/fhir/valueset-immunization-site.html"/>
+  <group>
+    <source value="http://snomed.info/sct"/>
+    <target value="http://terminology.hl7.org/CodeSystem/v3-ActSite"/>
+    <element>
+      <code value="368208006"/>
+      <display value="Left upper arm structure"/>
+      <target>
+        <code value="LA"/>
+        <display value="left arm"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="368209003"/>
+      <display value="Right upper arm structure"/>
+      <target>
+        <code value="RA"/>
+        <display value="right arm"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

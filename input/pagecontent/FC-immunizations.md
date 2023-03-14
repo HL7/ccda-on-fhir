@@ -22,7 +22,7 @@ This page provides a mapping from FHIR to CDA. For the CDA to FHIR mapping, plea
 |.location||<mark>Possible to use entryReference from Encounter</mark>|
 |.manufacturer|/consumable/manufacturedProduct/manufacturerOrganization||
 |.lotNumber|/consumable/manufacturedMaterial/lotNumberText||
-|.site|/approachSiteCode|<mark>Need to add ConceptMap</mark>
+|.site|/approachSiteCode|[FHIR site → CDA approachSiteCode](ConceptMap-FC-ImmunizationSite.html)
 |.route|/routeCode|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 |.doseQuantity|/doseQuantity||
 |.performer.actor|/performer|**Constraint** when ```.performer.function="AP"```<br/>[CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)|
