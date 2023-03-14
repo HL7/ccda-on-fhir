@@ -77,27 +77,35 @@ To convert between the standards, systems should deploy programming logic that c
 
 #### CDA Coding ↔ FHIR CodeableConcept
 
-The structure for coding in CDA and FHIR are fundamentally different. CDA  employs a mechanism (xsi:type [CD](http://hl7.org/cda/stds/core/draft1/StructureDefinition-CD.html) or [CE](http://hl7.org/cda/stds/core/draft1/StructureDefinition-CE.html)) where the code is included in the element and then originalText and translations elements may be provided and children elements. In FHIR, [CodeableConcept](http://hl7.org/fhir/datatypes.html#codeableconcept) places all codes in a coding list with a separate element for the text representation. 
+The structure for coding in CDA and FHIR are fundamentally different. CDA  employs a mechanism (xsi:type [CD](http://hl7.org/cda/stds/core/draft1/StructureDefinition-CD.html) or [CE](http://hl7.org/cda/stds/core/draft1/StructureDefinition-CE.html)) where the code is included in the element and then originalText and translations elements may be provided as child elements. In FHIR, [CodeableConcept](http://hl7.org/fhir/datatypes.html#codeableconcept) places all codes in a coding list with a separate element for the text representation. 
 
 ##### CDA Coding → FHIR CodeableConcept
 
 |CDA Property|FHIR Target|Notes|
 |:-----|:-----|:-------------|
 |@code|coding.code||
-|@codeSystem|coding.system|Requires mapping OID → URL or adding `urn:oid:` prefix|
+|@codeSystem|coding.system|Requires [mapping OID → URL](mappingGuidance.html#mapping-oid--url) or adding `urn:oid:` prefix|
 |@displayName|coding.display|
 |originalText|text|CDA references must be resolved since [text](http://hl7.org/fhir/datatypes-definitions.html#CodeableConcept.text) is a string in FHIR|
 |translation@code|coding.code||
-|translation@codeSystem|coding.system|Requires mapping OID → URL or adding `urn:oid:` prefix|
+|translation@codeSystem|coding.system|Requires [mapping OID → URL](mappingGuidance.html#mapping-oid--url) or adding `urn:oid:` prefix|
 |translation@displayName|coding.display|
 
 ##### FHIR CodeableConcept → CDA Coding
+
+In addition to the context of the previous section, CDA often requires elements to be present but the usage of a null value (@nullFlavor) is allowed. Generally when a CDA element is required (i.e. SHALL [1..1]), implementers will need to do one of the following when converting data into CDA: 
+- If the data fulfills the target valueset, use the code and translate system
+- If the data can be mapped into the target valueset, use a mapping and the translated system
+- When the above is not possible:
+  - If you have coded data and CDA nullFlavor is allowed, use "OTH" and put the source data in translation and provide originalText if possible. Note that [CD](http://hl7.org/cda/stds/core/draft1/StructureDefinition-CE.html) and [CE](http://hl7.org/cda/stds/core/draft1/StructureDefinition-CE.html) CDA elements generally allow translation and originalText. 
+  - If you have missing data with [data-absent-reason](https://hl7.org/fhir/extension-data-absent-reason.html), use a [mapped nullFlavor](ConceptMap-FC-DataAbsentReasonNullFlavor.html) if allowed. If not allowed, find the best match in the permitted valueset. 
+  - If you have missing data without [data-absent-reason](https://hl7.org/fhir/extension-data-absent-reason.html), select a nullFlavor if allowed. If not allowed, find the best match in the permitted valueset. 
 
 |FHIR Property|CDA Target|Notes|
 |:-----|:-----|:-------------|
 |coding.code|@code<br/>or<br/>translation@code|The criteria for mapping to @code varies by valueset binding within CDA templates. When no coding.code matches the target valueset, the @code should be omitted and @nullFlavor="OTH" used placing all coding as translation elements|
 |coding.display|coding.displayName<br/>or<br/>translation@displayName|
-|coding.system|@codeSystem<br/>or<br/>translation@codeSystem|Requires URL → OID mapping or removal or `urn:oid:` prefix|
+|coding.system|@codeSystem<br/>or<br/>translation@codeSystem|Requires [URL → OID mapping]((mappingGuidance.html#mapping-oid--url)) or removing `urn:oid:` prefix|
 |text|originalText|
 
 ##### Mapping OID ↔ URL
@@ -217,11 +225,11 @@ The mappings of name, address and telecom information is useful in many part of 
 
 #### Missing Data in C-CDA vs. FHIR ####
 
-The use of nullFlavor in CDA is explained in depth in Volume 1 of the [C-CDA Implementation Guide](http://hl7.org/cda/stds/ccda/draft1/designconsiderations.html#unknown-and-no-known-information) and in the [C-CDA Companion Guide](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=447). 
+CDA and FHIR address missing data and null usage in different ways:  
+- The use of nullFlavor in CDA is explained in depth in Volume 1 of the [C-CDA Implementation Guide](http://hl7.org/cda/stds/ccda/draft1/designconsiderations.html#unknown-and-no-known-information) and in the [C-CDA Companion Guide](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=447). 
+- The use of the data absent reason extension is explained in depth in the [US Core Implementation Guide](https://build.fhir.org/ig/HL7/US-Core/general-requirements.html#missing-data) and also in the [base extension](http://hl7.org/fhir/extension-data-absent-reason.html).
 
-The use of the data absent reason extension is explained in depth in the [US Core Implementation Guide](https://build.fhir.org/ig/HL7/US-Core/general-requirements.html#missing-data) and also in the [base extension](http://hl7.org/fhir/extension-data-absent-reason.html).
-
-In this publication, we include a mapping between missing data concepts. **Importantly, it should be noted that several mappings include non-equivalence (wider or narrower or unsupported)**. Additional implementer guidance is welcome on the handling of missing data between C-CDA and FHIR:
+In this publication, we include a mapping between missing data concepts. **Importantly, it should be noted that several mappings include non-equivalence (wider or narrower or unsupported) and that each standard may allow data elements to be omitted while the other requires**. Feedback to improve implementer guidance is welcome on the handling of missing data between C-CDA and FHIR:
 - [NullFlavor (CDA) → Data Absent Reason code (FHIR)](./ConceptMap-CF-NullFlavorDataAbsentReason.html) 
 - [Data Absent Reason code (FHIR) → NullFlavor (CDA)](./ConceptMap-FC-DataAbsentReasonNullFlavor.html)
 

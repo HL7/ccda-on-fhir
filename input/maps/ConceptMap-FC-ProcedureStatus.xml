@@ -34,6 +34,7 @@
       <display value="Preparation"/>
       <target>
         <equivalence value="unmatched" />
+        <comment value="See additional group for nullFlavor mapping" />
       </target>
     </element>
     <element>
@@ -59,11 +60,12 @@
       <display value="On Hold"/>
       <target>
         <equivalence value="unmatched" />
+        <comment value="See additional group for nullFlavor mapping" />
       </target>
     </element>
     <element>
-        <code value="stopped"/>
-        <display value="Stopped"/>
+      <code value="stopped"/>
+      <display value="Stopped"/>
       <target>
         <code value="aborted"/>
         <display value="aborted"/>
@@ -84,6 +86,7 @@
       <display value="Entered in Error"/>
       <target>
         <equivalence value="unmatched" />
+        <comment value="See additional group for nullFlavor mapping" />
       </target>
     </element>
     <element>
@@ -91,6 +94,51 @@
       <display value="Unknown"/>
       <target>
         <equivalence value="unmatched" />
+        <comment value="See additional group for nullFlavor mapping" />
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="http://hl7.org/fhir/event-status"/>
+    <target value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
+    <element>
+      <code value="preparation"/>
+      <display value="Preparation"/>
+      <target>
+        <code value="OTH"/>
+        <display value="other"/>
+        <equivalence value="wider"/>
+        <comment value="This value must be mapped into @nullFlavor attribute" />
+      </target>
+    </element>
+    <element>
+      <code value="on-hold"/>
+      <display value="On Hold"/>
+      <target>
+        <code value="OTH"/>
+        <display value="other"/>
+        <equivalence value="wider"/>
+        <comment value="This value must be mapped into @nullFlavor attribute" />
+      </target>
+    </element>
+    <element>
+      <code value="entered-in-error"/>
+      <display value="Entered in Error"/>
+      <target>
+        <code value="OTH"/>
+        <display value="other"/>
+        <equivalence value="wider"/>
+        <comment value="This value must be mapped into @nullFlavor attribute" />
+      </target>
+    </element>
+    <element>
+      <code value="unknown"/>
+      <display value="Unknown"/>
+      <target>
+        <code value="UNK"/>
+        <display value="unknown"/>
+        <equivalence value="equivalent"/>
+        <comment value="This value must be mapped into @nullFlavor attribute" />
       </target>
     </element>
   </group>
