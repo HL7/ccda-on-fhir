@@ -425,6 +425,15 @@
     </resource>
     <resource>
       <reference>
+        <reference value="AllergyIntolerance/FC-allergy"/>
+        <display value="fhir-to-ccda-allergy"/>
+      </reference>
+      <name value="FC-allergy"/>
+      <description value="fhir-to-ccda-allergy"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="Immunization/immunization"/>
         <display value="immunization"/>
       </reference>
@@ -439,6 +448,15 @@
       </reference>
       <name value="CF-immunization"/>
       <description value="ccda-to-fhir-immunization"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Immunization/FC-immunization"/>
+        <display value="fhir-to-ccda-immunization"/>
+      </reference>
+      <name value="FC-immunization"/>
+      <description value="fhir-to-ccda-immunization"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -461,6 +479,15 @@
     </resource>
     <resource>
       <reference>
+        <reference value="MedicationRequest/FC-medication"/>
+        <display value="fhir-to-ccda-medication"/>
+      </reference>
+      <name value="FC-medication"/>
+      <description value="fhir-to-ccda-medication"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="Condition/condition-problem"/>
         <display value="condition-problem"/>
       </reference>
@@ -475,6 +502,15 @@
       </reference>
       <name value="CF-problem"/>
       <description value="ccda-to-fhir-problem"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Condition/FC-problem"/>
+        <display value="fhir-to-ccda-problem"/>
+      </reference>
+      <name value="FC-problem"/>
+      <description value="fhir-to-ccda-problem"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -667,7 +703,7 @@
       <reference>
         <reference value="Binary/CF-allergy" />
             </reference>
-      <name value="ccda-to-fhir-allergy"/>
+      <name value="CF-allergy"/>
       <description value="ccda-to-fhir-allergy"/>
     </resource>
     <resource>
@@ -719,6 +755,46 @@
             </reference>
       <name value="CF-procedure"/>
       <description value="ccda-to-fhir-procedure"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format">
+        <valueCode value="application/xml"/>
+      </extension>
+      <reference>
+        <reference value="Binary/FC-allergy" />
+            </reference>
+      <name value="FC-allergy"/>
+      <description value="fhir-to-ccda-allergy"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format">
+        <valueCode value="application/xml"/>
+      </extension>
+      <reference>
+        <reference value="Binary/FC-immunization" />
+            </reference>
+      <name value="FC-immunization"/>
+      <description value="fhir-to-ccda-immunization"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format">
+        <valueCode value="application/xml"/>
+      </extension>
+      <reference>
+        <reference value="Binary/FC-medication" />
+            </reference>
+      <name value="FC-medication"/>
+      <description value="fhir-to-ccda-medication"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format">
+        <valueCode value="application/xml"/>
+      </extension>
+      <reference>
+        <reference value="Binary/FC-problem" />
+            </reference>
+      <name value="FC-problem"/>
+      <description value="fhir-to-ccda-problem"/>
     </resource>
     <page>
       <nameUrl value="index.html"/>

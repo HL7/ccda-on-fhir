@@ -1,0 +1,30 @@
+<entry typeCode="DRIV">
+  <substanceAdministration classCode="SBADM" moodCode="INT">
+    <templateId root="2.16.840.1.113883.10.20.22.4.16" extension="2014-06-09"/>
+    <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+    <!--identifier[0]->system identifier[0]->value -->
+    <id root="cdbd33f0-6cde-11db-9fe1-0800200c9a66"/>
+    <!--status-->
+    <statusCode code="active"/>
+    <effectiveTime xsi:type="IVL_TS">
+      <!-- doseageInstruction->timing->repeat->start -->
+      <low value="20120806"/>
+      <!-- doseageInstruction->timing->repeat->No end/stop date -->
+      <high nullFlavor="UNK"/>
+    </effectiveTime>
+    <!-- doseageInstruction->doseAndRate->doseQuantity -->
+    <doseQuantity value="1"/>
+    <consumable>
+      <manufacturedProduct classCode="MANU">
+        <templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09"/>
+        <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+        <!-- groupIdentifier->value -->
+        <id root="2a620155-9d11-439e-92b3-5d9815ff4ee8"/>
+        <manufacturedMaterial>
+          <!-- medicationCodeableConcept->coding -->
+          <code code="252298" codeSystem="2.16.840.1.113883.6.88" displayName="albuterol 0.1 MG Inhalation Powder"/>
+        </manufacturedMaterial>
+      </manufacturedProduct>
+    </consumable>
+  </substanceAdministration>
+</entry>

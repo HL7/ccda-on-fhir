@@ -1,0 +1,45 @@
+<entry typeCode="DRIV">
+  <substanceAdministration classCode="SBADM" moodCode="EVN" negationInd="false">
+    <templateId root="2.16.840.1.113883.10.20.22.4.52"/>
+    <templateId root="2.16.840.1.113883.10.20.22.4.52" extension="2015-08-01"/>
+    <!--identifier[0]->system identifier[0]->value -->
+    <id root="e6f1ba43-c0ed-4b9b-9f12-f435d8ad8f92"/>
+    <!--status-->
+    <statusCode code="completed"/>
+    <!--recorded-->
+    <effectiveTime value="20100815"/>
+    <consumable>
+      <manufacturedProduct classCode="MANU">
+        <templateId root="2.16.840.1.113883.10.20.22.4.54"/>
+        <templateId root="2.16.840.1.113883.10.20.22.4.54" extension="2014-06-09"/>
+        <manufacturedMaterial>
+          <!-- vaccineCode->coding[0] -->
+          <code code="88" codeSystem="2.16.840.1.113883.12.292" displayName="Influenza virus vaccine">
+            <originalText>
+              <reference value="#immunization1"/>
+            </originalText>
+          </code>
+          <!-- lotNumber-->
+          <lotNumberText>1</lotNumberText>
+        </manufacturedMaterial>
+      </manufacturedProduct>
+    </consumable>
+    <performer>
+      <assignedEntity>
+        <id root="2.16.840.1.113883.19.5.9999.456" extension="2981824"/>
+        <addr nullFlavor="UNK">
+          <streetAddressLine nullFlavor="NI"/>
+          <city nullFlavor="NI"/>
+          <country nullFlavor="NI"/>
+        </addr>
+        <telecom nullFlavor="UNK"/>
+        <assignedPerson>
+          <name>
+            <given>Amanda</given>
+            <family>Assigned</family>
+          </name>
+        </assignedPerson>
+      </assignedEntity>
+    </performer>
+  </substanceAdministration>
+</entry>

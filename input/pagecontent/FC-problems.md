@@ -32,6 +32,11 @@ This page provides a mapping from FHIR to CDA. For the CDA to FHIR mapping, plea
 
 #### Links to example content
 
+Note that these mappings have only been implemented by a single vendor to date. 
+
+* [Condition FHIR example](./Condition-FC-problem.html)
+* [Problem CDA example](./Binary-FC-problem.html)
+
 ### Prior work and Expanded Spreadsheets
 
 As reviewed in the methodology, a more comprehensive review was performed via spreadsheets. These spreadsheets have been consolidated and further revised in the tables above but are provided for [reference here](https://github.com/HL7/ccda-on-fhir/blob/Feb2023/mappings/FC/FHIR-CCDA%20Problem-Condition.csv) 
