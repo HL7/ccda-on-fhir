@@ -13,19 +13,22 @@
   ],
   "status": "completed",
   "code": {
-    "text": "H/O chest x-ray",
+    "text": "Excision of appendix",
     "coding": [
       {
-        "code": "416940007",
-        "system": "http://snomed.info/sct"
+        "code": "80146002",
+        "system": "http://snomed.info/sct",
+        "display": "Excision of appendix"
       },
       {
-        "code": "V15.89",
-        "system": "http://hl7.org/fhir/sid/icd-9-cm"
+        "code": "47.0",
+        "system": "http://hl7.org/fhir/sid/icd-9-cm",
+        "display": "Appendectomy"
       },
       {
-        "code": "Z92.89",
-        "system": "http://hl7.org/fhir/sid/icd-10-cm"
+        "code": "0DBJ4ZZ",
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "display": "Excision of Appendix, Percutaneous Endoscopic Approach"
       },
       {
         "code": "2782946",
