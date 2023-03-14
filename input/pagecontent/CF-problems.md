@@ -25,6 +25,8 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
 
 1\. XPath abbrievated for C-CDA Problem observation as: <br/> ```ClinicalDocument/component/structuredBody/component/section[(@code="11450-4")]/entry/act/entryRelationship/observation```
 
+When authors or other provenance are recorded in the parent [Problem Concern Act](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.3.html), it is recommended that those data be mapped to the FHIR Condition. 
+
 ### Illustrative example
 
 {% include examplebutton.html example="CF_problem_example" b_title = "Click on Here To See Highlighted Example" %}

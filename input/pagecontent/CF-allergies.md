@@ -30,6 +30,8 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
 
 1\. XPath abbrievated for C-CDA Allergy Intolerance as: <br/> ```ClinicalDocument/component/structuredBody/component/section[(@code="48765-2")]/entry/act/entryRelationship/observation```
 
+When authors or other provenance are recorded in the parent [Allergy Concern Act](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.30.html), it is recommended that those data be mapped to the FHIR AllergyIntolerance. 
+
 ### Illustrative example
 
 {% include examplebutton.html example="CF_allergy_example" b_title = "Click on Here To See Highlighted Example" %}
