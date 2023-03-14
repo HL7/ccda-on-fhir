@@ -25,6 +25,7 @@
 <artifact id="ConceptMap/CF-ImmunizationStatus" key="ConceptMap-CF-ImmunizationStatus" name="C-CDA to FHIR Immunization Status"/>
 <artifact id="ConceptMap/CF-MedicationStatus" key="ConceptMap-CF-MedicationStatus" name="C-CDA to FHIR Medication Status"/>
 <artifact id="ConceptMap/CF-NameUse" key="ConceptMap-CF-NameUse" name="C-CDA to FHIR NameUse"/>
+<artifact id="ConceptMap/CF-NoKnownAllergies" key="ConceptMap-CF-NoKnownAllergies" name="C-CDA to FHIR No Known Allergies"/>
 <artifact id="ConceptMap/CF-ProcedureStatus" key="ConceptMap-CF-ProcedureStatus" name="C-CDA to FHIR Procedure Status"/>
 <artifact id="ConceptMap/CF-TelecomType" key="ConceptMap-CF-TelecomType" name="C-CDA to FHIR Telecom Type"/>
 <artifact id="ConceptMap/CF-TelecomUse" key="ConceptMap-CF-TelecomUse" name="C-CDA to FHIR Telecom Use"/>
@@ -81,6 +82,7 @@
 <artifact id="ConceptMap/FC-ImmunizationStatus" key="ConceptMap-FC-ImmunizationStatus" name="FHIR to C-CDA Immunization Status"/>
 <artifact id="ConceptMap/FC-MedicationStatus" key="ConceptMap-FC-MedicationStatus" name="FHIR to C-CDA Medication Status"/>
 <artifact id="ConceptMap/FC-NameUse" key="ConceptMap-FC-NameUse" name="FHIR to C-CDA NameUse"/>
+<artifact id="ConceptMap/FC-NoKnownAllergies" key="ConceptMap-FC-NoKnownAllergies" name="FHIR to C-CDA No Known Allergies"/>
 <artifact id="ConceptMap/FC-ProcedureStatus" key="ConceptMap-FC-ProcedureStatus" name="FHIR to C-CDA Procedure Status"/>
 <artifact id="ConceptMap/FC-TelecomType" key="ConceptMap-FC-TelecomType" name="FHIR to C-CDA Telecom Type"/>
 <artifact id="ConceptMap/FC-TelecomUse" key="ConceptMap-FC-TelecomUse" name="FHIR to C-CDA Telecom Use"/>

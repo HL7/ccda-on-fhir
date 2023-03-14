@@ -12,8 +12,8 @@ This page provides a mapping from FHIR to CDA. For the CDA to FHIR mapping, plea
 
 |FHIR<br/>[Patient](http://hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html#profile)|C-CDA¹<br/>[US Realm Header recordTarget](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.1.1.html)|Transform Steps|
 |:----|:----|:----|
-|.extension.extension (race)<br/>```url=http://hl7.org/fhir/us/core/StructureDefinition/us-core-race```|/patientRole/patient/raceCode<br/>&<br/>/patientRole/patient/sdtc:raceCode|ombCategory extension goes in raceCode; other values go in sdtc:raceCode|
-|.extension.extension (ethnicity)<br/>```url=http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity```|/patientRole/patient/ethnicGroupCode<br/>&<br/>/patientRole/patient/sdtc:ethnicGroupCode|ombCategory extension goes in ethnicGroupCode; other values go in sdtc:ethnicGroupCode|
+|.extension.extension (race)<br/>```url=http://hl7.org/fhir/us/core/StructureDefinition/us-core-race```|/patientRole/patient/raceCode<br/>&<br/>/patientRole/patient/sdtc:raceCode|only one ombCategory extension goes in raceCode; other values go in sdtc:raceCode|
+|.extension.extension (ethnicity)<br/>```url=http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity```|/patientRole/patient/ethnicGroupCode<br/>&<br/>/patientRole/patient/sdtc:ethnicGroupCode|only one ombCategory extension goes in ethnicGroupCode; other values go in sdtc:ethnicGroupCode|
 |.extension.extension (birth sex)<br/>```url=http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex```|**[Birth Sex](https://www.hl7.org/ccdasearch/templates/2.16.840.1.113883.10.20.22.4.200.html)**|This is not in the header recordTarget in CDA|
 |.identifer|/patientRole/id|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
 |.name|/patientRole/patient/name|[CDA name ↔ FHIR name ](mappingGuidance.html#fhir-name--cda-name)|

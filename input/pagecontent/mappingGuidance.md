@@ -10,7 +10,7 @@ td, th {
 
 The header row of the mapping table provides links to the respective profiles in FHIR (e.g. **[US Core AllergyIntolerance](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-allergyintolerance.html)**) and templates in C-CDA (e.g. **[Allergy Intolerance observation](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.7.html)**)and specifies the "base" that each of the rows will build one.  All FHIR elements use a simplified dot notation and the CDA elements use simplified slash notation. Always use the underlying standards, provided via header row links, to ensure conformance when building FHIR resource or C-CDA clinical documents. 
 
-Rather than repeating cardinality, conformance, and other criteria from FHIR Resources or a C-CDA templates defined outside this implementaiton guide, external references are shown in tables as bold hyperlinks ((e.g. **[US Core Patient](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-patient.html)** or **[C-CDA US Realm Header](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.1.1.html)**) ). Unbold links refer to guidance contained within this guide (e.g. [CDA ↔ FHIR Name, Address, and Telecom mapping](mappingGuidance.html#name-address-telecom))
+Rather than repeating cardinality, conformance, and other criteria from FHIR Resources or a C-CDA templates defined outside this implementaiton guide, external references are shown in tables as bold hyperlinks (e.g. **[US Core Patient](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-patient.html)** or **[C-CDA US Realm Header](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.1.1.html)**). Unbold links refer to guidance contained within this guide (e.g. [CDA ↔ FHIR Name, Address, and Telecom mapping](mappingGuidance.html#name-address-telecom))
 
 
 The "Transform Steps" column of the table will provide guidance for mapping content between C-CDA and FHIR, those steps will be listed in the following order: 
@@ -137,23 +137,32 @@ Implementers transforming a CDA document may wish to dereference the text and pr
 
 #### CDA ↔ FHIR Provenance
 
-CDA provides a repeated set of elements within each activity for information on data provenance: 
+CDA provides a repeated set of elements within each activity which may be used in populating data to/from FHIR [Provenance.Agent](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-provenance.html)  
 
 - **author**: Represents the humans and/or machines that authored the [document/section/entry/act]. 
 - **performer**: A person who actually and principally carries out an action.
 - **informant**: An informant (or source of information) is a person that provides relevant information, such as the parent of a comatose patient who describes the patient's behavior prior to the onset of coma.
 - **participant** Used to represent other participants not explicitly mentioned by other classes, that were somehow involved in the documented activities
 
-FHIR, however, provides different elements within different resources that convey some information on provenance and a dedicated [Provenance resource](http://hl7.org/fhir/R4/provenance.html) which references a  target resource. In addition, FHIR documents do not provide context conduction, so all FHIR resources in a FHIR document should have explicit Provenance. 
+FHIR, however, provides different elements within resources (e.g. Condition.recorder) that convey some information on provenance and a dedicated [Provenance resource](http://hl7.org/fhir/R4/provenance.html) which references a  target resource. In addition, FHIR documents do not provide context conduction, so all FHIR resources in a FHIR document should have explicit [Provenance](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-provenance.html). 
 
 <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<blockquote class="stu-note">
 		<b>Provenance Mapping</b>
-		<p>This publication does <b>not</b> provide definitive CDA → FHIR guidance on when resource attributes (e.g. AllergyIntolerance.recorder) vs. dedicated Provenance resources (e.g. Provenance targeting an AllergyIntolerance resource) should be used for documenting data provenance. We welcome feedback on this topic from implementers.</p>
+		<p>This publication does <b>not</b> provide definitive CDA ↔ FHIR guidance on when resource attributes (e.g. AllergyIntolerance.recorder) vs. dedicated Provenance resources (e.g. Provenance targeting an AllergyIntolerance resource) should be used for documenting data provenance. We welcome feedback on this topic from implementers.</p>
 	</blockquote>
 </div>
 
-At a minimum, it is recommended that when [US Core Provenance](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-provenance.html) resources are present in a FHIR document, that they should be mapped to provenance as defined in the [C-CDA Companion Guide](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=447). 
+At a minimum, it is recommended that when [Provenance](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-provenance.html) resources are present in a FHIR document, that they should be mapped to provenance as defined in the [C-CDA Companion Guide](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=447). 
+
+Preliminary guidelines for documents may include: 
+1. Assembler generated document templates with provenance will value `entity.what` with a reference to either a [DocumentReference](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-documentreference.html) or [DiagnosticReport](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-documentreference.html), and `agent.type.coding.code` of assembler, and `agent.onBehalfOf` with a reference to the organization that the document was assembled under the auspices of. 
+2. Device generated document templates with [Provenance](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-provenance.html) will value `entity.what` with a reference to either a [DocumentReference](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-documentreference.html) or [DiagnosticReport](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-documentreference.html), and `agent.type.coding.code` of assembler, and `agent.onBehalfOf` with a reference to the organization that the document was assembled under the auspices of.
+2.1 A role of Informant is not permitted in Device Generated Document template. 
+3. Patient Generated Document with [Provenance](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-provenance.html) with value `entity.what` with a reference to a [DocumentReference](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-documentreference.html) or [DiagnosticReport](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-documentreference.html), and will contain a [US Core Provenance](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-provenance.html) agent.type of author, with an agent.who reference to the patient. optionally, it may include a participating device composer when created from a patient portal, and/or a participating assembeler; or a participating informant with `onBehalfOf` of valued to the authorizing provider's organization. 
+4. Provider Generated Document with [Provenance](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-provenance.html) will value entity.what with a reference to a documentrefernce or diagnosticreport, and will contain a [Provenance](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-provenance.html) `agent.type` of author with the agent who containing a reference to the provider or providerrole (when organization is included along with roles form the source C-CDA), and `onBehalfOf` value to a referance to an organization that the provider is authorized by.
+
+
 
 #### Name, Address, Telecom ####
 
