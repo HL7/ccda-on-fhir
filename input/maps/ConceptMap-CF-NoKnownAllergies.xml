@@ -1,0 +1,99 @@
+<ConceptMap xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="CF-NoKnownAllergies"/>
+  <url value="http://hl7.org/fhir/us/ccda/ConceptMap/CF-NoKnownAllergies"/>
+  <version value="4.0.1"/>
+  <name value="CCDAtoFHIRNoKnownAllergies"/>
+  <title value="C-CDA to FHIR No Known Allergies"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <publisher value="HL7 International"/>
+  <description value="C-CDA Allergy Intolerance Observation value to FHIR code for No Known Allergies"/>
+  <contact>
+    <name value="HL7 International"/>
+    <telecom>
+      <system value="phone"/>
+      <value value="+1 734 677 7777"/>
+    </telecom>
+    <telecom>
+      <system value="fax"/>
+      <value value="+1 734 677 6622"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@hl7.org"/>
+    </telecom>
+  </contact>
+  <sourceUri value="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.3221.6.2/"/>
+  <targetUri value="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1186.8/"/>
+  <group>
+    <source value="http://snomed.info/sct"/>
+    <target value="http://snomed.info/sct"/>
+    <element>
+      <code value="414285001"/>
+      <display value="Allergy to food"/>
+      <target>
+        <code value="429625007"/>
+        <display value="No known food allergy"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="416098002"/>
+      <display value="Allergy to drug"/>
+      <target>
+        <code value="409137002"/>
+        <display value="No known drug allergy"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="419199007"/>
+      <display value="Allergy to substance"/>
+      <target>
+        <code value="716186003"/>
+        <display value="No known allergy"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="235719002"/>
+      <display value="Intolerance to food"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="Best practices from CDA are not to have this as the negated value, comments welcome if this should be mapped." />
+      </target>
+    </element>
+        <element>
+      <code value="418038007"/>
+      <display value="Propensity to adverse reactions to substance"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="Best practices from CDA are not to have this as the negated value, comments welcome if this should be mapped." />
+      </target>
+    </element>
+        <element>
+      <code value="418471000"/>
+      <display value="Propensity to adverse reactions to food (finding)"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="Best practices from CDA are not to have this as the negated value, comments welcome if this should be mapped." />
+      </target>
+    </element>
+        <element>
+      <code value="419511003"/>
+      <display value="Propensity to adverse reactions to drug"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="Best practices from CDA are not to have this as the negated value, comments welcome if this should be mapped." />
+      </target>
+    </element>
+        <element>
+      <code value="420134006"/>
+      <display value="Propensity to adverse reaction"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="Best practices from CDA are not to have this as the negated value, comments welcome if this should be mapped." />
+      </target>
+    </element>
+  </group>
+</ConceptMap>

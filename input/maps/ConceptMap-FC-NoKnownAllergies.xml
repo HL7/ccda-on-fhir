@@ -1,0 +1,67 @@
+<ConceptMap xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="FC-NoKnownAllergies"/>
+  <url value="http://hl7.org/fhir/us/ccda/ConceptMap/FC-NoKnownAllergies"/>
+  <version value="4.0.1"/>
+  <name value="FHIRtoCCDANoKnownAllergies"/>
+  <title value="FHIR to C-CDA No Known Allergies"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <publisher value="HL7 International"/>
+  <description value="FHIR negated code for No Known Allergies to C-CDA Allergy Intolerance Observation value"/>
+  <contact>
+    <name value="HL7 International"/>
+    <telecom>
+      <system value="phone"/>
+      <value value="+1 734 677 7777"/>
+    </telecom>
+    <telecom>
+      <system value="fax"/>
+      <value value="+1 734 677 6622"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@hl7.org"/>
+    </telecom>
+  </contact>
+  <sourceUri value="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1186.8/"/>
+  <targetUri value="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.3221.6.2/"/>
+  <group>
+    <source value="http://snomed.info/sct"/>
+    <target value="http://snomed.info/sct"/>
+    <element>
+      <code value="429625007"/>
+      <display value="No known food allergy"/>
+      <target>
+        <code value="414285001"/>
+        <display value="Allergy to food"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="409137002"/>
+      <display value="No known drug allergy"/>
+      <target>
+        <code value="416098002"/>
+        <display value="Allergy to drug"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="716186003"/>
+      <display value="No known allergy"/>
+      <target>
+        <code value="419199007"/>
+        <display value="Allergy to substance"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="428607008"/>
+      <display value="No known environmental allergy"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="There is no clear match that conforms to valueset binding of C-CDA Allergy Intolerance value. Feedback welcome" />
+      </target>
+    </element>
+  </group>
+</ConceptMap>
