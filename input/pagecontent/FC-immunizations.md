@@ -26,7 +26,7 @@ This page provides a mapping from FHIR to CDA. For the CDA to FHIR mapping, plea
 |.route|/routeCode|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 |.doseQuantity|/doseQuantity||
 |.performer.actor|/performer|**Constraint** when ```.performer.function="AP"```<br/>[CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)|
-|.note|**[Comment Activity](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.64.html)**<br/>```entryRelationship/act/code@code="48767-8"```<br/>/entryRelationship/act/text||
+|**[Annotation](https://hl7.org/fhir/datatypes.html#Annotation)**<br/>.note|**[Comment Activity](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.64.html)**<br/>```entryRelationship/act/code@code="48767-8"```<br/>/entryRelationship/act/text||
 |.reasonCode|**[Indication](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.19.html)**<br/>``` entryRelationship@typeCode="RSON"```<br/>/entryRelationship/observation/value||
 |.education.documentType|reference/ExternalDocument/code||
 |.education.reference|/reference/ExternalDocument/id||
