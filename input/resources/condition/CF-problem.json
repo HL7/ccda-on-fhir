@@ -20,7 +20,8 @@
       "coding": [
         {
           "code": "55607006",
-          "system": "http://snomed.info/sct"
+          "system": "http://snomed.info/sct",
+          "display": "Problem"
         }
       ]
     },
@@ -37,15 +38,18 @@
     "coding": [
       {
         "code": "233604007",
-        "system": "http://snomed.info/sct"
+        "system": "http://snomed.info/sct",
+        "display": "Pneumonia"
       },
       {
         "code": "486",
-        "system": "http://hl7.org/fhir/sid/icd-9-cm"
+        "system": "http://hl7.org/fhir/sid/icd-9-cm",
+        "display": "Pneumonia, organism unspecified"
       },
       {
         "code": "J18.9",
-        "system": "http://hl7.org/fhir/sid/icd-10-cm"
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "display": "Pneumonia due to other infectious organisms, not elsewhere classified"
       },
       {
         "code": "87580",
