@@ -48,7 +48,7 @@
         <code value="cancelled"/>
         <display value="cancelled"/>  
         <equivalence value="narrower"/>
-        <comment value="When negation is not intended, cancelled would be recommended status although this code may be appropriate in some circumstances." />
+        <comment value="When negation is not intended, this may be default code." />
       </target>
       <target>
         <code value="held"/>
