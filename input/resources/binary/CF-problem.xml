@@ -15,7 +15,7 @@
         <templateId root="2.16.840.1.113883.10.20.22.4.4" />
         <id extension="545069300001" root="1.3.6.1.4.1.22812.3.2009316.3.4.1.2.1" />
         <id extension="545069300001" root="1.3.6.1.4.1.22812.3.2009316.3.4.1.2.1" />
-        <code code="55607006" codeSystem="2.16.840.1.113883.6.96">
+        <code code="55607006" codeSystem="2.16.840.1.113883.6.96" displayName="Problem">
           <translation nullFlavor="NI" />
         </code>
         <text>
@@ -25,12 +25,12 @@
         <effectiveTime xsi:type="IVL_TS">
           <low value="20120806" />
         </effectiveTime>
-        <value xsi:type="CD" code="233604007" codeSystem="2.16.840.1.113883.6.96">
+        <value xsi:type="CD" code="233604007" codeSystem="2.16.840.1.113883.6.96" displayName="Pneumonia">
           <originalText>
             <reference value="#_5011447a-e27f-471d-9e1f-541148c5282f" />
           </originalText>
-          <translation code="486" codeSystem="2.16.840.1.113883.6.103" />
-          <translation code="J18.9" codeSystem="2.16.840.1.113883.6.90" />
+          <translation code="486" codeSystem="2.16.840.1.113883.6.103" displayName="Pneumonia, organism unspecified" />
+          <translation code="J18.9" codeSystem="2.16.840.1.113883.6.90" displayName="Pneumonia due to other infectious organisms, not elsewhere classified" />
           <translation code="87580" codeSystem="2.16.840.1.113883.3.247.1.1" />
         </value>
       </observation>
