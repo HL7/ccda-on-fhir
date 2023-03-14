@@ -26,11 +26,13 @@
     "coding": [
       {
         "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-        "code": "1191"
+        "code": "1191",
+        "display": "Aspirin"
       },
       {
         "code": "293586001",
-        "system": "http://snomed.info/sct"
+        "system": "http://snomed.info/sct",
+        "display": "Allergy to aspirin"
       }
     ],
     "text": "aspirin"
@@ -46,10 +48,11 @@
           "coding": [
             {
               "system": "http://snomed.info/sct",
-              "code": "247472004"
+              "code": "247472004",
+              "display": "Wheal"
             }
           ],
-          "text": "Hives"
+          "text": "Wheal"
         }
       ],
       "severity": "severe"
