@@ -114,6 +114,14 @@ For further information see the [pdf-based C-CDA specification](http://www.hl7.o
 <td>Christopher Vitale</td>
 <td><a href="mailto:Christopher.Vitale@availity.com">Christopher.Vitale@availity.com</a></td>
 </tr>
+  <tr>
+<td>Sajjad Hussain</td>
+<td><a href="mailto:sshussain@google.com">sshussain@google.com</a></td>
+</tr>
+<tr>
+<td>Gene Beyer</td>
+<td><a href="mailto:gene.beyer@oracle.com">gene.beyer@oracle.com</a></td>
+</tr>
 
 
 </tbody>
