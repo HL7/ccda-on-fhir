@@ -25,8 +25,7 @@ This page provides a mapping from FHIR to CDA. For the CDA to FHIR mapping, plea
 |.maritalStatus|/patientRole/patient/maritalStatus|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 |.communication.language|/patientRole/patient/languageCommunication/languageCode||
 |.communication.preferred|/patientRole/patient/languageCommunication/preferenceInd||
-|.generalPractitioner||<mark>**Needs clarification**</mark>|
-|.managingOrganization||<mark>**Needs clarification**</mark>|
+|.managingOrganization|/patientRole/providerOrganization||
 
 1\. XPath abbrievated for C-CDA US Realm recordTarget as: <br/> ```ClinicalDocument/recordTarget/```
 
