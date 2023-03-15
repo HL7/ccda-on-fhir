@@ -862,17 +862,17 @@
       </page>
       <page>
         <nameUrl value="FC-allergies.html"/>
-        <title value="FHIR to C-CDAAllergies"/>
+        <title value="FHIR to C-CDA Allergies"/>
         <generation value="markdown"/>
       </page>
       <page>
         <nameUrl value="FC-immunizations.html"/>
-        <title value="FHIR to C-CDAImmunizations"/>
+        <title value="FHIR to C-CDA Immunizations"/>
         <generation value="markdown"/>
       </page>
       <page>
         <nameUrl value="FC-medications.html"/>
-        <title value="FHIR to C-CDAMedications"/>
+        <title value="FHIR to C-CDA Medications"/>
         <generation value="markdown"/>
       </page>
       <page>
@@ -888,6 +888,11 @@
       <page>
         <nameUrl value="conceptMaps.html"/>
         <title value="Terminology Maps (Concept Maps)"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="mappingIsues.html"/>
+        <title value="Known Issues"/>
         <generation value="markdown"/>
       </page>
       <page>
