@@ -21,18 +21,9 @@
         "display": "Excision of appendix"
       },
       {
-        "code": "47.0",
-        "system": "http://hl7.org/fhir/sid/icd-9-cm",
-        "display": "Appendectomy"
-      },
-      {
         "code": "0DBJ4ZZ",
-        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "system": "http://www.cms.gov/Medicare/Coding/ICD10",
         "display": "Excision of Appendix, Percutaneous Endoscopic Approach"
-      },
-      {
-        "code": "2782946",
-        "system": "urn:oid:2.16.840.1.113883.3.247.1.1"
       }
     ]
   },

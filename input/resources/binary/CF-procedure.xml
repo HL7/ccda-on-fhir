@@ -8,9 +8,7 @@
       <originalText>
         <reference value="#_dfcf353c-538f-498a-9a53-80dda209e456" />
       </originalText>
-      <translation code="47.0" codeSystem="2.16.840.1.113883.6.103" displayName="Appendectomy"/>
       <translation code="0DBJ4ZZ" codeSystem="2.16.840.1.113883.6.90" displayName="Excision of Appendix, Percutaneous Endoscopic Approach"/>
-      <translation code="2782946" codeSystem="2.16.840.1.113883.3.247.1.1" />
     </code>
     <statusCode code="completed" />
     <effectiveTime value="20120806"/>

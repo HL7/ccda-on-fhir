@@ -50,11 +50,11 @@
         "code": "233604007"
       },
       {
-        "system": "urn:oid:2.16.840.1.113883.6.103",
+        "system": "http://hl7.org/fhir/sid/icd-9-cm",
         "code": "486"
       },
       {
-        "system": "urn:oid:2.16.840.1.113883.6.90",
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "J18.9"
       },
       {
@@ -65,7 +65,7 @@
     "text": "Pneumonia"
   },
   "subject": {
-    "reference": "Patient/18025725"
+    "reference": "Patient/CF-patient"
   },
   "onsetDateTime": "2012-08-06"
 }

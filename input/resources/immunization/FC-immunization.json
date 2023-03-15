@@ -47,7 +47,7 @@
       {
         "system": "http://hl7.org/fhir/sid/cvx",
         "code": "88",
-        "display": "Influenza virus vaccine"
+        "display": "influenza virus vaccine, unspecified formulation"
       }
     ],
     "text": "Influenza Virus Vaccine"
