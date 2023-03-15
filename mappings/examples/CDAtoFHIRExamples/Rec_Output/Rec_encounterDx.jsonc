@@ -1,0 +1,38 @@
+{
+  "fullUrl": "http://fhir:3447/4_0_0/Condition/62f17e2aa2392d0008fbb232",
+  "resource": {
+    "resourceType": "Condition",
+    "id": "62f17e2aa2392d0008fbb232",
+    "identifier": [
+      {
+        "value": "urn:uuid:db734647-fc99-424c-a864-7e3cda82e704",
+	"system": "urn:ietf:rfc:3986"
+      }
+    ],
+    "category": [
+      {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+            "code": "encounter-diagnosis"
+          }
+        ]
+      }
+    ],
+    "code": {
+      "coding": [
+        {
+          "system": "http://www.snomed.org/",
+          "code": "64109004",
+          "display": "Costal chondritis"
+        }
+      ],
+	  "text": "Costal Chondritis"
+    },
+    "subject": {
+      "reference": "Patient/62f17e29b7532c0009e217b7"
+	  },
+    "onsetDateTime": "2012-08-15"
+	}
+}
+

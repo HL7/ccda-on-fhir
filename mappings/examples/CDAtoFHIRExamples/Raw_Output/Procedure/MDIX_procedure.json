@@ -1,0 +1,46 @@
+		{
+			"request": {
+				"method": "POST",
+				"url": "Procedure"
+			},
+			"resource": {
+				"identifier": [
+					{
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.4.7",
+						"value": "545069400001"
+					},
+					{
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.4.7",
+						"value": "545069400003"
+					}
+				],
+				"code": {
+					"coding": [
+						{
+							"system": "urn:oid:2.16.840.1.113883.6.96",
+							"code": "416940007",
+							"display": "H/O chest x-ray"
+						},
+						{
+							"system": "urn:oid:2.16.840.1.113883.6.103",
+							"code": "V15.89"
+						},
+						{
+							"system": "urn:oid:2.16.840.1.113883.6.90",
+							"code": "Z92.89"
+						},
+						{
+							"system": "urn:oid:2.16.840.1.113883.3.247.1.1",
+							"code": "2782946"
+						}
+					]
+				},
+				"subject": {
+					"reference": "Patient/160920144139807"
+				},
+				"id": "545069400001",
+				"resourceType": "Procedure",
+				"status": "active"
+			},
+			"fullUrl": "Procedure/545069400001"
+		}

@@ -1,0 +1,45 @@
+		{
+			"request": {
+				"method": "POST",
+				"url": "MedicationAdministration"
+			},
+			"resource": {
+				"identifier": [
+					{
+						"value": "cdbd33f0-6cde-11db-9fe1-0800200c9a66"
+					}
+				],
+				"dosage": {
+					"dose": {
+						"value": 1
+					}
+				},
+				"performer": [
+					{
+						"actor": {
+							"reference": "2.16.840.1.113883.4.6::2222222222"
+						}
+					}
+				],
+				"effectivePeriod": {
+					"start": "2012-08-06"
+				},
+				"subject": {
+					"reference": "Patient/160920144139807"
+				},
+				"id": "cdbd33f0-6cde-11db-9fe1-0800200c9a66",
+				"medicationCodeableConcept": {
+					"coding": [
+						{
+							"system": "urn:oid:2.16.840.1.113883.6.88",
+							"code": "582498",
+							"display": "Albuterol 0.09 MG/ACTUAT inhalant powder"
+						}
+					],
+					"text": "Albuterol 0.09 MG/ACTUAT inhalant powder"
+				},
+				"resourceType": "MedicationAdministration",
+				"status": "in-progress"
+			},
+			"fullUrl": "MedicationAdministration/cdbd33f0-6cde-11db-9fe1-0800200c9a66"
+		}

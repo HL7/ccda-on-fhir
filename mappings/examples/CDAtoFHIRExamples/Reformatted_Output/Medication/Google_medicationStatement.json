@@ -1,0 +1,28 @@
+{
+  "request": {
+    "method": "PUT",
+    "url": "MedicationStatement/c790eaf1e2c22f13e1835ddfdcb850c1"
+  },
+  "resource": {
+    "resourceType": "MedicationStatement",
+    "id": "c790eaf1e2c22f13e1835ddfdcb850c1",
+    "status": "active",
+    "medicationReference": {
+      "reference": "Medication/cd78bc6a4a5029aeefbbd55563192f65"
+    },
+    "subject": {
+      "reference": "Patient/8d638e43bf8261b7c0790adfee475f71"
+    },
+    "dosage": [
+      {
+        "doseAndRate": [
+          {
+            "doseQuantity": {
+              "value": 1
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

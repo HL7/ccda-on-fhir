@@ -1,0 +1,5 @@
+General Mapping Recommendations:
+1. For codable concepts, map the originalText from the C-CDA to the coding.text attribute (using the reference link as needed to obtain the actual text before mapping)
+2. For codable concepts with translations, map the translations to coding.code array, following the main entry
+3. For identifier mapping, please refer to https://docs.google.com/spreadsheets/d/1EhRiTh3-wOd6t0eQa2iKD4RQ-A32aqNju1R0rG-afgE/edit#gid=2143847847 for the full mapping logic
+4. 

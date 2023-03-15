@@ -1,0 +1,89 @@
+{
+  "fullUrl": "http://fhir:3447/4_0_0/Patient/62f17e29b7532c0009e217b7",
+  "resource": {
+    "resourceType": "Patient",
+    "id": "62f17e29b7532c0009e217b7",
+    "extension": [
+      {
+        "extension": [
+          {
+            "url": "ombCategory",
+            "valueCoding": {
+              "system": "urn:oid:2.16.840.1.113883.6.238",
+              "code": "2135-2",
+              "display": "Hispanic or Latino"
+            }
+          },
+          {
+            "url": "text",
+            "valueString": "Hispanic or Latino"
+          }
+        ],
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+      },
+      {
+        "extension": [
+          {
+            "url": "ombCategory",
+            "valueCoding": {
+              "system": "urn:oid:2.16.840.1.113883.6.238",
+              "code": "2106-3",
+              "display": "White"
+            }
+          },
+          {
+            "url": "text",
+            "valueString": "White"
+          }
+        ],
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+      }
+    ],
+    "identifier": [
+      {
+        "value": "160920144139807",
+        "system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3"
+      }
+    ],
+    "name": [
+      {
+	  // Source CCD has name use = "L"
+        "use": "official",
+        "family": "Jones",
+        "given": [
+          "Myra"
+        ]
+      }
+    ],
+    "gender": "female",
+    "birthDate": "1947-05-01",
+    "address": [
+      {
+        "use": "home",
+        "line": [
+          "1357 Amber Drive"
+        ],
+        "city": "Beaverton",
+        "state": "OR",
+        "postalCode": "97006"
+      }
+    ],
+    "communication": [
+      {
+        "language": {
+          "coding": [
+            {
+              "system": "urn:ietf:bcp:47",
+              "code": "en"
+            }
+          ]
+        },
+        "preferred": true
+      }
+    ],
+	 "managingOrganization": {
+	 // This maps from providerOrganization in the source CCD
+      "reference": "Organization/475b1be5ce24a154ee7c8f8200bc5a41"
+    }
+  }
+}

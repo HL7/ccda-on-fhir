@@ -1,0 +1,34 @@
+{
+      "fullUrl": "urn:uuid:ab1e6bb9-1eb9-4c86-ba25-e3df2579c405",
+      "resource": {
+        "resourceType": "Organization",
+		"id":"475b1be5ce24a154ee7c8f8200bc5a41",
+        "identifier": [
+          {
+            "value": "3",
+            "system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3"
+          }
+        ],
+        "name": "Primary Care's Partners Test",
+        "address": [
+          {
+            "line": [
+              "123 main street"
+            ],
+            "city": "Chicago",
+            "state": "IL",
+            "postalCode": "60629"
+          }
+        ],
+        "telecom": [
+          {
+            "value": "+16768576769",
+            "use": "work",
+            "system": "phone"
+          }
+        ],
+        "active": true
+      }
+    }
+}
+	

@@ -1,0 +1,1626 @@
+{
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:486b3acc-ee8a-4738-bb95-c3fc7b94df6e",
+      "resource": {
+        "resourceType": "Composition",
+        "status": "final",
+        "language": "en",
+        "title": "Continuity of Care Document",
+        "date": "2016-10-03T18:27:10Z",
+        "identifier": {
+          "value": "urn:uuid:973c7e16-05dd-484f-a780-e80904fd8ff0",
+          "system": "urn:ietf:rfc:3986"
+        },
+        "type": {
+          "coding": [
+            {
+              "code": "34133-9",
+              "system": "http://loinc.org"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:a4986486-6599-4bb2-a7fb-e2deb8d50b5e"
+        },
+        "encounter": {
+          "reference": "urn:uuid:e465963c-13fb-4b87-857a-4d2433728762"
+        },
+        "custodian": {
+          "reference": "urn:uuid:26b037cf-980c-4766-8632-03ff9a10c1c1"
+        },
+        "author": [
+          {
+            "reference": "urn:uuid:b2e439ab-e223-481e-bada-a8fdfc437a0c"
+          },
+          {
+            "reference": "urn:uuid:109d68fa-a7da-4287-af14-7a0508406f63"
+          }
+        ],
+        "event": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "unsupported"
+              }
+            ]
+          }
+        ],
+        "section": [
+          {
+            "title": "Allergies",
+            "code": {
+              "coding": [
+                {
+                  "code": "48765-2",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:c8fb1060-2ad3-45a5-8439-9cedb245aa2b"
+              }
+            ],
+            "text": {
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table> <colgroup> <col width=\"40%\"></col> <col width=\"20%\"></col> <col width=\"40%\"></col> </colgroup> <tbody> <tr> <td> <span id=\"_6db75b62-deb2-4bab-b597-00c8ae86f6b4\">Aspirin TABS</span> <span class=\"xSecondary\"> (propensity to adverse reactions to drug)</span> </td> <td> <span class=\"xSecondary\">Onset: 1-May-2008</span> </td> <td> <span> <span class=\"xSecondary\" style=\"font-weight:bold;text-align:center;\">Reaction</span>: <span id=\"_8a7ed342-967a-400e-88d5-2f8c2b7cdda0\" style=\"font-weight:bold;font-color:red;\">Hives</span> <span style=\"font-weight:bold;font-color:red;\"> (Severe)</span> </span> </td> </tr> </tbody> </table></div>",
+              "_status": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                    "valueCode": "unknown"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "title": "Encounters",
+            "code": {
+              "coding": [
+                {
+                  "code": "46240-8",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:1a1f3f84-ff0f-48d2-aab3-694ecb86950f"
+              }
+            ],
+            "text": {
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table border=\"1\" width=\"100%\"> <thead> <tr> <th>Encounter</th> <th>Performer</th> <th>Location</th> <th>Encounter date</th> <th>Diagnosis</th> <th>Diagnosis Status</th> </tr> </thead> <tbody> <tr id=\"Encounter1\"> <td id=\"Encounter1_type\">Office outpatient visit</td> <td>Dr. Samir Kahn <span id=\"Encounter1_performer_type\">Internal Medicine</span> </td> <td>Community Urgent Care (Urgent Care Center) <div>1004 Healthcare Dr.</div> <div>Portland, OR 97005</div> </td> <td>August 15, 2012</td> <td id=\"Encounter1_diagnosis\">Costal Chondritis</td> <td id=\"Encounter1_diagnosis_status\">Active</td> </tr> </tbody> </table></div>",
+              "_status": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                    "valueCode": "unknown"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "title": "Immunizations",
+            "code": {
+              "coding": [
+                {
+                  "code": "11369-6",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:83bf95d4-01d6-4548-87fe-3212860d9c62"
+              }
+            ],
+            "text": {
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><span id=\"immunSect\"></span> <table border=\"1\" width=\"100%\"> <thead> <tr> <th>Vaccine</th> <th>Lot Number</th> <th>Date</th> <th>Status</th> </tr> </thead> <tbody> <tr id=\"immun1\"> <td id=\"ImmunizationProduct_100\">Influenza Virus Vaccine</td> <td>1</td> <td>8/15/2010</td> <td>Completed</td> </tr> </tbody> </table></div>",
+              "_status": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                    "valueCode": "unknown"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "title": "Medications",
+            "code": {
+              "coding": [
+                {
+                  "code": "10160-0",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:048cdf85-bba8-4021-8500-0f418f45ce1c"
+              }
+            ],
+            "text": {
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table width=\"100\" border=\"1\"> <thead> <tr> <th>Medication</th> <th>Directions</th> <th>Start Date</th> <th>Status</th> </tr> </thead> <tbody> <tr> <td>Albuterol 0.09 MG/ACTUAT inhalant powder</td> <td>0.09 MG/ACTUAT inhalant powder, 2 puffs once</td> <td>20120806</td> <td>Posted</td> </tr> </tbody> </table></div>",
+              "_status": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                    "valueCode": "unknown"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "title": "Plan Of Treatment",
+            "code": {
+              "coding": [
+                {
+                  "code": "18776-5",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:ccbe4315-99ac-424c-9847-ff9f56a0383b"
+              }
+            ],
+            "text": {
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table border=\"1\" width=\"100%\"> <thead> <tr> <th>Date/time</th> <th>Goal</th> <th>Instructions</th> </tr> </thead> <tbody> <tr id=\"Goal1\"> <td>August 15, 2012 10:00am</td> <td id=\"Goal1_desc\">Weight Loss</td> <td id=\"Action1\"> <span id=\"Action1_Type\">Patient Education:</span> <span id=\"Action1_desc\">Diet and exercise counseling provided during visit.</span> </td> </tr> <tr id=\"Goal2\"> <td>August 15, 2012 10:00am</td> <td id=\"Goal2_desc\">Asthma management</td> <td id=\"Action2\"> <span id=\"Action2_Type\">Patient Education:</span> <span id=\"Action2_desc\">Resources and instructions provided during visit.</span> </td> </tr> </tbody> </table></div>",
+              "_status": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                    "valueCode": "unknown"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "title": "Problems",
+            "code": {
+              "coding": [
+                {
+                  "code": "11450-4",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:fa2e92b3-f15c-40b1-953b-9690e02a5e0a"
+              },
+              {
+                "reference": "urn:uuid:ec65c956-ec70-4233-b5a6-685060bce891"
+              }
+            ],
+            "text": {
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table> <colgroup> <col width=\"40%\"></col> <col width=\"20%\"></col> <col width=\"40%\"></col> </colgroup> <tbody class=\"xRowGroup\"> <tr> <td> <span id=\"_5011447a-e27f-471d-9e1f-541148c5282f\">Pneumonia</span> <span class=\"xSecondary\">(486) (J18.9)</span> <br></br> </td> <td> <span class=\"xSecondary\" style=\"font-weight:bold;text-align:center;\">Onset: </span> <span>6-Aug-2012</span> <br></br> </td> <td></td> </tr> </tbody> <tbody class=\"xRowGroup\"> <tr> <td> <span id=\"_4f1a62c2-9353-455a-bf3a-40f46a6115f4\">Asthma</span> <span class=\"xSecondary\">(493.90) (J45.909)</span> <br></br> </td> <td></td> <td></td> </tr> </tbody> </table></div>",
+              "_status": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                    "valueCode": "unknown"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "title": "Procedures",
+            "code": {
+              "coding": [
+                {
+                  "code": "47519-4",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:1579c6d3-bfcb-4354-ae88-ae554d668fc7"
+              }
+            ],
+            "text": {
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table> <colgroup> <col width=\"40%\"></col> <col width=\"20%\"></col> <col width=\"40%\"></col> </colgroup> <tbody class=\"xRowGroup\"> <tr> <td> <span id=\"_dfcf353c-538f-498a-9a53-80dda209e456\">H/O chest x-ray</span> </td> <td></td> <td></td> </tr> </tbody> </table></div>",
+              "_status": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                    "valueCode": "unknown"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "title": "Results",
+            "code": {
+              "coding": [
+                {
+                  "code": "30954-2",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:38f61ff1-9fc6-4a7c-91b8-80af1bdfc5a1"
+              }
+            ],
+            "text": {
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table>  <colgroup> <col width=\"20%\"></col> <col width=\"40%\"></col> <col width=\"40%\"></col> </colgroup> <tbody class=\"xRowGroup\"> <tr> <td> <span id=\"_3ffb46b1-9fe4-45f3-9a0f-e0e492563e7b\" class=\"xContentWrapping\" style=\"font-weight:bold;text-align:center;\">Urinanalysis macro (dipstick) panel</span> <br></br> <span class=\"xSecondary xContentWrapping\">22-Jun-2015</span> </td>  <td> <span style=\"font-weight:bold;text-align:center;\">Laboratory: </span> <span> Value Labs</span> <span> 2474, Rocky place Beaverton OR 97006</span> <span> tel:+1-(555)666-1002</span> </td> <td> </td> </tr>  <tr id=\"_13a52df8-79ed-4689-a9da-14c5905de830\"> <td> </td> <td> <span id=\"_ea838e08-d5eb-4ed4-a176-e5f9a831a780\" class=\"xSecondary\">Specific gravity of Urine by Test strip</span> <span class=\"xSecondary\"> 1.015</span> </td> <td> <span class=\"xSecondary\" style=\"font-weight:bold;text-align:center;\">Range: </span>  <span id=\"_08b7d0ee-aff1-4144-a3a5-c89d56d855ad\"> <span class=\"xSecondary\">1.005</span> <span class=\"xSecondary\"> - </span> <span class=\"xSecondary\">1.030</span> </span> <br></br> </td> </tr>  </tbody> </table></div>",
+              "_status": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                    "valueCode": "unknown"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "title": "Social History",
+            "code": {
+              "coding": [
+                {
+                  "code": "29762-2",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:fd730376-ac3c-48c2-b0c5-9984508855c9"
+              }
+            ],
+            "text": {
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul> <caption>Smoking Status</caption> <li id=\"SmokingStatus\"> <span>Status: Current every day smoker</span> <span id=\"SmokingDetail1\">Detail: Moderate smoker (10-19 cigs/day)</span> <span>Started: 1992</span> <span>Stopped:</span> <span>Recorded June 6, 2014 10:32am</span> </li> </ul></div>",
+              "_status": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                    "valueCode": "unknown"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "title": "Vital Signs",
+            "code": {
+              "coding": [
+                {
+                  "code": "8716-3",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:2523292c-d56a-4a1d-b187-4811ae23fb43"
+              }
+            ],
+            "text": {
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table> <thead> <tr> <th>Date</th> <th>Pulse</th>  </tr> </thead> <tbody> <tr> <td>05/20/2014 7:36pm</td> <td id=\"Pulse_1\">80 /min</td>  </tr> </tbody> </table></div>",
+              "_status": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                    "valueCode": "unknown"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "title": "Consultation Notes",
+            "code": {
+              "text": "Consultation note",
+              "coding": [
+                {
+                  "code": "11488-4",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:90c3eba6-22ff-4c35-af8e-3435e16a4499"
+              }
+            ],
+            "text": {
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li id=\"ConsultNote1\">\n\t\t\t\t\t\t\t\t<div>Dr. Specialist - September 8, 2016</div>\n\t\t\t\t\t\t\t\t<div> Dear Dr. Henry Leven: Thank you for referring Ms. Jones for evaluation. Approximately 18 years ago, she was hospitalized with a bleeding\n                    ulcer. She had a CT scan of the abdomen, which revealed findings consistent with\n                    focal nodular hyperplasia (FNH). She has had epigastric abdominal pain as well\n                    as a significant change in her bowel movements from baseline constipation to\n                    frequent diarrhea. The past medical history is otherwise negative. She takes no\n                    prescription medications. The remainder of the history is not contributory. </div>\n\t\t\t\t\t\t\t\t<div>Physical examination revealed a well-appearing woman. The vital signs\n                    were normal. The head and neck were unremarkable. The lung fields were clear.\n                    The heart exam was normal. The abdomen was obese with normal bowel sounds. There\n                    was no tenderness, mass, or hepatosplenomegaly. </div>\n\t\t\t\t\t\t\t\t<div>Endoscopic evaluation revealed a normal colonoscopy. Biopsies taken\n                    throughout the colon were essentially unremarkable. Stool tests for pathogenic\n                    organisms were negative. Of note, on the upper endoscopy examination, no\n                    significant abnormalities were seen; however, upon biopsy, features of celiac\n                    disease were noted.</div>\n\t\t\t\t\t\t\t\t<div> In summary, this patient has evidence of celiac disease. We\n                    discussed the diagnosis in detail in the office. She was advised to undertake a\n                    lifelong gluten-free diet. Followup laboratories in my office were notable for a\n                    low serum iron with a low-normal ferritin. The bone density was normal. Repeat\n                    triple-phase CT scan of the liver revealed no change in the right hepatic lobe\n                    lesion, which is consistent with FNH. I advised periodic reevaluation of the\n                    liver with imaging, as well as followup for any potential development of\n                    nutritional deficiencies. She should take an iron supplement and continue on a\n                    lifelong gluten-free diet. </div>\n\t\t\t\t\t\t\t\t<div>Thank you for the courtesy of this referral. I would be pleased to see\n                    Ms. Jones in followup.</div>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t</div>",
+              "_status": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                    "valueCode": "unknown"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "attester": [
+          {
+            "mode": "official",
+            "party": {
+              "reference": "urn:uuid:537f4108-705d-4f6a-9946-265f5615e2bc"
+            },
+            "time": "2016-10-03T18:27:10Z"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a4986486-6599-4bb2-a7fb-e2deb8d50b5e",
+      "resource": {
+        "resourceType": "Patient",
+        "identifier": [
+          {
+            "value": "160920144139807",
+            "system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3"
+          }
+        ],
+        "birthDate": "1947-05-01",
+        "address": [
+          {
+            "line": [
+              "1357 Amber Drive"
+            ],
+            "city": "Beaverton",
+            "state": "OR",
+            "postalCode": "97006",
+            "use": "home"
+          }
+        ],
+        "name": [
+          {
+            "given": [
+              "Myra"
+            ],
+            "family": "Jones",
+            "use": "official"
+          }
+        ],
+        "gender": "female",
+        "managingOrganization": {
+          "reference": "urn:uuid:ab1e6bb9-1eb9-4c86-ba25-e3df2579c405"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+            "extension": [
+              {
+                "url": "text",
+                "valueString": "White"
+              },
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "code": "2106-3",
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "display": "White"
+                }
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "code": "2135-2",
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "display": "Hispanic or Latino"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Hispanic or Latino"
+              }
+            ]
+          }
+        ],
+        "communication": [
+          {
+            "language": {
+              "text": "en",
+              "coding": [
+                {
+                  "code": "en",
+                  "system": "urn:ietf:bcp:47"
+                }
+              ]
+            },
+            "preferred": true
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ab1e6bb9-1eb9-4c86-ba25-e3df2579c405",
+      "resource": {
+        "resourceType": "Organization",
+        "identifier": [
+          {
+            "value": "3",
+            "system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3"
+          }
+        ],
+        "name": "Primary Care's Partners Test",
+        "address": [
+          {
+            "line": [
+              "123 main street"
+            ],
+            "city": "Chicago",
+            "state": "IL",
+            "postalCode": "60629"
+          }
+        ],
+        "telecom": [
+          {
+            "value": "+16768576769",
+            "use": "work",
+            "system": "phone"
+          }
+        ],
+        "active": true
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:26b037cf-980c-4766-8632-03ff9a10c1c1",
+      "resource": {
+        "resourceType": "Organization",
+        "identifier": [
+          {
+            "value": "3",
+            "system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3"
+          }
+        ],
+        "name": "Primary Care's Partners Test",
+        "address": [
+          {
+            "line": [
+              "123 main street"
+            ],
+            "city": "Chicago",
+            "state": "IL",
+            "postalCode": "60629"
+          }
+        ],
+        "telecom": [
+          {
+            "value": "+16768576769",
+            "use": "work",
+            "system": "phone"
+          }
+        ],
+        "active": true
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b2e439ab-e223-481e-bada-a8fdfc437a0c",
+      "resource": {
+        "resourceType": "PractitionerRole",
+        "code": [
+          {
+            "coding": [
+              {
+                "code": "260000000X",
+                "system": "http://nucc.org/provider-taxonomy"
+              }
+            ]
+          }
+        ],
+        "practitioner": {
+          "reference": "urn:uuid:e4cfc17a-3cc9-40d0-aa14-cdaa5f2caebb"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e4cfc17a-3cc9-40d0-aa14-cdaa5f2caebb",
+      "resource": {
+        "resourceType": "Practitioner",
+        "name": [
+          {
+            "given": [
+              "Provider"
+            ],
+            "family": "abc"
+          }
+        ],
+        "telecom": [
+          {
+            "value": "provider@allsripts.com",
+            "system": "email",
+            "use": "work"
+          }
+        ],
+        "identifier": [
+          {
+            "value": "92698",
+            "system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3"
+          },
+          {
+            "value": "1234123400",
+            "system": "http://hl7.org/fhir/sid/us-npi"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:109d68fa-a7da-4287-af14-7a0508406f63",
+      "resource": {
+        "resourceType": "PractitionerRole",
+        "practitioner": {
+          "reference": "urn:uuid:0ae64413-edcd-4393-938e-a07c9860b99b"
+        },
+        "organization": {
+          "reference": "urn:uuid:988db950-1fe3-45c9-8ae3-705a64dc560d"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0ae64413-edcd-4393-938e-a07c9860b99b",
+      "resource": {
+        "resourceType": "Practitioner",
+        "address": [
+          {
+            "line": [
+              "123 main street"
+            ],
+            "city": "Chicago",
+            "state": "IL",
+            "postalCode": "60629",
+            "use": "home"
+          }
+        ],
+        "telecom": [
+          {
+            "value": "+1-(676)857-6769",
+            "system": "phone",
+            "use": "work"
+          }
+        ],
+        "identifier": [
+          {
+            "value": "3",
+            "system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.3.3"
+          }
+        ],
+        "name": [
+          {
+            "_family": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                  "valueCode": "unknown"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:988db950-1fe3-45c9-8ae3-705a64dc560d",
+      "resource": {
+        "resourceType": "Organization",
+        "active": true,
+        "identifier": [
+          {
+            "value": "3",
+            "system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3"
+          }
+        ],
+        "name": "Primary Care's Partners Test",
+        "telecom": [
+          {
+            "value": "+1-(676)857-6769",
+            "system": "phone",
+            "use": "work"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "123 main street"
+            ],
+            "city": "Chicago",
+            "state": "IL",
+            "postalCode": "60629"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:537f4108-705d-4f6a-9946-265f5615e2bc",
+      "resource": {
+        "resourceType": "Practitioner",
+        "name": [
+          {
+            "given": [
+              "Provider"
+            ],
+            "family": "abc"
+          }
+        ],
+        "telecom": [
+          {
+            "value": "provider@abc.com",
+            "system": "email",
+            "use": "work"
+          }
+        ],
+        "identifier": [
+          {
+            "value": "92698",
+            "system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3"
+          },
+          {
+            "value": "1234123400",
+            "system": "http://hl7.org/fhir/sid/us-npi"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e465963c-13fb-4b87-857a-4d2433728762",
+      "resource": {
+        "resourceType": "Encounter",
+        "status": "finished",
+        "class": {
+          "code": "unknown",
+          "system": "http://terminology.hl7.org/CodeSystem/data-absent-reason",
+          "display": "unknown"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "code": "unknown",
+                "system": "http://terminology.hl7.org/CodeSystem/data-absent-reason",
+                "display": "unknown"
+              }
+            ]
+          }
+        ],
+        "period": {
+          "start": "2016-10-03T14:30:00Z",
+          "end": "2016-10-03T18:27:10Z"
+        },
+        "length": {
+          "value": 238,
+          "code": "min",
+          "system": "http://unitsofmeasure.org"
+        },
+        "subject": {
+          "reference": "urn:uuid:a4986486-6599-4bb2-a7fb-e2deb8d50b5e"
+        },
+        "identifier": [
+          {
+            "value": "1149324",
+            "system": "urn:redox:39fdca11-cf15-4175-8f91-4eab4dc78671:VIS"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c8fb1060-2ad3-45a5-8439-9cedb245aa2b",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "identifier": [
+          {
+            "value": "545077400001",
+            "system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.4.10.2"
+          }
+        ],
+        "clinicalStatus": {
+          "text": "Active",
+          "coding": [
+            {
+              "code": "active",
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "display": "Active"
+            }
+          ]
+        },
+        "type": "allergy",
+        "_type": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/originalText",
+              "valueString": "Aspirin TABS"
+            }
+          ]
+        },
+        "category": [
+          "medication"
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "1191",
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm"
+            },
+            {
+              "code": "293586001",
+              "system": "http://snomed.info/sct"
+            }
+          ]
+        },
+        "patient": {
+          "reference": "urn:uuid:a4986486-6599-4bb2-a7fb-e2deb8d50b5e"
+        },
+        "encounter": {
+          "reference": "urn:uuid:e465963c-13fb-4b87-857a-4d2433728762"
+        },
+        "onsetDateTime": "2008-05-01",
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "Hives",
+                "coding": [
+                  {
+                    "code": "247472004",
+                    "system": "http://snomed.info/sct"
+                  }
+                ]
+              }
+            ],
+            "description": "Hives",
+            "severity": "severe"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1a1f3f84-ff0f-48d2-aab3-694ecb86950f",
+      "resource": {
+        "resourceType": "Encounter",
+        "identifier": [
+          {
+            "value": "urn:uuid:2a620155-9d11-439e-92b3-5d9815ff4de8",
+            "system": "urn:ietf:rfc:3986"
+          }
+        ],
+        "status": "in-progress",
+        "class": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/originalText",
+              "valueString": "Office outpatient visit"
+            }
+          ]
+        },
+        "type": [
+          {
+            "text": "Office outpatient visit",
+            "coding": [
+              {
+                "code": "99213",
+                "system": "http://www.ama-assn.org/go/cpt"
+              }
+            ]
+          }
+        ],
+        "participant": [
+          {
+            "individual": {
+              "reference": "urn:uuid:7d351e58-88fd-414c-b5a3-43e20968c6d1"
+            },
+            "type": [
+              {
+                "text": "PRF",
+                "coding": [
+                  {
+                    "code": "PRF",
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "display": "performer"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:a4986486-6599-4bb2-a7fb-e2deb8d50b5e"
+        },
+        "period": {
+          "start": "2012-08-15T10:00:00-08:00"
+        },
+        "diagnosis": [
+          {
+            "condition": {
+              "reference": "urn:uuid:b420c540-b5b3-4e24-a16f-d483fb66bbc9"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7d351e58-88fd-414c-b5a3-43e20968c6d1",
+      "resource": {
+        "resourceType": "PractitionerRole",
+        "code": [
+          {
+            "text": "Internal Medicine",
+            "coding": [
+              {
+                "code": "207R00000X",
+                "system": "http://nucc.org/provider-taxonomy",
+                "display": "Internal Medicine"
+              }
+            ]
+          }
+        ],
+        "practitioner": {
+          "reference": "urn:uuid:ea7ecaff-d526-47c1-a563-1008d9d8b194"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ea7ecaff-d526-47c1-a563-1008d9d8b194",
+      "resource": {
+        "resourceType": "Practitioner",
+        "name": [
+          {
+            "given": [
+              "Samir"
+            ],
+            "family": "Khan",
+            "prefix": [
+              "Dr."
+            ]
+          }
+        ],
+        "identifier": [
+          {
+            "value": "12345678910",
+            "system": "http://hl7.org/fhir/sid/us-npi"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b420c540-b5b3-4e24-a16f-d483fb66bbc9",
+      "resource": {
+        "resourceType": "Condition",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "encounter-diagnosis"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:a4986486-6599-4bb2-a7fb-e2deb8d50b5e"
+        },
+        "encounter": {
+          "reference": "urn:uuid:1a1f3f84-ff0f-48d2-aab3-694ecb86950f"
+        },
+        "code": {
+          "text": "Costal Chondritis",
+          "coding": [
+            {
+              "code": "64109004",
+              "system": "http://snomed.info/sct"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:83bf95d4-01d6-4548-87fe-3212860d9c62",
+      "resource": {
+        "resourceType": "Immunization",
+        "identifier": [
+          {
+            "value": "urn:uuid:e6f1ba43-c0ed-4b9b-9f12-f435d8ad8f92",
+            "system": "urn:ietf:rfc:3986"
+          }
+        ],
+        "status": "completed",
+        "vaccineCode": {
+          "text": "Influenza Virus Vaccine",
+          "coding": [
+            {
+              "code": "88",
+              "system": "http://hl7.org/fhir/sid/cvx"
+            }
+          ]
+        },
+        "patient": {
+          "reference": "urn:uuid:a4986486-6599-4bb2-a7fb-e2deb8d50b5e"
+        },
+        "encounter": {
+          "reference": "urn:uuid:e465963c-13fb-4b87-857a-4d2433728762"
+        },
+        "occurrenceDateTime": "2010-08-15",
+        "lotNumber": "1",
+        "_primarySource": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+              "valueCode": "unknown"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:048cdf85-bba8-4021-8500-0f418f45ce1c",
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "identifier": [
+          {
+            "value": "urn:uuid:cdbd33f0-6cde-11db-9fe1-0800200c9a66",
+            "system": "urn:ietf:rfc:3986"
+          }
+        ],
+        "status": "active",
+        "medicationCodeableConcept": {
+          "text": "Albuterol 0.09 MG/ACTUAT inhalant powder",
+          "coding": [
+            {
+              "code": "582498",
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:a4986486-6599-4bb2-a7fb-e2deb8d50b5e"
+        },
+        "context": {
+          "reference": "urn:uuid:e465963c-13fb-4b87-857a-4d2433728762"
+        },
+        "effectivePeriod": {
+          "start": "2012-08-06"
+        },
+        "dosage": [
+          {
+            "timing": {
+              "repeat": {
+                "boundsPeriod": {
+                  "start": "2012-08-06"
+                }
+              }
+            },
+            "asNeededBoolean": false,
+            "doseAndRate": [
+              {
+                "doseQuantity": {
+                  "value": 1
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ccbe4315-99ac-424c-9847-ff9f56a0383b",
+      "resource": {
+        "resourceType": "ServiceRequest",
+        "identifier": [
+          {
+            "value": "urn:uuid:2a620155-9d11-439e-92b3-5d9815ff4dd4",
+            "system": "urn:ietf:rfc:3986"
+          }
+        ],
+        "status": "active",
+        "intent": "plan",
+        "code": {
+          "text": "Weight Loss",
+          "coding": [
+            {
+              "code": "289169006",
+              "system": "http://snomed.info/sct"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:a4986486-6599-4bb2-a7fb-e2deb8d50b5e"
+        },
+        "encounter": {
+          "reference": "urn:uuid:e465963c-13fb-4b87-857a-4d2433728762"
+        },
+        "occurrenceDateTime": "2012-08-15T10:00:00-08:00",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "Orders",
+                "system": "urn:redox:plan_of_care_type"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fa2e92b3-f15c-40b1-953b-9690e02a5e0a",
+      "resource": {
+        "resourceType": "Condition",
+        "identifier": [
+          {
+            "value": "545069300001",
+            "system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.4.1.2.1"
+          }
+        ],
+        "clinicalStatus": {
+          "text": "active",
+          "coding": [
+            {
+              "code": "active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "display": "Active"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:a4986486-6599-4bb2-a7fb-e2deb8d50b5e"
+        },
+        "encounter": {
+          "reference": "urn:uuid:e465963c-13fb-4b87-857a-4d2433728762"
+        },
+        "onsetDateTime": "2012-08-06",
+        "code": {
+          "text": "Pneumonia",
+          "coding": [
+            {
+              "code": "233604007",
+              "system": "http://snomed.info/sct"
+            },
+            {
+              "code": "486",
+              "system": "http://hl7.org/fhir/sid/icd-9-cm"
+            },
+            {
+              "code": "J18.9",
+              "system": "http://hl7.org/fhir/sid/icd-10-cm"
+            },
+            {
+              "code": "87580",
+              "system": "urn:oid:2.16.840.1.113883.3.247.1.1"
+            }
+          ]
+        },
+        "category": [
+          {
+            "text": "Pneumonia",
+            "coding": [
+              {
+                "code": "55607006",
+                "system": "http://snomed.info/sct"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ec65c956-ec70-4233-b5a6-685060bce891",
+      "resource": {
+        "resourceType": "Condition",
+        "identifier": [
+          {
+            "value": "545077400017",
+            "system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.4.1.2.1"
+          }
+        ],
+        "clinicalStatus": {
+          "text": "active",
+          "coding": [
+            {
+              "code": "active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "display": "Active"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:a4986486-6599-4bb2-a7fb-e2deb8d50b5e"
+        },
+        "encounter": {
+          "reference": "urn:uuid:e465963c-13fb-4b87-857a-4d2433728762"
+        },
+        "code": {
+          "text": "Asthma",
+          "coding": [
+            {
+              "code": "195967001",
+              "system": "http://snomed.info/sct"
+            },
+            {
+              "code": "493.90",
+              "system": "http://hl7.org/fhir/sid/icd-9-cm"
+            },
+            {
+              "code": "J45.909",
+              "system": "http://hl7.org/fhir/sid/icd-10-cm"
+            },
+            {
+              "code": "94262",
+              "system": "urn:oid:2.16.840.1.113883.3.247.1.1"
+            }
+          ]
+        },
+        "category": [
+          {
+            "text": "Asthma",
+            "coding": [
+              {
+                "code": "55607006",
+                "system": "http://snomed.info/sct"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1579c6d3-bfcb-4354-ae88-ae554d668fc7",
+      "resource": {
+        "resourceType": "Procedure",
+        "identifier": [
+          {
+            "value": "545069400001",
+            "system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.4.7"
+          }
+        ],
+        "status": "unknown",
+        "_status": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/originalText",
+              "valueString": "active"
+            }
+          ]
+        },
+        "code": {
+          "text": "H/O chest x-ray",
+          "coding": [
+            {
+              "code": "416940007",
+              "system": "http://snomed.info/sct"
+            },
+            {
+              "code": "V15.89",
+              "system": "http://hl7.org/fhir/sid/icd-9-cm"
+            },
+            {
+              "code": "Z92.89",
+              "system": "http://hl7.org/fhir/sid/icd-10-cm"
+            },
+            {
+              "code": "2782946",
+              "system": "urn:oid:2.16.840.1.113883.3.247.1.1"
+            }
+          ]
+        },
+        "category": {
+          "text": "Procedures",
+          "coding": [
+            {
+              "code": "Procedures",
+              "system": "urn:redox:procedure_act_type"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:a4986486-6599-4bb2-a7fb-e2deb8d50b5e"
+        },
+        "encounter": {
+          "reference": "urn:uuid:e465963c-13fb-4b87-857a-4d2433728762"
+        },
+        "_performedDateTime": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+              "valueCode": "unknown"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:38f61ff1-9fc6-4a7c-91b8-80af1bdfc5a1",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "identifier": [
+          {
+            "value": "1",
+            "system": "urn:oid:1.3.6.1.4.1.22812.20.1.1.4.5"
+          }
+        ],
+        "status": "final",
+        "code": {
+          "text": "Urinanalysis macro (dipstick) panel",
+          "coding": [
+            {
+              "code": "24357-6",
+              "system": "http://loinc.org"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:a4986486-6599-4bb2-a7fb-e2deb8d50b5e"
+        },
+        "encounter": {
+          "reference": "urn:uuid:e465963c-13fb-4b87-857a-4d2433728762"
+        },
+        "effectiveDateTime": "2015-06-22",
+        "result": [
+          {
+            "reference": "urn:uuid:9022313b-5a8e-40db-8ef0-9676479e5d80"
+          }
+        ],
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "unknown",
+                "system": "http://terminology.hl7.org/CodeSystem/data-absent-reason",
+                "display": "unknown"
+              }
+            ]
+          }
+        ],
+        "issued": "2015-06-22T00:00:00.000Z",
+        "performer": [
+          {
+            "reference": "urn:uuid:cc5ac768-7156-48d6-af05-be9e9d979bf3"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9022313b-5a8e-40db-8ef0-9676479e5d80",
+      "resource": {
+        "resourceType": "Observation",
+        "identifier": [
+          {
+            "value": "13",
+            "system": "urn:oid:1.3.6.1.4.1.22812.20.1.1.4.5"
+          }
+        ],
+        "status": "final",
+        "subject": {
+          "reference": "urn:uuid:a4986486-6599-4bb2-a7fb-e2deb8d50b5e"
+        },
+        "encounter": {
+          "reference": "urn:uuid:e465963c-13fb-4b87-857a-4d2433728762"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "unknown",
+                "system": "http://terminology.hl7.org/CodeSystem/data-absent-reason",
+                "display": "unknown"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "text": "Specific gravity of Urine by Test strip",
+          "coding": [
+            {
+              "code": "5811-5",
+              "system": "http://loinc.org"
+            }
+          ]
+        },
+        "issued": "2015-06-22T00:00:00.000Z",
+        "effectiveDateTime": "2015-06-22",
+        "valueQuantity": {
+          "value": 1.015,
+          "unit": "1"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 1.005
+            },
+            "high": {
+              "value": 1.03,
+              "_value": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/quantity-precision",
+                    "valueInteger": 3
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:cc5ac768-7156-48d6-af05-be9e9d979bf3",
+      "resource": {
+        "resourceType": "Organization",
+        "name": "Value Labs",
+        "address": [
+          {
+            "line": [
+              "2474, Rocky place"
+            ],
+            "city": "Beaverton",
+            "state": "OR",
+            "postalCode": "97006"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fd730376-ac3c-48c2-b0c5-9984508855c9",
+      "resource": {
+        "resourceType": "Observation",
+        "identifier": [
+          {
+            "value": "123456789",
+            "system": "urn:oid:2.16.840.1.113883.19"
+          }
+        ],
+        "status": "final",
+        "subject": {
+          "reference": "urn:uuid:a4986486-6599-4bb2-a7fb-e2deb8d50b5e"
+        },
+        "encounter": {
+          "reference": "urn:uuid:e465963c-13fb-4b87-857a-4d2433728762"
+        },
+        "category": [
+          {
+            "text": "social-history",
+            "coding": [
+              {
+                "code": "social-history",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "display": "Social History"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "text": "Tobacco smoking status",
+          "coding": [
+            {
+              "code": "72166-2",
+              "system": "http://loinc.org"
+            }
+          ]
+        },
+        "issued": "2014-06-06T10:32:00.000-05:00",
+        "effectiveDateTime": "2014-06-06T10:32:00-05:00",
+        "valueCodeableConcept": {
+          "text": "Current every day smoker",
+          "coding": [
+            {
+              "code": "449868002",
+              "system": "http://snomed.info/sct"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2523292c-d56a-4a1d-b187-4811ae23fb43",
+      "resource": {
+        "resourceType": "Observation",
+        "identifier": [
+          {
+            "value": "21688133041015158234",
+            "system": "urn:oid:2.16.840.1.113883.3.42.126.100001.19"
+          }
+        ],
+        "status": "final",
+        "subject": {
+          "reference": "urn:uuid:a4986486-6599-4bb2-a7fb-e2deb8d50b5e"
+        },
+        "encounter": {
+          "reference": "urn:uuid:e465963c-13fb-4b87-857a-4d2433728762"
+        },
+        "category": [
+          {
+            "text": "vital-signs",
+            "coding": [
+              {
+                "code": "vital-signs",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "text": "Vital Signs Panel",
+          "coding": [
+            {
+              "code": "85353-1",
+              "system": "http://loinc.org"
+            }
+          ]
+        },
+        "effectiveDateTime": "2014-05-20T19:36:05-06:00",
+        "hasMember": [
+          {
+            "reference": "urn:uuid:2706b021-8e7a-4773-ada9-49c0d8e4ba14"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2706b021-8e7a-4773-ada9-49c0d8e4ba14",
+      "resource": {
+        "resourceType": "Observation",
+        "identifier": [
+          {
+            "value": "216881330410151584",
+            "system": "urn:oid:2.16.840.1.113883.3.42.126.100001.19"
+          }
+        ],
+        "status": "final",
+        "subject": {
+          "reference": "urn:uuid:a4986486-6599-4bb2-a7fb-e2deb8d50b5e"
+        },
+        "encounter": {
+          "reference": "urn:uuid:e465963c-13fb-4b87-857a-4d2433728762"
+        },
+        "category": [
+          {
+            "text": "vital-signs",
+            "coding": [
+              {
+                "code": "vital-signs",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "text": "HEART RATE",
+          "coding": [
+            {
+              "code": "8867-4",
+              "system": "http://loinc.org"
+            }
+          ]
+        },
+        "effectiveDateTime": "2014-05-20T19:36:05-06:00",
+        "valueQuantity": {
+          "value": 80,
+          "unit": "/min"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:90c3eba6-22ff-4c35-af8e-3435e16a4499",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "subject": {
+          "reference": "urn:uuid:a4986486-6599-4bb2-a7fb-e2deb8d50b5e"
+        },
+        "type": {
+          "text": "Note",
+          "coding": [
+            {
+              "code": "34109-9",
+              "system": "http://loinc.org"
+            },
+            {
+              "code": "11488-4",
+              "system": "http://loinc.org",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/originalText",
+                  "valueString": "Consultation note"
+                }
+              ]
+            }
+          ]
+        },
+        "category": [
+          {
+            "text": "Clinical Note",
+            "coding": [
+              {
+                "code": "clinical-note",
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+                "display": "Clinical Note"
+              }
+            ]
+          }
+        ],
+        "content": [
+          {
+            "attachment": {
+              "data": "PGRpdiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94aHRtbCI+PGxpIGlkPSJDb25zdWx0Tm90ZTEiPjxkaXY+RHIuIFNwZWNpYWxpc3QgLSBTZXB0ZW1iZXIgOCwgMjAxNjwvZGl2PjxkaXY+RGVhciBEci4gSGVucnkgTGV2ZW46IFRoYW5rIHlvdSBmb3IgcmVmZXJyaW5nIE1zLiBKb25lcyBmb3IgZXZhbHVhdGlvbi4gQXBwcm94aW1hdGVseSAxOCB5ZWFycyBhZ28sIHNoZSB3YXMgaG9zcGl0YWxpemVkIHdpdGggYSBibGVlZGluZwogICAgICAgICAgICAgICAgICAgIHVsY2VyLiBTaGUgaGFkIGEgQ1Qgc2NhbiBvZiB0aGUgYWJkb21lbiwgd2hpY2ggcmV2ZWFsZWQgZmluZGluZ3MgY29uc2lzdGVudCB3aXRoCiAgICAgICAgICAgICAgICAgICAgZm9jYWwgbm9kdWxhciBoeXBlcnBsYXNpYSAoRk5IKS4gU2hlIGhhcyBoYWQgZXBpZ2FzdHJpYyBhYmRvbWluYWwgcGFpbiBhcyB3ZWxsCiAgICAgICAgICAgICAgICAgICAgYXMgYSBzaWduaWZpY2FudCBjaGFuZ2UgaW4gaGVyIGJvd2VsIG1vdmVtZW50cyBmcm9tIGJhc2VsaW5lIGNvbnN0aXBhdGlvbiB0bwogICAgICAgICAgICAgICAgICAgIGZyZXF1ZW50IGRpYXJyaGVhLiBUaGUgcGFzdCBtZWRpY2FsIGhpc3RvcnkgaXMgb3RoZXJ3aXNlIG5lZ2F0aXZlLiBTaGUgdGFrZXMgbm8KICAgICAgICAgICAgICAgICAgICBwcmVzY3JpcHRpb24gbWVkaWNhdGlvbnMuIFRoZSByZW1haW5kZXIgb2YgdGhlIGhpc3RvcnkgaXMgbm90IGNvbnRyaWJ1dG9yeS48L2Rpdj48ZGl2PlBoeXNpY2FsIGV4YW1pbmF0aW9uIHJldmVhbGVkIGEgd2VsbC1hcHBlYXJpbmcgd29tYW4uIFRoZSB2aXRhbCBzaWducwogICAgICAgICAgICAgICAgICAgIHdlcmUgbm9ybWFsLiBUaGUgaGVhZCBhbmQgbmVjayB3ZXJlIHVucmVtYXJrYWJsZS4gVGhlIGx1bmcgZmllbGRzIHdlcmUgY2xlYXIuCiAgICAgICAgICAgICAgICAgICAgVGhlIGhlYXJ0IGV4YW0gd2FzIG5vcm1hbC4gVGhlIGFiZG9tZW4gd2FzIG9iZXNlIHdpdGggbm9ybWFsIGJvd2VsIHNvdW5kcy4gVGhlcmUKICAgICAgICAgICAgICAgICAgICB3YXMgbm8gdGVuZGVybmVzcywgbWFzcywgb3IgaGVwYXRvc3BsZW5vbWVnYWx5LjwvZGl2PjxkaXY+RW5kb3Njb3BpYyBldmFsdWF0aW9uIHJldmVhbGVkIGEgbm9ybWFsIGNvbG9ub3Njb3B5LiBCaW9wc2llcyB0YWtlbgogICAgICAgICAgICAgICAgICAgIHRocm91Z2hvdXQgdGhlIGNvbG9uIHdlcmUgZXNzZW50aWFsbHkgdW5yZW1hcmthYmxlLiBTdG9vbCB0ZXN0cyBmb3IgcGF0aG9nZW5pYwogICAgICAgICAgICAgICAgICAgIG9yZ2FuaXNtcyB3ZXJlIG5lZ2F0aXZlLiBPZiBub3RlLCBvbiB0aGUgdXBwZXIgZW5kb3Njb3B5IGV4YW1pbmF0aW9uLCBubwogICAgICAgICAgICAgICAgICAgIHNpZ25pZmljYW50IGFibm9ybWFsaXRpZXMgd2VyZSBzZWVuOyBob3dldmVyLCB1cG9uIGJpb3BzeSwgZmVhdHVyZXMgb2YgY2VsaWFjCiAgICAgICAgICAgICAgICAgICAgZGlzZWFzZSB3ZXJlIG5vdGVkLjwvZGl2PjxkaXY+SW4gc3VtbWFyeSwgdGhpcyBwYXRpZW50IGhhcyBldmlkZW5jZSBvZiBjZWxpYWMgZGlzZWFzZS4gV2UKICAgICAgICAgICAgICAgICAgICBkaXNjdXNzZWQgdGhlIGRpYWdub3NpcyBpbiBkZXRhaWwgaW4gdGhlIG9mZmljZS4gU2hlIHdhcyBhZHZpc2VkIHRvIHVuZGVydGFrZSBhCiAgICAgICAgICAgICAgICAgICAgbGlmZWxvbmcgZ2x1dGVuLWZyZWUgZGlldC4gRm9sbG93dXAgbGFib3JhdG9yaWVzIGluIG15IG9mZmljZSB3ZXJlIG5vdGFibGUgZm9yIGEKICAgICAgICAgICAgICAgICAgICBsb3cgc2VydW0gaXJvbiB3aXRoIGEgbG93LW5vcm1hbCBmZXJyaXRpbi4gVGhlIGJvbmUgZGVuc2l0eSB3YXMgbm9ybWFsLiBSZXBlYXQKICAgICAgICAgICAgICAgICAgICB0cmlwbGUtcGhhc2UgQ1Qgc2NhbiBvZiB0aGUgbGl2ZXIgcmV2ZWFsZWQgbm8gY2hhbmdlIGluIHRoZSByaWdodCBoZXBhdGljIGxvYmUKICAgICAgICAgICAgICAgICAgICBsZXNpb24sIHdoaWNoIGlzIGNvbnNpc3RlbnQgd2l0aCBGTkguIEkgYWR2aXNlZCBwZXJpb2RpYyByZWV2YWx1YXRpb24gb2YgdGhlCiAgICAgICAgICAgICAgICAgICAgbGl2ZXIgd2l0aCBpbWFnaW5nLCBhcyB3ZWxsIGFzIGZvbGxvd3VwIGZvciBhbnkgcG90ZW50aWFsIGRldmVsb3BtZW50IG9mCiAgICAgICAgICAgICAgICAgICAgbnV0cml0aW9uYWwgZGVmaWNpZW5jaWVzLiBTaGUgc2hvdWxkIHRha2UgYW4gaXJvbiBzdXBwbGVtZW50IGFuZCBjb250aW51ZSBvbiBhCiAgICAgICAgICAgICAgICAgICAgbGlmZWxvbmcgZ2x1dGVuLWZyZWUgZGlldC48L2Rpdj48ZGl2PlRoYW5rIHlvdSBmb3IgdGhlIGNvdXJ0ZXN5IG9mIHRoaXMgcmVmZXJyYWwuIEkgd291bGQgYmUgcGxlYXNlZCB0byBzZWUKICAgICAgICAgICAgICAgICAgICBNcy4gSm9uZXMgaW4gZm9sbG93dXAuPC9kaXY+PC9saT48L2Rpdj4=",
+              "contentType": "application/xhtml+xml"
+            }
+          }
+        ],
+        "context": {
+          "period": {
+            "low": "2016-09-08"
+          },
+          "encounter": [
+            {
+              "reference": "urn:uuid:e465963c-13fb-4b87-857a-4d2433728762"
+            }
+          ]
+        },
+        "date": "2016-09-08T08:32:15-05:00",
+        "status": "current",
+        "author": [
+          {
+            "reference": "urn:uuid:c260428d-70a9-465a-914d-0fb962bc6915"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c260428d-70a9-465a-914d-0fb962bc6915",
+      "resource": {
+        "resourceType": "Practitioner",
+        "name": [
+          {
+            "family": "Specialist",
+            "prefix": [
+              "Dr."
+            ]
+          }
+        ],
+        "identifier": [
+          {
+            "value": "urn:uuid:20cf14fb-b65c-4c8c-a54d-b0cca834c18c",
+            "system": "urn:ietf:rfc:3986"
+          }
+        ]
+      }
+    }
+  ],
+  "identifier": {
+    "system": "urn:redox:transmission-id",
+    "value": "4699973319"
+  },
+  "timestamp": "2022-09-17T14:59:24.793Z",
+  "id": "bundle-document-4699973319",
+  "type": "document",
+  "resourceType": "Bundle"
+}
