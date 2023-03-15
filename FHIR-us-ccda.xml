@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/ccda/2017Jan" ciUrl="http://build.fhir.org/ig/HL7/ccda-on-fhir-r4" defaultVersion="1.1.0" defaultWorkgroup="sd" gitUrl="https://github.com/HL7/ccda-on-fhir" url="http://hl7.org/fhir/us/ccda">
-<version code="current" url="http://build.fhir.org/ig/HL7/ccda-on-fhir-r4"/>
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/ccda/2017Jan" ciUrl="http://build.fhir.org/ig/HL7/ccda-on-fhir" defaultVersion="1.2.0" defaultWorkgroup="sd" gitUrl="https://github.com/HL7/ccda-on-fhir" url="http://hl7.org/fhir/us/ccda">
+<version code="current" url="http://build.fhir.org/ig/HL7/ccda-on-fhir"/>
+<version code="1.2.0" url="http://hl7.org/fhir/us/ccda/"/>
 <version code="1.1.0" url="http://hl7.org/fhir/us/ccda/STU1.1"/>
 <version code="1.0.0" url="http://hl7.org/fhir/us/ccda/STU1"/>
 <version code="1.8.0" url="http://hl7.org/fhir/us/ccda/2017Jan"/>
