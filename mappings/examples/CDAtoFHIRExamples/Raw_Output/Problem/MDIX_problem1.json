@@ -1,0 +1,58 @@
+		{
+			"request": {
+				"method": "POST",
+				"url": "Condition"
+			},
+			"resource": {
+				"identifier": [
+					{
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.4.1.2.1",
+						"value": "545069300001"
+					},
+					{
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.4.1.2.1",
+						"value": "545069300001"
+					}
+				],
+				"code": {
+					"coding": [
+						{
+							"system": "urn:oid:2.16.840.1.113883.6.96",
+							"code": "233604007"
+						},
+						{
+							"system": "urn:oid:2.16.840.1.113883.6.103",
+							"code": "486"
+						},
+						{
+							"system": "urn:oid:2.16.840.1.113883.6.90",
+							"code": "J18.9"
+						},
+						{
+							"system": "urn:oid:2.16.840.1.113883.3.247.1.1",
+							"code": "87580"
+						}
+					],
+					"text": ""
+				},
+				"onsetPeriod": {
+					"start": "2012-08-06"
+				},
+				"subject": {
+					"reference": "Patient/160920144139807"
+				},
+				"id": "545069300001",
+				"category": [
+					{
+						"coding": [
+							{
+								"system": "urn: oid: 2.16.840.1.113883.6.96",
+								"code": "55607006"
+							}
+						]
+					}
+				],
+				"resourceType": "Condition"
+			},
+			"fullUrl": "Condition/545069300001"
+		}

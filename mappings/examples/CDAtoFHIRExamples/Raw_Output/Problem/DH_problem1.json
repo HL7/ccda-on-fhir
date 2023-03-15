@@ -1,0 +1,74 @@
+{
+	"fullUrl": "http://fhir:3447/4_0_0/Condition/62f17e2aa2392d0008fbb22e",
+	"resource": {
+		"resourceType": "Condition",
+		"id": "62f17e2aa2392d0008fbb22e",
+		"meta": {
+			"profile": ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"]
+		},
+		"language": "en-US",
+		"text": {
+			"status": "generated",
+			"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pneumonia</div>"
+		},
+		"extension": [{
+			"url": "http://hl7.org/fhir/StructureDefinition/condition-diseaseCourse",
+			"valueCodeableConcept": {
+				"coding": [{
+					"system": "http://www.snomed.org/",
+					"code": "278499009",
+					"display": "Episodic"
+				}]
+			}
+		},
+		{
+			"url": "http://hl7.org/fhir/StructureDefinition/condition-diseaseClassification",
+			"valueCodeableConcept": {
+				"coding": [{
+					"system": "urn:oid:2.16.840.1.113883.6.115",
+					"code": "0122",
+					"display": "Pneumonia (except that caused by tuberculosis or sexually transmitted disease)"
+				}]
+			}
+		}],
+		"identifier": [{
+			"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.4.1.2.1",
+			"value": "545069300001"
+		}],
+		"clinicalStatus": {
+			"coding": [{
+				"system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+				"code": "inactive",
+				"display": "Inactive"
+			}]
+		},
+		"category": [{
+			"coding": [{
+				"system": "http://terminology.hl7.org/CodeSystem/condition-category",
+				"code": "problem-list-item",
+				"display": "Problem List Item"
+			}]
+		}],
+		"code": {
+			"coding": [{
+				"system": "http://www.snomed.org/",
+				"code": "233604007",
+				"display": "Pneumonia"
+			}]
+		},
+		"subject": {
+			"reference": "Patient/62f17e29b7532c0009e217b7",
+			"display": "Myra Jones"
+		},
+		"onsetDateTime": "2012-08-06T16:00:00.000Z",
+		"recordedDate": "2012-08-06T16:00:00.000Z",
+		"recorder": {
+			"reference": "Practitioner/62f17e2ae0231200076884cd",
+			"identifier": {
+				"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+				"value": "92698"
+			},
+			"display": "Provider abc"
+		}
+	}
+}

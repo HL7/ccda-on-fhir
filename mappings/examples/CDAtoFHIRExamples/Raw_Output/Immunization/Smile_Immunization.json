@@ -1,0 +1,72 @@
+{
+    "resourceType": "Bundle",
+    "id": "89fdde2c-8e3a-430b-9daf-c98959a9a01e",
+    "meta": {
+        "lastUpdated": "2022-11-17T20:25:09.922+00:00"
+    },
+    "type": "searchset",
+    "total": 1,
+    "link": [
+        {
+            "relation": "self",
+            "url": "http://localhost:8000/Immunization"
+        }
+    ],
+    "entry": [
+        {
+            "fullUrl": "http://localhost:8000/Immunization/25218",
+            "resource": {
+                "resourceType": "Immunization",
+                "id": "25218",
+                "meta": {
+                    "versionId": "1",
+                    "lastUpdated": "2022-11-17T16:31:11.661+00:00"
+                },
+                "identifier": [
+                    {
+                        "use": "official",
+                        "value": "e6f1ba43-c0ed-4b9b-9f12-f435d8ad8f92"
+                    }
+                ],
+                "status": "completed",
+                "vaccineCode": {
+                    "coding": [
+                        {
+                            "system": "http://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx",
+                            "code": "88",
+                            "display": "Influenza virus vaccine"
+                        }
+                    ],
+                    "text": "Influenza Virus Vaccine"
+                },
+                "patient": {
+                    "reference": "Patient/25209",
+                    "display": "Myra Jones"
+                },
+                "occurrenceDateTime": "2010-08-15",
+                "primarySource": true,
+                "lotNumber": "1",
+                "performer": [
+                    {
+                        "function": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/v2/0443",
+                                    "code": "AP",
+                                    "display": "Administering Provider"
+                                }
+                            ]
+                        },
+                        "actor": {
+                            "reference": "Practitioner/25219",
+                            "display": "Amanda Assigned"
+                        }
+                    }
+                ]
+            },
+            "search": {
+                "mode": "match"
+            }
+        }
+    ]
+}

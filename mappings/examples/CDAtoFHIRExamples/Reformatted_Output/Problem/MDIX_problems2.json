@@ -1,0 +1,64 @@
+{
+  "fullUrl": "Condition/db734647-fc99-424c-a864-7e3cda82e704",
+  "request": {
+    "method": "POST",
+    "url": "Condition"
+  },
+  "resource": {
+    "resourceType": "Condition",
+    "id": "db734647-fc99-424c-a864-7e3cda82e704",
+    "identifier": [
+      {
+        "value": "db734647-fc99-424c-a864-7e3cda82e704"
+      }
+    ],
+    "category": [
+      {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+            "code": "encounter-diagnosis",
+            "display": "Encounter Diagnosis"
+          }
+        ],
+        "text": "Encounter Diagnosis"
+      }
+    ],
+    "code": {
+      "coding": [
+        {
+          "system": "urn:oid:2.16.840.1.113883.6.96",
+          "code": "64109004",
+          "display": "Costal Chondritis"
+        }
+      ]
+    },
+    "subject": {
+      "reference": "Patient/160920144139807"
+    },
+    "onsetPeriod": {
+      "start": "2012-08-15"
+    },
+    "evidence": [
+      {
+        "code": [
+          {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.840.1.113883.6.96",
+                "code": "282291009",
+                "display": "Diagnosis"
+              },
+              {
+                "system": "urn:oid:2.16.840.1.113883.6.1",
+                "code": "29308-4",
+                "display": "Diagnosis"
+              }
+            ],
+            "text": "Diagnosis"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "fullUrl": "http://fhir:3447/4_0_0/MedicationRequest/62f17e2aa2392d0008fbb22c",
+  "resource": {
+    "resourceType": "MedicationRequest",
+    "id": "62f17e2aa2392d0008fbb22c",
+    "meta": {
+      "profile": [
+        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+      ]
+    },
+    "language": "en-US",
+    "identifier": [
+      {
+        "system": "urn:uuid:cdbd33f0-6cde-11db-9fe1-0800200c9a66"
+      }
+    ],
+    "status": "active",
+    "intent": "instance-order",
+    "medicationCodeableConcept": {
+      "coding": [
+        {
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code": "435",
+          "display": "Albuterol"
+        }
+      ]
+    },
+    "subject": {
+      "reference": "Patient/62f17e29b7532c0009e217b7",
+      "display": "Myra Jones"
+    },
+    "requester": {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/extension-data-absent-reason",
+          "valueCode": "unknown"
+        }
+      ]
+    }
+  }
+}

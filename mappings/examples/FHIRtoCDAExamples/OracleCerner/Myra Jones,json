@@ -1,0 +1,1369 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "id": "c2df069a-a376-462d-9600-034627e12e55",
+        "meta": {
+          "extension": [
+            {
+              "url": "https://fhir-ehr.cerner.com/r4/StructureDefinition/transmitting-organization",
+              "valueUri": "urn:oid:2.16.840.1.113883"
+            }
+          ],
+          "security": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+              "code": "N"
+            }
+          ],
+          "tag": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.3.13.10.1.1",
+              "code": "FHIRr4-CR"
+            }
+          ]
+        },
+        "identifier": [
+          {
+            "system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.4.10.2",
+            "value": "545077400001"
+          },
+          {
+            "system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.4.10.2",
+            "value": "545077400003"
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "type": "intolerance",
+        "category": ["medication"],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "1191"
+            },
+            { "system": "http://snomed.info/sct", "code": "293586001" }
+          ]
+        },
+        "patient": { "reference": "Patient/18025725" },
+        "onsetDateTime": "2008-05-01",
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "coding": [
+                  { "system": "http://snomed.info/sct", "code": "247472004" }
+                ],
+                "text": "Hives"
+              }
+            ],
+            "severity": "severe"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "5377242a-0300-427b-8626-5d7ed7134e95",
+        "meta": {
+          "extension": [
+            {
+              "url": "https://fhir-ehr.cerner.com/r4/StructureDefinition/transmitting-organization",
+              "valueUri": "urn:oid:2.16.840.1.113883"
+            }
+          ],
+          "security": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+              "code": "N"
+            }
+          ],
+          "tag": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.3.13.10.1.1",
+              "code": "FHIRr4-CR"
+            }
+          ]
+        },
+        "identifier": [
+          {
+            "system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.4.1.2.1",
+            "value": "545069300001"
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ],
+          "text": "Active"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            { "system": "http://snomed.info/sct", "code": "233604007" },
+            { "system": "urn:oid:2.16.840.1.113883.6.103", "code": "486" },
+            { "system": "urn:oid:2.16.840.1.113883.6.90", "code": "J18.9" },
+            { "system": "urn:oid:2.16.840.1.113883.3.247.1.1", "code": "87580" }
+          ],
+          "text": "Pneumonia"
+        },
+        "subject": { "reference": "Patient/18025725" },
+        "onsetDateTime": "2012-08-06"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "54848580-ea32-4733-a83f-907765b5bf01",
+        "meta": {
+          "extension": [
+            {
+              "url": "https://fhir-ehr.cerner.com/r4/StructureDefinition/transmitting-organization",
+              "valueUri": "urn:oid:2.16.840.1.113883"
+            }
+          ],
+          "security": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+              "code": "N"
+            }
+          ],
+          "tag": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.3.13.10.1.1",
+              "code": "FHIRr4-CR"
+            }
+          ]
+        },
+        "identifier": [
+          {
+            "system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.4.1.2.1",
+            "value": "545077400019"
+          },
+          {
+            "system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.4.1.2.1",
+            "value": "545077400017"
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ],
+          "text": "Active"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            { "system": "http://snomed.info/sct", "code": "195967001" },
+            { "system": "urn:oid:2.16.840.1.113883.6.103", "code": "493.90" },
+            { "system": "urn:oid:2.16.840.1.113883.6.90", "code": "J45.909" },
+            { "system": "urn:oid:2.16.840.1.113883.3.247.1.1", "code": "94262" }
+          ],
+          "text": "Asthma"
+        },
+        "subject": { "reference": "Patient/18025725" }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "daf90574-ed81-4838-90ea-68f3a982057b",
+        "meta": {
+          "extension": [
+            {
+              "url": "https://fhir-ehr.cerner.com/r4/StructureDefinition/transmitting-organization",
+              "valueUri": "urn:oid:2.16.840.1.113883"
+            }
+          ],
+          "security": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+              "code": "N"
+            }
+          ],
+          "tag": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.3.13.10.1.1",
+              "code": "FHIRr4-CR"
+            }
+          ]
+        },
+        "identifier": [
+          {
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:uuid:db734647-fc99-424c-a864-7e3cda82e704"
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ],
+          "text": "Active"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ],
+            "text": "Encounter Diagnosis"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "64109004",
+              "display": "Costal Chondritis"
+            }
+          ],
+          "text": "Costal Chondritis"
+        },
+        "subject": { "reference": "Patient/18025725" },
+        "onsetDateTime": "2012-08-15"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "5560ec42-50e4-4803-87b0-a483c1cf2e2b",
+        "meta": {
+          "extension": [
+            {
+              "url": "https://fhir-ehr.cerner.com/r4/StructureDefinition/transmitting-organization",
+              "valueUri": "urn:oid:2.16.840.1.113883"
+            }
+          ],
+          "security": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "UNCERTREL",
+              "display": "uncertain reliability"
+            }
+          ],
+          "tag": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.3.13.10.1.1",
+              "code": "FHIRr4-CR"
+            }
+          ]
+        },
+        "contained": [
+          {
+            "resourceType": "Organization",
+            "id": "1",
+            "identifier": [
+              {
+                "system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+                "value": "3"
+              }
+            ],
+            "name": "Primary Care's Partners Test"
+          }
+        ],
+        "identifier": [
+          {
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:uuid:e7c22e2a-0be4-4a42-874b-b8789a9e816e"
+          }
+        ],
+        "status": "current",
+        "docStatus": "final",
+        "type": {
+          "coding": [{ "system": "http://loinc.org", "code": "34133-9" }],
+          "text": "Note Summary Documents"
+        },
+        "category": [{ "text": "Clinical Note" }],
+        "subject": { "reference": "Patient/18025725" },
+        "date": "2021-09-23T19:33:56.448+00:00",
+        "author": [{ "reference": "Practitioner/2843959" }],
+        "custodian": { "reference": "#1" },
+        "description": "Radiology Report",
+        "securityLabel": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+                "code": "N"
+              }
+            ],
+            "text": "normal"
+          }
+        ],
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/xml;charset=UTF-8",
+              "title": "Continuity of Care Document"
+            },
+            "format": {
+              "system": "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+              "code": "urn:hl7-org:sdwg:ccda-structuredBody:2.1"
+            }
+          }
+        ],
+        "context": { "period": { "end": "2016-10-03T18:27:10Z" } }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "75496640-55c8-4a75-8203-7aad59c88ff4",
+        "meta": {
+          "extension": [
+            {
+              "url": "https://fhir-ehr.cerner.com/r4/StructureDefinition/transmitting-organization",
+              "valueUri": "urn:oid:2.16.840.1.113883"
+            }
+          ],
+          "security": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+              "code": "N"
+            }
+          ],
+          "tag": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.3.13.10.1.1",
+              "code": "FHIRr4-CR"
+            }
+          ]
+        },
+        "contained": [
+          {
+            "resourceType": "Practitioner",
+            "id": "1",
+            "identifier": [
+              {
+                "system": "urn:ietf:rfc:3986",
+                "value": "urn:uuid:20cf14fb-b65c-4c8c-a54d-b0cca834c18c"
+              }
+            ],
+            "name": [{ "family": "Specialist", "prefix": ["Dr."] }]
+          },
+          {
+            "resourceType": "Organization",
+            "id": "2",
+            "identifier": [
+              {
+                "system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+                "value": "3"
+              }
+            ],
+            "name": "Primary Care's Partners Test"
+          }
+        ],
+        "status": "current",
+        "docStatus": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "34109-9",
+              "display": "Note"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "11488-4",
+              "display": "Consultation note"
+            }
+          ],
+          "text": "Note"
+        },
+        "subject": { "reference": "Patient/18025725" },
+        "date": "2016-09-08T08:32:15-05:00",
+        "author": [{ "reference": "#1" }],
+        "custodian": { "reference": "#2" },
+        "relatesTo": [
+          {
+            "code": "transforms",
+            "target": {
+              "reference": "DocumentReference/5560ec42-50e4-4803-87b0-a483c1cf2e2b"
+            }
+          }
+        ],
+        "description": "Consultation Notes",
+        "securityLabel": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+                "code": "N"
+              }
+            ],
+            "text": "normal"
+          }
+        ],
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain;charset=UTF-8",
+              "data": "VUdGMGFXVnVkRG9nSUUxNWNtRWdTbTl1WlhNZ0NrUmhkR1VnYjJZZ1FtbHlkR2c2SURFNU5EY3dOVEF4Q2tSdlkzVnRaVzUwSUhScGRHeGxPaUJEYjI1MGFXNTFhWFI1SUc5bUlFTmhjbVVnUkc5amRXMWxiblFLUVhWMGFHOXlaV1FnYjI0NklESXdNVFl4TURBek1UZ3lOekV3S3pBd01EQUtRWFYwYUc5eU9pQWdVSEp2ZG1sa1pYSWdZV0pqSUFwelpXTjBhVzl1T2lCRGIyNXpkV3gwWVhScGIyNGdibTkwWlFwcFpEb2dDblJwZEd4bE9pQkRiMjV6ZFd4MFlYUnBiMjRnVG05MFpYTUtibTkwWlZSNWNHVTZJRU52Ym5OMWJIUmhkR2x2YmlCdWIzUmxDbUYxZEdodmNtVmtUMjQ2SURJd01UWXdPVEE0Q21GMWRHaHZjam9nUkhJdUlDQlRjR1ZqYVdGc2FYTjBJQXAwWlhoME9pQT0=",
+              "title": "Consultation Notes",
+              "creation": "2016-09-08T08:32:15-05:00"
+            }
+          }
+        ],
+        "context": { "period": { "end": "2023-02-16T16:25:28+00:00" } }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "8359ba36-e2c7-46a0-8449-aa0850c6aa0d",
+        "meta": {
+          "extension": [
+            {
+              "url": "https://fhir-ehr.cerner.com/r4/StructureDefinition/transmitting-organization",
+              "valueUri": "urn:oid:2.16.840.1.113883"
+            }
+          ],
+          "security": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+              "code": "N"
+            }
+          ],
+          "tag": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.3.13.10.1.1",
+              "code": "FHIRr4-CR"
+            }
+          ]
+        },
+        "contained": [
+          {
+            "resourceType": "Practitioner",
+            "id": "1",
+            "identifier": [
+              {
+                "system": "urn:oid:2.16.840.1.113883.4.6",
+                "value": "12345678910"
+              }
+            ],
+            "name": [
+              { "family": "Khan", "given": ["Samir"], "prefix": ["Dr."] }
+            ]
+          }
+        ],
+        "identifier": [
+          {
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:uuid:2a620155-9d11-439e-92b3-5d9815ff4de8"
+          }
+        ],
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "Office outpatient visit 15 minutes"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://www.ama-assn.org/go/cpt",
+                "code": "99213",
+                "display": "Office outpatient visit 15 minutes"
+              }
+            ],
+            "text": "Office outpatient visit"
+          }
+        ],
+        "subject": { "reference": "Patient/18025725" },
+        "participant": [
+          {
+            "type": [{ "text": "Internal Medicine" }],
+            "individual": { "reference": "#1" }
+          }
+        ],
+        "period": { "start": "2012-08-15T10:00:00-08:00" }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Immunization",
+        "id": "6a8afb00-625e-4091-b3dc-2a79ad263e2f",
+        "meta": {
+          "extension": [
+            {
+              "url": "https://fhir-ehr.cerner.com/r4/StructureDefinition/transmitting-organization",
+              "valueUri": "urn:oid:2.16.840.1.113883"
+            }
+          ],
+          "security": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+              "code": "N"
+            }
+          ],
+          "tag": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.3.13.10.1.1",
+              "code": "FHIRr4-CR"
+            }
+          ]
+        },
+        "contained": [
+          {
+            "resourceType": "Practitioner",
+            "id": "1",
+            "identifier": [
+              {
+                "system": "urn:oid:2.16.840.1.113883.19.5.9999.456",
+                "value": "2981824"
+              }
+            ],
+            "name": [{ "family": "Assigned", "given": ["Amanda"] }]
+          }
+        ],
+        "identifier": [
+          {
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:uuid:e6f1ba43-c0ed-4b9b-9f12-f435d8ad8f92"
+          }
+        ],
+        "status": "completed",
+        "vaccineCode": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/cvx",
+              "code": "88",
+              "display": "Influenza virus vaccine"
+            }
+          ],
+          "text": "Influenza Virus Vaccine"
+        },
+        "patient": { "reference": "Patient/18025725" },
+        "occurrenceDateTime": "2010-08-15",
+        "recorded": "2010-08-15",
+        "lotNumber": "1",
+        "performer": [{ "actor": { "reference": "#1" } }]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "0973c294-78a9-4fb6-a8e7-0125dabde507",
+        "meta": {
+          "extension": [
+            {
+              "url": "https://fhir-ehr.cerner.com/r4/StructureDefinition/transmitting-organization",
+              "valueUri": "urn:oid:2.16.840.1.113883"
+            }
+          ],
+          "security": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+              "code": "N"
+            }
+          ],
+          "tag": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.3.13.10.1.1",
+              "code": "FHIRr4-CR"
+            }
+          ]
+        },
+        "identifier": [
+          {
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:uuid:cdbd33f0-6cde-11db-9fe1-0800200c9a66"
+          }
+        ],
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "582498",
+              "display": "Albuterol 0.09 MG/ACTUAT inhalant powder"
+            }
+          ],
+          "text": "Albuterol 0.09 MG/ACTUAT inhalant powder"
+        },
+        "subject": { "reference": "Patient/18025725" },
+        "groupIdentifier": {
+          "system": "urn:ietf:rfc:3986",
+          "value": "urn:uuid:2a620155-9d11-439e-92b3-5d9815ff4ee8"
+        },
+        "dosageInstruction": [
+          {
+            "sequence": 1,
+            "timing": {
+              "repeat": { "boundsPeriod": { "start": "2012-08-06" } }
+            },
+            "asNeededBoolean": false,
+            "doseAndRate": [{ "doseQuantity": { "value": 1 } }]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "45393017-4676-45d9-a7e6-68ce548eb6f2",
+        "meta": {
+          "extension": [
+            {
+              "url": "https://fhir-ehr.cerner.com/r4/StructureDefinition/transmitting-organization",
+              "valueUri": "urn:oid:2.16.840.1.113883"
+            }
+          ],
+          "security": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+              "code": "N"
+            }
+          ],
+          "tag": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.3.13.10.1.1",
+              "code": "FHIRr4-CR"
+            }
+          ]
+        },
+        "contained": [
+          {
+            "resourceType": "PractitionerRole",
+            "id": "1",
+            "practitioner": { "reference": "#2" },
+            "organization": { "reference": "#3" },
+            "code": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:oid:2.16.840.1.113883.5.90",
+                    "code": "PRF",
+                    "display": "author (originator)"
+                  }
+                ],
+                "text": "author (originator)"
+              }
+            ]
+          },
+          {
+            "resourceType": "Practitioner",
+            "id": "2",
+            "identifier": [
+              {
+                "system": "urn:ietf:rfc:3986",
+                "value": "urn:oid:2.16.840.1.113883.19.5"
+              }
+            ]
+          },
+          { "resourceType": "Organization", "id": "3", "name": "Value Labs" }
+        ],
+        "identifier": [
+          { "system": "urn:oid:1.3.6.1.4.1.22812.20.1.1.4.5", "value": "13" }
+        ],
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ],
+            "text": "Laboratory"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "5811-5",
+              "display": "Specific gravity of Urine by Test strip"
+            }
+          ],
+          "text": "Specific gravity of Urine by Test strip"
+        },
+        "subject": { "reference": "Patient/18025725" },
+        "effectiveDateTime": "2015-06-22",
+        "performer": [{ "reference": "#1" }],
+        "valueQuantity": {
+          "value": 1.015,
+          "unit": "1",
+          "system": "http://unitsofmeasure.org",
+          "code": "1"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 1.005,
+              "unit": "1",
+              "system": "http://unitsofmeasure.org",
+              "code": "1"
+            },
+            "high": {
+              "value": 1.03,
+              "unit": "1",
+              "system": "http://unitsofmeasure.org",
+              "code": "1"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "556549ae-59cd-4977-8bf7-794e7b7c59e1",
+        "meta": {
+          "extension": [
+            {
+              "url": "https://fhir-ehr.cerner.com/r4/StructureDefinition/transmitting-organization",
+              "valueUri": "urn:oid:2.16.840.1.113883"
+            }
+          ],
+          "security": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+              "code": "N"
+            }
+          ],
+          "tag": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.3.13.10.1.1",
+              "code": "FHIRr4-CR"
+            }
+          ]
+        },
+        "identifier": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.3.42.126.100001.19",
+            "value": "216881330410151584"
+          }
+        ],
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "HEART RATE"
+            }
+          ],
+          "text": "80 /min"
+        },
+        "subject": { "reference": "Patient/18025725" },
+        "effectiveDateTime": "2014-05-20T19:36:05-06:00",
+        "valueQuantity": {
+          "value": 80,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Provenance",
+        "meta": {
+          "tag": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.3.13.10.1.1",
+              "code": "FHIRr4-CR"
+            }
+          ]
+        },
+        "contained": [
+          {
+            "resourceType": "Organization",
+            "id": "1",
+            "identifier": [
+              {
+                "system": "urn:ietf:rfc:3986",
+                "value": "urn:oid:2.16.840.1.113883"
+              }
+            ]
+          }
+        ],
+        "target": [
+          {
+            "reference": "AllergyIntolerance/c2df069a-a376-462d-9600-034627e12e55"
+          }
+        ],
+        "recorded": "2023-02-16T16:25:28.920+00:00",
+        "agent": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-provenance-participant-type",
+                  "code": "transmitter",
+                  "display": "Transmitter"
+                }
+              ],
+              "text": "Transmitter"
+            },
+            "who": { "reference": "#1" }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "reference": "DocumentReference/5560ec42-50e4-4803-87b0-a483c1cf2e2b"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Provenance",
+        "meta": {
+          "tag": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.3.13.10.1.1",
+              "code": "FHIRr4-CR"
+            }
+          ]
+        },
+        "contained": [
+          {
+            "resourceType": "Organization",
+            "id": "1",
+            "identifier": [
+              {
+                "system": "urn:ietf:rfc:3986",
+                "value": "urn:oid:2.16.840.1.113883"
+              }
+            ]
+          }
+        ],
+        "target": [
+          { "reference": "Immunization/6a8afb00-625e-4091-b3dc-2a79ad263e2f" }
+        ],
+        "recorded": "2023-02-16T16:25:28.924+00:00",
+        "agent": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-provenance-participant-type",
+                  "code": "transmitter",
+                  "display": "Transmitter"
+                }
+              ],
+              "text": "Transmitter"
+            },
+            "who": { "reference": "#1" }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "reference": "DocumentReference/5560ec42-50e4-4803-87b0-a483c1cf2e2b"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Provenance",
+        "meta": {
+          "tag": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.3.13.10.1.1",
+              "code": "FHIRr4-CR"
+            }
+          ]
+        },
+        "contained": [
+          {
+            "resourceType": "Organization",
+            "id": "1",
+            "identifier": [
+              {
+                "system": "urn:ietf:rfc:3986",
+                "value": "urn:oid:2.16.840.1.113883"
+              }
+            ]
+          }
+        ],
+        "target": [
+          {
+            "reference": "MedicationRequest/0973c294-78a9-4fb6-a8e7-0125dabde507"
+          }
+        ],
+        "recorded": "2023-02-16T16:25:28.928+00:00",
+        "agent": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-provenance-participant-type",
+                  "code": "transmitter",
+                  "display": "Transmitter"
+                }
+              ],
+              "text": "Transmitter"
+            },
+            "who": { "reference": "#1" }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "reference": "DocumentReference/5560ec42-50e4-4803-87b0-a483c1cf2e2b"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Provenance",
+        "meta": {
+          "tag": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.3.13.10.1.1",
+              "code": "FHIRr4-CR"
+            }
+          ]
+        },
+        "contained": [
+          {
+            "resourceType": "Organization",
+            "id": "1",
+            "identifier": [
+              {
+                "system": "urn:ietf:rfc:3986",
+                "value": "urn:oid:2.16.840.1.113883"
+              }
+            ]
+          }
+        ],
+        "target": [
+          { "reference": "Condition/5377242a-0300-427b-8626-5d7ed7134e95" }
+        ],
+        "recorded": "2023-02-16T16:25:28.932+00:00",
+        "agent": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-provenance-participant-type",
+                  "code": "transmitter",
+                  "display": "Transmitter"
+                }
+              ],
+              "text": "Transmitter"
+            },
+            "who": { "reference": "#1" }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "reference": "DocumentReference/5560ec42-50e4-4803-87b0-a483c1cf2e2b"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Provenance",
+        "meta": {
+          "tag": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.3.13.10.1.1",
+              "code": "FHIRr4-CR"
+            }
+          ]
+        },
+        "contained": [
+          {
+            "resourceType": "Organization",
+            "id": "1",
+            "identifier": [
+              {
+                "system": "urn:ietf:rfc:3986",
+                "value": "urn:oid:2.16.840.1.113883"
+              }
+            ]
+          }
+        ],
+        "target": [
+          { "reference": "Condition/54848580-ea32-4733-a83f-907765b5bf01" }
+        ],
+        "recorded": "2023-02-16T16:25:28.936+00:00",
+        "agent": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-provenance-participant-type",
+                  "code": "transmitter",
+                  "display": "Transmitter"
+                }
+              ],
+              "text": "Transmitter"
+            },
+            "who": { "reference": "#1" }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "reference": "DocumentReference/5560ec42-50e4-4803-87b0-a483c1cf2e2b"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Provenance",
+        "meta": {
+          "tag": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.3.13.10.1.1",
+              "code": "FHIRr4-CR"
+            }
+          ]
+        },
+        "contained": [
+          {
+            "resourceType": "Organization",
+            "id": "1",
+            "identifier": [
+              {
+                "system": "urn:ietf:rfc:3986",
+                "value": "urn:oid:2.16.840.1.113883"
+              }
+            ]
+          }
+        ],
+        "target": [
+          { "reference": "Condition/daf90574-ed81-4838-90ea-68f3a982057b" }
+        ],
+        "recorded": "2023-02-16T16:25:28.939+00:00",
+        "agent": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-provenance-participant-type",
+                  "code": "transmitter",
+                  "display": "Transmitter"
+                }
+              ],
+              "text": "Transmitter"
+            },
+            "who": { "reference": "#1" }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "reference": "DocumentReference/5560ec42-50e4-4803-87b0-a483c1cf2e2b"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Provenance",
+        "meta": {
+          "tag": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.3.13.10.1.1",
+              "code": "FHIRr4-CR"
+            }
+          ]
+        },
+        "contained": [
+          {
+            "resourceType": "Organization",
+            "id": "1",
+            "identifier": [
+              {
+                "system": "urn:ietf:rfc:3986",
+                "value": "urn:oid:2.16.840.1.113883"
+              }
+            ]
+          }
+        ],
+        "target": [
+          { "reference": "Observation/45393017-4676-45d9-a7e6-68ce548eb6f2" }
+        ],
+        "recorded": "2023-02-16T16:25:28.948+00:00",
+        "agent": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-provenance-participant-type",
+                  "code": "transmitter",
+                  "display": "Transmitter"
+                }
+              ],
+              "text": "Transmitter"
+            },
+            "who": { "reference": "#1" }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "reference": "DocumentReference/5560ec42-50e4-4803-87b0-a483c1cf2e2b"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Provenance",
+        "meta": {
+          "tag": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.3.13.10.1.1",
+              "code": "FHIRr4-CR"
+            }
+          ]
+        },
+        "contained": [
+          {
+            "resourceType": "Organization",
+            "id": "1",
+            "identifier": [
+              {
+                "system": "urn:ietf:rfc:3986",
+                "value": "urn:oid:2.16.840.1.113883"
+              }
+            ]
+          }
+        ],
+        "target": [
+          { "reference": "Observation/556549ae-59cd-4977-8bf7-794e7b7c59e1" }
+        ],
+        "recorded": "2023-02-16T16:25:28.952+00:00",
+        "agent": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-provenance-participant-type",
+                  "code": "transmitter",
+                  "display": "Transmitter"
+                }
+              ],
+              "text": "Transmitter"
+            },
+            "who": { "reference": "#1" }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "reference": "DocumentReference/5560ec42-50e4-4803-87b0-a483c1cf2e2b"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Provenance",
+        "meta": {
+          "tag": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.3.13.10.1.1",
+              "code": "FHIRr4-CR"
+            }
+          ]
+        },
+        "contained": [
+          {
+            "resourceType": "Organization",
+            "id": "1",
+            "identifier": [
+              {
+                "system": "urn:ietf:rfc:3986",
+                "value": "urn:oid:2.16.840.1.113883"
+              }
+            ]
+          }
+        ],
+        "target": [
+          {
+            "reference": "DocumentReference/75496640-55c8-4a75-8203-7aad59c88ff4"
+          }
+        ],
+        "recorded": "2016-09-08T08:32:15-05:00",
+        "agent": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-provenance-participant-type",
+                  "code": "transmitter",
+                  "display": "Transmitter"
+                }
+              ],
+              "text": "Transmitter"
+            },
+            "who": { "reference": "#1" }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "reference": "DocumentReference/5560ec42-50e4-4803-87b0-a483c1cf2e2b"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Provenance",
+        "meta": {
+          "tag": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.3.13.10.1.1",
+              "code": "FHIRr4-CR"
+            }
+          ]
+        },
+        "contained": [
+          {
+            "resourceType": "Organization",
+            "id": "1",
+            "identifier": [
+              {
+                "system": "urn:ietf:rfc:3986",
+                "value": "urn:oid:2.16.840.1.113883"
+              }
+            ]
+          }
+        ],
+        "target": [
+          { "reference": "Encounter/8359ba36-e2c7-46a0-8449-aa0850c6aa0d" }
+        ],
+        "recorded": "2023-02-16T16:25:28.916+00:00",
+        "agent": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-provenance-participant-type",
+                  "code": "transmitter",
+                  "display": "Transmitter"
+                }
+              ],
+              "text": "Transmitter"
+            },
+            "who": { "reference": "#1" }
+          }
+        ],
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "reference": "DocumentReference/5560ec42-50e4-4803-87b0-a483c1cf2e2b"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "OperationOutcome",
+        "id": "5560ec42-50e4-4803-87b0-a483c1cf2e2b",
+        "issue": [
+          {
+            "severity": "error",
+            "code": "required",
+            "diagnostics": "CONSOLIDATE Phase: 'class' element is REQUIRED by BASE",
+            "expression": ["Encounter.class"]
+          },
+          {
+            "severity": "error",
+            "code": "required",
+            "diagnostics": "CONSOLIDATE Phase: 'status' element is REQUIRED by BASE",
+            "expression": ["Procedure.status"]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "resource": {
+    "resourceType": "Immunization",
+    "id": "1d080f2581fef79c1b7a905b7f313195",
+    "status": "completed",
+    "vaccineCode": {
+      "coding": [
+        {
+          "code": "88",
+          "display": "Influenza virus vaccine",
+          "system": "urn:oid:2.16.840.1.113883.12.292"
+        }
+      ]
+    },
+    "patient": {
+      "reference": "Patient/8d638e43bf8261b7c0790adfee475f71"
+    },
+    "occurrenceDateTime": "2010-08-15T00:00:00+00:00",
+    "recorded": "2010-08-15T00:00:00+00:00",
+    "primarySource": true,
+    "manufacturer": {
+      "reference": "Organization/f53118c443762bf284f0ad84829b5ee3"
+    },
+    "lotNumber": "1",
+    "performer": [
+      {
+        "actor": {
+          "reference": "PractitionerRole/b96de6fdf4e4369d29b76cb6510b37c9"
+        }
+      }
+    ]
+  }
+}

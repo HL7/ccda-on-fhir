@@ -1,0 +1,33 @@
+{
+  "resource":{
+	 "class":{
+		"code":"99213",
+		"display":"Office outpatient visit 15 minutes",
+		"system":"urn:oid:2.16.840.1.113883.6.12"
+	 },
+	 "id":"dd1592438f13993f2ce4703f636242f3",
+	 "participant":[
+		{
+		   "individual":{
+			  "reference":"PractitionerRole/3da4c925e98d35227b81a3f44b4704d2"
+		   }
+		}
+	 ],
+	 "resourceType":"Encounter",
+	 "status":"unknown",
+	 "subject":{
+		"reference":"Patient/8d638e43bf8261b7c0790adfee475f71"
+	 },
+	 "type":[
+		{
+		   "coding":[
+			  {
+				 "code":"99213",
+				 "display":"Office outpatient visit 15 minutes",
+				 "system":"urn:oid:2.16.840.1.113883.6.12"
+			  }
+		   ]
+		}
+	 ]
+  }
+}

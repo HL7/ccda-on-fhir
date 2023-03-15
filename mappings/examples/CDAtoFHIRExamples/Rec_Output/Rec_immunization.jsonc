@@ -1,0 +1,50 @@
+{
+  "fullUrl": "http://fhir:3447/4_0_0/Immunization/62f17e2aa2392d0008fbb228",
+  "resource": {
+    "resourceType": "Immunization",
+    "id": "62f17e2aa2392d0008fbb228",
+    "identifier": [
+      {
+	  // When the CCD ID extension is missing, map the root to the value field, and hard-code the system as "urn:ietf:rfc:3986"
+        "value": "urn:uuid:e6f1ba43-c0ed-4b9b-9f12-f435d8ad8f92",
+        "system": "urn:ietf:rfc:3986"
+      }
+    ],
+    "status": "completed",
+    "vaccineCode": {
+      "coding": [
+        {
+          "system": "http://hl7.org/fhir/sid/cvx",
+          "code": "88",
+          "display": "Influenza virus vaccine"
+        }
+      ],
+	   "text": "Influenza Virus Vaccine"
+    },
+    "patient": {
+      "reference": "Patient/62f17e29b7532c0009e217b7"
+    },
+	// This maps from the effectiveTime field
+    "occurrenceDateTime": "2010-08-15",
+	// This maps from the author time field
+    "recorded": "2010-08-15",
+	// C-CDA doesn't have a single field indicating the primary source value, so we recommend mapping to data-absent-reason as default.
+	// In certain circumstances, implementers may be able to develop logic to derive whether the information is the primary source or not, although these logic can vary in their reliability and practicability. 
+    "_primarySource": {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+          "valueCode": "unknown"
+        }
+      ]
+    },
+	 "lotNumber": "1",
+    "performer": [
+      {
+        "actor": {
+          "reference": "PractitionerRole/b96de6fdf4e4369d29b76cb6510b37c9"
+        }
+      }
+    ]
+  }
+}

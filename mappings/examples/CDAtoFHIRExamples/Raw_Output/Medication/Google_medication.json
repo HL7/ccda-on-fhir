@@ -1,0 +1,22 @@
+{
+ "request":{
+	"method":"PUT",
+	"url":"Medication/cd78bc6a4a5029aeefbbd55563192f65"
+ },
+ "resource":{
+	"code":{
+	   "coding":[
+		  {
+			 "code":"582498",
+			 "display":"Albuterol 0.09 MG/ACTUAT inhalant powder",
+			 "system":"urn:oid:2.16.840.1.113883.6.88"
+		  }
+	   ]
+	},
+	"id":"cd78bc6a4a5029aeefbbd55563192f65",
+	"manufacturer":{
+	   "reference":"Organization/f53118c443762bf284f0ad84829b5ee3"
+	},
+	"resourceType":"Medication"
+ }
+}

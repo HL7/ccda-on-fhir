@@ -1,0 +1,48 @@
+{
+  "fullUrl": "http://fhir:3447/4_0_0/MedicationRequest/62f17e2aa2392d0008fbb22c",
+  "resource": {
+    "resourceType": "MedicationRequest",
+    "id": "62f17e2aa2392d0008fbb22c",
+    "identifier": [
+      {
+        "system": "urn:ietf:rfc:3986",
+        "value": "urn:uuid:cdbd33f0-6cde-11db-9fe1-0800200c9a66"
+      }
+    ],
+    "status": "active",
+    "intent": "order",
+    "medicationCodeableConcept": {
+      "coding": [
+        {
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code": "582498",
+          "display": "Albuterol 0.09 MG/ACTUAT inhalant powder"
+        }
+      ]
+    },
+    "subject": {
+      "reference": "Patient/62f17e29b7532c0009e217b7"
+	  },
+	 "dosageInstruction": [
+      {
+        "sequence": 1,
+        "asNeededBoolean": false,
+        "doseAndRate": [
+          {
+            "doseQuantity": {
+              "value": 1
+            }
+          }
+        ]
+      }
+    ],  
+    "requester": {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/extension-data-absent-reason",
+          "valueCode": "unknown"
+        }
+      ]
+    }
+  }
+}

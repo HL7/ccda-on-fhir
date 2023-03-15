@@ -1,0 +1,65 @@
+{
+  "fullUrl": "urn:uuid:1579c6d3-bfcb-4354-ae88-ae554d668fc7",
+  "resource": {
+    "resourceType": "Procedure",
+    "identifier": [
+      {
+        "value": "545069400001",
+        "system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.4.7"
+      }
+    ],
+    "status": "unknown",
+    "_status": {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/originalText",
+          "valueString": "active"
+        }
+      ]
+    },
+    "category": {
+      "text": "Procedures",
+      "coding": [
+        {
+          "code": "Procedures",
+          "system": "urn:redox:procedure_act_type"
+        }
+      ]
+    },
+    "code": {
+      "text": "H/O chest x-ray",
+      "coding": [
+        {
+          "code": "416940007",
+          "system": "http://snomed.info/sct"
+        },
+        {
+          "code": "V15.89",
+          "system": "http://hl7.org/fhir/sid/icd-9-cm"
+        },
+        {
+          "code": "Z92.89",
+          "system": "http://hl7.org/fhir/sid/icd-10-cm"
+        },
+        {
+          "code": "2782946",
+          "system": "urn:oid:2.16.840.1.113883.3.247.1.1"
+        }
+      ]
+    },
+    "subject": {
+      "reference": "urn:uuid:a4986486-6599-4bb2-a7fb-e2deb8d50b5e"
+    },
+    "encounter": {
+      "reference": "urn:uuid:e465963c-13fb-4b87-857a-4d2433728762"
+    },
+    "_performedDateTime": {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+          "valueCode": "unknown"
+        }
+      ]
+    }
+  }
+}

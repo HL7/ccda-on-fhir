@@ -1,0 +1,40 @@
+{
+  "fullUrl": "urn:uuid:ccbe4315-99ac-424c-9847-ff9f56a0383b",
+  "resource": {
+    "resourceType": "ServiceRequest",
+    "identifier": [
+      {
+        "value": "urn:uuid:2a620155-9d11-439e-92b3-5d9815ff4dd4",
+        "system": "urn:ietf:rfc:3986"
+      }
+    ],
+    "status": "active",
+    "intent": "plan",
+    "code": {
+      "text": "Weight Loss",
+      "coding": [
+        {
+          "code": "289169006",
+          "system": "http://snomed.info/sct"
+        }
+      ]
+    },
+    "subject": {
+      "reference": "urn:uuid:a4986486-6599-4bb2-a7fb-e2deb8d50b5e"
+    },
+    "encounter": {
+      "reference": "urn:uuid:e465963c-13fb-4b87-857a-4d2433728762"
+    },
+    "occurrenceDateTime": "2012-08-15T10:00:00-08:00",
+    "category": [
+      {
+        "coding": [
+          {
+            "code": "Orders",
+            "system": "urn:redox:plan_of_care_type"
+          }
+        ]
+      }
+    ]
+  }
+}

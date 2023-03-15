@@ -1,0 +1,50 @@
+{
+  "fullUrl": "urn:uuid:048cdf85-bba8-4021-8500-0f418f45ce1c",
+  "resource": {
+    "resourceType": "MedicationStatement",
+    "identifier": [
+      {
+        "value": "urn:uuid:cdbd33f0-6cde-11db-9fe1-0800200c9a66",
+        "system": "urn:ietf:rfc:3986"
+      }
+    ],
+    "status": "active",
+    "medicationCodeableConcept": {
+      "text": "Albuterol 0.09 MG/ACTUAT inhalant powder",
+      "coding": [
+        {
+          "code": "582498",
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm"
+        }
+      ]
+    },
+    "subject": {
+      "reference": "urn:uuid:a4986486-6599-4bb2-a7fb-e2deb8d50b5e"
+    },
+    "context": {
+      "reference": "urn:uuid:e465963c-13fb-4b87-857a-4d2433728762"
+    },
+    "effectivePeriod": {
+      "start": "2012-08-06"
+    },
+    "dosage": [
+      {
+        "timing": {
+          "repeat": {
+            "boundsPeriod": {
+              "start": "2012-08-06"
+            }
+          }
+        },
+        "asNeededBoolean": false,
+        "doseAndRate": [
+          {
+            "doseQuantity": {
+              "value": 1
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

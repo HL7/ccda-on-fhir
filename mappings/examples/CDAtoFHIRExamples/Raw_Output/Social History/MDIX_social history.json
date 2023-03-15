@@ -1,0 +1,19 @@
+		{
+			"request": {
+				"method": "POST",
+				"url": "Observation"
+			},
+			"resource": {
+				"identifier": [
+					{
+						"system": "urn:oid:2.16.840.1.113883.19",
+						"value": "123456789"
+					}
+				],
+				"id": "123456789",
+				"issued": "2014-06-06T10:32-05:00",
+				"resourceType": "Observation",
+				"status": "final"
+			},
+			"fullUrl": "Observation/123456789"
+		}

@@ -1,0 +1,45 @@
+{
+  "fullUrl": "urn:uuid:2706b021-8e7a-4773-ada9-49c0d8e4ba14",
+  "resource": {
+    "resourceType": "Observation",
+    "identifier": [
+      {
+        "value": "216881330410151584",
+        "system": "urn:oid:2.16.840.1.113883.3.42.126.100001.19"
+      }
+    ],
+    "status": "final",
+    "subject": {
+      "reference": "urn:uuid:a4986486-6599-4bb2-a7fb-e2deb8d50b5e"
+    },
+    "encounter": {
+      "reference": "urn:uuid:e465963c-13fb-4b87-857a-4d2433728762"
+    },
+    "category": [
+      {
+        "text": "vital-signs",
+        "coding": [
+          {
+            "code": "vital-signs",
+            "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+            "display": "Vital Signs"
+          }
+        ]
+      }
+    ],
+    "code": {
+      "text": "HEART RATE",
+      "coding": [
+        {
+          "code": "8867-4",
+          "system": "http://loinc.org"
+        }
+      ]
+    },
+    "effectiveDateTime": "2014-05-20T19:36:05-06:00",
+    "valueQuantity": {
+      "value": 80,
+      "unit": "/min"
+    }
+  }
+}

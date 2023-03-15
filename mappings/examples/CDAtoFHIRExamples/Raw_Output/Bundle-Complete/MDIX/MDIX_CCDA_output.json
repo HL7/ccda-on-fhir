@@ -1,0 +1,873 @@
+{
+	"entry": [
+		{
+			"request": {
+				"method": "POST",
+				"url": "Practitioner"
+			},
+			"resource": {
+				"identifier": [
+					{
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+						"value": "92698"
+					},
+					{
+						"system": "urn:oid:2.16.840.1.113883.4.6",
+						"value": "1234123400"
+					}
+				],
+				"address": [
+					{
+						"use": "home"
+					}
+				],
+				"name": [
+					{
+						"given": [
+							"Provider"
+						],
+						"family": "abc"
+					}
+				],
+				"telecom": [
+					{
+						"system": "email",
+						"use": "work",
+						"value": "provider@allsripts.com"
+					}
+				],
+				"id": "92698",
+				"resourceType": "Practitioner"
+			},
+			"fullUrl": "Practitioner/92698"
+		},
+		{
+			"request": {
+				"method": "POST",
+				"url": "Practitioner"
+			},
+			"resource": {
+				"identifier": [
+					{
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.3.3",
+						"value": "3"
+					}
+				],
+				"address": [
+					{
+						"city": "Chicago",
+						"use": "home",
+						"line": [
+							"123 main street"
+						],
+						"postalCode": "60629",
+						"state": "IL"
+					}
+				],
+				"telecom": [
+					{
+						"system": "phone",
+						"use": "work",
+						"value": "+1-(676)857-6769"
+					}
+				],
+				"id": "3",
+				"resourceType": "Practitioner"
+			},
+			"fullUrl": "Practitioner/3"
+		},
+		{
+			"request": {
+				"method": "POST",
+				"url": "Patient"
+			},
+			"resource": {
+				"identifier": [
+					{
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+						"value": "160920144139807"
+					}
+				],
+				"extension": [
+					{
+						"extension": [
+							{
+								"valueCoding": {
+									"system": "urn:oid:2.16.840.1.113883.6.238",
+									"code": "2106-3",
+									"display": "White"
+								},
+								"url": "ombCategory"
+							}
+						],
+						"url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+					},
+					{
+						"extension": [
+							{
+								"valueCoding": {
+									"system": "urn:oid:2.16.840.1.113883.6.238",
+									"code": "2135-2",
+									"display": "Hispanic or Latino"
+								},
+								"url": "ombCategory"
+							}
+						],
+						"url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+					}
+				],
+				"address": [
+					{
+						"city": "Beaverton",
+						"use": "home",
+						"line": [
+							"1357 Amber Drive"
+						],
+						"postalCode": "97006",
+						"state": "OR"
+					}
+				],
+				"managingOrganization": {
+					"reference": "Organization/3"
+				},
+				"gender": "female",
+				"name": [
+					{
+						"given": [
+							"Myra"
+						],
+						"use": "official",
+						"family": "Jones"
+					}
+				],
+				"id": "160920144139807",
+				"communication": [
+					{
+						"language": {
+							"coding": [
+								{
+									"display": "en"
+								}
+							]
+						},
+						"preferred": true
+					}
+				],
+				"birthDate": "1947-05-01",
+				"resourceType": "Patient"
+			},
+			"fullUrl": "Patient/160920144139807"
+		},
+		{
+			"request": {
+				"method": "POST",
+				"url": "Organization"
+			},
+			"resource": {
+				"identifier": [
+					{
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+						"value": "3"
+					}
+				],
+				"address": [
+					{
+						"city": "Chicago",
+						"line": [
+							"123 main street"
+						],
+						"postalCode": "60629",
+						"state": "IL"
+					}
+				],
+				"contact": [
+					{
+						"telecom": [
+							{
+								"system": "phone",
+								"use": "work",
+								"value": "+1-(676)857-6769"
+							}
+						]
+					}
+				],
+				"name": "Primary Care's Partners Test",
+				"id": "3",
+				"resourceType": "Organization"
+			},
+			"fullUrl": "Organization/3"
+		},
+		{
+			"request": {
+				"method": "POST",
+				"url": "Condition"
+			},
+			"resource": {
+				"identifier": [
+					{
+						"value": "db734647-fc99-424c-a864-7e3cda82e704"
+					}
+				],
+				"code": {
+					"coding": [
+						{
+							"system": "urn:oid:2.16.840.1.113883.6.96",
+							"code": "64109004",
+							"display": "Costal Chondritis"
+						}
+					]
+				},
+				"onsetPeriod": {
+					"start": "2012-08-15"
+				},
+				"evidence": [
+					{
+						"code": [
+							{
+								"coding": [
+									{
+										"system": "urn:oid:2.16.840.1.113883.6.96",
+										"code": "282291009",
+										"display": "Diagnosis"
+									},
+									{
+										"system": "urn:oid:2.16.840.1.113883.6.1",
+										"code": "29308-4",
+										"display": "Diagnosis"
+									}
+								],
+								"text": "Diagnosis"
+							}
+						]
+					}
+				],
+				"subject": {
+					"reference": "Patient/160920144139807"
+				},
+				"id": "db734647-fc99-424c-a864-7e3cda82e704",
+				"category": [
+					{
+						"coding": [
+							{
+								"system": "http://terminology.hl7.org/CodeSystem/condition-category",
+								"code": "encounter-diagnosis",
+								"display": "Encounter Diagnosis"
+							}
+						],
+						"text": "Encounter Diagnosis"
+					}
+				],
+				"resourceType": "Condition"
+			},
+			"fullUrl": "Condition/db734647-fc99-424c-a864-7e3cda82e704"
+		},
+		{
+			"request": {
+				"method": "POST",
+				"url": "Provenance"
+			},
+			"resource": {
+				"agent": [
+					{
+						"type": {
+							"coding": [
+								{
+									"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+									"code": "author",
+									"display": "Author"
+								}
+							],
+							"text": "Author"
+						},
+						"who": {
+							"reference": "Practitioner/92698"
+						}
+					},
+					{
+						"onBehalfOf": {
+							"reference": "Organization/3"
+						},
+						"type": {
+							"coding": [
+								{
+									"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+									"code": "author",
+									"display": "Author"
+								}
+							],
+							"text": "Author"
+						},
+						"who": {
+							"reference": "Practitioner/3"
+						}
+					},
+					{
+						"type": {
+							"coding": [
+								{
+									"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+									"code": "custodian",
+									"display": "Custodian"
+								}
+							],
+							"text": "Custodian"
+						},
+						"who": {
+							"reference": "Organization/3"
+						}
+					},
+					{
+						"type": {
+							"coding": [
+								{
+									"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+									"code": "verifier",
+									"display": "Verifier"
+								}
+							],
+							"text": "Verifier"
+						},
+						"who": {
+							"reference": "Practitioner/92698"
+						}
+					}
+				],
+				"id": "60babdad-2f59-42a7-96f7-fcba4ae1e37a",
+				"recorded": "2016-10-03T18:27:10+00:00",
+				"resourceType": "Provenance",
+				"target": [
+					{
+						"reference": "Condition/545069300001"
+					},
+					{
+						"reference": "Condition/545069300001"
+					},
+					{
+						"reference": "Condition/545077400017"
+					},
+					{
+						"reference": "Condition/1.3.6.1.4.1.22812.3.2009316.3.4.1.2.1::545077400019"
+					},
+					{
+						"reference": "AllergyIntolerance/545077400001"
+					},
+					{
+						"reference": "AllergyIntolerance/1.3.6.1.4.1.22812.3.2009316.3.4.10.2::545077400003"
+					}
+				]
+			},
+			"fullUrl": "Provenance/60babdad-2f59-42a7-96f7-fcba4ae1e37a"
+		},
+		{
+			"request": {
+				"method": "POST",
+				"url": "Encounter"
+			},
+			"resource": {
+				"identifier": [
+					{
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+						"value": "1149324"
+					}
+				],
+				"subject": {
+					"reference": "Patient/160920144139807"
+				},
+				"id": "1149324",
+				"resourceType": "Encounter"
+			},
+			"fullUrl": "Encounter/1149324"
+		},
+		{
+			"request": {
+				"method": "POST",
+				"url": "Condition"
+			},
+			"resource": {
+				"identifier": [
+					{
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.4.1.2.1",
+						"value": "545069300001"
+					},
+					{
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.4.1.2.1",
+						"value": "545069300001"
+					}
+				],
+				"code": {
+					"coding": [
+						{
+							"system": "urn:oid:2.16.840.1.113883.6.96",
+							"code": "233604007"
+						},
+						{
+							"system": "urn:oid:2.16.840.1.113883.6.103",
+							"code": "486"
+						},
+						{
+							"system": "urn:oid:2.16.840.1.113883.6.90",
+							"code": "J18.9"
+						},
+						{
+							"system": "urn:oid:2.16.840.1.113883.3.247.1.1",
+							"code": "87580"
+						}
+					],
+					"text": ""
+				},
+				"onsetPeriod": {
+					"start": "2012-08-06"
+				},
+				"subject": {
+					"reference": "Patient/160920144139807"
+				},
+				"id": "545069300001",
+				"category": [
+					{
+						"coding": [
+							{
+								"system": "urn: oid: 2.16.840.1.113883.6.96",
+								"code": "55607006"
+							}
+						]
+					}
+				],
+				"resourceType": "Condition"
+			},
+			"fullUrl": "Condition/545069300001"
+		},
+		{
+			"request": {
+				"method": "POST",
+				"url": "Condition"
+			},
+			"resource": {
+				"identifier": [
+					{
+						"system": "urn: oid: 1.3.6.1.4.1.22812.3.2009316.3.4.1.2.1",
+						"value": "545077400017"
+					},
+					{
+						"system": "urn: oid: 1.3.6.1.4.1.22812.3.2009316.3.4.1.2.1",
+						"value": "545077400019"
+					}
+				],
+				"code": {
+					"coding": [
+						{
+							"system": "urn: oid: 2.16.840.1.113883.6.96",
+							"code": "195967001"
+						},
+						{
+							"system": "urn: oid: 2.16.840.1.113883.6.103",
+							"code": "493.90"
+						},
+						{
+							"system": "urn: oid: 2.16.840.1.113883.6.90",
+							"code": "J45.909"
+						},
+						{
+							"system": "urn: oid: 2.16.840.1.113883.3.247.1.1",
+							"code": "94262"
+						}
+					],
+					"text": ""
+				},
+				"subject": {
+					"reference": "Patient/160920144139807"
+				},
+				"id": "545077400017",
+				"category": [
+					{
+						"coding": [
+							{
+								"system": "urn: oid: 2.16.840.1.113883.6.96",
+								"code": "55607006"
+							}
+						]
+					}
+				],
+				"resourceType": "Condition"
+			},
+			"fullUrl": "Condition/545077400017"
+		},
+		{
+			"request": {
+				"method": "POST",
+				"url": "AllergyIntolerance"
+			},
+			"resource": {
+				"identifier": [
+					{
+						"system": "urn: oid: 1.3.6.1.4.1.22812.3.2009316.3.4.10.2",
+						"value": "545077400001"
+					},
+					{
+						"system": "urn: oid: 1.3.6.1.4.1.22812.3.2009316.3.4.10.2",
+						"value": "545077400003"
+					}
+				],
+				"code": {
+					"coding": [
+						{
+							"system": "urn: oid: 2.16.840.1.113883.6.88",
+							"code": "1191"
+						},
+						{
+							"system": "urn: oid: 2.16.840.1.113883.6.96",
+							"code": "293586001"
+						}
+					]
+				},
+				"reaction": [
+					{
+						"severity": "24484000",
+						"manifestation": [
+							{
+								"coding": [
+									{
+										"system": "urn: oid: 2.16.840.1.113883.6.96",
+										"code": "247472004"
+									}
+								],
+								"text": ""
+							}
+						]
+					}
+				],
+				"patient": {
+					"reference": "Patient/160920144139807"
+				},
+				"id": "545077400001",
+				"clinicalStatus": {
+					"coding": [
+						{
+							"system": "//terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+							"code": "active",
+							"display": "Active"
+						}
+					],
+					"text": "Active"
+				},
+				"type": "intolerance",
+				"category": [
+					"419511003"
+				],
+				"onsetDateTime": "2008-05-01",
+				"resourceType": "AllergyIntolerance"
+			},
+			"fullUrl": "AllergyIntolerance/545077400001"
+		},
+		{
+			"request": {
+				"method": "POST",
+				"url": "MedicationAdministration"
+			},
+			"resource": {
+				"identifier": [
+					{
+						"value": "cdbd33f0-6cde-11db-9fe1-0800200c9a66"
+					}
+				],
+				"dosage": {
+					"dose": {
+						"value": 1
+					}
+				},
+				"performer": [
+					{
+						"actor": {
+							"reference": "2.16.840.1.113883.4.6::2222222222"
+						}
+					}
+				],
+				"effectivePeriod": {
+					"start": "2012-08-06"
+				},
+				"subject": {
+					"reference": "Patient/160920144139807"
+				},
+				"id": "cdbd33f0-6cde-11db-9fe1-0800200c9a66",
+				"medicationCodeableConcept": {
+					"coding": [
+						{
+							"system": "urn:oid:2.16.840.1.113883.6.88",
+							"code": "582498",
+							"display": "Albuterol 0.09 MG/ACTUAT inhalant powder"
+						}
+					],
+					"text": "Albuterol 0.09 MG/ACTUAT inhalant powder"
+				},
+				"resourceType": "MedicationAdministration",
+				"status": "in-progress"
+			},
+			"fullUrl": "MedicationAdministration/cdbd33f0-6cde-11db-9fe1-0800200c9a66"
+		},
+		{
+			"request": {
+				"method": "POST",
+				"url": "Medication"
+			},
+			"resource": {
+				"identifier": [
+					{
+						"value": "2a620155-9d11-439e-92b3-5d9815ff4ee8"
+					}
+				],
+				"code": {
+					"coding": [
+						{
+							"system": "urn:oid:2.16.840.1.113883.6.88",
+							"code": "582498",
+							"display": "Albuterol 0.09 MG/ACTUAT inhalant powder"
+						}
+					],
+					"text": "Albuterol 0.09 MG/ACTUAT inhalant powder"
+				},
+				"id": "2a620155-9d11-439e-92b3-5d9815ff4ee8",
+				"resourceType": "Medication"
+			},
+			"fullUrl": "Medication/2a620155-9d11-439e-92b3-5d9815ff4ee8"
+		},
+		{
+			"request": {
+				"method": "POST",
+				"url": "Procedure"
+			},
+			"resource": {
+				"identifier": [
+					{
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.4.7",
+						"value": "545069400001"
+					},
+					{
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.4.7",
+						"value": "545069400003"
+					}
+				],
+				"code": {
+					"coding": [
+						{
+							"system": "urn:oid:2.16.840.1.113883.6.96",
+							"code": "416940007",
+							"display": "H/O chest x-ray"
+						},
+						{
+							"system": "urn:oid:2.16.840.1.113883.6.103",
+							"code": "V15.89"
+						},
+						{
+							"system": "urn:oid:2.16.840.1.113883.6.90",
+							"code": "Z92.89"
+						},
+						{
+							"system": "urn:oid:2.16.840.1.113883.3.247.1.1",
+							"code": "2782946"
+						}
+					]
+				},
+				"subject": {
+					"reference": "Patient/160920144139807"
+				},
+				"id": "545069400001",
+				"resourceType": "Procedure",
+				"status": "active"
+			},
+			"fullUrl": "Procedure/545069400001"
+		},
+		{
+			"request": {
+				"method": "POST",
+				"url": "Immunization"
+			},
+			"resource": {
+				"identifier": [
+					{
+						"value": "e6f1ba43-c0ed-4b9b-9f12-f435d8ad8f92"
+					}
+				],
+				"performer": [
+					{
+						"actor": {
+							"reference": "2.16.840.1.113883.19.5.9999.456::2981824"
+						}
+					}
+				],
+				"patient": {
+					"reference": "Patient/160920144139807"
+				},
+				"occurrenceDateTime": "2010-08-15",
+				"id": "e6f1ba43-c0ed-4b9b-9f12-f435d8ad8f92",
+				"lotNumber": "1",
+				"recorded": "2010-08-15",
+				"vaccineCode": {
+					"coding": [
+						{
+							"system": "urn:oid:2.16.840.1.113883.12.292",
+							"code": "88",
+							"display": "Influenza virus vaccine"
+						}
+					]
+				},
+				"resourceType": "Immunization",
+				"status": "completed"
+			},
+			"fullUrl": "Immunization/e6f1ba43-c0ed-4b9b-9f12-f435d8ad8f92"
+		},
+		{
+			"request": {
+				"method": "POST",
+				"url": "Observation"
+			},
+			"resource": {
+				"identifier": [
+					{
+						"system": "urn:oid:2.16.840.1.113883.19",
+						"value": "123456789"
+					}
+				],
+				"id": "123456789",
+				"issued": "2014-06-06T10:32-05:00",
+				"resourceType": "Observation",
+				"status": "final"
+			},
+			"fullUrl": "Observation/123456789"
+		},
+		{
+			"request": {
+				"method": "POST",
+				"url": "Observation"
+			},
+			"resource": {
+				"identifier": [
+					{
+						"system": "urn:oid:1.3.6.1.4.1.22812.20.1.1.4.5",
+						"value": "13"
+					}
+				],
+				"code": {
+					"coding": [
+						{
+							"system": "urn:oid:2.16.840.1.113883.6.1",
+							"code": "5811-5",
+							"display": "Specific gravity of Urine by Test strip"
+						}
+					]
+				},
+				"id": "13",
+				"category": [
+					{
+						"coding": [
+							{
+								"system": "http://terminology.hl7.org/CodeSystem/observation-category",
+								"code": "laboratory",
+								"display": "Laboratory"
+							}
+						],
+						"text": "Laboratory"
+					}
+				],
+				"issued": "2015-06-22",
+				"resourceType": "Observation",
+				"status": "final",
+				"valueQuantity": {
+					"unit": "1",
+					"value": 1.015
+				}
+			},
+			"fullUrl": "Observation/13"
+		},
+		{
+			"request": {
+				"method": "POST",
+				"url": "Observation"
+			},
+			"resource": {
+				"identifier": [
+					{
+						"system": "urn:oid:2.16.840.1.113883.3.42.126.100001.19",
+						"value": "216881330410151584"
+					}
+				],
+				"code": {
+					"coding": [
+						{
+							"system": "urn:oid:2.16.840.1.113883.6.1",
+							"code": "8867-4",
+							"display": "HEART RATE"
+						}
+					],
+					"text": "HEART RATE"
+				},
+				"effectivePeriod": {
+					"start": "2014-05-20T19:36:05-06:00"
+				},
+				"id": "216881330410151584",
+				"category": [
+					{
+						"coding": [
+							{
+								"system": "http://terminology.hl7.org/CodeSystem/observation-category",
+								"code": "vital-signs",
+								"display": "Vital Signs"
+							}
+						],
+						"text": "Vital Signs"
+					}
+				],
+				"resourceType": "Observation",
+				"status": "final",
+				"valueQuantity": {
+					"unit": "/min",
+					"value": 80
+				}
+			},
+			"fullUrl": "Observation/216881330410151584"
+		},
+		{
+			"request": {
+				"method": "POST",
+				"url": "Encounter"
+			},
+			"resource": {
+				"identifier": [
+					{
+						"value": "2a620155-9d11-439e-92b3-5d9815ff4de8"
+					}
+				],
+				"subject": {
+					"reference": "Patient/160920144139807"
+				},
+				"diagnosis": [
+					{
+						"condition": {
+							"reference": "Condition/db734647-fc99-424c-a864-7e3cda82e704"
+						}
+					}
+				],
+				"id": "2a620155-9d11-439e-92b3-5d9815ff4de8",
+				"type": [
+					{
+						"coding": [
+							{
+								"system": "urn:oid:2.16.840.1.113883.6.12",
+								"code": "99213",
+								"display": "Office outpatient visit 15 minutes"
+							}
+						]
+					}
+				],
+				"class": {
+					"system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+					"code": "IMP",
+					"display": "inpatient encounter"
+				},
+				"resourceType": "Encounter",
+				"status": "unknown"
+			},
+			"fullUrl": "Encounter/2a620155-9d11-439e-92b3-5d9815ff4de8"
+		}
+	],
+	"type": "transaction",
+	"resourceType": "Bundle"
+}

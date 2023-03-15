@@ -1,0 +1,82 @@
+{
+  "fullUrl": "Patient/160920144139807",
+  "request": {
+    "method": "POST",
+    "url": "Patient"
+  },
+  "resource": {
+    "resourceType": "Patient",
+    "id": "160920144139807",
+    "extension": [
+      {
+        "extension": [
+          {
+            "valueCoding": {
+              "system": "urn:oid:2.16.840.1.113883.6.238",
+              "code": "2106-3",
+              "display": "White"
+            },
+            "url": "ombCategory"
+          }
+        ],
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+      },
+      {
+        "extension": [
+          {
+            "valueCoding": {
+              "system": "urn:oid:2.16.840.1.113883.6.238",
+              "code": "2135-2",
+              "display": "Hispanic or Latino"
+            },
+            "url": "ombCategory"
+          }
+        ],
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+      }
+    ],
+    "identifier": [
+      {
+        "system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+        "value": "160920144139807"
+      }
+    ],
+    "name": [
+      {
+        "given": [
+          "Myra"
+        ],
+        "use": "official",
+        "family": "Jones"
+      }
+    ],
+    "gender": "female",
+    "birthDate": "1947-05-01",
+    "address": [
+      {
+        "city": "Beaverton",
+        "use": "home",
+        "line": [
+          "1357 Amber Drive"
+        ],
+        "postalCode": "97006",
+        "state": "OR"
+      }
+    ],
+    "communication": [
+      {
+        "language": {
+          "coding": [
+            {
+              "display": "en"
+            }
+          ]
+        },
+        "preferred": true
+      }
+    ],
+    "managingOrganization": {
+      "reference": "Organization/3"
+    }
+  }
+}

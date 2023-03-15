@@ -1,0 +1,23 @@
+{
+  "name": "CCDAtoFHIRSamples",
+  "version": "0.0.1",
+  "description": "CCDA to FHIR scripts",
+  "main": "",
+  "type": "module",
+  "author": {
+    "name": "More Informatics, Inc.",
+    "email": "jdamore@moreinformaticss.com"
+  },
+  "engines": {
+    "node": "^14.16.1"
+  },
+  "dependencies": {
+    "chalk": "^5.0.1",
+    "pretty-data": "^0.40.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chunli866/CDAtoFHIRSamples"
+  },
+  "snyk": true
+}

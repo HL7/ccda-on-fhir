@@ -1,0 +1,55 @@
+	{
+		"fullUrl": "http://fhir:3447/4_0_0/Procedure/62f17e2aa2392d0008fbb234",
+		"resource": {
+			"resourceType": "Procedure",
+			"id": "62f17e2aa2392d0008fbb234",
+			"meta": {
+				"profile": ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"]
+			},
+			"language": "en-US",
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">H/O chest x-ray</div>"
+			},
+			"identifier": [{
+				"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.4.7",
+				"value": "545069400001"
+			}],
+			"status": "in-progress",
+			"code": {
+				"coding": [{
+					"system": "http://www.snomed.org/",
+					"code": "416940007",
+					"display": "Past history of procedure"
+				}]
+			},
+			"subject": {
+				"reference": "Patient/62f17e29b7532c0009e217b7",
+				"display": "Myra Jones"
+			},
+			"performedPeriod": {
+				"extension": [{
+					"url": "http://hl7.org/fhir/extension-data-absent-reason",
+					"valueCode": "unknown"
+				}]
+			},
+			"recorder": {
+				"reference": "Practitioner/62f17e2ae0231200076884cd",
+				"identifier": {
+					"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+					"value": "92698"
+				},
+				"display": "Provider abc"
+			},
+			"performer": [{
+				"actor": {
+					"reference": "Practitioner/62f17e2ae0231200076884cd",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+						"value": "92698"
+					},
+					"display": "Provider abc"
+				}
+			}]
+		}
+	}

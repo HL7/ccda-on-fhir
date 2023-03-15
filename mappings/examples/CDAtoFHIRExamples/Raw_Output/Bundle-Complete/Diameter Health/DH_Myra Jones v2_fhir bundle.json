@@ -1,0 +1,3192 @@
+{
+	"resourceType": "Bundle",
+	"type": "searchset",
+	"total": 36,
+	"link": [{
+		"relation": "self",
+		"url": "http://fhir:3447/4_0_0/Patient/62f17e29b7532c0009e217b7/$everything?_count=100"
+	},
+	{
+		"relation": "first",
+		"url": "http://fhir:3447/4_0_0/Patient/62f17e29b7532c0009e217b7/$everything?_count=100"
+	}],
+	"entry": [
+	{
+		"fullUrl": "http://fhir:3447/4_0_0/DocumentReference/62f17e29b7532c0009e217b7",
+		"resource": {
+			"resourceType": "DocumentReference",
+			"id": "62f17e29b7532c0009e217b7",
+			"meta": {
+				"profile": ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference"]
+			},
+			"language": "en-US",
+			"identifier": [{
+				"system": "http://diameterhealth.com",
+				"value": "62f17e29b7532c0009e217b7"
+			}],
+			"status": "current",
+			"type": {
+				"coding": [{
+					"system": "http://loinc.org",
+					"code": "34133-9",
+					"display": "Summary of episode note"
+				}]
+			},
+			"category": [{
+				"coding": [{
+					"system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+					"code": "clinical-note",
+					"display": "Clinical Note"
+				}],
+				"text": "Clinical Note"
+			}],
+			"subject": {
+				"reference": "Patient/62f17e29b7532c0009e217b7",
+				"display": "Myra Jones"
+			},
+			"date": "2022-08-08T21:20:41.691Z",
+			"custodian": {
+				"reference": "Organization/62f13822e0231200076884ca",
+				"identifier": {
+					"system": "http://example.com",
+					"value": "SomeExtension"
+				},
+				"display": "SomeInstitution"
+			},
+			"content": [{
+				"attachment": {
+					"contentType": "text/xml",
+					"language": "en-US",
+					"url": "http://localhost:3447/4_0_0/Binary/62f17e29b7532c0009e217b7?ccdType=summary",
+					"title": "Patient Summarization (C-CDA 2.1 CCD)"
+				}
+			}]
+		}
+	},
+	{
+		"fullUrl": "http://fhir:3447/4_0_0/Patient/62f17e29b7532c0009e217b7",
+		"resource": {
+			"resourceType": "Patient",
+			"id": "62f17e29b7532c0009e217b7",
+			"meta": {
+				"profile": ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"]
+			},
+			"language": "en-US",
+			"extension": [{
+				"extension": [{
+					"url": "ombCategory",
+					"valueCoding": {
+						"system": "urn:oid:2.16.840.1.113883.6.238",
+						"code": "2135-2",
+						"display": "Hispanic or Latino"
+					}
+				},
+				{
+					"url": "text",
+					"valueString": "Hispanic or Latino"
+				}],
+				"url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+			},
+			{
+				"extension": [{
+					"url": "ombCategory",
+					"valueCoding": {
+						"system": "urn:oid:2.16.840.1.113883.6.238",
+						"code": "2106-3",
+						"display": "White"
+					}
+				},
+				{
+					"url": "text",
+					"valueString": "White"
+				}],
+				"url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+			}],
+			"identifier": [{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+						"code": "PT",
+						"display": "Patient external identifier"
+					}]
+				},
+				"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+				"value": "160920144139807"
+			},
+			{
+				"system": "http://diameterhealth.com",
+				"value": "62f17e29b7532c0009e217b7"
+			}],
+			"name": [{
+				"use": "usual",
+				"text": "Myra Jones",
+				"family": "Jones",
+				"given": ["Myra"]
+			}],
+			"gender": "female",
+			"birthDate": "1947-05-01",
+			"deceasedBoolean": false,
+			"address": [{
+				"use": "home",
+				"text": "1357 Amber Drive Beaverton OR 97006",
+				"line": ["1357 Amber Drive"],
+				"city": "Beaverton",
+				"state": "OR",
+				"postalCode": "97006"
+			}],
+			"communication": [{
+				"language": {
+					"coding": [{
+						"system": "urn:oid:2.16.840.1.113883.6.316",
+						"code": "en",
+						"display": "English"
+					}]
+				},
+				"preferred": true
+			}]
+		}
+	},
+	{
+		"fullUrl": "http://fhir:3447/4_0_0/DocumentReference/62f17e29b7532c0009e217b8",
+		"resource": {
+			"resourceType": "DocumentReference",
+			"id": "62f17e29b7532c0009e217b8",
+			"meta": {
+				"profile": ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference"]
+			},
+			"language": "en-US",
+			"identifier": [{
+				"system": "http://diameterhealth.com",
+				"value": "62f17e29b7532c0009e217b8"
+			}],
+			"status": "current",
+			"type": {
+				"coding": [{
+					"system": "http://loinc.org",
+					"code": "34133-9",
+					"display": "Summary of episode note"
+				}]
+			},
+			"category": [{
+				"coding": [{
+					"system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+					"code": "clinical-note",
+					"display": "Clinical Note"
+				}],
+				"text": "Clinical Note"
+			}],
+			"subject": {
+				"reference": "Patient/62f17e29b7532c0009e217b7",
+				"display": "Myra Jones"
+			},
+			"date": "2022-08-08T21:20:41.646Z",
+			"author": [{
+				"reference": "Practitioner/62f17e2ae0231200076884cd",
+				"identifier": {
+					"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+					"value": "92698"
+				},
+				"display": "Provider abc"
+			},
+			{
+				"reference": "Practitioner/62f17e2ae0231200076884d0",
+				"identifier": {
+					"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.3.3",
+					"value": "3"
+				}
+			},
+			{
+				"reference": "Practitioner/62f17e2ae0231200076884d0",
+				"identifier": {
+					"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.3.3",
+					"value": "3"
+				}
+			}],
+			"custodian": {
+				"reference": "Organization/62f17e2ae0231200076884d8",
+				"identifier": {
+					"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+					"value": "3"
+				},
+				"display": "Primary Care's Partners Test"
+			},
+			"content": [{
+				"attachment": {
+					"contentType": "text/xml",
+					"language": "en-US",
+					"url": "http://localhost:3447/4_0_0/Binary/62f17e29b7532c0009e217b8?ccdType=document",
+					"title": "continuity of care document"
+				}
+			}],
+			"context": {
+				"period": {
+					"start": "2015-06-22T12:00:00-04:00",
+					"end": "2015-06-22T12:00:00-04:00"
+				}
+			}
+		}
+	},
+	{
+		"fullUrl": "http://fhir:3447/4_0_0/CareTeam/62f17e2aa2392d0008fbb21d",
+		"resource": {
+			"resourceType": "CareTeam",
+			"id": "62f17e2aa2392d0008fbb21d",
+			"meta": {
+				"profile": ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam"]
+			},
+			"language": "en-US",
+			"subject": {
+				"reference": "Patient/62f17e29b7532c0009e217b7",
+				"display": "Myra Jones"
+			},
+			"participant": [{
+				"role": [{
+					"coding": [{
+						"system": "http://snomed.info/sct",
+						"code": "116154003",
+						"display": "Patient (person)"
+					}]
+				}],
+				"member": {
+					"reference": "Patient/62f17e29b7532c0009e217b7",
+					"display": "Myra Jones"
+				}
+			},
+			{
+				"role": [{
+					"coding": [{
+						"system": "https://nucc.org/provider-taxonomy",
+						"code": "260000000X"
+					}]
+				}],
+				"member": {
+					"reference": "Practitioner/62f17e2ae0231200076884cd",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+						"value": "92698"
+					},
+					"display": "Provider abc"
+				}
+			},
+			{
+				"role": [{
+					"coding": [{
+						"extension": [{
+							"url": "http://hl7.org/fhir/extension-data-absent-reason",
+							"valueCode": "unknown"
+						}]
+					}]
+				}],
+				"member": {
+					"reference": "Practitioner/62f17e2ae0231200076884d0",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.3.3",
+						"value": "3"
+					}
+				}
+			}]
+		}
+	},
+	{
+		"fullUrl": "http://fhir:3447/4_0_0/AllergyIntolerance/62f17e2aa2392d0008fbb220",
+		"resource": {
+			"resourceType": "AllergyIntolerance",
+			"id": "62f17e2aa2392d0008fbb220",
+			"meta": {
+				"profile": ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance"]
+			},
+			"language": "en-US",
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Aspirin TABS</div>"
+			},
+			"extension": [{
+				"url": "http://hl7.org/fhir/StructureDefinition/allergyintolerance-detailed-category",
+				"valueCodeableConcept": {
+					"coding": [{
+						"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+						"code": "1191",
+						"display": "Aspirin"
+					}]
+				}
+			}],
+			"identifier": [{
+				"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.4.10.2",
+				"value": "545077400001"
+			}],
+			"clinicalStatus": {
+				"coding": [{
+					"system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+					"code": "active",
+					"display": "Active"
+				}]
+			},
+			"category": ["medication"],
+			"code": {
+				"coding": [{
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"code": "1191",
+					"display": "Aspirin"
+				}]
+			},
+			"patient": {
+				"reference": "Patient/62f17e29b7532c0009e217b7",
+				"display": "Myra Jones"
+			},
+			"onsetDateTime": "2008-05-01T16:00:00.000Z",
+			"recorder": {
+				"reference": "Practitioner/62f17e2ae0231200076884cd",
+				"identifier": {
+					"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+					"value": "92698"
+				},
+				"display": "Provider abc"
+			},
+			"reaction": [{
+				"manifestation": [{
+					"coding": [{
+						"system": "http://www.snomed.org/",
+						"code": "247472004",
+						"display": "Hives"
+					}]
+				}],
+				"severity": "severe"
+			}]
+		}
+	},
+	{
+		"fullUrl": "http://fhir:3447/4_0_0/DocumentReference/62f17e2aa2392d0008fbb222",
+		"resource": {
+			"resourceType": "DocumentReference",
+			"id": "62f17e2aa2392d0008fbb222",
+			"meta": {
+				"profile": ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference"]
+			},
+			"language": "en-US",
+			"identifier": [{
+				"system": "http://diameterhealth.com",
+				"value": "62f17e29b7532c0009e217b8"
+			}],
+			"status": "current",
+			"type": {
+				"coding": [{
+					"system": "http://loinc.org",
+					"code": "34109-9",
+					"display": "Note"
+				}]
+			},
+			"category": [{
+				"coding": [{
+					"system": "http://loinc.org",
+					"code": "LP72311-1",
+					"display": "Consultation note"
+				}]
+			}],
+			"subject": {
+				"reference": "Patient/62f17e29b7532c0009e217b7",
+				"display": "Myra Jones"
+			},
+			"date": "2022-08-08T21:20:41.646Z",
+			"custodian": {
+				"reference": "Organization/62f17e2ae0231200076884d8",
+				"identifier": {
+					"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+					"value": "3"
+				},
+				"display": "Primary Care's Partners Test"
+			},
+			"content": [{
+				"attachment": {
+					"contentType": "plain/text",
+					"data": "PGl0ZW0+PHBhcmFncmFwaD5Eci4gU3BlY2lhbGlzdCAtIFNlcHRlbWJlciA4LCAyMDE2PC9wYXJhZ3JhcGg+PHBhcmFncmFwaD4gRGVhciBEci4gSGVucnkgTGV2ZW46IFRoYW5rIHlvdSBmb3IgcmVmZXJyaW5nIE1zLiBKb25lcyBmb3IgZXZhbHVhdGlvbi4gQXBwcm94aW1hdGVseSAxOCB5ZWFycyBhZ28sIHNoZSB3YXMgaG9zcGl0YWxpemVkIHdpdGggYSBibGVlZGluZyB1bGNlci4gU2hlIGhhZCBhIENUIHNjYW4gb2YgdGhlIGFiZG9tZW4sIHdoaWNoIHJldmVhbGVkIGZpbmRpbmdzIGNvbnNpc3RlbnQgd2l0aCBmb2NhbCBub2R1bGFyIGh5cGVycGxhc2lhIChGTkgpLiBTaGUgaGFzIGhhZCBlcGlnYXN0cmljIGFiZG9taW5hbCBwYWluIGFzIHdlbGwgYXMgYSBzaWduaWZpY2FudCBjaGFuZ2UgaW4gaGVyIGJvd2VsIG1vdmVtZW50cyBmcm9tIGJhc2VsaW5lIGNvbnN0aXBhdGlvbiB0byBmcmVxdWVudCBkaWFycmhlYS4gVGhlIHBhc3QgbWVkaWNhbCBoaXN0b3J5IGlzIG90aGVyd2lzZSBuZWdhdGl2ZS4gU2hlIHRha2VzIG5vIHByZXNjcmlwdGlvbiBtZWRpY2F0aW9ucy4gVGhlIHJlbWFpbmRlciBvZiB0aGUgaGlzdG9yeSBpcyBub3QgY29udHJpYnV0b3J5LiA8L3BhcmFncmFwaD48cGFyYWdyYXBoPlBoeXNpY2FsIGV4YW1pbmF0aW9uIHJldmVhbGVkIGEgd2VsbC1hcHBlYXJpbmcgd29tYW4uIFRoZSB2aXRhbCBzaWducyB3ZXJlIG5vcm1hbC4gVGhlIGhlYWQgYW5kIG5lY2sgd2VyZSB1bnJlbWFya2FibGUuIFRoZSBsdW5nIGZpZWxkcyB3ZXJlIGNsZWFyLiBUaGUgaGVhcnQgZXhhbSB3YXMgbm9ybWFsLiBUaGUgYWJkb21lbiB3YXMgb2Jlc2Ugd2l0aCBub3JtYWwgYm93ZWwgc291bmRzLiBUaGVyZSB3YXMgbm8gdGVuZGVybmVzcywgbWFzcywgb3IgaGVwYXRvc3BsZW5vbWVnYWx5LiA8L3BhcmFncmFwaD48cGFyYWdyYXBoPkVuZG9zY29waWMgZXZhbHVhdGlvbiByZXZlYWxlZCBhIG5vcm1hbCBjb2xvbm9zY29weS4gQmlvcHNpZXMgdGFrZW4gdGhyb3VnaG91dCB0aGUgY29sb24gd2VyZSBlc3NlbnRpYWxseSB1bnJlbWFya2FibGUuIFN0b29sIHRlc3RzIGZvciBwYXRob2dlbmljIG9yZ2FuaXNtcyB3ZXJlIG5lZ2F0aXZlLiBPZiBub3RlLCBvbiB0aGUgdXBwZXIgZW5kb3Njb3B5IGV4YW1pbmF0aW9uLCBubyBzaWduaWZpY2FudCBhYm5vcm1hbGl0aWVzIHdlcmUgc2VlbjsgaG93ZXZlciwgdXBvbiBiaW9wc3ksIGZlYXR1cmVzIG9mIGNlbGlhYyBkaXNlYXNlIHdlcmUgbm90ZWQuPC9wYXJhZ3JhcGg+PHBhcmFncmFwaD4gSW4gc3VtbWFyeSwgdGhpcyBwYXRpZW50IGhhcyBldmlkZW5jZSBvZiBjZWxpYWMgZGlzZWFzZS4gV2UgZGlzY3Vzc2VkIHRoZSBkaWFnbm9zaXMgaW4gZGV0YWlsIGluIHRoZSBvZmZpY2UuIFNoZSB3YXMgYWR2aXNlZCB0byB1bmRlcnRha2UgYSBsaWZlbG9uZyBnbHV0ZW4tZnJlZSBkaWV0LiBGb2xsb3d1cCBsYWJvcmF0b3JpZXMgaW4gbXkgb2ZmaWNlIHdlcmUgbm90YWJsZSBmb3IgYSBsb3cgc2VydW0gaXJvbiB3aXRoIGEgbG93LW5vcm1hbCBmZXJyaXRpbi4gVGhlIGJvbmUgZGVuc2l0eSB3YXMgbm9ybWFsLiBSZXBlYXQgdHJpcGxlLXBoYXNlIENUIHNjYW4gb2YgdGhlIGxpdmVyIHJldmVhbGVkIG5vIGNoYW5nZSBpbiB0aGUgcmlnaHQgaGVwYXRpYyBsb2JlIGxlc2lvbiwgd2hpY2ggaXMgY29uc2lzdGVudCB3aXRoIEZOSC4gSSBhZHZpc2VkIHBlcmlvZGljIHJlZXZhbHVhdGlvbiBvZiB0aGUgbGl2ZXIgd2l0aCBpbWFnaW5nLCBhcyB3ZWxsIGFzIGZvbGxvd3VwIGZvciBhbnkgcG90ZW50aWFsIGRldmVsb3BtZW50IG9mIG51dHJpdGlvbmFsIGRlZmljaWVuY2llcy4gU2hlIHNob3VsZCB0YWtlIGFuIGlyb24gc3VwcGxlbWVudCBhbmQgY29udGludWUgb24gYSBsaWZlbG9uZyBnbHV0ZW4tZnJlZSBkaWV0LiA8L3BhcmFncmFwaD48cGFyYWdyYXBoPlRoYW5rIHlvdSBmb3IgdGhlIGNvdXJ0ZXN5IG9mIHRoaXMgcmVmZXJyYWwuIEkgd291bGQgYmUgcGxlYXNlZCB0byBzZWUgTXMuIEpvbmVzIGluIGZvbGxvd3VwLjwvcGFyYWdyYXBoPjwvaXRlbT4="
+				}
+			}],
+			"context": {
+				"period": {
+					"start": "2015-06-22T12:00:00-04:00",
+					"end": "2015-06-22T12:00:00-04:00"
+				}
+			}
+		}
+	},
+	{
+		"fullUrl": "http://fhir:3447/4_0_0/Encounter/62f17e2aa2392d0008fbb224",
+		"resource": {
+			"resourceType": "Encounter",
+			"id": "62f17e2aa2392d0008fbb224",
+			"meta": {
+				"profile": ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"]
+			},
+			"language": "en-US",
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Office outpatient visit Dr. Samir Kahn Internal Medicine Community Urgent Care (Urgent Care Center) 1004 Healthcare Dr. Portland, OR 97005 August 15, 2012 Costal Chondritis Active</div>"
+			},
+			"status": "finished",
+			"class": {
+				"system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+				"code": "AMB",
+				"display": "ambulatory"
+			},
+			"type": [{
+				"coding": [{
+					"system": "http://www.ama-assn.org/go/cpt",
+					"code": "99213",
+					"display": "Office/outpatient established low mdm 20-29 min"
+				}]
+			}],
+			"subject": {
+				"reference": "Patient/62f17e29b7532c0009e217b7",
+				"display": "Myra Jones"
+			},
+			"participant": [{
+				"individual": {
+					"reference": "Practitioner/62f17e2ae0231200076884d4",
+					"identifier": {
+						"system": "http://hl7.org/fhir/sid/us-npi",
+						"value": "12345678910"
+					},
+					"display": "Dr. Samir Khan"
+				}
+			},
+			{
+				"individual": {
+					"reference": "Practitioner/62f17e2ae0231200076884cd",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+						"value": "92698"
+					},
+					"display": "Provider abc"
+				}
+			}],
+			"period": {
+				"start": "2012-08-15T18:00:00.000Z"
+			},
+			"length": {
+				"value": 0,
+				"unit": "days",
+				"system": "http://unitsofmeasure.org",
+				"code": "d"
+			},
+			"reasonCode": [{
+				"coding": [{
+					"system": "http://snomed.info/sct",
+					"code": "64109004",
+					"display": "Costal chondritis"
+				}]
+			}],
+			"diagnosis": [{
+				"condition": {
+					"reference": "Condition/62f17e2aa2392d0008fbb232",
+					"display": "Costal chondritis"
+				}
+			}]
+		}
+	},
+	{
+		"fullUrl": "http://fhir:3447/4_0_0/Goal/62f17e2aa2392d0008fbb226",
+		"resource": {
+			"resourceType": "Goal",
+			"id": "62f17e2aa2392d0008fbb226",
+			"meta": {
+				"profile": ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal"]
+			},
+			"language": "en-US",
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">August 15, 2012 10:00am Weight Loss Patient Education: Diet and exercise counseling provided during visit.</div>"
+			},
+			"identifier": [{
+				"system": "urn:uuid:2a620155-9d11-439e-92b3-5d9815ff4dd4"
+			}],
+			"lifecycleStatus": "active",
+			"description": {
+				"coding": [{
+					"system": "http://www.snomed.org/",
+					"code": "289169006",
+					"display": "weight loss"
+				}]
+			},
+			"subject": {
+				"reference": "Patient/62f17e29b7532c0009e217b7",
+				"display": "Myra Jones"
+			},
+			"startDate": "2012-08-15",
+			"target": [{
+				"measure": {
+					"coding": [{
+						"system": "http://www.snomed.org/",
+						"code": "289169006",
+						"display": "weight loss"
+					}]
+				},
+				"dueDate": "2012-08-15"
+			}],
+			"expressedBy": {
+				"reference": "Practitioner/62f17e2ae0231200076884cd",
+				"identifier": {
+					"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+					"value": "92698"
+				},
+				"display": "Provider abc"
+			}
+		}
+	},
+	{
+		"fullUrl": "http://fhir:3447/4_0_0/Immunization/62f17e2aa2392d0008fbb228",
+		"resource": {
+			"resourceType": "Immunization",
+			"id": "62f17e2aa2392d0008fbb228",
+			"meta": {
+				"profile": ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization"]
+			},
+			"language": "en-US",
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Influenza Virus Vaccine 1 8/15/2010 Completed</div>"
+			},
+			"identifier": [{
+				"system": "urn:uuid:e6f1ba43-c0ed-4b9b-9f12-f435d8ad8f92"
+			}],
+			"status": "completed",
+			"vaccineCode": {
+				"coding": [{
+					"system": "http://hl7.org/fhir/sid/cvx",
+					"code": "88",
+					"display": "influenza virus vaccine, unspecified formulation"
+				}]
+			},
+			"patient": {
+				"reference": "Patient/62f17e29b7532c0009e217b7",
+				"display": "Myra Jones"
+			},
+			"occurrenceDateTime": "2010-08-15T16:00:00.000Z",
+			"recorded": "2010-08-15T16:00:00.000Z",
+			"primarySource": true,
+			"performer": [{
+				"actor": {
+					"reference": "Practitioner/62f17e2ae0231200076884cd",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+						"value": "92698"
+					},
+					"display": "Provider abc"
+				}
+			},
+			{
+				"actor": {
+					"reference": "Practitioner/62f17e2ae0231200076884d5",
+					"identifier": {
+						"system": "http://hl7.org/fhir/sid/us-npi",
+						"value": "99999999"
+					},
+					"display": "Henry Seven"
+				}
+			},
+			{
+				"actor": {
+					"reference": "Practitioner/62f17e2ae0231200076884d0",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.3.3",
+						"value": "3"
+					}
+				}
+			}]
+		}
+	},
+	{
+		"fullUrl": "http://fhir:3447/4_0_0/MedicationRequest/62f17e2aa2392d0008fbb22c",
+		"resource": {
+			"resourceType": "MedicationRequest",
+			"id": "62f17e2aa2392d0008fbb22c",
+			"meta": {
+				"profile": ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"]
+			},
+			"language": "en-US",
+			"identifier": [{
+				"system": "urn:uuid:cdbd33f0-6cde-11db-9fe1-0800200c9a66"
+			}],
+			"status": "active",
+			"intent": "instance-order",
+			"medicationCodeableConcept": {
+				"coding": [{
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"code": "435",
+					"display": "Albuterol"
+				}]
+			},
+			"subject": {
+				"reference": "Patient/62f17e29b7532c0009e217b7",
+				"display": "Myra Jones"
+			},
+			"requester": {
+				"extension": [{
+					"url": "http://hl7.org/fhir/extension-data-absent-reason",
+					"valueCode": "unknown"
+				}]
+			}
+		}
+	},
+	{
+		"fullUrl": "http://fhir:3447/4_0_0/Condition/62f17e2aa2392d0008fbb22e",
+		"resource": {
+			"resourceType": "Condition",
+			"id": "62f17e2aa2392d0008fbb22e",
+			"meta": {
+				"profile": ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"]
+			},
+			"language": "en-US",
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pneumonia</div>"
+			},
+			"extension": [{
+				"url": "http://hl7.org/fhir/StructureDefinition/condition-diseaseCourse",
+				"valueCodeableConcept": {
+					"coding": [{
+						"system": "http://www.snomed.org/",
+						"code": "278499009",
+						"display": "Episodic"
+					}]
+				}
+			},
+			{
+				"url": "http://hl7.org/fhir/StructureDefinition/condition-diseaseClassification",
+				"valueCodeableConcept": {
+					"coding": [{
+						"system": "urn:oid:2.16.840.1.113883.6.115",
+						"code": "0122",
+						"display": "Pneumonia (except that caused by tuberculosis or sexually transmitted disease)"
+					}]
+				}
+			}],
+			"identifier": [{
+				"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.4.1.2.1",
+				"value": "545069300001"
+			}],
+			"clinicalStatus": {
+				"coding": [{
+					"system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+					"code": "inactive",
+					"display": "Inactive"
+				}]
+			},
+			"category": [{
+				"coding": [{
+					"system": "http://terminology.hl7.org/CodeSystem/condition-category",
+					"code": "problem-list-item",
+					"display": "Problem List Item"
+				}]
+			}],
+			"code": {
+				"coding": [{
+					"system": "http://www.snomed.org/",
+					"code": "233604007",
+					"display": "Pneumonia"
+				}]
+			},
+			"subject": {
+				"reference": "Patient/62f17e29b7532c0009e217b7",
+				"display": "Myra Jones"
+			},
+			"onsetDateTime": "2012-08-06T16:00:00.000Z",
+			"recordedDate": "2012-08-06T16:00:00.000Z",
+			"recorder": {
+				"reference": "Practitioner/62f17e2ae0231200076884cd",
+				"identifier": {
+					"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+					"value": "92698"
+				},
+				"display": "Provider abc"
+			}
+		}
+	},
+	{
+		"fullUrl": "http://fhir:3447/4_0_0/Condition/62f17e2aa2392d0008fbb230",
+		"resource": {
+			"resourceType": "Condition",
+			"id": "62f17e2aa2392d0008fbb230",
+			"meta": {
+				"profile": ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"]
+			},
+			"language": "en-US",
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Asthma</div>"
+			},
+			"extension": [{
+				"url": "http://hl7.org/fhir/StructureDefinition/condition-diseaseCourse",
+				"valueCodeableConcept": {
+					"coding": [{
+						"system": "http://www.snomed.org/",
+						"code": "90734009",
+						"display": "Chronic"
+					}]
+				}
+			},
+			{
+				"url": "http://hl7.org/fhir/StructureDefinition/condition-diseaseClassification",
+				"valueCodeableConcept": {
+					"coding": [{
+						"system": "urn:oid:2.16.840.1.113883.6.115",
+						"code": "0128",
+						"display": "Asthma"
+					}]
+				}
+			}],
+			"identifier": [{
+				"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.4.1.2.1",
+				"value": "545077400017"
+			}],
+			"clinicalStatus": {
+				"coding": [{
+					"system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+					"code": "active",
+					"display": "Active"
+				}]
+			},
+			"category": [{
+				"coding": [{
+					"system": "http://terminology.hl7.org/CodeSystem/condition-category",
+					"code": "problem-list-item",
+					"display": "Problem List Item"
+				}]
+			}],
+			"code": {
+				"coding": [{
+					"system": "http://www.snomed.org/",
+					"code": "195967001",
+					"display": "Asthma"
+				}]
+			},
+			"subject": {
+				"reference": "Patient/62f17e29b7532c0009e217b7",
+				"display": "Myra Jones"
+			},
+			"recorder": {
+				"reference": "Practitioner/62f17e2ae0231200076884cd",
+				"identifier": {
+					"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+					"value": "92698"
+				},
+				"display": "Provider abc"
+			}
+		}
+	},
+	{
+		"fullUrl": "http://fhir:3447/4_0_0/Condition/62f17e2aa2392d0008fbb232",
+		"resource": {
+			"resourceType": "Condition",
+			"id": "62f17e2aa2392d0008fbb232",
+			"meta": {
+				"profile": ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"]
+			},
+			"language": "en-US",
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Costal Chondritis</div>"
+			},
+			"extension": [{
+				"url": "http://hl7.org/fhir/StructureDefinition/condition-diseaseCourse",
+				"valueCodeableConcept": {
+					"coding": [{
+						"system": "http://www.snomed.org/",
+						"code": "278499009",
+						"display": "Episodic"
+					}]
+				}
+			},
+			{
+				"url": "http://hl7.org/fhir/StructureDefinition/condition-diseaseClassification",
+				"valueCodeableConcept": {
+					"coding": [{
+						"system": "urn:oid:2.16.840.1.113883.6.115",
+						"code": "0212",
+						"display": "Other bone disease and musculoskeletal deformities"
+					}]
+				}
+			}],
+			"identifier": [{
+				"system": "urn:uuid:db734647-fc99-424c-a864-7e3cda82e704"
+			}],
+			"clinicalStatus": {
+				"coding": [{
+					"system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+					"code": "inactive",
+					"display": "Inactive"
+				}]
+			},
+			"category": [{
+				"coding": [{
+					"system": "http://terminology.hl7.org/CodeSystem/condition-category",
+					"code": "encounter-diagnosis",
+					"display": "Encounter Diagnosis"
+				}]
+			}],
+			"code": {
+				"coding": [{
+					"system": "http://www.snomed.org/",
+					"code": "64109004",
+					"display": "Costal chondritis"
+				}]
+			},
+			"subject": {
+				"reference": "Patient/62f17e29b7532c0009e217b7",
+				"display": "Myra Jones"
+			},
+			"onsetDateTime": "2012-08-15T16:00:00.000Z",
+			"recordedDate": "2012-08-15T18:00:00.000Z",
+			"recorder": {
+				"reference": "Practitioner/62f17e2ae0231200076884cd",
+				"identifier": {
+					"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+					"value": "92698"
+				},
+				"display": "Provider abc"
+			}
+		}
+	},
+	{
+		"fullUrl": "http://fhir:3447/4_0_0/Procedure/62f17e2aa2392d0008fbb234",
+		"resource": {
+			"resourceType": "Procedure",
+			"id": "62f17e2aa2392d0008fbb234",
+			"meta": {
+				"profile": ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"]
+			},
+			"language": "en-US",
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">H/O chest x-ray</div>"
+			},
+			"identifier": [{
+				"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.4.7",
+				"value": "545069400001"
+			}],
+			"status": "in-progress",
+			"code": {
+				"coding": [{
+					"system": "http://www.snomed.org/",
+					"code": "416940007",
+					"display": "Past history of procedure"
+				}]
+			},
+			"subject": {
+				"reference": "Patient/62f17e29b7532c0009e217b7",
+				"display": "Myra Jones"
+			},
+			"performedPeriod": {
+				"extension": [{
+					"url": "http://hl7.org/fhir/extension-data-absent-reason",
+					"valueCode": "unknown"
+				}]
+			},
+			"recorder": {
+				"reference": "Practitioner/62f17e2ae0231200076884cd",
+				"identifier": {
+					"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+					"value": "92698"
+				},
+				"display": "Provider abc"
+			},
+			"performer": [{
+				"actor": {
+					"reference": "Practitioner/62f17e2ae0231200076884cd",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+						"value": "92698"
+					},
+					"display": "Provider abc"
+				}
+			}]
+		}
+	},
+	{
+		"fullUrl": "http://fhir:3447/4_0_0/DiagnosticReport/62f17e2aa2392d0008fbb236",
+		"resource": {
+			"resourceType": "DiagnosticReport",
+			"id": "62f17e2aa2392d0008fbb236",
+			"meta": {
+				"profile": ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab"]
+			},
+			"language": "en-US",
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Urinalysis macro (dipstick) panel (U)</div>"
+			},
+			"identifier": [{
+				"value": "urn:uuid:ce85e43a-aa99-4030-907a-33ec5b25a90e"
+			}],
+			"status": "final",
+			"category": [{
+				"coding": [{
+					"system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+					"code": "LAB",
+					"display": "Laboratory"
+				}]
+			}],
+			"code": {
+				"coding": [{
+					"system": "http://loinc.org",
+					"code": "24357-6",
+					"display": "Urinalysis macro (dipstick) panel (U)"
+				}]
+			},
+			"subject": {
+				"reference": "Patient/62f17e29b7532c0009e217b7",
+				"display": "Myra Jones"
+			},
+			"effectiveDateTime": "2015-06-22T16:00:00.000Z",
+			"issued": "2022-08-08T21:20:42.315Z",
+			"performer": [{
+				"reference": "Practitioner/62f17e2ae0231200076884cd",
+				"identifier": {
+					"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+					"value": "92698"
+				},
+				"display": "Provider abc"
+			},
+			{
+				"reference": "Practitioner/62f17e2ae0231200076884d0",
+				"identifier": {
+					"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.3.3",
+					"value": "3"
+				}
+			}],
+			"result": [{
+				"reference": "Observation/62f17e2aa2392d0008fbb238",
+				"display": "Specific gravity (U) [Rel density]"
+			}]
+		}
+	},
+	{
+		"fullUrl": "http://fhir:3447/4_0_0/Observation/62f17e2aa2392d0008fbb238",
+		"resource": {
+			"resourceType": "Observation",
+			"id": "62f17e2aa2392d0008fbb238",
+			"meta": {
+				"profile": ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"]
+			},
+			"language": "en-US",
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Specific gravity of Urine by Test strip 1.015 Range: 1.005 - 1.030</div>"
+			},
+			"identifier": [{
+				"system": "urn:oid:1.3.6.1.4.1.22812.20.1.1.4.5",
+				"value": "13"
+			}],
+			"status": "final",
+			"category": [{
+				"coding": [{
+					"system": "http://terminology.hl7.org/CodeSystem/observation-category",
+					"code": "laboratory",
+					"display": "Laboratory"
+				}]
+			}],
+			"code": {
+				"coding": [{
+					"system": "http://loinc.org",
+					"code": "2965-2",
+					"display": "Specific gravity (U) [Rel density]"
+				}]
+			},
+			"subject": {
+				"reference": "Patient/62f17e29b7532c0009e217b7",
+				"display": "Myra Jones"
+			},
+			"effectiveDateTime": "2015-06-22T16:00:00.000Z",
+			"performer": [{
+				"reference": "Practitioner/62f17e2ae0231200076884cd",
+				"identifier": {
+					"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+					"value": "92698"
+				},
+				"display": "Provider abc"
+			},
+			{
+				"reference": "Practitioner/62f17e2ae0231200076884d0",
+				"identifier": {
+					"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.3.3",
+					"value": "3"
+				}
+			}],
+			"valueQuantity": {
+				"value": 1.015,
+				"unit": "1",
+				"system": "http://unitsofmeasure.org"
+			}
+		}
+	},
+	{
+		"fullUrl": "http://fhir:3447/4_0_0/Observation/62f17e2aa2392d0008fbb23a",
+		"resource": {
+			"resourceType": "Observation",
+			"id": "62f17e2aa2392d0008fbb23a",
+			"meta": {
+				"profile": ["http://hl7.org/fhir/R4/observation"]
+			},
+			"language": "en-US",
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Status: Current every day smoker Detail: Moderate smoker (10-19 cigs/day) Started: 1992 Stopped: Recorded June 6, 2014 10:32am</div>"
+			},
+			"identifier": [{
+				"system": "urn:oid:2.16.840.1.113883.19",
+				"value": "123456789"
+			}],
+			"status": "registered",
+			"category": [{
+				"coding": [{
+					"system": "http://terminology.hl7.org/CodeSystem/observation-category",
+					"code": "social-history",
+					"display": "Social History"
+				}]
+			}],
+			"code": {
+				"coding": [{
+					"system": "http://loinc.org",
+					"code": "72166-2",
+					"display": "Tobacco smoking status NHIS"
+				}]
+			},
+			"subject": {
+				"reference": "Patient/62f17e29b7532c0009e217b7",
+				"display": "Myra Jones"
+			},
+			"effectiveDateTime": "2014-06-06T15:32:00.000Z",
+			"issued": "2014-06-06T15:32:00.000Z",
+			"performer": [{
+				"reference": "Practitioner/62f17e2ae0231200076884cd",
+				"identifier": {
+					"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+					"value": "92698"
+				},
+				"display": "Provider abc"
+			},
+			{
+				"reference": "Practitioner/62f17e2ae0231200076884d5",
+				"identifier": {
+					"system": "http://hl7.org/fhir/sid/us-npi",
+					"value": "99999999"
+				},
+				"display": "Henry Seven"
+			},
+			{
+				"reference": "Practitioner/62f17e2ae0231200076884d0",
+				"identifier": {
+					"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.3.3",
+					"value": "3"
+				}
+			}],
+			"valueCodeableConcept": {
+				"coding": [{
+					"system": "http://www.snomed.org/",
+					"code": "449868002",
+					"display": "Current every day smoker"
+				}]
+			}
+		}
+	},
+	{
+		"fullUrl": "http://fhir:3447/4_0_0/Observation/62f17e2aa2392d0008fbb23c",
+		"resource": {
+			"resourceType": "Observation",
+			"id": "62f17e2aa2392d0008fbb23c",
+			"meta": {
+				"profile": ["http://hl7.org/fhir/StructureDefinition/vitalsigns"]
+			},
+			"language": "en-US",
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">80 /min</div>"
+			},
+			"identifier": [{
+				"system": "urn:oid:2.16.840.1.113883.3.42.126.100001.19",
+				"value": "216881330410151584"
+			}],
+			"status": "final",
+			"category": [{
+				"coding": [{
+					"system": "http://terminology.hl7.org/CodeSystem/observation-category",
+					"code": "vital-signs",
+					"display": "Vital Signs",
+					"userSelected": false
+				}]
+			}],
+			"code": {
+				"coding": [{
+					"system": "http://loinc.org",
+					"code": "8867-4",
+					"display": "Heart rate"
+				}]
+			},
+			"subject": {
+				"reference": "Patient/62f17e29b7532c0009e217b7",
+				"display": "Myra Jones"
+			},
+			"effectiveDateTime": "2014-05-21T01:36:05.000Z",
+			"performer": [{
+				"reference": "Practitioner/62f17e2ae0231200076884cd",
+				"identifier": {
+					"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+					"value": "92698"
+				},
+				"display": "Provider abc"
+			},
+			{
+				"reference": "Practitioner/62f17e2ae0231200076884d0",
+				"identifier": {
+					"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.3.3",
+					"value": "3"
+				}
+			}],
+			"valueQuantity": {
+				"value": 80,
+				"unit": "/min",
+				"system": "http://unitsofmeasure.org"
+			},
+			"interpretation": [{
+				"coding": [{
+					"system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+					"code": "N",
+					"display": "Normal"
+				}]
+			}],
+			"referenceRange": [{
+				"low": {
+					"value": 60,
+					"unit": "/min"
+				},
+				"high": {
+					"value": 100,
+					"unit": "/min"
+				}
+			}]
+		}
+	},
+	{
+		"fullUrl": "http://fhir:3447/4_0_0/Provenance/62f17e29a2392d0008fbb217",
+		"resource": {
+			"resourceType": "Provenance",
+			"id": "62f17e29a2392d0008fbb217",
+			"meta": {
+				"lastUpdated": "2022-08-08T21:20:41.981Z",
+				"profile": ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"]
+			},
+			"language": "en-US",
+			"target": [{
+				"reference": "DocumentReference/62f17e29b7532c0009e217b7"
+			}],
+			"recorded": "2022-08-08T21:20:41.691Z",
+			"activity": {
+				"coding": [{
+					"system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+					"code": "CREATE",
+					"display": "create"
+				}]
+			},
+			"agent": [{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "author",
+						"display": "Author"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884cd",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+						"value": "92698"
+					},
+					"display": "Provider abc"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "transmitter",
+						"display": "Transmitter"
+					}]
+				},
+				"who": {
+					"display": "Diameter Health, Inc."
+				}
+			}],
+			"entity": [{
+				"role": "source",
+				"what": {
+					"reference": "DocumentReference/62f17e29b7532c0009e217b7"
+				}
+			}]
+		}
+	},
+	{
+		"fullUrl": "http://fhir:3447/4_0_0/Provenance/62f17e2aa2392d0008fbb219",
+		"resource": {
+			"resourceType": "Provenance",
+			"id": "62f17e2aa2392d0008fbb219",
+			"meta": {
+				"lastUpdated": "2022-08-08T21:20:42.005Z",
+				"profile": ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"]
+			},
+			"language": "en-US",
+			"target": [{
+				"reference": "Patient/62f17e29b7532c0009e217b7"
+			}],
+			"recorded": "2022-08-08T21:20:42.005Z",
+			"activity": {
+				"coding": [{
+					"system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+					"code": "CREATE",
+					"display": "create"
+				}]
+			},
+			"agent": [{
+				"who": {
+					"display": "Diameter Health Inc."
+				}
+			}],
+			"entity": [{
+				"role": "source",
+				"what": {
+					"reference": "DocumentReference/62f17e29b7532c0009e217b7"
+				}
+			}]
+		}
+	},
+	{
+		"fullUrl": "http://fhir:3447/4_0_0/Provenance/62f17e2aa2392d0008fbb21b",
+		"resource": {
+			"resourceType": "Provenance",
+			"id": "62f17e2aa2392d0008fbb21b",
+			"meta": {
+				"lastUpdated": "2022-08-08T21:20:42.054Z",
+				"profile": ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"]
+			},
+			"language": "en-US",
+			"target": [{
+				"reference": "DocumentReference/62f17e29b7532c0009e217b8"
+			}],
+			"recorded": "2016-10-03T18:27:10.000Z",
+			"activity": {
+				"coding": [{
+					"system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+					"code": "CREATE",
+					"display": "create"
+				}]
+			},
+			"agent": [{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "author",
+						"display": "Author"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884cd",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+						"value": "92698"
+					},
+					"display": "Provider abc"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "author",
+						"display": "Author"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884d0",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.3.3",
+						"value": "3"
+					}
+				},
+				"onBehalfOf": {
+					"display": "Primary Care's Partners Test"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "author",
+						"display": "Author"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884d0",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.3.3",
+						"value": "3"
+					}
+				},
+				"onBehalfOf": {
+					"display": "Primary Care's Partners Test"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "performer",
+						"display": "Performer"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884cd",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+						"value": "92698"
+					},
+					"display": "Provider abc"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "custodian",
+						"display": "Custodian"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884d0",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.3.3",
+						"value": "3"
+					}
+				},
+				"onBehalfOf": {
+					"display": "Primary Care's Partners Test"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "transmitter",
+						"display": "Transmitter"
+					}]
+				},
+				"who": {
+					"reference": "Device/62f17e2aa2392d0008fbb21e",
+					"display": "17.100.578.0"
+				},
+				"onBehalfOf": {
+					"display": "Primary Care's Partners Test"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "transmitter",
+						"display": "Transmitter"
+					}]
+				},
+				"who": {
+					"reference": "Device/62f17e2aa2392d0008fbb21f",
+					"display": "Diameter Health Fusion v3.120.0"
+				},
+				"onBehalfOf": {
+					"display": "Diameter Health, Inc."
+				}
+			}],
+			"entity": [{
+				"role": "source",
+				"what": {
+					"reference": "DocumentReference/62f17e29b7532c0009e217b8"
+				}
+			}]
+		}
+	},
+	{
+		"fullUrl": "http://fhir:3447/4_0_0/Provenance/62f17e2aa2392d0008fbb21c",
+		"resource": {
+			"resourceType": "Provenance",
+			"id": "62f17e2aa2392d0008fbb21c",
+			"meta": {
+				"lastUpdated": "2022-08-08T21:20:42.056Z",
+				"profile": ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"]
+			},
+			"language": "en-US",
+			"target": [{
+				"reference": "CareTeam/62f17e2aa2392d0008fbb21d"
+			}],
+			"recorded": "2016-10-03T18:27:10.000Z",
+			"activity": {
+				"coding": [{
+					"system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+					"code": "CREATE",
+					"display": "create"
+				}]
+			},
+			"agent": [{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "author",
+						"display": "Author"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884cd",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+						"value": "92698"
+					},
+					"display": "Provider abc"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "author",
+						"display": "Author"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884d0",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.3.3",
+						"value": "3"
+					}
+				},
+				"onBehalfOf": {
+					"display": "Primary Care's Partners Test"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "author",
+						"display": "Author"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884d0",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.3.3",
+						"value": "3"
+					}
+				},
+				"onBehalfOf": {
+					"display": "Primary Care's Partners Test"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "performer",
+						"display": "Performer"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884cd",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+						"value": "92698"
+					},
+					"display": "Provider abc"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "custodian",
+						"display": "Custodian"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884d0",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.3.3",
+						"value": "3"
+					}
+				},
+				"onBehalfOf": {
+					"display": "Primary Care's Partners Test"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "transmitter",
+						"display": "Transmitter"
+					}]
+				},
+				"who": {
+					"reference": "Device/62f17e2aa2392d0008fbb21e",
+					"display": "17.100.578.0"
+				},
+				"onBehalfOf": {
+					"display": "Primary Care's Partners Test"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "transmitter",
+						"display": "Transmitter"
+					}]
+				},
+				"who": {
+					"reference": "Device/62f17e2aa2392d0008fbb21f",
+					"display": "Diameter Health Fusion v3.120.0"
+				},
+				"onBehalfOf": {
+					"display": "Diameter Health, Inc."
+				}
+			}],
+			"entity": [{
+				"role": "source",
+				"what": {
+					"reference": "DocumentReference/62f17e29b7532c0009e217b8"
+				}
+			}]
+		}
+	},
+	{
+		"fullUrl": "http://fhir:3447/4_0_0/Provenance/62f17e2aa2392d0008fbb221",
+		"resource": {
+			"resourceType": "Provenance",
+			"id": "62f17e2aa2392d0008fbb221",
+			"meta": {
+				"lastUpdated": "2022-08-08T21:20:42.225Z",
+				"profile": ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"]
+			},
+			"language": "en-US",
+			"target": [{
+				"reference": "AllergyIntolerance/62f17e2aa2392d0008fbb220"
+			}],
+			"recorded": "2022-08-08T21:20:42.225Z",
+			"activity": {
+				"coding": [{
+					"system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+					"code": "CREATE",
+					"display": "create"
+				}]
+			},
+			"agent": [{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "author",
+						"display": "Author"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884cd",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+						"value": "92698"
+					},
+					"display": "Provider abc"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "author",
+						"display": "Author"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884d0",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.3.3",
+						"value": "3"
+					}
+				},
+				"onBehalfOf": {
+					"display": "Primary Care's Partners Test"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "performer",
+						"display": "Performer"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884cd",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+						"value": "92698"
+					},
+					"display": "Provider abc"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "transmitter",
+						"display": "Transmitter"
+					}]
+				},
+				"who": {
+					"reference": "Device/62f17e2aa2392d0008fbb21e",
+					"display": "17.100.578.0"
+				},
+				"onBehalfOf": {
+					"display": "Primary Care's Partners Test"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "transmitter",
+						"display": "Transmitter"
+					}]
+				},
+				"who": {
+					"reference": "Device/62f17e2aa2392d0008fbb21f",
+					"display": "Diameter Health Fusion v3.120.0"
+				},
+				"onBehalfOf": {
+					"display": "Diameter Health, Inc."
+				}
+			}],
+			"entity": [{
+				"role": "source",
+				"what": {
+					"reference": "DocumentReference/62f17e29b7532c0009e217b8"
+				}
+			}]
+		}
+	},
+	{
+		"fullUrl": "http://fhir:3447/4_0_0/Provenance/62f17e2aa2392d0008fbb223",
+		"resource": {
+			"resourceType": "Provenance",
+			"id": "62f17e2aa2392d0008fbb223",
+			"meta": {
+				"lastUpdated": "2022-08-08T21:20:42.228Z",
+				"profile": ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"]
+			},
+			"language": "en-US",
+			"target": [{
+				"reference": "DocumentReference/62f17e2aa2392d0008fbb222"
+			}],
+			"recorded": "2022-08-08T21:20:42.228Z",
+			"activity": {
+				"coding": [{
+					"system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+					"code": "CREATE",
+					"display": "create"
+				}]
+			},
+			"agent": [{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "performer",
+						"display": "Performer"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884cd",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+						"value": "92698"
+					},
+					"display": "Provider abc"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "transmitter",
+						"display": "Transmitter"
+					}]
+				},
+				"who": {
+					"reference": "Device/62f17e2aa2392d0008fbb21e",
+					"display": "17.100.578.0"
+				},
+				"onBehalfOf": {
+					"display": "Primary Care's Partners Test"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "transmitter",
+						"display": "Transmitter"
+					}]
+				},
+				"who": {
+					"reference": "Device/62f17e2aa2392d0008fbb21f",
+					"display": "Diameter Health Fusion v3.120.0"
+				},
+				"onBehalfOf": {
+					"display": "Diameter Health, Inc."
+				}
+			}],
+			"entity": [{
+				"role": "source",
+				"what": {
+					"reference": "DocumentReference/62f17e29b7532c0009e217b8"
+				}
+			}]
+		}
+	},
+	{
+		"fullUrl": "http://fhir:3447/4_0_0/Provenance/62f17e2aa2392d0008fbb225",
+		"resource": {
+			"resourceType": "Provenance",
+			"id": "62f17e2aa2392d0008fbb225",
+			"meta": {
+				"lastUpdated": "2022-08-08T21:20:42.244Z",
+				"profile": ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"]
+			},
+			"language": "en-US",
+			"target": [{
+				"reference": "Encounter/62f17e2aa2392d0008fbb224"
+			}],
+			"recorded": "2022-08-08T21:20:42.244Z",
+			"activity": {
+				"coding": [{
+					"system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+					"code": "CREATE",
+					"display": "create"
+				}]
+			},
+			"agent": [{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "author",
+						"display": "Author"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884cd",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+						"value": "92698"
+					},
+					"display": "Provider abc"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "author",
+						"display": "Author"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884d0",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.3.3",
+						"value": "3"
+					}
+				},
+				"onBehalfOf": {
+					"display": "Primary Care's Partners Test"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "performer",
+						"display": "Performer"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884d4",
+					"identifier": {
+						"system": "http://hl7.org/fhir/sid/us-npi",
+						"value": "12345678910"
+					},
+					"display": "Dr. Samir Khan"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "performer",
+						"display": "Performer"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884cd",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+						"value": "92698"
+					},
+					"display": "Provider abc"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "transmitter",
+						"display": "Transmitter"
+					}]
+				},
+				"who": {
+					"reference": "Device/62f17e2aa2392d0008fbb21e",
+					"display": "17.100.578.0"
+				},
+				"onBehalfOf": {
+					"display": "Primary Care's Partners Test"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "transmitter",
+						"display": "Transmitter"
+					}]
+				},
+				"who": {
+					"reference": "Device/62f17e2aa2392d0008fbb21f",
+					"display": "Diameter Health Fusion v3.120.0"
+				},
+				"onBehalfOf": {
+					"display": "Diameter Health, Inc."
+				}
+			}],
+			"entity": [{
+				"role": "source",
+				"what": {
+					"reference": "DocumentReference/62f17e29b7532c0009e217b8"
+				}
+			}]
+		}
+	},
+	{
+		"fullUrl": "http://fhir:3447/4_0_0/Provenance/62f17e2aa2392d0008fbb227",
+		"resource": {
+			"resourceType": "Provenance",
+			"id": "62f17e2aa2392d0008fbb227",
+			"meta": {
+				"lastUpdated": "2022-08-08T21:20:42.264Z",
+				"profile": ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"]
+			},
+			"language": "en-US",
+			"target": [{
+				"reference": "Goal/62f17e2aa2392d0008fbb226"
+			}],
+			"recorded": "2022-08-08T21:20:42.264Z",
+			"activity": {
+				"coding": [{
+					"system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+					"code": "CREATE",
+					"display": "create"
+				}]
+			},
+			"agent": [{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "author",
+						"display": "Author"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884cd",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+						"value": "92698"
+					},
+					"display": "Provider abc"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "author",
+						"display": "Author"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884d0",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.3.3",
+						"value": "3"
+					}
+				},
+				"onBehalfOf": {
+					"display": "Primary Care's Partners Test"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "performer",
+						"display": "Performer"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884cd",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+						"value": "92698"
+					},
+					"display": "Provider abc"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "transmitter",
+						"display": "Transmitter"
+					}]
+				},
+				"who": {
+					"reference": "Device/62f17e2aa2392d0008fbb21e",
+					"display": "17.100.578.0"
+				},
+				"onBehalfOf": {
+					"display": "Primary Care's Partners Test"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "transmitter",
+						"display": "Transmitter"
+					}]
+				},
+				"who": {
+					"reference": "Device/62f17e2aa2392d0008fbb21f",
+					"display": "Diameter Health Fusion v3.120.0"
+				},
+				"onBehalfOf": {
+					"display": "Diameter Health, Inc."
+				}
+			}],
+			"entity": [{
+				"role": "source",
+				"what": {
+					"reference": "DocumentReference/62f17e29b7532c0009e217b8"
+				}
+			}]
+		}
+	},
+	{
+		"fullUrl": "http://fhir:3447/4_0_0/Provenance/62f17e2aa2392d0008fbb229",
+		"resource": {
+			"resourceType": "Provenance",
+			"id": "62f17e2aa2392d0008fbb229",
+			"meta": {
+				"lastUpdated": "2022-08-08T21:20:42.274Z",
+				"profile": ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"]
+			},
+			"language": "en-US",
+			"target": [{
+				"reference": "Immunization/62f17e2aa2392d0008fbb228"
+			}],
+			"recorded": "2010-08-15T16:00:00.000Z",
+			"activity": {
+				"coding": [{
+					"system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+					"code": "CREATE",
+					"display": "create"
+				}]
+			},
+			"agent": [{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "author",
+						"display": "Author"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884d5",
+					"identifier": {
+						"system": "http://hl7.org/fhir/sid/us-npi",
+						"value": "99999999"
+					},
+					"display": "Henry Seven"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "author",
+						"display": "Author"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884cd",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+						"value": "92698"
+					},
+					"display": "Provider abc"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "author",
+						"display": "Author"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884d0",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.3.3",
+						"value": "3"
+					}
+				},
+				"onBehalfOf": {
+					"display": "Primary Care's Partners Test"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "performer",
+						"display": "Performer"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884cd",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+						"value": "92698"
+					},
+					"display": "Provider abc"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "transmitter",
+						"display": "Transmitter"
+					}]
+				},
+				"who": {
+					"reference": "Device/62f17e2aa2392d0008fbb21e",
+					"display": "17.100.578.0"
+				},
+				"onBehalfOf": {
+					"display": "Primary Care's Partners Test"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "transmitter",
+						"display": "Transmitter"
+					}]
+				},
+				"who": {
+					"reference": "Device/62f17e2aa2392d0008fbb21f",
+					"display": "Diameter Health Fusion v3.120.0"
+				},
+				"onBehalfOf": {
+					"display": "Diameter Health, Inc."
+				}
+			}],
+			"entity": [{
+				"role": "source",
+				"what": {
+					"reference": "DocumentReference/62f17e29b7532c0009e217b8"
+				}
+			}]
+		}
+	},
+	{
+		"fullUrl": "http://fhir:3447/4_0_0/Provenance/62f17e2aa2392d0008fbb22d",
+		"resource": {
+			"resourceType": "Provenance",
+			"id": "62f17e2aa2392d0008fbb22d",
+			"meta": {
+				"lastUpdated": "2022-08-08T21:20:42.295Z",
+				"profile": ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"]
+			},
+			"language": "en-US",
+			"target": [{
+				"reference": "MedicationRequest/62f17e2aa2392d0008fbb22c"
+			}],
+			"recorded": "2022-08-08T21:20:42.295Z",
+			"activity": {
+				"coding": [{
+					"system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+					"code": "CREATE",
+					"display": "create"
+				}]
+			},
+			"agent": [{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "author",
+						"display": "Author"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884cd",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+						"value": "92698"
+					},
+					"display": "Provider abc"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "author",
+						"display": "Author"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884d0",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.3.3",
+						"value": "3"
+					}
+				},
+				"onBehalfOf": {
+					"display": "Primary Care's Partners Test"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "performer",
+						"display": "Performer"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884cd",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+						"value": "92698"
+					},
+					"display": "Provider abc"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "transmitter",
+						"display": "Transmitter"
+					}]
+				},
+				"who": {
+					"reference": "Device/62f17e2aa2392d0008fbb21e",
+					"display": "17.100.578.0"
+				},
+				"onBehalfOf": {
+					"display": "Primary Care's Partners Test"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "transmitter",
+						"display": "Transmitter"
+					}]
+				},
+				"who": {
+					"reference": "Device/62f17e2aa2392d0008fbb21f",
+					"display": "Diameter Health Fusion v3.120.0"
+				},
+				"onBehalfOf": {
+					"display": "Diameter Health, Inc."
+				}
+			}],
+			"entity": [{
+				"role": "source",
+				"what": {
+					"reference": "DocumentReference/62f17e29b7532c0009e217b8"
+				}
+			}]
+		}
+	},
+	{
+		"fullUrl": "http://fhir:3447/4_0_0/Provenance/62f17e2aa2392d0008fbb22f",
+		"resource": {
+			"resourceType": "Provenance",
+			"id": "62f17e2aa2392d0008fbb22f",
+			"meta": {
+				"lastUpdated": "2022-08-08T21:20:42.306Z",
+				"profile": ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"]
+			},
+			"language": "en-US",
+			"target": [{
+				"reference": "Condition/62f17e2aa2392d0008fbb22e"
+			}],
+			"recorded": "2022-08-08T21:20:42.306Z",
+			"activity": {
+				"coding": [{
+					"system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+					"code": "CREATE",
+					"display": "create"
+				}]
+			},
+			"agent": [{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "author",
+						"display": "Author"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884cd",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+						"value": "92698"
+					},
+					"display": "Provider abc"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "author",
+						"display": "Author"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884d0",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.3.3",
+						"value": "3"
+					}
+				},
+				"onBehalfOf": {
+					"display": "Primary Care's Partners Test"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "performer",
+						"display": "Performer"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884cd",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+						"value": "92698"
+					},
+					"display": "Provider abc"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "transmitter",
+						"display": "Transmitter"
+					}]
+				},
+				"who": {
+					"reference": "Device/62f17e2aa2392d0008fbb21e",
+					"display": "17.100.578.0"
+				},
+				"onBehalfOf": {
+					"display": "Primary Care's Partners Test"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "transmitter",
+						"display": "Transmitter"
+					}]
+				},
+				"who": {
+					"reference": "Device/62f17e2aa2392d0008fbb21f",
+					"display": "Diameter Health Fusion v3.120.0"
+				},
+				"onBehalfOf": {
+					"display": "Diameter Health, Inc."
+				}
+			}],
+			"entity": [{
+				"role": "source",
+				"what": {
+					"reference": "DocumentReference/62f17e29b7532c0009e217b8"
+				}
+			}]
+		}
+	},
+	{
+		"fullUrl": "http://fhir:3447/4_0_0/Provenance/62f17e2aa2392d0008fbb231",
+		"resource": {
+			"resourceType": "Provenance",
+			"id": "62f17e2aa2392d0008fbb231",
+			"meta": {
+				"lastUpdated": "2022-08-08T21:20:42.307Z",
+				"profile": ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"]
+			},
+			"language": "en-US",
+			"target": [{
+				"reference": "Condition/62f17e2aa2392d0008fbb230"
+			}],
+			"recorded": "2022-08-08T21:20:42.307Z",
+			"activity": {
+				"coding": [{
+					"system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+					"code": "CREATE",
+					"display": "create"
+				}]
+			},
+			"agent": [{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "author",
+						"display": "Author"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884cd",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+						"value": "92698"
+					},
+					"display": "Provider abc"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "author",
+						"display": "Author"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884d0",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.3.3",
+						"value": "3"
+					}
+				},
+				"onBehalfOf": {
+					"display": "Primary Care's Partners Test"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "performer",
+						"display": "Performer"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884cd",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+						"value": "92698"
+					},
+					"display": "Provider abc"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "transmitter",
+						"display": "Transmitter"
+					}]
+				},
+				"who": {
+					"reference": "Device/62f17e2aa2392d0008fbb21e",
+					"display": "17.100.578.0"
+				},
+				"onBehalfOf": {
+					"display": "Primary Care's Partners Test"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "transmitter",
+						"display": "Transmitter"
+					}]
+				},
+				"who": {
+					"reference": "Device/62f17e2aa2392d0008fbb21f",
+					"display": "Diameter Health Fusion v3.120.0"
+				},
+				"onBehalfOf": {
+					"display": "Diameter Health, Inc."
+				}
+			}],
+			"entity": [{
+				"role": "source",
+				"what": {
+					"reference": "DocumentReference/62f17e29b7532c0009e217b8"
+				}
+			}]
+		}
+	},
+	{
+		"fullUrl": "http://fhir:3447/4_0_0/Provenance/62f17e2aa2392d0008fbb233",
+		"resource": {
+			"resourceType": "Provenance",
+			"id": "62f17e2aa2392d0008fbb233",
+			"meta": {
+				"lastUpdated": "2022-08-08T21:20:42.308Z",
+				"profile": ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"]
+			},
+			"language": "en-US",
+			"target": [{
+				"reference": "Condition/62f17e2aa2392d0008fbb232"
+			}],
+			"recorded": "2022-08-08T21:20:42.308Z",
+			"activity": {
+				"coding": [{
+					"system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+					"code": "CREATE",
+					"display": "create"
+				}]
+			},
+			"agent": [{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "author",
+						"display": "Author"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884cd",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+						"value": "92698"
+					},
+					"display": "Provider abc"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "author",
+						"display": "Author"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884d0",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.3.3",
+						"value": "3"
+					}
+				},
+				"onBehalfOf": {
+					"display": "Primary Care's Partners Test"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "performer",
+						"display": "Performer"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884d4",
+					"identifier": {
+						"system": "http://hl7.org/fhir/sid/us-npi",
+						"value": "12345678910"
+					},
+					"display": "Dr. Samir Khan"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "performer",
+						"display": "Performer"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884cd",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+						"value": "92698"
+					},
+					"display": "Provider abc"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "transmitter",
+						"display": "Transmitter"
+					}]
+				},
+				"who": {
+					"reference": "Device/62f17e2aa2392d0008fbb21e",
+					"display": "17.100.578.0"
+				},
+				"onBehalfOf": {
+					"display": "Primary Care's Partners Test"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "transmitter",
+						"display": "Transmitter"
+					}]
+				},
+				"who": {
+					"reference": "Device/62f17e2aa2392d0008fbb21f",
+					"display": "Diameter Health Fusion v3.120.0"
+				},
+				"onBehalfOf": {
+					"display": "Diameter Health, Inc."
+				}
+			}],
+			"entity": [{
+				"role": "source",
+				"what": {
+					"reference": "DocumentReference/62f17e29b7532c0009e217b8"
+				}
+			}]
+		}
+	},
+	{
+		"fullUrl": "http://fhir:3447/4_0_0/Provenance/62f17e2aa2392d0008fbb235",
+		"resource": {
+			"resourceType": "Provenance",
+			"id": "62f17e2aa2392d0008fbb235",
+			"meta": {
+				"lastUpdated": "2022-08-08T21:20:42.313Z",
+				"profile": ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"]
+			},
+			"language": "en-US",
+			"target": [{
+				"reference": "Procedure/62f17e2aa2392d0008fbb234"
+			}],
+			"recorded": "2022-08-08T21:20:42.313Z",
+			"activity": {
+				"coding": [{
+					"system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+					"code": "CREATE",
+					"display": "create"
+				}]
+			},
+			"agent": [{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "author",
+						"display": "Author"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884cd",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+						"value": "92698"
+					},
+					"display": "Provider abc"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "author",
+						"display": "Author"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884d0",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.3.3",
+						"value": "3"
+					}
+				},
+				"onBehalfOf": {
+					"display": "Primary Care's Partners Test"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "performer",
+						"display": "Performer"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884cd",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+						"value": "92698"
+					},
+					"display": "Provider abc"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "transmitter",
+						"display": "Transmitter"
+					}]
+				},
+				"who": {
+					"reference": "Device/62f17e2aa2392d0008fbb21e",
+					"display": "17.100.578.0"
+				},
+				"onBehalfOf": {
+					"display": "Primary Care's Partners Test"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "transmitter",
+						"display": "Transmitter"
+					}]
+				},
+				"who": {
+					"reference": "Device/62f17e2aa2392d0008fbb21f",
+					"display": "Diameter Health Fusion v3.120.0"
+				},
+				"onBehalfOf": {
+					"display": "Diameter Health, Inc."
+				}
+			}],
+			"entity": [{
+				"role": "source",
+				"what": {
+					"reference": "DocumentReference/62f17e29b7532c0009e217b8"
+				}
+			}]
+		}
+	},
+	{
+		"fullUrl": "http://fhir:3447/4_0_0/Provenance/62f17e2aa2392d0008fbb237",
+		"resource": {
+			"resourceType": "Provenance",
+			"id": "62f17e2aa2392d0008fbb237",
+			"meta": {
+				"lastUpdated": "2022-08-08T21:20:42.320Z",
+				"profile": ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"]
+			},
+			"language": "en-US",
+			"target": [{
+				"reference": "DiagnosticReport/62f17e2aa2392d0008fbb236"
+			}],
+			"recorded": "2022-08-08T21:20:42.320Z",
+			"activity": {
+				"coding": [{
+					"system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+					"code": "CREATE",
+					"display": "create"
+				}]
+			},
+			"agent": [{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "author",
+						"display": "Author"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884cd",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+						"value": "92698"
+					},
+					"display": "Provider abc"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "author",
+						"display": "Author"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884d0",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.3.3",
+						"value": "3"
+					}
+				},
+				"onBehalfOf": {
+					"display": "Primary Care's Partners Test"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "performer",
+						"display": "Performer"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884cd",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+						"value": "92698"
+					},
+					"display": "Provider abc"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "transmitter",
+						"display": "Transmitter"
+					}]
+				},
+				"who": {
+					"reference": "Device/62f17e2aa2392d0008fbb21e",
+					"display": "17.100.578.0"
+				},
+				"onBehalfOf": {
+					"display": "Primary Care's Partners Test"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "transmitter",
+						"display": "Transmitter"
+					}]
+				},
+				"who": {
+					"reference": "Device/62f17e2aa2392d0008fbb21f",
+					"display": "Diameter Health Fusion v3.120.0"
+				},
+				"onBehalfOf": {
+					"display": "Diameter Health, Inc."
+				}
+			}],
+			"entity": [{
+				"role": "source",
+				"what": {
+					"reference": "DocumentReference/62f17e29b7532c0009e217b8"
+				}
+			}]
+		}
+	},
+	{
+		"fullUrl": "http://fhir:3447/4_0_0/Provenance/62f17e2aa2392d0008fbb239",
+		"resource": {
+			"resourceType": "Provenance",
+			"id": "62f17e2aa2392d0008fbb239",
+			"meta": {
+				"lastUpdated": "2022-08-08T21:20:42.326Z",
+				"profile": ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"]
+			},
+			"language": "en-US",
+			"target": [{
+				"reference": "Observation/62f17e2aa2392d0008fbb238"
+			}],
+			"recorded": "2022-08-08T21:20:42.326Z",
+			"activity": {
+				"coding": [{
+					"system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+					"code": "CREATE",
+					"display": "create"
+				}]
+			},
+			"agent": [{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "author",
+						"display": "Author"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884cd",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+						"value": "92698"
+					},
+					"display": "Provider abc"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "author",
+						"display": "Author"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884d0",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.3.3",
+						"value": "3"
+					}
+				},
+				"onBehalfOf": {
+					"display": "Primary Care's Partners Test"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "performer",
+						"display": "Performer"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884cd",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+						"value": "92698"
+					},
+					"display": "Provider abc"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "transmitter",
+						"display": "Transmitter"
+					}]
+				},
+				"who": {
+					"reference": "Device/62f17e2aa2392d0008fbb21e",
+					"display": "17.100.578.0"
+				},
+				"onBehalfOf": {
+					"display": "Primary Care's Partners Test"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "transmitter",
+						"display": "Transmitter"
+					}]
+				},
+				"who": {
+					"reference": "Device/62f17e2aa2392d0008fbb21f",
+					"display": "Diameter Health Fusion v3.120.0"
+				},
+				"onBehalfOf": {
+					"display": "Diameter Health, Inc."
+				}
+			}],
+			"entity": [{
+				"role": "source",
+				"what": {
+					"reference": "DocumentReference/62f17e29b7532c0009e217b8"
+				}
+			}]
+		}
+	},
+	{
+		"fullUrl": "http://fhir:3447/4_0_0/Provenance/62f17e2aa2392d0008fbb23b",
+		"resource": {
+			"resourceType": "Provenance",
+			"id": "62f17e2aa2392d0008fbb23b",
+			"meta": {
+				"lastUpdated": "2022-08-08T21:20:42.328Z",
+				"profile": ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"]
+			},
+			"language": "en-US",
+			"target": [{
+				"reference": "Observation/62f17e2aa2392d0008fbb23a"
+			}],
+			"recorded": "2014-06-06T15:32:00.000Z",
+			"activity": {
+				"coding": [{
+					"system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+					"code": "CREATE",
+					"display": "create"
+				}]
+			},
+			"agent": [{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "author",
+						"display": "Author"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884d5",
+					"identifier": {
+						"system": "http://hl7.org/fhir/sid/us-npi",
+						"value": "99999999"
+					},
+					"display": "Henry Seven"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "author",
+						"display": "Author"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884cd",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+						"value": "92698"
+					},
+					"display": "Provider abc"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "author",
+						"display": "Author"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884d0",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.3.3",
+						"value": "3"
+					}
+				},
+				"onBehalfOf": {
+					"display": "Primary Care's Partners Test"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "performer",
+						"display": "Performer"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884cd",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+						"value": "92698"
+					},
+					"display": "Provider abc"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "transmitter",
+						"display": "Transmitter"
+					}]
+				},
+				"who": {
+					"reference": "Device/62f17e2aa2392d0008fbb21e",
+					"display": "17.100.578.0"
+				},
+				"onBehalfOf": {
+					"display": "Primary Care's Partners Test"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "transmitter",
+						"display": "Transmitter"
+					}]
+				},
+				"who": {
+					"reference": "Device/62f17e2aa2392d0008fbb21f",
+					"display": "Diameter Health Fusion v3.120.0"
+				},
+				"onBehalfOf": {
+					"display": "Diameter Health, Inc."
+				}
+			}],
+			"entity": [{
+				"role": "source",
+				"what": {
+					"reference": "DocumentReference/62f17e29b7532c0009e217b8"
+				}
+			}]
+		}
+	},
+	{
+		"fullUrl": "http://fhir:3447/4_0_0/Provenance/62f17e2aa2392d0008fbb23d",
+		"resource": {
+			"resourceType": "Provenance",
+			"id": "62f17e2aa2392d0008fbb23d",
+			"meta": {
+				"lastUpdated": "2022-08-08T21:20:42.329Z",
+				"profile": ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"]
+			},
+			"language": "en-US",
+			"target": [{
+				"reference": "Observation/62f17e2aa2392d0008fbb23c"
+			}],
+			"recorded": "2022-08-08T21:20:42.329Z",
+			"activity": {
+				"coding": [{
+					"system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+					"code": "CREATE",
+					"display": "create"
+				}]
+			},
+			"agent": [{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "author",
+						"display": "Author"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884cd",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+						"value": "92698"
+					},
+					"display": "Provider abc"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "author",
+						"display": "Author"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884d0",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.3.3",
+						"value": "3"
+					}
+				},
+				"onBehalfOf": {
+					"display": "Primary Care's Partners Test"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "performer",
+						"display": "Performer"
+					}]
+				},
+				"who": {
+					"reference": "Practitioner/62f17e2ae0231200076884cd",
+					"identifier": {
+						"system": "urn:oid:1.3.6.1.4.1.22812.3.2009316.3",
+						"value": "92698"
+					},
+					"display": "Provider abc"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "transmitter",
+						"display": "Transmitter"
+					}]
+				},
+				"who": {
+					"reference": "Device/62f17e2aa2392d0008fbb21e",
+					"display": "17.100.578.0"
+				},
+				"onBehalfOf": {
+					"display": "Primary Care's Partners Test"
+				}
+			},
+			{
+				"type": {
+					"coding": [{
+						"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+						"code": "transmitter",
+						"display": "Transmitter"
+					}]
+				},
+				"who": {
+					"reference": "Device/62f17e2aa2392d0008fbb21f",
+					"display": "Diameter Health Fusion v3.120.0"
+				},
+				"onBehalfOf": {
+					"display": "Diameter Health, Inc."
+				}
+			}],
+			"entity": [{
+				"role": "source",
+				"what": {
+					"reference": "DocumentReference/62f17e29b7532c0009e217b8"
+				}
+			}]
+		}
+	}]
+}
