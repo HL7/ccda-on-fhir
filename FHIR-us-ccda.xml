@@ -163,16 +163,17 @@
 <page key="CF-procedures" name="C-CDA to FHIR Procedures"/>
 <page key="CF-index" name="C-CDA → FHIR Index"/>
 <page key="downloads" name="Downloads"/>
+<page key="FC-allergies" name="FHIR to C-CDA Allergies"/>
+<page key="FC-immunizations" name="FHIR to C-CDA Immunizations"/>
+<page key="FC-medications" name="FHIR to C-CDA Medications"/>
 <page key="FC-patient" name="FHIR to C-CDA Patient"/>
 <page key="FC-problems" name="FHIR to C-CDA Problems"/>
 <page key="FC-procedures" name="FHIR to C-CDA Procedures"/>
-<page key="FC-allergies" name="FHIR to C-CDAAllergies"/>
-<page key="FC-immunizations" name="FHIR to C-CDAImmunizations"/>
-<page key="FC-medications" name="FHIR to C-CDAMedications"/>
 <page key="FC-index" name="FHIR → C-CDA Index"/>
 <page deprecated="true" key="Guidance" name="Guidance"/>
 <page key="index" name="Home Page"/>
 <page deprecated="true" key="implementation" name="Implementation (see Documentation)" url="implementation"/>
+<page key="mappingIssues" name="Known Issues"/>
 <page key="mappingBackground" name="Mapping Background"/>
 <page key="mappingGuidance" name="Mapping General and Structural Guidance"/>
 <page key="toc" name="Table of Contents"/>
