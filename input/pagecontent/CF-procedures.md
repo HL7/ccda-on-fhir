@@ -18,12 +18,12 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
 |/effectiveTime/low|.performedPeriod.start|**Constraint**: Use this when effectiveTime@value is not populated<br/>[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)
 |/effectiveTime/high|.performedPeriod.end|**Constraint**: Use this when effectiveTime@value is not populated<br/>[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)
 |/targetSiteCode|.bodySite|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
-|/author|**[Provenance](http://hl7.org/fhir/us/core/StructureDefinition-us-core-procedure.html)**|<mark>Not in examples</mark><br/>[CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)|
+|/author|**[Provenance](http://hl7.org/fhir/us/core/StructureDefinition-us-core-procedure.html)**|<br/>[CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)|
 |/performer/assignedEntity|.performer|[CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)|
 |/performer/assignedEntity/representedOrganization|.performer.onBehalfOf|[CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)|
-|**[Service Delivery Location](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.32.html)**<br/>```participant@typeCode="LOC"```<br/>/participant/participantRole|.location|<mark>Not in examples</mark>|
-|/entryRelationship.act.code|.followUp|<mark>Not in examples</mark>|
-|**[Indication](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.19.html)**|.reasonCode|<mark>Not in examples</mark>|
+|**[Service Delivery Location](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.32.html)**<br/>```participant@typeCode="LOC"```<br/>/participant/participantRole|.location||
+|/entryRelationship.act.code|.followUp||
+|**[Indication](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.19.html)**|.reasonCode||
 |**[Comment Activity](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.64.html)**<br/>```entryRelationship/act/code@code="48767-8"```<br/>/entryRelationship/act/text|**[Annotation](https://hl7.org/fhir/datatypes.html#Annotation)**<br/>.note|
 
 1\. XPath abbrievated for C-CDA Procedure as: <br/> ```ClinicalDocument/component/structuredBody/component/section[(@code="47519-4")]/entry/procedure```

@@ -14,13 +14,13 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
 |/id|identifier|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
 |/statusCode|status|[CDA statusCode → FHIR status](./ConceptMap-CF-ImmunizationStatus.html)|
 |/effectiveTime|occurrenceDateTime|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
-|/repeatNumber|protocolApplied.doseNumberPositiveInt|<mark>Not in examples</mark>|
+|/repeatNumber|protocolApplied.doseNumberPositiveInt||
 |/routeCode|route|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 |/approachSiteCode|.site|[FHIR site → CDA approachSiteCode](ConceptMap-FC-ImmunizationSite.html)
 |/doseQuantity|doseQuantity||
 |/consumable/manufacturedProduct/manufacturedMaterial/code|.vaccineCode|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)
 |/consumable/manufacturedMaterial/lotNumberText|.lotNumber||
-|/author|**[Provenance](http://hl7.org/fhir/us/core/StructureDefinition-us-core-provenance.html)**|<mark>Not in examples</mark><br/>[CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)|
+|/author|**[Provenance](http://hl7.org/fhir/us/core/StructureDefinition-us-core-provenance.html)**|[CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)|
 |/performer|.performer<br/>&<br/>set ```performer.function="AP"```|
 |**[Immunization Refusal Reason](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.53.html)**<br/>```entryRelationship@typeCode="RSON"```<br/>/entryRelationship/observation/code|statusReason|[CDA refusal → FHIR statusReason](ConceptMap-CF-ImmunizationRefusal.html)|
 |**[Comment Activity](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.64.html)**<br/>```entryRelationship/act/code@code="48767-8"```<br/>/entryRelationship/act/text|**[Annotation](https://hl7.org/fhir/datatypes.html#Annotation)**<br/>.note||
