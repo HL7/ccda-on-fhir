@@ -122,6 +122,10 @@ For further information see the [pdf-based C-CDA specification](http://www.hl7.o
 <td>Gene Beyer</td>
 <td><a href="mailto:gene.beyer@oracle.com">gene.beyer@oracle.com</a></td>
 </tr>
+<tr>
+<td>Gay Dolin</td>
+<td><a href="mailto: gdolin@namasteinformatics.com"> gdolin@namasteinformatics.com</a></td>
+</tr>
 
 
 </tbody>

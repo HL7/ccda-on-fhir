@@ -75,6 +75,8 @@ To convert between the standards, systems should deploy programming logic that c
 |20230531|2023-05-31|
 |202305312205-0500|2023-05-31T22:05-05:00|
 
+Note that in C-CDA timezone offset is a SHOULD, while in FHIR, time zone offset is required when more specific than the day. There may be instances where a CDA date-time value omits a time zone offset and other data from the document may be necessary to populate FHIR date-time requirements.  
+
 #### CDA Coding ↔ FHIR CodeableConcept
 
 The structure for coding in CDA and FHIR are fundamentally different. CDA  employs a mechanism (xsi:type [CD](http://hl7.org/cda/stds/core/draft1/StructureDefinition-CD.html) or [CE](http://hl7.org/cda/stds/core/draft1/StructureDefinition-CE.html)) where the code is included in the element and then originalText and translations elements may be provided as child elements. In FHIR, [CodeableConcept](http://hl7.org/fhir/datatypes.html#codeableconcept) places all codes in a coding list with a separate element for the text representation. 
@@ -149,7 +151,8 @@ FHIR, however, provides different elements within resources (e.g. Condition.reco
 <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<blockquote class="stu-note">
 		<b>Provenance Mapping</b>
-		<p>This publication does <b>not</b> provide definitive CDA ↔ FHIR guidance on when resource attributes (e.g. AllergyIntolerance.recorder) vs. dedicated Provenance resources (e.g. Provenance targeting an AllergyIntolerance resource) should be used for documenting data provenance. We welcome feedback on this topic from implementers.</p>
+		<p>This publication does <b>not</b> provide definitive CDA ↔ FHIR guidance on when resource attributes (e.g. AllergyIntolerance.recorder) vs. dedicated Provenance resources (e.g. Provenance targeting an AllergyIntolerance resource) should be used for documenting data provenance.</p>
+    <p>In addition, this guide does not address how author and other provenance context conduction should work from C-CDA to FHIR. We welcome feedback on the topic of provenance from implementers.</p>
 	</blockquote>
 </div>
 
