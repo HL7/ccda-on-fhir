@@ -1,7 +1,7 @@
 {
   "package-id" : "hl7.fhir.us.ccda",
-  "version" : "1.2.0",
-  "path" : "http://hl7.org/fhir/us/ccda/",
+  "version" : "1.2.0-ballot",
+  "path" : "http://hl7.org/fhir/us/ccda/2023May",
   "mode": "working",
   "status" : "informative",
   "sequence" : "STU 1",
