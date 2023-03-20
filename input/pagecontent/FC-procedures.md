@@ -4,7 +4,14 @@ td, th {
 }
 </style>
 
-{% include stu-note-cerner.xml %}
+<div style="border: 1px solid maroon; padding: 10px; background-color: #fffbf7; min-height: 160px;">
+  <img src="assets/images/dragon.png" width="150" style="float:left; mix-blend-mode: multiply; margin-right: 10px;" title="Here Be Dragons!" height="150">
+  <b>FHIR US Core → C-CDA Mapping</b>
+  <p class="warning">
+    While multiple vendors participated in CDA → FHIR mappings at a connectathon, only a single vendor (Cerner/Oracle) has participated in the FHIR → CDA mapping. We welcome feedback on these mappings which represent less than a multi-vendor consensus at this time.
+  </p>
+</div>
+<br/>
 
 This page provides a mapping from FHIR to CDA. For the CDA to FHIR mapping, please refer to [Procedures CDA → FHIR](./CF-procedures.html). For guidance on how to read the table below, see [Reading the C-CDA ↔ FHIR Mapping Pages](./mappingGuidance.html)
 

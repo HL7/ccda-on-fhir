@@ -1,6 +1,6 @@
 <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<blockquote class="stu-note">
-		<b>2023 Publication of C-CDA ↔ FHIR Mapping</b>
+		<b>2023 Publication of C-CDA ↔ FHIR US Core Mapping</b>
 		<p>The current release of this IG adds mapping content based on a separate <a href="https://jira.hl7.org/browse/PSS-1811">project</a> from earlier publications. These mappings are intended as informative and we welcome feedback on the content added under the "Mapping" tab. </p>
     <p>Feedback on previous publications of this implementation guide (2016-2020) outside of C-CDA ↔ FHIR mapping <b>WILL NOT</b> be addressed as part of ballot reconciliation although may be logged for future consideration.</p>
 	</blockquote>
