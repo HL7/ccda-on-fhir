@@ -30,7 +30,7 @@ While general guidance is to map Author participations to Provenance; at this ti
 
 Most identified instances of provenance use a small number of roles, but many roles are permitted. See the project page [https://confluence.hl7.org/display/CGP/Provenance+Domain](https://confluence.hl7.org/display/CGP/Provenance+Domain)for current thinking on how these roles should be mapped. 
 
-#### Documtent-specificity of status codes
+#### Document-specificity of status codes
 The CDA MedicationActivity template uses status values from the Medication Status value set. This set is constrained to values likely to be represented in documents; e.g., it does not contain a "new" or "held" value appropriate to a draft order, which would typically not be provided in a document. (Note that the inclusion of "nullified" on the CCDA side seems inconsistent.) Since we are mapping document to document, we can make a similar call on the FHIR side, even though the US Core profile supports the value "draft." We solicit perspectives on these options.
 
 * Provide maps where possible (include "entered in error"; exclude "draft").
