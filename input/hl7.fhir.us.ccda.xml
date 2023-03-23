@@ -284,7 +284,7 @@
         <reference value="Patient/CF-patient"/>
         <display value="ccda-to-fhir-patient"/>
       </reference>
-      <name value="CF-patient"/>
+      <name value="CF-patient-example"/>
       <description value="ccda-to-fhir-patient"/>
       <exampleBoolean value="true"/>
     </resource>
@@ -293,7 +293,7 @@
         <reference value="Composition/Consultation-Note-Example"/>
         <display value="Consultation Note"/>
       </reference>
-      <name value="Consultation Note"/>
+      <name value="Consultation Note - Composition"/>
       <description value="Consultation Note"/>
       <exampleBoolean value="true"/>
     </resource>
@@ -302,7 +302,7 @@
         <reference value="Composition/Continuity-of-Care-Document-Example"/>
         <display value="Continuity of Care Document"/>
       </reference>
-      <name value="Continuity of Care Document"/>
+      <name value="Continuity of Care Document - Composition"/>
       <description value="Continuity of Care Document"/>
       <exampleBoolean value="true"/>
     </resource>
@@ -311,7 +311,7 @@
         <reference value="Composition/Diagnostic-Imaging-Report-Example"/>
         <display value="Diagnostic Imaging Report"/>
       </reference>
-      <name value="Diagnostic Imaging Report"/>
+      <name value="Diagnostic Imaging Report - Composition"/>
       <description value="Diagnostic Imaging Report"/>
       <exampleBoolean value="true"/>
     </resource>
@@ -320,7 +320,7 @@
         <reference value="Composition/Discharge-Summary-Example"/>
         <display value="Discharge Summary"/>
       </reference>
-      <name value="Discharge Summary"/>
+      <name value="Discharge Summary - Composition"/>
       <description value="Discharge Summary"/>
       <exampleBoolean value="true"/>
     </resource>
@@ -329,7 +329,7 @@
         <reference value="Composition/History-and-Physical-Example"/>
         <display value="History and Physical Note"/>
       </reference>
-      <name value="History and Physical Note"/>
+      <name value="History and Physical Note - Composition"/>
       <description value="History and Physical Note"/>
       <exampleBoolean value="true"/>
     </resource>
@@ -338,7 +338,7 @@
         <reference value="Composition/Operative-Note-Example"/>
         <display value="Operative Note"/>
       </reference>
-      <name value="Operative Note"/>
+      <name value="Operative Note - Composition"/>
       <description value="Operative Note"/>
       <exampleBoolean value="true"/>
     </resource>
@@ -347,7 +347,7 @@
         <reference value="Composition/Procedure-Note-Example"/>
         <display value="Procedure Note"/>
       </reference>
-      <name value="Procedure Note"/>
+      <name value="Procedure Note - Composition"/>
       <description value="Procedure Note"/>
       <exampleBoolean value="true"/>
     </resource>
@@ -356,7 +356,7 @@
         <reference value="Composition/Progress-Note-Example"/>
         <display value="Progress Note"/>
       </reference>
-      <name value="Progress Note"/>
+      <name value="Progress Note - Composition"/>
       <description value="Progress Note"/>
       <exampleBoolean value="true"/>
     </resource>
@@ -365,7 +365,7 @@
         <reference value="Composition/Referral-Note-Example"/>
         <display value="Referral Note"/>
       </reference>
-      <name value="Referral Note"/>
+      <name value="Referral Note - Composition"/>
       <description value="Referral Note"/>
       <exampleBoolean value="true"/>
     </resource>
@@ -374,7 +374,7 @@
         <reference value="Composition/Transfer-Summary-Example"/>
         <display value="Transfer Summary"/>
       </reference>
-      <name value="Transfer Summary"/>
+      <name value="Transfer Summary - Composition"/>
       <description value="Transfer Summary"/>
       <exampleBoolean value="true"/>
     </resource>
@@ -419,7 +419,7 @@
         <reference value="AllergyIntolerance/CF-allergy"/>
         <display value="ccda-to-fhir-allergy"/>
       </reference>
-      <name value="CF-allergy"/>
+      <name value="CF-allergy-example"/>
       <description value="ccda-to-fhir-allergy"/>
       <exampleBoolean value="true"/>
     </resource>
@@ -428,7 +428,7 @@
         <reference value="AllergyIntolerance/FC-allergy"/>
         <display value="fhir-to-ccda-allergy"/>
       </reference>
-      <name value="FC-allergy"/>
+      <name value="FC-allergy-example"/>
       <description value="fhir-to-ccda-allergy"/>
       <exampleBoolean value="true"/>
     </resource>
@@ -446,7 +446,7 @@
         <reference value="Immunization/CF-immunization"/>
         <display value="ccda-to-fhir-immunization"/>
       </reference>
-      <name value="CF-immunization"/>
+      <name value="CF-immunization-example"/>
       <description value="ccda-to-fhir-immunization"/>
       <exampleBoolean value="true"/>
     </resource>
@@ -455,7 +455,7 @@
         <reference value="Immunization/FC-immunization"/>
         <display value="fhir-to-ccda-immunization"/>
       </reference>
-      <name value="FC-immunization"/>
+      <name value="FC-immunization-example"/>
       <description value="fhir-to-ccda-immunization"/>
       <exampleBoolean value="true"/>
     </resource>
@@ -473,7 +473,7 @@
         <reference value="MedicationRequest/CF-medication"/>
         <display value="ccda-to-fhir-medication"/>
       </reference>
-      <name value="CF-medication"/>
+      <name value="CF-medication-example"/>
       <description value="ccda-to-fhir-medication"/>
       <exampleBoolean value="true"/>
     </resource>
@@ -482,7 +482,7 @@
         <reference value="MedicationRequest/FC-medication"/>
         <display value="fhir-to-ccda-medication"/>
       </reference>
-      <name value="FC-medication"/>
+      <name value="FC-medication-example"/>
       <description value="fhir-to-ccda-medication"/>
       <exampleBoolean value="true"/>
     </resource>
@@ -500,7 +500,7 @@
         <reference value="Condition/CF-problem"/>
         <display value="ccda-to-fhir-problem"/>
       </reference>
-      <name value="CF-problem"/>
+      <name value="CF-problem-example"/>
       <description value="ccda-to-fhir-problem"/>
       <exampleBoolean value="true"/>
     </resource>
@@ -509,7 +509,7 @@
         <reference value="Condition/FC-problem"/>
         <display value="fhir-to-ccda-problem"/>
       </reference>
-      <name value="FC-problem"/>
+      <name value="FC-problem-example"/>
       <description value="fhir-to-ccda-problem"/>
       <exampleBoolean value="true"/>
     </resource>
@@ -554,7 +554,7 @@
         <reference value="Procedure/CF-procedure"/>
         <display value="ccda-to-fhir-procedure"/>
       </reference>
-      <name value="CF-procedure"/>
+      <name value="CF-procedure-example"/>
       <description value="ccda-to-fhir-procedure"/>
       <exampleBoolean value="true"/>
     </resource>
