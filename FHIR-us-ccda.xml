@@ -6,6 +6,7 @@
 <version code="1.0.0" url="http://hl7.org/fhir/us/ccda/STU1"/>
 <version code="1.8.0" url="http://hl7.org/fhir/us/ccda/2017Jan"/>
 <version code="1.6.0" deprecated="true" url="http://hl7.org/fhir/us/ccda/2016Sep"/>
+<version code="2.0" deprecated="true"/>
 <version code="1.0" deprecated="true"/>
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
