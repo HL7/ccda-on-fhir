@@ -3,7 +3,7 @@
   "version" : "1.2.0-ballot",
   "path" : "http://hl7.org/fhir/us/ccda/2023May",
   "mode": "working",
-  "status" : "informative",
+  "status" : "ballot",
   "sequence" : "STU 1",
   "desc" : "The C-CDA on FHIR Implementation Guide is a US Realm Implementation Guide of the FHIR Specification addressing the key aspects of Consolidated CDA (C-CDA) required for Meaningful Use (MU). This IG publication release focuses on providing data mappings for problems, allergies, medications, immunization, patient and procedures (PAMI+). The clinical document header and document guidance from the earlier publications are retained in this guide but not designated for commenter feedback at this time.",
   "descmd" : "The C-CDA on FHIR Implementation Guide is a US Realm Implementation Guide of the FHIR Specification addressing the key aspects of Consolidated CDA (C-CDA) required for Meaningful Use (MU). This IG publication release focuses on providing data mappings for problems, allergies, medications, immunization, patient and procedures (PAMI+). The clinical document header and document guidance from the earlier publications are retained in this guide but not designated for commenter feedback at this time.",
