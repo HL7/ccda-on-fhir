@@ -48,4 +48,4 @@ Mechanism is sometimes used as a proxy for criticality, with "allergy" (and pote
 
 Finally, we believe that, as a safety mechanism, having accurate coded representations of present allergies is critically important to prevent administration of contraindicated substances, but the case for semantic specificity of negatives is less clear. Negatives don't play a part in order checks, and textual representations are easily understood by caregivers - notwithstanding the constraint that the question must be asked at every encounter anyway.
 
-So it appears that neither not mapping (using only text) or mapping (representing all absence values as "allergies") is especially problematic.Text
+So it appears that neither not mapping (using only text) or mapping (representing all absence values as "allergies") is especially problematic.
