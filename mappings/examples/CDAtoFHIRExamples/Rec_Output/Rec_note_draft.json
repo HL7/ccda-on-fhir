@@ -1,0 +1,69 @@
+{
+  "fullUrl": "http://fhir:3447/4_0_0/DocumentReference/642ed1f93eec840007aaec72",
+  "resource": {
+      "resourceType": "DocumentReference",
+      "id": "642ed1f93eec840007aaec72",
+      "meta": {
+          "profile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference"
+          ]
+      },
+      "language": "en-US",
+      "status": "current",
+      "type": {
+        "text": "Note",
+        "coding": [
+          {
+            "code": "34109-9",
+            "system": "http://loinc.org",
+            "display": "Note"
+          },
+          {
+            "code": "11488-4",
+            "system": "http://loinc.org",
+            "display": "Consultation note"
+          }
+        ]
+      },
+      "category": [
+          {
+              "coding": [
+                  {
+                      "system": "http://loinc.org",
+                      "code": "LP72311-1",
+                      "display": "Consultation note"
+                  }
+              ]
+          }
+      ],
+      "subject": {
+          "reference": "Patient/642ed1f97decdc00072c0466",
+          "display": "Myra Jones"
+      },
+      "date": "2016-09-08T08:32:15-05:00",
+      "author": [
+        {
+          "reference": "urn:uuid:c260428d-70a9-465a-914d-0fb962bc6915"
+        }
+      ],
+      "content": [
+          {
+              "attachment": {
+                  "contentType": "plain/text",
+                  "data": "PGl0ZW0+PHBhcmFncmFwaD5Eci4gU3BlY2lhbGlzdCAtIFNlcHRlbWJlciA4LCAyMDE2PC9wYXJhZ3JhcGg+PHBhcmFncmFwaD4gRGVhciBEci4gSGVucnkgTGV2ZW46IFRoYW5rIHlvdSBmb3IgcmVmZXJyaW5nIE1zLiBKb25lcyBmb3IgZXZhbHVhdGlvbi4gQXBwcm94aW1hdGVseSAxOCB5ZWFycyBhZ28sIHNoZSB3YXMgaG9zcGl0YWxpemVkIHdpdGggYSBibGVlZGluZyB1bGNlci4gU2hlIGhhZCBhIENUIHNjYW4gb2YgdGhlIGFiZG9tZW4sIHdoaWNoIHJldmVhbGVkIGZpbmRpbmdzIGNvbnNpc3RlbnQgd2l0aCBmb2NhbCBub2R1bGFyIGh5cGVycGxhc2lhIChGTkgpLiBTaGUgaGFzIGhhZCBlcGlnYXN0cmljIGFiZG9taW5hbCBwYWluIGFzIHdlbGwgYXMgYSBzaWduaWZpY2FudCBjaGFuZ2UgaW4gaGVyIGJvd2VsIG1vdmVtZW50cyBmcm9tIGJhc2VsaW5lIGNvbnN0aXBhdGlvbiB0byBmcmVxdWVudCBkaWFycmhlYS4gVGhlIHBhc3QgbWVkaWNhbCBoaXN0b3J5IGlzIG90aGVyd2lzZSBuZWdhdGl2ZS4gU2hlIHRha2VzIG5vIHByZXNjcmlwdGlvbiBtZWRpY2F0aW9ucy4gVGhlIHJlbWFpbmRlciBvZiB0aGUgaGlzdG9yeSBpcyBub3QgY29udHJpYnV0b3J5LiA8L3BhcmFncmFwaD48cGFyYWdyYXBoPlBoeXNpY2FsIGV4YW1pbmF0aW9uIHJldmVhbGVkIGEgd2VsbC1hcHBlYXJpbmcgd29tYW4uIFRoZSB2aXRhbCBzaWducyB3ZXJlIG5vcm1hbC4gVGhlIGhlYWQgYW5kIG5lY2sgd2VyZSB1bnJlbWFya2FibGUuIFRoZSBsdW5nIGZpZWxkcyB3ZXJlIGNsZWFyLiBUaGUgaGVhcnQgZXhhbSB3YXMgbm9ybWFsLiBUaGUgYWJkb21lbiB3YXMgb2Jlc2Ugd2l0aCBub3JtYWwgYm93ZWwgc291bmRzLiBUaGVyZSB3YXMgbm8gdGVuZGVybmVzcywgbWFzcywgb3IgaGVwYXRvc3BsZW5vbWVnYWx5LiA8L3BhcmFncmFwaD48cGFyYWdyYXBoPkVuZG9zY29waWMgZXZhbHVhdGlvbiByZXZlYWxlZCBhIG5vcm1hbCBjb2xvbm9zY29weS4gQmlvcHNpZXMgdGFrZW4gdGhyb3VnaG91dCB0aGUgY29sb24gd2VyZSBlc3NlbnRpYWxseSB1bnJlbWFya2FibGUuIFN0b29sIHRlc3RzIGZvciBwYXRob2dlbmljIG9yZ2FuaXNtcyB3ZXJlIG5lZ2F0aXZlLiBPZiBub3RlLCBvbiB0aGUgdXBwZXIgZW5kb3Njb3B5IGV4YW1pbmF0aW9uLCBubyBzaWduaWZpY2FudCBhYm5vcm1hbGl0aWVzIHdlcmUgc2VlbjsgaG93ZXZlciwgdXBvbiBiaW9wc3ksIGZlYXR1cmVzIG9mIGNlbGlhYyBkaXNlYXNlIHdlcmUgbm90ZWQuPC9wYXJhZ3JhcGg+PHBhcmFncmFwaD4gSW4gc3VtbWFyeSwgdGhpcyBwYXRpZW50IGhhcyBldmlkZW5jZSBvZiBjZWxpYWMgZGlzZWFzZS4gV2UgZGlzY3Vzc2VkIHRoZSBkaWFnbm9zaXMgaW4gZGV0YWlsIGluIHRoZSBvZmZpY2UuIFNoZSB3YXMgYWR2aXNlZCB0byB1bmRlcnRha2UgYSBsaWZlbG9uZyBnbHV0ZW4tZnJlZSBkaWV0LiBGb2xsb3d1cCBsYWJvcmF0b3JpZXMgaW4gbXkgb2ZmaWNlIHdlcmUgbm90YWJsZSBmb3IgYSBsb3cgc2VydW0gaXJvbiB3aXRoIGEgbG93LW5vcm1hbCBmZXJyaXRpbi4gVGhlIGJvbmUgZGVuc2l0eSB3YXMgbm9ybWFsLiBSZXBlYXQgdHJpcGxlLXBoYXNlIENUIHNjYW4gb2YgdGhlIGxpdmVyIHJldmVhbGVkIG5vIGNoYW5nZSBpbiB0aGUgcmlnaHQgaGVwYXRpYyBsb2JlIGxlc2lvbiwgd2hpY2ggaXMgY29uc2lzdGVudCB3aXRoIEZOSC4gSSBhZHZpc2VkIHBlcmlvZGljIHJlZXZhbHVhdGlvbiBvZiB0aGUgbGl2ZXIgd2l0aCBpbWFnaW5nLCBhcyB3ZWxsIGFzIGZvbGxvd3VwIGZvciBhbnkgcG90ZW50aWFsIGRldmVsb3BtZW50IG9mIG51dHJpdGlvbmFsIGRlZmljaWVuY2llcy4gU2hlIHNob3VsZCB0YWtlIGFuIGlyb24gc3VwcGxlbWVudCBhbmQgY29udGludWUgb24gYSBsaWZlbG9uZyBnbHV0ZW4tZnJlZSBkaWV0LiA8L3BhcmFncmFwaD48cGFyYWdyYXBoPlRoYW5rIHlvdSBmb3IgdGhlIGNvdXJ0ZXN5IG9mIHRoaXMgcmVmZXJyYWwuIEkgd291bGQgYmUgcGxlYXNlZCB0byBzZWUgTXMuIEpvbmVzIGluIGZvbGxvd3VwLjwvcGFyYWdyYXBoPjwvaXRlbT4="
+              }
+          }
+      ],
+      "context": {
+          "encounter": [
+              {
+                  "reference": "Encounter/642ed1f93eec840007aaec76",
+                  "display": "Office/outpatient established low mdm 20-29 min"
+              }
+          ],
+          "period": {
+              "start": "2016-09-08"          
+            }
+      }
+  }
+}
