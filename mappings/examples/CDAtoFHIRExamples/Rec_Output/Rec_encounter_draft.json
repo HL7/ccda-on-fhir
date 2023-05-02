@@ -1,0 +1,64 @@
+{
+  "fullUrl": "http://fhir:3447/4_0_0/Encounter/62f17e2aa2392d0008fbb224",
+  "resource": {
+    "resourceType": "Encounter",
+    "id": "62f17e2aa2392d0008fbb224",
+    "meta": {
+      "profile": [
+        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+      ]
+    },
+    "language": "en-US",
+    "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Office outpatient visit Dr. Samir Kahn Internal Medicine Community Urgent Care (Urgent Care Center) 1004 Healthcare Dr. Portland, OR 97005 August 15, 2012 Costal Chondritis Active</div>"
+    },
+    "identifier": [
+      {
+        "value": "urn:uuid:2a620155-9d11-439e-92b3-5d9815ff4de8",
+        "system": "urn:ietf:rfc:3986"
+      }
+    ],
+    "status": "finished",
+    "class": {
+      "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "code": "AMB",
+      "display": "ambulatory"
+    },
+    "type": [
+      {
+        "coding": [
+          {
+            "system": "http://www.ama-assn.org/go/cpt",
+            "code": "99213",
+            "display": "Office outpatient visit 15 minutes"
+          }
+        ],
+        "text": "Office outpatient visit"
+      }
+    ],
+    "subject": {
+      "reference": "Patient/62f17e29b7532c0009e217b7",
+      "display": "Myra Jones"
+    },
+    "participant": [
+      {
+        "individual": {
+          "reference": "Practitioner/62f17e2ae0231200076884d4",
+          "display": "Dr. Samir Khan"
+        }
+      }
+    ],
+    "period": {
+      "start": "2012-08-15T18:00:00.000Z"
+    },
+    "diagnosis": [
+      {
+        "condition": {
+          "reference": "Condition/62f17e2aa2392d0008fbb232",
+          "display": "Costal chondritis"
+        }
+      }
+    ]
+  }
+}

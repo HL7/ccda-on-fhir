@@ -1,0 +1,55 @@
+{
+  "fullUrl": "http://fhir:3447/4_0_0/Observation/62f17e2aa2392d0008fbb23c",
+  "resource": {
+    "resourceType": "Observation",
+    "id": "62f17e2aa2392d0008fbb23c",
+    "meta": {
+      "profile": [
+        "http://hl7.org/fhir/StructureDefinition/vitalsigns"
+      ]
+    },
+    "language": "en-US",
+    "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">80 /min</div>"
+    },
+    "identifier": [
+      {
+        "system": "urn:oid:2.16.840.1.113883.3.42.126.100001.19",
+        "value": "216881330410151584"
+      }
+    ],
+    "status": "final",
+    "category": [
+      {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+            "code": "vital-signs",
+            "display": "Vital Signs"
+          }
+        ]
+      }
+    ],
+    "code": {
+      "coding": [
+        {
+          "system": "http://loinc.org",
+          "code": "8867-4",
+          "display": "HEART RATE"
+        }
+      ],
+      "text": "HEART RATE"
+    },
+    "subject": {
+      "reference": "Patient/62f17e29b7532c0009e217b7",
+      "display": "Myra Jones"
+    },
+    "effectiveDateTime": "2014-05-21T01:36:05.000Z",
+    "valueQuantity": {
+      "value": 80,
+      "unit": "/min",
+      "system": "http://unitsofmeasure.org"
+    }
+  }
+}
