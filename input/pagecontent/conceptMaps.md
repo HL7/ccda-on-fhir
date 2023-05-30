@@ -45,5 +45,5 @@ This page includes terminology mapping from CDA to FHIR and FHIR to CDA in two s
 - [Administrative gender (FHIR) → Administrative Gender (CDA)](./ConceptMap-FC-AdministrativeGender.html)
 - [Data Absent Reason code (FHIR) → NullFlavor (CDA)](./ConceptMap-FC-DataAbsentReasonNullFlavor.html)
 - [Name use (FHIR) → Name use (CDA)](./ConceptMap-FC-NameUse.html)
-- [Telecom contact point type (FHIR) → Telecom value (CDA)](./ConceptMap-FC-TelecomUse.html) 
-- [Telecom contact point use (FHIR) → Telecom use (CDA)](./ConceptMap-FC-TelecomType.html) 
+- [Telecom contact point type (FHIR) → Telecom value (CDA)](./ConceptMap-FC-TelecomType.html) 
+- [Telecom contact point use (FHIR) → Telecom use (CDA)](./ConceptMap-FC-TelecomUse.html) 
