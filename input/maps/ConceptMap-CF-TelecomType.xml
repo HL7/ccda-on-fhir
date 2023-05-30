@@ -52,7 +52,14 @@
       <target>
         <code value="phone"/>
         <display value="Phone"/>
-        <equivalence value="equivalent"/>
+        <equivalence value="narrower"/>
+        <comment value="Use phone when the @use is not PG (pager)" />
+      </target>
+      <target>
+        <code value="pager"/>
+        <display value="Pager"/>
+        <equivalence value="narrower"/>
+        <comment value="Use pager when the @use is PG (Pager)" />
       </target>
     </element>
     <element>

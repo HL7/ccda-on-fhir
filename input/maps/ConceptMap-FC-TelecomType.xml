@@ -52,7 +52,17 @@
       <target>
         <code value="tel"/>
         <display value="Telephone"/>
-        <equivalence value="equivalent"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="pager"/>
+      <display value="Pager"/>
+      <target>
+        <code value="tel"/>
+        <display value="Telephone"/>
+        <equivalence value="wider"/>
+        <comment value="Note that the @use should be set to PG" />
       </target>
     </element>
     <element>
