@@ -52,6 +52,19 @@
       ]
     }
   ],
+  "telecom": [
+        {
+          "system": "phone",
+          "value": "+1(565)867-5309",
+          "use": "mobile"
+      },
+      {
+          "system": "email",
+          "value": "adam@diameterhealth.com",
+          "use": "work"
+
+      }
+  ],
   "gender": "female",
   "birthDate": "1947-05-01",
   "address": [
