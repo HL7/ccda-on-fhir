@@ -169,7 +169,7 @@ Preliminary guidelines for documents may include:
 
 #### Name, Address, Telecom ####
 
-The mappings of name, address and telecom information is useful in many part of C-CDA ↔ FHIR mapping. These are a combination of string, code and date mappings as shown below and may be re-used across many templates/resources.   
+The mappings of name, address and telecom information is useful in many part of C-CDA ↔ FHIR mapping. These are a combination of string, code and date mappings as shown below and may be re-used across many templates/resources.  For examples of these transformations, please see the [CDA → FHIR Patient mapping](./CF-patient.html) and [FHIR → CDA Patient mapping](./FC-patient.html) pages.
 
 ##### CDA name → FHIR name #####
 
