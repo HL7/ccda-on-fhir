@@ -69,7 +69,7 @@
       <code value="fax"/>
       <display value="Fax"/>
       <target>
-        <code value="fax"/>
+        <code value="x-text-fax"/>
         <display value="Fax"/>
         <equivalence value="equivalent"/>
       </target>

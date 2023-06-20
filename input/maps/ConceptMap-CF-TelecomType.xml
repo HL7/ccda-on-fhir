@@ -69,6 +69,25 @@
         <code value="fax"/>
         <display value="Fax"/>
         <equivalence value="equivalent"/>
+        <comment value="While mappings are provided for both fax and x-text-fax, the latter is the preferred prefix in CDA" />
+      </target>
+    </element>
+    <element>
+      <code value="x-text-fax"/>
+      <display value="Fax"/>
+      <target>
+        <code value="fax"/>
+        <display value="Fax"/>
+        <equivalence value="equivalent"/>
+        <comment value="While mappings are provided for both fax and x-text-fax, the latter is the preferred prefix in CDA" />
+      </target>
+    </element>
+    <element>
+      <target>
+        <code value="sms"/>
+        <display value="SMS"/>
+        <equivalence value="narrower"/>
+        <comment value="While sms: is not technically designated in CDA, if it's included as such, we recommend mapping to sms in FHIR" />
       </target>
     </element>
   </group>
