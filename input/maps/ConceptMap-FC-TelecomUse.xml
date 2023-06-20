@@ -8,7 +8,7 @@
   <status value="active"/>
   <experimental value="false"/>
   <publisher value="HL7 International"/>
-  <description value="FHIR to C-CDA Telecom Use"/>
+  <description value="FHIR to C-CDA Telecom Use. In CDA, these are prefixes inside the value attribute."/>
   <contact>
     <name value="HL7 International"/>
     <telecom>
@@ -25,7 +25,7 @@
     </telecom>
   </contact>
   <sourceUri value="http://hl7.org/fhir/ValueSet/contact-point-use"/>
-  <targetUri value="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.20"/>
+  <targetUri value="http://terminology.hl7.org/ValueSet/v3-URLScheme"/>
   <group>
     <source value="http://hl7.org/fhir/contact-point-use"/>
     <target value="http://terminology.hl7.org/CodeSystem/v3-AddressUse"/>

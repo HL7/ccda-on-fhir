@@ -8,7 +8,7 @@
   <status value="active"/>
   <experimental value="false"/>
   <publisher value="HL7 International"/>
-  <description value="C-CDA to FHIR Telecom Type"/>
+  <description value="C-CDA to FHIR Telecom Type. In CDA, these are prefixes inside the value attribute. "/>
   <contact>
     <name value="HL7 International"/>
     <telecom>
@@ -24,6 +24,7 @@
       <value value="info@hl7.org"/>
     </telecom>
   </contact>
+  <sourceUri value="http://terminology.hl7.org/ValueSet/v3-URLScheme" />
   <targetUri value="http://hl7.org/fhir/ValueSet/contact-point-system"/>
   <group>
     <source value="http://terminology.hl7.org/CodeSystem/v3-URLScheme" />
