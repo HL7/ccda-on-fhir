@@ -1,4 +1,5 @@
 <ConceptMap xmlns="http://hl7.org/fhir"
+ xsi:schemaLocation="http://hl7.org/fhir ../../../fhir-all-xsd/conceptmap.xsd"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="CF-NameUse"/>
   <url value="http://hl7.org/fhir/us/ccda/ConceptMap/CF-NameUse"/>
@@ -33,7 +34,10 @@
       <code value="A"/>
       <display value="Artist/Stage"/>
       <target>
-        <equivalence value="unmatched"/>
+        <code value="nickname"/>
+        <display value="Nickname"/>
+        <equivalence value="inexact"/>
+        <comment value="If a name part - e.g. given - contains a qualifier of CL (callme), then this name is a nickname" />
       </target>
     </element>
     <element>
@@ -54,14 +58,10 @@
       <code value="C"/>
       <display value="License"/>
       <target>
-        <equivalence value="unmatched"/>
-      </target>
-    </element>
-    <element>
-      <code value="I"/>
-      <display value="Indigenous/Tribal"/>
-      <target>
-        <equivalence value="unmatched"/>
+        <code value="official"/>
+        <display value="Official"/>
+        <equivalence value="wider"/>
+        <comment value="Official name which might not be commonly used. Generally C is only present if different from L." />
       </target>
     </element>
     <element>
@@ -77,23 +77,8 @@
       <target>
         <code value="usual"/>
         <display value="Usual"/>
-        <equivalence value="narrower"/>
+        <equivalence value="equal"/>
         <comment value="Known as/conventional/the one you normally use" />
-      </target>
-      <target>
-        <code value="official"/>
-        <display value="Official"/>
-        <equivalence value="narrower"/>
-        <comment value="The formal name as registered in an official (government) registry, but which name might not be commonly used." />
-      </target>
-    </element>
-    <element>
-      <code value="OR"/>
-      <display value="official registry"/>
-      <target>
-        <code value="official"/>
-        <display value="Official"/>
-        <equivalence value="equivalent"/>
       </target>
     </element>
     <element>
@@ -102,7 +87,14 @@
       <target>
         <code value="nickname"/>
         <display value="Nickname"/>
-        <equivalence value="equivalent"/>
+        <equivalence value="inexact"/>
+        <comment value="If a name part - e.g. given - contains a qualifier of CL (callme), then this name is a nickname" />
+      </target>
+      <target>
+        <code value="anonymous"/>
+        <display value="Anonymous"/>
+        <equivalence value="narrower"/>
+        <comment value="Pseudonyms without a CL qualifier"/>
       </target>
     </element>
     <element>

@@ -1,4 +1,5 @@
 <ConceptMap xmlns="http://hl7.org/fhir"
+xsi:schemaLocation="http://hl7.org/fhir ../../../fhir-all-xsd/conceptmap.xsd"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="FC-NameUse"/>
   <url value="http://hl7.org/fhir/us/ccda/ConceptMap/FC-NameUse"/>
@@ -35,16 +36,24 @@
       <target>
         <code value="L"/>
         <display value="Legal"/>
-        <equivalence value="wider"/>
+        <equivalence value="equal"/>
+        <comment value="Known as/conventional/the one you normally use" />
       </target>
     </element>
     <element>
       <code value="official"/>
       <display value="Official"/>
       <target>
-        <code value="OR"/>
-        <display value="official registry"/>
+        <code value="C"/>
+        <display value="License"/>
         <equivalence value="equivalent"/>
+        <comment value="If another name exists with use=usual, then the official name is equivalent to a license" />
+      </target>
+      <target>
+        <code value="L"/>
+        <display value="Legal"/>
+        <equivalence value="equivalent"/>
+        <comment value="If no other name exist, official may be called &quot;legal name&quot;" />
       </target>
     </element>
     <element>
@@ -60,14 +69,17 @@
       <target>
         <code value="P"/>
         <display value="pseudonym"/>
-        <equivalence value="equivalent"/>
+        <equivalence value="inexact"/>
+        <comment value="In CDA, nicknames are identified by a use code of P and qualifiers on name parts of CL (callme)" />
       </target>
     </element>
     <element>
       <code value="anonymous"/>
       <display value="Anonymous"/>
       <target>
-        <equivalence value="unmatched"/>
+        <code value="P"/>
+        <display value="pseudonym"/>
+        <equivalence value="equivalent"/>
       </target>
     </element>
     <element>
