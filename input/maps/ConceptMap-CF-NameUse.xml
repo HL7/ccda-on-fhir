@@ -1,5 +1,4 @@
 <ConceptMap xmlns="http://hl7.org/fhir"
- xsi:schemaLocation="http://hl7.org/fhir ../../../fhir-all-xsd/conceptmap.xsd"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="CF-NameUse"/>
   <url value="http://hl7.org/fhir/us/ccda/ConceptMap/CF-NameUse"/>
