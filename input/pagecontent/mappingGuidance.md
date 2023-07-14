@@ -44,14 +44,23 @@ Cases where the FHIR system uses a scheme with no OID present a problem. The UID
 |Case|Approach|CDA id@root|CDA id@extension|identifier.system|identifier.value|
 |:--|:--|:--|:--|:--|:--|
 |URL exists|translate|2.16.840.1.113883.4.1|123-45-6789|http://hl7.org/fhir/sid/us-ssn|123-45-6789
-|No URL exists|use OID|2.16.840.1.113883.4.500|1234567890V123456|urn:oid:2.16.840.1.113883.4.500|1234567890V123456
-|One-value pattern|use OID specification URI for system|2.16.840.1.113883.4.500.123456789||urn:ietf:rfc:3986|urn:oid:2.16.840.1.113883.4.500.123456789
+|No URL exists|use OID|2.16.840.1.113883.4.500|12345V7890|urn:oid:2.16.840.1.113883.4.500|12345V7890
+|No URL exists and no extension<sup>1</sup>|use URI system, prepend with urn:uuid:|2.16.840.1.123.4.50.123456789||urn:ietf:rfc:3986|urn:oid:2.16.840.1.123.4.50.123456789
+|UUID-only|use URI system, prepend with urn:oid:|67265ED2-35BB-43F8-B9DE-91C5935625E0<sup>2</sup>||urn:ietf:rfc:3986|urn:uuid:67265ed2-35bb-43f8-b9de-91c5935625e0<sup>2</sup>
+|UUID with extension<sup>3</sup>|use UUID, prepend value|67265ED2-35BB-43F8-B9DE-91C5935625E0|abcd|urn:uuid:67265ed2-35bb-43f8-b9de-91c5935625e0|abcd
+|Extension-only|only set value||Z1124||Z1124
+1. This approach should not be used for known identifier systems like SSN or NPI. Even if there is no nullFlavor, sending the system OID as a value is inappropriate.
+3. UUID's are unique by themselves and rarely have extensions, so this scenario is rare.
+
+If a CDA id contains a `@nullFlavor` (or a known coding system such as SSN or NPI with no extension), a FHIR Identifier may be created using a data-absent-reason extension explaining the missing data. If the CDA id has a `@root`, place the extension on the `Identifier.value` element (for example, to indicate an unknown NPI); if the CDA id has only a `@nullFlavor`, the extension may be placed on the Identifier element itself.
 
 ##### FHIR Identifier → CDA id with Example Mapping
 
 |Case|Approach|identifier.system|identifier.value|CDA id@root|CDA id@extension|
 |:--|:--|:--|:--|:--|:--|
 |OID exists|translate|http://hl7.org/fhir/sid/us-ssn|123-45-6789|	2.16.840.1.113883.4.1|123-45-6789
+|OID value|use OID as root|urn:ietf:rfc:3986|urn:oid:2.16.840.1.123.4.50.123456789|2.16.840.1.123.4.50.123456789|
+|UUID value|use UUID as root|urn:ietf:rfc:3986|urn:uuid:67265ed2-35bb-43f8-b9de-91c5935625e0|67265ED2-35BB-43F8-B9DE-91C5935625E0
 |No OID exists|concatenate; use URL specification URI for root|http://www.myOrg.com/patients|123456789|2.16.840.1.113883.4.873 <br/> (OID for urn:ietf:rfc:3986)|http://www.myOrg.com/patients/123456789
 |No OID exists|invent|urn:myNID:myOrganization|123456789|f9a48f2a-0f86-11ed-861d-0242ac120002|urn:myNID:myOrganization:123456789
 |One-value pattern|introspect steward organization OID||123456789|2.16.840.1.113883.4.349|123456789
