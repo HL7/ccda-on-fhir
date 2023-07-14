@@ -49,9 +49,13 @@ Cases where the FHIR system uses a scheme with no OID present a problem. The UID
 |UUID-only|use URI system, prepend with urn:oid:|67265ED2-35BB-43F8-B9DE-91C5935625E0<sup>2</sup>||urn:ietf:rfc:3986|urn:uuid:67265ed2-35bb-43f8-b9de-91c5935625e0<sup>2</sup>
 |UUID with extension<sup>3</sup>|use UUID, prepend value|67265ED2-35BB-43F8-B9DE-91C5935625E0|abcd|urn:uuid:67265ed2-35bb-43f8-b9de-91c5935625e0|abcd
 |Extension-only|only set value||Z1124||Z1124
+|Root = URI OID, Value = URL|split value on /|2.16.840.1.113883.4.873<sup>4</sup>|http://myorg.com/patient/1234|http://myorg.com/patient|1234
+|Root = URI OID, Value = URN|split value on :|2.16.840.1.113883.4.873<sup>4</sup>|urn:myNID:myOrg:Z3321|urn:myNID:myOrg|Z3321
+
 1. This approach should not be used for known identifier systems like SSN or NPI. Even if there is no nullFlavor, sending the system OID as a value is inappropriate.
 2. UUIDs from CDA are uppercase (per Abstract Datatypes 2.1.5.1); UUIDs from FHIR are lowercase (per [FHIR uri Datatype](https://hl7.org/fhir/R4/datatypes.html#uri)). Transform case when converting.
 3. UUID's are unique by themselves and rarely have extensions, so this scenario is rare.
+4. This is the URN OID equivalent of urn:ietf:rfc:3598. These examples are the reverse of the concatenation example listed below.
 
 If a CDA id contains a `@nullFlavor` (or a known coding system such as SSN or NPI with no extension), a FHIR Identifier may be created using a data-absent-reason extension explaining the missing data. If the CDA id has a `@root`, place the extension on the `Identifier.value` element (for example, to indicate an unknown NPI); if the CDA id has only a `@nullFlavor`, the extension may be placed on the Identifier element itself.
 
