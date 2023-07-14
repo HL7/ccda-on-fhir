@@ -56,11 +56,11 @@ Cases where the FHIR system uses a scheme with no OID present a problem. The UID
 |No OID exists|invent|urn:myNID:myOrganization|123456789|f9a48f2a-0f86-11ed-861d-0242ac120002|urn:myNID:myOrganization:123456789
 |One-value pattern|introspect steward organization OID||123456789|2.16.840.1.113883.4.349|123456789
 
-#### FHIR IDs
-
-FHIR ids are strings: they have no system. We propose not preserving them. They could be used in II.extension but we have no way to identify a root. If someone can ascertain a reliable, repeatable way to do that, we might be able to keep the id.
-
 In some cases, a CDA template requires an id, and the source FHIR resource may not have an identifier. In these cases, use of nullFlavor or UUID generation approach may be reasonable options.
+
+##### FHIR ids
+
+FHIR ids (i.e. resource ids and element ids) are strings: they have no system. We propose not preserving them. They could be used in II.extension but we have no way to identify a root. If someone can ascertain a reliable, repeatable way to do that, we might be able to keep the id.
 
 #### CDA ↔ FHIR Time/Dates
 
