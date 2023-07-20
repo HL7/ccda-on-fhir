@@ -7,10 +7,10 @@ C-CDA to FHIR: copy section.text to section.text; copy entry.text to resource.te
 
 FHIR to C-CDA: copy section.text to section.text. Entry.text is usually not populated. 
 
-Some  implementers may wish to generate CDA documents from FHIR rsources that have not been assembled into a document.  The question of how to assemble a document (what data to allocate to which section, generation of section text, etc.) is different from the question of transformation, and it is not addressed here.
+Some  implementers may wish to generate CDA documents from FHIR resources that have not been assembled into a document.  The question of how to assemble a document (what data to allocate to which section, generation of section text, etc.) is different from the question of transformation, and it is not addressed here.
 
 #### Medications
-US Core specifies that medication lists be accessible via a MedicationRequest query, regardless of whether the source system has the order. This means that CDA Medication Activity entries are mapped to MedicationRequest, and FHIR maps assume that MedicationRequest manifext all relevant medication data. We are interested in whether there are cases where these assumptions introduce risk or undue complexity.
+US Core specifies that medication lists be accessible via a MedicationRequest query, regardless of whether the source system has the order. This means that CDA Medication Activity entries are mapped to MedicationRequest, and FHIR maps assume that MedicationRequest manifest all relevant medication data. We are interested in whether there are cases where these assumptions introduce risk or undue complexity.
 
 #### Null flavors
 US Core specifies that "unknown" is the generic null flavor, and should be used for, e.g., CDA "No Information." But CDA NullFlavors also has an "unknown" code. We opt, in this case, to follow the FHIR principle of not sending nulls without reason, so that a FHIR "unknown" will usually follow from a CDA "unknown." In cases where the FHIR property is required, we follow the US Core guidance, mapping "NI" to "unknown." This means that both CDA UNK and NI are mapped to FHIR UNK, but FHIR UNK is mapped to NI.
@@ -26,7 +26,7 @@ When generating FHIR documents from FHIR, we propose that all resources be assig
 
 We solicit feedback on the advisability of also populating resource provenance elements in either case.
 
-While general guidance is to map Author participations to Provenance; at this time, we have no implemenations to test that proposal.
+While general guidance is to map Author participations to Provenance; at this time, we have no implementations to test that proposal.
 
 Most identified instances of provenance use a small number of roles, but many roles are permitted. See the project page [https://confluence.hl7.org/display/CGP/Provenance+Domain](https://confluence.hl7.org/display/CGP/Provenance+Domain)for current thinking on how these roles should be mapped. 
 
