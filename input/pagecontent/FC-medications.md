@@ -32,7 +32,7 @@ This page provides a mapping from FHIR to CDA. For the CDA to FHIR mapping, plea
 |**[Annotation](https://hl7.org/fhir/datatypes.html#Annotation)**<br/>.note|**[Comment Activity](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.64.html)**<br/>```entryRelationship/act/code@code="48767-8"```<br/>/entryRelationship/act/text||
 |.dosageInstruction.text<br/>&<br/>.dosageInstruction.patientInstruction|**[Free text sig](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.147.html)**<br/>```entryRelationship/substanceAdministration/code@code="76662-6"```<br/>/entryRelationship/substanceAdministration/text||
 |.dosageInstruction.additionalInstruction|**[Instruction](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.20.html)**<br/>```entryRelationship@typeCode="SUBJ"```<br/>/entryRelationship/act/code|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
-|.dosageInstruction.timing.repeat.boundsPeriod.start|effectiveTime[0]/low|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)v|
+|.dosageInstruction.timing.repeat.boundsPeriod.start|effectiveTime[0]/low|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
 |.dosageInstruction.timing.repeat.boundsPeriod.end|effectiveTime[0]/high|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
 |.dosageInstruction.timing.repeat.frequency<br/>&<br/>.dosageInstruction.timing.repeat.period<br/>&<br/>.dosageInstruction.timing.repeat.periodUnit<br/>|/effectiveTime[1]|This can be complex|
 |.dosageInstruction.site|/approachSiteCode|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
