@@ -31,7 +31,7 @@ For further information see the [pdf-based C-CDA specification](http://www.hl7.o
 <tbody>
 <tr>
 <td>HL7 Structured Documents Working Group</td>
-<td><a href="http://hl7.org/Special/committees/structure/index.cfm" target="_new">http://hl7.org/Special/committees/structure/index.cfm</a></td>
+<td><a href="http://hl7.org/Special/committees/structure" target="_new">http://hl7.org/Special/committees/structure</a></td>
 </tr>
 <tr>
 <td>Rick Geimer</td>
@@ -68,11 +68,11 @@ For further information see the [pdf-based C-CDA specification](http://www.hl7.o
 <tbody>
 <tr>
 <td>HL7 Cross Group Projects</td>
-<td><a href="http://hl7.org/Special/committees/cgp/index.cfm" target="_new">http://www.hl7.org/Special/committees/cgp/index.cfm</a></td>
+<td><a href="http://hl7.org/Special/committees/cgp" target="_new">http://hl7.org/Special/committees/cgp</a></td>
 </tr>
 <tr>
 <td>HL7 Structured Documents Working Group</td>
-<td><a href="http://hl7.org/Special/committees/structure/index.cfm" target="_new">http://hl7.org/Special/committees/structure/index.cfm</a></td>
+<td><a href="http://hl7.org/Special/committees/structure" target="_new">http://hl7.org/Special/committees/structure</a></td>
 </tr>
 <tr>
 <td>Jay Lyle</td>
@@ -104,7 +104,7 @@ For further information see the [pdf-based C-CDA specification](http://www.hl7.o
 </tr>
 <tr>
 <td>Benjamin Flessner</td>
-<td><a href="mailto:benjamin@redoxengine.com">benjamin@redoxengine.com</a></td>
+<td><a href="mailto:b.d.flessner@gmail.com">b.d.flessner@gmail.com</a></td>
 </tr>
 <tr>
 <td>Brett Marquard</td>
@@ -124,9 +124,12 @@ For further information see the [pdf-based C-CDA specification](http://www.hl7.o
 </tr>
 <tr>
 <td>Gay Dolin</td>
-<td><a href="mailto: gdolin@namasteinformatics.com"> gdolin@namasteinformatics.com</a></td>
+<td><a href="mailto: gdolin@namasteinformatics.com">gdolin@namasteinformatics.com</a></td>
 </tr>
-
+<tr>
+<td>Lisa Nelson</td>
+<td><a href="LNelson@advaultinc.com">LNelson@advaultinc.com</a></td>
+</tr>
 
 </tbody>
 </table>
