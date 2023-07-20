@@ -31,7 +31,7 @@ More information on C-CDA can be found [here](http://www.hl7.org/implement/stand
 
 ### Moving from CDA/C-CDA to FHIR
 
-Since C-CDA exists and has seen widespread implementation, one may question why a FHIR version is desired. The main reason is that CDA and C-CDA are based on HL7 Version 3, which while XML-based was (and still is) rather difficult to implement for a variety of reasons such as data types that are not widely implemented in software libraries, reliance on xsi:type for datatype choices, etc. Also, FHIR is much easier to learn than CDA, so while implementers who are already familiar with CDA will likely keep working with it, new implementers are likely to want to more directly to FHIR. 
+Since C-CDA exists and has seen widespread implementation, one may question why a FHIR version is desired. The main reason is that CDA and C-CDA are based on HL7 Version 3, which while XML-based was (and still is) rather difficult to implement for a variety of reasons such as data types that are not widely implemented in software libraries, reliance on xsi:type for datatype choices, etc. Also, FHIR is much easier to learn than CDA, so while implementers who are already familiar with CDA will likely keep working with it, new implementers are likely to want to move directly to FHIR. 
 
 #### CDA Header to FHIR Composition Resource Analysis
 
