@@ -159,11 +159,25 @@ FHIR, however, provides different elements within resources (e.g. Condition.reco
 At a minimum, it is recommended that when [Provenance](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-provenance.html) resources are present in a FHIR document, that they should be mapped to provenance as defined in the [C-CDA Companion Guide](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=447). 
 
 Preliminary guidelines for documents may include: 
-1. Assembler generated document templates with provenance will value `entity.what` with a reference to either a [DocumentReference](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-documentreference.html) or [DiagnosticReport](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-documentreference.html), and `agent.type.coding.code` of assembler, and `agent.onBehalfOf` with a reference to the organization that the document was assembled under the auspices of. 
-2. Device generated document templates with [Provenance](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-provenance.html) will value `entity.what` with a reference to either a [DocumentReference](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-documentreference.html) or [DiagnosticReport](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-documentreference.html), and `agent.type.coding.code` of assembler, and `agent.onBehalfOf` with a reference to the organization that the document was assembled under the auspices of.
-2.1 A role of Informant is not permitted in Device Generated Document template. 
-3. Patient Generated Document with [Provenance](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-provenance.html) with value `entity.what` with a reference to a [DocumentReference](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-documentreference.html) or [DiagnosticReport](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-documentreference.html), and will contain a [US Core Provenance](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-provenance.html) agent.type of author, with an agent.who reference to the patient. optionally, it may include a participating device composer when created from a patient portal, and/or a participating assembeler; or a participating informant with `onBehalfOf` of valued to the authorizing provider's organization. 
-4. Provider Generated Document with [Provenance](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-provenance.html) will value entity.what with a reference to a documentrefernce or diagnosticreport, and will contain a [Provenance](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-provenance.html) `agent.type` of author with the agent who containing a reference to the provider or providerrole (when organization is included along with roles form the source C-CDA), and `onBehalfOf` value to a referance to an organization that the provider is authorized by.
+1. Assembler generated documents
+    - `entity.what` reference either a [DocumentReference](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-documentreference.html) or [DiagnosticReport](https://hl7.org/fhir/us/core/StructureDefinition-us-core-diagnosticreport-note.html)
+    - `agent.type.coding.code` = assembler
+    - `agent.onBehalfOf` reference the [Organization](https://hl7.org/fhir/us/core/StructureDefinition-us-core-organization.html) that the document was assembled under the auspices of
+2. Device generated document templates
+    - `entity.what` reference either a [DocumentReference](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-documentreference.html) or [DiagnosticReport](https://hl7.org/fhir/us/core/StructureDefinition-us-core-diagnosticreport-note.html)
+    - `agent.type.coding.code` = assembler
+    - `agent.onBehalfOf` reference the [Organization](https://hl7.org/fhir/us/core/StructureDefinition-us-core-organization.html) that the document was assembled under the auspices of
+    - A role of Informant is not permitted in Device Generated Document template. 
+3. Patient Generated Document
+    - `entity.what` reference either a [DocumentReference](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-documentreference.html) or [DiagnosticReport](https://hl7.org/fhir/us/core/StructureDefinition-us-core-diagnosticreport-note.html)
+    - `agent.type` of author
+    - `agent.who` reference to the [Patient](https://hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html). Optionally, it may include a participating device composer when created from a patient portal, and/or a participating assembeler; or a participating informant.
+    - `onBehalfOf` valued to the authorizing provider's organization
+4. Provider Generated Document
+    - `entity.what` reference either a [DocumentReference](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-documentreference.html) or [DiagnosticReport](https://hl7.org/fhir/us/core/StructureDefinition-us-core-diagnosticreport-note.html)
+    - `agent.type` of author
+    - `agent.who` reference the [Practitioner](https://hl7.org/fhir/us/core/StructureDefinition-us-core-practitioner.html) or [PractitionerRole](https://hl7.org/fhir/us/core/StructureDefinition-us-core-practitionerrole.html) (when organization is included along with roles form the source C-CDA)
+    - `onBehalfOf` reference to an [Organization](https://hl7.org/fhir/us/core/StructureDefinition-us-core-organization.html) that the provider is authorized by
 
 
 
