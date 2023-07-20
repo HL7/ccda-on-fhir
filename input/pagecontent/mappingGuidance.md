@@ -64,7 +64,7 @@ In some cases, a CDA template requires an id, and the source FHIR resource may n
 
 #### CDA ↔ FHIR Time/Dates
 
-CDA date-time values are based on a pattern of YYYYMMDDHHmmss+zzzz and [FHIR date-time values](https://hl7.org/fhir/datatypes.html#dateTime) are based on a YYYY-MM-DDThh:mm:ss+zz:zz. Partial expressions (e.g. 202305 for CDA or 2023-05 for FHIR) are allowed in both standards. 
+CDA timestamp values are based on a pattern of YYYYMMDDHHmmss+zzzz and [FHIR dateTime values](https://hl7.org/fhir/datatypes.html#dateTime) are based on a YYYY-MM-DDThh:mm:ss+zz:zz. Partial expressions (e.g. 202305 for CDA or 2023-05 for FHIR) are allowed in both standards. 
 
 To convert between the standards, systems should deploy programming logic that converts formats and preserves the level of precision. For example, "20230531" from CDA would become "2023-05-31" in FHIR (not 2023-05-31T00:00:00+00:00). Additional examples below: 
 
@@ -75,7 +75,7 @@ To convert between the standards, systems should deploy programming logic that c
 |20230531|2023-05-31|
 |202305312205-0500|2023-05-31T22:05-05:00|
 
-Note that in C-CDA timezone offset is a SHOULD, while in FHIR, time zone offset is required when more specific than the day. There may be instances where a CDA date-time value omits a time zone offset and other data from the document may be necessary to populate FHIR date-time requirements.  
+Note that in C-CDA timezone offset is a SHOULD, while in FHIR, time zone offset is required when more specific than the day. There may be instances where a CDA date-time value omits a time zone offset and other data from the document may be necessary to populate FHIR dateTime requirements.  
 
 #### CDA Coding ↔ FHIR CodeableConcept
 
