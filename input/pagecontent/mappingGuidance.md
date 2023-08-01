@@ -67,7 +67,8 @@ If a CDA id contains a `@nullFlavor` (or a known coding system such as SSN or NP
 |OID value|use OID as root|urn:ietf:rfc:3986|urn:oid:2.16.840.1.123.4.50.123456789|2.16.840.1.123.4.50.123456789|
 |UUID value|use UUID as root|urn:ietf:rfc:3986|urn:uuid:67265ed2-35bb-43f8-b9de-91c5935625e0|67265ED2-35BB-43F8-B9DE-91C5935625E0
 |No OID exists|concatenate; use URL specification URI for root|http://www.myOrg.com/patients|123456789|2.16.840.1.113883.4.873 <br/> (OID for urn:ietf:rfc:3986)|http://www.myOrg.com/patients/123456789
-|No OID exists|invent|urn:myNID:myOrganization|123456789|f9a48f2a-0f86-11ed-861d-0242ac120002|urn:myNID:myOrganization:123456789
+|No OID exists|concatenate; use URL specification URI for root|urn:myNID:myOrganization|123456789|2.16.840.1.113883.4.873|urn:myNID:myOrganization:123456789
+|OID in system|remove prefix|urn:oid:2.16.840.1.113883.4.500|12345V7890|2.16.840.1.113883.4.500|12345V7890
 |One-value pattern|introspect steward organization OID||123456789|2.16.840.1.113883.4.349|123456789
 
 In some cases, a CDA template requires an id, and the source FHIR resource may not have an identifier. In these cases, use of nullFlavor or UUID generation approach may be reasonable options.
