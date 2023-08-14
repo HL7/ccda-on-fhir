@@ -8,7 +8,7 @@
   <status value="active"/>
   <experimental value="false"/>
   <publisher value="HL7 International"/>
-  <description value="C-CDA NullFlavor to FHIR Data Absent Reason"/>
+  <description value="C-CDA NullFlavor to FHIR Data Absent Reason. Adapted from https://hl7.org/fhir/R4/cm-data-absent-reason-v3.html but several key differences have been made. Note that this prior concept map (from R4) is no longer included in current FHIR build."/>
   <contact>
     <name value="HL7 International"/>
     <telecom>
