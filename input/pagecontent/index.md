@@ -124,11 +124,11 @@ For further information see the [pdf-based C-CDA specification](http://www.hl7.o
 </tr>
 <tr>
 <td>Gay Dolin</td>
-<td><a href="mailto: gdolin@namasteinformatics.com">gdolin@namasteinformatics.com</a></td>
+<td><a href="mailto:gdolin@namasteinformatics.com">gdolin@namasteinformatics.com</a></td>
 </tr>
 <tr>
 <td>Lisa Nelson</td>
-<td><a href="LNelson@advaultinc.com">LNelson@advaultinc.com</a></td>
+<td><a href="mailto:LNelson@advaultinc.com">LNelson@advaultinc.com</a></td>
 </tr>
 
 </tbody>
