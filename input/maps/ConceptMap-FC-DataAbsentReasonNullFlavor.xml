@@ -7,7 +7,7 @@
   <status value="active"/>
   <experimental value="false"/>
   <publisher value="HL7 International"/>
-  <description value="FHIR Data Absent Reason to C-CDA NullFlavor. Adapted from https://hl7.org/fhir/R4/cm-data-absent-reason-v3.html but several key differences have been made. Note that this prior concept map (from R4) is no longer included in current FHIR build."/>
+  <description value="FHIR Data Absent Reason to C-CDA NullFlavor. Adapted from https://hl7.org/fhir/R4/cm-data-absent-reason-v3.html but several key changes have been made. Note that this prior concept map (from R4) is no longer included in current FHIR build."/>
   <contact>
     <name value="HL7 International"/>
     <telecom>
@@ -35,7 +35,7 @@
         <code value="NI"/>
         <display value="NoInformation"/>
         <equivalence value="wider"/>
-        <comment value="In CDA, 'UNK' means 'a proper value is applicable, but not known.' Guidance has been to use this when the value is known exist and to use the broader 'NI' when no specific information about why the value is unknown. FHIR's data absent reason of 'unknown' better maps to 'NI'." />
+        <comment value="In CDA, 'UNK' means 'a proper value is applicable, but not known.' Guidance has been to use this when the value is known to exist and to use the broader 'NI' when no specific information about why the value is unknown. FHIR's data absent reason of 'unknown' better maps to 'NI'." />
       </target>
     </element>
     <element>
