@@ -90,7 +90,17 @@ To convert between the standards, systems should deploy programming logic that c
 |20230531|2023-05-31|
 |202305312205-0500|2023-05-31T22:05-05:00|
 
-Note that in C-CDA timezone offset is a SHOULD, while in FHIR, time zone offset is required when more specific than the day. There may be instances where a CDA date-time value omits a time zone offset and other data from the document may be necessary to populate FHIR dateTime requirements.  
+Note that in C-CDA timezone offset is a SHOULD, while in FHIR, time zone offset is required when more specific than the day. There may be instances where a CDA date-time value omits a time zone offset and other data from the document may be necessary to populate FHIR dateTime requirements.
+
+The following are possible approaches to map CDA timestamps without offset to a FHIR dateTime or instant datatype. Selecting an approach depends on various factors including the criticality of the data, the age of the document, and the level of information the transformation process has about the location where the particular element was recorded.
+
+- Omit the time portion of the date entirely, optionally sending the time as an extension or use the [Uncertain period  extension](http://hl7.org/fhir/extensions/StructureDefinition-uncertainPeriod.html)
+  - Note - this only works for FHIR fields with a dateTime datatype; the instant datatype must be precise to the second
+- Use the same offset as a different timestamp within the same entry or section (or ClinicalDocument/effectiveTime)
+- Use contextual knowledge of the source document's location (e.g. if the document came from a health system serving only New England and the date was in December, the offset is likely "-05:00")
+- Default the offset to 00:00
+
+Beware that any approach which manufactures an offset could have clinical implications, but this is likely less critical the older (and thus, more likely to be missing offsets) the document is.
 
 #### CDA Coding ↔ FHIR CodeableConcept
 
