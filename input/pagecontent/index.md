@@ -132,7 +132,7 @@ For further information see the [pdf-based C-CDA specification](http://www.hl7.o
 </tr>
 <tr>
 <td>Deb Loniewski</td>
-<td><a href="mailto:loniewskid@michigan.gov.com>loniewskid@michigan.gov</a></td>
+<td><a href="mailto:loniewskid@michigan.gov">loniewskid@michigan.gov</a></td>
 </tr>
 
 </tbody>
