@@ -1,8 +1,14 @@
-This page includes terminology mapping from CDA to FHIR and FHIR to CDA in two separate sections. This is terminology mapping. For structural transformations, please refer to the [general guidance](mappingGuidance.html) 
+This page includes terminology mapping from CDA → FHIR and FHIR → CDA in two separate sections. These  terminology mappings are not structural. For structural transformations, please refer to the [general structural guidance](mappingGuidance.html). 
+
+These terminology maps use the [ConceptMap](http://hl7.org/fhir/R4B/conceptmap.html) resource which translates a source terminology to a target terminology. In addition, the specific term maps in this guide are often not semantically equivalent and may be incomplete. For these reasons, we include two maps for each terminology group, one for CDA → FHIR and another for FHIR → CDA, shown in multiple sub-lists on this page.
+
+Note that these maps are directly referenced in the structural guidance tables and do not include any large vocabularly mappings (i.e. each of the mappings below has under 50 terms).  
 
 ### CDA to FHIR Terminology Mapping
 
-#### **Entry Specific CDA to FHIR ConceptMaps** 
+Shown below are terminology mappings when moving from CDA → FHIR. Entry specific maps are shown first then followed by general maps which may be referenced across multiple clinical domains. 
+
+#### **Entry Specific CDA to FHIR Resource ConceptMaps** 
 - [Allergy Intolerance Observation value (CDA) → AllergyIntolerance type (FHIR)](./ConceptMap-CF-AllergyIntoleranceType.html)
 - [Allergy Intolerance Observation value (CDA) → AllergyIntolerance category (FHIR)](./ConceptMap-CF-AllergyIntoleranceCategory.html)
 - [Allergy Status Observation (CDA) → AllergyIntolerance clinicalStatus (FHIR)](./ConceptMap-CF-AllergyStatus.html)
@@ -26,7 +32,9 @@ This page includes terminology mapping from CDA to FHIR and FHIR to CDA in two s
 
 ### FHIR to CDA Terminology Mapping
 
-#### **Resource Specific FHIR to CDA ConceptMaps** 
+Shown below are terminology mappings when moving from FHIR → CDA. Resource specific maps are shown first then followed by general maps which may be referenced across multiple clinical domains. 
+
+#### **Resource Specific FHIR to CDA Entry ConceptMaps** 
 - [AllergyIntolerance type (FHIR) → Allergy Intolerance Observation value (CDA)](./ConceptMap-FC-AllergyIntoleranceType.html)
 - [AllergyIntolerance category (FHIR) → Allergy Intolerance Observation value (CDA)](./ConceptMap-FC-AllergyIntoleranceCategory.html)
 - [AllergyIntolerance clinicalStatus (FHIR) → Allergy Status Observation (CDA)](./ConceptMap-FC-AllergyStatus.html) 
