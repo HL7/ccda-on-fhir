@@ -31,7 +31,7 @@ The highlighted output images were created using an [open source tool for C-CDA 
 
 Identifiers in both FHIR and CDA can divide the identifier value from its namespace: FHIR as the identifier.system and CDA as the id.root. In many cases, this correspondence works well.
 
-However, the FHIR system can be any URI, including OIDs & UUIDs as well as URLs. CDA roots must be UIDs, which consist of OIDs and UUIDs only. CDA roots can often be used as FHIR systems, but FHIR systems must often be translated. In some cases, the URL has a registered equivalent OID, for example, an identifier with a FHIR system of http://hl7.org/fhir/sid/us-ssn can be represented with a CDA root of 2.16.840.1.113883.4.1.
+However, the FHIR system can be any URI, including OIDs & UUIDs as well as URLs. CDA roots must be UIDs, which consist of OIDs and UUIDs only. CDA roots can often be used as FHIR systems, but FHIR systems must often be translated. In some cases, the URI has a registered equivalent OID, for example, an identifier with a FHIR system of http://hl7.org/fhir/sid/us-ssn can be represented with a CDA root of 2.16.840.1.113883.4.1.
 
 If there is no such OID, and if the FHIR identifier is a URL, we can use the URL specification itself as the system, and that specification - urn:ietf:rfc:3986 - has a registered OID equivalent, 2.16.840.1.113883.4.873. The FHIR identifier.value can be appended to the system for the CDA extension. These ids can be represented as below.
 
@@ -109,11 +109,11 @@ The structure for coding in CDA and FHIR are fundamentally different. CDA  emplo
 |CDA Property|FHIR Target|Notes|
 |:-----|:-----|:-------------|
 |@code|coding.code||
-|@codeSystem|coding.system|Requires [mapping OID → URL](mappingGuidance.html#mapping-oid--url) or adding `urn:oid:` prefix|
+|@codeSystem|coding.system|Requires [mapping OID → URI](mappingGuidance.html#mapping-oid--uri) or adding `urn:oid:` prefix|
 |@displayName|coding.display|
 |originalText|text|CDA references must be resolved since [text](http://hl7.org/fhir/datatypes-definitions.html#CodeableConcept.text) is a string in FHIR|
 |translation@code|coding.code||
-|translation@codeSystem|coding.system|Requires [mapping OID → URL](mappingGuidance.html#mapping-oid--url) or adding `urn:oid:` prefix|
+|translation@codeSystem|coding.system|Requires [mapping OID → URI](mappingGuidance.html#mapping-oid--uri) or adding `urn:oid:` prefix|
 |translation@displayName|coding.display|
 
 #### FHIR CodeableConcept → CDA Coding
@@ -130,27 +130,27 @@ In addition to the context of the previous section, CDA often requires elements 
 |:-----|:-----|:-------------|
 |coding.code|@code<br/>or<br/>translation@code|The criteria for mapping to @code varies by valueset binding within CDA templates. When no coding.code matches the target valueset, the @code should be omitted and @nullFlavor="OTH" used placing all coding as translation elements|
 |coding.display|coding.displayName<br/>or<br/>translation@displayName|
-|coding.system|@codeSystem<br/>or<br/>translation@codeSystem|Requires [URL → OID mapping](mappingGuidance.html#mapping-oid--url) or removing `urn:oid:` prefix|
+|coding.system|@codeSystem<br/>or<br/>translation@codeSystem|Requires [URI → OID mapping](mappingGuidance.html#mapping-oid--uri) or removing `urn:oid:` prefix|
 |text|originalText|
 
-#### Mapping OID ↔ URL
+#### Mapping OID ↔ URI
 
-FHIR requires that certain terminologies use a specific uniform resource locator (URL) while CDA always uses object identifiers (OIDs) for codeSystems. This means: 
+FHIR requires that certain terminologies use a specific uniform resource identifier (URI) while CDA always uses object identifiers (OIDs) for codeSystems. This means: 
   - For CDA → FHIR mapping
-    - Translation to URLs is required for [select OIDs defined here](http://hl7.org/fhir/terminologies-systems.html)
-    - For OIDs not in the above list and where no URL equivalent is known, add the `urn:oid:` prefix to OID
+    - Translation to URIs is required where possible. One source of translations is available [in FHIR terminologies](http://hl7.org/fhir/terminologies-systems.html) which also includes information about other sources of translation.
+    - For OIDs that have no URI equivalent is known, add the `urn:oid:` prefix to OID
   - For FHIR → CDA mapping
-     - Translation or URLs to OIDs is always required for FHIR → CDA mapping
-     - Removal or `urn:oid:` prefix for OIDs
+     - Translation of URIs to OIDs is always required for FHIR → CDA mapping
+     - Remove `urn:oid:` prefix for OIDs
 
-Two example are shown in the table below. Since LOINC is a terminology with a defined URL in FHIR, it is not allowed to add `urn:oid:` when mapping from CDA (~~urn:oid:2.16.840.1.113883.6.1~~). This is allowed, however, for other terminologies where no URL is known. 
+Two example are shown in the table below. Since LOINC is a terminology with a defined URI in FHIR, it is not allowed to add `urn:oid:` when mapping from CDA (~~urn:oid:2.16.840.1.113883.6.1~~). This is allowed, however, for other terminologies where no URI is known. 
 
 |CDA @codeSystem|FHIR coding.system|
 |:----|:----|
 |2.16.840.1.113883.6.1|http://loinc.org|
 |2.16.840.1.113883.4.123456789|urn:oid:2.16.840.1.113883.4.123456789|
 
-Additional guidance on [FHIR terminologies available here](http://hl7.org/fhir/terminologies-systems.html)
+Additional guidance on [FHIR terminologies available here](http://hl7.org/fhir/terminologies-systems.html).
 
 #### Text Linking in CDA and FHIR 
 
