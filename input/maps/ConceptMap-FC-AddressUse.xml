@@ -76,7 +76,10 @@
       <code value="billing"/>
       <display value="Billing"/>
       <target>
-        <equivalence value="unmatched"/>
+        <code value="PST"/>
+        <display value="postal address"/>
+        <equivalence value="narrower"/>
+        <comment value="Used to send mail" />
       </target>
     </element>
   </group>
