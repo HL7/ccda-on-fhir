@@ -66,26 +66,6 @@
         <comment value="Use this when .category is biologic or environmental" />
       </target>
     </element>
-    <element>
-      <target>
-        <code value="418471000"/>
-        <display value="Propensity to adverse reactions to food"/>  
-        <equivalence value="narrower"/>
-        <comment value="Use this when .category is food" />
-      </target>
-      <target>
-        <code value="419511003"/>
-        <display value="Propensity to adverse reactions to drug"/>
-        <equivalence value="narrower"/>
-        <comment value="Use this when .category is medication" />
-      </target>
-      <target>
-        <code value="418038007"/>
-        <display value="Propensity to adverse reactions to substance"/>
-        <equivalence value="narrower"/>
-        <comment value="Use this when .category is biologic or environmental" />
-      </target>
-    </element>
     <unmapped>
       <mode value="fixed" />
       <code value="420134006"/>
