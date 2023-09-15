@@ -8,7 +8,7 @@
   <status value="active"/>
   <experimental value="false"/>
   <publisher value="HL7 International"/>
-  <description value="FHIR to C-CDA Telecom Type"/>
+  <description value="FHIR to C-CDA Telecom Type. In CDA, these are prefixes inside the value attribute."/>
   <contact>
     <name value="HL7 International"/>
     <telecom>
