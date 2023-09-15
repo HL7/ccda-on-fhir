@@ -27,9 +27,7 @@ Examples for C-CDA to FHIR transforms are provided based on a consensus of vario
 
 The highlighted output images were created using an [open source tool for C-CDA ↔ FHIR Mapping](https://github.com/jddamore/cda-fhir-compare) developed as part of this project.  
 
-### Structural Guidance
-
-#### CDA id ↔ FHIR identifier
+### CDA id ↔ FHIR identifier
 
 Identifiers in both FHIR and CDA can divide the identifier value from its namespace: FHIR as the identifier.system and CDA as the id.root. In many cases, this correspondence works well.
 
@@ -39,7 +37,7 @@ If there is no such OID, and if the FHIR identifier is a URL, we can use the URL
 
 Cases where the FHIR system uses a scheme with no OID present a problem. The UID type is primitive, represented only as an XML attribute, and it cannot have a null flavor. One solution may be to generate a UUID, but expectations around the UUID's persistence and recognizability may vary.
 
-##### CDA id → FHIR Identifier with Example Mapping
+#### CDA id → FHIR Identifier with Example Mapping
 
 |Case|Approach|CDA id@root|CDA id@extension|identifier.system|identifier.value|
 |:--|:--|:--|:--|:--|:--|
@@ -59,7 +57,7 @@ Cases where the FHIR system uses a scheme with no OID present a problem. The UID
 
 If a CDA id contains a `@nullFlavor` (or a known coding system such as SSN or NPI with no extension), a FHIR Identifier may be created using a data-absent-reason extension explaining the missing data. If the CDA id has a `@root`, place the extension on the `Identifier.value` element (for example, to indicate an unknown NPI); if the CDA id has only a `@nullFlavor`, the extension may be placed on the Identifier element itself.
 
-##### FHIR Identifier → CDA id with Example Mapping
+#### FHIR Identifier → CDA id with Example Mapping
 
 |Case|Approach|identifier.system|identifier.value|CDA id@root|CDA id@extension|
 |:--|:--|:--|:--|:--|:--|
@@ -73,11 +71,11 @@ If a CDA id contains a `@nullFlavor` (or a known coding system such as SSN or NP
 
 In some cases, a CDA template requires an id, and the source FHIR resource may not have an identifier. In these cases, use of nullFlavor or UUID generation approach may be reasonable options.
 
-##### FHIR ids
+#### FHIR ids
 
 FHIR ids (i.e. resource ids and element ids) are strings: they have no system. We propose not preserving them. They could be used in II.extension but we have no way to identify a root. If someone can ascertain a reliable, repeatable way to do that, we might be able to keep the id.
 
-#### CDA ↔ FHIR Time/Dates
+### CDA ↔ FHIR Time/Dates
 
 CDA timestamp values are based on a pattern of YYYYMMDDHHmmss+zzzz and [FHIR dateTime values](https://hl7.org/fhir/datatypes.html#dateTime) are based on a YYYY-MM-DDThh:mm:ss+zz:zz. Partial expressions (e.g. 202305 for CDA or 2023-05 for FHIR) are allowed in both standards. 
 
@@ -102,11 +100,11 @@ The following are possible approaches to map CDA timestamps without offset to a 
 
 Beware that any approach which manufactures an offset could have clinical implications, but this is likely less critical the older (and thus, more likely to be missing offsets) the document is.
 
-#### CDA Coding ↔ FHIR CodeableConcept
+### CDA Coding ↔ FHIR CodeableConcept
 
 The structure for coding in CDA and FHIR are fundamentally different. CDA  employs a mechanism (xsi:type [CD](http://hl7.org/cda/stds/core/draft1/StructureDefinition-CD.html) or [CE](http://hl7.org/cda/stds/core/draft1/StructureDefinition-CE.html)) where the code is included in the element and then originalText and translations elements may be provided as child elements. In FHIR, [CodeableConcept](http://hl7.org/fhir/datatypes.html#codeableconcept) places all codes in a coding list with a separate element for the text representation. 
 
-##### CDA Coding → FHIR CodeableConcept
+#### CDA Coding → FHIR CodeableConcept
 
 |CDA Property|FHIR Target|Notes|
 |:-----|:-----|:-------------|
@@ -118,7 +116,7 @@ The structure for coding in CDA and FHIR are fundamentally different. CDA  emplo
 |translation@codeSystem|coding.system|Requires [mapping OID → URL](mappingGuidance.html#mapping-oid--url) or adding `urn:oid:` prefix|
 |translation@displayName|coding.display|
 
-##### FHIR CodeableConcept → CDA Coding
+#### FHIR CodeableConcept → CDA Coding
 
 In addition to the context of the previous section, CDA often requires elements to be present but the usage of a null value (@nullFlavor) is allowed. Generally when a CDA element is required (i.e. SHALL [1..1]), implementers will need to do one of the following when converting data into CDA: 
 - If the data fulfills the target valueset, use the code and translate system
@@ -135,7 +133,7 @@ In addition to the context of the previous section, CDA often requires elements 
 |coding.system|@codeSystem<br/>or<br/>translation@codeSystem|Requires [URL → OID mapping](mappingGuidance.html#mapping-oid--url) or removing `urn:oid:` prefix|
 |text|originalText|
 
-##### Mapping OID ↔ URL
+#### Mapping OID ↔ URL
 
 FHIR requires that certain terminologies use a specific uniform resource locator (URL) while CDA always uses object identifiers (OIDs) for codeSystems. This means: 
   - For CDA → FHIR mapping
@@ -154,7 +152,7 @@ Two example are shown in the table below. Since LOINC is a terminology with a de
 
 Additional guidance on [FHIR terminologies available here](http://hl7.org/fhir/terminologies-systems.html)
 
-##### Text Linking in CDA and FHIR 
+#### Text Linking in CDA and FHIR 
 
 CDA has one mechanism for references; FHIR has two: the [narrativeLink extension](http://hl7.org/fhir/R4B/extension-narrativelink.html) and the [originalText extension](http://hl7.org/fhir/R4B/extension-originaltext.html). Since CDA does not distinguish between the "original" and "representation" cases, we use the more general "representation" (narrativeLink) extension for these maps. Note also that the CDA use of reference points to generated text, which may not fit the definition of "original."
 
@@ -162,7 +160,7 @@ CDA referenced typically point to section/text which may include embedded lists 
 
 Implementers transforming a CDA document may wish to dereference the text and provide it in the target FHIR resource as text. This is appropriate, but we do not provide instructions for doing so. Implementers may also provide referenced text along with the reference. 
 
-#### CDA ↔ FHIR Provenance
+### CDA ↔ FHIR Provenance
 
 CDA provides a repeated set of elements within each activity which may be used in populating data to/from FHIR [Provenance.Agent](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-provenance.html)  
 
@@ -206,11 +204,11 @@ Preliminary guidelines for documents may include:
 
 
 
-#### Name, Address, Telecom ####
+### Name, Address, Telecom ####
 
 The mappings of name, address and telecom information are useful in many part of C-CDA ↔ FHIR mapping. These are a combination of string, code and date mappings as shown below and may be re-used across many templates/resources.  For examples of these transformations, please see the [CDA → FHIR Patient mapping](./CF-patient.html) and [FHIR → CDA Patient mapping](./FC-patient.html) pages.
 
-##### CDA name → FHIR name #####
+#### CDA name → FHIR name #####
 
 |CDA name|FHIR name|Transform Steps
 |:-----|:-----|:---------
@@ -222,7 +220,7 @@ The mappings of name, address and telecom information are useful in many part of
 |validTime/low@value|.period.start|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)
 |validTime/high@value|.period.end|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)
 
-##### CDA addr → FHIR address #####
+#### CDA addr → FHIR address #####
 
 |CDA addr|FHIR address|Transform Steps
 |:-----|:-----|:---------
@@ -235,14 +233,14 @@ The mappings of name, address and telecom information are useful in many part of
 |useablePeriod/low@value|.period.start|
 |useablePeriod/high@value|.period.end|
 
-##### CDA telecom → FHIR telecom #####
+#### CDA telecom → FHIR telecom #####
 
 |CDA telecom|FHIR telecom|Transform Steps
 |:-----|:-----|:---------
 |@use|.use|[CDA telecom use → FHIR contact point use](./ConceptMap-CF-TelecomUse.html)|
 |@value|.system<br/>&<br/>.value|[CDA telecom value → FHIR contact point system](./ConceptMap-CF-TelecomType.html)<br/>Only include information in FHIR value which comes after the CDA system prefix|
 
-##### FHIR name → CDA name #####
+#### FHIR name → CDA name #####
 
 |FHIR name|CDA name|Transform Steps
 |:-----|:-----|:---------
@@ -254,7 +252,7 @@ The mappings of name, address and telecom information are useful in many part of
 |.period.start|validTime/low@value|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
 |.period.end|validTime/high@value|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
 
-##### FHIR address  → CDA addr #####
+#### FHIR address  → CDA addr #####
 
 |FHIR address|CDA addr|Transform Steps
 |:-----|:-----|:---------
@@ -267,14 +265,14 @@ The mappings of name, address and telecom information are useful in many part of
 |.period.start|useablePeriod/low@value|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
 |.period.end|useablePeriod/high@value|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
 
-##### FHIR telecom → CDA telecom #####
+#### FHIR telecom → CDA telecom #####
 
 |FHIR telecom|CDA telecom|Comments
 |:-----|:-----|:---------
 |.system<br/>&<br/>.value |@value|[FHIR contact point system → CDA telecom value](./ConceptMap-FC-TelecomType.html)<br/>Insert FHIR value after the CDA system prefix mapped from FHIR system|
 |.use|@use|[FHIR contact point use → CDA use](./ConceptMap-FC-TelecomUse.html)|
 
-#### Missing Data in C-CDA vs. FHIR ####
+### Missing Data in C-CDA vs. FHIR ####
 
 CDA and FHIR address missing data and null usage in different ways:  
 - The use of nullFlavor in CDA is explained in depth in Volume 1 of the [C-CDA Implementation Guide](http://hl7.org/cda/stds/ccda/draft1/designconsiderations.html#unknown-and-no-known-information) and in the [C-CDA Companion Guide](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=447). 
