@@ -24,7 +24,7 @@
       <value value="info@hl7.org"/>
     </telecom>
   </contact>
-  <sourceUri value="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.20"/>
+  <sourceUri value="http://terminology.hl7.org/ValueSet/v3-TelecommunicationAddressUse"/>
   <targetUri value="http://hl7.org/fhir/ValueSet/contact-point-use"/>
   <group>
     <source value="http://terminology.hl7.org/CodeSystem/v3-AddressUse"/>
@@ -33,7 +33,27 @@
       <code value="AS"/>
       <display value="answering service"/>
       <target>
-        <equivalence value="unmatched"/>
+        <code value="work"/>
+        <display value="Work"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="BAD"/>
+      <display value="bad"/>
+      <target>
+        <code value="old"/>
+        <display value="Old"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="DIR"/>
+      <display value="direct"/>
+      <target>
+        <code value="work"/>
+        <display value="Work"/>
+        <equivalence value="wider"/>
       </target>
     </element>
     <element>
@@ -41,6 +61,15 @@
       <display value="emergency contact"/>
       <target>
         <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="H"/>
+      <display value="home"/>
+      <target>
+        <code value="home"/>
+        <display value="Home"/>
+        <equivalence value="equivalent"/>
       </target>
     </element>
     <element>
@@ -63,10 +92,46 @@
     </element>
     <element>
       <code value="MC"/>
-      <display value="mobile contact)"/>
+      <display value="mobile contact"/>
       <target>
         <code value="mobile"/>
         <display value="Mobile"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="PG"/>
+      <display value="pager"/>
+      <target>
+        <code value="mobile"/>
+        <display value="Mobile"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="PUB"/>
+      <display value="public"/>
+      <target>
+        <code value="work"/>
+        <display value="Work"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="TMP"/>
+      <display value="temporary"/>
+      <target>
+        <code value="temp"/>
+        <display value="Temp"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="WP"/>
+      <display value="work place"/>
+      <target>
+        <code value="work"/>
+        <display value="Work"/>
         <equivalence value="equivalent"/>
       </target>
     </element>

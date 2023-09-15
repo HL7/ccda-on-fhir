@@ -58,14 +58,19 @@
       <code value="temp"/>
       <display value="Temp"/>
       <target>
-        <equivalence value="unmatched" />
+        <code value="TMP"/>
+        <display value="temporary"/>
+        <equivalence value="equivalent"/>
       </target> 
     </element>
     <element>
       <code value="old"/>
       <display value="Old"/>
       <target>
-        <equivalence value="unmatched" />
+        <code value="bad"/>
+        <display value="Bad"/>
+        <equivalence value="narrower" />
+        <comment value="Age is not implied in CDA value" />
       </target> 
     </element>
     <element>
