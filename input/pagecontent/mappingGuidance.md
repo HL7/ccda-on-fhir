@@ -43,8 +43,8 @@ Cases where the FHIR system uses a scheme with no OID present a problem. The UID
 |:--|:--|:--|:--|:--|:--|
 |URL exists|translate|2.16.840.1.113883.4.1|123-45-6789|http://hl7.org/fhir/sid/us-ssn|123-45-6789
 |No URL exists|use OID|2.16.840.1.113883.4.500|12345V7890|urn:oid:2.16.840.1.113883.4.500|12345V7890
-|No URL exists and no extension<sup>1</sup>|use URI system, prepend with urn:uuid:|2.16.840.1.123.4.50.123456789||urn:ietf:rfc:3986|urn:oid:2.16.840.1.123.4.50.123456789
-|UUID-only|use URI system, prepend with urn:oid:|67265ED2-35BB-43F8-B9DE-91C5935625E0<sup>2</sup>||urn:ietf:rfc:3986|urn:uuid:67265ed2-35bb-43f8-b9de-91c5935625e0<sup>2</sup>
+|No URL exists and no extension<sup>1</sup>|use URI system, prepend with urn:oid:|2.16.840.1.123.4.50.123456789||urn:ietf:rfc:3986|urn:oid:2.16.840.1.123.4.50.123456789
+|UUID-only|use URI system, prepend with urn:uuid:|67265ED2-35BB-43F8-B9DE-91C5935625E0<sup>2</sup>||urn:ietf:rfc:3986|urn:uuid:67265ed2-35bb-43f8-b9de-91c5935625e0<sup>2</sup>
 |UUID with extension<sup>3</sup>|use UUID, prepend value|67265ED2-35BB-43F8-B9DE-91C5935625E0|abcd|urn:uuid:67265ed2-35bb-43f8-b9de-91c5935625e0|abcd
 |Extension-only|only set value||Z1124||Z1124
 |Root = URI OID, Value = URL|split value on /|2.16.840.1.113883.4.873<sup>4</sup>|http://myorg.com/patient/1234|http://myorg.com/patient|1234
