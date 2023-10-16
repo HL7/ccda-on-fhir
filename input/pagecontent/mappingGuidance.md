@@ -282,6 +282,48 @@ In this publication, we include a mapping between missing data concepts. **Impor
 - [NullFlavor (CDA) → Data Absent Reason code (FHIR)](./ConceptMap-CF-NullFlavorDataAbsentReason.html) 
 - [Data Absent Reason code (FHIR) → NullFlavor (CDA)](./ConceptMap-FC-DataAbsentReasonNullFlavor.html)
 
+### Narrative Text
+
+The CDA section narrative text is an authoritative portion of the document and should be preserved when transforming to FHIR. When creating a FHIR Composition resource (or converting a FHIR Composition back into CDA), this is a straightforward mapping between CDA's `section/text` and the FHIR Composition `section.text` field. There is a slight difference in allowed elements - CDA defines a limited set of elements in its NarrativeBlock schema, and FHIR limits narratives to a subset of XHTML - but these two fields can generally be mapped 1:1. These differences are described below.
+
+#### C-CDA Entry/Text → FHIR Resource.text
+
+When mapping C-CDA entires to individual FHIR resources, the entry text should also be converted to a FHIR narrative. Every CDA ClinicalStatement (e.g. `<act>`, `<observation>`, `<encounter>`, etc) contains a `<text>` field, and C-CDA Volume 1 contains the following constraint which is applied to all of these ClinicalStatements:
+
+>SHOULD contain zero or one [0..1] text<br/>&nbsp;&nbsp;
+>  a. The text, if present, SHOULD contain zero or one [0..1] reference/@value<br/>&nbsp;&nbsp;&nbsp;&nbsp;
+>     i. This reference/@value SHALL begin with a '#' and SHALL point to its corresponding narrative (using the approach defined in CDA R2.0, section 4.3.5.1)
+
+When this element is present on a C-CDA entry, the FHIR resource SHOULD be created with a narrative (`.text`) corresponding to the portion of the section narrative referenced by the `reference/@value` attribute. This attribute will match an `@ID` attribute on an element in the section narrative. That element and all of its children should be used as the basis for the FHIR resource's narrative.
+
+> **NOTE:** Sometimes the `@ID` element will appear on a portion of a table, such as a `<tr>` or a `<td>`, or some other narrative element like `<item>` which may not stand well on its own when converted to XHTML. When a situation like this occurs, include appropriate context from other elements outside the primary element containing `@ID`. For example, if the `@ID` appears on a `<tr>`, create a table for the FHIR resource narrative and repeat the header row(s) before including the `<tr>`.
+
+#### FHIR Resource.text → C-CDA Section Narratives
+
+If a FHIR Composition is being converted to CDA, its `section.text` can be converted to CDA `section/text` directly. If FHIR resources are being assembled into a new document, the narrative from each resource included in a section should be included as that section's text, as well as referenced from the specific C-CDA entry created from the conversion.
+
+#### Difference between CDA Narrative and FHIR Narrative
+The following is general guidance for mapping CDA Narrative elements and attributes to XHTML used by FHIR. For a specific example, see the informative [CDA R2 Stylesheet](https://github.com/HL7/CDA-core-xsl). Table elements (`<table>`, `<thead>`, `<tbody>`, `<tfoot>`, `<colgroup>`, `<col>`, `<tr>`, `<td>`, `<th>`) are not included in the table because they are generally the same between CDA Narrative and XHTML.
+
+The reverse conversion (from FHIR HTML to CDA Narrative) is also possible, but only the elements allowed by the CDA Narrative may be used.
+
+|CDA Narrative|HTML|Notes|
+|---|---|---|
+|content|span|Inline content
+|paragraph|div (or p)|Block content
+|list|ul / ol|Choice depends on list/@listType attribute which can be `ordered` or `unordered`
+|item|li
+|br|br|No child content, @styleCode attribute, or @ID attribute allowed
+|sub/sup|sub/sup
+|caption|caption|XHTML only allows caption after `<table>` or `<ol>`. Other occurrences may need to be converted to div or other elements
+|linkHtml|a|
+|footnote/footnoteRef|stylized div/span|Represents footnotes which could be rendered at the bottom of the text
+|renderMultiMedia|img|The @referencedObject attribute matches an ID on an `<observationMedia>` entry in the section. The value of this entry represents the binary content of the image.
+|@styleCode|@style or @class|Standard CDA styleCode values like `Bold`, `Underline`, `Italics` can be rendered as style attributes. Others are equivalent to @class and may not have a specific interpretation outside of local exchanges.
+|@ID|@id|Note the difference in capitalization
+
+Though included in NarrativeBlock.xsd, the `Title`, `TitleContent`, and `TitleFootnote` elements are not actually used in CDA Narrative text.
+
 ### Terminology Mapping ###
 
 [Access terminology mappings between C-CDA and FHIR](conceptMaps.html)  
