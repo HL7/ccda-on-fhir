@@ -13,6 +13,18 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
 	</blockquote>
 </div>
 
+
+**Medication Timing and Frequency**
+
+C-CDA represents both timing (start date / end date) and frequency (when and how often to take) using `<effectiveTime>` elements. The first (represented in XPath as `/effectiveTime[1]`) represents the timing. If it contains `<low>` and/or `<high>` timestamps, this represents the `.timing.repeat.boundsPeriod` information of `MedicationRequest.dosageInstruction`. If, instead, the first effectiveTime only contains a single `@value` attribute, it represents a `.timing.event` dateTime value.
+
+The second `<effectiveTime>` represents the frequency and contains the attribute `@operator="A"` to indicate it is an intersection with the first effectiveTime. It must also have an `@xsi:type` attribute which identifies the type of frequency as `PIVL_TS` (Periodic Interval) or `EIVL_TS` (Episodic Interval). `PIVL_TS` is the most common and represents a frequency corresponding to `.timing.repeat.frequency` / `.timing.repeat.period` / `.timing.repeat.periodUnit`. These relationship of three fields is described in FHIR: "Event occurs frequency times per period". For example: "Every 8 hours" would become 1 / 8 / h (one time every eight hours), while "TID" would become 3 / 1 / d (three times every one day).
+
+`EIVL_TS` represents an event-based frequency, such as "1 hour after meal". The CDA `<event code="xx">` corresponds to FHIR's `.timing.when` and the optional `<offset>` corresponds to `.timing.offset`.
+
+The C-CDA Example Search site maintains a document of [Common Medication Frequencies](http://cdasearch.hl7.org/examples/view/9588687865c0f945a326364a9449321690c7a7ef) which can be cross-referenced with a similar table in FHIR's [Timing Data Type](http://hl7.org/fhir/R4/datatypes.html#Timing) to properly map CDA frequencies to FHIR timing values.
+
+
 ### C-CDA to FHIR
 
 |C-CDA¹<br>[Medication Activity substanceAdministration](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.16.html)|FHIR<br>[MedicationRequest](http://hl7.org/fhir/us/core/StructureDefinition-us-core-medicationrequest.html)|Transform Steps|
@@ -20,9 +32,11 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
 |@negationInd="true"|set .doNotPerform=true||
 |/id|.identifier|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
 |/statusCode|.status|[CDA statusCode → FHIR status](./ConceptMap-CF-MedicationStatus.html)|
-|/effectiveTime@value|.dosageInstruction.timing.event|**Constraint**: Use this when effectiveTime@value is populated<br/>[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
-|/effectiveTime.low|.dosageInstruction.timing.repeat.boundsPeriod.start|**Constraint**: Use this when effectiveTime@value is not populated<br/>[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
-|/effectiveTime.high|.dosageInstruction.timing.repeat.boundsPeriod.end|**Constraint**: Use this when effectiveTime@value is not populated<br/>[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
+|/effectiveTime[1]@value|.dosageInstruction.timing.event|**Constraint**: Use this when effectiveTime@value is populated<br/>[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
+|/effectiveTime[1].low|.dosageInstruction.timing.repeat.boundsPeriod.start|**Constraint**: Use this when effectiveTime@value is not populated<br/>[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
+|/effectiveTime[1].high|.dosageInstruction.timing.repeat.boundsPeriod.end|**Constraint**: Use this when effectiveTime@value is not populated<br/>[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
+|**Periodic Frequency**<br/>```/effectiveTime[operator='A' and xsi:type='PIVL_TS']```<br/>/@institutionSpecified<br/>/period/@value<br/>/period/@unit|.dosageInstruction.timing.repeat.frequency<br/>.dosageInstruction.timing.repeat.period<br/>.dosageInstruction.timing.repeat.periodUnit|Compare:<br/>[C-CDA Common Medication Frequencies](http://cdasearch.hl7.org/examples/view/9588687865c0f945a326364a9449321690c7a7ef) and <br/>[FHIR Timing Data Type](http://hl7.org/fhir/R4/datatypes.html#Timing)
+|**Event-Based Timing**<br/>```/effectiveTime[operator='A' and xsi:type='EIVL_TS']```<br/>/event/@code<br/>/offset|.dosageInstruction.timing.repeat.when<br/>.dosageInstruction.timing.repeat.offset|@code vocabulary matches .when<br/>CDA offset must be converted to minutes for FHIR
 |/routeCode|.dosageInstruction.route|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 |/doseQuantity|.dosageInstruction.doseAndRate.doseQuantity||
 |/rateQuantity|.dosageInstruction.doseAndRate.rateQuantity||
