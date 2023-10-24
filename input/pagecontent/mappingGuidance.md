@@ -152,13 +152,11 @@ Two example are shown in the table below. Since LOINC is a terminology with a de
 
 Additional guidance on [FHIR terminologies available here](http://hl7.org/fhir/terminologies-systems.html).
 
-#### Text Linking in CDA and FHIR 
+#### OriginalText
 
-CDA has one mechanism for references; FHIR has two: the [narrativeLink extension](http://hl7.org/fhir/R4B/extension-narrativelink.html) and the [originalText extension](http://hl7.org/fhir/R4B/extension-originaltext.html). Since CDA does not distinguish between the "original" and "representation" cases, we use the more general "representation" (narrativeLink) extension for these maps. Note also that the CDA use of reference points to generated text, which may not fit the definition of "original."
+The `<originalText>` element in CDA can contain mixed XML content or a reference to a portion of the narrative. When converting to a FHIR data type that contains a text field, like [CodeableConcept](http://hl7.org/fhir/datatypes.html#codeableconcept), this is a direct map. For other cases, the [originalText extension](http://hl7.org/fhir/R4B/extension-originaltext.html) may be used to convey this information. In either instance, the CDA narrative must be de-referenced, any markup removed, and stored as plain text into `CodeableConcept.text` or the originalText's `.valueString`. 
 
-CDA referenced typically point to section/text which may include embedded lists or tables. Issues with text reference technical capabilities are not addressed here (e.g., referencing a table row without an agreed convention for identifying table header data).
-
-Implementers transforming a CDA document may wish to dereference the text and provide it in the target FHIR resource as text. This is appropriate, but we do not provide instructions for doing so. Implementers may also provide referenced text along with the reference. 
+FHIR also includes a [narrativeLink extension](http://hl7.org/fhir/R4B/extension-narrativelink.html) which functions similarly to the `<reference value="#...">` attribute underneath originalText. If the section or resource narrative has been converted to FHIR (see [Narrative Text](#narrative-text)), this extension can be added to indicate the portion of narrative corresponding to the extended FHIR field.
 
 ### CDA ↔ FHIR Provenance
 
