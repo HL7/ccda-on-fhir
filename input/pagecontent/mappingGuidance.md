@@ -296,6 +296,64 @@ When this element is present on a C-CDA entry, the FHIR resource SHOULD be creat
 
 > **NOTE:** Sometimes the `@ID` element will appear on a portion of a table, such as a `<tr>` or a `<td>`, or some other narrative element like `<item>` which may not stand well on its own when converted to XHTML. When a situation like this occurs, include appropriate context from other elements outside the primary element containing `@ID`. For example, if the `@ID` appears on a `<tr>`, create a table for the FHIR resource narrative and repeat the header row(s) before including the `<tr>`.
 
+
+Example mappings - assume CDA narrative contains an element with `ID="id1"` that contains "tagged text".
+<table>
+<tr><th>CDA Structure</th><th>FHIR Narrative Div</th></tr>
+<tr><td>
+
+```xml
+<act>
+  <text>
+    <reference value="#id1">
+  </text>
+</act>
+```
+</td><td>
+
+```xml
+<div xmlns="http://www.w3.org/1999/xhtml">
+  tagged text
+</div>
+```
+</td></tr>
+<tr><td>
+
+```xml
+<act>
+  <text>Mixed content</text>
+</act>
+```
+</td><td>
+
+```xml
+<div xmlns="http://www.w3.org/1999/xhtml">
+  Mixed content
+</div>
+```
+</td></tr>
+<tr><td>
+
+```xml
+<act>
+  <text>Mixed with reference!
+    <reference value="#id1">
+  </text>
+</act>
+```
+</td><td>
+
+```xml
+<!-- Surrounding either part with an extra <div> is
+     one possible suggestion to improve readability -->
+<div xmlns="http://www.w3.org/1999/xhtml">
+  Mixed with reference!
+  <div>tagged text</div>
+</div>
+```
+</td></tr>
+</table>
+
 #### FHIR Resource.text → C-CDA Section Narratives
 
 If a FHIR Composition is being converted to CDA, its `section.text` can be converted to CDA `section/text` directly. If FHIR resources are being assembled into a new document, the narrative from each resource included in a section should be included as that section's text, as well as referenced from the specific C-CDA entry created from the conversion.
