@@ -2,13 +2,6 @@
 
 We solicit feedback from balloters on several complex and pervasive issues.
 
-#### Section and Resource Text
-C-CDA to FHIR: copy section.text to section.text; copy entry.text to resource.text. Since entry.text is usually not populated, it may be necessary to  develop or re-use rules to generate text from structured data, scoped to the resource rather than the section.
-
-FHIR to C-CDA: copy section.text to section.text. Entry.text is usually not populated. 
-
-Some  implementers may wish to generate CDA documents from FHIR resources that have not been assembled into a document.  The question of how to assemble a document (what data to allocate to which section, generation of section text, etc.) is different from the question of transformation, and it is not addressed here.
-
 #### Medications
 US Core specifies that medication lists be accessible via a MedicationRequest query, regardless of whether the source system has the order. This means that CDA Medication Activity entries are mapped to MedicationRequest, and FHIR maps assume that MedicationRequest manifest all relevant medication data. We are interested in whether there are cases where these assumptions introduce risk or undue complexity.
 
