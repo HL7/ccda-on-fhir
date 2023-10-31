@@ -301,62 +301,63 @@ Example mappings - assume CDA narrative contains an element with `ID="id1"` that
 <table>
 <tr><th>CDA Structure</th><th>FHIR Narrative Div</th></tr>
 <tr><td>
-
-```xml
+<div markdown="1">
+{% highlight xml %}
 <act>
   <text>
     <reference value="#id1">
   </text>
 </act>
-```
+{% endhighlight %}
+</div>
 
 </td><td>
-
-```xml
+<div markdown="1">
+{% highlight xml %}
 <div xmlns="http://www.w3.org/1999/xhtml">
   tagged text
 </div>
-```
-
+{% endhighlight %}
+</div>
 </td></tr>
 <tr><td>
-
-```xml
+<div markdown="1">
+{% highlight xml %}
 <act>
   <text>Mixed content</text>
 </act>
-```
-
+{% endhighlight %}
+</div>
 </td><td>
-
-```xml
+<div markdown="1">
+{% highlight xml %}
 <div xmlns="http://www.w3.org/1999/xhtml">
   Mixed content
 </div>
-```
-
+{% endhighlight %}
+</div>
 </td></tr>
 <tr><td>
-
-```xml
+<div markdown="1">
+{% highlight xml %}
 <act>
   <text>Mixed with reference!
     <reference value="#id1">
   </text>
 </act>
-```
-
+{% endhighlight %}
+</div>
 </td><td>
-
-```xml
+<div markdown="1">
+{% highlight xml %}
 <!-- Surrounding either part with an extra <div> is
      one possible suggestion to improve readability -->
 <div xmlns="http://www.w3.org/1999/xhtml">
   Mixed with reference!
   <div>tagged text</div>
 </div>
-```
-
+{% endhighlight %}
+</div>
 </td></tr>
 </table>
 
