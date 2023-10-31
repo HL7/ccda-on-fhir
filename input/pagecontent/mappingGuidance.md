@@ -309,6 +309,7 @@ Example mappings - assume CDA narrative contains an element with `ID="id1"` that
   </text>
 </act>
 ```
+
 </td><td>
 
 ```xml
@@ -316,6 +317,7 @@ Example mappings - assume CDA narrative contains an element with `ID="id1"` that
   tagged text
 </div>
 ```
+
 </td></tr>
 <tr><td>
 
@@ -324,6 +326,7 @@ Example mappings - assume CDA narrative contains an element with `ID="id1"` that
   <text>Mixed content</text>
 </act>
 ```
+
 </td><td>
 
 ```xml
@@ -331,6 +334,7 @@ Example mappings - assume CDA narrative contains an element with `ID="id1"` that
   Mixed content
 </div>
 ```
+
 </td></tr>
 <tr><td>
 
@@ -341,6 +345,7 @@ Example mappings - assume CDA narrative contains an element with `ID="id1"` that
   </text>
 </act>
 ```
+
 </td><td>
 
 ```xml
@@ -351,6 +356,7 @@ Example mappings - assume CDA narrative contains an element with `ID="id1"` that
   <div>tagged text</div>
 </div>
 ```
+
 </td></tr>
 </table>
 
