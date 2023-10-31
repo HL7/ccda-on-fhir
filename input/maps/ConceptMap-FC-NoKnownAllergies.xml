@@ -7,7 +7,7 @@
   <status value="active"/>
   <experimental value="false"/>
   <publisher value="HL7 International"/>
-  <description value="FHIR negated code for No Known Allergies to C-CDA Allergy Intolerance Observation value"/>
+  <description value="FHIR negated code for No Known Allergies to C-CDA Allergy Intolerance Observation value.&#10;&#10;Note that when placing the target code in the C-CDA AllergyIntolerance Observation, the Observation must have @negationInd=true."/>
   <contact>
     <name value="HL7 International"/>
     <telecom>
@@ -35,6 +35,7 @@
         <code value="414285001"/>
         <display value="Allergy to food"/>
         <equivalence value="equivalent"/>
+        <comment value="Set @negationInd=true"/>
       </target>
     </element>
     <element>
@@ -44,6 +45,7 @@
         <code value="416098002"/>
         <display value="Allergy to drug"/>
         <equivalence value="equivalent"/>
+        <comment value="Set @negationInd=true"/>
       </target>
     </element>
     <element>
@@ -53,6 +55,7 @@
         <code value="419199007"/>
         <display value="Allergy to substance"/>
         <equivalence value="equivalent"/>
+        <comment value="Set @negationInd=true"/>
       </target>
     </element>
     <element>
