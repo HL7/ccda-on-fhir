@@ -40,9 +40,9 @@ See guidance on timing mappings on [Medications CDA → FHIR](./CF-medications.h
 |.dosageInstruction.timing.repeat.when<br/>&<br/>.dosageInstruction.timing.repeat.offset|```/effectiveTime[2]/...```<br/>/@operator='A'<br/>/@xsi:type='EIVL_TS'<br/>/event/@code<br/>/offset|FHIR when matches event/@code vocabulary<br />CDA Offset is a PhysicalQuantity, while FHIR is an integer representing minutes.
 |.dosageInstruction.site|/approachSiteCode|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 |.dosageInstruction.route|/routeCode|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
-|.dosageInstruction.doseAndRate.doseQuantity|/doseQuantity||
-|.dosageInstruction.doseAndRate.rateQuantity|/rateQuantity||
-|.dosageInstruction.maxDosePerPeriod|/maxDoseQuantity||
+|.dosageInstruction.doseAndRate.doseQuantity|/doseQuantity|[CDA ↔ FHIR Quantity](mappingGuidance.html#cda--fhir-quantity)|
+|.dosageInstruction.doseAndRate.rateQuantity|/rateQuantity|[CDA ↔ FHIR Quantity](mappingGuidance.html#cda--fhir-quantity)|
+|.dosageInstruction.maxDosePerPeriod|/maxDoseQuantity|[CDA ↔ FHIR Quantity](mappingGuidance.html#cda--fhir-quantity)|
 
 1\. XPath abbrievated for C-CDA Medication Activity as: <br/> ```ClinicalDocument/component/structuredBody/component/section[(@code="10160-0")]/entry/substanceAdministration```
 

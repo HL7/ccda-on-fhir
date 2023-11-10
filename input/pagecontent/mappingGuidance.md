@@ -158,6 +158,71 @@ The `<originalText>` element in CDA can contain mixed XML content or a reference
 
 FHIR also includes a [narrativeLink extension](http://hl7.org/fhir/R4B/extension-narrativelink.html) which functions similarly to the `<reference value="#...">` attribute underneath originalText. If the section or resource narrative has been converted to FHIR (see [Narrative Text](#narrative-text)), this extension can be added to indicate the portion of narrative corresponding to the extended FHIR field.
 
+### CDA ↔ FHIR Quantity
+
+CDA and FHIR have similar quantity data types. Both contain a numeric `value`, but CDA contains a single `unit` attribute which must be a [UCUM (Unified Code for Units of Measure)](https://ucum.org/) code, while FHIR contains a free-text `unit` field and a pair of fields, `code` and `system`, which together can store a UCUM value.
+
+When mapping from CDA to FHIR, the unit is already UCUM, so it can be represented in both the `code` and `value` fields:
+
+| CDA Physical Quantity (PQ) &nbsp;&nbsp;&nbsp;&nbsp;  | FHIR  Quantity   |
+|---------|---------------------------------------|
+| @value  | .value                                |
+| @unit   | .code  (andptionally .unit)           |
+|         | .system = `http://unitsofmeasure.org` |
+
+When mapping from FHIR to CDA, if the system is `http://unitsofmeasure.org`, the code can map directly to CDA's `@value`. But if there is no `code` or `system`, or the `system` is something besides UCUM, the `unit` can only be placed in CDA's `@value` after ensuring it is a valid UCUM unit. If the unit cannot be converted to UCUM, then the `<translation>` element available on CDA's PQ data type can be used, as demonstrated in the C-CDA Example Task Force's [Results Unit Non-UCUM example](https://cdasearch.hl7.org/examples/view/Results/Results%20Unit%20Non-UCUM). The FHIR `unit` value can be placed in `translation/originalText`, and the `code` and `system` can be placed in the translation's `@code` and `@codeSystem` attributes (if the [URI can be mapped to an OID](#mapping-oid--uri)).
+
+<table>
+<tr><th>Example of Non-UCUM FHIR Quantity</th><th>CDA Physical Quantity with Translation</th></tr>
+<tr><td>
+<div markdown="1">
+{% highlight json %}
+"quantity": {
+  "value": 30,
+  "unit": "each",
+  "code": "EA",
+  "system": "http://terminology.hl7.org/CodeSystem/standardBillingUnit"
+}
+{% endhighlight %}
+</div>
+
+</td><td>
+<div markdown="1">
+{% highlight xml %}
+<!-- This could also be used in other places like substanceAdministration/doseQuantity -->
+<value xsi:type="PQ" nullFlavor="OTH">
+  <translation value="30" code="EA" codeSystem="2.16.840.1.113883.2.13">
+    <originalText>Each</originalText>
+  </translation>
+</value>
+{% endhighlight %}
+
+(Realistically, this would also just map to the standard UCUM value of "1")
+</div>
+</td></tr>
+<tr><td>
+<div markdown="1">
+{% highlight json %}
+"quantity": {
+  "value": 25,
+  "unit": "customUnits"
+}
+{% endhighlight %}
+</div>
+
+</td><td>
+<div markdown="1">
+{% highlight xml %}
+<value xsi:type="PQ" nullFlavor="OTH">
+  <translation value="30" nullFlavor="OTH">
+    <originalText>customUnits</originalText>
+  </translation>
+</value>
+{% endhighlight %}
+</div>
+</td></tr>
+</table>
+
 ### CDA ↔ FHIR Provenance
 
 CDA provides a repeated set of elements within each activity which may be used in populating data to/from FHIR [Provenance.Agent](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-provenance.html)  
