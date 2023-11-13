@@ -167,10 +167,9 @@ When mapping from CDA to FHIR, the unit is already UCUM, so it can be represente
 | CDA Physical Quantity (PQ) &nbsp;&nbsp;&nbsp;&nbsp;  | FHIR  Quantity   |
 |---------|---------------------------------------|
 | @value  | .value                                |
-| @unit   | .code  (andptionally .unit)           |
-|         | .system = `http://unitsofmeasure.org` |
+| @unit   | .code<br>.system = `http://unitsofmeasure.org`<br>(and optionally .unit)           |
 
-When mapping from FHIR to CDA, if the system is `http://unitsofmeasure.org`, the code can map directly to CDA's `@value`. But if there is no `code` or `system`, or the `system` is something besides UCUM, the `unit` can only be placed in CDA's `@value` after ensuring it is a valid UCUM unit. If the unit cannot be converted to UCUM, then the `<translation>` element available on CDA's PQ data type can be used, as demonstrated in the C-CDA Example Task Force's [Results Unit Non-UCUM example](https://cdasearch.hl7.org/examples/view/Results/Results%20Unit%20Non-UCUM). The FHIR `unit` value can be placed in `translation/originalText`, and the `code` and `system` can be placed in the translation's `@code` and `@codeSystem` attributes (if the [URI can be mapped to an OID](#mapping-oid--uri)).
+When mapping from FHIR to CDA, if the system is `http://unitsofmeasure.org`, the code can map directly to CDA's `@value`. But if there is no `code` or `system`, or the `system` is something besides UCUM, the `unit` can only be placed in CDA's `@unit` after ensuring it is a valid UCUM unit. If the unit cannot be converted to UCUM, then the `<translation>` element available on CDA's PQ data type can be used, as demonstrated in the C-CDA Example Task Force's [Results Unit Non-UCUM example](https://cdasearch.hl7.org/examples/view/Results/Results%20Unit%20Non-UCUM). The FHIR `unit` value can be placed in `translation/originalText`, and the `code` and `system` can be placed in the translation's `@code` and `@codeSystem` attributes (if the [URI can be mapped to an OID](#mapping-oid--uri)).
 
 <table>
 <tr><th>Example of Non-UCUM FHIR Quantity</th><th>CDA Physical Quantity with Translation</th></tr>
@@ -192,12 +191,12 @@ When mapping from FHIR to CDA, if the system is `http://unitsofmeasure.org`, the
 <!-- This could also be used in other places like substanceAdministration/doseQuantity -->
 <value xsi:type="PQ" nullFlavor="OTH">
   <translation value="30" code="EA" codeSystem="2.16.840.1.113883.2.13">
-    <originalText>Each</originalText>
+    <originalText>each</originalText>
   </translation>
 </value>
 {% endhighlight %}
 
-(Realistically, this would also just map to the standard UCUM value of "1")
+(Realistically, this could also just map to the standard UCUM value of "1")
 </div>
 </td></tr>
 <tr><td>
@@ -214,7 +213,7 @@ When mapping from FHIR to CDA, if the system is `http://unitsofmeasure.org`, the
 <div markdown="1">
 {% highlight xml %}
 <value xsi:type="PQ" nullFlavor="OTH">
-  <translation value="30" nullFlavor="OTH">
+  <translation value="25" nullFlavor="OTH">
     <originalText>customUnits</originalText>
   </translation>
 </value>
@@ -222,6 +221,8 @@ When mapping from FHIR to CDA, if the system is `http://unitsofmeasure.org`, the
 </div>
 </td></tr>
 </table>
+
+UCUM also provides the ability to include arbitrary units within a set of curly brackets (e.g. `{INR}`). No specific guidance on the use of curly brackets in unit translation is provided in this publication, however additional guidance on UCUM arbitrary units is [available here](https://ucum.org/ucum#section-Arbitrary-Units).
 
 ### CDA ↔ FHIR Provenance
 
