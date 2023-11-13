@@ -22,6 +22,7 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
 |/doseQuantity|.doseQuantity|[CDA ↔ FHIR Quantity](mappingGuidance.html#cda--fhir-quantity)|
 |/consumable/manufacturedProduct/manufacturedMaterial/code|.vaccineCode|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)
 |/consumable/manufacturedMaterial/lotNumberText|.lotNumber||
+|/consumable/manufacturedMaterial/manufacturerOrganization|.manufacturer|
 |N/A|.primarySource|Since this is unavailable in CDA, when mapping to a FHIR profile that requires the element (such as USCore prior to Release 6), include a [data-absent-reason extension](http://hl7.org/fhir/StructureDefinition/data-absent-reason).
 |/author|**[Provenance](http://hl7.org/fhir/us/core/StructureDefinition-us-core-provenance.html)**|[CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)|
 |/performer|.performer|Set ```performer.function="AP"```
