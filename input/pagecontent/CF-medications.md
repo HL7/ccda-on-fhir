@@ -31,7 +31,7 @@ The C-CDA Example Search site maintains a document of [Common Medication Frequen
 |:----|:----|:----|
 |@negationInd="true"|set .doNotPerform=true||
 |/id|.identifier|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
-|/statusCode|.status|[CDA statusCode → FHIR status](./ConceptMap-CF-MedicationStatus.html)|
+|/statusCode|.status|Pay attention to the definitions of active and completed in the FHIR medicationrequest-status code system. C-CDA may list a medication state as “completed” (i.e. the prescription writing has been completed), but containing dates in the future. This may more align with a FHIR status of “active” than “completed” which indicates all actions implied by the prescription have been completed<br/>[CDA statusCode → FHIR status](./ConceptMap-CF-MedicationStatus.html) |
 |/effectiveTime[1]@value|.dosageInstruction.timing.event|**Constraint**: Use this when effectiveTime@value is populated<br/>[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
 |/effectiveTime[1].low|.dosageInstruction.timing.repeat.boundsPeriod.start|**Constraint**: Use this when effectiveTime@value is not populated<br/>[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
 |/effectiveTime[1].high|.dosageInstruction.timing.repeat.boundsPeriod.end|**Constraint**: Use this when effectiveTime@value is not populated<br/>[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
