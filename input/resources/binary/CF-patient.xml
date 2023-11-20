@@ -11,8 +11,8 @@
     <telecom value="mailto:adam@diameterhealth.com" use="WP"/>
     <patient>
       <name use="L">
-        <family>Jones</family>
         <given>Myra</given>
+        <family>Jones</family>
       </name>
       <administrativeGenderCode code="F" codeSystem="2.16.840.1.113883.5.1" />
       <birthTime value="19470501" />
