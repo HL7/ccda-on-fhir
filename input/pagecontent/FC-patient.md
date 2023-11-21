@@ -27,7 +27,8 @@ This page provides a mapping from FHIR to CDA. For the CDA to FHIR mapping, plea
 |.telecom|/patientRole/telecom|[CDA telecom ↔ FHIR telecom](mappingGuidance.html#fhir-telecom--cda-telecom)|
 |.gender|/patientRole/patient/administrativeGenderCode|[FHIR gender → CDA administrativeGender](ConceptMap-FC-AdministrativeGender.html)|
 |.birthdate|/patientRole/patient/birthTime|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
-|.deceasedDateTime|/patientRole/patient/sdtc:deceasedTime|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
+|.deceasedBoolean|/patientRole/patient/sdtc:deceasedInd|If true, C-CDA also requires sdtc:deceasedTime to be present. Set its `@nullFlavor="UNK"`
+|.deceasedDateTime|/patientRole/patient/sdtc:deceasedTime|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)<br/>When setting deceasedTime to a value, also set sdtc:deceasedInd to true.|
 |.address|/patientRole/addr|[CDA addr ↔ FHIR address ](mappingGuidance.html#fhir-address---cda-addr)|
 |.maritalStatus|/patientRole/patient/maritalStatus|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 |.communication.language|/patientRole/patient/languageCommunication/languageCode||
