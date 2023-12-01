@@ -17,7 +17,7 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
 |/patientRole/telecom|.telecom|[CDA telecom ↔ FHIR telecom](mappingGuidance.html#cda-telecom--fhir-telecom)|
 |/patientRole/patient/name|.name|[CDA name ↔ FHIR name ](mappingGuidance.html#cda-name--fhir-name)|
 |/patientRole/patient/administrativeGenderCode|.gender|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)<br/>[CDA administrativeGender → FHIR gender](ConceptMap-CF-AdministrativeGender.html)|
-|/patientRole/patient/birthTime|.birthDate|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
+|/patientRole/patient/birthTime|.birthDate|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)Note that the FHIR birthdate is less precise than the CDA birthtime. Precision can be preserved by using the extension patient-birthTime.|
 |/patientRole/patient/sdtc:deceasedInd|.deceasedBoolean|Note: Only one of `deceasedBoolean` or `deceasedDateTime` may exist. If both are present in CDA, use deceasedDateTime.
 |/patientRole/patient/sdtc:deceasedTime|.deceasedDateTime|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)
 |/patientRole/patient/maritalStatusCode|.maritalStatus|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
