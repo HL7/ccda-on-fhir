@@ -16,6 +16,7 @@ This mapping demonstrates how problems in the C-CDA Problems Section would map t
 |(act parent to observation) ../../@statusCode|.clinicalStatus|For more information on how status is managed in Problem Concern Act wrapper, refer to [C-CDA guidance, see 5.2.6.1](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=447)
 |@negationInd=true|set verificationStatus="refuted" or adjust .code for negated concept| 
 |/id|.identifier|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
+|/code |.category|Additional category, unmapped. There may also be a translation.|
 |/effectiveTime/low|.onsetDateTime|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
 |/effectiveTime/high|.abatementDateTime|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
 |/value|.code|**Constraint:** When CDA negation is absent or false<br/>[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
