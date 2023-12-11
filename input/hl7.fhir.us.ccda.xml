@@ -13,9 +13,9 @@
   <title value="C-CDA on FHIR"/>
   <status value="active"/>
   <date value="2020-10-19T00:00:00.000Z"/>
-  <publisher value="HL7 Structured Documents Working Group"/>
+  <publisher value="HL7 Cross-Group Projects Working Group"/>
   <contact>
-    <name value="HL7 Structured Documents Working Group"/>
+    <name value="HL7 Cross-Group Projects Working Group"/>
     <telecom>
       <system value="url"/>
       <value value="http://hl7.org/Special/committees/structure/index.cfm"/>
