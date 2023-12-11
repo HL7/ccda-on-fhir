@@ -11,7 +11,7 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
 <br />
 ### C-CDA to FHIR
 
-| C-CDA¹ <br/>[Allergy Concern act](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.30.html)| FHIR <br/>[AllergyIntolerance](http://hl7.org/fhir/us/core/StructureDefinition-us-core-allergyintolerance.html)| Transform Steps & Notes|
+| C-CDA¹ <br/>[Allergy Concern act](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.30.html)| FHIR <br/>[AllergyIntolerance](http://hl7.org/fhir/us/core/StructureDefinition-us-core-allergyintolerance.html)| <div style="width:400px">Transform Steps & Notes</div>|
 |:-------|:------|:---------|
 |/statusCode|.clinicalStatus|For more information on how status is managed in Allergy Concern Act wrapper, refer to [C-CDA guidance, see 5.2.7.1](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=447)<br/>Also see Status entryRelationship mapping below|
 | All of the following are a **[Allergy Intolerance observation](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.7.html)** nested inside the **[Allergy Concern act](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.30.html)**. Each observation should become a distinct FHIR **[AllergyIntolerance](http://hl7.org/fhir/us/core/StructureDefinition-us-core-allergyintolerance.html)** resource.<br/>`/entryRelationship[@typeCode="SUBJ"]`<br/>/observation prefix to rows below²|
