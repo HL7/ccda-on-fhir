@@ -19,10 +19,10 @@ This page provides a mapping from FHIR to CDA. For the CDA to FHIR mapping, plea
 
 |FHIR<br/>[Immunization](http://hl7.org/fhir/us/core/StructureDefinition-us-core-immunization.html#profile)|C-CDA¹<br/>[Immunization Activity substanceAdministration](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.52.html)|Transform Steps|
 |:----|:----|:----|
-||/@moodCode="EVN"|All FHIR Immunizations should be set to EVN moodCode in 
+||/@moodCode="EVN"|All FHIR Immunizations should be set to "EVN" moodCode
 |.identifier|/id|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
-|.status|/statusCode|**Constraint** when status.value="not-done"<br/>Set negationInd to true in CDA observation|
-|.status|/statusCode|**Constraint** all other values of status<br/>[FHIR status → CDA statusCode](ConceptMap-FC-ImmunizationStatus.html)|
+|.status|/statusCode|**Constraint** when .status.value="not-done"<br/>Set negationInd to true in CDA observation|
+|.status|/statusCode|**Constraint** all other values of .status<br/>[FHIR status → CDA statusCode](ConceptMap-FC-ImmunizationStatus.html)|
 |.statusReason|**[Immunization Refusal Reason](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.53.html)**<br/>/entryRelationship[@typeCode="RSON"]/observation/code|[FHIR statusReason → CDA refusal](ConceptMap-FC-ImmunizationRefusal.html)|
 |.vaccineCode|/consumable/manufacturedProduct/manufacturedMaterial/code|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 |.primarySource||This element has no target in CDA
