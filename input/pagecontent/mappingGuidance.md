@@ -137,6 +137,8 @@ In addition to the context of the previous section, CDA often requires elements 
 |coding.system|@codeSystem<br/>or<br/>translation@codeSystem|Requires [URI → OID mapping](mappingGuidance.html#mapping-oid--uri) or removing `urn:oid:` prefix|
 |text|originalText|
 
+Note that C-CDA sometimes requires a code from a specific system in the root of a CD and permits others in the translation
+
 #### Mapping OID ↔ URI
 
 FHIR requires that certain terminologies use a specific uniform resource identifier (URI) while CDA always uses object identifiers (OIDs) for codeSystems. This means: 
