@@ -100,6 +100,10 @@ The following are possible approaches to map CDA timestamps without offset to a 
 
 Beware that any approach which manufactures an offset could have clinical implications, but this is likely less critical the older (and thus, more likely to be missing offsets) the document is.
 
+#### Structured types
+
+Some CDA temporal fields can be either a single point-in-time or an interval range. When mapped to a FHIR dateTime or instant datatype, the value should be taken from either @value or low/@value. If mapped to a FHIR period, effectiveTime/low maps to period.start and effectiveTime/high maps to period.end.
+
 ### CDA Coding ↔ FHIR CodeableConcept
 
 The structure for coding in CDA and FHIR are fundamentally different. CDA  employs a mechanism (xsi:type [CD](http://hl7.org/cda/stds/core/draft1/StructureDefinition-CD.html) or [CE](http://hl7.org/cda/stds/core/draft1/StructureDefinition-CE.html)) where the code is included in the element and then originalText and translations elements may be provided as child elements. In FHIR, [CodeableConcept](http://hl7.org/fhir/datatypes.html#codeableconcept) places all codes in a coding list with a separate element for the text representation. 
