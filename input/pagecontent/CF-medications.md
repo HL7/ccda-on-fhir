@@ -27,13 +27,14 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
 |/routeCode|.dosageInstruction.route|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 |/doseQuantity|.dosageInstruction.doseAndRate.doseQuantity||
 |/rateQuantity|.dosageInstruction.doseAndRate.rateQuantity||
-|/maxDoseQuantity|.dosageInstruction.maxDosePerAdministration||
 |/consumable/manufacturedProduct/manufacturedMaterial/code|.medicationCodeableConcept|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 |/author|.requester<br/>&<br/>**[Provenance](http://hl7.org/fhir/us/core/StructureDefinition-us-core-procedure.html)**|[CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)|
+|/author/time|.authoredOn|Earliest, if more than one.<br/>[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
 |**[Indication](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.19.html)**<br/>/entryRelationship[@typeCode="RSON"]/observation/value|.reasonCode|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 |**[Instruction](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.20.html)**<br/>/entryRelationship[@typeCode="SUBJ"]/act/code|.dosageInstruction.additionalInstruction|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 |**[Free text sig](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.147.html)**<br/>/entryRelationship/substanceAdministration[code/@code="76662-6"]/text|.dosageInstruction.patientInstruction||
 |**[Comment Activity](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.64.html)**<br/>/entryRelationship/act[code/@code="48767-8"]/text|**[Annotation](https://hl7.org/fhir/datatypes.html#Annotation)**<br/>.note||
+|**[Precondition]()**<br/entryRelationship/act[code/@code="48767-8"]/text>|.asNeededBoolean = true|More complex maps may be possible with .asNeededCodeableConcept.|
 
 1\. XPath abbrievated for C-CDA Medication Activity as: <br/> ClinicalDocument/component/structuredBody/component/section[code/@code="10160-0"]/entry/substanceAdministration
 
