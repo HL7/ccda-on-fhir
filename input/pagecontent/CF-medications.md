@@ -18,6 +18,7 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
 |C-CDA¹<br>[Medication Activity substanceAdministration](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.16.html)|FHIR<br>[MedicationRequest](http://hl7.org/fhir/us/core/StructureDefinition-us-core-medicationrequest.html)|Transform Steps|
 |:----|:----|:----|
 |/@negationInd="true"|set .doNotPerform=true||
+|@moodCode|.intent|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept) <br/>[Mood to intent](ConceptMap-CF-MedActivityMood.html)|
 |/id|.identifier|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
 |/statusCode|.status|[CDA statusCode → FHIR status](./ConceptMap-CF-MedicationStatus.html)|
 |/effectiveTime/@value|.dosageInstruction.timing.event|**Constraint**: Use this when effectiveTime@value is populated<br/>[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|

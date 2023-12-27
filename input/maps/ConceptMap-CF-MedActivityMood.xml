@@ -1,0 +1,50 @@
+<ConceptMap xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="CF-MedActivityMood"/>
+  <url value="http://hl7.org/fhir/us/ccda/ConceptMap/MedActivityMood"/>
+  <version value="4.0.1"/>
+  <name value="CCDAtoFHIRMedActivityMood"/>
+  <title value="CCDA Medication Activity Mood to FHIR MedicationRequest.intent"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <publisher value="HL7 International"/>
+  <description value="CCDA Medication Activity Mood to FHIR MedicationRequest.intent"/>
+  <contact>
+    <name value="HL7 International"/>
+    <telecom>
+      <system value="phone"/>
+      <value value="+1 734 677 7777"/>
+    </telecom>
+    <telecom>
+      <system value="fax"/>
+      <value value="+1 734 677 6622"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@hl7.org"/>
+    </telecom>
+  </contact>
+  <sourceUri value="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.18"/>
+  <targetUri value="http://hl7.org/fhir/ValueSet/medicationrequest-intent"/>
+  <group>
+    <source value="http://terminology.hl7.org/CodeSystem/2.16.840.1.113883.5.1001"/>
+    <target value="http://hl7.org/fhir/CodeSystem/medicationrequest-intent"/>
+    <element>
+      <code value="EVN"/>
+      <display value="event"/>
+      <target>
+        <code value="plan"/>
+        <display value="plan"/>
+        <equivalence value="inexact"/>
+      </target>
+    </element>
+    <element>
+      <code value="INT"/>
+      <display value="intent"/>
+      <target>
+        <code value="order"/>
+        <display value="order"/>
+        <equivalence value="inexact"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>
