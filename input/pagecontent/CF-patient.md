@@ -29,7 +29,7 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
 |/patientRole/patient/languageCommunication/preferenceInd|.communication.preferred||
 |/patientRole/providerOrganization|.managingOrganization|
 
-1\. XPath abbrievated for C-CDA US Realm recordTarget as: <br/> ```ClinicalDocument/recordTarget/```
+1\. XPath abbrievated for C-CDA US Realm recordTarget as: <br/> ClinicalDocument/recordTarget/
 
 ### Illustrative example
 
