@@ -31,7 +31,22 @@
             "value": 1
           }
         }
-      ]
+      ],
+      "timing": {
+        "repeat":{
+          "boundsPeriod": {
+            "start":"20120806",
+            "end":{
+              "extension":[
+                {
+                "url":"http://hl7.org/fhir/extension-data-absent-reason",
+                "valueCode":"unknown"
+                }
+              ]
+            }
+          }
+        }
+      }
     }
   ],
   "requester": {
