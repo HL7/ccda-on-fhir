@@ -58,6 +58,12 @@
     ],
     "text": "Pneumonia"
   },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
+      "valueDateTime": "20120806"
+    }
+  ],
   "subject": {
     "reference": "Patient/CF-patient"
   },
