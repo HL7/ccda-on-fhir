@@ -8,7 +8,7 @@
     }
   ],
   "status": "active",
-  "intent": "order",
+  "intent": "plan",
   "medicationCodeableConcept": {
     "coding": [
       {
