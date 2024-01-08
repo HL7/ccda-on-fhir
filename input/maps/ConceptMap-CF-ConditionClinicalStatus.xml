@@ -34,7 +34,7 @@
       <target>
         <code value="inactive"/>
         <display value="inactive"/>
-        <equivalence value="broader"/>
+        <equivalence value="wider"/>
       </target>
     </element>
     <element>
@@ -52,7 +52,7 @@
       <target>
         <code value="inactive"/>
         <display value="inactive"/>
-        <equivalence value="broader"/>
+        <equivalence value="wider"/>
       </target>
     </element>
     <element>
@@ -61,7 +61,7 @@
       <target>
         <code value="inactive"/>
         <display value="inactive"/>
-        <equivalence value="broader"/>
+        <equivalence value="wider"/>
       </target>
     </element>
   </group>
