@@ -38,6 +38,7 @@
         <code value="plan"/>
         <display value="plan"/>
         <equivalence value="inexact"/>
+        <comment value="CDA mood codes are more general than FHIR intent codes, and there may be special cases where this inexact map does not work."/>
       </target>
     </element>
     <element>
@@ -47,6 +48,7 @@
         <code value="order"/>
         <display value="order"/>
         <equivalence value="inexact"/>
+        <comment value="CDA mood codes are more general than FHIR intent codes, and there may be special cases where this inexact map does not work."/>
       </target>
     </element>
   </group>
