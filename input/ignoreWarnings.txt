@@ -1,15 +1,10 @@
 == Suppressed Messages ==
 
-# The following are because of terminology not supported by terminology server
-Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated
-Code System URI 'http://www.cms.gov/Medicare/Coding/ICD10' is unknown so the code cannot be validated
-The system "" http://hl7.org/fhir/sid/icd-9-cm was found but did not contain enough information to properly validate the code (mode = fragment) (from http://tx.fhir.org/r4) for 'http://hl7.org/fhir/sid/icd-9-cm#486'
-The system "" http://hl7.org/fhir/sid/icd-9-cm was found but did not contain enough information to properly validate the code (mode = fragment) (from http://tx.fhir.org/r4) for 'http://hl7.org/fhir/sid/icd-9-cm#V15.89'
-The system "Pneumonia, organism unspecified" http://hl7.org/fhir/sid/icd-9-cm was found but did not contain enough information to properly validate the code (mode = fragment); The display "Pneumonia, organism unspecified" is not a valid display for the code {http://hl7.org/fhir/sid/icd-9-cm}486 - should be one of [] (from http://tx.fhir.org/r4) for 'http://hl7.org/fhir/sid/icd-9-cm#486'
-
-# The following example codeSystem OID is meant to illustrate how to map when no URL is available and is not known by terminology server
-Code System URI 'urn:oid:2.16.840.1.113883.3.247.1.1' is unknown so the code cannot be validated
-Code System URI 'urn:oid:2.16.840.1.113883.3.13.10.1.1' is unknown so the code cannot be validated
-
 # Publisher is adding these modifier extensions - https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Regression.20in.20ConceptMap
 The modifier extension http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence from FHIR version {3} is not allowed to be used at this point (allowed = e:ConceptMap.element.target; this element is [[BackboneElement, ConceptMap.group.element.target]; this is a warning since contexts may be renamed between FHIR versions)
+
+# Poor / Buggy Displays from AddressUse Code System
+The source display 'bad' is not valid. Possible codes [bad address]
+The source display 'home' is not valid. Possible codes [home address]
+The source display 'mobile contact' is not valid. Possible codes [mobile contact)]
+The source display 'temporary' is not valid. Possible codes [temporary address]
