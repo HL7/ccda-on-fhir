@@ -1,6 +1,9 @@
 <ConceptMap xmlns="http://hl7.org/fhir"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="FC-Severity"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="cgp" />
+  </extension>
   <url value="http://hl7.org/fhir/us/ccda/ConceptMap/FC-Severity"/>
   <version value="4.0.1"/>
   <name value="FHIRtoCCDASeverity"/>
