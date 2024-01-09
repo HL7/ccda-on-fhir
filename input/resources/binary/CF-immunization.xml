@@ -1,18 +1,15 @@
 <entry typeCode="DRIV">
   <substanceAdministration classCode="SBADM" moodCode="EVN" negationInd="false">
-    <!-- ** Immunization activity ** -->
     <templateId root="2.16.840.1.113883.10.20.22.4.52"/>
     <templateId root="2.16.840.1.113883.10.20.22.4.52" extension="2015-08-01"/>
     <id root="e6f1ba43-c0ed-4b9b-9f12-f435d8ad8f92"/>
     <text>
       <reference value="#immun1"/>
     </text>
-    <!-- Indicates the status of the substanceAdministartion -->
     <statusCode code="completed"/>
     <effectiveTime value="20100815"/>
     <consumable>
       <manufacturedProduct classCode="MANU">
-        <!-- ** Immunization medication information ** -->
         <templateId root="2.16.840.1.113883.10.20.22.4.54"/>
         <templateId root="2.16.840.1.113883.10.20.22.4.54" extension="2014-06-09"/>
         <manufacturedMaterial>
@@ -24,13 +21,8 @@
           </code>
           <lotNumberText>1</lotNumberText>
         </manufacturedMaterial>
-        <!-- Optional manufacturerOrganization
-                    <manufacturerOrganization>
-                        <name>Health LS - Immuno Inc.</name>
-                    </manufacturerOrganization>-->
       </manufacturedProduct>
     </consumable>
-    <!-- Optional Performer -->
     <performer>
       <assignedEntity>
         <id root="2.16.840.1.113883.19.5.9999.456" extension="2981824"/>
@@ -56,7 +48,6 @@
         </representedOrganization>
       </assignedEntity>
     </performer>
-    <!-- Optional Author -->
     <author>
       <templateId root="2.16.840.1.113883.10.20.22.4.119"/>
       <time value="20100815"/>
