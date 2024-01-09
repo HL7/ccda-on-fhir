@@ -61,7 +61,7 @@
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
-      "valueDateTime": "20120806"
+      "valueDateTime": "2012-08-06"
     }
   ],
   "subject": {
