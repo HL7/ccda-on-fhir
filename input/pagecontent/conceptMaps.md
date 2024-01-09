@@ -1,6 +1,6 @@
 This page includes terminology mapping from CDA → FHIR and FHIR → CDA in two separate sections. These  terminology mappings are not structural. For structural transformations, please refer to the [general structural guidance](mappingGuidance.html). 
 
-These terminology maps use the [ConceptMap](http://hl7.org/fhir/R4B/conceptmap.html) resource which translates a source terminology to a target terminology. In addition, the specific term maps in this guide are often not semantically equivalent and may be incomplete. For these reasons, we include two maps for each terminology group, one for CDA → FHIR and another for FHIR → CDA, shown in multiple sub-lists on this page.
+These terminology maps use the [ConceptMap](http://hl7.org/fhir/R4/conceptmap.html) resource which translates a source terminology to a target terminology. In addition, the specific term maps in this guide are often not semantically equivalent and may be incomplete. For these reasons, we include two maps for each terminology group, one for CDA → FHIR and another for FHIR → CDA, shown in multiple sub-lists on this page.
 
 Note that these maps are directly referenced in the structural guidance tables and do not include any large vocabularly mappings (i.e. each of the mappings below has under 50 terms).  
 
