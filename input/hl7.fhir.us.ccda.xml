@@ -7,6 +7,9 @@
     <lastUpdated value="2020-10-21T21:13:08.798+00:00"/>
     <source value="#dMBMcvZsrSDFhHb1"/>
   </meta>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="cgp" />
+  </extension>
   <url value="http://hl7.org/fhir/us/ccda/ImplementationGuide/hl7.fhir.us.ccda"/>
   <version value="1.2.0-ballot"/>
   <name value="CCDAonFHIR"/>
