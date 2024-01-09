@@ -29,7 +29,7 @@
         <reference value="Patient/example"/>
         <display value="Amy Shaw"/>
     </subject>
-    <issued value="2016-03-18T05:27:04Z"/>
+    <effectiveDateTime value="2016-03-18T05:27:04Z"/>
     <valueCodeableConcept>
         <coding>
             <system value="http://snomed.info/sct"/>
