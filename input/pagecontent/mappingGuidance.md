@@ -160,9 +160,9 @@ Additional guidance on [FHIR terminologies available here](http://hl7.org/fhir/t
 
 #### OriginalText
 
-The `<originalText>` element in CDA can contain mixed XML content or a reference to a portion of the narrative. When converting to a FHIR data type that contains a text field, like [CodeableConcept](http://hl7.org/fhir/datatypes.html#codeableconcept), this is a direct map. For other cases, the [originalText extension](http://hl7.org/fhir/R4B/extension-originaltext.html) may be used to convey this information. In either instance, the CDA narrative must be de-referenced, any markup removed, and stored as plain text into `CodeableConcept.text` or the originalText's `.valueString`. 
+The `<originalText>` element in CDA can contain mixed XML content or a reference to a portion of the narrative. When converting to a FHIR data type that contains a text field, like [CodeableConcept](http://hl7.org/fhir/datatypes.html#codeableconcept), this is a direct map. For other cases, the [originalText extension](http://hl7.org/fhir/StructureDefinition/originalText) may be used to convey this information. In either instance, the CDA narrative must be de-referenced, any markup removed, and stored as plain text into `CodeableConcept.text` or the originalText's `.valueString`. 
 
-FHIR also includes a [narrativeLink extension](http://hl7.org/fhir/R4B/extension-narrativelink.html) which functions similarly to the `<reference value="#...">` attribute underneath originalText. If the section or resource narrative has been converted to FHIR (see [Narrative Text](#narrative-text)), this extension can be added to indicate the portion of narrative corresponding to the extended FHIR field.
+FHIR also includes a [narrativeLink extension](http://hl7.org/fhir/StructureDefinition/narrativeLink) which functions similarly to the `<reference value="#...">` attribute underneath originalText. If the section or resource narrative has been converted to FHIR (see [Narrative Text](#narrative-text)), this extension can be added to indicate the portion of narrative corresponding to the extended FHIR field.
 
 ### CDA ↔ FHIR Quantity
 
