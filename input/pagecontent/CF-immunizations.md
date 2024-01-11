@@ -6,6 +6,8 @@ td, th {
 
 This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, please refer to [Immunizations FHIR → CDA](./FC-immunizations.html). For guidance on how to read the table below, see [Reading the C-CDA ↔ FHIR Mapping Pages](./mappingGuidance.html)
 
+Mapping is from `@moodCode="EVN"` (i.e. historical) immunizations, not `INT` (future / planned) immunizations.
+
 <br />
 <br />
 ### C-CDA to FHIR
@@ -16,7 +18,7 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
 |/id|.identifier|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
 |/statusCode|.status|[CDA statusCode → FHIR status](./ConceptMap-CF-ImmunizationStatus.html)|
 |/effectiveTime/@value|.occurrenceDateTime|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
-|/repeatNumber|.protocolApplied.doseNumberPositiveInt||
+|/repeatNumber/@value|.protocolApplied.doseNumberPositiveInt|Note - for @moodCode=EVN immunizations only|
 |/routeCode|.route|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 |/approachSiteCode|.site|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 |/doseQuantity|.doseQuantity||
