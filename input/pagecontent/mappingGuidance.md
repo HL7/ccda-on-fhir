@@ -235,7 +235,9 @@ CDA conveys ranges of values using the `IVL_PQ` data type. The `<low>` and `<hig
 
 In FHIR, ranges with both a low and high are represented in the [Range](https://hl7.org/fhir/R4/datatypes.html#Range) data type, while ranges with only a low or a high are represented in the [Quantity](https://hl7.org/fhir/R4/datatypes.html#Quantity) data type using a [comparator](https://hl7.org/fhir/R4/valueset-quantity-comparator.html).
 
-Since a physical quantity is something that can be measured, a missing `<low>` value or a low value of `0` can generally be represented as `<` or `<=` the high value (based on the `@inclusive` property on high). If the `<high>` value is missing, however, it may not be appropriate to assume the result means "all values greater than (or equal to)" the low value. The `>`/`>=` comparators should only be used when `<high nullFlavor="PINF">` is present. The following tables demonstrate different mappings for quantity.
+Since a physical quantity is something that can be measured, a missing `<low>` value or a low value of `0` can be represented as `<` or `<=` the high value (based on the `@inclusive` property on `<high>`). If the `<high>` value is missing, it generally means the value was too large to measure, and the FHIR representation is `>` or `>=`.
+
+Note that in FHIR, `Observation.referenceRange` only contains `.low` and `.high` values, so this guidance is targeted to the actual values of observations.
 
 <table>
 <tr><th>CDA IVL_PQ Value - High-only</th><th>FHIR Quantity</th></tr>
@@ -309,14 +311,21 @@ When `@inclusive="false"`:
 <tr><th>CDA IVL_PQ Value - Low-only</th><th>FHIR Quantity</th></tr>
 <tr><td>
 <div markdown="1">
-`@inclusive="true"` is the same as a missing inclusive attribute.
-
 {% highlight xml %}
 <value xsi:type="IVL_PQ">
   <low value="500" unit="mg/dL" inclusive="true">
   <high nullFlavor="PINF">
 </value>
 {% endhighlight %}
+
+or
+
+{% highlight xml %}
+<value xsi:type="IVL_PQ">
+  <low value="500" unit="mg/dL">
+</value>
+{% endhighlight %}
+
 </div>
 
 </td><td>
@@ -330,15 +339,27 @@ When `@inclusive="false"`:
   "system": "http://unitsofmeasure.org"
 }
 {% endhighlight %}
+
+
+(`>=` because inclusive is true by default)
 </div>
 
 </td></tr>
 <tr><td>
 <div markdown="1">
+When `@inclusive="false"`:
 {% highlight xml %}
 <value xsi:type="IVL_PQ">
   <low value="500" unit="mg/dL" inclusive="false">
   <high nullFlavor="PINF">
+</value>
+{% endhighlight %}
+
+or
+
+{% highlight xml %}
+<value xsi:type="IVL_PQ">
+  <low value="500" unit="mg/dL" inclusive="false">
 </value>
 {% endhighlight %}
 </div>
@@ -358,7 +379,7 @@ When `@inclusive="false"`:
 
 </td></tr>
 <tr><td colspan="2">&nbsp;</td></tr>
-<tr><th>CDA IVL_PQ Value - Low and High</th><th>FHIR Range</th></tr>
+<tr><th>CDA IVL_PQ Value - Low and High with Numeric Values</th><th>FHIR Range</th></tr>
 <tr><td>
 <div markdown="1">
 {% highlight xml %}
@@ -416,32 +437,6 @@ Units can be different, as long as they are equivalent:
     "value": 1,
     "unit": "g/dL",
     "code": "g/dL",
-    "system": "http://unitsofmeasure.org"
-  }
-}
-{% endhighlight %}
-</div>
-
-</td></tr>
-<tr><td>
-<div markdown="1">
-When high is missing, it cannot be inferred, so send as a range with only low.
-
-{% highlight xml %}
-<value xsi:type="IVL_PQ">
-  <low value="200" unit="mg/dL">
-</value>
-{% endhighlight %}
-</div>
-
-</td><td>
-<div markdown="1">
-{% highlight json %}
-"range": {
-  "low": {
-    "value": 200,
-    "unit": "mg/dL",
-    "code": "mg/dL",
     "system": "http://unitsofmeasure.org"
   }
 }
