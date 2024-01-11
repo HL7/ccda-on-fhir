@@ -18,7 +18,7 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
 |/effectiveTime/@value|.occurrenceDateTime|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
 |/repeatNumber|.protocolApplied.doseNumberPositiveInt||
 |/routeCode|.route|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
-|/approachSiteCode|.site|[FHIR site → CDA approachSiteCode](ConceptMap-CF-ImmunizationSite.html)
+|/approachSiteCode|.site|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 |/doseQuantity|.doseQuantity||
 |/consumable/manufacturedProduct/manufacturedMaterial/code|.vaccineCode|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)
 |/consumable/manufacturedMaterial/lotNumberText|.lotNumber||

@@ -39,6 +39,7 @@ Shown below are terminology mappings for use in moving from FHIR → CDA. Resour
 - [AllergyIntolerance category (FHIR) → Allergy Intolerance Observation value (CDA)](./ConceptMap-FC-AllergyIntoleranceCategory.html)
 - [AllergyIntolerance clinicalStatus (FHIR) → Allergy Status Observation (CDA)](./ConceptMap-FC-AllergyStatus.html) 
 - [Criticality (FHIR) → Criticality value (CDA)](./ConceptMap-FC-Criticality.html)
+- [Immunization site (FHIR) → Immunization ApproachSiteCode (CDA)](./ConceptMap-FC-ImmunizationSite.html)
 - [Immunization status (FHIR) → Immunization Activity statusCode (CDA)](./ConceptMap-FC-ImmunizationStatus.html)
 - [Immunization statusReason (FHIR) → Immunization Refusal Reason (CDA)](./ConceptMap-FC-ImmunizationRefusal.html)
 - [MedicationRequest status(FHIR) → Medication Activity statusCode (CDA)](./ConceptMap-FC-MedicationStatus.html)
