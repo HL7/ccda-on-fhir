@@ -13,7 +13,7 @@
         <coding>
             <system value="http://hl7.org/fhir/sid/cvx"/>
             <code value="158"/>
-            <display value="influenza, injectable, quadrivalent"/>
+            <display value="influenza, injectable, quadrivalent, contains preservative"/>
         </coding>
     </vaccineCode>
     <patient>
