@@ -926,5 +926,9 @@
       <code value="copyrightyear"/>
       <value value="2020+"/>
     </parameter>
+    <parameter>
+      <code value="display-warnings"/>
+      <value value="true"/>
+    </parameter>
   </definition>
 </ImplementationGuide>
