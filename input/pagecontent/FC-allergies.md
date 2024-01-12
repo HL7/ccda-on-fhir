@@ -18,12 +18,12 @@ This page provides a mapping from FHIR to CDA. For the CDA to FHIR mapping, plea
 
 ### FHIR to C-CDA
 
-|FHIR<br/>[AllergyIntolerance](http://hl7.org/fhir/us/core/StructureDefinition-us-core-allergyintolerance.html#profile)|C-CDA¹<br/>[Allergy Intolerance observation](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.7.html)|Transform Steps|
+|FHIR<br/>[AllergyIntolerance](http://hl7.org/fhir/us/core/StructureDefinition-us-core-allergyintolerance.html#profile)|C-CDA¹<br/>[Allergy Intolerance observation](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-AllergyIntoleranceObservation.html)|Transform Steps|
 |:----|:----|:----|
 |.identifier|/id|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
-|.clinicalStatus|(act parent to observation) ../../statusCode <br/>&<br />**[Allergy Status](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.28.html)**<br/>/entryRelationship/observation[code/@code="33999-4"]/value|[FHIR clinicalStatus → CDA Allergy Status Observation value](./ConceptMap-FC-AllergyStatus.html)<br/>For more information on how status is managed in Allergy Concern Act wrapper, refer to [C-CDA guidance, see 5.2.7.1](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=447)|
+|.clinicalStatus|(act parent to observation) ../../statusCode <br/>&<br />**[Allergy Status](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-AllergyStatusObservation.html)**<br/>/entryRelationship/observation[code/@code="33999-4"]/value|[FHIR clinicalStatus → CDA Allergy Status Observation value](./ConceptMap-FC-AllergyStatus.html)<br/>For more information on how status is managed in Allergy Concern Act wrapper, refer to [C-CDA guidance, see 5.2.7.1](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=447)|
 |.type<br/>&<br/>.category|/value|[FHIR type → CDA value](ConceptMap-FC-AllergyIntoleranceType.html)<br/>[FHIR category → CDA value](ConceptMap-FC-AllergyIntoleranceCategory.html)|
-|.criticality|**[Criticality](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.145.html)**<br/>/entryRelationship/observation[code/@code="82606-5"]/value|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)<br/>[FHIR criticality → CDA Criticality value](ConceptMap-FC-Criticality.html)|
+|.criticality|**[Criticality](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-CriticalityObservation.html)**<br/>/entryRelationship/observation[code/@code="82606-5"]/value|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)<br/>[FHIR criticality → CDA Criticality value](ConceptMap-FC-Criticality.html)|
 |.code|/participant/participantRole/playingEntity/code|**Constraint**: When FHIR concept is not a negated concept<br/>[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 |.code|/participant/participantRole/playingEntity/code or /value<br/>&<br/>set @negationInd="true"|**Constraint**: When FHIR concept represents general negated concept (e.g. no known allergy)<br/>[FHIR code → CDA No Known Allergy](ConceptMap-FC-NoKnownAllergies.html)<br/>In case where a specific refutation is coded (no latex allergy), use text or a mapped concept.|
 |.encounter|/entryRelationship[@typeCode="REFR"]/act/id||
@@ -31,10 +31,10 @@ This page provides a mapping from FHIR to CDA. For the CDA to FHIR mapping, plea
 |.onsetPeriod.start|/effectiveTime/low|effectiveTime/high should not be mapped from onsetPeriod|
 |.recordedDate|/assignedAuthor/time|These are not necessarily the same author|
 |.recorder|/assignedAuthor|[CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)<br/>Time and author are not necessarily the same|
-|**[Annotation](https://hl7.org/fhir/datatypes.html#Annotation)**<br/>.note|**[Comment Activity](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.64.html)**<br/>/entryRelationship/act[code/@code="48767-8"]/text||
-|.reaction.manifestation|**[Reaction](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.9.html)**<br/>/entryRelationship[@typeCode="MFST"]/observation/value|Both use SNOMED clinical findings with minor valueSet definition differences
+|**[Annotation](https://hl7.org/fhir/datatypes.html#Annotation)**<br/>.note|**[Comment Activity](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-CommentActivity.html)**<br/>/entryRelationship/act[code/@code="48767-8"]/text||
+|.reaction.manifestation|**[Reaction](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-ReactionObservation.html)**<br/>/entryRelationship[@typeCode="MFST"]/observation/value|Both use SNOMED clinical findings with minor valueSet definition differences
 |.reaction.onset|/effectiveTime/low|Constraint: This should only be used in event that AlleryIntolerance.onset was not available|
-|.reaction.severity|**[Severity](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.8.html)**<br/>/entryRelationship[@typeCode="MFST"]/observation/entryRelationship/observation[code/@code="SEV"]/value|[FHIR severity → CDA severity value ](ConceptMap-FC-Criticality.html)<br/>This should be nested in CDA within the respective allergic reaction observation|
+|.reaction.severity|**[Severity](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-SeverityObservation.html)**<br/>/entryRelationship[@typeCode="MFST"]/observation/entryRelationship/observation[code/@code="SEV"]/value|[FHIR severity → CDA severity value ](ConceptMap-FC-Criticality.html)<br/>This should be nested in CDA within the respective allergic reaction observation|
 
 1\. XPath abbrievated for C-CDA Allergy Intolerance as: <br/> ClinicalDocument/component/structuredBody/component/section[code/@code="48765-2"]/entry/act/entryRelationship/observation
 

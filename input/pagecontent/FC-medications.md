@@ -19,7 +19,7 @@ See guidance on timing mappings on [Medications CDA → FHIR](./CF-medications.h
 
 ### FHIR to C-CDA
 
-|FHIR<br>[MedicationRequest](http://hl7.org/fhir/us/core/StructureDefinition-us-core-medicationrequest.html)|C-CDA¹<br>[Medication Activity substanceAdministration](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.16.html)|Transform Steps|
+|FHIR<br>[MedicationRequest](http://hl7.org/fhir/us/core/StructureDefinition-us-core-medicationrequest.html)|C-CDA¹<br>[Medication Activity substanceAdministration](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-MedicationActivity.html)|Transform Steps|
 |:----|:----|:----|
 |.identifier|/id|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
 |.status|/status|[FHIR status → CDA statusCode](ConceptMap-FC-MedicationStatus.html)|
@@ -30,9 +30,9 @@ See guidance on timing mappings on [Medications CDA → FHIR](./CF-medications.h
 |.authoredOn|/author/time|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
 |.requester|/assignedAuthor|[CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)|
 |.performer|/performer|[CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)|
-|.reasonCode|**[Indication](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.19.html)**<br/>/entryRelationship[@typeCode="RSON"]/observation/value|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
-|**[Annotation](https://hl7.org/fhir/datatypes.html#Annotation)**<br/>.note|**[Comment Activity](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.64.html)**<br/>/entryRelationship/act[code/@code="48767-8"]/text||
-|.dosageInstruction.text<br/>&<br/>.dosageInstruction.patientInstruction|**[Free text sig](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.147.html)**<br/>/entryRelationship/substanceAdministration[code/@code="76662-6"]/text||
+|.reasonCode|**[Indication](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-Indication.html)**<br/>/entryRelationship[@typeCode="RSON"]/observation/value|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
+|**[Annotation](https://hl7.org/fhir/datatypes.html#Annotation)**<br/>.note|**[Comment Activity](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-CommentActivity.html)**<br/>/entryRelationship/act[code/@code="48767-8"]/text||
+|.dosageInstruction.text<br/>&<br/>.dosageInstruction.patientInstruction|**[Free text sig](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-MedicationFreeTextSig.html)**<br/>/entryRelationship/substanceAdministration[code/@code="76662-6"]/text||
 |.dosageInstruction.additionalInstruction|**[Instruction](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.20.html)**<br/>/entryRelationship[@typeCode="SUBJ"]/act/code|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 |.dosageInstruction.timing.repeat.boundsPeriod.start|effectiveTime[1]/low|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)<br/>**Note:** in XPath, `[1]` is the first instance; there is no `[0]` in XPath.|
 |.dosageInstruction.timing.repeat.boundsPeriod.end|effectiveTime[1]/high|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|

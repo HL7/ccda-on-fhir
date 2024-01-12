@@ -10,7 +10,7 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
 <br />
 ### C-CDA to FHIR
 
-|C-CDA¹<br/>[US Realm Header recordTarget](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.1.1.html)|FHIR<br/>[Patient](http://hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html#profile)|Transform Steps|
+|C-CDA¹<br/>[US Realm Header recordTarget](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-USRealmHeader.html)|FHIR<br/>[Patient](http://hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html#profile)|Transform Steps|
 |:----|:----|:----|
 |/patientRole/id|.identifier|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
 |/patientRole/addr|.address|[CDA addr ↔ FHIR address ](mappingGuidance.html#cda-addr--fhir-address)|
