@@ -17,7 +17,7 @@ This page provides a mapping from FHIR to CDA. For the CDA to FHIR mapping, plea
 
 ### FHIR to C-CDA
 
-|FHIR<br/>[Procedure](http://hl7.org/fhir/us/core/StructureDefinition-us-core-procedure.html)|C-CDA¹<br/>[Procedure Activity procedure](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-ProcedureActivityProcedure.html)|Transform Steps|
+|FHIR<br/>[Procedure](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-procedure.html)|C-CDA¹<br/>[Procedure Activity procedure](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-ProcedureActivityProcedure.html)|Transform Steps|
 |:----|:----|:----|
 |.identifier|/id|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
 |.status|/statusCode|[FHIR status → CDA statusCode](./ConceptMap-FC-ProcedureStatus.html)|

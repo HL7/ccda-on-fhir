@@ -15,7 +15,7 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
 
 ### C-CDA to FHIR
 
-|C-CDA¹<br>[Medication Activity substanceAdministration](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-MedicationActivity.html)|FHIR<br>[MedicationRequest](http://hl7.org/fhir/us/core/StructureDefinition-us-core-medicationrequest.html)|Transform Steps|
+|C-CDA¹<br>[Medication Activity substanceAdministration](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-MedicationActivity.html)|FHIR<br>[MedicationRequest](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-medicationrequest.html)|Transform Steps|
 |:----|:----|:----|
 |/@negationInd="true"|set .doNotPerform=true||
 |@moodCode|.intent|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept) <br/>[Mood to intent](ConceptMap-CF-MedActivityMood.html)|
@@ -28,7 +28,7 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
 |/doseQuantity|.dosageInstruction.doseAndRate.doseQuantity||
 |/rateQuantity|.dosageInstruction.doseAndRate.rateQuantity||
 |/consumable/manufacturedProduct/manufacturedMaterial/code|.medicationCodeableConcept|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
-|/author|.requester<br/>&<br/>**[Provenance](http://hl7.org/fhir/us/core/StructureDefinition-us-core-procedure.html)**|[CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)|
+|/author|.requester<br/>&<br/>**[Provenance](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-procedure.html)**|[CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)|
 |/author/time|.authoredOn|Earliest, if more than one.<br/>[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
 |/precondition|.asNeededBoolean = true|The presence of a precondition element indicates asNeededBoolean should be true.<br/>More complex maps may be possible with .asNeededCodeableConcept.|
 |**[Indication](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-Indication.html)**<br/>/entryRelationship[@typeCode="RSON"]/observation/value|.reasonCode|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|

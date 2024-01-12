@@ -249,7 +249,7 @@ FHIR, however, provides different elements within resources (e.g. Condition.reco
 	</blockquote>
 </div>
 
-At a minimum, it is recommended that when [Provenance](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-provenance.html) resources are present in a FHIR document, that they should be mapped to provenance as defined in the [C-CDA Companion Guide](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=447) and [Basic Provenance in US Core](http://hl7.org/fhir/us/core/STU4/basic-provenance.html). 
+At a minimum, it is recommended that when [Provenance](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-provenance.html) resources are present in a FHIR document, that they should be mapped to provenance as defined in the [C-CDA Companion Guide](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=447) and [Basic Provenance in US Core](http://hl7.org/fhir/us/core/STU4/STU4/basic-provenance.html). 
 
 Preliminary guidelines for documents may include: 
 1. Assembler generated documents

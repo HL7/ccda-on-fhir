@@ -19,7 +19,7 @@ See guidance on timing mappings on [Medications CDA → FHIR](./CF-medications.h
 
 ### FHIR to C-CDA
 
-|FHIR<br>[MedicationRequest](http://hl7.org/fhir/us/core/StructureDefinition-us-core-medicationrequest.html)|C-CDA¹<br>[Medication Activity substanceAdministration](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-MedicationActivity.html)|Transform Steps|
+|FHIR<br>[MedicationRequest](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-medicationrequest.html)|C-CDA¹<br>[Medication Activity substanceAdministration](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-MedicationActivity.html)|Transform Steps|
 |:----|:----|:----|
 |.identifier|/id|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
 |.status|/status|[FHIR status → CDA statusCode](ConceptMap-FC-MedicationStatus.html)|

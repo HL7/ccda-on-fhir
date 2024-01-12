@@ -18,7 +18,7 @@ This page provides a mapping from FHIR to CDA. For the CDA to FHIR mapping, plea
 
 ### FHIR to C-CDA
 
-|FHIR<br/>[AllergyIntolerance](http://hl7.org/fhir/us/core/StructureDefinition-us-core-allergyintolerance.html#profile)|C-CDA¹<br/>[Allergy Intolerance observation](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-AllergyIntoleranceObservation.html)|Transform Steps|
+|FHIR<br/>[AllergyIntolerance](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-allergyintolerance.html#profile)|C-CDA¹<br/>[Allergy Intolerance observation](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-AllergyIntoleranceObservation.html)|Transform Steps|
 |:----|:----|:----|
 |.identifier|/id|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
 |.clinicalStatus|(act parent to observation) ../../statusCode <br/>&<br />**[Allergy Status](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-AllergyStatusObservation.html)**<br/>/entryRelationship/observation[code/@code="33999-4"]/value|[FHIR clinicalStatus → CDA Allergy Status Observation value](./ConceptMap-FC-AllergyStatus.html)<br/>For more information on how status is managed in Allergy Concern Act wrapper, refer to [C-CDA guidance, see 5.2.7.1](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=447)|

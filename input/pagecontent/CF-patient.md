@@ -10,7 +10,7 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
 <br />
 ### C-CDA to FHIR
 
-|C-CDA¹<br/>[US Realm Header recordTarget](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-USRealmHeader.html)|FHIR<br/>[Patient](http://hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html#profile)|Transform Steps|
+|C-CDA¹<br/>[US Realm Header recordTarget](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-USRealmHeader.html)|FHIR<br/>[Patient](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-patient.html#profile)|Transform Steps|
 |:----|:----|:----|
 |/patientRole/id|.identifier|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
 |/patientRole/addr|.address|[CDA addr ↔ FHIR address ](mappingGuidance.html#cda-addr--fhir-address)|
@@ -22,7 +22,7 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
 |/patientRole/patient/sdtc:deceasedTime|.deceasedDateTime|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)
 |/patientRole/patient/maritalStatusCode|.maritalStatus|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 |/patientRole/patient/raceCode|.extension:[us-core-race](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-race.html): ombCategory|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)<br/>This should be a category and map to the ombCategory sub-extension. But if it is a detailed race, then it should go in the detailed sub-extension.|
-|/patientRole/patient/sdtc:raceCode|.extension:[us-core-race](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-race.html)|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)<br/>If code is in [OMB category](http://hl7.org/fhir/us/core/ValueSet/omb-race-category), use us-core-race: ombCategory; else use us-core-race: detailed.<br/>If the detailed race is under a different OMB category that the non-sdtc:raceCode element, then an additional OMB category sub-extension should be included as well.|
+|/patientRole/patient/sdtc:raceCode|.extension:[us-core-race](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-race.html)|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)<br/>If code is in [OMB category](http://hl7.org/fhir/us/core/STU4/ValueSet/omb-race-category), use us-core-race: ombCategory; else use us-core-race: detailed.<br/>If the detailed race is under a different OMB category that the non-sdtc:raceCode element, then an additional OMB category sub-extension should be included as well.|
 |/patientRole/patient/ethnicGroupCode|.extension:[us-core-ethnicity](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-ethnicity.html)|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)<br/>This should be a category and map to the ombCategory sub-extension. But if it is a detailed race, then it should go in the detailed sub-extension.|
 |/patientRole/patient/sdtc:ethnicGroupCode|.extension:[us-core-ethnicity](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-ethnicity.html) : detailed|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)<br/>Used for detailed ethnicity|
 |/patientRole/patient/languageCommunication/languageCode|.communication.language||
