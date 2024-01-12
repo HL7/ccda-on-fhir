@@ -17,7 +17,7 @@ Note that C-CDA includes a Concern wrapper act from which status may be read; mo
 |:----|:----|:----|
 |From the parent section, use code@code|.category|[CDA section → FHIR category](ConceptMap-CF-ProblemCategory.html)<br/>**Note:** The section of a Problem Observation affects its FHIR category.|
 |/statusCode|.clinicalStatus|/statusCode → .clinicalStatus is to be used only if the C-CDA Problem Status Observation (see below) is missing.<br/>For more information on how status is managed in Problem Concern Act wrapper, refer to [C-CDA guidance, see 5.2.6.1](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=447)<br/> [Concern Status → Condition Clinical Status](ConceptMap-CF-ConditionClinicalStatus.html)
-|All of the following are a [Problem observation](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.4.html) nested inside the [Problem Concern act](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-ProblemConcernAct.html). Each observation should become a distinct FHIR Condition resource. <br/>/entryRelationship[@typeCode="SUBJ"]/observation prefix to rows below²|||
+|All of the following are a [Problem observation](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-ProblemObservation.html) nested inside the [Problem Concern act](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-ProblemConcernAct.html). Each observation should become a distinct FHIR Condition resource. <br/>/entryRelationship[@typeCode="SUBJ"]/observation prefix to rows below²|||
 |/@negationInd=true|set .verificationStatus="refuted" or adjust .code for negated concept| 
 |/id|.identifier|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
 |/code |.category|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
@@ -34,7 +34,7 @@ Note that C-CDA includes a Concern wrapper act from which status may be read; mo
 
 2\. XPath abbrievated for C-CDA Problem Observation as: <br/> ClinicalDocument/component/structuredBody/component/section[code/@code="11450-4"]/entry/act/entryRelationship[@typeCode="SUBJ"]/observation/
 
-When authors or other provenance are recorded in the parent [Problem Concern Act](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.3.html), it is recommended that those data be mapped to the FHIR Condition. 
+When authors or other provenance are recorded in the parent [Problem Concern Act](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-ProblemConcernAct.html), it is recommended that those data be mapped to the FHIR Condition. 
 
 ### Illustrative example
 
