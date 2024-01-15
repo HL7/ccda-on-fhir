@@ -232,14 +232,14 @@ UCUM also provides the ability to include arbitrary units within a set of curly 
 
 ### CDA ↔ FHIR Provenance
 
-CDA provides a repeated set of elements within each activity which may be used in populating data to/from FHIR [Provenance.Agent](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-provenance.html)  
+CDA provides a repeated set of elements within each activity which may be used in populating data to/from FHIR [Provenance.Agent](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-provenance.html)  
 
 - **author**: Represents the humans and/or machines that authored the [document/section/entry/act]. 
 - **performer**: A person who actually and principally carries out an action.
 - **informant**: An informant (or source of information) is a person that provides relevant information, such as the parent of a comatose patient who describes the patient's behavior prior to the onset of coma.
 - **participant** Used to represent other participants not explicitly mentioned by other classes, that were somehow involved in the documented activities
 
-FHIR, however, provides different elements within resources (e.g. Condition.recorder) that convey some information on provenance and a dedicated [Provenance](http://hl7.org/fhir/R4B/provenance.html) resource which references a target resource. In addition, FHIR documents do not provide context conduction, so all FHIR resources in a FHIR document should have explicit [Provenance](https://hl7.org/fhir/us/core/STU4/basic-provenance.html). See Context conduction under [v3 Similarities and Differences](http://hl7.org/fhir/R4/comparison-v3.html#7.17.2.1) for more information.
+FHIR, however, provides different elements within resources (e.g. Condition.recorder) that convey some information on provenance and a dedicated [Provenance](http://hl7.org/fhir/provenance.html) resource which references a target resource. In addition, FHIR documents do not provide context conduction, so all FHIR resources in a FHIR document should have explicit [Provenance](https://hl7.org/fhir/us/core/STU4/basic-provenance.html). See Context conduction under [v3 Similarities and Differences](http://hl7.org/fhir/R4/comparison-v3.html#7.17.2.1) for more information.
 
 <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<blockquote class="stu-note">
@@ -249,7 +249,7 @@ FHIR, however, provides different elements within resources (e.g. Condition.reco
 	</blockquote>
 </div>
 
-At a minimum, it is recommended that when [Provenance](https://hl7.org/fhir/R4B/provenance.html) resources are present in a FHIR document, that they should be mapped to provenance as defined in the [C-CDA Companion Guide](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=447) and [Basic Provenance in US Core](http://hl7.org/fhir/us/core/STU4/STU4/basic-provenance.html). 
+At a minimum, it is recommended that when [Provenance](http://hl7.org/fhir/provenance.html) resources are present in a FHIR document, that they should be mapped to provenance as defined in the [C-CDA Companion Guide](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=447) and [Basic Provenance in US Core](https://hl7.org/fhir/us/core/STU4/basic-provenance.html). 
 
 Preliminary guidelines for documents may include: 
 1. Assembler generated documents
