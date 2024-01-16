@@ -230,6 +230,223 @@ When mapping from FHIR to CDA, if the system is `http://unitsofmeasure.org`, the
 
 UCUM also provides the ability to include arbitrary units within a set of curly brackets (e.g. `{INR}`). No specific guidance on the use of curly brackets in unit translation is provided in this publication, however additional guidance on UCUM arbitrary units is [available here](https://ucum.org/ucum#section-Arbitrary-Units).
 
+#### Ranges of Physical Quantities
+CDA conveys ranges of values using the `IVL_PQ` data type. The `<low>` and `<high>` elements are normal Physical Quantity (PQ) elements with an additional `@inclusive` attribute. When this is present and set to `"false"`, the value of the boundary is not included in the range. The default value of this attribute is `"true"`, so regardless of whether it is absent or set to `"true"`, the value of the boundary IS included in the range.
+
+In FHIR, ranges with both a low and high are represented in the [Range](https://hl7.org/fhir/R4/datatypes.html#Range) data type, while ranges with only a low or a high are represented in the [Quantity](https://hl7.org/fhir/R4/datatypes.html#Quantity) data type using a [comparator](https://hl7.org/fhir/R4/valueset-quantity-comparator.html).
+
+Since a physical quantity is something that can be measured, a missing `<low>` value or a low value of `0` can be represented as `<` or `<=` the high value (based on the `@inclusive` property on `<high>`). If the `<high>` value is missing, it generally means the value was too large to measure, and the FHIR representation is `>` or `>=`.
+
+Note that in FHIR, `Observation.referenceRange` only contains `.low` and `.high` values, so this guidance is targeted to the actual values of observations.
+
+<table>
+<tr><th>CDA IVL_PQ Value - High-only</th><th>FHIR Quantity</th></tr>
+<tr><td>
+<div markdown="1">
+{% highlight xml %}
+<value xsi:type="IVL_PQ">
+  <high value="200" unit="mg/dL">
+</value>
+{% endhighlight %}
+or
+{% highlight xml %}
+<value xsi:type="IVL_PQ">
+  <low value="0" unit="mg/dL">
+  <high value="200" unit="mg/dL">
+</value>
+{% endhighlight %}
+or
+
+{% highlight xml %}
+<value xsi:type="IVL_PQ">
+  <low nullFlavor="NINF">
+  <high value="200" unit="mg/dL">
+</value>
+{% endhighlight %}
+
+</div>
+
+</td><td>
+<div markdown="1">
+{% highlight json %}
+"quantity": {
+  "value": 200,
+  "comparator": "<=",
+  "unit": "mg/dL",
+  "code": "mg/dL",
+  "system": "http://unitsofmeasure.org"
+}
+{% endhighlight %}
+
+(`<=` because inclusive is true by default)
+</div>
+
+</td></tr>
+<tr><td>
+<div markdown="1">
+When `@inclusive="false"`:
+
+{% highlight xml %}
+<value xsi:type="IVL_PQ">
+  <high value="200" unit="mg/dL" inclusive="false">
+</value>
+{% endhighlight %}
+</div>
+
+</td><td>
+<div markdown="1">
+{% highlight json %}
+"quantity": {
+  "value": 200,
+  "comparator": "<",
+  "unit": "mg/dL",
+  "code": "mg/dL",
+  "system": "http://unitsofmeasure.org"
+}
+{% endhighlight %}
+</div>
+
+</td></tr>
+<tr><td colspan="2">&nbsp;</td></tr>
+<tr><th>CDA IVL_PQ Value - Low-only</th><th>FHIR Quantity</th></tr>
+<tr><td>
+<div markdown="1">
+{% highlight xml %}
+<value xsi:type="IVL_PQ">
+  <low value="500" unit="mg/dL" inclusive="true">
+  <high nullFlavor="PINF">
+</value>
+{% endhighlight %}
+
+or
+
+{% highlight xml %}
+<value xsi:type="IVL_PQ">
+  <low value="500" unit="mg/dL">
+</value>
+{% endhighlight %}
+
+</div>
+
+</td><td>
+<div markdown="1">
+{% highlight json %}
+"quantity": {
+  "value": 500,
+  "comparator": ">=",
+  "unit": "mg/dL",
+  "code": "mg/dL",
+  "system": "http://unitsofmeasure.org"
+}
+{% endhighlight %}
+
+
+(`>=` because inclusive is true by default)
+</div>
+
+</td></tr>
+<tr><td>
+<div markdown="1">
+When `@inclusive="false"`:
+{% highlight xml %}
+<value xsi:type="IVL_PQ">
+  <low value="500" unit="mg/dL" inclusive="false">
+  <high nullFlavor="PINF">
+</value>
+{% endhighlight %}
+
+or
+
+{% highlight xml %}
+<value xsi:type="IVL_PQ">
+  <low value="500" unit="mg/dL" inclusive="false">
+</value>
+{% endhighlight %}
+</div>
+
+</td><td>
+<div markdown="1">
+{% highlight json %}
+"quantity": {
+  "value": 500,
+  "comparator": ">",
+  "unit": "mg/dL",
+  "code": "mg/dL",
+  "system": "http://unitsofmeasure.org"
+}
+{% endhighlight %}
+</div>
+
+</td></tr>
+<tr><td colspan="2">&nbsp;</td></tr>
+<tr><th>CDA IVL_PQ Value - Low and High with Numeric Values</th><th>FHIR Range</th></tr>
+<tr><td>
+<div markdown="1">
+{% highlight xml %}
+<value xsi:type="IVL_PQ">
+  <low value="200" unit="mg/dL">
+  <high value="1000" unit="mg/dL">
+</value>
+{% endhighlight %}
+</div>
+
+</td><td>
+<div markdown="1">
+{% highlight json %}
+"range": {
+  "low": {
+    "value": 200,
+    "unit": "mg/dL",
+    "code": "mg/dL",
+    "system": "http://unitsofmeasure.org"
+  },
+  "high": {
+    "value": 1000,
+    "unit": "mg/dL",
+    "code": "mg/dL",
+    "system": "http://unitsofmeasure.org"
+  }
+}
+{% endhighlight %}
+</div>
+
+</td></tr>
+<tr><td>
+<div markdown="1">
+Units can be different, as long as they are equivalent:
+
+{% highlight xml %}
+<value xsi:type="IVL_PQ">
+  <low value="200" unit="mg/dL">
+  <high value="1" unit="g/dL">
+</value>
+{% endhighlight %}
+</div>
+
+</td><td>
+<div markdown="1">
+{% highlight json %}
+"range": {
+  "low": {
+    "value": 200,
+    "unit": "mg/dL",
+    "code": "mg/dL",
+    "system": "http://unitsofmeasure.org"
+  },
+  "high": {
+    "value": 1,
+    "unit": "g/dL",
+    "code": "g/dL",
+    "system": "http://unitsofmeasure.org"
+  }
+}
+{% endhighlight %}
+</div>
+
+</td></tr>
+</table>
+
+
 ### CDA ↔ FHIR Provenance
 
 CDA provides a repeated set of elements within each activity which may be used in populating data to/from FHIR [Provenance.Agent](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-provenance.html)  
