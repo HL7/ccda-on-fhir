@@ -9,10 +9,13 @@
 
 #### Available Maps
 - [Allergies](CF-allergies.html)
+- [Encounters](CF-encounters.html)
 - [Immunizations](CF-immunizations.html)
 - [Medications](CF-medications.html)
 - [Patient](CF-patient.html)
 - [Problems](CF-problems.html)
 - [Procedures](CF-procedures.html)
+- [Results](CF-results.html)
+- [Vital Signs](CF-vitals.html)
 
 Please refer to [mapping background](mappingBackground.html) for more information how maps were selected and developed.
