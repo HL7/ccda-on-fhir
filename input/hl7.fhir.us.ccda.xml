@@ -852,6 +852,11 @@
             <generation value="markdown"/>
           </page>
           <page>
+            <nameUrl value="CF-notes.html"/>
+            <title value="C-CDA to FHIR Notes"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
             <nameUrl value="CF-problems.html"/>
             <title value="C-CDA to FHIR Problems"/>
             <generation value="markdown"/>
@@ -898,6 +903,11 @@
           </page>
           <page>
             <nameUrl value="FC-medications.html"/>
+            <title value="FHIR to C-CDA Medications"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="FC-notes.html"/>
             <title value="FHIR to C-CDA Medications"/>
             <generation value="markdown"/>
           </page>
