@@ -12,6 +12,7 @@
 - [Encounters](CF-encounters.html)
 - [Immunizations](CF-immunizations.html)
 - [Medications](CF-medications.html)
+- [Notes](CF-notes.html)
 - [Patient](CF-patient.html)
 - [Problems](CF-problems.html)
 - [Procedures](CF-procedures.html)
