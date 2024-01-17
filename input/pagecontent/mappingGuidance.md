@@ -81,12 +81,12 @@ CDA timestamp values are based on a pattern of YYYYMMDDHHmmss+zzzz and [FHIR dat
 
 To convert between the standards, systems should deploy programming logic that converts formats and preserves the level of precision. For example, "20230531" from CDA would become "2023-05-31" in FHIR (not 2023-05-31T00:00:00+00:00). Additional examples below: 
 
-|CDA Date Time|FHIR Date Time|
+|CDA Date Time|FHIR Date Time|Notes|
 |:-----|:-----|:-------------|
 |2023|2023|
 |202305|2023-05|
 |20230531|2023-05-31|
-|202305312205-0500|2023-05-31T22:05-05:00|
+|202305312205-0500|2023-05-31T22:05-05:00|Timezone offset should be preserved
 
 Note that in C-CDA, timezone offset is a SHOULD, while in FHIR, time zone offset is required when more specific than the day. There may be instances where a CDA date-time value omits a time zone offset and other data from the document may be necessary to populate FHIR dateTime requirements.
 
