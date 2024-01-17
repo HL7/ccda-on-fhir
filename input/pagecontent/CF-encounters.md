@@ -20,6 +20,7 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
 |/effectiveTime/high/@value|.period.end
 |/sdtc:dischargeDispositionCode|.hospialization.dischargeDisposition|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)
 |/performer|.participant|*TODO: Mapping Guidance for general performers (Participant vs ParticipantRole vs Organization)*
+|/performer/sdtc:functionCode|.participant.type|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)
 |/participant[@typeCode="LOC"]|.location
 |**[Indication](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-Indication.html)**<br/>/entryRelationship[@typeCode="RSON"]/observation|.reasonCode<br/>or<br/>.reasonReference|If the id of the indication references a problem in the document that has been converted to a FHIR resource, populate .reasonReference with a reference to that resource. Otherwise, map observation/value to .reasonCode.<br/>[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)
 |**[Encounter Diagnosis](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-EncounterDiagnosis.html)**<br/>/entryRelationship/act[code/@code="29308-4"]/observation|.diagnosis.condition|Map similar to [CDA → FHIR Problems](./CF-problems.html).
