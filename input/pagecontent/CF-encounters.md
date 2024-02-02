@@ -10,6 +10,7 @@ Encounter Activities in the Encounters Section (or elsewhere in the document, su
 
 ### C-CDA Encounter to FHIR
 <sup>(b)</sup> - indicates element is only present in Encounter Activity in the body of the document<br/><sup>(h)</sup> - indicates element is only present in EncompassingEncounter in the header of the document
+
 |C-CDA¹<br/>[Encounter Activity](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-EncounterActivity.html) or [EncompassingEncounter](https://hl7.org/cda/stds/core/2.0.0-sd-snapshot1/StructureDefinition-EncompassingEncounter.html)|FHIR<br/>[Encounter](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-encounter.html)|Transform Steps|
 |:----|:----|:----|
 |/id|.identifier|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
