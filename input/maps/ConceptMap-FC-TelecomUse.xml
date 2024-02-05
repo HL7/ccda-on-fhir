@@ -1,6 +1,9 @@
 <ConceptMap xmlns="http://hl7.org/fhir"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="FC-TelecomUse"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="cgp" />
+  </extension>
   <url value="http://hl7.org/fhir/us/ccda/ConceptMap/FC-TelecomUse"/>
   <version value="4.0.1"/>
   <name value="FHIRtoCCDATelecomUse"/>
@@ -25,7 +28,7 @@
     </telecom>
   </contact>
   <sourceUri value="http://hl7.org/fhir/ValueSet/contact-point-use"/>
-  <targetUri value="http://terminology.hl7.org/ValueSet/v3-URLScheme"/>
+  <targetUri value="http://terminology.hl7.org/ValueSet/v3-TelecommunicationAddressUse"/>
   <group>
     <source value="http://hl7.org/fhir/contact-point-use"/>
     <target value="http://terminology.hl7.org/CodeSystem/v3-AddressUse"/>
@@ -67,7 +70,7 @@
       <code value="old"/>
       <display value="Old"/>
       <target>
-        <code value="bad"/>
+        <code value="BAD"/>
         <display value="Bad"/>
         <equivalence value="narrower" />
         <comment value="Age is not implied in CDA value" />

@@ -1,6 +1,6 @@
 This page includes terminology mapping from CDA → FHIR and FHIR → CDA in two separate sections. These  terminology mappings are not structural. For structural transformations, please refer to the [general structural guidance](mappingGuidance.html). 
 
-These terminology maps use the [ConceptMap](http://hl7.org/fhir/R4B/conceptmap.html) resource which translates a source terminology to a target terminology. In addition, the specific term maps in this guide are often not semantically equivalent and may be incomplete. For these reasons, we include two maps for each terminology group, one for CDA → FHIR and another for FHIR → CDA, shown in multiple sub-lists on this page.
+These terminology maps use the [ConceptMap](http://hl7.org/fhir/R4/conceptmap.html) resource which translates a source terminology to a target terminology. In addition, the specific term maps in this guide are often not semantically equivalent and may be incomplete. For these reasons, we include two maps for each terminology group, one for CDA → FHIR and another for FHIR → CDA, shown in multiple sub-lists on this page.
 
 Note that these maps are directly referenced in the structural guidance tables and do not include any large vocabularly mappings (i.e. each of the mappings below has under 50 terms).  
 
@@ -39,6 +39,7 @@ Shown below are terminology mappings for use in moving from FHIR → CDA. Resour
 - [AllergyIntolerance category (FHIR) → Allergy Intolerance Observation value (CDA)](./ConceptMap-FC-AllergyIntoleranceCategory.html)
 - [AllergyIntolerance clinicalStatus (FHIR) → Allergy Status Observation (CDA)](./ConceptMap-FC-AllergyStatus.html) 
 - [Criticality (FHIR) → Criticality value (CDA)](./ConceptMap-FC-Criticality.html)
+- [Immunization site (FHIR) → Immunization ApproachSiteCode (CDA)](./ConceptMap-FC-ImmunizationSite.html)
 - [Immunization status (FHIR) → Immunization Activity statusCode (CDA)](./ConceptMap-FC-ImmunizationStatus.html)
 - [Immunization statusReason (FHIR) → Immunization Refusal Reason (CDA)](./ConceptMap-FC-ImmunizationRefusal.html)
 - [MedicationRequest status(FHIR) → Medication Activity statusCode (CDA)](./ConceptMap-FC-MedicationStatus.html)

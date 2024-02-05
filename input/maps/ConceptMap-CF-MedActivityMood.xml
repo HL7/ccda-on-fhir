@@ -1,6 +1,9 @@
 <ConceptMap xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="CF-MedActivityMood"/>
-  <url value="http://hl7.org/fhir/us/ccda/ConceptMap/MedActivityMood"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="cgp" />
+  </extension>
+  <url value="http://hl7.org/fhir/us/ccda/ConceptMap/CF-MedActivityMood"/>
   <version value="4.0.1"/>
   <name value="CCDAtoFHIRMedActivityMood"/>
   <title value="CCDA Medication Activity Mood to FHIR MedicationRequest.intent"/>
@@ -35,6 +38,7 @@
         <code value="plan"/>
         <display value="plan"/>
         <equivalence value="inexact"/>
+        <comment value="CDA mood codes are more general than FHIR intent codes, and there may be special cases where this inexact map does not work."/>
       </target>
     </element>
     <element>
@@ -44,6 +48,7 @@
         <code value="order"/>
         <display value="order"/>
         <equivalence value="inexact"/>
+        <comment value="CDA mood codes are more general than FHIR intent codes, and there may be special cases where this inexact map does not work."/>
       </target>
     </element>
   </group>

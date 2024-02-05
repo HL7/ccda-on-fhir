@@ -8,9 +8,9 @@ td, th {
 
 #### How to Read Mapping Tables and Transform Steps? 
 
-The header row of the mapping table provides links to the respective profiles in FHIR (e.g. **[US Core AllergyIntolerance](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-allergyintolerance.html)**) and templates in C-CDA (e.g. **[Allergy Intolerance observation](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.7.html)**)and specifies the "base" that each of the rows will build on.  All FHIR elements use a simplified dot notation and the CDA elements use simplified slash notation. Always use the underlying standards, provided via header row links, to ensure conformance when building FHIR resources or C-CDA clinical documents. 
+The header row of the mapping table provides links to the respective profiles in FHIR (e.g. **[US Core AllergyIntolerance](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-allergyintolerance.html)**) and templates in C-CDA (e.g. **[Allergy Intolerance observation](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-AllergyIntoleranceObservation.html)**)and specifies the "base" that each of the rows will build on.  All FHIR elements use a simplified dot notation and the CDA elements use simplified slash notation. Always use the underlying standards, provided via header row links, to ensure conformance when building FHIR resources or C-CDA clinical documents. 
 
-Rather than repeating cardinality, conformance, and other criteria from FHIR Resources or a C-CDA templates defined outside this implementaiton guide, external references are shown in tables as bold hyperlinks (e.g. **[US Core Patient](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-patient.html)** or **[C-CDA US Realm Header](http://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.1.1.html)**). Unbolded links refer to guidance contained within this guide (e.g. [CDA ↔ FHIR Name, Address, and Telecom mapping](mappingGuidance.html#name-address-telecom)). When criteria for selecting XML elements from C-CDA is required, you will see **[XPath](https://en.wikipedia.org/wiki/XPath)** notation with the respective criteria within brackets (e.g. /entryRelationship[@typeCode="MSFT"]).
+Rather than repeating cardinality, conformance, and other criteria from FHIR Resources or a C-CDA templates defined outside this implementaiton guide, external references are shown in tables as bold hyperlinks (e.g. **[US Core Patient](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-patient.html)** or **[C-CDA US Realm Header](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-USRealmHeader.html)**). Unbolded links refer to guidance contained within this guide (e.g. [CDA ↔ FHIR Name, Address, and Telecom mapping](mappingGuidance.html#name-address-telecom)). When criteria for selecting XML elements from C-CDA is required, you will see **[XPath](https://en.wikipedia.org/wiki/XPath)** notation with the respective criteria within brackets (e.g. /entryRelationship[@typeCode="MSFT"]).
 
 
 The "Transform Steps" column of the table will provide guidance for mapping content between C-CDA and FHIR, those steps will be listed in the following order: 
@@ -106,7 +106,7 @@ Some CDA temporal fields can be either a single point-in-time or an interval ran
 
 ### CDA Coding ↔ FHIR CodeableConcept
 
-The structure for coding in CDA and FHIR are fundamentally different. CDA  employs a mechanism (xsi:type [CD](http://hl7.org/cda/stds/core/draft1/StructureDefinition-CD.html) or [CE](http://hl7.org/cda/stds/core/draft1/StructureDefinition-CE.html)) where the code is included in the element and then originalText and translations elements may be provided as child elements. In FHIR, [CodeableConcept](http://hl7.org/fhir/datatypes.html#codeableconcept) places all codes in a coding list with a separate element for the text representation. 
+The structure for coding in CDA and FHIR are fundamentally different. CDA  employs a mechanism (xsi:type [CD](https://hl7.org/cda/stds/core/2.0.0-sd-snapshot1/StructureDefinition-CD.html) or [CE](https://hl7.org/cda/stds/core/2.0.0-sd-snapshot1/StructureDefinition-CD.html)) where the code is included in the element and then originalText and translations elements may be provided as child elements. In FHIR, [CodeableConcept](http://hl7.org/fhir/datatypes.html#codeableconcept) places all codes in a coding list with a separate element for the text representation. 
 
 #### CDA Coding → FHIR CodeableConcept
 
@@ -126,7 +126,7 @@ In addition to the context of the previous section, CDA often requires elements 
 - If the data fulfills the target valueset, use the code and translate system
 - If the data can be mapped into the target valueset, use a mapping and the translated system
 - When the above is not possible:
-  - If you have coded data and CDA nullFlavor is allowed, use "OTH" and put the source data in translation and provide originalText if possible. Note that [CD](http://hl7.org/cda/stds/core/draft1/StructureDefinition-CE.html) and [CE](http://hl7.org/cda/stds/core/draft1/StructureDefinition-CE.html) CDA elements generally allow translation and originalText. 
+  - If you have coded data and CDA nullFlavor is allowed, use "OTH" and put the source data in translation and provide originalText if possible. Note that [CD](https://hl7.org/cda/stds/core/2.0.0-sd-snapshot1/StructureDefinition-CD.html) and [CE](https://hl7.org/cda/stds/core/2.0.0-sd-snapshot1/StructureDefinition-CD.html) CDA elements generally allow translation and originalText. 
   - If you have missing data with [data-absent-reason](https://hl7.org/fhir/extension-data-absent-reason.html), use a [mapped nullFlavor](ConceptMap-FC-DataAbsentReasonNullFlavor.html) if allowed. If not allowed, find the best match in the permitted valueset. 
   - If you have missing data without [data-absent-reason](https://hl7.org/fhir/extension-data-absent-reason.html), select a nullFlavor if allowed. If not allowed, find the best match in the permitted valueset. 
 
@@ -160,9 +160,9 @@ Additional guidance on [FHIR terminologies available here](http://hl7.org/fhir/t
 
 #### OriginalText
 
-The `<originalText>` element in CDA can contain mixed XML content or a reference to a portion of the narrative. When converting to a FHIR data type that contains a text field, like [CodeableConcept](http://hl7.org/fhir/datatypes.html#codeableconcept), this is a direct map. For other cases, the [originalText extension](http://hl7.org/fhir/R4B/extension-originaltext.html) may be used to convey this information. In either instance, the CDA narrative must be de-referenced, any markup removed, and stored as plain text into `CodeableConcept.text` or the originalText's `.valueString`. 
+The `<originalText>` element in CDA can contain mixed XML content or a reference to a portion of the narrative. When converting to a FHIR data type that contains a text field, like [CodeableConcept](http://hl7.org/fhir/datatypes.html#codeableconcept), this is a direct map. For other cases, the [originalText extension](http://hl7.org/fhir/R4/extension-originaltext.html) may be used to convey this information. In either instance, the CDA narrative must be de-referenced, any markup removed, and stored as plain text into `CodeableConcept.text` or the originalText's `.valueString`. 
 
-FHIR also includes a [narrativeLink extension](http://hl7.org/fhir/R4B/extension-narrativelink.html) which functions similarly to the `<reference value="#...">` attribute underneath originalText. If the section or resource narrative has been converted to FHIR (see [Narrative Text](#narrative-text)), this extension can be added to indicate the portion of narrative corresponding to the extended FHIR field.
+FHIR also includes a [narrativeLink extension](http://hl7.org/fhir/R4/extension-narrativelink.html) which functions similarly to the `<reference value="#...">` attribute underneath originalText. If the section or resource narrative has been converted to FHIR (see [Narrative Text](#narrative-text)), this extension can be added to indicate the portion of narrative corresponding to the extended FHIR field.
 
 ### CDA ↔ FHIR Quantity
 
@@ -232,14 +232,14 @@ UCUM also provides the ability to include arbitrary units within a set of curly 
 
 ### CDA ↔ FHIR Provenance
 
-CDA provides a repeated set of elements within each activity which may be used in populating data to/from FHIR [Provenance.Agent](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-provenance.html)  
+CDA provides a repeated set of elements within each activity which may be used in populating data to/from FHIR [Provenance.Agent](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-provenance.html)  
 
 - **author**: Represents the humans and/or machines that authored the [document/section/entry/act]. 
 - **performer**: A person who actually and principally carries out an action.
 - **informant**: An informant (or source of information) is a person that provides relevant information, such as the parent of a comatose patient who describes the patient's behavior prior to the onset of coma.
 - **participant** Used to represent other participants not explicitly mentioned by other classes, that were somehow involved in the documented activities
 
-FHIR, however, provides different elements within resources (e.g. Condition.recorder) that convey some information on provenance and a dedicated [Provenance resource](http://hl7.org/fhir/R4/provenance.html) which references a  target resource. In addition, FHIR documents do not provide context conduction, so all FHIR resources in a FHIR document should have explicit [Provenance](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-provenance.html). See Context conduction under [v3 Similarities and Differences](http://hl7.org/fhir/R4/comparison-v3.html#7.17.2.1) for more information.
+FHIR, however, provides different elements within resources (e.g. Condition.recorder) that convey some information on provenance and a dedicated [Provenance](http://hl7.org/fhir/provenance.html) resource which references a target resource. In addition, FHIR documents do not provide context conduction, so all FHIR resources in a FHIR document should have explicit [Provenance](https://hl7.org/fhir/us/core/STU4/basic-provenance.html). See Context conduction under [v3 Similarities and Differences](http://hl7.org/fhir/R4/comparison-v3.html#7.17.2.1) for more information.
 
 <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<blockquote class="stu-note">
@@ -249,7 +249,7 @@ FHIR, however, provides different elements within resources (e.g. Condition.reco
 	</blockquote>
 </div>
 
-At a minimum, it is recommended that when [Provenance](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-provenance.html) resources are present in a FHIR document, that they should be mapped to provenance as defined in the [C-CDA Companion Guide](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=447) and [Basic Provenance in US Core](http://hl7.org/fhir/us/core/STU4/basic-provenance.html). 
+At a minimum, it is recommended that when [Provenance](http://hl7.org/fhir/provenance.html) resources are present in a FHIR document, that they should be mapped to provenance as defined in the [C-CDA Companion Guide](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=447) and [Basic Provenance in US Core](https://hl7.org/fhir/us/core/STU4/basic-provenance.html). 
 
 Preliminary guidelines for documents may include: 
 1. Assembler generated documents
@@ -345,8 +345,8 @@ The mappings of name, address and telecom information are useful in many part of
 ### Missing Data in C-CDA vs. FHIR ####
 
 CDA and FHIR address missing data and null usage in different ways:  
-- The use of nullFlavor in CDA is explained in depth in Volume 1 of the [C-CDA Implementation Guide](http://hl7.org/cda/stds/ccda/draft1/designconsiderations.html#unknown-and-no-known-information) and in the [C-CDA Companion Guide](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=447). 
-- The use of the data absent reason extension is explained in depth in the [US Core Implementation Guide](https://build.fhir.org/ig/HL7/US-Core/general-requirements.html#missing-data) and also in the [base extension](http://hl7.org/fhir/extension-data-absent-reason.html).
+- The use of nullFlavor in CDA is explained in depth in Volume 1 of the [C-CDA Implementation Guide](https://hl7.org/cda/us/ccda/2024Jan/generalguidance.html#unknown-and-no-known-information) and in the [C-CDA Companion Guide](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=447). 
+- The use of the data absent reason extension is explained in depth in the [US Core Implementation Guide](https://hl7.org/fhir/us/core/STU4/general-guidance.html#missing-data) and also in the [base extension](http://hl7.org/fhir/extension-data-absent-reason.html).
 
 In this publication, we include a mapping between missing data concepts. **Importantly, it should be noted that several mappings include non-equivalence (wider or narrower or unsupported) and that each standard may allow data elements to be omitted while the other requires**. Feedback to improve implementer guidance is welcome on the handling of missing data between C-CDA and FHIR:
 - [NullFlavor (CDA) → Data Absent Reason code (FHIR)](./ConceptMap-CF-NullFlavorDataAbsentReason.html) 

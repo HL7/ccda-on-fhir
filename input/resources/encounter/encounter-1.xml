@@ -16,7 +16,7 @@
     <type>
         <coding>
             <system value="http://www.ama-assn.org/go/cpt"/>
-            <code value="99201"/>
+            <code value="99211"/>
         </coding>
         <text value="Office Visit"/>
     </type>

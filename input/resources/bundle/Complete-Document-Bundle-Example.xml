@@ -14,7 +14,7 @@
     <type value="document"/>
     <timestamp value="2013-08-15T10:30:00.000-08:00"/>
     <entry>
-        <fullUrl value="http://hl7.org/fhir/us/ccda/StructureDefinition/Care-Plan-Document"/>
+        <fullUrl value="urn:uuid:e113522b-cbde-4e6e-b44b-327606f39b2c"/>
         <resource>
             <Composition>
                 <id value="Care-Plan-Example"/>

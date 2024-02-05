@@ -7,18 +7,21 @@
     <lastUpdated value="2020-10-21T21:13:08.798+00:00"/>
     <source value="#dMBMcvZsrSDFhHb1"/>
   </meta>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="cgp"/>
+  </extension>
   <url value="http://hl7.org/fhir/us/ccda/ImplementationGuide/hl7.fhir.us.ccda"/>
-  <version value="1.2.0-ballot"/>
+  <version value="1.2.0"/>
   <name value="CCDAonFHIR"/>
   <title value="C-CDA on FHIR"/>
   <status value="active"/>
   <date value="2020-10-19T00:00:00.000Z"/>
-  <publisher value="HL7 Cross-Group Projects Working Group"/>
+  <publisher value="HL7 International / Cross-Group Projects"/>
   <contact>
-    <name value="HL7 Cross-Group Projects Working Group"/>
+    <name value="HL7 International / Cross-Group Projects"/>
     <telecom>
       <system value="url"/>
-      <value value="http://hl7.org/Special/committees/structure/index.cfm"/>
+      <value value="http://www.hl7.org/Special/committees/cgp"/>
     </telecom>
   </contact>
   <description value="Consolidated CDA (C-CDA) is one of the most widely implemented implementation guides for CDA and covers a significant scope of clinical care. Its target of the 'common/essential' elements of healthcare is closely aligned with FHIR's focus on the '80%'. There is significant interest in industry and government in the ability to interoperate between CDA and FHIR and C-CDA is a logical starting point. Implementers and regulators have both expressed an interest in the ability to map between FHIR and C-CDA.&#xA;&#xA;This Implementation Guide (IG) defines a series of FHIR profiles on the Composition resource to represent the various document types in C-CDA. This release does not directly map every C-CDA template to FHIR profiles, rather tries to accomplish the C-CDA use case using Composition resource profiles created under this project (the equivalent of Level 2 CDA documents), and begins by linking to the profiles created under the US Core project for any coded entries that would normally be included in C-CDA sections. To have a simpler, more streamlined standard that reuses existing work and focuses on the 80% that implementers actually need in production systems, the resources of US Core represents a portion of the 80% needed for coded entries for coded entries of CCD, Care Plan &amp; Discharge Summary).&#xA;&#xA;The Composition profiles in this IG do not require coded data in any section. This is a departure from C-CDA, which requires coded data for Problems, Results, Medications, etc. This departure is intentional, as the C-CDA requirement for one or more coded entries in these sections resulted in some very complicated workarounds using nullFlavors to handle the fact that sometimes a patient is not on any medications, or has no current problems. In general, FHIR takes the approach that if something is nullable, it should simply be optional to ease the burden on implementers, thus C-CDA on FHIR does not require any coded entries, but rather uses the &quot;required if known&quot; approach, meaning that if an implementer's system has data for a section that requires data under Meaningful Use, they need to send it, but if they have no data there is no need for a null entry.&#xA;&#xA;We encourage feedback on these Composition profiles, and the general approach to the project as a whole. We also encourage implementers who wish to see more of the coded data from C-CDA mapped to FHIR to comment on the US Core project and make their requests known there. Once US Core creates new profiles, this project can reference them.&#xA;&#xA;### Scope&#xA;&#xA;To represent Consolidated CDA Templates for Clinical Notes (C-CDA) 2.1 templates using FHIR profiles.&#xA;&#xA;This first stage of the project defines all the C-CDA document-level profiles on the Composition resource and contained sections.&#xA;&#xA;Any coded data used by sections will be represented using relevant U.S. Core FHIR profiles where they exist. FHIR profiles defined by other work groups or unconstrained FHIR resources may also be referenced if no appropriate US Core Profile exist.&#xA;&#xA;For further information see the C-CDA specification here: http://www.hl7.org/implement/standards/product_brief.cfm?product_id=408."/>
@@ -33,7 +36,12 @@
   <dependsOn>
     <uri value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"/>
     <packageId value="hl7.fhir.us.core"/>
-    <version value="3.1.0"/>
+    <version value="4.0.0"/>
+  </dependsOn>
+  <dependsOn>
+    <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
+    <packageId value="hl7.fhir.uv.extensions"/>
+    <version value="current"/>
   </dependsOn>
   <definition>
     <resource>
@@ -917,6 +925,10 @@
     <parameter>
       <code value="copyrightyear"/>
       <value value="2020+"/>
+    </parameter>
+    <parameter>
+      <code value="display-warnings"/>
+      <value value="true"/>
     </parameter>
   </definition>
 </ImplementationGuide>

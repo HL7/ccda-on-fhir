@@ -22,7 +22,7 @@
     "reference": "Patient/CF-patient"
   },
   "occurrenceDateTime": "2010-08-15",
-  "recorded": "2010-08-15",
+  "recorded": "2010-08-16",
   "_primarySource": {
     "extension": [
       {

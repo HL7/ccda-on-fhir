@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/ccda/2023May" ciUrl="http://build.fhir.org/ig/HL7/ccda-on-fhir" defaultVersion="1.1.0" defaultWorkgroup="sd" gitUrl="https://github.com/HL7/ccda-on-fhir" url="http://hl7.org/fhir/us/ccda">
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/ccda/2023May" ciUrl="http://build.fhir.org/ig/HL7/ccda-on-fhir" defaultVersion="1.1.0" defaultWorkgroup="cgp" gitUrl="https://github.com/HL7/ccda-on-fhir" url="http://hl7.org/fhir/us/ccda">
 <version code="current" url="http://build.fhir.org/ig/HL7/ccda-on-fhir"/>
 <version code="1.2.0-ballot" url="http://hl7.org/fhir/us/ccda/2023May"/>
 <version code="1.1.0" deprecated="true" url="http://hl7.org/fhir/us/ccda/STU1.1"/>
@@ -17,7 +17,7 @@
 <artifact deprecated="true" key="AuditEvent" name="AuditEvent"/>
 <artifact id="StructureDefinition/AuthorizationExtension" key="StructureDefinition-AuthorizationExtension" name="Authorization Extension"/>
 <artifact id="ConceptMap/CF-ImmunizationRefusal" key="ConceptMap-CF-ImmunizationRefusal" name="C-CDA Immunization Refusal to FHIR Immunization Status Reason"/>
-<artifact id="ConceptMap/CF-ImmunizationSite" key="ConceptMap-CF-ImmunizationSite" name="C-CDA Immunization approachSiteCode to FHIR Immunization Site"/>
+<artifact deprecated="true" id="ConceptMap/CF-ImmunizationSite" key="ConceptMap-CF-ImmunizationSite" name="C-CDA Immunization approachSiteCode to FHIR Immunization Site"/>
 <artifact id="ConceptMap/CF-NullFlavorDataAbsentReason" key="ConceptMap-CF-NullFlavorDataAbsentReason" name="C-CDA NullFlavor to FHIR Data Absent Reason"/>
 <artifact id="ConceptMap/CF-ProblemStatus" key="ConceptMap-CF-ProblemStatus" name="C-CDA Problem Status value to FHIR Condition clinicalStatus"/>
 <artifact id="ConceptMap/CF-Severity" key="ConceptMap-CF-Severity" name="C-CDA Severity to FHIR Severity"/>
@@ -33,6 +33,8 @@
 <artifact id="ConceptMap/CF-TelecomType" key="ConceptMap-CF-TelecomType" name="C-CDA to FHIR Telecom Type"/>
 <artifact id="ConceptMap/CF-TelecomUse" key="ConceptMap-CF-TelecomUse" name="C-CDA to FHIR Telecom Use"/>
 <artifact id="ConceptMap/CF-Criticality" key="ConceptMap-CF-Criticality" name="CCDA Criticality to FHIR Criticality"/>
+<artifact id="ConceptMap/CF-MedActivityMood" key="ConceptMap-CF-MedActivityMood" name="CCDA Medication Activity Mood to FHIR MedicationRequest.intent"/>
+<artifact id="ConceptMap/CF-ConditionClinicalStatus" key="ConceptMap-CF-ConditionClinicalStatus" name="CCDA Problem Concern Status to FHIR Condition Clinical Status"/>
 <artifact id="CapabilityStatement/CcdaOnFhirClient" key="CapabilityStatement-CcdaOnFhirClient" name="CCDA on FHIR Client"/>
 <artifact id="CapabilityStatement/CcdaOnFhirServer" key="CapabilityStatement-CcdaOnFhirServer" name="CCDA on FHIR Server"/>
 <artifact id="ConceptMap/CF-AllergyIntoleranceCategory" key="ConceptMap-CF-AllergyIntoleranceCategory" name="CCDA to FHIR Allergy Intolerance Category"/>
