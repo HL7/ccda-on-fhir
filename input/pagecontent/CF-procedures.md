@@ -9,7 +9,7 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
 #### Note on template selection
 C-CDA 2.1 describes three templates for Procedures: Procedure Activity Act, Procedure Activity Observation, and Procedure Activity Procedure. Procedure Activity Procedure is the most complete, containing everything the other two contain except Observation.value, and several properties not contained by the others. The [C-CDA 2.1 Companion Guide](www.hl7.org/ccdasearch/pdfs/Companion_Guide.pdf) points out that "most vendors successfully and exclusively use the . . . Procedure Activity Procedure," and it then specifies this template for "all interventional, non-interventional, surgical, diagnostic, or therapeutic procedures or treatments pertinent to the patient historically at the time the document is generated." 
 <br/><br/>
-For this reason, we provide maps from FHIR to the Procedure Activity Procedure only. For C-CDA to FHIR, we begin with this most common pattern in this publication. Additional guidance for the other two templates will be forthcoming.
+For this reason, we provide maps from FHIR to the Procedure Activity Procedure only. For C-CDA to FHIR, we begin with this most common pattern in this publication. Additional guidance for the other two templates (which will be very similar) will be forthcoming.
 
 <br />
 <br />
