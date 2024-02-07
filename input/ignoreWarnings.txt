@@ -6,7 +6,7 @@ A definition for CodeSystem 'urn:oid:2.16.840.1.113883.3.13.10.1.1' could not be
 The value set include has too many codes to validate%
 Unknown Code '486' in the system%
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/organization-type|0.1.0
-Wrong Display Name 'Pneumonia, organism unspecified' for http://hl7.org/fhir/sid/icd-9-cm#486. Valid display is (for the language(s) '--')
+Wrong Display Name%
 UCUM Codes that contain human readable annotations like {urine specific gravity} can be misleading (e.g. they are ignored when comparing units). Best Practice is not to depend on annotations in the UCUM code, so this usage should be checked, and the Quantity.unit SHOULD contain the annotation
 The value set expansion is incomplete
 
