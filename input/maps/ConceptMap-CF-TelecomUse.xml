@@ -43,7 +43,7 @@
     </element>
     <element>
       <code value="BAD"/>
-      <display value="bad"/>
+      <display value="bad address"/>
       <target>
         <code value="old"/>
         <display value="Old"/>
@@ -68,7 +68,7 @@
     </element>
     <element>
       <code value="H"/>
-      <display value="home"/>
+      <display value="home address"/>
       <target>
         <code value="home"/>
         <display value="Home"/>
@@ -122,7 +122,7 @@
     </element>
     <element>
       <code value="TMP"/>
-      <display value="temporary"/>
+      <display value="temporary address"/>
       <target>
         <code value="temp"/>
         <display value="Temp"/>

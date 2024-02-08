@@ -62,7 +62,7 @@
       <display value="Temp"/>
       <target>
         <code value="TMP"/>
-        <display value="temporary"/>
+        <display value="temporary address"/>
         <equivalence value="equivalent"/>
       </target> 
     </element>
@@ -71,7 +71,7 @@
       <display value="Old"/>
       <target>
         <code value="BAD"/>
-        <display value="Bad"/>
+        <display value="bad address"/>
         <equivalence value="narrower" />
         <comment value="Age is not implied in CDA value" />
       </target> 
