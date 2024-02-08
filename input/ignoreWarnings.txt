@@ -10,7 +10,8 @@ WARNING: Condition/CF-problem: Condition.code.coding[1].display: Wrong Display N
 
 
 # LOINC Imaging Document Codes value set marked as incomplete (and also too large), but has all (6343) codes from 2022-07 release of http://cts.nlm.nih.gov/fhir/ValueSet/1.3.6.1.4.1.12009.10.2.5
-
+INFORMATION: ValueSet/1.3.6.1.4.1.12009.10.2.5: ValueSet.compose.include[0]: The value set include has too many codes to validate (6,342)
+INFORMATION: ValueSet.where(id = '1.3.6.1.4.1.12009.10.2.5'): The value set expansion is incomplete
 
 
 # Draft, trial-use and external reference elements in examples prior to 2023 ballot 
@@ -32,9 +33,9 @@ Best Practice Recommendation: In general, all observations should have a perform
 # Publisher is adding these modifier extensions - https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Regression.20in.20ConceptMap
 The modifier extension http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence from FHIR version {3} is not allowed to be used at this point (allowed = e:ConceptMap.element.target; this element is [[BackboneElement, ConceptMap.group.element.target]; this is a warning since contexts may be renamed between FHIR versions)
 
-# Publisher not recognizing CGP
+# Publisher not recognizing CGP as valid workgroup (can be addressed by moving extension version to current)
 Unknown code 'cgp' in the CodeSystem %
- The value provided ('cgp') %
+The value provided ('cgp') %
 
 
 # Poor / Buggy Displays from AddressUse Code System
