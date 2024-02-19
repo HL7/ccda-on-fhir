@@ -48,7 +48,7 @@
     "name": [
       {
 	  // Source CCD has name use = "L"
-        "use": "official",
+        "use": "usual",
         "family": "Jones",
         "given": [
           "Myra"
