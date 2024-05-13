@@ -6,7 +6,9 @@ td, th {
 
 This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, please refer to [Results FHIR → CDA](./FC-results.html). For guidance on how to read the table below, see [Reading the C-CDA ↔ FHIR Mapping Pages](./mappingGuidance.html).
 
-...
+Results in C-CDA are collected into `<organizer>` elements containing one or more result `<observation>` element. This corresponds to one FHIR DiagnosticReport for the `<organizer>` which multiple `.result` references to FHIR Observation resources, one for each CDA `<observation>`.
+
+Observation values are generic - they can be of any CDA type in CDA, and *almost* any DataType in FHIR. In CDA, the type is represented by the `xsi:type` attribute on the `<value>` element. In FHIR, the type is represented by the `.value[x]` element; the `[x]` represents a choice among data types, so `.valueQuantity` represents a quantity data type, `.valueInteger` represents a numeric whole number, etc. Not every CDA type is a 1:1 match for a FHIR type, but significant differences have been included in the tables below.
 
 ### C-CDA Organizer to FHIR Diagnostic Report
 
