@@ -17,6 +17,7 @@
 - [Problems](CF-problems.html)
 - [Procedures](CF-procedures.html)
 - [Results](CF-results.html)
+- [Social History](CF-social.html) (Including Smoking Status, Pregnancy Observation)
 - [Vital Signs](CF-vitals.html)
 
 Please refer to [mapping background](mappingBackground.html) for more information how maps were selected and developed.

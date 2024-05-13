@@ -872,6 +872,11 @@
             <generation value="markdown"/>
           </page>
           <page>
+            <nameUrl value="CF-social.html"/>
+            <title value="C-CDA to FHIR Social History"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
             <nameUrl value="CF-vitals.html"/>
             <title value="C-CDA to FHIR Vital Signs"/>
             <generation value="markdown"/>
@@ -924,6 +929,11 @@
           <page>
             <nameUrl value="FC-results.html"/>
             <title value="FHIR to C-CDA Results"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="FC-social.html"/>
+            <title value="FHIR to C-CDA Social History"/>
             <generation value="markdown"/>
           </page>
           <page>
