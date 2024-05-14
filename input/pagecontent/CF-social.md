@@ -43,4 +43,6 @@ In US Core, Pregnancy Observation was first defined in version 6.
 ||.code|`82810-3 (Pregnancy Status)` - C-CDA uses `ASSERTION`, but FHIR clarifies the code to be used.
 |/effectiveTime/@value<br/>or<br/>/effectiveTime/low/@value<br/>or<br/>/effectiveTime/high/@value<br/>or<br/>/author/time|.effectiveDateTime|FHIR only allows a single timestamp. Send the first element from the first column with a populated timestamp.<br/>[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)
 |/value|.valueCodeableConcept|*TODO ValueSet*<br/>Note: the CDA @nullFlavor of UNK maps to a coded value in the FHIR value set.<br/>[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
-|/entryRelationship/estimatedDateofDelivery|.hasMember|Use generic observation mapping above to create a new Observation resource from the C-CDA Date of Delivery observation, and reference it in the Pregnancy Status observation's `.hasMember` field.
+|**[Estimated Date of Delivery](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-EstimatedDateofDelivery.html)**<br/>/entryRelationship/observation[code/@code="11778-8"]/value|.component.code<br/>.component.valueDateTime|Set code to `11778-8` and map value to `.valueDateTime`.
+
+
