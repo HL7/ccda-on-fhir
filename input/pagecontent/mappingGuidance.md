@@ -245,22 +245,22 @@ Note that in FHIR, `Observation.referenceRange` only contains `.low` and `.high`
 <div markdown="1">
 {% highlight xml %}
 <value xsi:type="IVL_PQ">
-  <high value="200" unit="mg/dL">
+  <high value="200" unit="mg/dL"/>
 </value>
 {% endhighlight %}
 or
 {% highlight xml %}
 <value xsi:type="IVL_PQ">
-  <low value="0" unit="mg/dL">
-  <high value="200" unit="mg/dL">
+  <low value="0" unit="mg/dL"/>
+  <high value="200" unit="mg/dL"/>
 </value>
 {% endhighlight %}
 or
 
 {% highlight xml %}
 <value xsi:type="IVL_PQ">
-  <low nullFlavor="NINF">
-  <high value="200" unit="mg/dL">
+  <low nullFlavor="NINF"/>
+  <high value="200" unit="mg/dL"/>
 </value>
 {% endhighlight %}
 
@@ -288,7 +288,7 @@ When `@inclusive="false"`:
 
 {% highlight xml %}
 <value xsi:type="IVL_PQ">
-  <high value="200" unit="mg/dL" inclusive="false">
+  <high value="200" unit="mg/dL" inclusive="false"/>
 </value>
 {% endhighlight %}
 </div>
@@ -313,7 +313,7 @@ When `@inclusive="false"`:
 <div markdown="1">
 {% highlight xml %}
 <value xsi:type="IVL_PQ">
-  <low value="500" unit="mg/dL" inclusive="true">
+  <low value="500" unit="mg/dL" inclusive="true"/>
   <high nullFlavor="PINF">
 </value>
 {% endhighlight %}
@@ -322,7 +322,7 @@ or
 
 {% highlight xml %}
 <value xsi:type="IVL_PQ">
-  <low value="500" unit="mg/dL">
+  <low value="500" unit="mg/dL"/>
 </value>
 {% endhighlight %}
 
@@ -350,8 +350,8 @@ or
 When `@inclusive="false"`:
 {% highlight xml %}
 <value xsi:type="IVL_PQ">
-  <low value="500" unit="mg/dL" inclusive="false">
-  <high nullFlavor="PINF">
+  <low value="500" unit="mg/dL" inclusive="false"/>
+  <high nullFlavor="PINF"/>
 </value>
 {% endhighlight %}
 
@@ -359,7 +359,7 @@ or
 
 {% highlight xml %}
 <value xsi:type="IVL_PQ">
-  <low value="500" unit="mg/dL" inclusive="false">
+  <low value="500" unit="mg/dL" inclusive="false"/>
 </value>
 {% endhighlight %}
 </div>
@@ -384,8 +384,8 @@ or
 <div markdown="1">
 {% highlight xml %}
 <value xsi:type="IVL_PQ">
-  <low value="200" unit="mg/dL">
-  <high value="1000" unit="mg/dL">
+  <low value="200" unit="mg/dL"/>
+  <high value="1000" unit="mg/dL"/>
 </value>
 {% endhighlight %}
 </div>
@@ -417,8 +417,8 @@ Units can be different, as long as they are equivalent:
 
 {% highlight xml %}
 <value xsi:type="IVL_PQ">
-  <low value="200" unit="mg/dL">
-  <high value="1" unit="g/dL">
+  <low value="200" unit="mg/dL"/>
+  <high value="1" unit="g/dL"/>
 </value>
 {% endhighlight %}
 </div>
