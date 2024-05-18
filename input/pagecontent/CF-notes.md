@@ -10,7 +10,7 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
 
 ### C-CDA to FHIR
 
-|C-CDA¹<br/>[Note Activity](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-NoteActivity.html|FHIR<br/>[DocumentReference](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-documentreference.html)|Transform Steps|
+|C-CDA¹<br/>[Note Activity](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-NoteActivity.html)<br/>[DocumentReference](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-documentreference.html)|Transform Steps|
 |:----|:----|:----|
 |/id|.identifier|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
 |/code|.type|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)<br/>**NOTE:** The root code in CDA is always `64109-9: Note` which matches the FHIR Binding.
