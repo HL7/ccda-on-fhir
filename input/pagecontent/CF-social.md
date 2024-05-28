@@ -50,7 +50,19 @@ In US Core, Pregnancy Observation was first defined in version 6.
 |.moodCode||The C-CDA moodCode is `EVN` which is why this maps to FHIR's Pregnancy Status rather than Pregnancy Intent.
 ||.code|`82810-3 (Pregnancy Status)` - C-CDA uses `ASSERTION`, but FHIR clarifies the code to be used.
 |/effectiveTime/@value<br/>or<br/>/effectiveTime/low/@value<br/>or<br/>/effectiveTime/high/@value<br/>or<br/>/author/time|.effectiveDateTime|FHIR only allows a single timestamp. Send the first element from the first column with a populated timestamp.<br/>[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)
-|/value|.valueCodeableConcept|*TODO ValueSet*<br/>Note: the CDA @nullFlavor of UNK maps to a coded value in the FHIR value set.<br/>[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
+|/value|.valueCodeableConcept|Value sets are the same<br/>[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
+|/value/@nullFlavor=UNK|.valueCodeableConcept|Unknown becomes an actual value with system = `http://terminology.hl7.org/CodeSystem/v3-NullFlavor`. Any other nullFlavors should use a data-absent-reason extension.
 |**[Estimated Date of Delivery](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-EstimatedDateofDelivery.html)**<br/>/entryRelationship/observation[code/@code="11778-8"]/value|.component.code<br/>.component.valueDateTime|Set code to `11778-8` and map value to `.valueDateTime`.<br/>Note that while C-CDA hard-codes this to a single value (`11778-8`), there are other, more specific, EDD LOINC codes that could be used as well (see [EDD Including Method](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.81/expansion)). These might be communicated as translations on the entryRelationship/observation/code, as the methodCode, or sent as entirely custom observations. Any of these codes can also reasonably be included as a component to a Pregnancy Observation to represent the estimated date of delivery.
+
+### C-CDA Pregnancy Intention in Next Year to FHIR Pregnancy Intent Observation
+In US Core, Pregnancy Intent was first defined in version 6.
+
+|C-CDA<br/>[Pregnancy Intention](https://hl7.org/cda/us/ccda/StructureDefinition-PregnancyIntentionInNextYear.html)|FHIR<br/>[Pregnancy Intent](https://hl7.org/fhir/us/core/STU6/StructureDefinition-us-core-observation-pregnancyintent.html)|Transform Steps|
+|:----|:----|:----|
+|.moodCode||The C-CDA moodCode is `INT` which is why this maps to FHIR's Pregnancy Status rather than Pregnancy Intent.
+|/code|.code|In both standards, the code is `86645-9`
+|/effectiveTime/low/@value|.effectiveDateTime|FHIR only allows a single timestamp which corresponds to C-CDA's "low" 
+|/value|.valueCodeableConcept|Value sets are the same<br/>[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
+|/value/@nullFlavor=UNK|.valueCodeableConcept|Unknown becomes an actual value with system = `http://terminology.hl7.org/CodeSystem/v3-NullFlavor`. Any other nullFlavors should use a data-absent-reason extension.
 
 
