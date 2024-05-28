@@ -21,7 +21,7 @@ This maps to US Core version 6's Simple Observation. Previous versions of US Cor
 |C-CDA<br/>[Social History Observation](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-SocialHistoryObservation.html)|FHIR<br/>[Simple Observation](https://hl7.org/fhir/us/core/STU6/StructureDefinition-us-core-simple-observation.html)|Transform Steps|
 |:----|:----|:----|
 |/id|.identifier|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
-||.category|Set to `social-history` from [Observation Category Codes](https://build.fhir.org/ig/HL7/UTG/CodeSystem-observation-category.html)
+||.category|Set to `social-history` from [Observation Category Codes](https://build.fhir.org/ig/HL7/UTG/CodeSystem-observation-category.html)<br/>Additional SDOH categories may be set as well, depending on the code of the observation. 
 |/code |.code|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 |/statusCode|.status|*TODO: ConceptMap*
 |/effectiveTime|.effectiveDateTime<br/>or<br/>.effectivePeriod|Prefer effectiveDateTime<br/>[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)
