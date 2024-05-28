@@ -10,10 +10,10 @@ Social History is a category of several templates in C-CDA and several profiles 
 
 Note that some observations in C-CDA map to extensions on the patient or elsewhere in FHIR. In these cases, a FHIR Observation should not be created; instead, the corresponding extension should be used.
 
-- [C-CDA Birth Sex Observation](https://hl7.org/cda/us/ccda/StructureDefinition-BirthSexObservation.html) -> [US Core Birth Sex Extension](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-birthsex.html)
-- [C-CDA Gender Identity Observation](https://hl7.org/cda/us/ccda/StructureDefinition-GenderIdentityObservation.html) -> [US Core Gender Identity Extension](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-genderIdentity.html)
-- [C-CDA Sex Observation](https://hl7.org/cda/us/ccda/StructureDefinition-SexObservation.html) -> [US Core Sex Extension](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-sex.html)
-- [C-CDA Tribal Affiliation Observation](https://hl7.org/cda/us/ccda/StructureDefinition-TribalAffiliationObservation.html) -> [US Core Tribal Affiliation Extension](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-tribal-affiliation.html)
+- [C-CDA Birth Sex Observation](https://hl7.org/cda/us/ccda/StructureDefinition-BirthSexObservation.html) ↔ [US Core Birth Sex Extension](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-birthsex.html)
+- [C-CDA Gender Identity Observation](https://hl7.org/cda/us/ccda/StructureDefinition-GenderIdentityObservation.html) ↔ [US Core Gender Identity Extension](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-genderIdentity.html)
+- [C-CDA Sex Observation](https://hl7.org/cda/us/ccda/StructureDefinition-SexObservation.html) ↔ [US Core Sex Extension](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-sex.html)
+- [C-CDA Tribal Affiliation Observation](https://hl7.org/cda/us/ccda/StructureDefinition-TribalAffiliationObservation.html) ↔ [US Core Tribal Affiliation Extension](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-tribal-affiliation.html)
 
 ### C-CDA Social History Observation to FHIR Observation
 This maps to US Core version 6's Simple Observation. Previous versions of US Core did not define a generic observation, but the following guidance can still be used to create a generic FHIR observation regardless of the version of US Core being targeted.
