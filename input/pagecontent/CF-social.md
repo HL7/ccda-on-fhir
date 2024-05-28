@@ -23,6 +23,7 @@ This maps to US Core version 6's Simple Observation. Previous versions of US Cor
 |/value[xsi:type=CD]<br/>(or CE, CV, CO, CS)|.valueCodeableConcept|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 |/value[xsi:type=INT]|.valueInteger|
 |/value[xsi:type=REAL]|.valueQuantity|Leave unit fields empty
+|/value[xsi:type=ST]|.valueString|
 
 Additional fields, such as `.interpretationCode`, `.referenceRange`, `.performer` are not documented in C-CDA but can be mapped in the same manner as [Results](./CF-results.html).
 
