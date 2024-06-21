@@ -33,7 +33,7 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
 
 ### Illustrative example
 
-{% include examplebutton.html example="CF_patient_example" b_title = "Click on Here To See Highlighted Example" %}
+{% include examplebutton.html example="CF_patient_example" b_title = "Click Here To See Highlighted Example" %}
 
 #### Links to example content
 

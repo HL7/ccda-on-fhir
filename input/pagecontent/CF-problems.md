@@ -38,7 +38,7 @@ When authors or other provenance are recorded in the parent [Problem Concern Act
 
 ### Illustrative example
 
-{% include examplebutton.html example="CF_problem_example" b_title = "Click on Here To See Highlighted Example" %}
+{% include examplebutton.html example="CF_problem_example" b_title = "Click Here To See Highlighted Example" %}
 
 #### Links to example content
 

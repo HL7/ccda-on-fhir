@@ -35,7 +35,7 @@ Mapping is from `@moodCode="EVN"` (i.e. historical) immunizations, not `INT` (fu
 
 ### Illustrative example
 
-{% include examplebutton.html example="CF_immunization_example" b_title = "Click on Here To See Highlighted Example" %}
+{% include examplebutton.html example="CF_immunization_example" b_title = "Click Here To See Highlighted Example" %}
 
 #### Links to example content
 
