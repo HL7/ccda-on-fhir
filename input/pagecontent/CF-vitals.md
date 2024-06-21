@@ -37,7 +37,8 @@ C-CDA vitals are typically grouped into a Vital Signs Organizer to group one or 
 |/referenceRange/observationRange/value[xsi:type=ST]<br/>or<br/>/referenceRange/observationRange/text|.referenceRange.text|
 
 ### Illustrative example
-...
+{% include examplebutton.html example="CF_VitalsHR_example" b_title = "Click on Here To See Highlighted Example" %}
+
 ### Links to example content
 ...
 ### Prior work and Expanded Spreadsheets
