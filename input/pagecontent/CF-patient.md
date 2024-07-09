@@ -21,7 +21,7 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
 |/patient/sdtc:deceasedInd|.deceasedBoolean|**Note:** Only one of `deceasedBoolean` or `deceasedDateTime` may exist. If both are present in CDA, use deceasedDateTime.
 |/patient/sdtc:deceasedTime|.deceasedDateTime|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)
 |/patient/maritalStatusCode|.maritalStatus|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
-|/patient/religiousAffiliationCode|.extension:[patient-religion](https://hl7.org/fhir/extensions/StructureDefinition-patient-religion.html)|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)
+|/patient/religiousAffiliationCode|.extension:[patient-religion](https://hl7.org/fhir/extensions/StructureDefinition-patient-religion.html).valueCodeableConcept|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)
 |/patient/raceCode|.extension:[us-core-race](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-race.html): ombCategory|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)<br/>This should be a category and map to the ombCategory sub-extension. But if it is a detailed race, then it should go in the detailed sub-extension.|
 |/patient/sdtc:raceCode|.extension:[us-core-race](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-race.html)|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)<br/>If code is in [OMB category](http://hl7.org/fhir/us/core/ValueSet/omb-race-category), use us-core-race: ombCategory; else use us-core-race: detailed.<br/>If the detailed race is under a different OMB category that the non-sdtc:raceCode element, then an additional OMB category sub-extension should be included as well.|
 |/patient/raceCode/originalText<br/>and<br/>/patient/sdtc:raceCode/originalText|.extension:[us-core-race](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-race.html): text|The race extension's text sub-extension is required but may only exist once. Recommendation is to comma-delimit all originalText / displayNames available, taking care to not duplicate values.
@@ -31,6 +31,7 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
 |/patient/guardian/addr|.contact.address|[CDA addr ↔ FHIR address ](mappingGuidance.html#cda-addr--fhir-address)|
 |/patient/guardian/telecom|.contact.telecom|[CDA telecom ↔ FHIR telecom](mappingGuidance.html#cda-telecom--fhir-telecom)|
 |/patient/guardian/guardianPerson/name|.contact.name|[CDA name ↔ FHIR name ](mappingGuidance.html#cda-name--fhir-name)|
+|/patient/birthPlace/place/addr|.extension:[patient-birthPlace](http://hl7.org/fhir/StructureDefinition/patient-birthPlace).valueAddress|[CDA addr ↔ FHIR address ](mappingGuidance.html#cda-addr--fhir-address)|
 |/patient/languageCommunication/languageCode|.communication.language||
 |/patient/languageCommunication/preferenceInd|.communication.preferred||
 |/providerOrganization|.managingOrganization|
