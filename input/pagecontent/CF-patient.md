@@ -34,6 +34,8 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
 |/patient/birthPlace/place/addr|.extension:[patient-birthPlace](http://hl7.org/fhir/StructureDefinition/patient-birthPlace).valueAddress|[CDA addr ↔ FHIR address ](mappingGuidance.html#cda-addr--fhir-address)|
 |/patient/languageCommunication/languageCode|.communication.language||
 |/patient/languageCommunication/preferenceInd|.communication.preferred||
+|/patient/languageCommunication/modeCode|.communication.extension:[patient-proficiency](http://hl7.org/fhir/StructureDefinition/patient-proficiency):type|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)<br/>If both modeCode and proficiencyLevelCode are set for a language, only one `patient-proficiency` extension is needed.
+|/patient/languageCommunication/proficiencyLevelCode|.communication.extension:[patient-proficiency](http://hl7.org/fhir/StructureDefinition/patient-proficiency):level|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)<br/>If both modeCode and proficiencyLevelCode are set for a language, only one `patient-proficiency` extension is needed.
 |/providerOrganization|.managingOrganization|
 
 1\. XPath abbrievated for C-CDA US Realm recordTarget as: <br/> ClinicalDocument/recordTarget/patientRole
