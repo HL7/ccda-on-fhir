@@ -33,7 +33,7 @@ The CDA MedicationActivity template uses status values from the Medication Statu
 
 #### Absent Allergies
 
-We solicit feedback on the use of CDA allergy value codes other than those we have mapped. We mapped the codes asserting "allergy" to the corresponding SNOMED codes for "no known allergy," and we left codes for "intolerance" and "propensity to adverse reaction" unmapped. The option would be to map those as well (e.g., negated "235719002	Intolerance to food (finding)" to "429625007 |No known food allergy (situation)|").
+We solicit feedback on the use of CDA allergy value codes other than those we have mapped. We mapped the codes asserting "allergy" to the corresponding SNOMED codes for "no known allergy," and we left codes for "intolerance" and "propensity to adverse reaction" unmapped. The option would be to map those as well (e.g., negated "235719002	Intolerance to food (finding)" to "429625007 - No known food allergy (situation)").
 
 We are aware that there are widely divergent perceptions and understandings of the distinctions among "allergy," "intolerance," and "propensity to adverse reaction." However, we also believe that the Allergy/Intolerance artifacts are not designed for clinical specificity, but rather as a safety tool to prevent administration of harmful substances. As a result, we believe that the physiological mechanism of the reaction is virtually irrelevant. 
 

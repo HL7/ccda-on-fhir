@@ -41,7 +41,7 @@
   <dependsOn>
     <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
     <packageId value="hl7.fhir.uv.extensions"/>
-    <version value="current"/>
+    <version value="5.1.0-snapshot1"/>
   </dependsOn>
   <definition>
     <resource>
@@ -970,7 +970,7 @@
     </parameter>
     <parameter>
       <code value="releaselabel"/>
-      <value value="CI Build"/>
+      <value value="STU 1"/>
     </parameter>
     <parameter>
       <code value="copyrightyear"/>

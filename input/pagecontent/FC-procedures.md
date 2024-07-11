@@ -13,7 +13,10 @@ td, th {
 </div>
 <br/>
 
-This page provides a mapping from FHIR to CDA. For the CDA to FHIR mapping, please refer to [Procedures CDA → FHIR](./CF-procedures.html). For guidance on how to read the table below, see [Reading the C-CDA ↔ FHIR Mapping Pages](./mappingGuidance.html)
+This page provides a mapping from FHIR to CDA. For the CDA to FHIR mapping, please refer to [Procedures CDA → FHIR](./CF-procedures.html). For guidance on how to read the table below, see [Reading the C-CDA ↔ FHIR Mapping Pages](./mappingGuidance.html). 
+<br/>
+#### Note on template selection
+It also specifies a template for “all interventional, non-interventional, surgical, diagnostic, or therapeutic procedures or treatments pertinent to the patient historically at the time the document is generated."  For this reason, we recommend mapping [FHIR Procedures](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-procedure.html) to [Procedure Activity Procedure](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-ProcedureActivityProcedure.html) when using the C-CDA R3/E1 guide for the targeted C-CDA, while guidance on mapping to the other templates when generating an older version C-CDA will be forthcoming.
 
 ### FHIR to C-CDA
 

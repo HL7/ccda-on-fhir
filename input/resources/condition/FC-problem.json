@@ -7,12 +7,6 @@
         "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
         "code": "N"
       }
-    ],
-    "tag": [
-      {
-        "system": "urn:oid:2.16.840.1.113883.3.13.10.1.1",
-        "code": "FHIRr4-CR"
-      }
     ]
   },
   "identifier": [
