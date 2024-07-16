@@ -46,6 +46,10 @@ The C-CDA Example Search site maintains a document of [Common Medication Frequen
 |**[Indication](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-Indication.html)**<br/>/entryRelationship[@typeCode="RSON"]/observation/value|.reasonCode|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 |**[Free text sig](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-MedicationFreeTextSig.html)**<br/>/entryRelationship/substanceAdministration[code/@code="76662-6"]/text|.dosageInstruction.text||
 |**[Instruction Activity](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-Instruction.html)**<br/>/entryRelationship[@typeCode="SUBJ" and @inversionInd="true"]/act|.dosageInstruction.patientInstruction<br/>.dosageInstruction.additionalInstruction|act/text or act/code/originalText can map to patientInstructions. If coded, can map to additionalInstruction.
+|**[Supply Order](https://hl7.org/cda/us/ccda/StructureDefinition-MedicationSupplyOrder.html)**<br/>/entryRelationship[@typeCode="REFR"]/substanceAdministration[@moodCode="INT"]<br/>Note: moodCode=INT means supply, moodCode=EVN means dispense, which is not documented here.
+|/effectiveTime/high|.dispenseRequest.period.end|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)<br/>`low` would similarly map to `start`, but only high is called out in C-CDA.|
+|/repeatNumber|.dispenseRequest.numberOfRepeatsAllowed|**Caution:** in CDA, repeatNumber indicates total number of dispenses allowed. In FHIR, this field is exclusive of the original dispense. So the `numberOfRepeatsAllowed` will be one less than `repeatNumber`.
+|/quantity|.dispenseRequest.quantity|https://hl7.org/cda/us/ccda/StructureDefinition-MedicationSupplyOrder.html
 |**[Comment Activity](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-CommentActivity.html)**<br/>/entryRelationship/act[code/@code="48767-8"]/text|**[Annotation](https://hl7.org/fhir/datatypes.html#Annotation)**<br/>.note||
 
 1\. XPath abbrievated for C-CDA Medication Activity as: <br/> ClinicalDocument/component/structuredBody/component/section[code/@code="10160-0"]/entry/substanceAdministration
