@@ -534,7 +534,7 @@ The mappings of name, address and telecom information are useful in many part of
 |CDA telecom|FHIR telecom|Transform Steps
 |:-----|:-----|:---------
 |@use|.use|[CDA telecom use → FHIR contact point use](./ConceptMap-CF-TelecomUse.html)<br/>Note that CDA's `@use='PG'` is equivalent to FHIR's `.system='pager'`|
-|@value|.system<br/>&<br/>.value|[CDA telecom value → FHIR contact point system](./ConceptMap-CF-TelecomType.html)<br/>Only include information in FHIR value which comes after the CDA system prefix|
+|@value|.system<br/>&<br/>.value|[CDA telecom value → FHIR contact point system](./ConceptMap-CF-TelecomType.html)<br/>Only include information in FHIR value which comes after the CDA system prefix; other formatting may be preserved. E.g. CDA `tel:+1(555)867-5309` becomes `+1(555)867-5309` in FHIR.<br/>|
 
 #### FHIR name → CDA name #####
 
@@ -565,8 +565,8 @@ The mappings of name, address and telecom information are useful in many part of
 
 |FHIR telecom|CDA telecom|Comments
 |:-----|:-----|:---------
-|.system<br/>&<br/>.value |@value|[FHIR contact point system → CDA telecom value](./ConceptMap-FC-TelecomType.html)<br/>Insert FHIR value after the CDA system prefix mapped from FHIR system<br/>Note that FHIR's `.system='pager'` is equivalent to CDA's `@use='PG'` |
 |.use|@use|[FHIR contact point use → CDA use](./ConceptMap-FC-TelecomUse.html)|
+|.system<br/>&<br/>.value |@value|[FHIR contact point system → CDA telecom value](./ConceptMap-FC-TelecomType.html)<br/>Insert FHIR value after the CDA system prefix mapped from FHIR system<br/>Note that FHIR's `.system='pager'` is equivalent to CDA's `@use='PG'` |
 
 ### Missing Data in C-CDA vs. FHIR ####
 

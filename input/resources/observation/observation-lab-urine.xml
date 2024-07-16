@@ -32,19 +32,16 @@
     <effectiveDateTime value="2005-07-05"/>
     <valueQuantity>
         <value value="1.017"/>
-        <system value="http://unitsofmeasure.org"/>
-        <code value="{urine specific gravity}"/>
+        <unit value="urine specific gravity"/>
     </valueQuantity>
     <referenceRange>
         <low>
             <value value="1.003"/>
-            <system value="http://unitsofmeasure.org"/>
-            <code value="{urine specific gravity}"/>
+            <unit value="urine specific gravity"/>
         </low>
         <high>
             <value value="1.035"/>
-            <system value="http://unitsofmeasure.org"/>
-            <code value="{urine specific gravity}"/>
+            <unit value="urine specific gravity"/>
         </high>
     </referenceRange>
 </Observation>

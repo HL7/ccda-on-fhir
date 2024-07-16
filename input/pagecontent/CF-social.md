@@ -44,8 +44,6 @@ In C-CDA 3.0, the Smoking Status - MU and Tobacco Use templates were merged into
 
 ### Illustrative example
 
-{% include examplebutton.html example="CF_smoking_example" b_title = "Click Here To See Highlighted Example" %}
-
 ### C-CDA Pregnancy Observation to FHIR Pregnancy Status Observation
 In US Core, Pregnancy Observation was first defined in version 6.
 
