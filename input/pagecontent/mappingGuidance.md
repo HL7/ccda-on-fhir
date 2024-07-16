@@ -139,6 +139,15 @@ In addition to the context of the previous section, CDA often requires elements 
 
 Note that C-CDA sometimes requires a code from a specific system in the root of a CD and permits others in the translation
 
+#### FHIR Code → CDA Coding
+
+Both CDA and FHIR employ a hierarchy of simpler types and more complex types that re-use the simpler ones. In some cases, a simpler type on one side will map to a more complex one on the other. Where the complexity supports metadata, these maps are essentially the same as the complex-to-complex maps (Coding & CodeableConcept, above). In a few cases, a complex type supports representing a simple source where a simple target would have failed.
+
+|FHIR Property|CDA Target|Notes|
+|:-----|:-----|:-------------|
+|code|originalText|If the CDA element is mapped to a value set that has no translation for the FHIR value, the FHIR value can be placed in orginalText. This does not satisfy CDA terminology bindings, should they exist.|
+
+
 #### Mapping OID ↔ URI
 
 FHIR requires that certain terminologies use a specific uniform resource identifier (URI) while CDA always uses object identifiers (OIDs) for codeSystems. This means: 
