@@ -13,7 +13,7 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
 |C-CDA¹<br/>[Note Activity](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-NoteActivity.html)<br/>[DocumentReference](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-documentreference.html)|Transform Steps|
 |:----|:----|:----|
 |/id|.identifier|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
-|/code|.type|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)<br/>**NOTE:** The root code in CDA is always `64109-9: Note` which matches the FHIR Binding.
+|/code|.type|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)<br/>**NOTE:** The root code in CDA is always `34109-9: Note` which matches the FHIR Binding.
 |/text/@mediaType<br/>&<br/>/text/text()|.attachment.contentType<br/>&<br/>.attachment.data|If @mediaType is present, then representation should = B64, and the inner-text contents are embedded base64-encoded data. In this case, the mediaType and base64-encoded data map 1:1 to attachment.contentType and .data.
 |/text/reference/@value|.attachment.contentType<br/>&<br/>.attachment.data|Convert the narrative element referenced by @value following [Narrative Text](mappingGuidance.html#narrative-text) guidance and use `application/xhtml+xml` as the contentType.<br/>If the narrative has minimal markup (i.e. only `<content>` and `<paragraph>` elements which can be converted to line breaks), it can be converted to `text/plain`.<br/>To send the raw CDA narrative without converting, use `application/cda+xml`, but this is less useful to receivers.
 |/effectiveTime|.context.period|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)
