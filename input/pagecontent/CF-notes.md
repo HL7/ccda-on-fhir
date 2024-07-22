@@ -6,7 +6,7 @@ td, th {
 
 This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, please refer to [Notes FHIR → CDA](./FC-notes.html). For guidance on how to read the table below, see [Reading the C-CDA ↔ FHIR Mapping Pages](./mappingGuidance.html).
 
-...
+Clinical Notes may appear in their own section or as an entry in any open section. They are identified by an `<act>` with a `<code>` value of `34109-9`.
 
 ### C-CDA to FHIR
 

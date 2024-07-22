@@ -42,8 +42,6 @@ In C-CDA 3.0, the Smoking Status - MU and Tobacco Use templates were merged into
 |/code|.code|Prior to US Core 7, the code should be `72166-2 (Tobacco smoking status NCIS)`, but this is an extensible value set.<br/>In US Core 7, the value set remains extensible, but contains the same 4 concepts allowed in the C-CDA R3.0's Smoking Status value set.
 |/effectiveTime|.effectiveDateTime<br/>or<br/>.effectivePeriod|Smoking Status - MU required a timestamp; Tobacco Use required a time range; Smoking Status (3.0) combines the two templates into one and allows for either.
 
-### Illustrative example
-
 ### C-CDA Pregnancy Observation to FHIR Pregnancy Status Observation
 In US Core, Pregnancy Observation was first defined in version 6.
 
