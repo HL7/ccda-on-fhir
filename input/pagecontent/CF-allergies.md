@@ -7,7 +7,7 @@ td, th {
 
 This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, please refer to [Allergies FHIR → CDA](./FC-allergies.html). For guidance on how to read the table below, see [Reading the C-CDA ↔ FHIR Mapping Pages](./mappingGuidance.html)
 
-**Uncommon use case:** Multiple C-CDA Allergy Intolerance observations inside a single Allery Concern act should map to separate and distinct FHIR AllergyIntolerance resources. The C-CDA Companion Guide ([see 5.2.7.1](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=447)) actively discourages the practice of multiple osbervations insice a single act. It may occur, however, since Allergy Concern act allows for multiple Allergy Intolerance observations in C-CDA. Lossless transformations may not be possible without the use of extensions ([see 3.1 of this guide](./mappingBackground.html)).
+**Uncommon use case:** Multiple C-CDA Allergy Intolerance observations inside a single Allergy Concern act should map to separate and distinct FHIR AllergyIntolerance resources. The C-CDA Companion Guide ([see 5.2.7.1](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=447)) actively discourages the practice of multiple observations inside a single act. It may occur, however, since Allergy Concern act allows for multiple Allergy Intolerance observations in C-CDA. Lossless transformations may not be possible without the use of extensions ([see 3.1 of this guide](./mappingBackground.html)).
 
 <br />
 ### C-CDA to FHIR
@@ -31,9 +31,9 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
 |**[Comment Activity](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-CommentActivity.html)**<br/>/entryRelationship/act[code/@code="48767-8"]/text³|**[Annotation](https://hl7.org/fhir/datatypes.html#Annotation)**<br/>.note||
 
 
-1\. XPath abbrievated for C-CDA Allergy Concern act as: <br/> ClinicalDocument/component/structuredBody/component/section[code/@code="48765-2"]/entry/act/
+1\. XPath abbreviated for C-CDA Allergy Concern act as: <br/> ClinicalDocument/component/structuredBody/component/section[code/@code="48765-2"]/entry/act/
 
-2\. XPath abbrievated for C-CDA Allergy Inteolerance observation as: <br/> ClinicalDocument/component/structuredBody/component/section[code/@code="48765-2"]/entry/act/entryRelationship[@typeCode="SUBJ"]/observation
+2\. XPath abbreviated for C-CDA Allergy Intolerance observation as: <br/> ClinicalDocument/component/structuredBody/component/section[code/@code="48765-2"]/entry/act/entryRelationship[@typeCode="SUBJ"]/observation
 
 3\. Note that these entryRelationships will also have inversionInd="true" in CDA
 

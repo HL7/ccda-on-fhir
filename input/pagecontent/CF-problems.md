@@ -32,9 +32,9 @@ Note that C-CDA includes a Concern wrapper act from which status may be read; mo
 |**[Age Observation]()**<br/>/entryRelationship[@typeCode="SUBJ" and @inversionInd="true"]/observation[code/@code="445518008"]/value|.onsetAge|**CAUTION:** Only one of `onsetAge` or `onsetDateTime` may be present.<br/>[CDA ↔ FHIR Quantity](mappingGuidance.html#cda--fhir-quantity)
 |**Supporting Observations (e.g. [Assessment Scale Observation](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-AssessmentScaleObservation.html))**<br/>/entryRelationship[@typeCode="SPRT"]/observation|.evidence.detail|Create an Observation resource, mapping fields like `id`, `code`, `effectiveTime`, `value` similar to [Results](CF-results.html). If the CDA observation is an SDOH observation, use the [US Core Observation Screening Assessment](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-observation-screening-assessment.html) profile.
 
-1\. XPath abbrievated for C-CDA Problem Concern act as: <br/> ClinicalDocument/component/structuredBody/component/section[code/@code="11450-4"]/entry/act/
+1\. XPath abbreviated for C-CDA Problem Concern act as: <br/> ClinicalDocument/component/structuredBody/component/section[code/@code="11450-4"]/entry/act/
 
-2\. XPath abbrievated for C-CDA Problem Observation as: <br/> ClinicalDocument/component/structuredBody/component/section[code/@code="11450-4"]/entry/act/entryRelationship[@typeCode="SUBJ"]/observation/
+2\. XPath abbreviated for C-CDA Problem Observation as: <br/> ClinicalDocument/component/structuredBody/component/section[code/@code="11450-4"]/entry/act/entryRelationship[@typeCode="SUBJ"]/observation/
 
 When authors or other provenance are recorded in the parent [Problem Concern Act](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-ProblemConcernAct.html), it is recommended that those data be mapped to the FHIR Condition. 
 
