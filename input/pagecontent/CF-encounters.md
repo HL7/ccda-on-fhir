@@ -25,7 +25,7 @@ Encounter Activities in the Encounters Section (or elsewhere in the document, su
 |/performer/sdtc:functionCode <sup>(b)</sup>|.participant.type|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)
 |/participant[@typeCode="LOC"] <sup>(b)</sup><br/>/location <sup>(h)</sup>|.location
 |**[Indication](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-Indication.html)** <sup>(b)</sup><br/>/entryRelationship[@typeCode="RSON"]/observation|.reasonCode<br/>or<br/>.reasonReference|If the id of the indication references a problem in the document that has been converted to a FHIR resource, populate .reasonReference with a reference to that resource. Otherwise, map observation/value to .reasonCode.<br/>[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)
-|**[Encounter Diagnosis](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-EncounterDiagnosis.html)** <sup>(b)</sup><br/>/entryRelationship/act[code/@code="29308-4"]/observation|.diagnosis.condition|Map similar to [CDA → FHIR Problems](./CF-problems.html).<br/>*TODO: Rename to FHIR Conditions, add a note on that page about where it's coming from; update the category code.*
+|**[Encounter Diagnosis](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-EncounterDiagnosis.html)** <sup>(b)</sup><br/>/entryRelationship/act[code/@code="29308-4"]/observation|**[Encounter Diagnosis](https://hl7.org/fhir/us/core/StructureDefinition-us-core-condition-encounter-diagnosis.html)**<br/>&<br/>.diagnosis.condition|The observation maps identically to [CDA → FHIR Problems](./CF-problems.html).<br/>Since this is an encounter diagnosis, the `Observation.category` should be set to `encounter-diagnosis`.
 
 
 ### Illustrative example
