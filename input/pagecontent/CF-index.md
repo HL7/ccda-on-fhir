@@ -13,6 +13,7 @@
 - [Immunizations](CF-immunizations.html)
 - [Medications](CF-medications.html)
 - [Notes](CF-notes.html)
+- [Participation](CF-participations.html) (Including Author, DataEnterer, Informant, Performer, Participant)
 - [Patient](CF-patient.html)
 - [Problems](CF-problems.html)
 - [Procedures](CF-procedures.html)
