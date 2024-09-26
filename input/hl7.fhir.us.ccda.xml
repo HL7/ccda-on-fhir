@@ -832,6 +832,11 @@
             <generation value="markdown"/>
           </page>
           <page>
+            <nameUrl value="CF-participations.html"/>
+            <title value="C-CDA to FHIR Participations"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
             <nameUrl value="CF-allergies.html"/>
             <title value="C-CDA to FHIR Allergies"/>
             <generation value="markdown"/>
