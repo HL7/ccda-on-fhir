@@ -98,7 +98,7 @@ Note when the only field populated is `<standardIndustryClassCode>`, the Organiz
 |/code||[See Mapping code](#mapping-code)|
 |/addr|.address|[CDA id ↔ FHIR address](mappingGuidance.html##cda-addr--fhir-address)|
 |/telecom|.telecom|[CDA id ↔ FHIR telecom](mappingGuidance.html#cda-telecom--fhir-telecom)|
-|**[Person](https://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Person.html)<br/>[Playing entity](https://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-PlayingEntity.html)**||Person is the CDA data type for `<assignedPerson>` and `<associatedPerson>`.|
+|**[Person](https://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Person.html)<br/>[PlayingEntity](https://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-PlayingEntity.html)**||Person is the CDA data type for `<assignedPerson>` and `<associatedPerson>`.|
 |//name|.name|[CDA name ↔ FHIR name](mappingGuidance.html#cda-name--fhir-name)|
 |//name/suffix|.qualification.code|If the suffix contains a qualifier like PhD, CNP, etc.|
 |//desc|.qualification.code<br/>or<br/>.text|Only map to qualifier if desc contains a qualifier.
