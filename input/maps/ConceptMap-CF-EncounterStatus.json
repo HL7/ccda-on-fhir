@@ -1,0 +1,142 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "CF-EncounterStatus",
+  "extension" : [
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode" : "cgp"
+    }
+  ],
+  "url" : "http://hl7.org/fhir/us/ccda/ConceptMap/CF-EncounterStatus",
+  "version" : "1.2.0",
+  "name" : "CCDAtoFHIREncounterStatus",
+  "title" : "C-CDA to FHIR Encounter Status",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2024-09-22T17:40:28+00:00",
+  "publisher" : "HL7 International / Cross-Group Projects",
+  "contact" : [
+    {
+      "name" : "HL7 International / Cross-Group Projects",
+      "telecom" : [
+        {
+          "system" : "url",
+          "value" : "http://www.hl7.org/Special/committees/cgp"
+        }
+      ]
+    }
+  ],
+  "description" : "C-CDA to FHIR Encounter Status",
+  "jurisdiction" : [
+    {
+      "coding" : [
+        {
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "US"
+        }
+      ]
+    }
+  ],
+  "sourceUri" : "http://terminology.hl7.org/CodeSystem/v3-ActStatus",
+  "targetUri" : "http://hl7.org/fhir/encounter-status",
+  "group" : [
+    {
+      "source" : "http://terminology.hl7.org/CodeSystem/v3-ActStatus",
+      "target" : "http://hl7.org/fhir/encounter-status",
+      "element" : [
+        {
+          "code" : "aborted",
+          "display" : "Aborted",
+          "target" : [
+            {
+              "code" : "unknown",
+              "display" : "Unknown",
+              "equivalence" : "wider",
+              "comment" : "Semantically this could be 'finished', but that might imply completion."
+            }
+          ]
+        },
+        {
+          "code" : "active",
+          "display" : "Active",
+          "target" : [
+            {
+              "code" : "in-progress",
+              "display" : "In-progress",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "cancelled",
+          "display" : "Cancelled",
+          "target" : [
+            {
+              "code" : "cancelled",
+              "display" : "Cancelled",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "completed",
+          "display" : "Completed",
+          "target" : [
+            {
+              "code" : "finished",
+              "display" : "Finished",
+              "equivalence" : "equal"
+            }
+          ]
+        },
+        {
+          "code" : "held",
+          "display" : "Held",
+          "target" : [
+            {
+              "code" : "planned",
+              "display" : "Planned",
+              "equivalence" : "wider",
+              "comment" : "Held encounters have been planned, but intent to execute has been suspended."
+            }
+          ]
+        },
+        {
+          "code" : "new",
+          "display" : "New",
+          "target" : [
+            {
+              "code" : "unknown",
+              "display" : "Unknown",
+              "equivalence" : "wider",
+              "comment" : "This is not Planned, because New  encounters have been planned but may or may not have been started. 'Planned' encounters in FHIR have not been started."
+            }
+          ]
+        },
+        {
+          "code" : "suspended",
+          "display" : "Suspended",
+          "target" : [
+            {
+              "code" : "on-leave",
+              "display" : "On-leave",
+              "equivalence" : "narrower",
+              "comment" : "Suspended encounters have been started, but intent to execute has been temporarily stopped. On-leave is a special case of this circumstance."
+            }
+          ]
+        },
+        {
+          "code" : "nullified",
+          "display" : "Nullified",
+          "target" : [
+            {
+              "code" : "entered-in-error",
+              "display" : "Entered-in-error",
+              "equivalence" : "equal"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
