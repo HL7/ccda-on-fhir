@@ -27,6 +27,10 @@ Examples for C-CDA to FHIR transforms are provided based on a consensus of vario
 
 The highlighted output images were created using an [open source tool for C-CDA ↔ FHIR Mapping](https://github.com/jddamore/cda-fhir-compare) developed as part of this project.  
 
+#### Missing Maps
+
+If you have data in an input artifact that is defined in the source specification and for which no map is specified here, that means that this team did not find a target for which we could build consensus. In most cases, this means that the data is unusual enough that the target specification did not address it (e.g., treatments for allergy reactions, which would probably be reported in the Problems or Procedures section rather than the Allergies section). In these cases, the team felt that converging on one design from the many solution possible patterns was not an optimal investment of resources. If readers identify elements for which this seems insufficient, they should comment.
+
 ### CDA id ↔ FHIR identifier
 
 Identifiers in both FHIR and CDA can divide the identifier value from its namespace: FHIR as the identifier.system and CDA as the id.root. In many cases, this correspondence works well.
