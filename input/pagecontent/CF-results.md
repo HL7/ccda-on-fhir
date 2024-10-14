@@ -4,7 +4,7 @@ td, th {
 }
 </style>
 
-This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, please refer to [Results FHIR → CDA](./FC-results.html). For guidance on how to read the table below, see [Reading the C-CDA ↔ FHIR Mapping Pages](./mappingGuidance.html).
+This page provides a mapping from CDA to FHIR. <!-- For the FHIR to CDA mapping, please refer to [Results FHIR → CDA](./FC-results.html). --> For guidance on how to read the table below, see [Reading the C-CDA ↔ FHIR Mapping Pages](./mappingGuidance.html).
 
 Results in C-CDA are collected into `<organizer>` elements containing one or more result `<observation>` element. This corresponds to one FHIR DiagnosticReport for the `<organizer>` which multiple `.result` references to FHIR Observation resources, one for each CDA `<observation>`.
 

@@ -4,7 +4,7 @@ td, th {
 }
 </style>
 
-This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, please refer to [Results FHIR → CDA](./FC-results.html). For guidance on how to read the table below, see [Reading the C-CDA ↔ FHIR Mapping Pages](./mappingGuidance.html).
+This page provides a mapping from CDA to FHIR. <!-- For the FHIR to CDA mapping, please refer to [Results FHIR → CDA](./FC-results.html). --> For guidance on how to read the table below, see [Reading the C-CDA ↔ FHIR Mapping Pages](./mappingGuidance.html).
 
 Social History is a category of several templates in C-CDA and several profiles in US Core. At a high-level, mappings between CDA `<observation>` acts and FHIR Observation resources are similar and are represented by the top table. Differences are documented on the proceeding tables.
 
