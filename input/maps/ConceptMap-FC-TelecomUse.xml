@@ -81,7 +81,7 @@
       <display value="Mobile"/>
       <target>
         <code value="MC"/>
-        <display value="mobile contact)"/>
+        <display value="mobile contact"/>
         <equivalence value="equivalent"/>
       </target>
     </element>
