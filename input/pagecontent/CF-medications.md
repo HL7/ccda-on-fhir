@@ -25,7 +25,7 @@ The C-CDA Example Search site maintains a document of [Common Medication Frequen
 
 ### C-CDA to FHIR (MedicationRequest)
 
-|C-CDA¹<br>[Medication Activity substanceAdministration](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-MedicationActivity.html)|FHIR<br>[MedicationRequest](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-medicationrequest.html)|Transform Steps|
+|C-CDA¹<br>[Medication Activity substanceAdministration](https://hl7.org/cda/us/ccda/StructureDefinition-MedicationActivity.html)|FHIR<br>[MedicationRequest](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-medicationrequest.html)|Transform Steps|
 |:----|:----|:----|
 |/@negationInd="true"|set .doNotPerform=true||
 |@moodCode|.intent|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept) <br/>[Mood to intent](ConceptMap-CF-MedActivityMood.html)|
@@ -48,14 +48,14 @@ The C-CDA Example Search site maintains a document of [Common Medication Frequen
 |/author|.requester<br/>&<br/>**[Provenance](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-procedure.html)**|[CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)|
 |/author/time|.authoredOn|Earliest, if more than one.<br/>[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
 |**[Drug Vehicle](https://hl7.org/cda/us/ccda/StructureDefinition-DrugVehicle.html)**<br/>/participant[@typeCode="COV"]/playingEntity/code|Medication.ingredient|[See below](#c-cda-to-fhir-medication)
-|**[Indication](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-Indication.html)**<br/>/entryRelationship[@typeCode="RSON"]/observation/value|.reasonCode|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
-|**[Free text sig](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-MedicationFreeTextSig.html)**<br/>/entryRelationship/substanceAdministration[code/@code="76662-6"]/text|.dosageInstruction.text||
-|**[Instruction Activity](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-Instruction.html)**<br/>/entryRelationship[@typeCode="SUBJ" and @inversionInd="true"]/act|.dosageInstruction.patientInstruction<br/>.dosageInstruction.additionalInstruction|act/text or act/code/originalText can map to patientInstructions. If coded, can map to additionalInstruction.
+|**[Indication](https://hl7.org/cda/us/ccda/StructureDefinition-Indication.html)**<br/>/entryRelationship[@typeCode="RSON"]/observation/value|.reasonCode|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
+|**[Free text sig](https://hl7.org/cda/us/ccda/StructureDefinition-MedicationFreeTextSig.html)**<br/>/entryRelationship/substanceAdministration[code/@code="76662-6"]/text|.dosageInstruction.text||
+|**[Instruction Activity](https://hl7.org/cda/us/ccda/StructureDefinition-Instruction.html)**<br/>/entryRelationship[@typeCode="SUBJ" and @inversionInd="true"]/act|.dosageInstruction.patientInstruction<br/>.dosageInstruction.additionalInstruction|act/text or act/code/originalText can map to patientInstructions. If coded, can map to additionalInstruction.
 |**[Supply Order](https://hl7.org/cda/us/ccda/StructureDefinition-MedicationSupplyOrder.html)**<br/>/entryRelationship[@typeCode="REFR"]/substanceAdministration[@moodCode="INT"]||Note: moodCode=INT means supply, moodCode=EVN means dispense, which is not documented here.
 |../effectiveTime/high|.dispenseRequest.period.end|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)<br/>`low` would similarly map to `start`, but only high is called out in C-CDA.|
 |../repeatNumber|.dispenseRequest.numberOfRepeatsAllowed|**Caution:** in CDA, repeatNumber indicates total number of dispenses allowed. In FHIR, this field is exclusive of the original dispense. So the `numberOfRepeatsAllowed` will be one less than `repeatNumber`.
 |../quantity|.dispenseRequest.quantity|[CDA ↔ FHIR Quantity](mappingGuidance.html#cda--fhir-quantity)
-|**[Comment Activity](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-CommentActivity.html)**<br/>/entryRelationship/act[code/@code="48767-8"]/text|**[Annotation](https://hl7.org/fhir/datatypes.html#Annotation)**<br/>.note||
+|**[Comment Activity](https://hl7.org/cda/us/ccda/StructureDefinition-CommentActivity.html)**<br/>/entryRelationship/act[code/@code="48767-8"]/text|**[Annotation](https://hl7.org/fhir/datatypes.html#Annotation)**<br/>.note||
 |/precondition|.asNeededBoolean = true|The presence of a precondition element indicates asNeededBoolean should be true.<br/>More complex maps may be possible with .asNeededCodeableConcept.|
 
 1\. XPath abbrievated for C-CDA Medication Activity as: <br/> ClinicalDocument/component/structuredBody/component/section[code/@code="10160-0"]/entry/substanceAdministration
@@ -63,7 +63,7 @@ The C-CDA Example Search site maintains a document of [Common Medication Frequen
 ### C-CDA to FHIR (Medication)
 MedicationRequest (and other resources) may represent the medication as a simple CodeableConcept. But when additional information about the medication needs to be conveyed, a Medication resource should be created instead and referenced by the MedicationRequest resource. Implementers may also opt to always create Medication resources.
 
-|C-CDA¹<br>[Medication Activity substanceAdministration](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-MedicationActivity.html)|FHIR<br>[Medication](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-medication.html)|Transform Steps|
+|C-CDA¹<br>[Medication Activity substanceAdministration](https://hl7.org/cda/us/ccda/StructureDefinition-MedicationActivity.html)|FHIR<br>[Medication](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-medication.html)|Transform Steps|
 |:----|:----|:----|
 |/administrationUnitCode|.form|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)
 |/consumable/manufacturedProduct/manufacturedMaterial/code|.code|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|

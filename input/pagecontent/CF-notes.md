@@ -10,7 +10,7 @@ Clinical Notes may appear in their own section or as an entry in any open sectio
 
 ### C-CDA to FHIR
 
-|C-CDA¹<br/>[Note Activity](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-NoteActivity.html)|[DocumentReference](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-documentreference.html)|Transform Steps|
+|C-CDA¹<br/>[Note Activity](https://hl7.org/cda/us/ccda/StructureDefinition-NoteActivity.html)|[DocumentReference](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-documentreference.html)|Transform Steps|
 |:----|:----|:----|
 |/id|.identifier|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
 |/code/translation|.type|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)<br/>**NOTE:** The root code in C-CDA is always `34109-9: Note`. A more specific code may be sent in translation which should be sent as the DocumentReference.type. If there is no translation, however, `34109-9` may be sent as the type.

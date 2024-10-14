@@ -16,11 +16,11 @@ td, th {
 This page provides a mapping from FHIR to CDA. For the CDA to FHIR mapping, please refer to [Procedures CDA → FHIR](./CF-procedures.html). For guidance on how to read the table below, see [Reading the C-CDA ↔ FHIR Mapping Pages](./mappingGuidance.html). 
 <br/>
 #### Note on template selection
-It also specifies a template for “all interventional, non-interventional, surgical, diagnostic, or therapeutic procedures or treatments pertinent to the patient historically at the time the document is generated."  For this reason, we recommend mapping [FHIR Procedures](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-procedure.html) to [Procedure Activity Procedure](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-ProcedureActivityProcedure.html) when using the C-CDA R3/E1 guide for the targeted C-CDA, while guidance on mapping to the other templates when generating an older version C-CDA will be forthcoming.
+It also specifies a template for “all interventional, non-interventional, surgical, diagnostic, or therapeutic procedures or treatments pertinent to the patient historically at the time the document is generated."  For this reason, we recommend mapping [FHIR Procedures](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-procedure.html) to [Procedure Activity Procedure](https://hl7.org/cda/us/ccda/StructureDefinition-ProcedureActivityProcedure.html) when using the C-CDA R3/E1 guide for the targeted C-CDA, while guidance on mapping to the other templates when generating an older version C-CDA will be forthcoming.
 
 ### FHIR to C-CDA
 
-|FHIR<br/>[Procedure](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-procedure.html)|C-CDA¹<br/>[Procedure Activity procedure](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-ProcedureActivityProcedure.html)|Transform Steps|
+|FHIR<br/>[Procedure](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-procedure.html)|C-CDA¹<br/>[Procedure Activity procedure](https://hl7.org/cda/us/ccda/StructureDefinition-ProcedureActivityProcedure.html)|Transform Steps|
 |:----|:----|:----|
 |.identifier|/id|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
 |.status|/statusCode|[FHIR status → CDA statusCode](./ConceptMap-FC-ProcedureStatus.html)|
@@ -30,10 +30,10 @@ It also specifies a template for “all interventional, non-interventional, surg
 |.performedPeriod.end|/effectiveTime/high|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
 |.performer.actor|/performer|[CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)|
 |.performer.onBehalfOf|/perfomer/assignedEntity/representedOrganization|[CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)|
-|.location|**[Service Delivery Location](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-ServiceDeliveryLocation.html)**<br/>/participant[@typeCode="LOC"]<br/>/participantRole||
-|.reasonCode|**[Indication](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-Indication.html)**<br/>/entryRelationship[@typeCode="RSON"]<br/>/observation/value|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
+|.location|**[Service Delivery Location](https://hl7.org/cda/us/ccda/StructureDefinition-ServiceDeliveryLocation.html)**<br/>/participant[@typeCode="LOC"]<br/>/participantRole||
+|.reasonCode|**[Indication](https://hl7.org/cda/us/ccda/StructureDefinition-Indication.html)**<br/>/entryRelationship[@typeCode="RSON"]<br/>/observation/value|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 |.bodySite|/targetSiteCode|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
-|**[Annotation](https://hl7.org/fhir/datatypes.html#Annotation)**<br/>.note|**[Comment Activity](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-CommentActivity.html)**<br/>entryRelationship/act[code@code="48767-8"]/entryRelationship/act/text||
+|**[Annotation](https://hl7.org/fhir/datatypes.html#Annotation)**<br/>.note|**[Comment Activity](https://hl7.org/cda/us/ccda/StructureDefinition-CommentActivity.html)**<br/>entryRelationship/act[code@code="48767-8"]/entryRelationship/act/text||
 
 1\. XPath abbrievated for C-CDA Procedure as: <br/> ClinicalDocument/component/structuredBody/component/section[code/@code="47519-4"]/entry/procedure
 
