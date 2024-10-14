@@ -10,7 +10,7 @@ C-CDA vitals are typically grouped into a Vital Signs Organizer to group one or 
 
 ### C-CDA Vital Signs Organizer to FHIR Observation Panel
 
-|C-CDA¹<br/>[Vital SignsOrganizer](https://hl7.org/cda/us/ccda/StructureDefinition-VitalSignsOrganizer.html)|FHIR<br/>[Vital Signs Observation](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-vital-signs.html)|Transform Steps|
+|C-CDA¹<br/>[Vital SignsOrganizer](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-VitalSignsOrganizer.html)|FHIR<br/>[Vital Signs Observation](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-vital-signs.html)|Transform Steps|
 |:----|:----|:----|
 |/id|.identifier|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
 ||.category|Set to `vital-signs` from [Vital Signs value set](https://hl7.org/fhir/us/core/STU4/ValueSet-us-core-vital-signs.html)
@@ -21,7 +21,7 @@ C-CDA vitals are typically grouped into a Vital Signs Organizer to group one or 
 
 ### C-CDA Vital Signs Observation to FHIR Observation
 
-|C-CDA¹<br/>[Vital Sign Observation](https://hl7.org/cda/us/ccda/StructureDefinition-VitalSignObservation.html)|FHIR<br/>[Vital Signs Observation](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-vital-signs.html)|Transform Steps<br/>Note: US Core defines separate profiles for individual vitals such as [weight](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-body-weight.html), [heart rate](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-heart-rate.html), etc.|
+|C-CDA¹<br/>[Vital Sign Observation](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-VitalSignObservation.html)|FHIR<br/>[Vital Signs Observation](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-vital-signs.html)|Transform Steps<br/>Note: US Core defines separate profiles for individual vitals such as [weight](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-body-weight.html), [heart rate](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-heart-rate.html), etc.|
 |:----|:----|:----|
 |/id|.identifier|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
 ||.category|Set to `vital-signs` from [Vital Signs value set](https://hl7.org/fhir/us/core/STU4/ValueSet-us-core-vital-signs.html)

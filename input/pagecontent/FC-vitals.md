@@ -10,7 +10,7 @@ FHIR Vitals that are grouped into a panel using the memberOf property are mapped
 
 ### FHIR Observation Panel to C-CDA Vital Signs Organizer
 
-|FHIR<br/>[Vital Signs Observation](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-vital-signs.html)|C-CDA¹<br/>[Vital SignsOrganizer](https://hl7.org/cda/us/ccda/StructureDefinition-VitalSignsOrganizer.html)|Transform Steps|
+|FHIR<br/>[Vital Signs Observation](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-vital-signs.html)|C-CDA¹<br/>[Vital SignsOrganizer](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-VitalSignsOrganizer.html)|Transform Steps|
 |:----|:----|:----|
 |.identifier|/id|[FHIR identifier ↔ CDA id](mappingGuidance.html#cda-id--fhir-identifier)|
 |.category = `vital-signs` from [Vital Signs value set](https://hl7.org/fhir/us/core/STU4/ValueSet-us-core-vital-signs.html)||
@@ -22,7 +22,7 @@ FHIR Vitals that are grouped into a panel using the memberOf property are mapped
 
 ### FHIR Observation to C-CDA Vital Signs Observation
 
-|FHIR<br/>[Vital Signs Observation](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-vital-signs.html)|C-CDA¹<br/>[Vital Sign Observation](https://hl7.org/cda/us/ccda/StructureDefinition-VitalSignObservation.html)|Transform Steps|
+|FHIR<br/>[Vital Signs Observation](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-vital-signs.html)|C-CDA¹<br/>[Vital Sign Observation](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-VitalSignObservation.html)|Transform Steps|
 |:----|:----|:----|
 |.identifier|/id|[FHIR identifier ↔ CDA id](mappingGuidance.html#cda-id--fhir-identifier)|
 |.code |/code|[FHIR CodeableConcept ↔ CDA coding ](mappingGuidance.html#fhir-codeableconcept--cda-coding)|

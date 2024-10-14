@@ -17,7 +17,7 @@ This page provides a mapping from FHIR to CDA. For the CDA to FHIR mapping, plea
 
 ### FHIR to C-CDA
 
-|FHIR<br/>[Patient](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-patient.html#profile)|C-CDA¹<br/>[US Realm Header recordTarget](https://hl7.org/cda/us/ccda/StructureDefinition-USRealmHeader.html)|Transform Steps|
+|FHIR<br/>[Patient](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-patient.html#profile)|C-CDA¹<br/>[US Realm Header recordTarget](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-USRealmHeader.html)|Transform Steps|
 |:----|:----|:----|
 |.extension.extension (race)<br/>url=http://hl7.org/fhir/us/core/STU4/StructureDefinition/us-core-race|/patientRole/patient/raceCode<br/>&<br/>/patientRole/patient/sdtc:raceCode|only one ombCategory extension goes in raceCode; other values go in sdtc:raceCode|
 |.extension.extension (ethnicity)<br/>url=http://hl7.org/fhir/us/core/STU4/StructureDefinition/us-core-ethnicity|/patientRole/patient/ethnicGroupCode<br/>&<br/>/patientRole/patient/sdtc:ethnicGroupCode|only one ombCategory extension goes in ethnicGroupCode; other values go in sdtc:ethnicGroupCode|

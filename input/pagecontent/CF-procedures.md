@@ -13,7 +13,7 @@ C-CDA 2.1 describes three templates for Procedures: Procedure Activity Act, Proc
 <br />
 ### C-CDA to FHIR
 
-|C-CDA¹<br/>[Procedure Activity procedure](https://hl7.org/cda/us/ccda/StructureDefinition-ProcedureActivityProcedure.html)|FHIR<br/>[Procedure](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-procedure.html)|Transform Steps|
+|C-CDA¹<br/>[Procedure Activity procedure](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-ProcedureActivityProcedure.html)|FHIR<br/>[Procedure](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-procedure.html)|Transform Steps|
 |:----|:----|:----|
 |/@negationInd="true"|set status="not-done"||
 |/id|.identifier|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
@@ -25,9 +25,9 @@ C-CDA 2.1 describes three templates for Procedures: Procedure Activity Act, Proc
 |/targetSiteCode|.bodySite|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 |/author|.recorder<br/>&<br/>**[Provenance](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-procedure.html)**|<br/>[CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance) <br/>If a latest author can be identified, map to .recorder.<br/>Any author with a time can be put in Provenance.|
 |/performer/assignedEntity|.performer.actor|May map to Practitioner, PractitionerRole, or Organization<br/>onBehalfOf should not be used when actor is a Practitioner or PractitionerRole |
-|**[Service Delivery Location](https://hl7.org/cda/us/ccda/StructureDefinition-ServiceDeliveryLocation.html)**<br/>/participant[@typeCode="LOC"]/participantRole|.location||
-|**[Indication](https://hl7.org/cda/us/ccda/StructureDefinition-Indication.html)**<br/>/entryRelationship[@typeCode="RSON"]/observation/value|.reasonCode|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
-|**[Comment Activity](https://hl7.org/cda/us/ccda/StructureDefinition-CommentActivity.html)**<br/>/entryRelationship/act[code/@code="48767-8"]/text|**[Annotation](https://hl7.org/fhir/datatypes.html#Annotation)**<br/>.note|
+|**[Service Delivery Location](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-ServiceDeliveryLocation.html)**<br/>/participant[@typeCode="LOC"]/participantRole|.location||
+|**[Indication](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-Indication.html)**<br/>/entryRelationship[@typeCode="RSON"]/observation/value|.reasonCode|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
+|**[Comment Activity](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-CommentActivity.html)**<br/>/entryRelationship/act[code/@code="48767-8"]/text|**[Annotation](https://hl7.org/fhir/datatypes.html#Annotation)**<br/>.note|
 
 1\. XPath abbrievated for C-CDA Procedure as: <br/> ClinicalDocument/component/structuredBody/component/section[code/@code="47519-4"]/entry/procedure
 
