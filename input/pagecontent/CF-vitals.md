@@ -40,14 +40,258 @@ C-CDA vitals are typically grouped into a Vital Signs Organizer to group one or 
 
 2\. Some C-CDA observations need special handling when converting to FHIR. When recording the following vitals, the value, interpretation, and referenceRange should be placed in a `.component` element within a parent Observation.
 
-**[Blood Pressure](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-blood-pressure.html)** (LOINC codes `8480-6` - systolic & `8462-4` - diastolic)
+**[Blood Pressure](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-blood-pressure.html)** (C-CDA observations with codes `8480-6` - systolic & `8462-4` - diastolic)
 - Set `Observation.code` to `85354-9` (Blood Pressure Panel) and create 2 components for the systolic and diastolic readings. Both components are required.
 - Do not send `Observation.valueQuantity`
 
-**[Pulse Oximetry](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-pulse-oximetry.html)** (LOINC codes `3150-0` - Inhaled Oxygen Concentration & `3151-8` - Inhaled Oxygen Flow Rate)
+**[Pulse Oximetry](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-pulse-oximetry.html)** (C-CDA observations with codes `3150-0` - Inhaled Oxygen Concentration,  `3151-8` - Inhaled Oxygen Flow Rate, `59408-5` - Oxygen saturation in Arterial blood by Pulse oximetry, or  `2708-6` - Oxygen saturation in Arterial blood)
 - `Observation.code` should contain two coding values: `59408-5` & `2708-6`
 - Observation.valueQuantity represents the Oxygen saturation (e.g. `98%`)
-- Create individual components for `3150-0` - Inhaled Oxygen Concentration & `3151-8` - Inhaled Oxygen Flow Rate
+- Create individual components for `3150-0` - Inhaled Oxygen Concentration & `3151-8` - Inhaled Oxygen Flow Rate (only if values exist)
+
+<table>
+<tr><th>C-CDA Blood Pressure Example</th><th>FHIR Blood Pressure Example</th></tr>
+<tr><td>
+<div markdown="1">
+{% highlight xml %}
+<organizer>
+  <!-- C-CDA Vital Signs Organizer -->
+  <templateId 
+    root="2.16.840.1.113883.10.20.22.4.26" 
+    extension="2015-08-01" />
+  <id root="..." />
+  <code 
+    code="46680005" 
+    codeSystem="2.16.840.1.113883.6.96" 
+    codeSystemName="SNOMED CT"
+    displayName="Vital Signs" />
+  <statusCode code="completed" />
+  <!-- effectiveTime, author, etc stripped -->
+  <component>
+    <observation>
+      <!-- C-CDA Vital Signs Observation -->
+      <templateId 
+        root="2.16.840.1.113883.10.20.22.4.27"
+        extension="2014-06-09" />
+      <id root="..." />
+      <code 
+        code="8480-6" 
+        codeSystem="2.16.840.1.113883.6.1" 
+        codeSystemName="LOINC"
+        displayName="Systolic blood pressure" />
+      <statusCode code="completed" />
+      <value xsi:type="PQ" 
+        value="115" 
+        unit="mm[Hg]" />
+    </observation>
+    <observation>
+      <!-- C-CDA Vital Signs Observation -->
+      <templateId 
+        root="2.16.840.1.113883.10.20.22.4.27"
+        extension="2014-06-09" />
+      <id root="..." />
+      <code 
+        code="8462-4" 
+        codeSystem="2.16.840.1.113883.6.1" 
+        codeSystemName="LOINC"
+        displayName="Diastolic blood pressure" />
+      <value xsi:type="PQ" value="75" unit="mm[Hg]" />
+    </observation>
+  </component>
+</organizer>
+{% endhighlight %}
+</div>
+
+</td><td>
+<div markdown="1">
+{% highlight json %}
+{
+  "resourceType" : "Observation",
+  "status" : "final",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+      "code" : "vital-signs",
+    }],
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "85354-9",
+      "display" : "Blood pressure panel with all children optional"
+    }]
+  },
+  // no valueQuantity
+  "component" : [{
+    "code" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "8480-6",
+        "display" : "Systolic blood pressure"
+      }],
+      "text" : "Systolic blood pressure"
+    },
+    "valueQuantity" : {
+      "value" : 115,
+      "unit" : "mmHg",
+      "system" : "http://unitsofmeasure.org",
+      "code" : "mm[Hg]"
+    }
+  },
+  {
+    "code" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "8462-4",
+        "display" : "Diastolic blood pressure"
+      }],
+      "text" : "Diastolic blood pressure"
+    },
+    "valueQuantity" : {
+      "value" : 75,
+      "unit" : "mmHg",
+      "system" : "http://unitsofmeasure.org",
+      "code" : "mm[Hg]"
+    }
+  }]
+}
+{% endhighlight %}
+</div>
+</td></tr>
+<tr><th>C-CDA Pulse Oximetry Observations</th><th>FHIR Pulse Oximetry Observation</th></tr>
+<tr><td>
+<div markdown="1">
+{% highlight xml %}
+<organizer>
+  <!-- C-CDA Vital Signs Organizer -->
+  <templateId 
+    root="2.16.840.1.113883.10.20.22.4.26" 
+    extension="2015-08-01" />
+  <id root="..." />
+  <code 
+    code="46680005" 
+    codeSystem="2.16.840.1.113883.6.96" 
+    codeSystemName="SNOMED CT"
+    displayName="Vital Signs" />
+  <statusCode code="completed" />
+  <!-- effectiveTime, author, etc stripped -->
+  <component>
+    <observation>
+      <!-- C-CDA Vital Signs Observation -->
+      <templateId 
+        root="2.16.840.1.113883.10.20.22.4.27"
+        extension="2014-06-09" />
+      <id root="..." />
+      <code 
+        code="2708-6" 
+        codeSystem="2.16.840.1.113883.6.1" 
+        codeSystemName="LOINC"
+        displayName="Oxygen saturation" />
+      <value xsi:type="PQ" 
+        value="98" 
+        unit="%" />
+    </observation>
+    <observation>
+      <!-- C-CDA Vital Signs Observation -->
+      <templateId 
+        root="2.16.840.1.113883.10.20.22.4.27"
+        extension="2014-06-09" />
+      <id root="..." />
+      <code 
+        code="3151-8" 
+        codeSystem="2.16.840.1.113883.6.1"
+        codeSystemName="LOINC"
+        displayName="Inhaled Oxygen Flow Rate" />
+      <value xsi:type="PQ" 
+        value="6" 
+        unit="L/min" />
+    </observation>
+    <observation>
+      <!-- C-CDA Vital Signs Observation -->
+      <templateId 
+        root="2.16.840.1.113883.10.20.22.4.27"
+        extension="2014-06-09" />
+      <id root="..." />
+      <code 
+        code="3150-0" 
+        codeSystem="2.16.840.1.113883.6.1" 
+        codeSystemName="LOINC"
+        displayName="Inhaled Oxygen Concentration" />
+      <value xsi:type="PQ" 
+        value="35" 
+        unit="%" />
+    </observation>
+  </component>
+</organizer>
+{% endhighlight %}
+</div>
+
+</td><td>
+<div markdown="1">
+{% highlight json %}
+{
+  "resourceType" : "Observation",
+  "status" : "final",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+      "code" : "vital-signs",
+    }],
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "2708-6",
+      "display" : "Oxygen saturation in Arterial blood"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "59408-5",
+      "display" : "Oxygen saturation in Arterial blood by Pulse oximetry"
+    }]
+  },
+  "valueQuantity" : {
+    "value" : 98,
+    "unit" : "%",
+    "system" : "http://unitsofmeasure.org",
+    "code" : "%"
+  },
+  "component" : [{
+    "code" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "3151-8",
+        "display" : "Inhaled oxygen flow rate"
+      }]
+    },
+    "valueQuantity" : {
+      "value" : 6,
+      "unit" : "liters/min",
+      "system" : "http://unitsofmeasure.org",
+      "code" : "L/min"
+    }
+  },
+  {
+    "code" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "3150-0",
+        "display" : "Inhaled Oxygen Concentration"
+      }]
+    },
+    "valueQuantity" : {
+      "value" : 35,
+      "unit" : "%",
+      "system" : "http://unitsofmeasure.org",
+      "code" : "%"
+    }
+  }]
+}
+{% endhighlight %}
+</div>
+</td></tr>
+</table>
+
 
 ### Illustrative example
 ...
