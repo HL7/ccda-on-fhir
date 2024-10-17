@@ -8,7 +8,7 @@ Though feedback is welcome on any part of the IG, only changed content may be vo
 - [C-CDA → FHIR Results](CF-results.html)
 - [C-CDA → FHIR Social History](CF-social.html)
 - [C-CDA → FHIR Vitals](CF-vitals.html)
-- [FHIR → Notes](FC-notes.html)
+- [FHIR → C-CDA Vitals](FC-vitals.html)
 - [GeneralGuidance](mappingGuidance.html)
    - [Missing Maps](mappingGuidance.html#missing-maps)
    - [FHIR Code → CDA Coding](mappingGuidance.html#fhir-code--cda-coding)
