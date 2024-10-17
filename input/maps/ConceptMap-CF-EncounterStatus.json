@@ -62,7 +62,7 @@
           "target" : [
             {
               "code" : "in-progress",
-              "display" : "In-progress",
+              "display" : "In Progress",
               "equivalence" : "equal"
             }
           ]
@@ -118,8 +118,8 @@
           "display" : "Suspended",
           "target" : [
             {
-              "code" : "on-leave",
-              "display" : "On-leave",
+              "code" : "onleave",
+              "display" : "On Leave",
               "equivalence" : "narrower",
               "comment" : "Suspended encounters have been started, but intent to execute has been temporarily stopped. On-leave is a special case of this circumstance."
             }
@@ -131,7 +131,7 @@
           "target" : [
             {
               "code" : "entered-in-error",
-              "display" : "Entered-in-error",
+              "display" : "Entered in Error",
               "equivalence" : "equal"
             }
           ]

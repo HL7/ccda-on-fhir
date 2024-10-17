@@ -86,7 +86,7 @@ Note when the only field populated is `<standardIndustryClassCode>`, the Organiz
 |/id|/id|.identifier|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
 |/name|/desc|.name|This is just a string in FHIR
 |/telecom|/telecom|.telecom|[CDA id ↔ FHIR telecom](mappingGuidance.html#cda-telecom--fhir-telecom)|
-|/addr|/addr|.address|[CDA id ↔ FHIR address](mappingGuidance.html##cda-addr--fhir-address)|
+|/addr|/addr|.address|[CDA id ↔ FHIR address](mappingGuidance.html#cda-addr--fhir-address)|
 |/standardIndustryClassCode|/code|.type|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)
 |/asOrganizationPartOf|/asOrganizationPartOf|.partOf|Recursive Organization reference
 
@@ -96,7 +96,7 @@ Note when the only field populated is `<standardIndustryClassCode>`, the Organiz
 |:----|:----|:----|
 |/id|.identifier|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
 |/code||[See Mapping code](#mapping-code)|
-|/addr|.address|[CDA id ↔ FHIR address](mappingGuidance.html##cda-addr--fhir-address)|
+|/addr|.address|[CDA id ↔ FHIR address](mappingGuidance.html#cda-addr--fhir-address)|
 |/telecom|.telecom|[CDA id ↔ FHIR telecom](mappingGuidance.html#cda-telecom--fhir-telecom)|
 |**[Person](https://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Person.html)<br/>[PlayingEntity](https://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-PlayingEntity.html)**||Person is the CDA data type for `<assignedPerson>` and `<associatedPerson>`.|
 |//name|.name|[CDA name ↔ FHIR name](mappingGuidance.html#cda-name--fhir-name)|

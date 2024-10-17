@@ -4,7 +4,7 @@ td, th {
 }
 </style>
 
-This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, please refer to [Results FHIR → CDA](./FC-results.html). For guidance on how to read the table below, see [Reading the C-CDA ↔ FHIR Mapping Pages](./mappingGuidance.html).
+This page provides a mapping from CDA to FHIR. <!-- For the FHIR to CDA mapping, please refer to [Results FHIR → CDA](./FC-results.html). --> For guidance on how to read the table below, see [Reading the C-CDA ↔ FHIR Mapping Pages](./mappingGuidance.html).
 
 Results in C-CDA are collected into `<organizer>` elements containing one or more result `<observation>` element. This corresponds to one FHIR DiagnosticReport for the `<organizer>` which multiple `.result` references to FHIR Observation resources, one for each CDA `<observation>`.
 
@@ -12,7 +12,7 @@ Observation values are generic - they can be of any CDA type in CDA, and *almost
 
 ### C-CDA Organizer to FHIR Diagnostic Report
 
-|C-CDA¹<br/>[Result Organizer](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-ResultOrganizer.html)|FHIR<br/>Diagnostic Report ([Lab](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-diagnosticreport-lab.html)) ([Reports](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-diagnosticreport-note.html))|Transform Steps|
+|C-CDA¹<br/>[Result Organizer](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-ResultOrganizer.html)|FHIR<br/>Diagnostic Report ([Lab](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-diagnosticreport-lab.html)) ([Reports](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-diagnosticreport-note.html))|Transform Steps|
 |:----|:----|:----|
 |/id|.identifier|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
 |/code|.category<br/>&amp;<br/>.code|*TODO: Describe using LOINC classes to identify category*<br/>
@@ -27,7 +27,7 @@ If LOINC, look up code class with {endpoint}CodeSystem/$lookup?system=http://loi
 
 ### C-CDA Observation to FHIR Observation
 
-|C-CDA¹<br/>[Result Observation](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-ResultObservation.html)|FHIR<br/>[Lab Result Observation](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-observation-lab.html)|Transform Steps|
+|C-CDA¹<br/>[Result Observation](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-ResultObservation.html)|FHIR<br/>[Lab Result Observation](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-observation-lab.html)|Transform Steps|
 |:----|:----|:----|
 |/id|.identifier|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
 |(parent organizer)|.category|Use category from DiagnosticReport or map /code to a category similarly

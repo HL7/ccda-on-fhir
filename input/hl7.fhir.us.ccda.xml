@@ -953,6 +953,11 @@
           <generation value="markdown"/>
         </page>
         <page>
+          <nameUrl value="mappingChangelog.html"/>
+          <title value="Change Log"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
           <nameUrl value="mappingIssues.html"/>
           <title value="Known Issues"/>
           <generation value="markdown"/>
