@@ -15,7 +15,10 @@ Observation values are generic - they can be of any CDA type in CDA, and *almost
 |C-CDA¹<br/>[Result Organizer](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-ResultOrganizer.html)|FHIR<br/>Diagnostic Report ([Lab](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-diagnosticreport-lab.html)) ([Reports](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-diagnosticreport-note.html))|Transform Steps|
 |:----|:----|:----|
 |/id|.identifier|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
-|/code|.category<br/>&amp;<br/>.code|*TODO: Describe using LOINC classes to identify category*<br/>[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
+|/code|.category<br/>&amp;<br/>.code|*TODO: Describe using LOINC classes to identify category*<br/>
+If LOINC, look up code class with {endpoint}CodeSystem/$lookup?system=http://loinc.org&code={code}&&property=CLASSTYPE<br/>
+1=Laboratory class (laboratory); 2=Clinical class (clinical-test); 3=Claims attachments (not mapped); 4=Surveys (survey)<br/>
+[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 |/statusCode|.status|*TODO: ConceptMap*
 |/effectiveTime|.effectiveDateTime<br/>or<br/>.effectivePeriod|If low and high are identical, use effectiveDateTime. If organizer/effectiveTime is missing, use the earliest and latest observation/effectiveTime as the source of the mapping.<br/>[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)
 |/specimen||*TODO*
