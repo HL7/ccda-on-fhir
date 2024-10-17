@@ -15,14 +15,11 @@ Observation values are generic - they can be of any CDA type in CDA, and *almost
 |C-CDA¹<br/>[Result Organizer](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-ResultOrganizer.html)|FHIR<br/>Diagnostic Report ([Lab](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-diagnosticreport-lab.html)) ([Reports](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-diagnosticreport-note.html))|Transform Steps|
 |:----|:----|:----|
 |/id|.identifier|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
-|/code|.category<br/>&amp;<br/>.code|*TODO: Describe using LOINC classes to identify category*<br/>
-If LOINC, look up code class with {endpoint}CodeSystem/$lookup?system=http://loinc.org&code={code}&&property=CLASSTYPE<br/>
-1=Laboratory class (laboratory); 2=Clinical class (clinical-test); 3=Claims attachments (not mapped); 4=Surveys (survey)<br/>
-[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
+|/code|.code<br/>&amp;<br/>.category|Map to code using [CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept).<br/>Category (and target FHIR Profile) may be identified by looking up a LOINC code's CLASSTYPE (see process in next table).<br/>Alternatively, an extension for `<sdtc:category>` is being developed for CDA Organizer which, if present, will map directly to this field.
 |/statusCode|.status|*TODO: ConceptMap*
 |/effectiveTime|.effectiveDateTime<br/>or<br/>.effectivePeriod|If low and high are identical, use effectiveDateTime. If organizer/effectiveTime is missing, use the earliest and latest observation/effectiveTime as the source of the mapping.<br/>[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)
 |/specimen||*TODO*
-|/author||*TODO*
+|/author|**[Provenance](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-provenance.html)**|[CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)|
 |/component/observation|.result|See following table
 
 ### C-CDA Observation to FHIR Observation
@@ -30,7 +27,7 @@ If LOINC, look up code class with {endpoint}CodeSystem/$lookup?system=http://loi
 |C-CDA¹<br/>[Result Observation](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-ResultObservation.html)|FHIR<br/>[Lab Result Observation](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-observation-lab.html)|Transform Steps|
 |:----|:----|:----|
 |/id|.identifier|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
-|(parent organizer)|.category|Use category from DiagnosticReport or map /code to a category similarly
+||.category|If the code is LOINC, the category can be inferred from the LOINC code CLASSTYPE. Query a FHIR server via `{endpoint}CodeSystem/$lookup?system=http://loinc.org&code={code}&&property=CLASSTYPE` and set the category according to the CLASSTYPE property:<br/>1=Laboratory class (laboratory); 2=Clinical class (clinical-test); 3=Claims attachments (not mapped); 4=Surveys (survey)
 |/code |.code|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 |/statusCode|.status|*TODO: ConceptMap*
 |/effectiveTime|.effectiveDateTime<br/>or<br/>.effectivePeriod|Prefer effectiveDateTime<br/>[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)
