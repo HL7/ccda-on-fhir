@@ -18,9 +18,10 @@ Observation values are generic - they can be of any CDA type in CDA, and *almost
 |/code|.code<br/>&amp;<br/>.category|Map to code using [CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept).<br/>Category (and target FHIR Profile) may be identified by looking up a LOINC code's CLASSTYPE (see process in next table).<br/>Alternatively, an extension for `<sdtc:category>` is being developed for CDA Organizer which, if present, will map directly to this field.
 |/statusCode|.status|*TODO: ConceptMap*
 |/effectiveTime|.effectiveDateTime<br/>or<br/>.effectivePeriod|If low and high are identical, use effectiveDateTime. If organizer/effectiveTime is missing, use the earliest and latest observation/effectiveTime as the source of the mapping.<br/>[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)
-|/specimen||*TODO*
+|/specimen|.specimen|[See below](#c-cda-specimen-to-fhir-specimen)
 |/author|**[Provenance](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-provenance.html)**|[CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)|
-|/component/observation|.result|See following table
+|**[Result Observation](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-ResultObservation.html)**<br/>/component/observation|.result|See following table
+|**[Specimen Collection Procedure](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-SpecimenCollectionProcedure.html)**<br/>/component/procedure[code/@code=17636008]|.specimen|[See below](#c-cda-specimen-to-fhir-specimen)
 
 ### C-CDA Observation to FHIR Observation
 
@@ -40,11 +41,27 @@ Observation values are generic - they can be of any CDA type in CDA, and *almost
 |/interpretationCode|.interpretation|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 |/methodCode|.method|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 |/targetSiteCode|.bodySite|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
+|/specimen|.specimen|[See below](#c-cda-specimen-to-fhir-specimen)
 |/author|**[Provenance](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-provenance.html)**|[CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)|
 |/referenceRange/observationRange/interpretationCode|**Not Supported**|FHIR expects reference ranges to be "normal" ranges. If C-CDA includes multiple reference ranges, only map the one with interpretationCode = `"N"`.
 |/referenceRange/observationRange/value[xsi:type=IVL_PQ]|.referenceRange.low<br/>&<br/>.referenceRange.high|
 |/referenceRange/observationRange/value[xsi:type=ST]<br/>or<br/>/referenceRange/observationRange/text|.referenceRange.text|
 
+### C-CDA Specimen to FHIR Specimen
+
+The CDA [Specimen](https://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Specimen.html) class may be present on either a Result Organizer or a Result Observation. If present on the organizer, the FHIR Specimen resource can be attached to the DiagnosticReport as well as each of the child Observation resources. If present only on a C-CDA Results Observation, it should only be attached at the FHIR Observation level.
+
+C-CDA also defines a [Specimen Collection Procedure](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-SpecimenCollectionProcedure.html) which can be present in the Result Organizer. The information in this procedure can be combined with information from the Specimen class and attached to the FHIR DiagnosticReport and Observation resources.
+
+|CDA<br/>[Specimen](https://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Specimen.html)|FHIR<br/>[Specimen](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-specimen.html)|Transform Steps|
+|:----|:----|:----|
+|/specimenRole/id|.identifier<br/>or<br/>.accessionIdentifier|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
+|/specimenRole/specimenPlayingEntity/code|.type|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
+|/specimenRole/specimenPlayingEntity/name|.type.text|If there is no `<code>`. If code already exists, name may also go in `.note`
+|/specimenRole/specimenPlayingEntity/quantity|.collection.quantity|[CDA ↔ FHIR Quantity](mappingGuidance.html#cda--fhir-quantity)|
+|/specimenRole/specimenPlayingEntity/desc|.note|
+|**C-CDA [Specimen Collection Procedure](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-SpecimenCollectionProcedure.html)**<br/>/targetSiteCode|.collection.bodySite|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
+|**C-CDA [Specimen Condtion Observation](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-SpecimenConditionObservation.html)**<br/>/value|.condition|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 
 ### Illustrative example
 ...
