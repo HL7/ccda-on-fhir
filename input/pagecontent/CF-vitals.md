@@ -84,6 +84,8 @@ C-CDA vitals are typically grouped into a Vital Signs Organizer to group one or 
         value="115" 
         unit="mm[Hg]" />
     </observation>
+  </component>
+  <component>
     <observation>
       <!-- C-CDA Vital Signs Observation -->
       <templateId 
@@ -111,8 +113,8 @@ C-CDA vitals are typically grouped into a Vital Signs Organizer to group one or 
   "category" : [{
     "coding" : [{
       "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
-      "code" : "vital-signs",
-    }],
+      "code" : "vital-signs"
+    }]
   }],
   "code" : {
     "coding" : [{
@@ -191,6 +193,8 @@ C-CDA vitals are typically grouped into a Vital Signs Organizer to group one or 
         value="98" 
         unit="%" />
     </observation>
+  </component>
+  <component>
     <observation>
       <!-- C-CDA Vital Signs Observation -->
       <templateId 
@@ -206,6 +210,8 @@ C-CDA vitals are typically grouped into a Vital Signs Organizer to group one or 
         value="6" 
         unit="L/min" />
     </observation>
+  </component>
+  <component>
     <observation>
       <!-- C-CDA Vital Signs Observation -->
       <templateId 
