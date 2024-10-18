@@ -26,6 +26,7 @@
 <artifact id="ConceptMap/CF-AddressUse" key="ConceptMap-CF-AddressUse" name="C-CDA to FHIR Address Use"/>
 <artifact id="ConceptMap/CF-AdministrativeGender" key="ConceptMap-CF-AdministrativeGender" name="C-CDA to FHIR Adminmistrative Gender"/>
 <artifact id="ConceptMap/CF-AllergyStatus" key="ConceptMap-CF-AllergyStatus" name="C-CDA to FHIR Allergy Status"/>
+<artifact id="ConceptMap/CF-EncounterStatus" key="ConceptMap-CF-EncounterStatus" name="C-CDA to FHIR Encounter Status"/>
 <artifact id="ConceptMap/CF-ImmunizationStatus" key="ConceptMap-CF-ImmunizationStatus" name="C-CDA to FHIR Immunization Status"/>
 <artifact id="ConceptMap/CF-MedicationStatus" key="ConceptMap-CF-MedicationStatus" name="C-CDA to FHIR Medication Status"/>
 <artifact id="ConceptMap/CF-NameUse" key="ConceptMap-CF-NameUse" name="C-CDA to FHIR NameUse"/>
@@ -160,19 +161,29 @@
 <page key="artifacts" name="Artifacts Summary"/>
 <page key="background" name="Background"/>
 <page key="CF-allergies" name="C-CDA to FHIR Allergies"/>
+<page key="CF-encounters" name="C-CDA to FHIR Encounters"/>
 <page key="CF-immunizations" name="C-CDA to FHIR Immunizations"/>
 <page key="CF-medications" name="C-CDA to FHIR Medications"/>
+<page key="CF-notes" name="C-CDA to FHIR Notes"/>
 <page key="CF-patient" name="C-CDA to FHIR Patient"/>
 <page key="CF-problems" name="C-CDA to FHIR Problems"/>
 <page key="CF-procedures" name="C-CDA to FHIR Procedures"/>
+<page key="CF-results" name="C-CDA to FHIR Results"/>
+<page key="CF-social" name="C-CDA to FHIR Social History"/>
+<page key="CF-vitals" name="C-CDA to FHIR Vital Signs"/>
 <page key="CF-index" name="C-CDA → FHIR Index"/>
 <page key="downloads" name="Downloads"/>
 <page key="FC-allergies" name="FHIR to C-CDA Allergies"/>
+<page key="FC-encounters" name="FHIR to C-CDA Encounters"/>
 <page key="FC-immunizations" name="FHIR to C-CDA Immunizations"/>
+<page key="FC-medications" name="FHIR to C-CDA Medications"/>
 <page key="FC-medications" name="FHIR to C-CDA Medications"/>
 <page key="FC-patient" name="FHIR to C-CDA Patient"/>
 <page key="FC-problems" name="FHIR to C-CDA Problems"/>
 <page key="FC-procedures" name="FHIR to C-CDA Procedures"/>
+<page key="FC-results" name="FHIR to C-CDA Results"/>
+<page key="FC-social" name="FHIR to C-CDA Social History"/>
+<page key="FC-vitals" name="FHIR to C-CDA Vital Signs"/>
 <page key="FC-index" name="FHIR → C-CDA Index"/>
 <page deprecated="true" key="Guidance" name="Guidance"/>
 <page key="index" name="Home Page"/>
