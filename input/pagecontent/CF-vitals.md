@@ -304,7 +304,7 @@ C-CDA vitals are typically grouped into a Vital Signs Organizer to group one or 
 <table>
 <tr><th>C-CDA Blood Pressure (Codes & Values Only)</th><th>FHIR Blood Pressure</th></tr>
 <tr><td>
-<div id="cda" class="border codeArea">&lt;<span class="field">organizer</span>&gt;
+<div class="border codeArea">&lt;<span class="field">organizer</span>&gt;
   <span class="comment">&lt;!-- C-CDA Vital Signs Organizer --&gt;</span>
   &lt;<span class="field">templateId</span> 
     <span class="attrib">root=</span><span class="value">"2.16.840.1.113883.10.20.22.4.26"</span> 
@@ -314,7 +314,7 @@ C-CDA vitals are typically grouped into a Vital Signs Organizer to group one or 
     <span class="attrib">code=</span><span class="value">"<mark class="color10">46680005</mark>"</span> 
     <span class="attrib">codeSystem=</span><span class="value">"2.16.840.1.113883.6.96"</span> 
     <span class="attrib">codeSystemName=</span><span class="value">"SNOMED CT"</span>
-    displayName=<mark class="color10"><span class="value">"Vital Signs"</span></mark> /&gt;
+    <span class="attrib">displayName=</span><mark class="color10"><span class="value">"Vital Signs"</span></mark> /&gt;
   &lt;<span class="field">statusCode</span> <span class="attrib">code=</span><span class="value">"completed"</span> /&gt;
   <span class="comment">&lt;!-- effectiveTime, author, etc stripped --&gt;</span>
   &lt;<span class="field">component</span>&gt;
@@ -331,7 +331,7 @@ C-CDA vitals are typically grouped into a Vital Signs Organizer to group one or 
         <span class="attrib">displayName=</span><span class="value">"<mark class="color13">Systolic blood pressure</mark>"</span> /&gt;
       &lt;<span class="field">statusCode</span> <span class="attrib">code=</span><span class="value">"completed"</span> /&gt;
       &lt;<span class="field">value</span> <span class="attrib">xsi:type=</span><span class="value">"PQ"</span> 
-        value=<mark class="color14"><span class="value">"115"</span></mark> 
+        <span class="attrib">value=</span><mark class="color14"><span class="value">"115"</span></mark> 
         <span class="attrib">unit=</span><span class="value">"<mark class="color15">mm[Hg]</mark>"</span> /&gt;
     &lt;/<span class="field">observation</span>&gt;
   &lt;/<span class="field">component</span>&gt;
@@ -347,12 +347,12 @@ C-CDA vitals are typically grouped into a Vital Signs Organizer to group one or 
         <span class="attrib">codeSystem=</span><span class="value">"<mark class="color12">2.16.840.1.113883.6.1</mark>"</span> 
         <span class="attrib">codeSystemName=</span><span class="value">"<mark class="color12">LOINC</mark>"</span>
         <span class="attrib">displayName=</span><span class="value">"<mark class="color17">Diastolic blood pressure</mark>"</span> /&gt;
-      &lt;<span class="field">value</span> <span class="attrib">xsi:type=</span><span class="value">"PQ"</span> value=<mark class="color18"><span class="value">"75"</span></mark> <span class="attrib">unit=</span><span class="value">"<mark class="color15">mm[Hg]</mark>"</span> /&gt;
+      &lt;<span class="field">value</span> <span class="attrib">xsi:type=</span><span class="value">"PQ"</span> <span class="attrib">value=</span><mark class="color18"><span class="value">"75"</span></mark> <span class="attrib">unit=</span><span class="value">"<mark class="color15">mm[Hg]</mark>"</span> /&gt;
     &lt;/<span class="field">observation</span>&gt;
   &lt;/<span class="field">component</span>&gt;
 &lt;/<span class="field">organizer</span>&gt;</div>
 </td><td>
-<div id="fhir" class="border codeArea">{
+<div class="border codeArea">{
   "<span class="field">resourceType</span>" : "<span class="value">Observation</span>",
   "<span class="field">status</span>" : "<span class="value">final</span>",
   "<span class="field">category</span>" : [{
@@ -406,7 +406,7 @@ C-CDA vitals are typically grouped into a Vital Signs Organizer to group one or 
 
 <tr><th>C-CDA Pulse Oximetry (Codes & Values Only)</th><th>FHIR Pulse Oximetry</th></tr>
 <tr><td>
-<div id="cda" class="border codeArea">&lt;<span class="field">organizer</span>&gt;
+<div class="border codeArea">&lt;<span class="field">organizer</span>&gt;
   <span class="comment">&lt;!-- C-CDA Vital Signs Organizer --&gt;</span>
   &lt;<span class="field">templateId</span> 
     <span class="attrib">root=</span><span class="value">"2.16.840.1.113883.10.20.22.4.26"</span> 
@@ -416,7 +416,7 @@ C-CDA vitals are typically grouped into a Vital Signs Organizer to group one or 
     <span class="attrib">code=</span><span class="value">"<mark class="color10">46680005</mark>"</span> 
     <span class="attrib">codeSystem=</span><span class="value">"2.16.840.1.113883.6.96"</span> 
     <span class="attrib">codeSystemName=</span><span class="value">"SNOMED CT"</span>
-    displayName=<mark class="color10"><span class="value">"Vital Signs"</span></mark> /&gt;
+    <span class="attrib">displayName=</span><mark class="color10"><span class="value">"Vital Signs"</span></mark> /&gt;
   &lt;<span class="field">statusCode</span> <span class="attrib">code=</span><span class="value">"completed"</span> /&gt;
   <span class="comment">&lt;!-- effectiveTime, author, etc stripped --&gt;</span>
   &lt;<span class="field">component</span>&gt;
@@ -432,8 +432,8 @@ C-CDA vitals are typically grouped into a Vital Signs Organizer to group one or 
         <span class="attrib">codeSystemName=</span><span class="value">"<mark class="color12">LOINC</mark>"</span>
         <span class="attrib">displayName=</span><span class="value">"Oxygen saturation"</span> /&gt;
       &lt;<span class="field">value</span> <span class="attrib">xsi:type=</span><span class="value">"PQ"</span> 
-        value=<mark class="color13"><span class="value">"98"</span></mark> 
-        unit=<mark class="color14"><span class="value">"%"</span></mark> /&gt;
+        <span class="attrib">value=</span><mark class="color13"><span class="value">"98"</span></mark> 
+        <span class="attrib">unit=</span><mark class="color14"><span class="value">"%"</span></mark> /&gt;
     &lt;/<span class="field">observation</span>&gt;
     &lt;<span class="field">observation</span>&gt;
       <span class="comment">&lt;!-- C-CDA Vital Signs Observation --&gt;</span>
@@ -447,7 +447,7 @@ C-CDA vitals are typically grouped into a Vital Signs Organizer to group one or 
         <span class="attrib">codeSystemName=</span><span class="value">"<mark class="color12">LOINC</mark>"</span>
         <span class="attrib">displayName=</span><span class="value">"Inhaled Oxygen Flow Rate"</span> /&gt;
       &lt;<span class="field">value</span> <span class="attrib">xsi:type=</span><span class="value">"PQ"</span> 
-        value=<mark class="color16"><span class="value">"6"</span></mark> 
+        <span class="attrib">value=</span><mark class="color16"><span class="value">"6"</span></mark> 
         <span class="attrib">unit=</span><span class="value">"<mark class="color17">L/min</mark>"</span> /&gt;
     &lt;/<span class="field">observation</span>&gt;
     &lt;<span class="field">observation</span>&gt;
@@ -462,39 +462,33 @@ C-CDA vitals are typically grouped into a Vital Signs Organizer to group one or 
         <span class="attrib">codeSystemName=</span><span class="value">"<mark class="color12">LOINC</mark>"</span>
         <span class="attrib">displayName=</span><span class="value">"<mark class="color19">Inhaled Oxygen Concentration</mark>"</span> /&gt;
       &lt;<span class="field">value</span> <span class="attrib">xsi:type=</span><span class="value">"PQ"</span> 
-        value=<mark class="color20"><span class="value">"35"</span></mark> 
-        unit=<mark class="color14"><span class="value">"%"</span></mark> /&gt;
+        <span class="attrib">value=</span><mark class="color20"><span class="value">"35"</span></mark> 
+        <span class="attrib">unit=</span><mark class="color14"><span class="value">"%"</span></mark> /&gt;
     &lt;/<span class="field">observation</span>&gt;
   &lt;/<span class="field">component</span>&gt;
 &lt;/<span class="field">organizer</span>&gt;</div>
 
 </td><td>
-<div id="fhir" class="border codeArea">{
+<div class="border codeArea">{
   "<span class="field">resourceType</span>": "<span class="value">Observation</span>",
   "<span class="field">status</span>": "<span class="value">final</span>",
-  "<span class="field">category</span>": [
-    {
-      "<span class="field">coding</span>": [
-        {
-          "<span class="field">system</span>": "<span class="value">http://terminology.hl7.org/CodeSystem/observation-category</span>",
-          "<span class="field">code</span>": "<span class="value"><mark class="color10">vital-signs</mark></span>"
-        }
-      ]
-    }
-  ],
+  "<span class="field">category</span>": [{
+    "<span class="field">coding</span>": [{
+      "<span class="field">system</span>": "<span class="value">http://terminology.hl7.org/CodeSystem/observation-category</span>",
+      "<span class="field">code</span>": "<span class="value"><mark class="color10">vital-signs</mark></span>"
+    }]
+  }],
   "<span class="field">code</span>": {
-    "<span class="field">coding</span>": [
-      {
-        "<span class="field">system</span>": "<span class="value"><mark class="color12">http://loinc.org</mark></span>",
-        "<span class="field">code</span>": "<span class="value"><mark class="color11">2708-6</mark></span>",
-        "<span class="field">display</span>": "<span class="value">Oxygen saturation in Arterial blood</span>"
-      },
-      {
-        "<span class="field">system</span>": "<span class="value"><mark class="color12">http://loinc.org</mark></span>",
-        "<span class="field">code</span>": "<span class="value">59408-5</span>",
-        "<span class="field">display</span>": "<span class="value">Oxygen saturation in Arterial blood by Pulse oximetry</span>"
-      }
-    ]
+    "<span class="field">coding</span>": [{
+      "<span class="field">system</span>": "<span class="value"><mark class="color12">http://loinc.org</mark></span>",
+      "<span class="field">code</span>": "<span class="value"><mark class="color11">2708-6</mark></span>",
+      "<span class="field">display</span>": "<span class="value">Oxygen saturation in Arterial blood</span>"
+    },
+    {
+      "<span class="field">system</span>": "<span class="value"><mark class="color12">http://loinc.org</mark></span>",
+      "<span class="field">code</span>": "<span class="value">59408-5</span>",
+      "<span class="field">display</span>": "<span class="value">Oxygen saturation in Arterial blood by Pulse oximetry</span>"
+    }]
   },
   "<span class="field">valueQuantity</span>": {
     "<span class="field">value</span>": <mark class="color13">98,</mark>
@@ -502,42 +496,36 @@ C-CDA vitals are typically grouped into a Vital Signs Organizer to group one or 
     "<span class="field">system</span>": "<span class="value">http://unitsofmeasure.org</span>",
     "<span class="field">code</span>": <mark class="color14">"%"</mark>
   },
-  "<span class="field">component</span>": [
-    {
-      "<span class="field">code</span>": {
-        "<span class="field">coding</span>": [
-          {
-            "<span class="field">system</span>": "<span class="value"><mark class="color12">http://loinc.org</mark></span>",
-            "<span class="field">code</span>": "<span class="value"><mark class="color15">3151-8</mark></span>",
-            "<span class="field">display</span>": "<span class="value">Inhaled oxygen flow rate</span>"
-          }
-        ]
-      },
-      "<span class="field">valueQuantity</span>": {
-        "<span class="field">value</span>": <mark class="color16">6,</mark>
-        "<span class="field">unit</span>": "<span class="value">liters/min</span>",
-        "<span class="field">system</span>": "<span class="value">http://unitsofmeasure.org</span>",
-        "<span class="field">code</span>": "<span class="value"><mark class="color17">L/min</mark></span>"
-      }
+  "<span class="field">component</span>": [{
+    "<span class="field">code</span>": {
+      "<span class="field">coding</span>": [{
+        "<span class="field">system</span>": "<span class="value"><mark class="color12">http://loinc.org</mark></span>",
+        "<span class="field">code</span>": "<span class="value"><mark class="color15">3151-8</mark></span>",
+        "<span class="field">display</span>": "<span class="value">Inhaled oxygen flow rate</span>"
+      }]
     },
-    {
-      "<span class="field">code</span>": {
-        "<span class="field">coding</span>": [
-          {
-            "<span class="field">system</span>": "<span class="value"><mark class="color12">http://loinc.org</mark></span>",
-            "<span class="field">code</span>": "<span class="value"><mark class="color18">3150-0</mark></span>",
-            "<span class="field">display</span>": "<span class="value"><mark class="color19">Inhaled Oxygen Concentration</mark></span>"
-          }
-        ]
-      },
-      "<span class="field">valueQuantity</span>": {
-        "<span class="field">value</span>": <mark class="color20">35,</mark>
-        "<span class="field">unit</span>": <mark class="color14">"%"</mark>,
-        "<span class="field">system</span>": "<span class="value">http://unitsofmeasure.org</span>",
-        "<span class="field">code</span>": <mark class="color14">"%"</mark>
-      }
+    "<span class="field">valueQuantity</span>": {
+      "<span class="field">value</span>": <mark class="color16">6,</mark>
+      "<span class="field">unit</span>": "<span class="value">liters/min</span>",
+      "<span class="field">system</span>": "<span class="value">http://unitsofmeasure.org</span>",
+      "<span class="field">code</span>": "<span class="value"><mark class="color17">L/min</mark></span>"
     }
-  ]
+  },
+  {
+    "<span class="field">code</span>": {
+      "<span class="field">coding</span>": [{
+        "<span class="field">system</span>": "<span class="value"><mark class="color12">http://loinc.org</mark></span>",
+        "<span class="field">code</span>": "<span class="value"><mark class="color18">3150-0</mark></span>",
+        "<span class="field">display</span>": "<span class="value"><mark class="color19">Inhaled Oxygen Concentration</mark></span>"
+      }]
+    },
+    "<span class="field">valueQuantity</span>": {
+      "<span class="field">value</span>": <mark class="color20">35,</mark>
+      "<span class="field">unit</span>": <mark class="color14">"%"</mark>,
+      "<span class="field">system</span>": "<span class="value">http://unitsofmeasure.org</span>",
+      "<span class="field">code</span>": <mark class="color14">"%"</mark>
+    }
+  }]
 }</div>
 </td></tr>
 </table>
