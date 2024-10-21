@@ -93,6 +93,7 @@
 <artifact id="ConceptMap/FC-DataAbsentReasonNullFlavor" key="ConceptMap-FC-DataAbsentReasonNullFlavor" name="FHIR Data Absent Reason to C-CDA NullFlavor"/>
 <artifact id="ConceptMap/FC-ImmunizationSite" key="ConceptMap-FC-ImmunizationSite" name="FHIR Immunization Site to C-CDA Immunization approachSiteCode"/>
 <artifact id="ConceptMap/FC-ImmunizationRefusal" key="ConceptMap-FC-ImmunizationRefusal" name="FHIR Immunization Status Reason to C-CDA Immunization Refusal"/>
+<artifact id="ConceptMap/FC-ResultStatus" key="ConceptMap-FC-ResultStatus" name="FHIR ResultStatus to C-CDA ResultStatus"/>
 <artifact id="ConceptMap/FC-Severity" key="ConceptMap-FC-Severity" name="FHIR Severity to C-CDA Severity"/>
 <artifact id="ConceptMap/FC-AddressUse" key="ConceptMap-FC-AddressUse" name="FHIR to C-CDA Address Use"/>
 <artifact id="ConceptMap/FC-AdministrativeGender" key="ConceptMap-FC-AdministrativeGender" name="FHIR to C-CDA Adminmistrative Gender"/>
