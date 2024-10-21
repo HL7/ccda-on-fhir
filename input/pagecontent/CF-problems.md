@@ -1,8 +1,4 @@
-<style>
-td, th {
-   border: 1px solid black!important;
-}
-</style>
+<link rel="stylesheet" href="colors.css">
 
 This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, please refer to [Problems FHIR → CDA](./FC-problems.html). For guidance on how to read the table below, see [Reading the C-CDA ↔ FHIR Mapping Pages](./mappingGuidance.html).
 
@@ -40,7 +36,12 @@ When authors or other provenance are recorded in the parent [Problem Concern Act
 
 ### Illustrative example
 
-
+<table><tr><th>CDA Example</th><th>FHIR Resource</th></tr>
+<tr><td>
+...
+</td><td>
+...
+</td></tr></table>
 
 #### Links to example content
 

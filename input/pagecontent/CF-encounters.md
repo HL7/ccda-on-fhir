@@ -1,8 +1,4 @@
-<style>
-td, th {
-   border: 1px solid black!important;
-}
-</style>
+<link rel="stylesheet" href="colors.css">
 
 This page provides a mapping from CDA to FHIR. <!-- For the FHIR to CDA mapping, please refer to [Encounters FHIR → CDA](./FC-encounters.html). --> For guidance on how to read the table below, see [Reading the C-CDA ↔ FHIR Mapping Pages](./mappingGuidance.html).
 
@@ -28,9 +24,20 @@ Encounter Activities in the Encounters Section (or elsewhere in the document, su
 |**[Encounter Diagnosis](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-EncounterDiagnosis.html)** <sup>(b)</sup><br/>/entryRelationship/act[code/@code="29308-4"]/observation|**[Encounter Diagnosis](https://hl7.org/fhir/us/core/StructureDefinition-us-core-condition-encounter-diagnosis.html)**<br/>&<br/>.diagnosis.condition|The observation maps identically to [CDA → FHIR Problems](./CF-problems.html).<br/>Since this is an encounter diagnosis, the `Observation.category` should be set to `encounter-diagnosis`.
 
 
-### Illustrative example
+### Example: EncompassingEncounter
+
+<table><tr><th>CDA Example</th><th>FHIR Resource</th></tr>
+<tr><td>
 ...
-### Links to example content
+</td><td>
 ...
-### Prior work and Expanded Spreadsheets
+</td></tr></table>
+
+### Example: Encounter Activity
+
+<table><tr><th>CDA Example</th><th>FHIR Resource</th></tr>
+<tr><td>
 ...
+</td><td>
+...
+</td></tr></table>

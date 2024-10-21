@@ -1,8 +1,4 @@
-<style>
-td, th {
-   border: 1px solid black!important;
-}
-</style>
+<link rel="stylesheet" href="colors.css">
 
 This page provides a mapping from CDA to FHIR. <!-- For the FHIR to CDA mapping, please refer to [Notes FHIR → CDA](./FC-notes.html). --> For guidance on how to read the table below, see [Reading the C-CDA ↔ FHIR Mapping Pages](./mappingGuidance.html).
 
@@ -26,8 +22,10 @@ Clinical Notes may appear in their own section or as an entry in any open sectio
 
 
 ### Illustrative example
+
+<table><tr><th>CDA Example</th><th>FHIR Resource</th></tr>
+<tr><td>
 ...
-### Links to example content
+</td><td>
 ...
-### Prior work and Expanded Spreadsheets
-...
+</td></tr></table>

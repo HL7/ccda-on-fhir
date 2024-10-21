@@ -1,8 +1,4 @@
-<style>
-td, th {
-   border: 1px solid black!important;
-}
-</style>
+<link rel="stylesheet" href="colors.css">
 
 CDA defines participants in a number of elements, but the structure is often similar. These represent people (usually providers), organizations, and in some cases devices, locations, or some combination of all of the above.
 

@@ -1,8 +1,4 @@
-<style>
-td, th {
-   border: 1px solid black!important;
-}
-</style>
+<link rel="stylesheet" href="colors.css">
 
 This page provides a mapping from CDA to FHIR. <!-- For the FHIR to CDA mapping, please refer to [Results FHIR → CDA](./FC-results.html). --> For guidance on how to read the table below, see [Reading the C-CDA ↔ FHIR Mapping Pages](./mappingGuidance.html).
 
@@ -64,8 +60,11 @@ C-CDA also defines a [Specimen Collection Procedure](https://hl7.org/cda/us/ccda
 |**C-CDA [Specimen Condtion Observation](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-SpecimenConditionObservation.html)**<br/>/value|.condition|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 
 ### Illustrative example
+
+<table><tr><th>CDA Example</th><th>FHIR Resource</th></tr>
+<tr><td>
 ...
-### Links to example content
+</td><td>
 ...
-### Prior work and Expanded Spreadsheets
-...
+</td></tr></table>
+

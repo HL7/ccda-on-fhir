@@ -1,8 +1,4 @@
-<style>
-td, th {
-   border: 1px solid black!important;
-}
-</style>
+<link rel="stylesheet" href="colors.css">
 
 This page provides a mapping from CDA to FHIR. <!-- For the FHIR to CDA mapping, please refer to [Results FHIR → CDA](./FC-results.html). --> For guidance on how to read the table below, see [Reading the C-CDA ↔ FHIR Mapping Pages](./mappingGuidance.html).
 
@@ -65,4 +61,31 @@ In US Core, Pregnancy Intent was first defined in version 6.
 |/value|.valueCodeableConcept|Value sets are the same<br/>[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 |/value/@nullFlavor=UNK|.valueCodeableConcept|Unknown becomes an actual value with system = `http://terminology.hl7.org/CodeSystem/v3-NullFlavor`. Any other nullFlavors should use a data-absent-reason extension.
 
+### Illustrative examples
 
+The following is a general social history comparison between C-CDA and FHIR
+
+<table><tr><th>CDA Example</th><th>FHIR Resource</th></tr>
+<tr><td>
+...
+</td><td>
+...
+</td></tr></table>
+
+### Example: Smoking Status
+
+<table><tr><th>CDA Example</th><th>FHIR Resource</th></tr>
+<tr><td>
+...
+</td><td>
+...
+</td></tr></table>
+
+### Example: Pregnancy Observation
+
+<table><tr><th>CDA Example</th><th>FHIR Resource</th></tr>
+<tr><td>
+...
+</td><td>
+...
+</td></tr></table>
