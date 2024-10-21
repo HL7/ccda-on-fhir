@@ -112,6 +112,8 @@ Some CDA temporal fields can be either a single point-in-time or an interval ran
 
 The structure for coding in CDA and FHIR are fundamentally different. CDA  employs a mechanism (xsi:type [CD](https://hl7.org/cda/stds/core/2.0.0-sd-snapshot1/StructureDefinition-CD.html) or [CE](https://hl7.org/cda/stds/core/2.0.0-sd-snapshot1/StructureDefinition-CD.html)) where the code is included in the element and then originalText and translations elements may be provided as child elements. In FHIR, [CodeableConcept](http://hl7.org/fhir/datatypes.html#codeableconcept) places all codes in a coding list with a separate element for the text representation. 
 
+Both C-CDA and FHIR stipulate that `display`/`@displayName` represents one of the display strings defined for that code by the code system. If a source contains other text, the transforming party may choose to send the system value in display, put that original value in `text`/`<originalText>` and put the system value in display, or simply send the source value.
+
 #### CDA Coding → FHIR CodeableConcept
 
 |CDA Property|FHIR Target|Notes|
