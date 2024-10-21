@@ -29,11 +29,58 @@ C-CDA 2.1 describes three templates for Procedures: Procedure Activity Act, Proc
 
 ### Illustrative example
 
-<table><tr><th>CDA Example</th><th>FHIR Resource</th></tr>
+<table><tr><th>CDA Procedure Example</th><th>FHIR Procedure Resource</th></tr>
 <tr><td>
-...
+<div id="cda" class="border codeArea">&lt;<span class="field">procedure</span> <span class="attrib">classCode=</span><span class="value">"PROC"</span> <span class="attrib">moodCode=</span><span class="value">"EVN"</span>&gt;
+  &lt;<span class="field">templateId</span> <span class="attrib">root=</span><span class="value">"2.16.840.1.113883.10.20.22.4.14"</span> <span class="attrib">extension=</span><span class="value">"2014-06-09"</span> /&gt;
+  &lt;<span class="field">templateId</span> <span class="attrib">root=</span><span class="value">"2.16.840.1.113883.10.20.22.4.14"</span> /&gt;
+  &lt;<span class="field">id</span> <span class="attrib">root=</span><span class="value">"<mark class="color10">1.3.6.1.4.1.22812.3.2009316.3.4.7</mark>"</span> <span class="attrib">extension=</span><span class="value">"<mark class="color11">545069400001</mark>"</span> /&gt;
+  &lt;<span class="field">id</span> <span class="attrib">root=</span><span class="value">"<mark class="color10">1.3.6.1.4.1.22812.3.2009316.3.4.7</mark>"</span> <span class="attrib">extension=</span><span class="value">"<mark class="color12">545069400003</mark>"</span> /&gt;
+  &lt;<span class="field">code</span> 
+    <span class="attrib">code=</span><span class="value">"<mark class="color13">80146002</mark>"</span> 
+    <span class="attrib">codeSystem=</span><span class="value">"<mark class="color14">2.16.840.1.113883.6.96</mark>"</span> 
+    <span class="attrib">displayName=</span><span class="value">"<mark class="color15">Excision of appendix</mark>"</span>&gt;
+    &lt;<span class="field">originalText</span>&gt;
+      &lt;<span class="field">reference</span> <span class="attrib">value=</span><span class="value">"#_dfcf353c-538f-498a-9a53-80dda209e456"</span> /&gt;
+    &lt;/<span class="field">originalText</span>&gt;
+    &lt;<span class="field">translation</span> 
+      <span class="attrib">code=</span><span class="value">"<mark class="color16">0DBJ4ZZ</mark>"</span> 
+      <span class="attrib">codeSystem=</span><span class="value">"2.16.840.1.113883.6.90"</span> 
+      <span class="attrib">displayName=</span><span class="value">"<mark class="color17">Excision of appendix, Percutaneous Endoscopic Approach</mark>"</span>/&gt;
+  &lt;/<span class="field">code</span>&gt;
+  &lt;<span class="field">statusCode</span> <span class="attrib">code=</span><span class="value">"<mark class="color18">completed</mark>"</span> /&gt;
+  &lt;<span class="field">effectiveTime</span> <span class="attrib">value=</span><span class="value">"<mark class="color19">20120806</mark>"</span>/&gt;
+&lt;/<span class="field">procedure</span>&gt;</div>
 </td><td>
-...
+<div id="fhir" class="border codeArea">{
+  "<span class="field">resourceType</span>" : "<span class="value">Procedure</span>",
+  "<span class="field">identifier</span>" : [{
+    "<span class="field">system</span>" : "<span class="value">urn:oid:<mark class="color10">1.3.6.1.4.1.22812.3.2009316.3.4.7</mark></span>",
+    "<span class="field">value</span>" : "<span class="value"><mark class="color11">545069400001</mark></span>"
+  },
+  {
+    "<span class="field">system</span>" : "<span class="value">urn:oid:<mark class="color10">1.3.6.1.4.1.22812.3.2009316.3.4.7</mark></span>",
+    "<span class="field">value</span>" : "<span class="value"><mark class="color12">545069400003</mark></span>"
+  }],
+  "<span class="field">status</span>" : "<span class="value"><mark class="color18">completed</mark></span>",
+  "<span class="field">code</span>" : {
+    "<span class="field">coding</span>" : [{
+      "<span class="field">system</span>" : "<span class="value"><mark class="color14">http://snomed.info/sct</mark></span>",
+      "<span class="field">code</span>" : "<span class="value"><mark class="color13">80146002</mark></span>",
+      "<span class="field">display</span>" : "<span class="value"><mark class="color15">Excision of appendix</mark></span>"
+    },
+    {
+      "<span class="field">system</span>" : "<span class="value">http://www.cms.gov/Medicare/Coding/ICD10</span>",
+      "<span class="field">code</span>" : "<span class="value"><mark class="color16">0DBJ4ZZ</mark></span>",
+      "<span class="field">display</span>" : "<span class="value"><mark class="color17">Excision of appendix, Percutaneous Endoscopic Approach</mark></span>"
+    }],
+    "<span class="field">text</span>" : "<span class="value"><mark class="color15">Excision of appendix</mark></span>"
+  },
+  "<span class="field">subject</span>" : {
+    "<span class="field">reference</span>" : "<span class="value">Patient/CF-patient</span>"
+  },
+  "<span class="field">performedDateTime</span>" : "<span class="value"><mark class="color19">2012-08-06</mark></span>"
+}</div>
 </td></tr></table>
 
 #### Links to example content
