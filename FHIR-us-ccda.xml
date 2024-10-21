@@ -37,6 +37,7 @@
 <artifact id="ConceptMap/CF-Criticality" key="ConceptMap-CF-Criticality" name="CCDA Criticality to FHIR Criticality"/>
 <artifact id="ConceptMap/CF-MedActivityMood" key="ConceptMap-CF-MedActivityMood" name="CCDA Medication Activity Mood to FHIR MedicationRequest.intent"/>
 <artifact id="ConceptMap/CF-ConditionClinicalStatus" key="ConceptMap-CF-ConditionClinicalStatus" name="CCDA Problem Concern Status to FHIR Condition Clinical Status"/>
+<artifact id="ConceptMap/CF-ResultStatus" key="ConceptMap-CF-ResultStatus" name="CCDA ResultStatus to FHIR ResultStatus"/>
 <artifact id="CapabilityStatement/CcdaOnFhirClient" key="CapabilityStatement-CcdaOnFhirClient" name="CCDA on FHIR Client"/>
 <artifact id="CapabilityStatement/CcdaOnFhirServer" key="CapabilityStatement-CcdaOnFhirServer" name="CCDA on FHIR Server"/>
 <artifact id="ConceptMap/CF-AllergyIntoleranceCategory" key="ConceptMap-CF-AllergyIntoleranceCategory" name="CCDA to FHIR Allergy Intolerance Category"/>
@@ -165,6 +166,7 @@
 <page key="CF-immunizations" name="C-CDA to FHIR Immunizations"/>
 <page key="CF-medications" name="C-CDA to FHIR Medications"/>
 <page key="CF-notes" name="C-CDA to FHIR Notes"/>
+<page key="CF-participations" name="C-CDA to FHIR Participations"/>
 <page key="CF-patient" name="C-CDA to FHIR Patient"/>
 <page key="CF-problems" name="C-CDA to FHIR Problems"/>
 <page key="CF-procedures" name="C-CDA to FHIR Procedures"/>
@@ -172,6 +174,7 @@
 <page key="CF-social" name="C-CDA to FHIR Social History"/>
 <page key="CF-vitals" name="C-CDA to FHIR Vital Signs"/>
 <page key="CF-index" name="C-CDA → FHIR Index"/>
+<page key="mappingChangelog" name="Change Log"/>
 <page key="downloads" name="Downloads"/>
 <page key="FC-allergies" name="FHIR to C-CDA Allergies"/>
 <page key="FC-encounters" name="FHIR to C-CDA Encounters"/>

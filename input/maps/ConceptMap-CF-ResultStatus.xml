@@ -1,0 +1,89 @@
+<ConceptMap xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="CF-ResultStatus"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="cgp" />
+  </extension>
+  <url value="http://hl7.org/fhir/us/ccda/ConceptMap/CF-ResultStatus"/>
+  <version value="4.0.1"/>
+  <name value="CCDAtoFHIRResultStatus"/>
+  <title value="CCDA ResultStatus to FHIR ResultStatus"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <publisher value="HL7 International"/>
+  <description value="C-CDA ResultStatus to FHIR ResultStatus"/>
+  <contact>
+    <name value="HL7 International"/>
+    <telecom>
+      <system value="phone"/>
+      <value value="+1 734 677 7777"/>
+    </telecom>
+    <telecom>
+      <system value="fax"/>
+      <value value="+1 734 677 6622"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@hl7.org"/>
+    </telecom>
+  </contact>
+  <sourceUri value="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.39"/>
+  <targetUri value="http://hl7.org/fhir/ValueSet/observation-status"/>
+  <group>
+    <source value="http://terminology.hl7.org/CodeSystem/2.16.840.1.113883.5.14"/>
+    <target value="http://hl7.org/fhir/observation-status"/>
+    <element>
+      <code value="aborted"/>
+      <display value="aborted"/>
+      <target>
+        <code value="cancelled"/>
+        <display value="Cancelled"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+        <element>
+      <code value="active"/>
+      <display value="active"/>
+      <target>
+        <code value="registered"/>
+        <display value="Registered"/>
+        <equivalence value="inexact"/>
+      </target>
+    </element>
+        <element>
+      <code value="cancelled"/>
+      <display value="cancelled"/>
+      <target>
+        <code value="cancelled"/>
+        <display value="Cancelled"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+        <element>
+      <code value="completed"/>
+      <display value="completed"/>
+      <target>
+        <code value="final"/>
+        <display value="Final"/>
+        <equivalence value="equal"/>
+      </target>
+    </element>
+        <element>
+      <code value="held"/>
+      <display value="held"/>
+      <target>
+        <code value="registered"/>
+        <display value="Registered"/>
+        <equivalence value="inexact"/>
+      </target>
+    </element>
+        <element>
+      <code value="suspended"/>
+      <display value="suspended"/>
+      <target>
+        <code value="registered"/>
+        <display value="Registered"/>
+        <equivalence value="inexact"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>
