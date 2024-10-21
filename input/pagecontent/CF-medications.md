@@ -72,14 +72,10 @@ MedicationRequest (and other resources) may represent the medication as a simple
 
 ### Illustrative example
 
-{% include examplebutton.html example="CF_medication_example" b_title = "Click Here To See Highlighted Example" %}
+
 
 #### Links to example content
 
 The consensus mapping example developed through multiple vendors are available below:
 * [Medication CDA example](./Binary-CF-medication.html)
 * [MedicationRequest FHIR example](./MedicationRequest-CF-medication.html)
-
-### Prior work and Expanded Spreadsheets
-
-As reviewed in the methodology, a more comprehensive review was performed via spreadsheets. These spreadsheets have been consolidated and further revised in the tables above but are provided for [reference here](https://github.com/HL7/ccda-on-fhir/blob/master/mappings/CF/CCDA-FHIR%20MedicationRequest.csv) 

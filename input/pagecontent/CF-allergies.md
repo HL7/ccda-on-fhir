@@ -1,9 +1,4 @@
-<style>
-td, th {
-   border: 1px solid black!important;
-   max-width:500px;
-}
-</style>
+<link rel="stylesheet" href="colors.css">
 
 This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, please refer to [Allergies FHIR → CDA](./FC-allergies.html). For guidance on how to read the table below, see [Reading the C-CDA ↔ FHIR Mapping Pages](./mappingGuidance.html)
 
@@ -41,14 +36,153 @@ When authors or other provenance are recorded in the parentƒ [Allergy Concern A
 
 ### Illustrative example
 
-{% include examplebutton.html example="CF_allergy_example" b_title = "Click on Here To See Highlighted Example" %}
+<table><tr><th>CDA Allergy Act</th><th>FHIR AllergyIntolerance Resource</th></tr>
+<tr><td>
+<div id="cda" class="border codeArea">&lt;<span class="field">act</span> <span class="attrib">classCode=</span><span class="value">"ACT"</span> <span class="attrib">moodCode=</span><span class="value">"EVN"</span>&gt;
+  &lt;<span class="field">templateId</span> <span class="attrib">root=</span><span class="value">"2.16.840.1.113883.10.20.22.4.30"</span> <span class="attrib">extension=</span><span class="value">"2015-08-01"</span> /&gt;
+  &lt;<span class="field">templateId</span> <span class="attrib">root=</span><span class="value">"2.16.840.1.113883.10.20.22.4.30"</span> /&gt;
+  &lt;<span class="field">id</span> <span class="attrib">root=</span><span class="value">"1.3.6.1.4.1.22812.3.2009316.3.4.10"</span> <span class="attrib">extension=</span><span class="value">"<mark class="color10">545077400001</mark>"</span> /&gt;
+  &lt;<span class="field">id</span> <span class="attrib">root=</span><span class="value">"1.3.6.1.4.1.22812.3.2009316.3.4.10"</span> <span class="attrib">extension=</span><span class="value">"<mark class="color11">545077400003</mark>"</span> /&gt;
+  &lt;<span class="field">code</span> <span class="attrib">code=</span><span class="value">"CONC"</span> <span class="attrib">codeSystem=</span><span class="value">"2.16.840.1.113883.5.6"</span> /&gt;
+  &lt;<span class="field">statusCode</span> <span class="attrib">code=</span><span class="value">"<mark class="color12">active</mark>"</span> /&gt;
+  &lt;<span class="field">effectiveTime</span> <span class="attrib">xsi:type=</span><span class="value">"IVL_TS"</span>&gt;
+    &lt;<span class="field">low</span> <span class="attrib">nullFlavor=</span><span class="value">"NI"</span> /&gt;
+  &lt;/<span class="field">effectiveTime</span>&gt;
+  &lt;<span class="field">entryRelationship</span> <span class="attrib">typeCode=</span><span class="value">"SUBJ"</span>&gt;
+    &lt;<span class="field">observation</span> <span class="attrib">classCode=</span><span class="value">"OBS"</span> <span class="attrib">moodCode=</span><span class="value">"EVN"</span>&gt;
+      &lt;<span class="field">templateId</span> <span class="attrib">root=</span><span class="value">"2.16.840.1.113883.10.20.22.4.7"</span> <span class="attrib">extension=</span><span class="value">"2014-06-09"</span> /&gt;
+      &lt;<span class="field">templateId</span> <span class="attrib">root=</span><span class="value">"2.16.840.1.113883.10.20.22.4.7"</span> /&gt;
+      &lt;<span class="field">id</span> <span class="attrib">root=</span><span class="value">"<mark class="color13">1.3.6.1.4.1.22812.3.2009316.3.4.10.2</mark>"</span> <span class="attrib">extension=</span><span class="value">"<mark class="color10">545077400001</mark>"</span> /&gt;
+      &lt;<span class="field">id</span> <span class="attrib">root=</span><span class="value">"<mark class="color13">1.3.6.1.4.1.22812.3.2009316.3.4.10.2</mark>"</span> <span class="attrib">extension=</span><span class="value">"<mark class="color11">545077400003</mark>"</span> /&gt;
+      &lt;<span class="field">code</span> <span class="attrib">code=</span><span class="value">"ASSERTION"</span> <span class="attrib">codeSystem=</span><span class="value">"2.16.840.1.113883.5.4"</span> /&gt;
+      &lt;<span class="field">statusCode</span> <span class="attrib">code=</span><span class="value">"completed"</span> /&gt;
+      &lt;<span class="field">effectiveTime</span> <span class="attrib">xsi:type=</span><span class="value">"IVL_TS"</span>&gt;
+        &lt;<span class="field">low</span> <span class="attrib">value=</span><span class="value">"<mark class="color14">20080501</mark>"</span> /&gt;
+      &lt;/<span class="field">effectiveTime</span>&gt;
+      &lt;<span class="field">value</span> <span class="attrib">xsi:type=</span><span class="value">"CD"</span> 
+        <span class="attrib">code=</span><span class="value">"<mark class="color15">419511003</mark>"</span> 
+        <span class="attrib">codeSystem=</span><span class="value">"<mark class="color16">2.16.840.1.113883.6.96</mark>"</span>&gt;
+        &lt;<span class="field">originalText</span>&gt;
+          &lt;<span class="field">reference</span> <span class="attrib">value=</span><span class="value">"#_6db75b62-deb2-4bab-b597-00c8ae86f6b4"</span> /&gt;
+        &lt;/<span class="field">originalText</span>&gt;
+      &lt;/<span class="field">value</span>&gt;
+      &lt;<span class="field">participant</span> <span class="attrib">typeCode=</span><span class="value">"CSM"</span>&gt;
+        &lt;<span class="field">participantRole</span> <span class="attrib">classCode=</span><span class="value">"MANU"</span>&gt;
+          &lt;<span class="field">playingEntity</span> <span class="attrib">classCode=</span><span class="value">"MMAT"</span>&gt;
+            &lt;<span class="field">code</span> 
+              <span class="attrib">code=</span><span class="value">"<mark class="color17">1191</mark>"</span> 
+              <span class="attrib">codeSystem=</span><span class="value">"<mark class="color18">2.16.840.1.113883.6.88</mark>"</span> 
+              <span class="attrib">displayName=</span><span class="value">"<mark class="color19">Aspirin</mark>"</span>&gt;
+              &lt;<span class="field">translation</span> 
+                <span class="attrib">code=</span><span class="value">"<mark class="color20">293586001</mark>"</span> 
+                <span class="attrib">codeSystem=</span><span class="value">"<mark class="color16">2.16.840.1.113883.6.96</mark>"</span> 
+                <span class="attrib">displayName=</span><span class="value">"<mark class="color24">Allergy to Aspirin</mark>"</span>/&gt;
+            &lt;/<span class="field">code</span>&gt;
+          &lt;/<span class="field">playingEntity</span>&gt;
+        &lt;/<span class="field">participantRole</span>&gt;
+      &lt;/<span class="field">participant</span>&gt;
+      &lt;<span class="field">entryRelationship</span> <span class="attrib">typeCode=</span><span class="value">"MFST"</span> <span class="attrib">inversionInd=</span><span class="value">"true"</span>&gt;
+        &lt;<span class="field">observation</span> <span class="attrib">classCode=</span><span class="value">"OBS"</span> <span class="attrib">moodCode=</span><span class="value">"EVN"</span>&gt;
+          &lt;<span class="field">templateId</span> <span class="attrib">root=</span><span class="value">"2.16.840.1.113883.10.20.22.4.9"</span> <span class="attrib">extension=</span><span class="value">"2014-06-09"</span> /&gt;
+          &lt;<span class="field">templateId</span> <span class="attrib">root=</span><span class="value">"2.16.840.1.113883.10.20.22.4.9"</span> /&gt;
+          &lt;<span class="field">id</span> <span class="attrib">nullFlavor=</span><span class="value">"NI"</span> /&gt;
+          &lt;<span class="field">code</span> <span class="attrib">code=</span><span class="value">"ASSERTION"</span> <span class="attrib">codeSystem=</span><span class="value">"2.16.840.1.113883.5.4"</span> /&gt;
+          &lt;<span class="field">text</span>&gt;
+            &lt;<span class="field">reference</span> <span class="attrib">value=</span><span class="value">"#_8a7ed342-967a-400e-88d5-2f8c2b7cdda0"</span> /&gt;
+          &lt;/<span class="field">text</span>&gt;
+          &lt;<span class="field">statusCode</span> <span class="attrib">code=</span><span class="value">"completed"</span> /&gt;
+          &lt;<span class="field">value</span> <span class="attrib">xsi:type=</span><span class="value">"CD"</span> 
+            <span class="attrib">code=</span><span class="value">"<mark class="color22">247472004</mark>"</span> 
+            <span class="attrib">codeSystem=</span><span class="value">"<mark class="color16">2.16.840.1.113883.6.96</mark>"</span> 
+            <span class="attrib">displayName=</span><span class="value">"<mark class="color23">Wheal</mark>"</span>&gt;
+            &lt;<span class="field">originalText</span>&gt;
+              &lt;<span class="field">reference</span> <span class="attrib">value=</span><span class="value">"#_8a7ed342-967a-400e-88d5-2f8c2b7cdda0"</span> /&gt;
+            &lt;/<span class="field">originalText</span>&gt;
+          &lt;/<span class="field">value</span>&gt;
+          &lt;<span class="field">entryRelationship</span> <span class="attrib">typeCode=</span><span class="value">"SUBJ"</span> <span class="attrib">inversionInd=</span><span class="value">"true"</span>&gt;
+            &lt;<span class="field">observation</span> <span class="attrib">classCode=</span><span class="value">"OBS"</span> <span class="attrib">moodCode=</span><span class="value">"EVN"</span>&gt;
+              &lt;<span class="field">templateId</span> <span class="attrib">root=</span><span class="value">"2.16.840.1.113883.10.20.22.4.8"</span> <span class="attrib">extension=</span><span class="value">"2014-06-09"</span> /&gt;
+              &lt;<span class="field">templateId</span> <span class="attrib">root=</span><span class="value">"2.16.840.1.113883.10.20.22.4.8"</span> /&gt;
+              &lt;<span class="field">code</span> <span class="attrib">code=</span><span class="value">"SEV"</span> <span class="attrib">codeSystem=</span><span class="value">"2.16.840.1.113883.5.4"</span> /&gt;
+              &lt;<span class="field">text</span>&gt;Severe&lt;/<span class="field">text</span>&gt;
+              &lt;<span class="field">statusCode</span> <span class="attrib">code=</span><span class="value">"completed"</span> /&gt;
+              &lt;<span class="field">value</span> <span class="attrib">xsi:type=</span><span class="value">"CD"</span> 
+                <span class="attrib">code=</span><span class="value">"24484000"</span> 
+                <span class="attrib">codeSystem=</span><span class="value">"<mark class="color16">2.16.840.1.113883.6.96</mark>"</span> 
+                <span class="attrib">displayName=</span><span class="value">"<mark class="color27">Severe</mark>"</span> /&gt;
+            &lt;/<span class="field">observation</span>&gt;
+          &lt;/<span class="field">entryRelationship</span>&gt;
+        &lt;/<span class="field">observation</span>&gt;
+      &lt;/<span class="field">entryRelationship</span>&gt;
+    &lt;/<span class="field">observation</span>&gt;
+  &lt;/<span class="field">entryRelationship</span>&gt;
+&lt;/<span class="field">act</span>&gt;</div>
+</td><td>
+
+<div id="fhir" class="border codeArea">{
+  "<span class="field">resourceType</span>": "<span class="value">AllergyIntolerance</span>",
+  "<span class="field">identifier</span>": [
+    {
+      "<span class="field">system</span>": "<span class="value">urn:oid:<mark class="color13">1.3.6.1.4.1.22812.3.2009316.3.4.10.2</mark></span>",
+      "<span class="field">value</span>": "<span class="value"><mark class="color10">545077400001</mark></span>"
+    },
+    {
+      "<span class="field">system</span>": "<span class="value">urn:oid:<mark class="color13">1.3.6.1.4.1.22812.3.2009316.3.4.10.2</mark></span>",
+      "<span class="field">value</span>": "<span class="value"><mark class="color11">545077400003</mark></span>"
+    }
+  ],
+  "<span class="field">clinicalStatus</span>": {
+    "<span class="field">coding</span>": [
+      {
+        "<span class="field">system</span>": "<span class="value">http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical</span>",
+        "<span class="field">code</span>": "<span class="value"><mark class="color12">active</mark></span>"
+      }
+    ]
+  },
+  "<span class="field">category</span>": [
+    "<mark class="color15">medication</mark>"
+  ],
+  "<span class="field">code</span>": {
+    "<span class="field">coding</span>": [
+      {
+        "<span class="field">system</span>": "<span class="value"><mark class="color18">http://www.nlm.nih.gov/research/umls/rxnorm</mark></span>",
+        "<span class="field">code</span>": "<span class="value"><mark class="color17">1191</mark></span>",
+        "<span class="field">display</span>": "<span class="value"><mark class="color19">Aspirin</mark></span>"
+      },
+      {
+        "<span class="field">system</span>": "<span class="value"><mark class="color16">http://snomed.info/sct</mark></span>",
+        "<span class="field">code</span>": "<span class="value"><mark class="color20">293586001</mark></span>",
+        "<span class="field">display</span>": "<span class="value"><mark class="color24">Allergy to Aspirin</mark></span>"
+      }
+    ],
+    "<span class="field">text</span>": "<span class="value"><mark class="color19">Aspirin</mark></span>"
+  },
+  "<span class="field">patient</span>": {
+    "<span class="field">reference</span>": "<span class="value">Patient/CF-patient</span>"
+  },
+  "<span class="field">onsetDateTime</span>": "<span class="value"><mark class="color14">2008-05-01</mark></span>",
+  "<span class="field">reaction</span>": [
+    {
+      "<span class="field">manifestation</span>": [
+        {
+          "<span class="field">coding</span>": [
+            {
+              "<span class="field">system</span>": "<span class="value"><mark class="color16">http://snomed.info/sct</mark></span>",
+              "<span class="field">code</span>": "<span class="value"><mark class="color22">247472004</mark></span>",
+              "<span class="field">display</span>": "<span class="value"><mark class="color23">Wheal</mark></span>"
+            }
+          ],
+          "<span class="field">text</span>": "<span class="value"><mark class="color23">Wheal</mark></span>"
+        }
+      ],
+      "<span class="field">severity</span>": "<span class="value"><mark class="color27">severe</mark></span>"
+    }
+  ]
+}</div>
+</td></tr></table>
 
 #### Links to example content
 
 The consensus mapping example developed through multiple vendors are available below:
 * [Allergy CDA example](./Binary-CF-allergy.html)
 * [Allergy FHIR example](./AllergyIntolerance-CF-allergy.html)
-
-### Prior work and Expanded Spreadsheets
-
-As reviewed in the methodology, a more comprehensive review was performed via spreadsheets. These spreadsheets have been consolidated and further revised in the tables above but are provided for [reference here](https://github.com/HL7/ccda-on-fhir/blob/master/mappings/CF/CCDA-FHIR%20Allergy.csv)

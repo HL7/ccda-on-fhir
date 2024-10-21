@@ -42,14 +42,9 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
 
 ### Illustrative example
 
-{% include examplebutton.html example="CF_patient_example" b_title = "Click Here To See Highlighted Example" %}
 
 #### Links to example content
 
 The consensus mapping example developed through multiple vendors are available below:
 * [Patient CDA example](./Binary-CF-patient.html)
 * [Patient FHIR example](./Patient-CF-patient.html)
-
-### Prior work and Expanded Spreadsheets
-
-As reviewed in the methodology, a more comprehensive review was performed via spreadsheets. These spreadsheets have been consolidated and further revised in the tables above but are provided for [reference here](https://github.com/HL7/ccda-on-fhir/blob/master/mappings/CF/CCDA-FHIR%20Patient.csv) 
