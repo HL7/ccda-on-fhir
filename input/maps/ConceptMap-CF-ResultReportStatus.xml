@@ -1,16 +1,16 @@
 <ConceptMap xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <id value="CF-ResultStatus"/>
+  <id value="CF-ResultReportStatus"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="cgp" />
   </extension>
-  <url value="http://hl7.org/fhir/us/ccda/ConceptMap/CF-ResultStatus"/>
+  <url value="http://hl7.org/fhir/us/ccda/ConceptMap/CF-ResultReportStatus"/>
   <version value="4.0.1"/>
-  <name value="CCDAtoFHIRResultStatus"/>
-  <title value="CCDA ResultStatus to FHIR ResultStatus"/>
+  <name value="CCDAtoFHIRResultReportStatus"/>
+  <title value="CCDA ResultStatus to FHIR DiagnosticReport status"/>
   <status value="active"/>
   <experimental value="false"/>
   <publisher value="HL7 International"/>
-  <description value="C-CDA ResultStatus to FHIR ResultStatus"/>
+  <description value="C-CDA Result Status to FHIR DiagnosticReport status"/>
   <contact>
     <name value="HL7 International"/>
     <telecom>
@@ -47,6 +47,7 @@
         <code value="registered"/>
         <display value="Registered"/>
         <equivalence value="inexact"/>
+        <comment value="Caution: Multiple values map to FHIR inexact."/>
       </target>
     </element>
         <element>
@@ -74,6 +75,7 @@
         <code value="registered"/>
         <display value="Registered"/>
         <equivalence value="inexact"/>
+        <comment value="Caution: Multiple values map to FHIR inexact."/>
       </target>
     </element>
         <element>
@@ -83,6 +85,7 @@
         <code value="registered"/>
         <display value="Registered"/>
         <equivalence value="inexact"/>
+        <comment value="Caution: Multiple values map to FHIR inexact."/>
       </target>
     </element>
   </group>

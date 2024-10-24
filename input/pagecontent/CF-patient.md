@@ -38,7 +38,7 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
 
 ### Illustrative example
 
-<table><tr><th>CDA Example</th><th>FHIR Resource</th></tr>
+<table><tr><th>CDA RecordTarget Example</th><th>FHIR Patient Resource</th></tr>
 <tr><td>
 <div id="cda" class="border codeArea">&lt;<span class="field">recordTarget</span>&gt;
   &lt;<span class="field">patientRole</span>&gt;
