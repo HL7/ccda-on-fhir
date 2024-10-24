@@ -36,7 +36,7 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
 
 1\. XPath abbrievated for C-CDA US Realm recordTarget as: <br/> ClinicalDocument/recordTarget/patientRole
 
-### Illustrative example
+### Example
 
 <table><tr><th>CDA RecordTarget Example</th><th>FHIR Patient Resource</th></tr>
 <tr><td>

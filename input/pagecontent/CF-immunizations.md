@@ -34,7 +34,7 @@ Mapping is from `@moodCode="EVN"` (i.e. historical) immunizations, not `INT` (fu
 1\. XPath abbrievated for C-CDA Immunization Activity as: <br/> ClinicalDocument/component/structuredBody/component/section[code/@code="11369-6"]/entry/substanceAdministration<br/>
 2\. Both indication and refusal reason are observations related by @typeCode="RSON". Typically templateIds should not be used to identify content, but the Indication template does not require a specific code. If the observation/code comes from ValueSet [No Immunization Reason](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.1.11.19717/expansion/Latest), then it is clearly a refusal reason. If it comes from ValueSet [Problem Type](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.3221.7.2/expansion/Latest), then it is an indication. But if the code comes from neither value set, the observation is *possibly* an indication, but the only way to know is to check the templateId.
 
-### Illustrative example
+### Example: Standard Immunization
 
 <table><tr><th>CDA Immunization Example</th><th>FHIR Immunization Resource</th></tr>
 <tr><td>

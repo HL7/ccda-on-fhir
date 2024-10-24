@@ -27,7 +27,7 @@ C-CDA 2.1 describes three templates for Procedures: Procedure Activity Act, Proc
 
 1\. XPath abbrievated for C-CDA Procedure as: <br/> ClinicalDocument/component/structuredBody/component/section[code/@code="47519-4"]/entry/procedure
 
-### Illustrative example
+### Example
 
 <table><tr><th>CDA Procedure Example</th><th>FHIR Procedure Resource</th></tr>
 <tr><td>

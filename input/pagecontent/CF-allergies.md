@@ -34,7 +34,7 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
 
 When authors or other provenance are recorded in the parentƒ [Allergy Concern Act](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-AllergyConcernAct.html), it is recommended that those data be mapped to the FHIR AllergyIntolerance. 
 
-### Illustrative example
+### Example
 
 <table><tr><th>CDA Allergy Act</th><th>FHIR AllergyIntolerance Resource</th></tr>
 <tr><td>

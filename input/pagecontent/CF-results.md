@@ -59,12 +59,15 @@ C-CDA also defines a [Specimen Collection Procedure](https://hl7.org/cda/us/ccda
 |**C-CDA [Specimen Collection Procedure](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-SpecimenCollectionProcedure.html)**<br/>/targetSiteCode|.collection.bodySite|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 |**C-CDA [Specimen Condtion Observation](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-SpecimenConditionObservation.html)**<br/>/value|.condition|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 
-### Illustrative example
+### Example
 
-<table><tr><th>CDA Example</th><th>FHIR Resource</th></tr>
+<table><tr><th>CDA Result Example</th><th>FHIR DiagnosticReport and Observation Resources</th></tr>
 <tr><td>
 ...
 </td><td>
+<b>Note:</b> The following shows a DiagnosticReport resource Observation resources embedded in its contained property. This was done for ease of creating a single, visual, highlighted example, but implementers may choose to create separate, external resources according to their own policy.
+<br/>
+
 ...
 </td></tr></table>
 

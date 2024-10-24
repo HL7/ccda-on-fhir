@@ -46,12 +46,15 @@ C-CDA vitals are typically grouped into a Vital Signs Organizer to group one or 
 - Observation.valueQuantity represents the Oxygen saturation (e.g. `98%`)
 - Create individual components for `3150-0` - Inhaled Oxygen Concentration & `3151-8` - Inhaled Oxygen Flow Rate (only if values exist)
 
-### Illustrative example
+### Example: Simple Vitals Panel
 
-<table><tr><th>CDA Example</th><th>FHIR Resource</th></tr>
+<table><tr><th>CDA Vitals Example</th><th>FHIR Observation Resources</th></tr>
 <tr><td>
 ...
 </td><td>
+<b>Note:</b> The following shows an Observation resource for the panel with individual Observation resources embedded in its contained property. This was done for ease of creating a single, visual, highlighted example, but implementers may choose to create separate, external resources according to their own policy.
+<br/>
+
 ...
 </td></tr></table>
 

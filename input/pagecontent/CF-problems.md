@@ -34,7 +34,7 @@ Note that C-CDA includes a Concern wrapper act from which status may be read; mo
 
 When authors or other provenance are recorded in the parent [Problem Concern Act](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-ProblemConcernAct.html), it is recommended that those data be mapped to the FHIR Condition. 
 
-### Illustrative examples
+### Example: Standard Problem
 
 <table><tr><th>CDA Problem Example</th><th>FHIR Condition Resource</th></tr>
 <tr><td>

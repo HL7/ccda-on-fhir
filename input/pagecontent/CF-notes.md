@@ -21,7 +21,7 @@ Clinical Notes may appear in their own section or as an entry in any open sectio
 
 4dc41c26-43a4-48d9-b17e-067890006b29
 
-### Illustrative example
+### Example
 
 <table><tr><th>CDA Note Activity Example</th><th>FHIR DocumentReference Resource</th></tr>
 <tr><td>

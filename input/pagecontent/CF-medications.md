@@ -66,7 +66,7 @@ MedicationRequest (and other resources) may represent the medication as a simple
 |/consumable/manufacturedProduct/manufacturerOrganization|**[Organization](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-organization.html)**<br/>.manufacturer|
 |**[Drug Vehicle](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-DrugVehicle.html)**<br/>/participant[@typeCode="CSM"]/playingEntity/code|.ingredient.itemCodeableConcept|Set `.isActive = false`<br/>[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)
 
-### Illustrative example
+### Example
 
 <table><tr><th>CDA Medication Example</th><th>FHIR MedicationRequest and Medication Resources</th></tr>
 <tr><td>
