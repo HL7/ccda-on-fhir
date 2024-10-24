@@ -15,11 +15,11 @@ Encounter Activities in the Encounters Section (or elsewhere in the document, su
 |/statusCode <sup>(b)</sup>|.status|[CDA → FHIR encounter status](ConceptMap-CF-EncounterStatus.html)<br/>**Note:** statusCode is optional in C-CDA. If missing, fallback to effectiveTime mapping.
 |/effectiveTime|.status|If effectiveTime is a single timestamp or contains a high, status = `"finished"`.<br/>If low is present and high is missing, the status may be `"in-progress"` but implementers may choose to evaluate historical values as `"finished"` or `"unknown"` if appropriate.
 |/effectiveTime/@value<br/>/effectiveTime/low/@value|.period.start|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)
-|/effectiveTime/high/@value|.period.end
+|/effectiveTime/high/@value|.period.end|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)
 |/sdtc:dischargeDispositionCode <sup>(b)</sup><br/>/dischargeDispositionCode <sup>(h)</sup>|.hospialization.dischargeDisposition|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)
-|/performer <sup>(b)</sup><br/>/encounterParticipant <sup>(h)</sup>|.participant| See [participation guidance](CF-participations.html#cda-to-fhir-practitioner)
+|/performer <sup>(b)</sup><br/>/encounterParticipant <sup>(h)</sup>|.participant|[C-CDA → FHIR Participation](CF-participations.html)
 |/performer/sdtc:functionCode <sup>(b)</sup>|.participant.type|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)
-|/participant[@typeCode="LOC"] <sup>(b)</sup><br/>/location <sup>(h)</sup>|.location
+|/participant[@typeCode="LOC"] <sup>(b)</sup><br/>/location <sup>(h)</sup>|.location|[C-CDA → FHIR Participation](CF-participations.html)
 |**[Indication](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-Indication.html)** <sup>(b)</sup><br/>/entryRelationship[@typeCode="RSON"]/observation|.reasonCode<br/>or<br/>.reasonReference|If the id of the indication references a problem in the document that has been converted to a FHIR resource, populate .reasonReference with a reference to that resource. Otherwise, map observation/value to .reasonCode.<br/>[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)
 |**[Encounter Diagnosis](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-EncounterDiagnosis.html)** <sup>(b)</sup><br/>/entryRelationship/act[code/@code="29308-4"]/observation|**[Encounter Diagnosis](https://hl7.org/fhir/us/core/StructureDefinition-us-core-condition-encounter-diagnosis.html)**<br/>&<br/>.diagnosis.condition|The observation maps identically to [CDA → FHIR Problems](./CF-problems.html).<br/>Since this is an encounter diagnosis, the `Observation.category` should be set to `encounter-diagnosis`.
 

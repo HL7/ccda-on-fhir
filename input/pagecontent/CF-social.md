@@ -61,7 +61,7 @@ In US Core, Pregnancy Intent was first defined in version 6.
 |/value|.valueCodeableConcept|Value sets are the same<br/>[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 |/value/@nullFlavor=UNK|.valueCodeableConcept|Unknown becomes an actual value with system = `http://terminology.hl7.org/CodeSystem/v3-NullFlavor`. Any other nullFlavors should use a data-absent-reason extension.
 
-### Illustrative examples
+### Example: General Social History Observation
 
 The following is a general social history comparison between C-CDA and FHIR
 

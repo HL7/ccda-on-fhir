@@ -37,7 +37,7 @@
 <artifact id="ConceptMap/CF-Criticality" key="ConceptMap-CF-Criticality" name="CCDA Criticality to FHIR Criticality"/>
 <artifact id="ConceptMap/CF-MedActivityMood" key="ConceptMap-CF-MedActivityMood" name="CCDA Medication Activity Mood to FHIR MedicationRequest.intent"/>
 <artifact id="ConceptMap/CF-ConditionClinicalStatus" key="ConceptMap-CF-ConditionClinicalStatus" name="CCDA Problem Concern Status to FHIR Condition Clinical Status"/>
-<artifact id="ConceptMap/CF-ResultStatus" key="ConceptMap-CF-ResultStatus" name="CCDA ResultStatus to FHIR ResultStatus"/>
+<artifact id="ConceptMap/CF-ResultReportStatus" key="ConceptMap-CF-ResultReportStatus" name="CCDA ResultStatus to FHIR DiagnosticReport status"/>
 <artifact id="CapabilityStatement/CcdaOnFhirClient" key="CapabilityStatement-CcdaOnFhirClient" name="CCDA on FHIR Client"/>
 <artifact id="CapabilityStatement/CcdaOnFhirServer" key="CapabilityStatement-CcdaOnFhirServer" name="CCDA on FHIR Server"/>
 <artifact id="ConceptMap/CF-AllergyIntoleranceCategory" key="ConceptMap-CF-AllergyIntoleranceCategory" name="CCDA to FHIR Allergy Intolerance Category"/>
