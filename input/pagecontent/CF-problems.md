@@ -240,10 +240,6 @@ When authors or other provenance are recorded in the parent [Problem Concern Act
             <span class="attrib">code=</span><span class="value">"<mark class="color22">LA28397-0</mark>"</span> 
             <span class="attrib">displayName=</span><span class="value">"<mark class="color23">Often true</mark>"</span> 
             <span class="attrib">codeSystem=</span><span class="value">"<mark class="color14">2.16.840.1.113883.6.1</mark>"</span>&gt;
-            <span class="comment">&lt;!-- For review .... this doesn't look right --&gt;</span>
-            &lt;<span class="field">translation</span> <span class="attrib">code=</span><span class="value">"1"</span> 
-              <span class="attrib">codeSystem=</span><span class="value">"<mark class="color14">2.16.840.1.113883.6.1</mark>"</span> 
-              <span class="attrib">codeSystemName=</span><span class="value">"<mark class="color14">LOINC</mark>"</span>/&gt;
           &lt;/<span class="field">value</span>&gt;
         &lt;/<span class="field">observation</span>&gt;
       &lt;/<span class="field">entryRelationship</span>&gt;
