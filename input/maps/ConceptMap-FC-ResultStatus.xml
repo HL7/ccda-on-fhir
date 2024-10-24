@@ -86,6 +86,15 @@
       </target>
     </element>
     <element>
+      <code value="appended"/>
+      <display value="appended"/>
+      <target>
+        <code value="completed"/>
+        <display value="completed"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
       <code value="cancelled"/>
       <display value="Cancelled"/>
       <target>

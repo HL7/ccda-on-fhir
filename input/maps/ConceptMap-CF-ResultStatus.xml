@@ -55,7 +55,7 @@
       <target>
         <code value="cancelled"/>
         <display value="Cancelled"/>
-        <equivalence value="wider"/>
+        <equivalence value="equal"/>
       </target>
     </element>
         <element>

@@ -17,7 +17,7 @@ Encounter Activities in the Encounters Section (or elsewhere in the document, su
 |/effectiveTime/@value<br/>/effectiveTime/low/@value|.period.start|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)
 |/effectiveTime/high/@value|.period.end
 |/sdtc:dischargeDispositionCode <sup>(b)</sup><br/>/dischargeDispositionCode <sup>(h)</sup>|.hospialization.dischargeDisposition|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)
-|/performer <sup>(b)</sup><br/>/encounterParticipant <sup>(h)</sup>|.participant|*TODO: Mapping Guidance for general performers (Participant vs ParticipantRole vs Organization)*
+|/performer <sup>(b)</sup><br/>/encounterParticipant <sup>(h)</sup>|.participant| See [participation guidance](CF-participations.html#cda-to-fhir-practitioner)
 |/performer/sdtc:functionCode <sup>(b)</sup>|.participant.type|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)
 |/participant[@typeCode="LOC"] <sup>(b)</sup><br/>/location <sup>(h)</sup>|.location
 |**[Indication](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-Indication.html)** <sup>(b)</sup><br/>/entryRelationship[@typeCode="RSON"]/observation|.reasonCode<br/>or<br/>.reasonReference|If the id of the indication references a problem in the document that has been converted to a FHIR resource, populate .reasonReference with a reference to that resource. Otherwise, map observation/value to .reasonCode.<br/>[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)

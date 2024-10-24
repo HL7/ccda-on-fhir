@@ -26,7 +26,7 @@ Observation values are generic - they can be of any CDA type in CDA, and *almost
 |/id|.identifier|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
 ||.category|If the code is LOINC, the category can be inferred from the LOINC code CLASSTYPE. Query a FHIR server via `{endpoint}CodeSystem/$lookup?system=http://loinc.org&code={code}&&property=CLASSTYPE` and set the category according to the CLASSTYPE property:<br/>1=Laboratory class (laboratory); 2=Clinical class (clinical-test); 3=Claims attachments (not mapped); 4=Surveys (survey)
 |/code |.code|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
-|/statusCode|.status|/statusCode|.status|[CDA Result Status → FHIR Result Status](./ConceptMap-CF-ResultStatus.html)
+|/statusCode|.status|[CDA Result Status → FHIR Result Status](./ConceptMap-CF-ResultStatus.html)
 |/effectiveTime|.effectiveDateTime<br/>or<br/>.effectivePeriod|Prefer effectiveDateTime<br/>[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)
 |/value[xsi:type=PQ]|.valueQuantity|[CDA ↔ FHIR Quantity](mappingGuidance.html#cda--fhir-quantity)
 |/value[xsi:type=IVL_PQ]|.valueQuantity<br/>or<br/>.valueRange|[Ranges of Physical Quantities](mappingGuidance.html#ranges-of-physical-quantities)
