@@ -19,7 +19,7 @@ This maps to US Core version 6's Simple Observation. Previous versions of US Cor
 |/id|.identifier|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
 ||.category|Set to `social-history` from [Observation Category Codes](https://build.fhir.org/ig/HL7/UTG/CodeSystem-observation-category.html)<br/>Additional SDOH categories may be set as well, depending on the code of the observation. 
 |/code |.code|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
-|/statusCode|.status|*TODO: ConceptMap*
+|/statusCode|.status|[CDA Result Status → FHIR Result Status](./ConceptMap-CF-ResultStatus.html)
 |/effectiveTime|.effectiveDateTime<br/>or<br/>.effectivePeriod|Prefer effectiveDateTime<br/>[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)
 |/value[xsi:type=PQ]|.valueQuantity|[CDA ↔ FHIR Quantity](mappingGuidance.html#cda--fhir-quantity)
 |/value[xsi:type=IVL_PQ]|.valueQuantity<br/>or<br/>.valueRange|[Ranges of Physical Quantities](mappingGuidance.html#ranges-of-physical-quantities)
