@@ -19,7 +19,7 @@ See guidance on timing mappings on [Medications CDA → FHIR](./CF-medications.h
 
 ### FHIR to C-CDA
 
-|FHIR<br>[MedicationRequest](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-medicationrequest.html)|C-CDA¹<br>[Medication Activity substanceAdministration](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-MedicationActivity.html)|Transform Steps|
+|FHIR<br>[MedicationRequest](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-medicationrequest.html)|C-CDA¹<br>[Medication Activity substanceAdministration](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-MedicationActivity.html)|Transform Steps|
 |:----|:----|:----|
 |.identifier|/id|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
 |.status|/status|[FHIR status → CDA statusCode](ConceptMap-FC-MedicationStatus.html)|
@@ -30,10 +30,10 @@ See guidance on timing mappings on [Medications CDA → FHIR](./CF-medications.h
 |.authoredOn|/author/time|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
 |.requester|/assignedAuthor|[CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)|
 |.performer|/performer|[CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)|
-|.reasonCode|**[Indication](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-Indication.html)**<br/>/entryRelationship[@typeCode="RSON"]/observation/value|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
-|**[Annotation](https://hl7.org/fhir/datatypes.html#Annotation)**<br/>.note|**[Comment Activity](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-CommentActivity.html)**<br/>/entryRelationship/act[code/@code="48767-8"]/text||
-|.dosageInstruction.text<br/>&<br/>.dosageInstruction.patientInstruction|**[Free text sig](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-MedicationFreeTextSig.html)**<br/>/entryRelationship/substanceAdministration[code/@code="76662-6"]/text||
-|.dosageInstruction.additionalInstruction|**[Instruction](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-Instruction.html)**<br/>/entryRelationship[@typeCode="SUBJ"]/act/code|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
+|.reasonCode|**[Indication](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-Indication.html)**<br/>/entryRelationship[@typeCode="RSON"]/observation/value|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
+|**[Annotation](https://hl7.org/fhir/datatypes.html#Annotation)**<br/>.note|**[Comment Activity](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-CommentActivity.html)**<br/>/entryRelationship/act[code/@code="48767-8"]/text||
+|.dosageInstruction.text<br/>&<br/>.dosageInstruction.patientInstruction|**[Free text sig](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-MedicationFreeTextSig.html)**<br/>/entryRelationship/substanceAdministration[code/@code="76662-6"]/text||
+|.dosageInstruction.additionalInstruction|**[Instruction](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-Instruction.html)**<br/>/entryRelationship[@typeCode="SUBJ"]/act/code|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 |.dosageInstruction.timing.repeat.boundsPeriod.start|effectiveTime[1]/low|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)<br/>**Note:** in XPath, `[1]` is the first instance; there is no `[0]` in XPath.|
 |.dosageInstruction.timing.repeat.boundsPeriod.end|effectiveTime[1]/high|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
 |.dosageInstruction.timing.repeat.frequency<br/>&<br/>.dosageInstruction.timing.repeat.period<br/>&<br/>.dosageInstruction.timing.repeat.periodUnit<br/>|/effectiveTime[2]/...<br/>/@operator='A'<br/>/@xsi:type='PIVL_TS'<br/>/@institutionSpecified<br/>/period|Compare:<br/>[C-CDA Common Medication Frequencies](http://cdasearch.hl7.org/examples/view/9588687865c0f945a326364a9449321690c7a7ef) and <br/>[FHIR Timing Data Type](http://hl7.org/fhir/R4/datatypes.html#Timing)|

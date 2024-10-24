@@ -16,7 +16,7 @@ This first stage of the project defines all the C-CDA document-level profiles on
 
 Any coded data used by sections will be represented using relevant U.S. Core FHIR profiles where they exist. FHIR profiles defined by other work groups or unconstrained FHIR resources may also be referenced if no appropriate US Core Profile exist.
 
-For further information see the [pdf-based C-CDA specification](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492), [StructureDefinition C-CDA specification](http://hl7.org/cda/stds/ccda/draft1/), [original project scope](https://confluence.hl7.org/pages/viewpage.action?pageId=76158360) and [mapping project scope](https://jira.hl7.org/browse/PSS-1811).
+For further information see the [pdf-based C-CDA specification](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492), [StructureDefinition C-CDA specification](https://hl7.org/cda/us/ccda/3.0.0/), [original project scope](https://confluence.hl7.org/pages/viewpage.action?pageId=76158360) and [mapping project scope](https://jira.hl7.org/browse/PSS-1811).
 
 
 ### Authors (Composition Profiles, Extensions and CapabilityStatement )
