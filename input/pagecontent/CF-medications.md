@@ -68,7 +68,7 @@ MedicationRequest (and other resources) may represent the medication as a simple
 
 ### Illustrative example
 
-<table><tr><th>CDA Example</th><th>FHIR Resource</th></tr>
+<table><tr><th>CDA Medication Example</th><th>FHIR MedicationRequest and Medication Resources</th></tr>
 <tr><td>
 <div id="cda" class="border codeArea">&lt;<span class="field">substanceAdministration</span> <span class="attrib">classCode=</span><span class="value">"SBADM"</span> <span class="attrib">moodCode=</span><span class="value">"INT"</span>&gt;
   &lt;<span class="field">templateId</span> <span class="attrib">root=</span><span class="value">"2.16.840.1.113883.10.20.22.4.16"</span> <span class="attrib">extension=</span><span class="value">"2014-06-09"</span>/&gt;
@@ -232,6 +232,8 @@ MedicationRequest (and other resources) may represent the medication as a simple
   &lt;/<span class="field">precondition</span>&gt;
 &lt;/<span class="field">substanceAdministration</span>&gt;</div>
 </td><td>
+<b>Note:</b> The following shows a MedicationRequest resource with a Medication resource embedded in its contained property. This was done for ease of creating a single, visual, highlighted example, but implementers may choose to create separate, external resources according to their own policy.
+
 <div id="fhir" class="border codeArea">{
   "<span class="field">resourceType</span>": "<span class="value">MedicationRequest</span>",
   "<span class="field">id</span>": "<span class="value">7fc60296-0667-4a44-86e5-4c432403532e</span>",
