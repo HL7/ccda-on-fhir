@@ -1,16 +1,16 @@
 <ConceptMap xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <id value="CF-ResultReportStatus"/>
+  <id value="CF-ResultStatus"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="cgp" />
   </extension>
-  <url value="http://hl7.org/fhir/us/ccda/ConceptMap/CF-ResultReportStatus"/>
+  <url value="http://hl7.org/fhir/us/ccda/ConceptMap/CF-ResultStatus"/>
   <version value="4.0.1"/>
-  <name value="CCDAtoFHIRResultReportStatus"/>
-  <title value="CCDA ResultStatus to FHIR DiagnosticReport status"/>
+  <name value="CCDAtoFHIRResultStatus"/>
+  <title value="CCDA ResultStatus to FHIR Observation Status"/>
   <status value="active"/>
   <experimental value="false"/>
   <publisher value="HL7 International"/>
-  <description value="C-CDA Result Status to FHIR DiagnosticReport status"/>
+  <description value="C-CDA Result Status to FHIR Observation Status"/>
   <contact>
     <name value="HL7 International"/>
     <telecom>
@@ -27,10 +27,10 @@
     </telecom>
   </contact>
   <sourceUri value="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.39"/>
-  <targetUri value="http://hl7.org/fhir/ValueSet/diagnostic-report-status"/>
+  <targetUri value="http://hl7.org/fhir/ValueSet/observation-status"/>
   <group>
     <source value="http://terminology.hl7.org/CodeSystem/2.16.840.1.113883.5.14"/>
-    <target value="http://hl7.org/fhir/diagnostic-report-status"/>
+    <target value="http://hl7.org/fhir/observation-status"/>
     <element>
       <code value="aborted"/>
       <display value="aborted"/>
