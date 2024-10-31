@@ -13,12 +13,12 @@ FHIR Vitals that are grouped into a panel using the memberOf property are mapped
 |FHIR<br/>[Vital Signs Observation](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-vital-signs.html)|C-CDA¹<br/>[Vital SignsOrganizer](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-VitalSignsOrganizer.html)|Transform Steps|
 |:----|:----|:----|
 |.identifier|/id|[FHIR identifier ↔ CDA id](mappingGuidance.html#cda-id--fhir-identifier)|
-|.category = `vital-signs` from [Vital Signs value set](https://hl7.org/fhir/us/core/STU4/ValueSet-us-core-vital-signs.html)||
-|.code = `85353-1` [CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|||
-|.status|/statusCode|*TODO: ConceptMap*
-|.effectiveDateTime|/effectiveTime|Use value
-|.effectivePeriod|/effectiveTime|Use high and low <br/>[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)
-|.hasMember|component|Reference to each vital sign observation 
+|.category = `vital-signs` |||
+|.code = `85353-1` ||[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
+|.status|/statusCode|[FHIR Observation Status → CDA Result Status](./ConceptMap-FC-ObservationStatus.html)<br/> CDA requires 'completed', which will usually be the case|
+|.effectiveDateTime|/effectiveTime|Use value|
+|.effectivePeriod|/effectiveTime|Use high and low <br/>[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
+|.hasMember|component|Reference to each vital sign observation |
 
 ### FHIR Observation to C-CDA Vital Signs Observation
 
@@ -34,7 +34,7 @@ FHIR Vitals that are grouped into a panel using the memberOf property are mapped
 |.interpretation|/interpretationCode|[FHIR CodeableConcept ↔ CDA coding](mappingGuidance.html#fhir-codeableconcept--cda-coding)|
 |.method|/methodCode|[FHIR CodeableConcept ↔ CDA coding](mappingGuidance.html#fhir-codeableconcept--cda-coding)|
 |.bodySite|/targetSiteCode|[FHIR CodeableConcept ↔ CDA coding](mappingGuidance.html#fhir-codeableconcept--cda-coding)|
-|||author-provenance: *TODO*
+
 
 
 ### Illustrative example

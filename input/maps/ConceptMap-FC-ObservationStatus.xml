@@ -41,15 +41,6 @@
       </target>
     </element>
     <element>
-      <code value="partial"/>
-      <display value="Partial"/>
-      <target>
-        <code value="active"/>
-        <display value="Active"/>
-        <equivalence value="wider"/>
-      </target>
-    </element>
-    <element>
       <code value="preliminary"/>
       <display value="Preliminary"/>
       <target>
