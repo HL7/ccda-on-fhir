@@ -47,7 +47,7 @@
         <code value="registered"/>
         <display value="Registered"/>
         <equivalence value="inexact"/>
-        <comment value="Caution: Multiple values map to the FHIR concept of regeistered."/>
+        <comment value="Caution: Multiple values map to the FHIR concept of registered."/>
       </target>
     </element>
         <element>
@@ -75,7 +75,7 @@
         <code value="registered"/>
         <display value="Registered"/>
         <equivalence value="inexact"/>
-        <comment value="Caution: Multiple values map to the FHIR concept of regeistered."/>
+        <comment value="Caution: Multiple values map to the FHIR concept of registered."/>
       </target>
     </element>
         <element>
@@ -85,7 +85,7 @@
         <code value="registered"/>
         <display value="Registered"/>
         <equivalence value="inexact"/>
-        <comment value="Caution: Multiple values map to the FHIR concept of regeistered."/>
+        <comment value="Caution: Multiple values map to the FHIR concept of registered."/>
       </target>
     </element>
   </group>
