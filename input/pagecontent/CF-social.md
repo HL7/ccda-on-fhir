@@ -61,25 +61,80 @@ In US Core, Pregnancy Intent was first defined in version 6.
 |/value|.valueCodeableConcept|Value sets are the same<br/>[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 |/value/@nullFlavor=UNK|.valueCodeableConcept|Unknown becomes an actual value with system = `http://terminology.hl7.org/CodeSystem/v3-NullFlavor`. Any other nullFlavors should use a data-absent-reason extension.
 
-### Example: General Social History Observation
-
-The following is a general social history comparison between C-CDA and FHIR
-
-<table><tr><th>CDA Example</th><th>FHIR Resource</th></tr>
-<tr><td>
-...
-</td><td>
-...
-</td></tr></table>
-
 ### Example: Smoking Status
 
+The following is a comparison between C-CDA and FHIR Smoking Status Observations
+
 <table><tr><th>CDA Example</th><th>FHIR Resource</th></tr>
 <tr><td>
-...
+<div id="cda" class="border codeArea">                    
+&lt;<span class="field">entry</span>&gt;
+  &lt;<span class="field">observation</span> <span class="attrib">classCode=</span><span class="value">"OBS"</span> <span class="attrib">moodCode=</span><span class="value">"EVN"</span>&gt;
+    &lt;<span class="field">templateId</span> <span class="attrib">root=</span><span class="value">"2.16.840.1.113883.10.20.22.4.78"</span>/&gt;
+    &lt;<span class="field">templateId</span> <span class="attrib">root=</span><span class="value">"2.16.840.1.113883.10.20.22.4.78"</span> 
+        <span class="attrib">extension=</span><span class="value">"2014-06-09"</span>/&gt;
+    &lt;<span class="field">id</span> <span class="attrib">extension=</span><span class="value">"<mark class="color10">123456789</mark>"</span> <span class="attrib">root=</span><span class="value">"<mark class="color11">2.16.840.1.113883.19</mark>"</span> /&gt;
+    &lt;<span class="field">code</span> 
+        <span class="attrib">code=</span><span class="value">"<mark class="color12">72166-2</mark>"</span> 
+        <span class="attrib">codeSystem=</span><span class="value">"<mark class="color13">2.16.840.1.113883.6.1</mark>"</span> 
+        <span class="attrib">displayName=</span><span class="value">"<mark class="color14">Tobacco smoking status NHIS</mark>"</span>/&gt;
+    &lt;<span class="field">statusCode</span> <span class="attrib">code=</span><span class="value">"completed"</span>/&gt;
+    &lt;<span class="field">effectiveTime</span> <span class="attrib">value=</span><span class="value">"201406061032-0500"</span>/&gt;
+    &lt;<span class="field">value</span> <span class="attrib">xsi:type=</span><span class="value">"CD"</span> 
+        <span class="attrib">code=</span><span class="value">"<mark class="color15">449868002</mark>"</span>
+        <span class="attrib">codeSystem=</span><span class="value">"<mark class="color16">2.16.840.1.113883.6.96</mark>"</span> 
+        <span class="attrib">codeSystemName=</span><span class="value">"<mark class="color16"><mark class="color16">SNOMED</mark> CT</mark>"</span>  
+        <span class="attrib">displayName=</span><span class="value">"<mark class="color17">Current every day smoker</mark>"</span>/&gt;
+  &lt;/<span class="field">observation</span>&gt;
+&lt;/<span class="field">entry</span>&gt;</div>
 </td><td>
-...
+<div id="fhir" class="border codeArea">{
+  "<span class="field">fullUrl</span>": "<span class="value">http://fhir:3447/4_0_0/Observation/62f17e2aa2392d0008fbb23a</span>",
+  "<span class="field">resource</span>": {
+    "<span class="field">resourceType</span>": "<span class="value">Observation</span>",
+    "<span class="field">id</span>": "<span class="value">62f17e2aa2392d0008fbb23a</span>",
+    "<span class="field">language</span>": "<span class="value">en-US</span>",
+    "<span class="field">identifier</span>": [{
+        "<span class="field">system</span>": "<span class="value">urn:oid:<mark class="color11">2.16.840.1.113883.19</mark></span>",
+        "<span class="field">value</span>": "<span class="value"><mark class="color10">123456789</mark></span>"
+      }],
+    "<span class="field">status</span>": "<span class="value">final</span>",
+    "<span class="field">category</span>": [{
+        "<span class="field">coding</span>": [
+          {
+            "<span class="field">system</span>": "<span class="value">http://terminology.hl7.org/CodeSystem/observation-category</span>",
+            "<span class="field">code</span>": "<span class="value">social-history</span>",
+            "<span class="field">display</span>": "<span class="value">Social History</span>"
+          }]
+      }],
+    "<span class="field">code</span>": {
+      "<span class="field">coding</span>": [
+        {
+          "<span class="field">system</span>": "<span class="value"><mark class="color13">http://loinc.org</mark></span>",
+          "<span class="field">code</span>": "<span class="value"><mark class="color12">72166-2</mark></span>",
+          "<span class="field">display</span>": "<span class="value"><mark class="color14">Tobacco smoking status NHIS</mark></span>"
+        }]
+    },
+    "<span class="field">subject</span>": {
+      "<span class="field">reference</span>": "<span class="value">Patient/62f17e29b7532c0009e217b7</span>"
+    },
+    "<span class="field">effectiveDateTime</span>": "<span class="value">2014-06-06T15:32:00.000Z</span>",
+    "<span class="field">issued</span>": "<span class="value">2014-06-06T15:32:00.000Z</span>",
+    "<span class="field">performer</span>": [
+      {
+        "<span class="field">reference</span>": "<span class="value">Practitioner/62f17e2ae0231200076884d5</span>"
+      }],
+    "<span class="field">valueCodeableConcept</span>": {
+      "<span class="field">coding</span>": [
+        {
+          "<span class="field">system</span>": "<span class="value"><mark class="color16">http://www.snomed.org/</mark></span>",
+          "<span class="field">code</span>": "<span class="value"><mark class="color15">449868002</mark></span>",
+          "<span class="field">display</span>": "<span class="value"><mark class="color17">Current every day smoker</mark></span>"
+        }]
+    }}
+}</div>
 </td></tr></table>
+
 
 ### Example: Pregnancy Observation
 
