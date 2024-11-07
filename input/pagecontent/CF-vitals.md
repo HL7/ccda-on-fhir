@@ -50,12 +50,113 @@ C-CDA vitals are typically grouped into a Vital Signs Organizer to group one or 
 
 <table><tr><th>CDA Vitals Example</th><th>FHIR Observation Resources</th></tr>
 <tr><td>
-...
+<div id="cda" class="border codeArea">&lt;<span class="field">organizer</span> <span class="attrib">classCode=</span><span class="value">"CLUSTER"</span> <span class="attrib">moodCode=</span><span class="value">"EVN"</span>&gt;
+  &lt;<span class="field">templateId</span> <span class="attrib">root=</span><span class="value">"2.16.840.1.113883.10.20.22.4.26"</span>/&gt;
+  &lt;<span class="field">templateId</span> <span class="attrib">root=</span><span class="value">"2.16.840.1.113883.10.20.22.4.26"</span> 
+    <span class="attrib">extension=</span><span class="value">"2015-08-01"</span>/&gt;
+  &lt;<span class="field">id</span> 
+    <span class="attrib">extension=</span><span class="value">"<mark class="color10">21688133041015158234</mark>"</span>
+    <span class="attrib">root=</span><span class="value">"<mark class="color11">2.16.840.1.113883.3.42.126.100001.19</mark>"</span>/&gt;
+  &lt;<span class="field">code</span> 
+    <span class="attrib">code=</span><span class="value">"<mark class="color12">46680005</mark>"</span> 
+    <span class="attrib">displayName=</span><span class="value">"<mark class="color13">Vital Signs</mark>"</span> 
+    <span class="attrib">codeSystem=</span><span class="value">"2.16.840.1.113883.6.96"</span>
+    <span class="attrib">codeSystemName=</span><span class="value">"SNOMED CT"</span>&gt;
+    &lt;<span class="field">translation</span> <span class="attrib">code=</span><span class="value">"<mark class="color14">74728-7</mark>"</span>
+      <span class="attrib">codeSystem=</span><span class="value">"<mark class="color15">2.16.840.1.113883.6.1</mark>"</span> 
+      <span class="attrib">codeSystemName=</span><span class="value">"<mark class="color15">LOINC</mark>"</span>/&gt;
+  &lt;/<span class="field">code</span>&gt;
+  &lt;<span class="field">statusCode</span> <span class="attrib">code=</span><span class="value">"completed"</span>/&gt;
+  &lt;<span class="field">effectiveTime</span> <span class="attrib">value=</span><span class="value">"<mark class="color16">20140520193605-0600</mark>"</span>/&gt;
+  <span class="comment">&lt;!-- Each vital sign should be its own component. --&gt;</span>
+  &lt;<span class="field">component</span>&gt;
+    &lt;<span class="field">observation</span> <span class="attrib">classCode=</span><span class="value">"OBS"</span> <span class="attrib">moodCode=</span><span class="value">"EVN"</span>&gt;
+      &lt;<span class="field">templateId</span> <span class="attrib">root=</span><span class="value">"2.16.840.1.113883.10.20.22.4.27"</span>/&gt;
+      &lt;<span class="field">templateId</span> <span class="attrib">root=</span><span class="value">"2.16.840.1.113883.10.20.22.4.27"</span> 
+        <span class="attrib">extension=</span><span class="value">"2014-06-09"</span>/&gt;
+      &lt;<span class="field">id</span> 
+        <span class="attrib">extension=</span><span class="value">"<mark class="color17">216881330410151584</mark>"</span>
+        <span class="attrib">root=</span><span class="value">"<mark class="color11">2.16.840.1.113883.3.42.126.100001.19</mark>"</span>/&gt;
+      &lt;<span class="field">code</span> <span class="attrib">code=</span><span class="value">"<mark class="color18">8867-4</mark>"</span> 
+        <span class="attrib">codeSystem=</span><span class="value">"<mark class="color15">2.16.840.1.113883.6.1</mark>"</span> 
+        <span class="attrib">codeSystemName=</span><span class="value">"<mark class="color15">LOINC</mark>"</span>
+        <span class="attrib">displayName=</span><span class="value">"<mark class="color19">HEART RATE</mark>"</span>/&gt;
+      &lt;<span class="field">text</span>&gt;
+        &lt;<span class="field">reference</span> <span class="attrib">value=</span><span class="value">"#Pulse_1"</span>/&gt;
+      &lt;/<span class="field">text</span>&gt;
+      &lt;<span class="field">statusCode</span> <span class="attrib">code=</span><span class="value">"completed"</span>/&gt;
+      &lt;<span class="field">effectiveTime</span> <span class="attrib">value=</span><span class="value">"<mark class="color16">20140520193605-0600</mark>"</span>/&gt;
+      &lt;<span class="field">value</span> <span class="attrib">xsi:type=</span><span class="value">"PQ"</span> 
+        <span class="attrib">value=</span><mark class="color20"><span class="value">"80"</span></mark> 
+        <span class="attrib">unit=</span><span class="value">"<mark class="color21">/min</mark>"</span>/&gt;
+    &lt;/<span class="field">observation</span>&gt;
+  &lt;/<span class="field">component</span>&gt;
+&lt;/<span class="field">organizer</span>&gt;</div>
 </td><td>
-<b>Note:</b> The following shows an Observation resource for the panel with individual Observation resources embedded in its contained property. This was done for ease of creating a single, visual, highlighted example, but implementers may choose to create separate, external resources according to their own policy.
+<b>Note:</b> The following shows an Observation resource for the panel with an individual Observation resource embedded in its contained property. This was done for ease of creating a single, visual, highlighted example, but implementers may choose to create separate, external resources according to their own policy.
 <br/>
 
-...
+<div id="fhir" class="border codeArea">{
+  "<span class="field">resourceType</span>": "<span class="value">Observation</span>",
+  "<span class="field">identifier</span>": [{
+    "<span class="field">value</span>": "<span class="value"><mark class="color10">21688133041015158234</mark></span>",
+    "<span class="field">system</span>": "<span class="value">urn:oid:<mark class="color11">2.16.840.1.113883.3.42.126.100001.19</mark></span>"
+  }],
+  "<span class="field">status</span>": "<span class="value">final</span>",
+  "<span class="field">category</span>": [{
+    "<span class="field">text</span>": "<span class="value"><mark class="color12">vital-signs</mark></span>",
+    "<span class="field">coding</span>": [{
+      "<span class="field">code</span>": "<span class="value"><mark class="color12">vital-signs</mark></span>",
+      "<span class="field">system</span>": "<span class="value">http://terminology.hl7.org/CodeSystem/observation-category</span>",
+      "<span class="field">display</span>": "<span class="value"><mark class="color13">Vital Signs</mark></span>"
+    }]
+  }],
+  "<span class="field">code</span>": {
+    "<span class="field">text</span>": "<span class="value">Vital Signs Panel</span>",
+    "<span class="field">coding</span>": [{
+      "<span class="field">code</span>": "<span class="value"><mark class="color14">85353-1</mark></span>",
+      "<span class="field">system</span>": "<span class="value"><mark class="color15">http://loinc.org</mark></span>"
+    }]
+  },
+  "<span class="field">subject</span>": {
+    "<span class="field">reference</span>": "<span class="value">urn:uuid:a4986486-6599-4bb2-a7fb-e2deb8d50b5e</span>"
+  },
+  "<span class="field">effectiveDateTime</span>": "<span class="value"><mark class="color16">2014-05-20T19:36:05-06:00</mark></span>",
+  "<span class="field">hasMember</span>": [{
+    "<span class="field">reference</span>": "<span class="value">#heartRate</span>"
+  }],
+  "<span class="field">contains</span>": [{
+    "<span class="field">resourceType</span>": "<span class="value">Observation</span>",
+    "<span class="field">id</span>": "<span class="value">heartRate</span>",
+    "<span class="field">identifier</span>": [{
+      "<span class="field">system</span>": "<span class="value">urn:oid:<mark class="color11">2.16.840.1.113883.3.42.126.100001.19</mark></span>",
+      "<span class="field">value</span>": "<span class="value"><mark class="color17">216881330410151584</mark></span>"
+    }],
+    "<span class="field">status</span>": "<span class="value">final</span>",
+    "<span class="field">category</span>": [{
+      "<span class="field">coding</span>": [{
+        "<span class="field">system</span>": "<span class="value">http://terminology.hl7.org/CodeSystem/observation-category</span>",
+        "<span class="field">code</span>": "<span class="value"><mark class="color12">vital-signs</mark></span>",
+        "<span class="field">display</span>": "<span class="value"><mark class="color13">Vital Signs</mark></span>"
+      }]
+    }],
+    "<span class="field">code</span>": {
+      "<span class="field">coding</span>": [{
+        "<span class="field">system</span>": "<span class="value"><mark class="color15">http://loinc.org</mark></span>",
+        "<span class="field">code</span>": "<span class="value"><mark class="color18">8867-4</mark></span>",
+        "<span class="field">display</span>": "<span class="value"><mark class="color19">HEART RATE</mark></span>"
+      }]
+    },
+    "<span class="field">subject</span>": {
+      "<span class="field">reference</span>": "<span class="value">Patient/62f17e29b7532c0009e217b7</span>"
+    },
+    "<span class="field">effectiveDateTime</span>": "<span class="value"><mark class="color16">2014-05-20T19:36:05-06:00</mark></span>",
+    "<span class="field">valueQuantity</span>": {
+      "<span class="field">value</span>": <mark class="color20">80,</mark>
+      "<span class="field">unit</span>": "<span class="value"><mark class="color21">/min</mark></span>"
+    }
+  }]
+}</div>
 </td></tr></table>
 
 ### Example: Blood Pressure
@@ -160,11 +261,11 @@ C-CDA vitals are typically grouped into a Vital Signs Organizer to group one or 
     }
   }]
 }</div>
-</td></tr>
+</td></tr></table>
 
 ### Example: Pulse Oximetry
 
-<tr><th>C-CDA Pulse Oximetry (Codes & Values Only)</th><th>FHIR Pulse Oximetry</th></tr>
+<table><tr><th>C-CDA Pulse Oximetry (Codes & Values Only)</th><th>FHIR Pulse Oximetry</th></tr>
 <tr><td>
 <div class="border codeArea">&lt;<span class="field">organizer</span>&gt;
   <span class="comment">&lt;!-- C-CDA Vital Signs Organizer --&gt;</span>

@@ -63,11 +63,163 @@ C-CDA also defines a [Specimen Collection Procedure](https://hl7.org/cda/us/ccda
 
 <table><tr><th>CDA Result Example</th><th>FHIR DiagnosticReport and Observation Resources</th></tr>
 <tr><td>
-...
+<div id="cda" class="border codeArea">&lt;<span class="field">organizer</span> <span class="attrib">classCode=</span><span class="value">"BATTERY"</span> <span class="attrib">moodCode=</span><span class="value">"EVN"</span>&gt;
+  &lt;<span class="field">templateId</span> <span class="attrib">root=</span><span class="value">"2.16.840.1.113883.10.20.22.4.1"</span> <span class="attrib">extension=</span><span class="value">"2015-08-01"</span>/&gt;
+  &lt;<span class="field">templateId</span> <span class="attrib">root=</span><span class="value">"2.16.840.1.113883.10.20.22.4.1"</span>/&gt;
+  &lt;<span class="field">id</span> <span class="attrib">root=</span><span class="value">"<mark class="color10">1.3.6.1.4.1.22812.20.1.1.4.5</mark>"</span> <span class="attrib">extension=</span><span class="value">"<mark class="color11">R123</mark>"</span>/&gt;
+  &lt;<span class="field">code</span> 
+    <span class="attrib">code=</span><span class="value">"<mark class="color12">24357-6</mark>"</span> 
+    <span class="attrib">codeSystem=</span><span class="value">"<mark class="color13">2.16.840.1.113883.6.1</mark>"</span>&gt;
+    &lt;<span class="field">originalText</span>&gt;
+      <span class="comment">&lt;!-- Resolves to: <mark class="color22">Urinanalysis macro (dipstick) panel</mark> --&gt;</span>
+      &lt;<span class="field">reference</span> <span class="attrib">value=</span><span class="value">"#_panel1Name"</span>/&gt;
+    &lt;/<span class="field">originalText</span>&gt;
+  &lt;/<span class="field">code</span>&gt;
+  &lt;<span class="field">statusCode</span> <span class="attrib">code=</span><span class="value">"completed"</span>/&gt;
+  &lt;<span class="field">effectiveTime</span> <span class="attrib">xsi:type=</span><span class="value">"IVL_TS"</span>&gt;
+    &lt;<span class="field">low</span> <span class="attrib">value=</span><span class="value">"<mark class="color14">20150622</mark>"</span>/&gt;
+    &lt;<span class="field">high</span> <span class="attrib">value=</span><span class="value">"<mark class="color14">20150622</mark>"</span>/&gt;
+  &lt;/<span class="field">effectiveTime</span>&gt;
+  <span class="comment">&lt;!-- Becomes a FHIR reference: <mark class="color23">Practitioner/62f17e2ae0231200076884d0</mark> --&gt;</span>
+  &lt;<span class="field">performer</span> <span class="attrib">typeCode=</span><span class="value">"PRF"</span>&gt;
+    &lt;<span class="field">assignedEntity</span>&gt;
+      &lt;<span class="field">id</span> <span class="attrib">root=</span><span class="value">"2.16.840.1.113883.19.5"</span>/&gt;
+      &lt;<span class="field">representedOrganization</span>&gt;
+        &lt;<span class="field">name</span>&gt;Value Labs&lt;/<span class="field">name</span>&gt;
+      &lt;/<span class="field">representedOrganization</span>&gt;
+    &lt;/<span class="field">assignedEntity</span>&gt;
+  &lt;/<span class="field">performer</span>&gt;
+  <span class="comment">&lt;!-- components removed to simplify example --&gt;</span>
+  &lt;<span class="field">component</span>&gt;
+    &lt;<span class="field">observation</span> <span class="attrib">classCode=</span><span class="value">"OBS"</span> <span class="attrib">moodCode=</span><span class="value">"EVN"</span>&gt;
+      &lt;<span class="field">templateId</span> <span class="attrib">root=</span><span class="value">"2.16.840.1.113883.10.20.22.4.2"</span> 
+        <span class="attrib">extension=</span><span class="value">"2015-08-01"</span>/&gt;
+      &lt;<span class="field">templateId</span> <span class="attrib">root=</span><span class="value">"2.16.840.1.113883.10.20.22.4.2"</span>/&gt;
+      &lt;<span class="field">id</span> <span class="attrib">root=</span><span class="value">"<mark class="color10">1.3.6.1.4.1.22812.20.1.1.4.5</mark>"</span> <span class="attrib">extension=</span><span class="value">"<mark class="color15">OBS13</mark>"</span>/&gt;
+      &lt;<span class="field">code</span> 
+        <span class="attrib">code=</span><span class="value">"<mark class="color16">5811-5</mark>"</span> 
+        <span class="attrib">codeSystem=</span><span class="value">"<mark class="color13">2.16.840.1.113883.6.1</mark>"</span> 
+        <span class="attrib">displayName=</span><span class="value">"<mark class="color17">Specific gravity of Urine by Test strip</mark>"</span>&gt;
+        &lt;<span class="field">originalText</span>&gt;
+          <span class="comment">&lt;!-- reference the text of the coded component --&gt;</span>
+          &lt;<span class="field">reference</span> <span class="attrib">value=</span><span class="value">"#_ea838e08-d5eb-4ed4-a176-e5f9a831a780"</span>/&gt;
+        &lt;/<span class="field">originalText</span>&gt;
+      &lt;/<span class="field">code</span>&gt;
+      &lt;<span class="field">text</span>&gt;
+        <span class="comment">&lt;!-- reference the entire text of the component --&gt;</span>
+        &lt;<span class="field">reference</span> <span class="attrib">value=</span><span class="value">"#_13a52df8-79ed-4689-a9da-14c5905de830"</span>/&gt;
+      &lt;/<span class="field">text</span>&gt;
+      &lt;<span class="field">statusCode</span> <span class="attrib">code=</span><span class="value">"completed"</span>/&gt;
+      &lt;<span class="field">effectiveTime</span> <span class="attrib">value=</span><span class="value">"<mark class="color14">20150622</mark>"</span>/&gt;
+      &lt;<span class="field">value</span> <span class="attrib">xsi:type=</span><span class="value">"PQ"</span> <span class="attrib">value=</span><span class="value">"<mark class="color18">1.015</mark>"</span> <span class="attrib">unit=</span><mark class="color19"><span class="value">"1"</span></mark>/&gt;
+      &lt;<span class="field">referenceRange</span>&gt;
+        &lt;<span class="field">observationRange</span>&gt;
+          &lt;<span class="field">text</span>&gt;
+            <span class="comment">&lt;!-- reference the text of the reference range --&gt;</span>
+            &lt;<span class="field">reference</span> <span class="attrib">value=</span><span class="value">"#_08b7d0ee-aff1-4144-a3a5-c89d56d855ad"</span>/&gt;
+          &lt;/<span class="field">text</span>&gt;
+          &lt;<span class="field">value</span> <span class="attrib">xsi:type=</span><span class="value">"IVL_PQ"</span>&gt;
+            &lt;<span class="field">low</span> <span class="attrib">value=</span><span class="value">"<mark class="color20">1.005</mark>"</span> <span class="attrib">unit=</span><mark class="color19"><span class="value">"1"</span></mark>/&gt;
+            <span class="comment">&lt;!-- Note this will create a precision extension with 
+          url: <mark class="color24">http://hl7.org/fhir/StructureDefinition/quantity-precision</mark> --&gt;</span>
+            &lt;<span class="field">high</span> <span class="attrib">value=</span><span class="value">"<mark class="color21">1.030</mark>"</span> <span class="attrib">unit=</span><mark class="color19"><span class="value">"1"</span></mark>/&gt;
+          &lt;/<span class="field">value</span>&gt;
+        &lt;/<span class="field">observationRange</span>&gt;
+      &lt;/<span class="field">referenceRange</span>&gt;
+    &lt;/<span class="field">observation</span>&gt;
+  &lt;/<span class="field">component</span>&gt;
+  <span class="comment">&lt;!-- components removed to simplify example --&gt;</span>
+&lt;/<span class="field">organizer</span>&gt;</div>
 </td><td>
-<b>Note:</b> The following shows a DiagnosticReport resource Observation resources embedded in its contained property. This was done for ease of creating a single, visual, highlighted example, but implementers may choose to create separate, external resources according to their own policy.
+<b>Note:</b> The following shows a DiagnosticReport resource with an Observation resource embedded in its contained property. This was done for ease of creating a single, visual, highlighted example, but implementers may choose to create separate, external resources according to their own policy.
 <br/>
 
-...
+<div id="fhir" class="border codeArea">{
+  "<span class="field">resourceType</span>": "<span class="value">DiagnosticReport</span>",
+  "<span class="field">id</span>": "<span class="value">62f17e2aa2392d0008fbb236</span>",
+  "<span class="field">identifier</span>": [{
+    "<span class="field">value</span>": "<span class="value"><mark class="color11">R123</mark></span>",
+    "<span class="field">system</span>": "<span class="value">urn:oid:<mark class="color10">1.3.6.1.4.1.22812.20.1.1.4.5</mark></span>"
+  }],
+  "<span class="field">status</span>": "<span class="value">final</span>",
+  "<span class="field">category</span>": [{
+    "<span class="field">coding</span>": [{
+      "<span class="field">system</span>": "<span class="value">http://terminology.hl7.org/CodeSystem/v2-0074</span>",
+      "<span class="field">code</span>": "<span class="value">LAB</span>",
+      "<span class="field">display</span>": "<span class="value">Laboratory</span>"
+    }]
+  }],
+  "<span class="field">code</span>": {
+    "<span class="field">coding</span>": [{
+      "<span class="field">system</span>": "<span class="value"><mark class="color13">http://loinc.org</mark></span>",
+      "<span class="field">code</span>": "<span class="value"><mark class="color12">24357-6</mark></span>"
+    }],
+    "<span class="field">text</span>": "<span class="value"><mark class="color22">Urinanalysis macro (dipstick) panel</mark></span>"
+  },
+  "<span class="field">subject</span>": {
+    "<span class="field">reference</span>": "<span class="value">Patient/62f17e29b7532c0009e217b7</span>"
+  },
+  "<span class="field">effectiveDateTime</span>": "<span class="value"><mark class="color14">2015-06-22</mark></span>",
+  "<span class="field">issued</span>": {
+    "<span class="field">extension</span>": [{
+      "<span class="field">url</span>": "<span class="value">http://hl7.org/fhir/extension-data-absent-reason</span>",
+      "<span class="field">valueCode</span>": "<span class="value">unknown</span>"
+    }]
+  },
+  "<span class="field">performer</span>": [{
+    "<span class="field">reference</span>": "<span class="value"><mark class="color23">Practitioner/62f17e2ae0231200076884d0</mark></span>"
+  }],
+  "<span class="field">result</span>": [{
+    "<span class="field">reference</span>": "<span class="value">#exampleObs</span>"
+  }],
+  "<span class="field">contained</span>": [{
+    "<span class="field">resourceType</span>": "<span class="value">Observation</span>",
+    "<span class="field">id</span>": "<span class="value">exampleObs</span>",
+    "<span class="field">identifier</span>": [{
+      "<span class="field">system</span>": "<span class="value">urn:oid:<mark class="color10">1.3.6.1.4.1.22812.20.1.1.4.5</mark></span>",
+      "<span class="field">value</span>": "<span class="value"><mark class="color15">OBS13</mark></span>"
+    }],
+    "<span class="field">status</span>": "<span class="value">final</span>",
+    "<span class="field">category</span>": [{
+      "<span class="field">coding</span>": [{
+        "<span class="field">system</span>": "<span class="value">http://terminology.hl7.org/CodeSystem/observation-category</span>",
+        "<span class="field">code</span>": "<span class="value">laboratory</span>",
+        "<span class="field">display</span>": "<span class="value">Laboratory</span>"
+      }]
+    }],
+    "<span class="field">code</span>": {
+      "<span class="field">coding</span>": [{
+        "<span class="field">system</span>": "<span class="value"><mark class="color13">http://loinc.org</mark></span>",
+        "<span class="field">code</span>": "<span class="value"><mark class="color16">5811-5</mark></span>",
+        "<span class="field">display</span>": "<span class="value"><mark class="color17">Specific gravity of Urine by Test strip</mark></span>"
+      }],
+      "<span class="field">text</span>": "<span class="value"><mark class="color17">Specific gravity of Urine by Test strip</mark></span>"
+    },
+    "<span class="field">subject</span>": {
+      "<span class="field">reference</span>": "<span class="value">Patient/62f17e29b7532c0009e217b7</span>"
+    },
+    "<span class="field">effectiveDateTime</span>": "<span class="value"><mark class="color14">2015-06-22</mark></span>",
+    "<span class="field">valueQuantity</span>": {
+      "<span class="field">value</span>": <mark class="color18">1.015</mark>,
+      "<span class="field">unit</span>": <mark class="color19">"1"</mark>
+    },
+    "<span class="field">referenceRange</span>": [{
+      "<span class="field">low</span>": {
+        "<span class="field">value</span>": <mark class="color20">1.005</mark>,
+        "<span class="field">unit</span>": <mark class="color19">"1"</mark>
+      },
+      "<span class="field">high</span>": {
+        "<span class="field">value</span>": <mark class="color21">1.03</mark>,
+        "<span class="field">unit</span>": <mark class="color19">"1"</mark>,
+        "<span class="field">_value</span>": {
+          "<span class="field">extension</span>": [{
+            "<span class="field">url</span>": "<span class="value"><mark class="color24">http://hl7.org/fhir/StructureDefinition/quantity-precision</mark></span>",
+            "<span class="field">valueInteger</span>": 3
+          }]
+        }
+      }
+    }]
+  }]
+}</div>
 </td></tr></table>
 
