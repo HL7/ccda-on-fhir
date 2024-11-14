@@ -31,12 +31,12 @@ This maps to US Core version 6's Simple Observation. Previous versions of US Cor
 Additional fields, such as `.interpretationCode`, `.referenceRange`, `.performer` are not documented in C-CDA but can be mapped in the same manner as [Results](./CF-results.html).
 
 ### C-CDA Smoking Status / Tobacco Use to FHIR Observation
-In C-CDA 3.0, the Smoking Status - MU and Tobacco Use templates were merged into a single template to better match US Core's Smoking Status template.
+In C-CDA 3.0, the Smoking Status - MU and Tobacco Use templates were merged into a single template to better match the [US Core V7](https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-smokingstatus.html) Smoking Status template. In general, the mapping follows the standard Social History mapping above, but additional caveats are noted below. 
 
-|C-CDA<br/>[Smoking Status - MU](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-SmokingStatusMeaningfulUse.html) (Deprecated)<br/>[Tobacco Use](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-TobaccoUse.html) (Decprecated)<br/>[Smoking Status](https://build.fhir.org/ig/HL7/CDA-ccda/StructureDefinition-SmokingStatus.html) (C-CDA 3.0)²|FHIR<br/>[Smoking Status Observation](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-smokingstatus.html)|Transform Steps|
+|C-CDA<br/>[Smoking Status - MU](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-SmokingStatusMeaningfulUse.html) (Deprecated)<br/>[Tobacco Use](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-TobaccoUse.html) (Decprecated)<br/>[Smoking Status](https://build.fhir.org/ig/HL7/CDA-ccda/StructureDefinition-SmokingStatus.html) (C-CDA 3.0)²|FHIR<br/>[Smoking Status Observation (US Core 4)](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-smokingstatus.html)|Transform Steps|
 |:----|:----|:----|
-|/code|.code|Prior to US Core 7, the code should be `72166-2 (Tobacco smoking status NCIS)`, but this is an extensible value set.<br/>In US Core 7, the value set remains extensible, but contains the same 4 concepts allowed in the C-CDA R3.0's Smoking Status value set.
-|/effectiveTime|.effectiveDateTime<br/>or<br/>.effectivePeriod|Smoking Status - MU required a timestamp; Tobacco Use required a time range; Smoking Status (3.0) combines the two templates into one and allows for either.
+|/code|.code|Prior to US Core 7, the code in FHIR should be `72166-2 (Tobacco smoking status NCIS)`, but this is an extensible value set, so other codes used in the older C-CDA templates may be used.<br/>In US Core 7, the value set remains extensible, but contains the same 4 concepts allowed in the C-CDA R3.0's Smoking Status value set.
+|/effectiveTime|.effectiveDateTime<br/>or<br/>.effectivePeriod|Smoking Status - MU required a timestamp; Tobacco Use required a time range; Smoking Status (3.0) combines the two templates into one and allows for either.<br/>When mapping to US Core be aware of the requirements around effectiveTime. In v7, time can be either a period or a single value. Prior to v7, the Smoking Status Observation only allowed a single timestamp. If Mapping a C-CDA Tobacco Use template that contains a date range, use one of the following approaches:<br/>- Map to the US Core 7 version of the Smoking Status Observation<br/>- Map to a generic FHIR observation (i.e. do not assert conformance with US Core)<br/>- Omit the effectiveTime high value or create a non-conformant US Core Smoking Status Observation
 
 ### C-CDA Pregnancy Observation to FHIR Pregnancy Status Observation
 In US Core, Pregnancy Observation was first defined in version 6.
@@ -67,71 +67,60 @@ The following is a comparison between C-CDA and FHIR Smoking Status Observations
 
 <table><tr><th>CDA Example</th><th>FHIR Resource</th></tr>
 <tr><td>
-<div id="cda" class="border codeArea">                    
-&lt;<span class="field">entry</span>&gt;
-  &lt;<span class="field">observation</span> <span class="attrib">classCode=</span><span class="value">"OBS"</span> <span class="attrib">moodCode=</span><span class="value">"EVN"</span>&gt;
-    &lt;<span class="field">templateId</span> <span class="attrib">root=</span><span class="value">"2.16.840.1.113883.10.20.22.4.78"</span>/&gt;
-    &lt;<span class="field">templateId</span> <span class="attrib">root=</span><span class="value">"2.16.840.1.113883.10.20.22.4.78"</span> 
-        <span class="attrib">extension=</span><span class="value">"2014-06-09"</span>/&gt;
-    &lt;<span class="field">id</span> <span class="attrib">extension=</span><span class="value">"<mark class="color10">123456789</mark>"</span> <span class="attrib">root=</span><span class="value">"<mark class="color11">2.16.840.1.113883.19</mark>"</span> /&gt;
-    &lt;<span class="field">code</span> 
-        <span class="attrib">code=</span><span class="value">"<mark class="color12">72166-2</mark>"</span> 
-        <span class="attrib">codeSystem=</span><span class="value">"<mark class="color13">2.16.840.1.113883.6.1</mark>"</span> 
-        <span class="attrib">displayName=</span><span class="value">"<mark class="color14">Tobacco smoking status NHIS</mark>"</span>/&gt;
-    &lt;<span class="field">statusCode</span> <span class="attrib">code=</span><span class="value">"completed"</span>/&gt;
-    &lt;<span class="field">effectiveTime</span> <span class="attrib">value=</span><span class="value">"201406061032-0500"</span>/&gt;
-    &lt;<span class="field">value</span> <span class="attrib">xsi:type=</span><span class="value">"CD"</span> 
-        <span class="attrib">code=</span><span class="value">"<mark class="color15">449868002</mark>"</span>
-        <span class="attrib">codeSystem=</span><span class="value">"<mark class="color16">2.16.840.1.113883.6.96</mark>"</span> 
-        <span class="attrib">codeSystemName=</span><span class="value">"<mark class="color16"><mark class="color16">SNOMED</mark> CT</mark>"</span>  
-        <span class="attrib">displayName=</span><span class="value">"<mark class="color17">Current every day smoker</mark>"</span>/&gt;
-  &lt;/<span class="field">observation</span>&gt;
-&lt;/<span class="field">entry</span>&gt;</div>
+<div id="cda" class="border codeArea">&lt;<span class="field">observation</span> <span class="attrib">classCode=</span><span class="value">"OBS"</span> <span class="attrib">moodCode=</span><span class="value">"EVN"</span>&gt;
+  &lt;<span class="field">templateId</span> <span class="attrib">root=</span><span class="value">"2.16.840.1.113883.10.20.22.4.78"</span>/&gt;
+  &lt;<span class="field">templateId</span> <span class="attrib">root=</span><span class="value">"2.16.840.1.113883.10.20.22.4.78"</span> 
+              <span class="attrib">extension=</span><span class="value">"2014-06-09"</span>/&gt;
+  &lt;<span class="field">id</span> 
+    <span class="attrib">extension=</span><span class="value">"<mark class="color10">123456789</mark>"</span> 
+    <span class="attrib">root=</span><span class="value">"<mark class="color11">2.16.840.1.113883.19</mark>"</span> /&gt;
+  &lt;<span class="field">code</span> 
+    <span class="attrib">code=</span><span class="value">"<mark class="color12">72166-2</mark>"</span> 
+    <span class="attrib">codeSystem=</span><span class="value">"<mark class="color13">2.16.840.1.113883.6.1</mark>"</span> 
+    <span class="attrib">displayName=</span><span class="value">"<mark class="color14">Tobacco smoking status NHIS</mark>"</span>/&gt;
+  &lt;<span class="field">statusCode</span> <span class="attrib">code=</span><span class="value">"completed"</span>/&gt;
+  &lt;<span class="field">effectiveTime</span> <span class="attrib">value=</span><span class="value">"<mark class="color15">20140606153200+0000</mark>"</span>/&gt;
+  &lt;<span class="field">value</span> <span class="attrib">xsi:type=</span><span class="value">"CD"</span> 
+    <span class="attrib">code=</span><span class="value">"<mark class="color16">449868002</mark>"</span>
+    <span class="attrib">codeSystem=</span><span class="value">"<mark class="color17">2.16.840.1.113883.6.96</mark>"</span> 
+    <span class="attrib">codeSystemName=</span><span class="value">"<mark class="color17"><mark class="color17">SNOMED</mark> CT</mark>"</span>  
+    <span class="attrib">displayName=</span><span class="value">"<mark class="color18">Current every day smoker</mark>"</span>/&gt;
+&lt;/<span class="field">observation</span>&gt;
+</div>
 </td><td>
 <div id="fhir" class="border codeArea">{
-  "<span class="field">fullUrl</span>": "<span class="value">http://fhir:3447/4_0_0/Observation/62f17e2aa2392d0008fbb23a</span>",
-  "<span class="field">resource</span>": {
-    "<span class="field">resourceType</span>": "<span class="value">Observation</span>",
-    "<span class="field">id</span>": "<span class="value">62f17e2aa2392d0008fbb23a</span>",
-    "<span class="field">language</span>": "<span class="value">en-US</span>",
-    "<span class="field">identifier</span>": [{
-        "<span class="field">system</span>": "<span class="value">urn:oid:<mark class="color11">2.16.840.1.113883.19</mark></span>",
-        "<span class="field">value</span>": "<span class="value"><mark class="color10">123456789</mark></span>"
-      }],
-    "<span class="field">status</span>": "<span class="value">final</span>",
-    "<span class="field">category</span>": [{
-        "<span class="field">coding</span>": [
-          {
-            "<span class="field">system</span>": "<span class="value">http://terminology.hl7.org/CodeSystem/observation-category</span>",
-            "<span class="field">code</span>": "<span class="value">social-history</span>",
-            "<span class="field">display</span>": "<span class="value">Social History</span>"
-          }]
-      }],
-    "<span class="field">code</span>": {
-      "<span class="field">coding</span>": [
-        {
-          "<span class="field">system</span>": "<span class="value"><mark class="color13">http://loinc.org</mark></span>",
-          "<span class="field">code</span>": "<span class="value"><mark class="color12">72166-2</mark></span>",
-          "<span class="field">display</span>": "<span class="value"><mark class="color14">Tobacco smoking status NHIS</mark></span>"
-        }]
-    },
-    "<span class="field">subject</span>": {
-      "<span class="field">reference</span>": "<span class="value">Patient/62f17e29b7532c0009e217b7</span>"
-    },
-    "<span class="field">effectiveDateTime</span>": "<span class="value">2014-06-06T15:32:00.000Z</span>",
-    "<span class="field">issued</span>": "<span class="value">2014-06-06T15:32:00.000Z</span>",
-    "<span class="field">performer</span>": [
-      {
-        "<span class="field">reference</span>": "<span class="value">Practitioner/62f17e2ae0231200076884d5</span>"
-      }],
-    "<span class="field">valueCodeableConcept</span>": {
-      "<span class="field">coding</span>": [
-        {
-          "<span class="field">system</span>": "<span class="value"><mark class="color16">http://www.snomed.org/</mark></span>",
-          "<span class="field">code</span>": "<span class="value"><mark class="color15">449868002</mark></span>",
-          "<span class="field">display</span>": "<span class="value"><mark class="color17">Current every day smoker</mark></span>"
-        }]
-    }}
+  "<span class="field">resourceType</span>": "<span class="value">Observation</span>",
+  "<span class="field">id</span>": "<span class="value">62f17e2aa2392d0008fbb23a</span>",
+  "<span class="field">identifier</span>": [{
+    "<span class="field">system</span>": "<span class="value">urn:oid:<mark class="color11">2.16.840.1.113883.19</mark></span>",
+    "<span class="field">value</span>": "<span class="value"><mark class="color10">123456789</mark></span>"
+  }],
+  "<span class="field">status</span>": "<span class="value">final</span>",
+  "<span class="field">category</span>": [{
+    "<span class="field">coding</span>": [{
+      "<span class="field">system</span>": "<span class="value">http://terminology.hl7.org/CodeSystem/observation-category</span>",
+      "<span class="field">code</span>": "<span class="value">social-history</span>",
+      "<span class="field">display</span>": "<span class="value">Social History</span>"
+    }]
+  }],
+  "<span class="field">code</span>": {
+    "<span class="field">coding</span>": [{
+      "<span class="field">system</span>": "<span class="value"><mark class="color13">http://loinc.org</mark></span>",
+      "<span class="field">code</span>": "<span class="value"><mark class="color12">72166-2</mark></span>",
+      "<span class="field">display</span>": "<span class="value"><mark class="color14">Tobacco smoking status NHIS</mark></span>"
+    }]
+  },
+  "<span class="field">subject</span>": {
+    "<span class="field">reference</span>": "<span class="value">Patient/62f17e29b7532c0009e217b7</span>"
+  },
+  "<span class="field">effectiveDateTime</span>": "<span class="value"><mark class="color15">2014-06-06T15:32:00.000Z</mark></span>",
+  "<span class="field">valueCodeableConcept</span>": {
+    "<span class="field">coding</span>": [{
+      "<span class="field">system</span>": "<span class="value"><mark class="color17">http://www.snomed.org/</mark></span>",
+      "<span class="field">code</span>": "<span class="value"><mark class="color16">449868002</mark></span>",
+      "<span class="field">display</span>": "<span class="value"><mark class="color18">Current every day smoker</mark></span>"
+    }]
+  }
 }</div>
 </td></tr></table>
 
@@ -140,7 +129,74 @@ The following is a comparison between C-CDA and FHIR Smoking Status Observations
 
 <table><tr><th>CDA Example</th><th>FHIR Resource</th></tr>
 <tr><td>
-...
+<div id="cda" class="border codeArea">&lt;<span class="field">observation</span> <span class="attrib">classCode=</span><span class="value">"OBS"</span> <span class="attrib">moodCode=</span><span class="value">"EVN"</span>&gt;
+  &lt;<span class="field">templateId</span> <span class="attrib">root=</span><span class="value">"2.16.840.1.113883.10.20.15.3.8"</span>/&gt;
+  &lt;<span class="field">id</span> <span class="attrib">extension=</span><span class="value">"<mark class="color10">123456789</mark>"</span> <span class="attrib">root=</span><span class="value">"<mark class="color11">2.16.840.1.113883.19</mark>"</span>/&gt;
+  <span class="comment">&lt;!-- ASSERTION maps to: <mark class="color19">82810-3</mark> --&gt;</span>
+  &lt;<span class="field">code</span> <span class="attrib">code=</span><span class="value">"ASSERTION"</span> <span class="attrib">codeSystem=</span><span class="value">"2.16.840.1.113883.5.4"</span>/&gt;
+  &lt;<span class="field">statusCode</span> <span class="attrib">code=</span><span class="value">"completed"</span>/&gt;
+  &lt;<span class="field">effectiveTime</span>&gt;
+    &lt;<span class="field">low</span> <span class="attrib">value=</span><span class="value">"<mark class="color12">20220824103952+0000</mark>"</span>/&gt;
+  &lt;/<span class="field">effectiveTime</span>&gt;
+  &lt;<span class="field">value</span> <span class="attrib">xsi:type=</span><span class="value">"CD"</span> <span class="attrib">code=</span><span class="value">"<mark class="color13">77386006</mark>"</span> 
+         <span class="attrib">displayName=</span><span class="value">"<mark class="color14">pregnant</mark>"</span> 
+         <span class="attrib">codeSystem=</span><span class="value">"<mark class="color15">2.16.840.1.113883.6.96</mark>"</span>/&gt;
+  &lt;<span class="field">entryRelationship</span> <span class="attrib">typeCode=</span><span class="value">"REFR"</span>&gt;
+    &lt;<span class="field">observation</span> <span class="attrib">classCode=</span><span class="value">"OBS"</span> <span class="attrib">moodCode=</span><span class="value">"EVN"</span>&gt;
+      &lt;<span class="field">templateId</span> <span class="attrib">root=</span><span class="value">"2.16.840.1.113883.10.20.15.3.1"</span>/&gt;
+      &lt;<span class="field">code</span> 
+        <span class="attrib">code=</span><span class="value">"<mark class="color16">11778-8</mark>"</span>
+        <span class="attrib">codeSystem=</span><span class="value">"<mark class="color17">2.16.840.1.113883.6.1</mark>"</span> 
+        <span class="attrib">displayName=</span><span class="value">"Estimated date of delivery"</span>/&gt;
+      &lt;<span class="field">text</span>&gt;
+        &lt;<span class="field">reference</span> <span class="attrib">value=</span><span class="value">"#dod"</span> /&gt;
+      &lt;/<span class="field">text</span>&gt;
+      &lt;<span class="field">statusCode</span> <span class="attrib">code=</span><span class="value">"completed"</span>/&gt;
+      &lt;<span class="field">value</span> <span class="attrib">xsi:type=</span><span class="value">"TS"</span> <span class="attrib">value=</span><span class="value">"<mark class="color18">2023-02-14</mark>"</span> /&gt;
+    &lt;/<span class="field">observation</span>&gt;
+  &lt;/<span class="field">entryRelationship</span>&gt;
+&lt;/<span class="field">observation</span>&gt;</div>
 </td><td>
-...
+<div id="fhir" class="border codeArea">{
+  "<span class="field">resourceType</span>": "<span class="value">Observation</span>",
+  "<span class="field">id</span>": "<span class="value">pregnancy-status</span>",
+  "<span class="field">identifier</span>": [{
+    "<span class="field">system</span>": "<span class="value">urn:oid:<mark class="color11">2.16.840.1.113883.19</mark></span>",
+    "<span class="field">value</span>": "<span class="value"><mark class="color10">123456789</mark></span>"
+  }],
+  "<span class="field">status</span>": "<span class="value">final</span>",
+  "<span class="field">category</span>": [{
+    "<span class="field">coding</span>": [{
+      "<span class="field">system</span>": "<span class="value">http://terminology.hl7.org/CodeSystem/observation-category</span>",
+      "<span class="field">code</span>": "<span class="value">social-history</span>",
+      "<span class="field">display</span>": "<span class="value">Social History</span>"
+    }]
+  }],
+  "<span class="field">code</span>": {
+    "<span class="field">coding</span>": [{
+      "<span class="field">system</span>": "<span class="value"><mark class="color17">http://loinc.org</mark></span>",
+      "<span class="field">code</span>": "<span class="value"><mark class="color19">82810-3</mark></span>",
+      "<span class="field">display</span>": "<span class="value">Pregnancy status</span>"
+    }]
+  },
+  "<span class="field">subject</span>": { "reference": "<span class="value">Patient/example</span>" },
+  "<span class="field">effectiveDateTime</span>": "<span class="value"><mark class="color12">2022-08-24T10:39:52Z</mark></span>",
+  "<span class="field">valueCodeableConcept</span>": {
+    "<span class="field">coding</span>": [{
+      "<span class="field">system</span>": "<span class="value"><mark class="color15">http://snomed.info/sct</mark></span>",
+      "<span class="field">code</span>": "<span class="value"><mark class="color13">77386006</mark></span>",
+      "<span class="field">display</span>": "<span class="value"><mark class="color14">Pregnant</mark></span>"
+    }]
+  },
+  "<span class="field">component</span>": [{
+    "<span class="field">code</span>": {
+      "<span class="field">coding</span>": [{
+        "<span class="field">system</span>": "<span class="value"><mark class="color17">http://loinc.org</mark></span>",
+        "<span class="field">code</span>": "<span class="value"><mark class="color16">11778-8</mark></span>",
+        "<span class="field">display</span>": "<span class="value">Delivery date Estimated</span>"
+      }]
+    },
+    "<span class="field">valueDateTime</span>": "<span class="value"><mark class="color18">2023-02-14</mark></span>"
+  }]
+}</div>
 </td></tr></table>
