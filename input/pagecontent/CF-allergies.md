@@ -14,8 +14,9 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
 |/@negationInd||See constraints under /participant 
 |/id|.identifier| [CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
 |/effectiveTime/low|.onsetDateTime|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)<br/>effectiveTime/high should not be mapped within onset (DateTime or Period)|
+|/effectiveTime/high|.extension:[allergyintolerance-abatement](http://hl7.org/fhir/StructureDefinition/allergyintolerance-abatement)||
 |/value|.type<br/>&<br/>.category|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)<br/>[CDA value → FHIR type](ConceptMap-CF-AllergyIntoleranceType.html) <br/> [CDA value → FHIR category](./ConceptMap-CF-AllergyIntoleranceCategory.html)|
-|/author|.recorder<br/>&<br/>**[Provenance](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-provenance.html)**|**Constraint:** Only map single CDA author to FHIR recorder<br/>[Guidance on CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)|
+|/author|.recorder<br/>&<br/>**[Provenance](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-provenance.html)**|**Constraint:** Only map last CDA author to FHIR recorder<br/>[Guidance on CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)|
 |/author/time|.recordedDate|**Constraint:** Only map earliest author/time <br/>[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
 |/participant/participantRole/playingEntity/code|.code|**Constraint:** When CDA negation is absent or false<br/>[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 |/participant/participantRole/playingEntity/code<br/>&<br/>/value|.code|**Constraint:** When CDA negation is true and nullFlavor is used in playingEntity/code<br/>[CDA No known allergy → FHIR code](ConceptMap-CF-NoKnownAllergies.html)<br/> When negation is true and playingEntity/code is populated, use equivalent negated concept (e.g. map latex substance to no known latex allergy [1003774007, SNOMED CT]) if available. If not, use the [substanceExposureRisk extension](https://hl7.org/fhir/extensions/StructureDefinition-allergyintolerance-substanceExposureRisk.html), placing the substance in the substance sub-extension and setting the exposureRisk sub-extension to `no-known-reaction-risk`. Note that when using this extension, the AllergyIntolerance resource will not be a conformant US Core AllergyIntolerance since the extension prohibits the required .code element.|
@@ -32,7 +33,7 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
 
 3\. Note that these entryRelationships will also have inversionInd="true" in CDA
 
-When authors or other provenance are recorded in the parentƒ [Allergy Concern Act](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-AllergyConcernAct.html), it is recommended that those data be mapped to the FHIR AllergyIntolerance. 
+When authors or other provenance are recorded only in the parent [Allergy Concern Act](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-AllergyConcernAct.html), it is recommended that those data be mapped to the FHIR AllergyIntolerance. 
 
 ### Example
 

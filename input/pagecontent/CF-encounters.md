@@ -2,7 +2,7 @@
 
 This page provides a mapping from CDA to FHIR. <!-- For the FHIR to CDA mapping, please refer to [Encounters FHIR → CDA](./FC-encounters.html). --> For guidance on how to read the table below, see [Reading the C-CDA ↔ FHIR Mapping Pages](./mappingGuidance.html).
 
-Encounter Activities in the Encounters Section (or elsewhere in the document, such as `<entryReference>` on Clinical Notes) correspond FHIR Encounter resources. If the document itself contains a `componentOf/encompassingEncounter`, this should also be converted to a FHIR Encounter resource. In all cases, when the same encounter is referenced multiple times (such as the `encompassingEncounter` and an Encounter Activity in the Encounters Section containing the same `<id>`), it should be converted to the same FHIR resource.
+Encounter Activities in the Encounters Section (or elsewhere in the document, such as `<entryReference>` on Clinical Notes) correspond FHIR Encounter resources. If the document itself contains a `componentOf/encompassingEncounter`, this should also be converted to a FHIR Encounter resource. In all cases, when the same encounter is referenced multiple times (such as the `encompassingEncounter` and an Encounter Activity in the Encounters Section containing the same `<id>`), it should be converted to a single FHIR resource.
 
 ### C-CDA Encounter to FHIR
 <sup>(b)</sup> - indicates element is only present in Encounter Activity in the body of the document<br/><sup>(h)</sup> - indicates element is only present in EncompassingEncounter in the header of the document

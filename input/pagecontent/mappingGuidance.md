@@ -584,6 +584,15 @@ In this publication, we include a mapping between missing data concepts. **Impor
 - [NullFlavor (CDA) → Data Absent Reason code (FHIR)](./ConceptMap-CF-NullFlavorDataAbsentReason.html) 
 - [Data Absent Reason code (FHIR) → NullFlavor (CDA)](./ConceptMap-FC-DataAbsentReasonNullFlavor.html)
 
+### Note Text
+The CDA Comment Activity template is used for text notes accompanied by their author. The FHIR Annotation datatype can capture text and an author as well. 
+
+|C-CDA|FHIR|Notes|
+|:-------|:------|:---------|
+|text|text||
+|author/time|time||
+|author/assignedAuthor|authorReference|Ideally this is a PractitionerRole, which can then support both Pracitioner (name) and Organization, if necessary.|
+
 ### Narrative Text
 
 The CDA section narrative text is an authoritative portion of the document and must be preserved when transforming to FHIR. When creating a FHIR Composition resource (or converting a FHIR Composition back into CDA), this is a straightforward mapping between CDA's `section/text` and the FHIR Composition `section.text` field. There is a slight difference in allowed elements - CDA defines a limited set of elements in its NarrativeBlock schema, and FHIR limits narratives to a subset of XHTML - but these two fields can generally be mapped 1:1. These differences are described below.
