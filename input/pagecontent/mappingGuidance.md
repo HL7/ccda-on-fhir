@@ -585,7 +585,7 @@ In this publication, we include a mapping between missing data concepts. **Impor
 - [Data Absent Reason code (FHIR) → NullFlavor (CDA)](./ConceptMap-FC-DataAbsentReasonNullFlavor.html)
 
 ### Note Text
-The CDA Comment Activity template is used for text notes accompanied by their author. The FHIR Annotation datatype can capture text and an author as well. 
+The CDA [Comment Activity](https://build.fhir.org/ig/HL7/CDA-ccda/StructureDefinition-CommentActivity.html) template is used for text notes accompanied by their author. The FHIR [Annotation](https://hl7.org/fhir/R4/datatypes.html#annotation) datatype can capture text and an author as well. 
 
 |C-CDA|FHIR|Notes|
 |:-------|:------|:---------|
