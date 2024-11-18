@@ -584,12 +584,12 @@ In this publication, we include a mapping between missing data concepts. **Impor
 - [NullFlavor (CDA) → Data Absent Reason code (FHIR)](./ConceptMap-CF-NullFlavorDataAbsentReason.html) 
 - [Data Absent Reason code (FHIR) → NullFlavor (CDA)](./ConceptMap-FC-DataAbsentReasonNullFlavor.html)
 
-### Note Text
+### Comment → Annotation
 The CDA [Comment Activity](https://build.fhir.org/ig/HL7/CDA-ccda/StructureDefinition-CommentActivity.html) template is used for text notes accompanied by their author. The FHIR [Annotation](https://hl7.org/fhir/R4/datatypes.html#annotation) datatype can capture text and an author as well. 
 
-|C-CDA|FHIR|Notes|
+|C-CDA<br/>[Comment Activity](https://build.fhir.org/ig/HL7/CDA-ccda/StructureDefinition-CommentActivity.html)|FHIR <br/> [Annotation](https://hl7.org/fhir/R4/datatypes.html#annotation)|Notes|
 |:-------|:------|:---------|
-|text|text||
+|text|text|See [C-CDA Entry/Text → FHIR Resource.text](mappingGuidance.html#c-cda-entrytext--fhir-resourcetext)|
 |author/time|time||
 |author/assignedAuthor|authorReference|Ideally this is a PractitionerRole, which can then support both Pracitioner (name) and Organization, if necessary.|
 

@@ -23,7 +23,7 @@ C-CDA 2.1 describes three templates for Procedures: Procedure Activity Act, Proc
 |/performer/assignedEntity|.performer.actor|May map to Practitioner, PractitionerRole, or Organization<br/>onBehalfOf should not be used when actor is a Practitioner or PractitionerRole |
 |**[Service Delivery Location](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-ServiceDeliveryLocation.html)**<br/>/participant[@typeCode="LOC"]/participantRole|.location||
 |**[Indication](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-Indication.html)**<br/>/entryRelationship[@typeCode="RSON"]/observation/value|.reasonCode|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
-|**[Comment Activity](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-CommentActivity.html)**<br/>/entryRelationship/act[code/@code="48767-8"]/text|**[Annotation](https://hl7.org/fhir/datatypes.html#Annotation)**<br/>.note|
+|**[Comment Activity](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-CommentActivity.html)**<br/>/entryRelationship/act[code/@code="48767-8"]/text|**[Annotation](https://hl7.org/fhir/datatypes.html#Annotation)**<br/>.note|See [Comment → Annotation](mappingGuidance.html#comment--annotation)|
 
 1\. XPath abbrievated for C-CDA Procedure as: <br/> ClinicalDocument/component/structuredBody/component/section[code/@code="47519-4"]/entry/procedure
 

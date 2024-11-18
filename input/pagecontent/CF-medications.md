@@ -51,7 +51,7 @@ The C-CDA Example Search site maintains a document of [Common Medication Frequen
 |../effectiveTime/high|.dispenseRequest.validityPeriod.end|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)<br/>`low` would similarly map to `start`, but only high is called out in C-CDA.|
 |../repeatNumber|.dispenseRequest.numberOfRepeatsAllowed|**Caution:** in CDA, repeatNumber indicates total number of dispenses allowed. In FHIR, this field is exclusive of the original dispense. So the `numberOfRepeatsAllowed` will be one less than `repeatNumber`.
 |../quantity|.dispenseRequest.quantity|[CDA ↔ FHIR Quantity](mappingGuidance.html#cda--fhir-quantity)
-|**[Comment Activity](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-CommentActivity.html)**<br/>/entryRelationship/act[code/@code="48767-8"]/text|**[Annotation](https://hl7.org/fhir/datatypes.html#Annotation)**<br/>.note||
+|**[Comment Activity](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-CommentActivity.html)**<br/>/entryRelationship/act[code/@code="48767-8"]/text|**[Annotation](https://hl7.org/fhir/datatypes.html#Annotation)**<br/>.note|See [Comment → Annotation](mappingGuidance.html#comment--annotation)|
 |/precondition|.asNeededBoolean = true|The presence of a precondition element indicates asNeededBoolean should be true.<br/>More complex maps may be possible with .asNeededCodeableConcept.|
 
 1\. XPath abbrievated for C-CDA Medication Activity as: <br/> ClinicalDocument/component/structuredBody/component/section[code/@code="10160-0"]/entry/substanceAdministration
