@@ -19,8 +19,6 @@ Clinical Notes may appear in their own section or as an entry in any open sectio
 |/entryRelationship[@typeCode=COMP]/encounter<br/>or<br/>Parent `<encounter>` element<br/>or<br/>`<encompassingEncounter>`|.context.encounter|C-CDA requires an encounter for notes, but allows for context conduction. If the Note Activity is in an entryRelationship chain that includes an Encounter Activity, use that. Otherwise, if the document contains an `<encompassingEncounter>`, that is the encounter for the note.<br/>[CDA → FHIR Encounters](CF-encounters.html)
 |/reference/externalDocument/id|.relatesTo.target.identifier|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
 
-4dc41c26-43a4-48d9-b17e-067890006b29
-
 ### Example
 
 <table><tr><th>CDA Note Activity Example</th><th>FHIR DocumentReference Resource</th></tr>
