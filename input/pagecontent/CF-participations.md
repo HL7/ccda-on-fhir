@@ -86,13 +86,54 @@ Note when the only field populated is `<standardIndustryClassCode>`, the Organiz
 |/standardIndustryClassCode|/code|.type|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)
 |/asOrganizationPartOf|/asOrganizationPartOf|.partOf|Recursive Organization reference
 
+#### Example - CDA to FHIR Organization
+Note - the CDA tag could be any number of organization tags like `<representedOrganization>`, `<scopingOrganization>`, etc.
+<table><tr><th>CDA Organization</th><th>FHIR Organization</th></tr>
+<tr><td>
+<div id="cda" class="border codeArea">&lt;<span class="field">Organization</span>&gt;
+  &lt;<span class="field">id</span> <span class="attrib">extension=</span><mark class="color10"><span class="value">"3"</span></mark>
+    <span class="attrib">root=</span><span class="value">"<mark class="color11">1.3.6.1.4.1.22812.3.2009316.3</mark>"</span> /&gt;
+  &lt;<span class="field">name</span>&gt;<mark class="color12">Primary Care Partners Test</mark>&lt;/<span class="field">name</span>&gt;
+  &lt;<span class="field">telecom</span> <span class="attrib">use=</span><mark class="color13"><span class="value">"WP"</span></mark> 
+    <span class="attrib">value=</span><span class="value">"tel:<mark class="color14">+1-(676)857-6769</mark>"</span> /&gt;
+  &lt;<span class="field">addr</span> <span class="attrib">use=</span><mark class="color13"><span class="value">"WP"</span></mark>&gt;
+    &lt;<span class="field">streetAddressLine</span>&gt;<mark class="color15">123 main street</mark>&lt;/<span class="field">streetAddressLine</span>&gt;
+    &lt;<span class="field">city</span>&gt;<mark class="color16">Chicago</mark>&lt;/<span class="field">city</span>&gt;
+    &lt;state<mark class="color17">&gt;IL&lt;</mark>/state&gt;
+    &lt;<span class="field">postalCode</span>&gt;<mark class="color18">60629</mark>&lt;/<span class="field">postalCode</span>&gt;
+  &lt;/<span class="field">addr</span>&gt;
+&lt;/<span class="field">Organization</span>&gt;</div>
+</td><td>
+<div id="fhir" class="border codeArea">{
+  "<span class="field">resourceType</span>": "<span class="value">Organization</span>",
+  "<span class="field">identifier</span>": [{
+    "<span class="field">value</span>": <mark class="color10">"3"</mark>,
+    "<span class="field">system</span>": "<span class="value">urn:oid:<mark class="color11">1.3.6.1.4.1.22812.3.2009316.3</mark></span>"
+  }],
+  "<span class="field">name</span>": "<span class="value"><mark class="color12">Primary Care Partners Test</mark></span>",
+  "<span class="field">address</span>": [{
+    "<span class="field">use</span>": "<span class="value"><mark class="color13">work</mark></span>",
+    "<span class="field">line</span>": [ "<mark class="color15">123 main street</mark>" ],
+    "<span class="field">city</span>": "<span class="value"><mark class="color16">Chicago</mark></span>",
+    "<span class="field">state</span>": <mark class="color17">"IL"</mark>,
+    "<span class="field">postalCode</span>": "<span class="value"><mark class="color18">60629</mark></span>"
+  }],
+  "<span class="field">telecom</span>": [{
+    "<span class="field">value</span>": "<span class="value"><mark class="color14">+1-(676)857-6769</mark></span>",
+    "<span class="field">use</span>": "<span class="value"><mark class="color13">work</mark></span>",
+    "<span class="field">system</span>": "<span class="value">phone</span>"
+  }],
+  "<span class="field">active</span>": true
+}</div>
+</td></tr></table>
+
 ### CDA to FHIR Practitioner
 
 |[AssignedAuthor](https://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-AssignedAuthor.html)<br/>[AssignedEntity](https://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-AssignedEntity.html)<br/>[AssociatedEntity](https://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-AssociatedEntity.html)<br/>[ParticipantRole](https://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ParticipantRole.html)|[Practitioner](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-practitioner.html)|Transform Steps|
 |:----|:----|:----|
 |/id|.identifier|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
-|/code||[See Mapping code](#mapping-code)|
-|/addr|.address|[CDA id ↔ FHIR address](mappingGuidance.html#cda-addr--fhir-address)|
+|/code||See [See Mapping code](#mapping-code)<br/>In most cases, the presence of a `<code>` requires a PractitionerRole resource.|
+|/addr|.address|[CDA id ↔ FHIR address](mappingGuidance.html#cda-addr--fhir-address)<br/>In FHIR this is a non-role-specific, such as a home address.<br/>If this represents a role address, this should go into PractitionerRole.address.|
 |/telecom|.telecom|[CDA id ↔ FHIR telecom](mappingGuidance.html#cda-telecom--fhir-telecom)|
 |**[Person](https://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Person.html)<br/>[PlayingEntity](https://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-PlayingEntity.html)**||Person is the CDA data type for `<assignedPerson>` and `<associatedPerson>`.|
 |//name|.name|[CDA name ↔ FHIR name](mappingGuidance.html#cda-name--fhir-name)|
