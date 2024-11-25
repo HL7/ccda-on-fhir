@@ -2,10 +2,18 @@
   "package-id" : "hl7.fhir.us.ccda",
   "version" : "1.3.0",
   "path" : "http://hl7.org/fhir/us/ccda/STU1.3",
+<<<<<<< HEAD
   "mode": "working",
   "status" : "ballot",
   "sequence" : "STU 3",
   "desc" : "The C-CDA on FHIR Implementation Guide is a US Realm Implementation Guide of the FHIR Specification addressing the key aspects of Consolidated CDA (C-CDA) required for Meaningful Use (MU). This IG publication release focuses on providing data mappings for problems, allergies, medications, immunization, patient and procedures (PAMI+), and results, vitals, encounters, and social determinants of health. The clinical document header and document guidance from the earlier publications have not been updated since 2020.",
   "descmd" : "The C-CDA on FHIR Implementation Guide is a US Realm Implementation Guide of the FHIR Specification addressing the key aspects of Consolidated CDA (C-CDA) required for Meaningful Use (MU). This IG publication release focuses on providing data mappings for problems, allergies, medications, immunization, patient and procedures (PAMI+), and results, vitals, encounters, and social determinants of health. The clinical document header and document guidance from the earlier publications have not been updated since 2020.",
+=======
+  "mode": "milestone",
+  "status" : "trial-use",
+  "sequence" : "STU 1",
+  "desc" : "The C-CDA on FHIR Implementation Guide is a US Realm Implementation Guide of the FHIR Specification addressing the key aspects of Consolidated CDA (C-CDA) required for Meaningful Use (MU). This IG publication release focuses on providing data mappings for problems, allergies, medications, immunization, patient and procedures (PAMI+). The clinical document header and document guidance from the earlier publications have not been updated since 2020.",
+  "descmd" : "The C-CDA on FHIR Implementation Guide is a US Realm Implementation Guide of the FHIR Specification addressing the key aspects of Consolidated CDA (C-CDA) required for Meaningful Use (MU). This IG publication release focuses on providing data mappings for problems, allergies, medications, immunization, patient and procedures (PAMI+). The clinical document header and document guidance from the earlier publications have not been updated since 2020.",
+>>>>>>> 3919357a3e0900012fcd26ae9a677079588fb862
   "first": false
 }
