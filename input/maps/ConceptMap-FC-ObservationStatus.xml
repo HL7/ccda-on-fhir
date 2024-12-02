@@ -1,16 +1,16 @@
 <ConceptMap xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <id value="FC-ResultStatus"/>
+  <id value="FC-ObservationStatus"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="cgp" />
   </extension>
-  <url value="http://hl7.org/fhir/us/ccda/ConceptMap/FC-ResultStatus"/>
+  <url value="http://hl7.org/fhir/us/ccda/ConceptMap/FC-ObservationStatus"/>
   <version value="4.0.1"/>
-  <name value="FHIRtoCCDAResultStatus"/>
-  <title value="FHIR ResultStatus to C-CDA ResultStatus"/>
+  <name value="FHIRtoCCDAObservationStatus"/>
+  <title value="FHIR ObservationStatus to C-CDA ObservationStatus"/>
   <status value="active"/>
   <experimental value="false"/>
   <publisher value="HL7 International"/>
-  <description value="FHIR ResultStatus to C-CDA ResultStatus"/>
+  <description value="FHIR ObservationStatus to C-CDA ObservationStatus"/>
   <contact>
     <name value="HL7 International"/>
     <telecom>
