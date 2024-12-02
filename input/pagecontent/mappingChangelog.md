@@ -13,6 +13,7 @@ Though feedback is welcome on any part of the IG, only changed content may be vo
    - [Missing Maps](mappingGuidance.html#missing-maps)
    - [FHIR Code → CDA Coding](mappingGuidance.html#fhir-code--cda-coding)
    - [Ranges of Physical Quantities](mappingGuidance.html#ranges-of-physical-quantities)
+   - [Comment → Annotation](mappingGuidance.html#comment--annotation)
 
 **Updated Mappings**
 

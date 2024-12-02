@@ -87,7 +87,7 @@
     </element>
     <element>
       <code value="entered-in-error"/>
-      <display value="Entered-in-error"/>
+      <display value="Entered in Error"/>
       <target>
         <code value="aborted"/>
         <display value="aborted"/>

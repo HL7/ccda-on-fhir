@@ -5,7 +5,7 @@ In our first publication, we focused on the subset of domains that are recognize
 <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<blockquote class="stu-note">
 		<b>Mapping Consensus</b>
-		<p>Note that C-CDA → FHIR mappings had a significant exposure to achieve multi-vendor consensus. This has included several FHIR [Connectathons](https://confluence.hl7.org/display/CGP/Scope+and+Schedule) and regular weekly engagements. Vendors and organizations participating in this process include:
+		<p>Note that C-CDA → FHIR mappings had a significant exposure to achieve multi-vendor consensus. This has included several FHIR Connectathons (https://confluence.hl7.org/display/CGP/Scope+and+Schedule/) and regular weekly engagements. Vendors and organizations participating in this process include:
     <ul>
       <li>Cerner (Oracle)</li>
       <li>Diameter Health (Availity)</li>
