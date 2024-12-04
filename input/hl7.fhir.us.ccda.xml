@@ -39,7 +39,7 @@
     <version value="4.0.0"/>
   </dependsOn>
   <dependsOn>
-    <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
+    <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions.r4"/>
     <packageId value="hl7.fhir.uv.extensions"/>
     <version value="5.1.0"/>
   </dependsOn>
