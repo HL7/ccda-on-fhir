@@ -3,15 +3,15 @@
     xmlns="http://hl7.org/fhir">
   <id value="hl7.fhir.us.ccda"/>
   <meta>
-    <versionId value="132"/>
-    <lastUpdated value="2020-10-21T21:13:08.798+00:00"/>
+    <versionId value="200"/>
+    <lastUpdated value="2024-12-03T20:08:08.798+00:00"/>
     <source value="#dMBMcvZsrSDFhHb1"/>
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="cgp"/>
   </extension>
   <url value="http://hl7.org/fhir/us/ccda/ImplementationGuide/hl7.fhir.us.ccda"/>
-  <version value="2.0.0"/>
+  <version value="2.0.0-ballot"/>
   <name value="CCDAonFHIR"/>
   <title value="C-CDA on FHIR"/>
   <status value="active"/>
@@ -41,7 +41,7 @@
   <dependsOn>
     <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
     <packageId value="hl7.fhir.uv.extensions"/>
-    <version value="5.1.0-snapshot1"/>
+    <version value="5.1.0"/>
   </dependsOn>
   <definition>
     <resource>
@@ -980,7 +980,7 @@
     </parameter>
     <parameter>
       <code value="releaselabel"/>
-      <value value="STU 2.0"/>
+      <value value="STU 2 Ballot"/>
     </parameter>
     <parameter>
       <code value="copyrightyear"/>
