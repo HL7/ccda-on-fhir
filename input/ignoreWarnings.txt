@@ -20,5 +20,5 @@ The value set include has too many codes to validate (0), so each individual cod
 # This is a validator issue, not an IG issue
 Target Code System http://snomed.info/sct is only supported on the terminology server, so the target codes are not validated for performance reasons
 Target Code System http://loinc.org is only supported on the terminology server, so the target codes are not validated for performance reasons
-Source Code System http://snomed.info/sct is only supported on the terminology server, so the source codes are not validated for performance reason
+Source Code System http://snomed.info/sct is only supported on the terminology server, so the source codes are not validated for performance reasons
 Source Code System http://loinc.org is only supported on the terminology server, so the source codes are not validated for performance reasons
