@@ -1,4 +1,4 @@
-### 1.3.0 (Current STU Ballot)
+### 2.0.0 (Current STU Ballot)
 Though feedback is welcome on any part of the IG, only changed content may be voted upon during an STU ballot. The following is a high-level list of changes since version 1.2.0 STU1.
 
 **New Resources / Guidance**
@@ -18,9 +18,11 @@ Though feedback is welcome on any part of the IG, only changed content may be vo
 **Updated Mappings**
 
 During the 2023 & 2024 connectathons, several mappings were enhanced. These updates addressed gaps for fields required by C-CDA or USCDI and included non-controversial mappings. For guidance on handling unmapped fields, refer to the [Missing Maps](mappingGuidance.html#missing-maps) section.
-- [C-CDA → FHIR Medications](CF-medications.html) - Added `approachSiteCode`, `maxDoseQuantity`, `manufacturer`, `Drug Vehicle`, and`Supply`.
-- [C-CDA → FHIR Patient](CF-patient.html) - Added guidance for `raceCode/originalText` as well as mappings for `guardian`, `languageCommunication/modeCode`, and `languageCommunication/proficiencyLevelCode`.
+- [C-CDA → FHIR Medications](CF-medications.html) - Added `approachSiteCode`, `maxDoseQuantity`, `administrationUnitCode`, `manufacturerOrganization`, `Drug Vehicle`, and`Supply`.
+- [C-CDA → FHIR Patient](CF-patient.html) - Added guidance for `raceCode/originalText` as well as mappings for `religiousAffiliationCode`, `guardian`, `birthPlace`,  `languageCommunication/modeCode`, `languageCommunication/proficiencyLevelCode`, and `providerOrganization`.
 - [C-CDA → Probelms](CF-problems.html) - Added `Age Observation` and `Supporting Observations (e.g. Assessment Scale Observation)`.
+
+Additionally, all highlighted examples have been converted to inline HTML to facilitate searching, resizing, and copy-pasting.
 
 ### 1.2.0 STU 1 (First Mapping Ballot)
 - Mapping Background
