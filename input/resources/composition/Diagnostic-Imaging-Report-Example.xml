@@ -343,8 +343,8 @@
         <code>
             <coding>
                 <system value="http://snomed.info/sct"/>
-                <code value="168731009"/>
-                <display value="Standard Chest X-Ray"/>
+                <code value="399208008"/>
+                <display value="Plain X-ray of chest"/>
             </coding>
         </code>
         <period>

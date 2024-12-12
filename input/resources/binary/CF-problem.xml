@@ -27,8 +27,8 @@
           <originalText>
             <reference value="#_5011447a-e27f-471d-9e1f-541148c5282f" />
           </originalText>
-          <translation code="486" codeSystem="2.16.840.1.113883.6.103" displayName="Pneumonia, organism unspecified" />
-          <translation code="J18.9" codeSystem="2.16.840.1.113883.6.90" displayName="Pneumonia, unspecified organism" />
+          <translation code="486" codeSystem="http://hl7.org/fhir/sid/icd-9-cm" displayName="Pneumonia, organism unspecified" />
+          <translation code="J18.9" codeSystem="http://hl7.org/fhir/sid/icd-10-cm" displayName="Pneumonia, unspecified organism" />
           <!-- Note that the following OID is illustrative of when no URL is available when translation to FHIR. See https://github.com/HL7/ccda-on-fhir/blob/master/input/resources/condition/CF-problem.json#L56 -->
           <translation code="87580" codeSystem="2.16.840.1.113883.3.247.1.1" />
         </value>

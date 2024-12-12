@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/ccda/2023May" ciUrl="http://build.fhir.org/ig/HL7/ccda-on-fhir" defaultVersion="1.2.0" defaultWorkgroup="cgp" gitUrl="https://github.com/HL7/ccda-on-fhir" url="http://hl7.org/fhir/us/ccda">
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/ccda/2025Jan" ciUrl="http://build.fhir.org/ig/HL7/ccda-on-fhir" defaultVersion="1.2.0" defaultWorkgroup="cgp" gitUrl="https://github.com/HL7/ccda-on-fhir" url="http://hl7.org/fhir/us/ccda">
 <version code="current" url="http://build.fhir.org/ig/HL7/ccda-on-fhir"/>
+<version code="2.0.0-ballot" url="http://hl7.org/fhir/us/ccda/2025Jan"/>
 <version code="1.2.0" url="http://hl7.org/fhir/us/ccda/STU1.2"/>
-<version code="1.2.0-ballot" url="http://hl7.org/fhir/us/ccda/2023May"/>
+<version code="1.2.0-ballot" deprecated="true" url="http://hl7.org/fhir/us/ccda/2023May"/>
 <version code="1.1.0" deprecated="true" url="http://hl7.org/fhir/us/ccda/STU1.1"/>
 <version code="1.0.0" deprecated="true" url="http://hl7.org/fhir/us/ccda/STU1"/>
 <version code="1.8.0" deprecated="true" url="http://hl7.org/fhir/us/ccda/2017Jan"/>
@@ -26,6 +27,7 @@
 <artifact id="ConceptMap/CF-AddressUse" key="ConceptMap-CF-AddressUse" name="C-CDA to FHIR Address Use"/>
 <artifact id="ConceptMap/CF-AdministrativeGender" key="ConceptMap-CF-AdministrativeGender" name="C-CDA to FHIR Adminmistrative Gender"/>
 <artifact id="ConceptMap/CF-AllergyStatus" key="ConceptMap-CF-AllergyStatus" name="C-CDA to FHIR Allergy Status"/>
+<artifact id="ConceptMap/CF-EncounterStatus" key="ConceptMap-CF-EncounterStatus" name="C-CDA to FHIR Encounter Status"/>
 <artifact id="ConceptMap/CF-ImmunizationStatus" key="ConceptMap-CF-ImmunizationStatus" name="C-CDA to FHIR Immunization Status"/>
 <artifact id="ConceptMap/CF-MedicationStatus" key="ConceptMap-CF-MedicationStatus" name="C-CDA to FHIR Medication Status"/>
 <artifact id="ConceptMap/CF-NameUse" key="ConceptMap-CF-NameUse" name="C-CDA to FHIR NameUse"/>
@@ -36,6 +38,8 @@
 <artifact id="ConceptMap/CF-Criticality" key="ConceptMap-CF-Criticality" name="CCDA Criticality to FHIR Criticality"/>
 <artifact id="ConceptMap/CF-MedActivityMood" key="ConceptMap-CF-MedActivityMood" name="CCDA Medication Activity Mood to FHIR MedicationRequest.intent"/>
 <artifact id="ConceptMap/CF-ConditionClinicalStatus" key="ConceptMap-CF-ConditionClinicalStatus" name="CCDA Problem Concern Status to FHIR Condition Clinical Status"/>
+<artifact id="ConceptMap/CF-ResultReportStatus" key="ConceptMap-CF-ResultReportStatus" name="CCDA ResultStatus to FHIR DiagnosticReport status"/>
+<artifact id="ConceptMap/CF-ResultStatus" key="ConceptMap-CF-ResultStatus" name="CCDA ResultStatus to FHIR Observation Status"/>
 <artifact id="CapabilityStatement/CcdaOnFhirClient" key="CapabilityStatement-CcdaOnFhirClient" name="CCDA on FHIR Client"/>
 <artifact id="CapabilityStatement/CcdaOnFhirServer" key="CapabilityStatement-CcdaOnFhirServer" name="CCDA on FHIR Server"/>
 <artifact id="ConceptMap/CF-AllergyIntoleranceCategory" key="ConceptMap-CF-AllergyIntoleranceCategory" name="CCDA to FHIR Allergy Intolerance Category"/>
@@ -91,6 +95,7 @@
 <artifact id="ConceptMap/FC-DataAbsentReasonNullFlavor" key="ConceptMap-FC-DataAbsentReasonNullFlavor" name="FHIR Data Absent Reason to C-CDA NullFlavor"/>
 <artifact id="ConceptMap/FC-ImmunizationSite" key="ConceptMap-FC-ImmunizationSite" name="FHIR Immunization Site to C-CDA Immunization approachSiteCode"/>
 <artifact id="ConceptMap/FC-ImmunizationRefusal" key="ConceptMap-FC-ImmunizationRefusal" name="FHIR Immunization Status Reason to C-CDA Immunization Refusal"/>
+<artifact id="ConceptMap/FC-ObservationStatus" key="ConceptMap-FC-ObservationStatus" name="FHIR ObservationStatus to C-CDA ObservationStatus"/>
 <artifact id="ConceptMap/FC-Severity" key="ConceptMap-FC-Severity" name="FHIR Severity to C-CDA Severity"/>
 <artifact id="ConceptMap/FC-AddressUse" key="ConceptMap-FC-AddressUse" name="FHIR to C-CDA Address Use"/>
 <artifact id="ConceptMap/FC-AdministrativeGender" key="ConceptMap-FC-AdministrativeGender" name="FHIR to C-CDA Adminmistrative Gender"/>
@@ -160,19 +165,31 @@
 <page key="artifacts" name="Artifacts Summary"/>
 <page key="background" name="Background"/>
 <page key="CF-allergies" name="C-CDA to FHIR Allergies"/>
+<page key="CF-encounters" name="C-CDA to FHIR Encounters"/>
 <page key="CF-immunizations" name="C-CDA to FHIR Immunizations"/>
 <page key="CF-medications" name="C-CDA to FHIR Medications"/>
+<page key="CF-notes" name="C-CDA to FHIR Notes"/>
+<page key="CF-participations" name="C-CDA to FHIR Participations"/>
 <page key="CF-patient" name="C-CDA to FHIR Patient"/>
 <page key="CF-problems" name="C-CDA to FHIR Problems"/>
 <page key="CF-procedures" name="C-CDA to FHIR Procedures"/>
+<page key="CF-results" name="C-CDA to FHIR Results"/>
+<page key="CF-social" name="C-CDA to FHIR Social History"/>
+<page key="CF-vitals" name="C-CDA to FHIR Vital Signs"/>
 <page key="CF-index" name="C-CDA → FHIR Index"/>
+<page key="mappingChangelog" name="Change Log"/>
 <page key="downloads" name="Downloads"/>
 <page key="FC-allergies" name="FHIR to C-CDA Allergies"/>
+<page key="FC-encounters" name="FHIR to C-CDA Encounters"/>
 <page key="FC-immunizations" name="FHIR to C-CDA Immunizations"/>
+<page key="FC-medications" name="FHIR to C-CDA Medications"/>
 <page key="FC-medications" name="FHIR to C-CDA Medications"/>
 <page key="FC-patient" name="FHIR to C-CDA Patient"/>
 <page key="FC-problems" name="FHIR to C-CDA Problems"/>
 <page key="FC-procedures" name="FHIR to C-CDA Procedures"/>
+<page key="FC-results" name="FHIR to C-CDA Results"/>
+<page key="FC-social" name="FHIR to C-CDA Social History"/>
+<page key="FC-vitals" name="FHIR to C-CDA Vital Signs"/>
 <page key="FC-index" name="FHIR → C-CDA Index"/>
 <page deprecated="true" key="Guidance" name="Guidance"/>
 <page key="index" name="Home Page"/>

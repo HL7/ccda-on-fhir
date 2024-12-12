@@ -1,11 +1,11 @@
-[Consolidated Clinical Document Architecture (C-CDA)](https://hl7.org/cda/us/ccda/2024Jan/) and [Fast Healthcare Interoperability Resources (FHIR) US Core](http://hl7.org/fhir/us/core/STU4/) are two of the most common standards for exchanging clinical data in the United States. This [project's](https://confluence.hl7.org/display/CGP/C-CDA+to+and+from+US+Core+Mapping) goals are to establish HL7 mapping transformation guidance to provide clarity and consistency in translating data between C-CDA and FHIR and between FHIR and C-CDA. 
+[Consolidated Clinical Document Architecture (C-CDA)](https://hl7.org/cda/us/ccda/) and [Fast Healthcare Interoperability Resources (FHIR) US Core](http://hl7.org/fhir/us/core/STU4/) are two of the most common standards for exchanging clinical data in the United States. This [project's](https://confluence.hl7.org/display/CGP/C-CDA+to+and+from+US+Core+Mapping) goals are to establish HL7 mapping transformation guidance to provide clarity and consistency in translating data between C-CDA and FHIR and between FHIR and C-CDA. 
 
 In our first publication, we focused on the subset of domains that are recognized as the most exchangeable concepts in the industry. This first publication is limited to Problems, Allergies, Medications, Immunizations, Procedures, and Patient (PAMI+) domains. Acknowledging the various stages of maturity for each domain, we included the entire work for these concepts. This project was scoped independently of the document-level profiles developed in earlier versions of this guide.  
 
 <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<blockquote class="stu-note">
 		<b>Mapping Consensus</b>
-		<p>Note that C-CDA → FHIR mappings had a significant exposure to achieve multi-vendor consensus. This included through two FHIR Connectathons (September 2022 and January 2023) and regular weekly engagement. Vendors and organizations participating in this process include:
+		<p>Note that C-CDA → FHIR mappings had a significant exposure to achieve multi-vendor consensus. This has included several FHIR Connectathons (https://confluence.hl7.org/display/CGP/Scope+and+Schedule/) and regular weekly engagements. Vendors and organizations participating in this process include:
     <ul>
       <li>Cerner (Oracle)</li>
       <li>Diameter Health (Availity)</li>
@@ -25,6 +25,8 @@ In our first publication, we focused on the subset of domains that are recognize
 ### Transformation Challenges and Limitations 
 
 Bi-directional automated transform is possible in constrained use cases but is not lossless due to varying flexibility and expressiveness in the standards. Use of extensions may mitigate the loss of information in transformation but may not be included in this guide. The CDA content is scoped by C-CDA R2.1 and the C-CDA Companion Guide R2, FHIR content by US Core R4, and, by implication, US Core Data for Interoperability (USCDI). 
+
+Our roadmap prioritizes USCDI, so we strive to map items in the respective standards that support USCDI. As elements are added to new versions of USCDI, we may map them in advance, especially when we are already engaged in a related domain. We also may omit or defer maps for elements that are both difficult and of dubious use, i.e., items that are not in USCDI and are deprecated or omitted from later editions of either specification.
 
 We employed several tactics to meet our goals. Standards developers drafted maps based on the respective specifications, and these were reviewed by stakeholders both offline and at public, regularly scheduled meetings. These meetings included implementors, terminologists, regulatory and public health representatives, and strategists, who engaged in realignment, consensus-seeking, and reformatting of the maps for a variety of audiences. Difficult questions were escalated to the work groups responsible for the specifications. Issues and their resolutions were logged in the publicly accessible project site.
 

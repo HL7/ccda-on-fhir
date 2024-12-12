@@ -3,15 +3,15 @@
     xmlns="http://hl7.org/fhir">
   <id value="hl7.fhir.us.ccda"/>
   <meta>
-    <versionId value="132"/>
-    <lastUpdated value="2020-10-21T21:13:08.798+00:00"/>
+    <versionId value="200"/>
+    <lastUpdated value="2024-12-03T20:08:08.798+00:00"/>
     <source value="#dMBMcvZsrSDFhHb1"/>
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="cgp"/>
   </extension>
   <url value="http://hl7.org/fhir/us/ccda/ImplementationGuide/hl7.fhir.us.ccda"/>
-  <version value="1.2.0"/>
+  <version value="2.0.0-ballot"/>
   <name value="CCDAonFHIR"/>
   <title value="C-CDA on FHIR"/>
   <status value="active"/>
@@ -38,10 +38,10 @@
     <packageId value="hl7.fhir.us.core"/>
     <version value="4.0.0"/>
   </dependsOn>
-  <dependsOn>
+  <dependsOn id="ext">
     <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
-    <packageId value="hl7.fhir.uv.extensions"/>
-    <version value="5.1.0-snapshot1"/>
+    <packageId value="hl7.fhir.uv.extensions.r4"/>
+    <version value="5.1.0"/>
   </dependsOn>
   <definition>
     <resource>
@@ -817,91 +817,151 @@
         <nameUrl value="mappingBackground.html"/>
         <title value="Mapping Background"/>
         <generation value="markdown"/>
-      </page>
-      <page>
-        <nameUrl value="mappingGuidance.html"/>
-        <title value="Mapping General and Structural Guidance"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <nameUrl value="CF-index.html"/>
-        <title value="C-CDA → FHIR Index"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <nameUrl value="FC-index.html"/>
-        <title value="FHIR → C-CDA Index"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <nameUrl value="CF-patient.html"/>
-        <title value="C-CDA to FHIR Patient"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <nameUrl value="CF-allergies.html"/>
-        <title value="C-CDA to FHIR Allergies"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <nameUrl value="CF-immunizations.html"/>
-        <title value="C-CDA to FHIR Immunizations"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <nameUrl value="CF-medications.html"/>
-        <title value="C-CDA to FHIR Medications"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <nameUrl value="CF-problems.html"/>
-        <title value="C-CDA to FHIR Problems"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <nameUrl value="CF-procedures.html"/>
-        <title value="C-CDA to FHIR Procedures"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <nameUrl value="FC-patient.html"/>
-        <title value="FHIR to C-CDA Patient"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <nameUrl value="FC-allergies.html"/>
-        <title value="FHIR to C-CDA Allergies"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <nameUrl value="FC-immunizations.html"/>
-        <title value="FHIR to C-CDA Immunizations"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <nameUrl value="FC-medications.html"/>
-        <title value="FHIR to C-CDA Medications"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <nameUrl value="FC-problems.html"/>
-        <title value="FHIR to C-CDA Problems"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <nameUrl value="FC-procedures.html"/>
-        <title value="FHIR to C-CDA Procedures"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <nameUrl value="conceptMaps.html"/>
-        <title value="Terminology Maps (Concept Maps)"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <nameUrl value="mappingIssues.html"/>
-        <title value="Known Issues"/>
-        <generation value="markdown"/>
+        <page>
+          <nameUrl value="mappingGuidance.html"/>
+          <title value="Mapping General and Structural Guidance"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="CF-index.html"/>
+          <title value="C-CDA → FHIR Index"/>
+          <generation value="markdown"/>
+          <page>
+            <nameUrl value="CF-patient.html"/>
+            <title value="C-CDA to FHIR Patient"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="CF-participations.html"/>
+            <title value="C-CDA to FHIR Participations"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="CF-allergies.html"/>
+            <title value="C-CDA to FHIR Allergies"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="CF-encounters.html"/>
+            <title value="C-CDA to FHIR Encounters"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="CF-immunizations.html"/>
+            <title value="C-CDA to FHIR Immunizations"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="CF-medications.html"/>
+            <title value="C-CDA to FHIR Medications"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="CF-notes.html"/>
+            <title value="C-CDA to FHIR Notes"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="CF-problems.html"/>
+            <title value="C-CDA to FHIR Problems"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="CF-procedures.html"/>
+            <title value="C-CDA to FHIR Procedures"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="CF-results.html"/>
+            <title value="C-CDA to FHIR Results"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="CF-social.html"/>
+            <title value="C-CDA to FHIR Social History"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="CF-vitals.html"/>
+            <title value="C-CDA to FHIR Vital Signs"/>
+            <generation value="markdown"/>
+          </page>
+        </page>
+        <page>
+          <nameUrl value="FC-index.html"/>
+          <title value="FHIR → C-CDA Index"/>
+          <generation value="markdown"/>
+          <page>
+            <nameUrl value="FC-patient.html"/>
+            <title value="FHIR to C-CDA Patient"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="FC-allergies.html"/>
+            <title value="FHIR to C-CDA Allergies"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="FC-encounters.html"/>
+            <title value="FHIR to C-CDA Encounters"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="FC-immunizations.html"/>
+            <title value="FHIR to C-CDA Immunizations"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="FC-medications.html"/>
+            <title value="FHIR to C-CDA Medications"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="FC-notes.html"/>
+            <title value="FHIR to C-CDA Medications"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="FC-problems.html"/>
+            <title value="FHIR to C-CDA Problems"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="FC-procedures.html"/>
+            <title value="FHIR to C-CDA Procedures"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="FC-results.html"/>
+            <title value="FHIR to C-CDA Results"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="FC-social.html"/>
+            <title value="FHIR to C-CDA Social History"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="FC-vitals.html"/>
+            <title value="FHIR to C-CDA Vital Signs"/>
+            <generation value="markdown"/>
+          </page>
+        </page>
+        <page>
+          <nameUrl value="conceptMaps.html"/>
+          <title value="Terminology Maps (Concept Maps)"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="mappingChangelog.html"/>
+          <title value="Change Log"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="mappingIssues.html"/>
+          <title value="Known Issues"/>
+          <generation value="markdown"/>
+        </page>
       </page>
       <page>
         <nameUrl value="the_specification.html"/>
@@ -920,7 +980,7 @@
     </parameter>
     <parameter>
       <code value="releaselabel"/>
-      <value value="STU 1"/>
+      <value value="STU 2 Ballot"/>
     </parameter>
     <parameter>
       <code value="copyrightyear"/>

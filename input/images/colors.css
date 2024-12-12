@@ -1,0 +1,128 @@
+td, th {
+  border: 1px solid black!important;
+}
+
+.codeArea {
+  font-family: 'Courier New', Courier, monospace;
+  white-space: pre;
+  background: #f5f2f0; /* FHIR prism template */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.comment {
+  color: #999;
+}
+.field {
+  color: #2f6f9f;
+}
+.attrib {
+  color: #690;
+}
+.value {
+  color: #d44950;
+}
+
+mark span{
+  color: black !important;
+}
+
+.color10 {
+  background-color: #ffff00ff;
+}
+.color11 {
+  background-color: #7cfc00ff;
+}
+.color12 {
+  background-color: #00ffffff;
+}
+.color13 {
+  background-color: #ffc0cbff;
+}
+.color14 {
+  background-color: #87cefaff;
+}
+.color15 {
+  background-color: #c0c0c0ff;
+}
+.color16 {
+  background-color: #eee8aaff;
+}
+.color17 {
+  background-color: #ffa500ff;
+}
+.color18 {
+  background-color: #ffd700ff;
+}
+.color19 {
+  background-color: #9acd32ff;
+}
+.color20 {
+  background-color: #1e90ffff;
+}
+.color21 {
+  background-color: #deb887ff;
+}
+.color22{
+  background-color: #dda0ddff;
+}
+.color23 {
+  background-color: #ff6347ff;
+}
+.color24 {
+  background-color: #b8860bff;
+}
+.color25 {
+  background-color: #808080ff;
+}
+.color26 {
+  background-color: #2e8b57ff;
+}
+.color27 {
+  background-color: #4682b4ff;
+}
+.color28 {
+  background-color: #808000ff;
+}
+.color29 {
+  background-color: #5f9ea0ff;
+}
+.color30 {
+  background-color: #ba55d3ff;
+}
+.color31 {
+  background-color: #d3d3d3ff;
+}
+.color32 {
+  background-color: #d2691eff;
+}
+.color33 {
+  background-color: #ffe4c4ff;
+}
+.color34 {
+  background-color: #ff7f50ff;
+}
+.color35 {
+  background-color: #98fb98ff;
+}
+.color36 {
+  background-color: #ff00ffff;
+}
+.color37 {
+  background-color: #778899ff;
+}
+.color38 {
+  background-color: #ff4500ff;
+}
+.color39 {
+  background-color: #20b2aaff;
+}
+.color40 {
+  background-color: #9370dbff;
+}
+.color41 {
+  background-color: #ff8c00ff;
+}
+.color42 {
+  background-color: #ff0000ff;
+}

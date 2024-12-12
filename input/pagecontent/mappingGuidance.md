@@ -8,9 +8,9 @@ td, th {
 
 #### How to Read Mapping Tables and Transform Steps? 
 
-The header row of the mapping table provides links to the respective profiles in FHIR (e.g. **[US Core AllergyIntolerance](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-allergyintolerance.html)**) and templates in C-CDA (e.g. **[Allergy Intolerance observation](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-AllergyIntoleranceObservation.html)**)and specifies the "base" that each of the rows will build on.  All FHIR elements use a simplified dot notation and the CDA elements use simplified slash notation. Always use the underlying standards, provided via header row links, to ensure conformance when building FHIR resources or C-CDA clinical documents. 
+The header row of the mapping table provides links to the respective profiles in FHIR (e.g. **[US Core AllergyIntolerance](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-allergyintolerance.html)**) and templates in C-CDA (e.g. **[Allergy Intolerance observation](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-AllergyIntoleranceObservation.html)**)and specifies the "base" that each of the rows will build on.  All FHIR elements use a simplified dot notation and the CDA elements use simplified slash notation. Always use the underlying standards, provided via header row links, to ensure conformance when building FHIR resources or C-CDA clinical documents. 
 
-Rather than repeating cardinality, conformance, and other criteria from FHIR Resources or a C-CDA templates defined outside this implementaiton guide, external references are shown in tables as bold hyperlinks (e.g. **[US Core Patient](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-patient.html)** or **[C-CDA US Realm Header](https://hl7.org/cda/us/ccda/2024Jan/StructureDefinition-USRealmHeader.html)**). Unbolded links refer to guidance contained within this guide (e.g. [CDA ↔ FHIR Name, Address, and Telecom mapping](mappingGuidance.html#name-address-telecom)). When criteria for selecting XML elements from C-CDA is required, you will see **[XPath](https://en.wikipedia.org/wiki/XPath)** notation with the respective criteria within brackets (e.g. /entryRelationship[@typeCode="MSFT"]).
+Rather than repeating cardinality, conformance, and other criteria from FHIR Resources or a C-CDA templates defined outside this implementaiton guide, external references are shown in tables as bold hyperlinks (e.g. **[US Core Patient](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-patient.html)** or **[C-CDA US Realm Header](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-USRealmHeader.html)**). Unbolded links refer to guidance contained within this guide (e.g. [CDA ↔ FHIR Name, Address, and Telecom mapping](mappingGuidance.html#name-address-telecom)). When criteria for selecting XML elements from C-CDA is required, you will see **[XPath](https://en.wikipedia.org/wiki/XPath)** notation with the respective criteria within brackets (e.g. /entryRelationship[@typeCode="MSFT"]).
 
 
 The "Transform Steps" column of the table will provide guidance for mapping content between C-CDA and FHIR, those steps will be listed in the following order: 
@@ -26,6 +26,10 @@ The "Transform Steps" column of the table will provide guidance for mapping cont
 Examples for C-CDA to FHIR transforms are provided based on a consensus of various vendors performing mappings. All vendors received the sample input (e.g. C-CDA Document) and generated output (e.g. FHIR Resource) which were then iterated through group discussion to a consensus. For FHIR to C-CDA, a single vendor provided examples which are included. 
 
 The highlighted output images were created using an [open source tool for C-CDA ↔ FHIR Mapping](https://github.com/jddamore/cda-fhir-compare) developed as part of this project.  
+
+#### Missing Maps
+
+If you have data in an input artifact that is defined in the source specification and for which no map is specified here, that means that this team did not find a target for which we could build consensus. In most cases, this means that the data is unusual enough that the target specification did not address it (e.g., treatments for allergy reactions, which would probably be reported in the Problems or Procedures section rather than the Allergies section). In these cases, the team felt that converging on one design from the many solution possible patterns was not an optimal investment of resources. If readers identify elements for which this seems insufficient, they should comment.
 
 ### CDA id ↔ FHIR identifier
 
@@ -81,12 +85,12 @@ CDA timestamp values are based on a pattern of YYYYMMDDHHmmss+zzzz and [FHIR dat
 
 To convert between the standards, systems should deploy programming logic that converts formats and preserves the level of precision. For example, "20230531" from CDA would become "2023-05-31" in FHIR (not 2023-05-31T00:00:00+00:00). Additional examples below: 
 
-|CDA Date Time|FHIR Date Time|
+|CDA Date Time|FHIR Date Time|Notes|
 |:-----|:-----|:-------------|
 |2023|2023|
 |202305|2023-05|
 |20230531|2023-05-31|
-|202305312205-0500|2023-05-31T22:05-05:00|
+|202305312205-0500|2023-05-31T22:05-05:00|Timezone offset should be preserved
 
 Note that in C-CDA, timezone offset is a SHOULD, while in FHIR, time zone offset is required when more specific than the day. There may be instances where a CDA date-time value omits a time zone offset and other data from the document may be necessary to populate FHIR dateTime requirements.
 
@@ -107,6 +111,8 @@ Some CDA temporal fields can be either a single point-in-time or an interval ran
 ### CDA Coding ↔ FHIR CodeableConcept
 
 The structure for coding in CDA and FHIR are fundamentally different. CDA  employs a mechanism (xsi:type [CD](https://hl7.org/cda/stds/core/2.0.0-sd-snapshot1/StructureDefinition-CD.html) or [CE](https://hl7.org/cda/stds/core/2.0.0-sd-snapshot1/StructureDefinition-CD.html)) where the code is included in the element and then originalText and translations elements may be provided as child elements. In FHIR, [CodeableConcept](http://hl7.org/fhir/datatypes.html#codeableconcept) places all codes in a coding list with a separate element for the text representation. 
+
+Both C-CDA and FHIR stipulate that `display`/`@displayName` represents one of the display strings defined for that code by the code system. If a source contains other text, the transforming party may choose to send the system value in display, put that original value in `text`/`<originalText>` and put the system value in display, or simply send the source value.
 
 #### CDA Coding → FHIR CodeableConcept
 
@@ -138,6 +144,15 @@ In addition to the context of the previous section, CDA often requires elements 
 |text|originalText|
 
 Note that C-CDA sometimes requires a code from a specific system in the root of a CD and permits others in the translation
+
+#### FHIR Code → CDA Coding
+
+Both CDA and FHIR employ a hierarchy of simpler types and more complex types that re-use the simpler ones. In some cases, a simpler type on one side will map to a more complex one on the other. Where the complexity supports metadata, these maps are essentially the same as the complex-to-complex maps (Coding & CodeableConcept, above). In a few cases, a complex type supports representing a simple source where a simple target would have failed.
+
+|FHIR Property|CDA Target|Notes|
+|:-----|:-----|:-------------|
+|code|originalText|If the CDA element is mapped to a value set that has no translation for the FHIR value, the FHIR value can be placed in orginalText. This does not satisfy CDA terminology bindings, should they exist.|
+
 
 #### Mapping OID ↔ URI
 
@@ -230,6 +245,223 @@ When mapping from FHIR to CDA, if the system is `http://unitsofmeasure.org`, the
 
 UCUM also provides the ability to include arbitrary units within a set of curly brackets (e.g. `{INR}`). No specific guidance on the use of curly brackets in unit translation is provided in this publication, however additional guidance on UCUM arbitrary units is [available here](https://ucum.org/ucum#section-Arbitrary-Units).
 
+#### Ranges of Physical Quantities
+CDA conveys ranges of values using the `IVL_PQ` data type. The `<low>` and `<high>` elements are normal Physical Quantity (PQ) elements with an additional `@inclusive` attribute. When this is present and set to `"false"`, the value of the boundary is not included in the range. The default value of this attribute is `"true"`, so regardless of whether it is absent or set to `"true"`, the value of the boundary IS included in the range.
+
+In FHIR, ranges with both a low and high are represented in the [Range](https://hl7.org/fhir/R4/datatypes.html#Range) data type, while ranges with only a low or a high are represented in the [Quantity](https://hl7.org/fhir/R4/datatypes.html#Quantity) data type using a [comparator](https://hl7.org/fhir/R4/valueset-quantity-comparator.html).
+
+Since a physical quantity is something that can be measured, a missing `<low>` value or a low value of `0` can be represented as `<` or `<=` the high value (based on the `@inclusive` property on `<high>`). If the `<high>` value is missing, it generally means the value was too large to measure, and the FHIR representation is `>` or `>=`.
+
+Note that in FHIR, `Observation.referenceRange` only contains `.low` and `.high` values, so this guidance is targeted to the actual values of observations.
+
+<table>
+<tr><th>CDA IVL_PQ Value - High-only</th><th>FHIR Quantity</th></tr>
+<tr><td>
+<div markdown="1">
+{% highlight xml %}
+<value xsi:type="IVL_PQ">
+  <high value="200" unit="mg/dL"/>
+</value>
+{% endhighlight %}
+or
+{% highlight xml %}
+<value xsi:type="IVL_PQ">
+  <low value="0" unit="mg/dL"/>
+  <high value="200" unit="mg/dL"/>
+</value>
+{% endhighlight %}
+or
+
+{% highlight xml %}
+<value xsi:type="IVL_PQ">
+  <low nullFlavor="NINF"/>
+  <high value="200" unit="mg/dL"/>
+</value>
+{% endhighlight %}
+
+</div>
+
+</td><td>
+<div markdown="1">
+{% highlight json %}
+"quantity": {
+  "value": 200,
+  "comparator": "<=",
+  "unit": "mg/dL",
+  "code": "mg/dL",
+  "system": "http://unitsofmeasure.org"
+}
+{% endhighlight %}
+
+(`<=` because inclusive is true by default)
+</div>
+
+</td></tr>
+<tr><td>
+<div markdown="1">
+When `@inclusive="false"`:
+
+{% highlight xml %}
+<value xsi:type="IVL_PQ">
+  <high value="200" unit="mg/dL" inclusive="false"/>
+</value>
+{% endhighlight %}
+</div>
+
+</td><td>
+<div markdown="1">
+{% highlight json %}
+"quantity": {
+  "value": 200,
+  "comparator": "<",
+  "unit": "mg/dL",
+  "code": "mg/dL",
+  "system": "http://unitsofmeasure.org"
+}
+{% endhighlight %}
+</div>
+
+</td></tr>
+<tr><td colspan="2">&nbsp;</td></tr>
+<tr><th>CDA IVL_PQ Value - Low-only</th><th>FHIR Quantity</th></tr>
+<tr><td>
+<div markdown="1">
+{% highlight xml %}
+<value xsi:type="IVL_PQ">
+  <low value="500" unit="mg/dL" inclusive="true"/>
+  <high nullFlavor="PINF">
+</value>
+{% endhighlight %}
+
+or
+
+{% highlight xml %}
+<value xsi:type="IVL_PQ">
+  <low value="500" unit="mg/dL"/>
+</value>
+{% endhighlight %}
+
+</div>
+
+</td><td>
+<div markdown="1">
+{% highlight json %}
+"quantity": {
+  "value": 500,
+  "comparator": ">=",
+  "unit": "mg/dL",
+  "code": "mg/dL",
+  "system": "http://unitsofmeasure.org"
+}
+{% endhighlight %}
+
+
+(`>=` because inclusive is true by default)
+</div>
+
+</td></tr>
+<tr><td>
+<div markdown="1">
+When `@inclusive="false"`:
+{% highlight xml %}
+<value xsi:type="IVL_PQ">
+  <low value="500" unit="mg/dL" inclusive="false"/>
+  <high nullFlavor="PINF"/>
+</value>
+{% endhighlight %}
+
+or
+
+{% highlight xml %}
+<value xsi:type="IVL_PQ">
+  <low value="500" unit="mg/dL" inclusive="false"/>
+</value>
+{% endhighlight %}
+</div>
+
+</td><td>
+<div markdown="1">
+{% highlight json %}
+"quantity": {
+  "value": 500,
+  "comparator": ">",
+  "unit": "mg/dL",
+  "code": "mg/dL",
+  "system": "http://unitsofmeasure.org"
+}
+{% endhighlight %}
+</div>
+
+</td></tr>
+<tr><td colspan="2">&nbsp;</td></tr>
+<tr><th>CDA IVL_PQ Value - Low and High with Numeric Values</th><th>FHIR Range</th></tr>
+<tr><td>
+<div markdown="1">
+{% highlight xml %}
+<value xsi:type="IVL_PQ">
+  <low value="200" unit="mg/dL"/>
+  <high value="1000" unit="mg/dL"/>
+</value>
+{% endhighlight %}
+</div>
+
+</td><td>
+<div markdown="1">
+{% highlight json %}
+"range": {
+  "low": {
+    "value": 200,
+    "unit": "mg/dL",
+    "code": "mg/dL",
+    "system": "http://unitsofmeasure.org"
+  },
+  "high": {
+    "value": 1000,
+    "unit": "mg/dL",
+    "code": "mg/dL",
+    "system": "http://unitsofmeasure.org"
+  }
+}
+{% endhighlight %}
+</div>
+
+</td></tr>
+<tr><td>
+<div markdown="1">
+Units can be different, as long as they are equivalent:
+
+{% highlight xml %}
+<value xsi:type="IVL_PQ">
+  <low value="200" unit="mg/dL"/>
+  <high value="1" unit="g/dL"/>
+</value>
+{% endhighlight %}
+</div>
+
+</td><td>
+<div markdown="1">
+{% highlight json %}
+"range": {
+  "low": {
+    "value": 200,
+    "unit": "mg/dL",
+    "code": "mg/dL",
+    "system": "http://unitsofmeasure.org"
+  },
+  "high": {
+    "value": 1,
+    "unit": "g/dL",
+    "code": "g/dL",
+    "system": "http://unitsofmeasure.org"
+  }
+}
+{% endhighlight %}
+</div>
+
+</td></tr>
+</table>
+
+
 ### CDA ↔ FHIR Provenance
 
 CDA provides a repeated set of elements within each activity which may be used in populating data to/from FHIR [Provenance.Agent](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-provenance.html)  
@@ -308,7 +540,7 @@ The mappings of name, address and telecom information are useful in many part of
 |CDA telecom|FHIR telecom|Transform Steps
 |:-----|:-----|:---------
 |@use|.use|[CDA telecom use → FHIR contact point use](./ConceptMap-CF-TelecomUse.html)<br/>Note that CDA's `@use='PG'` is equivalent to FHIR's `.system='pager'`|
-|@value|.system<br/>&<br/>.value|[CDA telecom value → FHIR contact point system](./ConceptMap-CF-TelecomType.html)<br/>Only include information in FHIR value which comes after the CDA system prefix|
+|@value|.system<br/>&<br/>.value|[CDA telecom value → FHIR contact point system](./ConceptMap-CF-TelecomType.html)<br/>Only include information in FHIR value which comes after the CDA system prefix; other formatting may be preserved. E.g. CDA `tel:+1(555)867-5309` becomes `+1(555)867-5309` in FHIR.<br/>|
 
 #### FHIR name → CDA name #####
 
@@ -339,18 +571,27 @@ The mappings of name, address and telecom information are useful in many part of
 
 |FHIR telecom|CDA telecom|Comments
 |:-----|:-----|:---------
-|.system<br/>&<br/>.value |@value|[FHIR contact point system → CDA telecom value](./ConceptMap-FC-TelecomType.html)<br/>Insert FHIR value after the CDA system prefix mapped from FHIR system<br/>Note that FHIR's `.system='pager'` is equivalent to CDA's `@use='PG'` |
 |.use|@use|[FHIR contact point use → CDA use](./ConceptMap-FC-TelecomUse.html)|
+|.system<br/>&<br/>.value |@value|[FHIR contact point system → CDA telecom value](./ConceptMap-FC-TelecomType.html)<br/>Insert FHIR value after the CDA system prefix mapped from FHIR system<br/>Note that FHIR's `.system='pager'` is equivalent to CDA's `@use='PG'` |
 
 ### Missing Data in C-CDA vs. FHIR ####
 
 CDA and FHIR address missing data and null usage in different ways:  
-- The use of nullFlavor in CDA is explained in depth in Volume 1 of the [C-CDA Implementation Guide](https://hl7.org/cda/us/ccda/2024Jan/generalguidance.html#unknown-and-no-known-information) and in the [C-CDA Companion Guide](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=447). 
+- The use of nullFlavor in CDA is explained in depth in Volume 1 of the [C-CDA Implementation Guide](https://hl7.org/cda/us/ccda/generalguidance.html#unknown-and-no-known-information) and in the [C-CDA Companion Guide](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=447). 
 - The use of the data absent reason extension is explained in depth in the [US Core Implementation Guide](https://hl7.org/fhir/us/core/STU4/general-guidance.html#missing-data) and also in the [base extension](http://hl7.org/fhir/extension-data-absent-reason.html).
 
 In this publication, we include a mapping between missing data concepts. **Importantly, it should be noted that several mappings include non-equivalence (wider or narrower or unsupported) and that each standard may allow data elements to be omitted while the other requires**. Feedback to improve implementer guidance is welcome on the handling of missing data between C-CDA and FHIR:
 - [NullFlavor (CDA) → Data Absent Reason code (FHIR)](./ConceptMap-CF-NullFlavorDataAbsentReason.html) 
 - [Data Absent Reason code (FHIR) → NullFlavor (CDA)](./ConceptMap-FC-DataAbsentReasonNullFlavor.html)
+
+### Comment → Annotation
+The CDA [Comment Activity](https://build.fhir.org/ig/HL7/CDA-ccda/StructureDefinition-CommentActivity.html) template is used for text notes accompanied by their author. The FHIR [Annotation](https://hl7.org/fhir/R4/datatypes.html#annotation) datatype can capture text and an author as well. 
+
+|C-CDA<br/>[Comment Activity](https://build.fhir.org/ig/HL7/CDA-ccda/StructureDefinition-CommentActivity.html)|FHIR <br/> [Annotation](https://hl7.org/fhir/R4/datatypes.html#annotation)|Notes|
+|:-------|:------|:---------|
+|text|text|See [C-CDA Entry/Text → FHIR Resource.text](mappingGuidance.html#c-cda-entrytext--fhir-resourcetext)|
+|author/time|time||
+|author/assignedAuthor|authorReference|Ideally this is a PractitionerRole, which can then support both Pracitioner (name) and Organization, if necessary.|
 
 ### Narrative Text
 
