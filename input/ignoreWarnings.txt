@@ -4,7 +4,10 @@
 A definition for CodeSystem 'urn:oid:2.16.840.1.113883.3.247.1.1' could not be found, so the code cannot be validated
 
 # ICD-9 missing code from tx.fhir.org
-Unknown Code '486' in the system%
+tx.fhir.org does not support '486' for unknown reasons
+
+# Unknown Code '486' in the CodeSystem 'http://hl7.org/fhir/sid/icd-9-cm' version '2015' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
+tx.fhir.org does not support '486' for unknown reasons
 
 # Missing performers in examples prior to 2023 ballot. This content is not being balloted and will probably be removed in the next cycle.
 Best Practice Recommendation: In general, all observations should have a performer
