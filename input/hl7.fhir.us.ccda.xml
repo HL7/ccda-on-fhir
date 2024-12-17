@@ -918,7 +918,7 @@
           </page>
           <page>
             <nameUrl value="FC-notes.html"/>
-            <title value="FHIR to C-CDA Medications"/>
+            <title value="FHIR to C-CDA Notes"/>
             <generation value="markdown"/>
           </page>
           <page>
