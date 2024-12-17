@@ -183,7 +183,6 @@
 <page key="FC-encounters" name="FHIR to C-CDA Encounters"/>
 <page key="FC-immunizations" name="FHIR to C-CDA Immunizations"/>
 <page key="FC-medications" name="FHIR to C-CDA Medications"/>
-<page key="FC-medications" name="FHIR to C-CDA Medications"/>
 <page key="FC-patient" name="FHIR to C-CDA Patient"/>
 <page key="FC-problems" name="FHIR to C-CDA Problems"/>
 <page key="FC-procedures" name="FHIR to C-CDA Procedures"/>
