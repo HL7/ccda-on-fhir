@@ -7,11 +7,11 @@
   <url value="http://hl7.org/fhir/us/ccda/ConceptMap/FC-AdministrativeGender"/>
   <version value="4.0.1"/>
   <name value="FHIRtoCCDAAdminsitrativeGender"/>
-  <title value="FHIR to C-CDA Adminmistrative Gender"/>
+  <title value="FHIR to C-CDA Administrative Gender"/>
   <status value="active"/>
   <experimental value="false"/>
   <publisher value="HL7 International"/>
-  <description value="FHIR to C-CDA Adminmistrative Gender. Based on http://hl7.org/fhir/cm-administrative-gender-v3.html"/>
+  <description value="FHIR to C-CDA Administrative Gender. Based on http://hl7.org/fhir/cm-administrative-gender-v3.html"/>
   <contact>
     <name value="HL7 International"/>
     <telecom>
