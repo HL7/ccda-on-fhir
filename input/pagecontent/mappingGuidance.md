@@ -593,6 +593,23 @@ The CDA [Comment Activity](https://build.fhir.org/ig/HL7/CDA-ccda/StructureDefin
 |author/time|time||
 |author/assignedAuthor|authorReference|Ideally this is a PractitionerRole, which can then support both Pracitioner (name) and Organization, if necessary.|
 
+### CDA ED → FHIR Attachment
+The ED type can be used for results; it can be represented as Attachment.
+
+|[ED type](https://hl7.org/cda/stds/core/2.0.1-sd/StructureDefinition-ED.html)|[Annotation](https://hl7.org/fhir/R4/datatypes.html#attachment)|Notes|
+|:-------|:------|:---------|
+|nullFlavor||not supported|
+|compression||not supported|
+|integrityCheck||not supported|
+|integrityCheckAlgorithm||not supported|
+|language|.language||
+|mediaType|.contentType||
+|representation||not supported|
+|xmlText||not supported|
+|reference||not supported|
+|thumbnail||not supported|
+
+
 ### Narrative Text
 
 The CDA section narrative text is an authoritative portion of the document and must be preserved when transforming to FHIR. When creating a FHIR Composition resource (or converting a FHIR Composition back into CDA), this is a straightforward mapping between CDA's `section/text` and the FHIR Composition `section.text` field. There is a slight difference in allowed elements - CDA defines a limited set of elements in its NarrativeBlock schema, and FHIR limits narratives to a subset of XHTML - but these two fields can generally be mapped 1:1. These differences are described below.
