@@ -596,8 +596,9 @@ The CDA [Comment Activity](https://build.fhir.org/ig/HL7/CDA-ccda/StructureDefin
 ### CDA ED → FHIR Attachment
 The ED type can be used for results; it can be represented as Attachment.
 
-|[ED type](https://hl7.org/cda/stds/core/2.0.1-sd/StructureDefinition-ED.html)|[Annotation](https://hl7.org/fhir/R4/datatypes.html#attachment)|Notes|
+|[ED type](https://hl7.org/cda/stds/core/2.0.1-sd/StructureDefinition-ED.html)|[Attachment](https://hl7.org/fhir/R4/datatypes.html#attachment)|Notes|
 |:-------|:------|:---------|
+|data|.data||
 |nullFlavor||not supported|
 |compression||not supported|
 |integrityCheck||not supported|
