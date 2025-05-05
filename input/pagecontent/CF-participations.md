@@ -8,36 +8,36 @@ The FHIR equivalent of these fields are most commonly Practitioner, Organization
 
 The following table shows the common and unique fields of each CDA participation type. Since all (except Participant) are just specific flavors of participation, they can all be mapped to FHIR fairly similarly. For Participant mapping, the `@typeCode` and `@classCode` attributes are key in determining the type of FHIR resource to create.
 
-|[Author](https://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Author.html)<br/>(Non-Device)|[Data Enterer](https://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-DataEnterer.html)|[Informant](https://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Informant.html)|[Performer](https://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Performer2.html) / <br/>[Performer (Service Event)](https://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Performer1.html)|[Participant](https://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Participant1.html)<br/>(ClinicalDocument)|[Participant](https://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Participant2.html)<br/>(Everywhere Else)|
+|[Author](https://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Author.html) (Non-Device)<br/>[Authenticator](https://hl7.org/cda/stds/core/StructureDefinition-Authenticator.html)<br/>[Data Enterer](https://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-DataEnterer.html)<br/>[EncounterParticipant](https://hl7.org/cda/stds/core/StructureDefinition-EncounterParticipant.html)<br/>[Informant](https://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Informant.html) (Non-related)<br/>[LegalAuthenticator](https://hl7.org/cda/stds/core/StructureDefinition-LegalAuthenticator.html)<br/>[Performer](https://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Performer2.html)<br/>[Performer (Service Event)](https://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Performer1.html)|[Guardian](https://hl7.org/cda/stds/core/StructureDefinition-Guardian.html)|[Informant](https://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Informant.html) (Related)|[InformationRecipient](https://hl7.org/cda/stds/core/StructureDefinition-InformationRecipient.html)|[Participant](https://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Participant1.html)<br/>(Header)|[Participant](https://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Participant2.html)<br/>(Entries)|
 |:----|:----|:----|:----|:----|:----|
-|`@typeCode=AUT`|`@typeCode=ENT`|`@typeCode=INF`|`@typeCode=PRF`|@typeCode|@typeCode
-|functionCode|||sdtc:functionCode<br/>(no sdtc: in ServiceEvent)|functionCode|sdtc:functionCode
-|time|time||time|time|time
-||||modeCode (not in serviceEvent)||awarenessCode
-|**assignedAuthor**|**assignedEntity**|**assignedEntity**<br/>or<br/>**relatedEntity**|**assignedEntity**|**associatedEntity**|**participantRole**
-|`/@classCode=ASSIGNED`|`/@classCode=ASSIGNED`|/@classCode<br/>(assignedEntity = `ASSIGNED`)|/`@classCode=ASSIGNED`|/@classCode|/@classCode
-|/id|/id|/id (not in related)|/id|/id|/id
-|/code|/code|/code|/code|/code|/code
-|/addr|/addr|/addr|/addr|/addr|/addr
-|/telecom|/telecom|/telecom|/telecom|/telecom|/telecom
-|||/effectiveTime (only in related)
-||/sdtc:patient/id|/sdtc:patient/id (not in related)|/sdtc:patient/id
-|/**assignedPerson**|/**assignedPerson**|/**assignedPerson**<br/>or<br/>/**relatedPerson**|/**assignedPerson**|/**associatedPerson**|/**playingEntity**
-|//`@classCode=PSN`|//`@classCode=PSN`|//`@classCode=PSN`|//`@classCode=PSN`|//`@classCode=PSN`|//@classCode
-|//name|//name|//name|//name|//name|//name
-|//sdtc:desc|//sdtc:desc|//sdtc:desc|//sdtc:desc|//sdtc:desc|//desc
-|//asPatientRelationship/code|//asPatientRelationship/code|//asPatientRelationship/code|//asPatientRelationship/code|//asPatientRelationship/code
+|`@typeCode=[fixed]`<br/>(single code in all but EncounterParticipant)||`@typeCode=INF`|@typeCode|@typeCode|@typeCode
+|functionCode (in some)||||functionCode|sdtc:functionCode
+|time (not in INF)||||time|time
+|modeCode (PRF only)<br>signatureCode (Authenticators)|||||awarenessCode
+|**[assignedAuthor](https://hl7.org/cda/stds/core/StructureDefinition-AssignedAuthor.html)/[Entity](https://hl7.org/cda/stds/core/StructureDefinition-AssignedEntity.html)**||**[relatedEntity](https://hl7.org/cda/stds/core/StructureDefinition-RelatedEntity.html)**|**[intendedRecipient](https://hl7.org/cda/stds/core/StructureDefinition-IntendedRecipient.html)**|**[associatedEntity](https://hl7.org/cda/stds/core/StructureDefinition-AssociatedEntity.html)**|**[participantRole](https://hl7.org/cda/stds/core/StructureDefinition-ParticipantRole.html)**
+|`/@classCode=ASSIGNED`|`@classCode=GUARD`|/@classCode|/@classCode|/@classCode|/@classCode
+|/id|id||/id|/id|/id
+|/code|code|/code||/code|/code
+|/addr|addr|/addr|/addr|/addr|/addr
+|/telecom|telecom|/telecom|/telecom|/telecom|/telecom
+|||/effectiveTime|
+|/sdtc:patient/id|(only person or org, <br/>not both)|||
+|/**assignedPerson**<br/>([Person](https://hl7.org/cda/stds/core/StructureDefinition-Person.html))|**guardianPerson**<br/>([Person](https://hl7.org/cda/stds/core/StructureDefinition-Person.html))|/**relatedPerson**<br/>([Person](https://hl7.org/cda/stds/core/StructureDefinition-Person.html))|/**informationRecipient**<br/>([Person](https://hl7.org/cda/stds/core/StructureDefinition-Person.html))|/**associatedPerson**<br/>([Person](https://hl7.org/cda/stds/core/StructureDefinition-Person.html))|/**[playingEntity](https://hl7.org/cda/stds/core/StructureDefinition-PlayingEntity.html)**
+|//`@classCode=PSN`|/`@classCode=PSN`|//`@classCode=PSN`|//`@classCode=PSN`|//`@classCode=PSN`|//@classCode
+|//name|/name|//name|//name|//name|//name
+|//sdtc:desc|/sdtc:desc|//sdtc:desc|//sdtc:desc|//sdtc:desc|//desc
+|//asPatientRelationship/code|/asPatientRelationship/code|//asPatientRelationship/code|//asPatientRelationship/code|//asPatientRelationship/code
 ||||||//code
 ||||||//quantity
 ||||||//sdtc:birthTime
-|/**representedOrganization**|/**representedOrganization**|/**representedOrganization**<br/>(not in related)|/**representedOrganization**|/**scopingOrganization**|/**scopingEntity**
-|/`@classCode=ORG`|/`@classCode=ORG`|/`@classCode=ORG`|/`@classCode=ORG`|/`@classCode=ORG`|//@classCode
-|//id|//id|//id|//id|//id|//id
-|//name|//name|//name|//name|//name|//desc
-|//telecom|//telecom|//telecom|//telecom|//telecom
-|//addr|//addr|//addr|//addr|//addr
-|//standardIndustryClassCode|//standardIndustryClassCode|//standardIndustryClassCode|//standardIndustryClassCode|//standardIndustryClassCode|//code
-|//asOrganizationPartOf (recursive)|//asOrganizationPartOf (recursive)|//asOrganizationPartOf (recursive)|//asOrganizationPartOf (recursive)|//asOrganizationPartOf
+|/**representedOrganization**<br/>([Organization](https://hl7.org/cda/stds/core/StructureDefinition-Organization.html))|**guardianOrganization**<br/>([Organization](https://hl7.org/cda/stds/core/StructureDefinition-Organization.html))||/**receivedOrganization**<br/>([Organization](https://hl7.org/cda/stds/core/StructureDefinition-Organization.html))|/**scopingOrganization**<br/>([Organization](https://hl7.org/cda/stds/core/StructureDefinition-Organization.html))|/**scopingEntity**<br/>([Entity](https://hl7.org/cda/stds/core/StructureDefinition-Entity.html))
+|//`@classCode=ORG`|/`@classCode=ORG`||//`@classCode=ORG`|//`@classCode=ORG`|//@classCode
+|//id|/id||//id|//id|//id
+//name|/name||//name|//name|//desc
+//telecom|/telecom||//telecom|//telecom
+//addr|/addr||//addr|//addr
+|//standardIndustryClassCode|/standardIndustryClassCode||//standardIndustryClassCode|//standardIndustryClassCode|//code
+|//asOrganizationPartOf (recursive)|/asOrganizationPartOf||//asOrganizationPartOf|//asOrganizationPartOf
 
 ### Mapping to different FHIR resource types
 
