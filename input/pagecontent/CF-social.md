@@ -43,8 +43,8 @@ In US Core, Pregnancy Observation was first defined in version 6.
 
 |C-CDA<br/>[Pregnancy Observation](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-PregnancyObservation.html)|FHIR<br/>[Pregnancy Status](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-pregnancystatus.html)|Transform Steps|
 |:----|:----|:----|
-|.moodCode||The C-CDA moodCode is `EVN` which is why this maps to FHIR's Pregnancy Status rather than Pregnancy Intent.
-||.code|`82810-3 (Pregnancy Status)` - C-CDA uses `ASSERTION`, but FHIR clarifies the code to be used.
+|.moodCode||The C-CDA moodCode is `EVN` which is why this maps to FHIR's Pregnancy Status rather than Pregnancy Intent.<br/>Note: in C-CDA 4.0, the moodCode of both templates is `EVN`, but the `code` of Pregnancy Observation is updated from `ASSERTION` to `82810-3` which matches the FHIR template.
+||.code|`82810-3 (Pregnancy Status)` - Note: prior to 4.0, C-CDA uses `ASSERTION`; after 4.0, C-CDA uses `82810-3`.
 |/effectiveTime/@value<br/>or<br/>/effectiveTime/low/@value<br/>or<br/>/effectiveTime/high/@value<br/>or<br/>/author/time|.effectiveDateTime|FHIR only allows a single timestamp. Send the first element from the first column with a populated timestamp.<br/>[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)
 |/value|.valueCodeableConcept|Value sets are the same<br/>[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 |/value/@nullFlavor=UNK|.valueCodeableConcept|Unknown becomes an actual value with system = `http://terminology.hl7.org/CodeSystem/v3-NullFlavor`. Any other nullFlavors should use a data-absent-reason extension.
@@ -55,7 +55,7 @@ In US Core, Pregnancy Intent was first defined in version 6.
 
 |C-CDA<br/>[Pregnancy Intention](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-PregnancyIntentionInNextYear.html)|FHIR<br/>[Pregnancy Intent](https://hl7.org/fhir/us/core/STU6/StructureDefinition-us-core-observation-pregnancyintent.html)|Transform Steps|
 |:----|:----|:----|
-|.moodCode||The C-CDA moodCode is `INT` which is why this maps to FHIR's Pregnancy Status rather than Pregnancy Intent.
+|.moodCode||The C-CDA moodCode is `INT` which is why this maps to FHIR's Pregnancy Intent rather than Pregnancy Status.<br/>Note: in C-CDA 4.0, the moodCode is `EVN`, but the `code` remains `86645-9`.
 |/code|.code|In both standards, the code is `86645-9`
 |/effectiveTime/low/@value|.effectiveDateTime|FHIR only allows a single timestamp which corresponds to C-CDA's "low" 
 |/value|.valueCodeableConcept|Value sets are the same<br/>[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
