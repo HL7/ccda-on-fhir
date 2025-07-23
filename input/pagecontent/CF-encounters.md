@@ -12,7 +12,7 @@ Encounter Activities in the Encounters Section (or elsewhere in the document, su
 |/id|.identifier|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
 |/code |.class|Only the V3 ActCode system, which may be present in the root element or any `<translation>`.<br/>Other code systems may map to V3 ActCode (for example CPT codes 99211-99215 map to `AMB`, 99221-99223 to `IMP`, 99281-99285 to `EMER`, etc), but if this mapping is not possible, use the [Data Absent Reason](http://hl7.org/fhir/StructureDefinition/data-absent-reason) extension.|
 |/code|.type|The remaining codes besides V3 ActCode<br/>[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)
-|/statusCode <sup>(b)</sup>|.status|[CDA → FHIR encounter status](ConceptMap-CF-EncounterStatus.html)<br/>**Note:** statusCode is optional in C-CDA. If missing, fallback to effectiveTime mapping.
+|/statusCode <sup>(b)</sup>|.status|[CDA → FHIR encounter status](ConceptMap-CF-EncounterStatus.html)<br/>**Note:**  status is also mapped from effectiveTime below. The Concept Map should only be used for statusCode values other than `completed` and `active`, or in the event that the effectiveTime is missing or ambiguous.
 |/effectiveTime|.status|If effectiveTime is a single timestamp or contains a high, status = `"finished"`.<br/>If low is present and high is missing, the status may be `"in-progress"` but implementers may choose to evaluate historical values as `"finished"` or `"unknown"` if appropriate.
 |/effectiveTime/@value<br/>/effectiveTime/low/@value|.period.start|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)
 |/effectiveTime/high/@value|.period.end|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)
