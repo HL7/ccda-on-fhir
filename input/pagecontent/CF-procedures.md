@@ -3,13 +3,17 @@
 This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, please refer to [Procedures FHIR → CDA](./FC-procedures.html). For guidance on how to read the table below, see [Reading the C-CDA ↔ FHIR Mapping Pages](./mappingGuidance.html)
 <br/><br/>
 #### Note on template selection
-C-CDA 2.1 describes three templates for Procedures: Procedure Activity Act, Procedure Activity Observation, and Procedure Activity Procedure. Procedure Activity Procedure is the most complete, containing everything the other two contain except Observation.value, and several properties not contained by the others. The [C-CDA 2.1 Companion Guide](https://www.hl7.org/ccdasearch/pdfs/Companion_Guide.pdf) points out that "most vendors successfully and exclusively use the . . . Procedure Activity Procedure," and it then specifies this template for "all interventional, non-interventional, surgical, diagnostic, or therapeutic procedures or treatments pertinent to the patient historically at the time the document is generated." For this reason, we have only provided a mapping from Procedure Activity Procedure. Procedure Activity Act can use the same mapping to a FHIR Procedure resource because it contains a subset of the fields available in Procedure Activity Procedure. Procedure Activity Observation can be mapped to either a Procedure resource or to an Observation resource using the [results](CF-results.html) mapping (or a combination of the two).
+C-CDA 2.1 describes three templates for Procedures: Procedure Activity Act, Procedure Activity Observation, and Procedure Activity Procedure. Procedure Activity Procedure is the most complete, containing everything the other two contain except Observation.value, and several properties not contained by the others. The [C-CDA 2.1 Companion Guide](https://www.hl7.org/ccdasearch/pdfs/Companion_Guide.pdf) points out that "most vendors successfully and exclusively use the . . . Procedure Activity Procedure," and it then specifies this template for "all interventional, non-interventional, surgical, diagnostic, or therapeutic procedures or treatments pertinent to the patient historically at the time the document is generated." Additionally, the Act and Observation variants have been removed as of C-CDA 3.0. For this reason, we have only provided a mapping from Procedure Activity Procedure. 
+
+Procedure Activity Act can use the same mapping to a FHIR Procedure resource because it contains a subset of the fields available in Procedure Activity Procedure. 
+
+Procedure Activity Observation is a CDA Observation class, and it can best be represented the FHIR Observation resource (see, e.g., maps specified in [Results](CF-results.html)). If necessary, a Procedure can also be instantiated, related by Observation.partOf, but this resource will contain only redundant information. Procedure cannot represent the observation value, so with or without Procedure, Observation will always be necessary, unless the evaluation procedure was not completed, in which case modeling it as a procedure will make it diverge from the pattern used when it has been completed.
 
 <br />
 <br />
 ### C-CDA to FHIR
 
-|C-CDA¹<br/>[Procedure Activity procedure](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-ProcedureActivityProcedure.html)|FHIR<br/>[Procedure](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-procedure.html)|Transform Steps|
+|C-CDA¹<br/>[Procedure Activity Procedure](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-ProcedureActivityProcedure.html)|FHIR<br/>[Procedure](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-procedure.html)|Transform Steps|
 |:----|:----|:----|
 |/@negationInd="true"|set status="not-done"||
 |/id|.identifier|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
