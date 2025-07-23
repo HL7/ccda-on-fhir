@@ -705,7 +705,7 @@
       <exampleBoolean value="true"/>
     </resource>
     <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format">
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format">
         <valueCode value="application/xml"/>
       </extension>
       <reference>
@@ -715,7 +715,7 @@
       <description value="ccda-to-fhir-allergy"/>
     </resource>
     <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format">
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format">
         <valueCode value="application/xml"/>
       </extension>
       <reference>
@@ -725,7 +725,7 @@
       <description value="ccda-to-fhir-immunization"/>
     </resource>
     <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format">
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format">
         <valueCode value="application/xml"/>
       </extension>
       <reference>
@@ -735,7 +735,7 @@
       <description value="ccda-to-fhir-medication"/>
     </resource>
     <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format">
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format">
         <valueCode value="application/xml"/>
       </extension>
       <reference>
@@ -745,7 +745,7 @@
       <description value="ccda-to-fhir-patient"/>
     </resource>
     <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format">
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format">
         <valueCode value="application/xml"/>
       </extension>
       <reference>
@@ -755,7 +755,7 @@
       <description value="ccda-to-fhir-problem"/>
     </resource>
     <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format">
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format">
         <valueCode value="application/xml"/>
       </extension>
       <reference>
@@ -765,7 +765,7 @@
       <description value="ccda-to-fhir-procedure"/>
     </resource>
     <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format">
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format">
         <valueCode value="application/xml"/>
       </extension>
       <reference>
@@ -775,7 +775,7 @@
       <description value="fhir-to-ccda-allergy"/>
     </resource>
     <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format">
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format">
         <valueCode value="application/xml"/>
       </extension>
       <reference>
@@ -785,7 +785,7 @@
       <description value="fhir-to-ccda-immunization"/>
     </resource>
     <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format">
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format">
         <valueCode value="application/xml"/>
       </extension>
       <reference>
@@ -795,7 +795,7 @@
       <description value="fhir-to-ccda-medication"/>
     </resource>
     <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format">
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format">
         <valueCode value="application/xml"/>
       </extension>
       <reference>
