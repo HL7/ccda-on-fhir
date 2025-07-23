@@ -51,88 +51,88 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
     &lt;/<span class="field">addr</span>&gt;
     &lt;<span class="field">telecom</span> <span class="attrib">value=</span><span class="value">"tel:<mark class="color15">+1(565)867-5309</mark>"</span> <span class="attrib">use=</span><span class="value">"MC"</span>/&gt;
     &lt;<span class="field">patient</span>&gt;
-      &lt;<span class="field">name</span> <span class="attrib">use=</span><span class="value">"L"</span>&gt;
-        &lt;<span class="field">given</span>&gt;<mark class="color16">Myra</mark>&lt;/<span class="field">given</span>&gt;
-        &lt;<span class="field">family</span>&gt;<mark class="color17">Jones</mark>&lt;/<span class="field">family</span>&gt;
+      &lt;<span class="field">name</span> <span class="attrib">use=</span><mark class="color16"><span class="value">"L"</span></mark>&gt;
+        &lt;<span class="field">given</span>&gt;<mark class="color17">Myra</mark>&lt;/<span class="field">given</span>&gt;
+        &lt;<span class="field">family</span>&gt;<mark class="color18">Jones</mark>&lt;/<span class="field">family</span>&gt;
       &lt;/<span class="field">name</span>&gt;
       &lt;<span class="field">administrativeGenderCode</span> 
-        <span class="attrib">code=</span><mark class="color18"><span class="value">"F"</span></mark> 
+        <span class="attrib">code=</span><mark class="color19"><span class="value">"F"</span></mark> 
         <span class="attrib">codeSystem=</span><span class="value">"2.16.840.1.113883.5.1"</span> /&gt;
-      &lt;<span class="field">birthTime</span> <span class="attrib">value=</span><span class="value">"<mark class="color19">19470501</mark>"</span> /&gt;
-      &lt;<span class="field">sdtc:deceasedInd</span> <span class="attrib">value=</span><span class="value">"<mark class="color20">false</mark>"</span> /&gt;
+      &lt;<span class="field">birthTime</span> <span class="attrib">value=</span><span class="value">"<mark class="color20">19470501</mark>"</span> /&gt;
+      &lt;<span class="field">sdtc:deceasedInd</span> <span class="attrib">value=</span><span class="value">"<mark class="color21">false</mark>"</span> /&gt;
       &lt;<span class="field">maritalStatusCode</span> 
-        <span class="attrib">code=</span><mark class="color21"><span class="value">"M"</span></mark> 
-        <span class="attrib">displayName=</span><span class="value">"<mark class="color22">Married</mark>"</span> 
+        <span class="attrib">code=</span><mark class="color22"><span class="value">"M"</span></mark> 
+        <span class="attrib">displayName=</span><span class="value">"<mark class="color23">Married</mark>"</span> 
         <span class="attrib">codeSystem=</span><span class="value">"2.16.840.1.113883.5.2"</span> 
         <span class="attrib">codeSystemName=</span><span class="value">"MaritalStatus"</span>/&gt;
       &lt;<span class="field">religiousAffiliationCode</span> 
-        <span class="attrib">code=</span><span class="value">"<mark class="color23">1013</mark>"</span> 
-        <span class="attrib">displayName=</span><span class="value">"<mark class="color24">Christian (non-Catholic, non-specific)</mark>"</span> 
+        <span class="attrib">code=</span><span class="value">"<mark class="color24">1013</mark>"</span> 
+        <span class="attrib">displayName=</span><span class="value">"<mark class="color25">Christian (non-Catholic, non-specific)</mark>"</span> 
         <span class="attrib">codeSystem=</span><span class="value">"2.16.840.1.113883.5.1076"</span> 
         <span class="attrib">codeSystemName=</span><span class="value">"HL7 Religious Affiliation"</span>/&gt;
       &lt;<span class="field">raceCode</span> 
-        <span class="attrib">code=</span><span class="value">"<mark class="color25">2106-3</mark>"</span> 
-        <span class="attrib">codeSystem=</span><span class="value">"<mark class="color26">2.16.840.1.113883.6.238</mark>"</span> 
-        <span class="attrib">displayName=</span><span class="value">"<mark class="color27">White</mark>"</span> /&gt;
+        <span class="attrib">code=</span><span class="value">"<mark class="color26">2106-3</mark>"</span> 
+        <span class="attrib">codeSystem=</span><span class="value">"<mark class="color27">2.16.840.1.113883.6.238</mark>"</span> 
+        <span class="attrib">displayName=</span><span class="value">"<mark class="color28">White</mark>"</span> /&gt;
       &lt;<span class="field">sdtc:raceCode</span> 
-        <span class="attrib">code=</span><span class="value">"<mark class="color28">2108-9</mark>"</span> 
-        <span class="attrib">displayName=</span><span class="value">"<mark class="color29">European</mark>"</span> 
-        <span class="attrib">codeSystem=</span><span class="value">"<mark class="color26">2.16.840.1.113883.6.238</mark>"</span> /&gt;
+        <span class="attrib">code=</span><span class="value">"<mark class="color29">2108-9</mark>"</span> 
+        <span class="attrib">displayName=</span><span class="value">"<mark class="color30">European</mark>"</span> 
+        <span class="attrib">codeSystem=</span><span class="value">"<mark class="color27">2.16.840.1.113883.6.238</mark>"</span> /&gt;
       &lt;<span class="field">ethnicGroupCode</span> 
-        <span class="attrib">code=</span><span class="value">"<mark class="color30">2135-2</mark>"</span> 
-        <span class="attrib">codeSystem=</span><span class="value">"<mark class="color26">2.16.840.1.113883.6.238</mark>"</span> 
-        <span class="attrib">displayName=</span><span class="value">"<mark class="color31">Hispanic or Latino</mark>"</span> /&gt;
+        <span class="attrib">code=</span><span class="value">"<mark class="color31">2135-2</mark>"</span> 
+        <span class="attrib">codeSystem=</span><span class="value">"<mark class="color27">2.16.840.1.113883.6.238</mark>"</span> 
+        <span class="attrib">displayName=</span><span class="value">"<mark class="color32">Hispanic or Latino</mark>"</span> /&gt;
       &lt;<span class="field">sdtc:ethnicGroupCode</span> 
-        <span class="attrib">code=</span><span class="value">"<mark class="color32"><mark class="color32">20146-9</mark></mark>"</span> 
-        <span class="attrib">displayName=</span><span class="value">"<mark class="color33">Spanish Basque</mark>"</span> 
-        <span class="attrib">codeSystem=</span><span class="value">"<mark class="color26">2.16.840.1.113883.6.238</mark>"</span> /&gt;
+        <span class="attrib">code=</span><span class="value">"<mark class="color33"><mark class="color33">20146-9</mark></mark>"</span> 
+        <span class="attrib">displayName=</span><span class="value">"<mark class="color34">Spanish Basque</mark>"</span> 
+        <span class="attrib">codeSystem=</span><span class="value">"<mark class="color27">2.16.840.1.113883.6.238</mark>"</span> /&gt;
       &lt;<span class="field">guardian</span>&gt;
         &lt;<span class="field">code</span> 
-          <span class="attrib">code=</span><mark class="color34"><span class="value">"FTH"</span></mark> 
-          <span class="attrib">displayName=</span><span class="value">"<mark class="color35">father</mark>"</span> 
+          <span class="attrib">code=</span><mark class="color35"><span class="value">"FTH"</span></mark> 
+          <span class="attrib">displayName=</span><span class="value">"<mark class="color36">father</mark>"</span> 
           <span class="attrib">codeSystem=</span><span class="value">"2.16.840.1.113883.5.111"</span> 
           <span class="attrib">codeSystemName=</span><span class="value">"RoleCode"</span> /&gt;
         &lt;<span class="field">addr</span> <span class="attrib">use=</span><mark class="color11"><span class="value">"H"</span></mark>&gt;
-          &lt;<span class="field">streetAddressLine</span>&gt;<mark class="color36">123 main street</mark>&lt;/<span class="field">streetAddressLine</span>&gt;
+          &lt;<span class="field">streetAddressLine</span>&gt;<mark class="color37">123 main street</mark>&lt;/<span class="field">streetAddressLine</span>&gt;
           &lt;<span class="field">city</span>&gt;<mark class="color13">Beaverton</mark>&lt;/<span class="field">city</span>&gt;
           &lt;<span class="field">state</span>&gt;OR&lt;/<span class="field">state</span>&gt;
-          &lt;<span class="field">postalCode</span>&gt;<mark class="color37">97867</mark>&lt;/<span class="field">postalCode</span>&gt;
+          &lt;<span class="field">postalCode</span>&gt;<mark class="color38">97867</mark>&lt;/<span class="field">postalCode</span>&gt;
         &lt;/<span class="field">addr</span>&gt;
-        &lt;<span class="field">telecom</span> <span class="attrib">value=</span><span class="value">"tel:<mark class="color38">+1(555)555-2008</mark>"</span> <span class="attrib">use=</span><span class="value">"MC"</span> /&gt;
+        &lt;<span class="field">telecom</span> <span class="attrib">value=</span><span class="value">"tel:<mark class="color39">+1(555)555-2008</mark>"</span> <span class="attrib">use=</span><span class="value">"MC"</span> /&gt;
         &lt;<span class="field">guardianPerson</span>&gt;
           &lt;<span class="field">name</span>&gt;
-            &lt;<span class="field">given</span>&gt;<mark class="color39">Boris</mark>&lt;/<span class="field">given</span>&gt;
-            &lt;<span class="field">given</span> <span class="attrib">qualifier=</span><span class="value">"CL"</span><mark class="color40">&gt;Bo&lt;</mark>/given&gt;
-            &lt;<span class="field">family</span>&gt;<mark class="color41">Betterhalf</mark>&lt;/<span class="field">family</span>&gt;
+            &lt;<span class="field">given</span>&gt;<mark class="color40">Boris</mark>&lt;/<span class="field">given</span>&gt;
+            &lt;<span class="field">given</span> <span class="attrib">qualifier=</span><span class="value">"CL"</span><mark class="color41">&gt;Bo&lt;</mark>/given&gt;
+            &lt;<span class="field">family</span>&gt;<mark class="color42">Betterhalf</mark>&lt;/<span class="field">family</span>&gt;
           &lt;/<span class="field">name</span>&gt;
         &lt;/<span class="field">guardianPerson</span>&gt;
       &lt;/<span class="field">guardian</span>&gt;
       &lt;<span class="field">birthplace</span>&gt;
         &lt;<span class="field">place</span>&gt;
           &lt;<span class="field">addr</span>&gt;
-            &lt;<span class="field">streetAddressLine</span>&gt;<mark class="color42">4444 Birth Street</mark>&lt;/<span class="field">streetAddressLine</span>&gt;
+            &lt;<span class="field">streetAddressLine</span>&gt;<mark class="color10">4444 Birth Street</mark>&lt;/<span class="field">streetAddressLine</span>&gt;
             &lt;<span class="field">city</span>&gt;<mark class="color13">Beaverton</mark>&lt;/<span class="field">city</span>&gt;
             &lt;<span class="field">state</span>&gt;OR&lt;/<span class="field">state</span>&gt;
-            &lt;<span class="field">postalCode</span>&gt;<mark class="color37">97867</mark>&lt;/<span class="field">postalCode</span>&gt;
+            &lt;<span class="field">postalCode</span>&gt;<mark class="color38">97867</mark>&lt;/<span class="field">postalCode</span>&gt;
           &lt;/<span class="field">addr</span>&gt;
         &lt;/<span class="field">place</span>&gt;
       &lt;/<span class="field">birthplace</span>&gt;
       &lt;<span class="field">languageCommunication</span>&gt;
-        &lt;<span class="field">languageCode</span> <span class="attrib">code=</span><mark class="color10"><span class="value">"en"</span></mark> /&gt;
+        &lt;<span class="field">languageCode</span> <span class="attrib">code=</span><mark class="color11"><span class="value">"en"</span></mark> /&gt;
         &lt;<span class="field">modeCode</span> 
-          <span class="attrib">code=</span><mark class="color11"><span class="value">"ESP"</span></mark> 
-          <span class="attrib">displayName=</span><span class="value">"<mark class="color12">Expressed spoken</mark>"</span> 
+          <span class="attrib">code=</span><mark class="color12"><span class="value">"ESP"</span></mark> 
+          <span class="attrib">displayName=</span><span class="value">"<mark class="color13">Expressed spoken</mark>"</span> 
           <span class="attrib">codeSystem=</span><span class="value">"2.16.840.1.113883.5.60"</span> 
           <span class="attrib">codeSystemName=</span><span class="value">"LanguageAbilityMode"</span>/&gt;
         &lt;<span class="field">proficiencyLevelCode</span> 
-          <span class="attrib">code=</span><mark class="color13"><span class="value">"G"</span></mark> 
-          <span class="attrib">displayName=</span><span class="value">"<mark class="color14">Good</mark>"</span> 
+          <span class="attrib">code=</span><mark class="color14"><span class="value">"G"</span></mark> 
+          <span class="attrib">displayName=</span><span class="value">"<mark class="color15">Good</mark>"</span> 
           <span class="attrib">codeSystem=</span><span class="value">"2.16.840.1.113883.5.61"</span> 
           <span class="attrib">codeSystemName=</span><span class="value">"LanguageAbilityProficiency"</span>/&gt;
-        &lt;<span class="field">preferenceInd</span> <span class="attrib">value=</span><span class="value">"<mark class="color15">true</mark>"</span> /&gt;
+        &lt;<span class="field">preferenceInd</span> <span class="attrib">value=</span><span class="value">"<mark class="color16">true</mark>"</span> /&gt;
       &lt;/<span class="field">languageCommunication</span>&gt;
     &lt;/<span class="field">patient</span>&gt;
-    <span class="comment">&lt;!-- Creates reference: <mark class="color16">Organization/PCPartnersTest</mark> --&gt;</span>
+    <span class="comment">&lt;!-- Creates reference: <mark class="color17">Organization/PCPartnersTest</mark> --&gt;</span>
     &lt;<span class="field">providerOrganization</span>&gt;
       &lt;<span class="field">id</span> <span class="attrib">extension=</span><span class="value">"3"</span> <span class="attrib">root=</span><span class="value">"1.3.6.1.4.1.22812.3.2009316.3"</span> /&gt;
       &lt;<span class="field">name</span>&gt;Primary Care's Partners Test&lt;/<span class="field">name</span>&gt;
@@ -154,8 +154,8 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
     "<span class="field">valueCodeableConcept</span>": {
       "<span class="field">coding</span>": [{
         "<span class="field">system</span>": "<span class="value">http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation</span>",
-        "<span class="field">code</span>": "<span class="value"><mark class="color23">1013</mark></span>",
-        "<span class="field">display</span>": "<span class="value"><mark class="color24">Christian (non-Catholic, non-specific)</mark></span>"
+        "<span class="field">code</span>": "<span class="value"><mark class="color24">1013</mark></span>",
+        "<span class="field">display</span>": "<span class="value"><mark class="color25">Christian (non-Catholic, non-specific)</mark></span>"
       }]
     }
   }, {
@@ -163,19 +163,19 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
     "<span class="field">extension</span>": [{
       "<span class="field">url</span>": "<span class="value">ombCategory</span>",
       "<span class="field">valueCoding</span>": {
-        "<span class="field">system</span>": "<span class="value">urn:oid:<mark class="color26">2.16.840.1.113883.6.238</mark></span>",
-        "<span class="field">code</span>": "<span class="value"><mark class="color30">2135-2</mark></span>",
-        "<span class="field">display</span>": "<span class="value"><mark class="color31">Hispanic or Latino</mark></span>"
+        "<span class="field">system</span>": "<span class="value">urn:oid:<mark class="color27">2.16.840.1.113883.6.238</mark></span>",
+        "<span class="field">code</span>": "<span class="value"><mark class="color31">2135-2</mark></span>",
+        "<span class="field">display</span>": "<span class="value"><mark class="color32">Hispanic or Latino</mark></span>"
       }
     }, {
       "<span class="field">url</span>": "<span class="value">text</span>",
-      "<span class="field">valueString</span>": "<span class="value"><mark class="color31">Hispanic or Latino</mark>, <mark class="color33">Spanish Basque</mark></span>"
+      "<span class="field">valueString</span>": "<span class="value"><mark class="color32">Hispanic or Latino</mark>, <mark class="color34">Spanish Basque</mark></span>"
     }, {
       "<span class="field">url</span>": "<span class="value">detailed</span>",
       "<span class="field">valueCoding</span>": {
-        "<span class="field">system</span>": "<span class="value">urn:oid:<mark class="color26">2.16.840.1.113883.6.238</mark></span>",
-        "<span class="field">code</span>": "<span class="value"><mark class="color32"><mark class="color32">20146-9</mark></mark></span>",
-        "<span class="field">display</span>": "<span class="value"><mark class="color33">Spanish Basque</mark></span>"
+        "<span class="field">system</span>": "<span class="value">urn:oid:<mark class="color27">2.16.840.1.113883.6.238</mark></span>",
+        "<span class="field">code</span>": "<span class="value"><mark class="color33"><mark class="color33">20146-9</mark></mark></span>",
+        "<span class="field">display</span>": "<span class="value"><mark class="color34">Spanish Basque</mark></span>"
       }
     }]
   }, {
@@ -183,45 +183,45 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
     "<span class="field">extension</span>": [{
       "<span class="field">url</span>": "<span class="value">ombCategory</span>",
       "<span class="field">valueCoding</span>": {
-        "<span class="field">system</span>": "<span class="value">urn:oid:<mark class="color26">2.16.840.1.113883.6.238</mark></span>",
-        "<span class="field">code</span>": "<span class="value"><mark class="color25">2106-3</mark></span>",
-        "<span class="field">display</span>": "<span class="value"><mark class="color27">White</mark></span>"
+        "<span class="field">system</span>": "<span class="value">urn:oid:<mark class="color27">2.16.840.1.113883.6.238</mark></span>",
+        "<span class="field">code</span>": "<span class="value"><mark class="color26">2106-3</mark></span>",
+        "<span class="field">display</span>": "<span class="value"><mark class="color28">White</mark></span>"
       }
     }, {
       "<span class="field">url</span>": "<span class="value">text</span>",
-      "<span class="field">valueString</span>": "<span class="value"><mark class="color27">White</mark>, <mark class="color29">European</mark></span>"
+      "<span class="field">valueString</span>": "<span class="value"><mark class="color28">White</mark>, <mark class="color30">European</mark></span>"
     }, {
       "<span class="field">url</span>": "<span class="value">detailed</span>",
       "<span class="field">valueCoding</span>": {
-        "<span class="field">system</span>": "<span class="value">urn:oid:<mark class="color26">2.16.840.1.113883.6.238</mark></span>",
-        "<span class="field">code</span>": "<span class="value"><mark class="color28">2108-9</mark></span>",
-        "<span class="field">display</span>": "<span class="value"><mark class="color29">European</mark></span>"
+        "<span class="field">system</span>": "<span class="value">urn:oid:<mark class="color27">2.16.840.1.113883.6.238</mark></span>",
+        "<span class="field">code</span>": "<span class="value"><mark class="color29">2108-9</mark></span>",
+        "<span class="field">display</span>": "<span class="value"><mark class="color30">European</mark></span>"
       }
     }]
   },
   {
     "<span class="field">url</span>": "<span class="value">http://hl7.org/fhir/StructureDefinition/patient-birthPlace</span>",
     "<span class="field">valueAddress</span>": {
-      "<span class="field">line</span>": ["<mark class="color42">4444 Birth Street</mark>"],
+      "<span class="field">line</span>": ["<mark class="color10">4444 Birth Street</mark>"],
       "<span class="field">city</span>": "<span class="value"><mark class="color13">Beaverton</mark></span>",
       "<span class="field">state</span>": "<span class="value">OR</span>",
-      "<span class="field">postalCode</span>": "<span class="value"><mark class="color37">97867</mark></span>"
+      "<span class="field">postalCode</span>": "<span class="value"><mark class="color38">97867</mark></span>"
     }
   }],
   "<span class="field">name</span>": [{
-    "<span class="field">text</span>": "<span class="value"><mark class="color16">Myra</mark> <mark class="color17">Jones</mark></span>",
-    "<span class="field">use</span>": "<span class="value">usual</span>",
-    "<span class="field">family</span>": "<span class="value"><mark class="color17">Jones</mark></span>",
-    "<span class="field">given</span>": ["<mark class="color16">Myra</mark>"]
+    "<span class="field">text</span>": "<span class="value"><mark class="color17">Myra</mark> <mark class="color18">Jones</mark></span>",
+    "<span class="field">use</span>": "<span class="value"><mark class="color16">usual</mark></span>",
+    "<span class="field">family</span>": "<span class="value"><mark class="color18">Jones</mark></span>",
+    "<span class="field">given</span>": ["<mark class="color17">Myra</mark>"]
   }],
   "<span class="field">telecom</span>": [{
       "<span class="field">system</span>": "<span class="value">phone</span>",
     "<span class="field">value</span>": "<span class="value"><mark class="color15">+1(565)867-5309</mark></span>",
     "<span class="field">use</span>": "<span class="value">mobile</span>"
   }],
-  "<span class="field">gender</span>": "<span class="value"><mark class="color18">female</mark></span>",
-  "<span class="field">birthDate</span>": "<span class="value"><mark class="color19">1947-05-01</mark></span>",
-  "<span class="field">deceasedBoolean</span>": <mark class="color20">false</mark>,
+  "<span class="field">gender</span>": "<span class="value"><mark class="color19">female</mark></span>",
+  "<span class="field">birthDate</span>": "<span class="value"><mark class="color20">1947-05-01</mark></span>",
+  "<span class="field">deceasedBoolean</span>": <mark class="color21">false</mark>,
   "<span class="field">address</span>": [{
     "<span class="field">use</span>": "<span class="value"><mark class="color11">home</mark></span>",
     "<span class="field">text</span>": "<span class="value"><mark class="color12">1357 Amber Drive</mark> <mark class="color13">Beaverton</mark> OR <mark class="color14">97006</mark></span>",
@@ -233,8 +233,8 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
   "<span class="field">maritalStatus</span>": {
     "<span class="field">coding</span>": [{
       "<span class="field">system</span>": "<span class="value">http://terminology.hl7.org/CodeSystem/v3-MaritalStatus</span>",
-      "<span class="field">code</span>": <mark class="color21">"M"</mark>,
-      "<span class="field">display</span>": "<span class="value"><mark class="color22">Married</mark></span>"
+      "<span class="field">code</span>": <mark class="color22">"M"</mark>,
+      "<span class="field">display</span>": "<span class="value"><mark class="color23">Married</mark></span>"
     }]
   },
   "<span class="field">contact</span>": [{
@@ -247,60 +247,60 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
     }, {
       "<span class="field">coding</span>": [{
         "<span class="field">system</span>": "<span class="value">http://terminology.hl7.org/CodeSystem/v3-RoleCode</span>",
-        "<span class="field">code</span>": <mark class="color34">"FTH"</mark>,
-        "<span class="field">display</span>": "<span class="value"><mark class="color35">father</mark></span>"
+        "<span class="field">code</span>": <mark class="color35">"FTH"</mark>,
+        "<span class="field">display</span>": "<span class="value"><mark class="color36">father</mark></span>"
       }]
     }],
     "<span class="field">name</span>": {
-      "<span class="field">family</span>": "<span class="value"><mark class="color41">Betterhalf</mark></span>",
+      "<span class="field">family</span>": "<span class="value"><mark class="color42">Betterhalf</mark></span>",
       "<span class="field">given</span>": [
-        "<mark class="color39">Boris</mark>",
-        <mark class="color40">"Bo"</mark>
+        "<mark class="color40">Boris</mark>",
+        <mark class="color41">"Bo"</mark>
       ]
     },
     "<span class="field">telecom</span>": [{
       "<span class="field">system</span>": "<span class="value">phone</span>",
-      "<span class="field">value</span>": "<span class="value"><mark class="color38">+1(555)555-2008</mark></span>",
+      "<span class="field">value</span>": "<span class="value"><mark class="color39">+1(555)555-2008</mark></span>",
       "<span class="field">use</span>": "<span class="value">mobile</span>"
     }],
     "<span class="field">address</span>": {
       "<span class="field">use</span>": "<span class="value"><mark class="color11">home</mark></span>",
-      "<span class="field">line</span>": ["<mark class="color36">123 main street</mark>"],
+      "<span class="field">line</span>": ["<mark class="color37">123 main street</mark>"],
       "<span class="field">city</span>": "<span class="value"><mark class="color13">Beaverton</mark></span>",
       "<span class="field">state</span>": "<span class="value">OR</span>",
-      "<span class="field">postalCode</span>": "<span class="value"><mark class="color37">97867</mark></span>"
+      "<span class="field">postalCode</span>": "<span class="value"><mark class="color38">97867</mark></span>"
     }
   }],
   "<span class="field">communication</span>": [{
     "<span class="field">language</span>": {
       "<span class="field">coding</span>": [{
         "<span class="field">system</span>": "<span class="value">urn:ietf:bcp:47</span>",
-        "<span class="field">code</span>": <mark class="color10">"en"</mark>,
+        "<span class="field">code</span>": <mark class="color11">"en"</mark>,
         "<span class="field">display</span>": "<span class="value">English</span>"
       }]
     },
-    "<span class="field">preferred</span>": <mark class="color15">true</mark>,
+    "<span class="field">preferred</span>": <mark class="color16">true</mark>,
     "<span class="field">extension</span>": [{
       "<span class="field">url</span>": "<span class="value">http://hl7.org/fhir/StructureDefinition/patient-proficiency</span>",
       "<span class="field">extension</span>": [{
         "<span class="field">url</span>": "<span class="value">level</span>",
         "<span class="field">valueCoding</span>": {
           "<span class="field">system</span>": "<span class="value">http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityProficiency</span>",
-          "<span class="field">code</span>": <mark class="color13">"G"</mark>,
-          "<span class="field">display</span>": "<span class="value"><mark class="color14">Good</mark></span>"
+          "<span class="field">code</span>": <mark class="color14">"G"</mark>,
+          "<span class="field">display</span>": "<span class="value"><mark class="color15">Good</mark></span>"
         }
       }, {
         "<span class="field">url</span>": "<span class="value">type</span>",
         "<span class="field">valueCoding</span>": {
           "<span class="field">system</span>": "<span class="value">http://terminology.hl7.org/CodeSystem/v3-LanguageAbilityMode</span>",
-          "<span class="field">code</span>": <mark class="color11">"ESP"</mark>,
-          "<span class="field">display</span>": "<span class="value"><mark class="color12">Expressed spoken</mark></span>"
+          "<span class="field">code</span>": <mark class="color12">"ESP"</mark>,
+          "<span class="field">display</span>": "<span class="value"><mark class="color13">Expressed spoken</mark></span>"
         }
       }]
     }]
   }],
   "<span class="field">managingOrganization</span>": {
-    "<span class="field">reference</span>": "<span class="value"><mark class="color16">Organization/PCPartnersTest</mark></span>"
+    "<span class="field">reference</span>": "<span class="value"><mark class="color17">Organization/PCPartnersTest</mark></span>"
   }
 }</div>
 </td></tr></table>
