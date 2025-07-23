@@ -23,6 +23,7 @@ C-CDA vitals are typically grouped into a Vital Signs Organizer to group one or 
 |/id|.identifier|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
 ||.category|Set to `vital-signs` from [Vital Signs value set](https://hl7.org/fhir/us/core/STU4/ValueSet-us-core-vital-signs.html)
 |/code |.code²|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
+|/statusCode|.status|`final` (C-CDA is fixed to `completed`)
 |/effectiveTime|.effectiveDateTime<br/>or<br/>.effectivePeriod|Prefer effectiveDateTime<br/>[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)
 |value|.valueQuantity²|[CDA ↔ FHIR Quantity](mappingGuidance.html#cda--fhir-quantity)
 |/interpretationCode|.interpretation²|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
