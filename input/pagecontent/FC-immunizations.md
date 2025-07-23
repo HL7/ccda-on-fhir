@@ -23,7 +23,7 @@ This page provides a mapping from FHIR to CDA. For the CDA to FHIR mapping, plea
 |.identifier|/id|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
 |.status|/statusCode|**Constraint** when .status.value="not-done"<br/>Set negationInd to true in CDA observation|
 |.status|/statusCode|**Constraint** all other values of .status<br/>[FHIR status → CDA statusCode](ConceptMap-FC-ImmunizationStatus.html)|
-|.statusReason|**[Immunization Refusal Reason](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-ImmunizationRefusalReason.html)**<br/>/entryRelationship[@typeCode="RSON"]/observation/code|[FHIR statusReason → CDA refusal](ConceptMap-FC-ImmunizationRefusal.html)|
+|.statusReason|**[Immunization Not Given Reason](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-ImmunizationNotGivenReason.html) (FKA "Refusal Reason")**<br/>/entryRelationship[@typeCode="RSON"]/observation/code|[FHIR statusReason → CDA refusal](ConceptMap-FC-ImmunizationRefusal.html)|
 |.vaccineCode|/consumable/manufacturedProduct/manufacturedMaterial/code|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 |.primarySource||This element has no target in CDA
 |.occurrenceDateTime|/effectiveTime/@value|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|

@@ -15,7 +15,6 @@ Shown below are terminology mappings for use in moving from CDA → FHIR. Entry 
 - [Criticality value (CDA) → criticality (FHIR)](./ConceptMap-CF-Criticality.html)
 - [Encounter status (CDA) → Encounter status (FHIR)](./ConceptMap-CF-EncounterStatus.html)
 - [Immunization Activity statusCode (CDA) → Immunization status (FHIR)](./ConceptMap-CF-ImmunizationStatus.html)
-- [Immunization Refusal Reason (CDA) → Immunization statusReason (FHIR)](./ConceptMap-CF-ImmunizationRefusal.html)
 - [Medication Activity statusCode (CDA) → MedicationRequest status (FHIR)](./ConceptMap-CF-MedicationStatus.html)
 - [Medication Mood (CDA) → Medication Intent (FHIR)](./ConceptMap-CF-MedActivityMood.html)
 - [No Known Allergies (CDA) → negated code (FHIR)](./ConceptMap-CF-NoKnownAllergies.html)
