@@ -31,7 +31,7 @@ Observation values are generic - they can be of any CDA type in CDA, and *almost
 |/value[xsi:type=PQ]|.valueQuantity|[CDA ↔ FHIR Quantity](mappingGuidance.html#cda--fhir-quantity)
 |/value[xsi:type=IVL_PQ]|.valueQuantity<br/>or<br/>.valueRange|[Ranges of Physical Quantities](mappingGuidance.html#ranges-of-physical-quantities)
 |/value[xsi:type=CD]<br/>(or CE, CV, CO, CS)|.valueCodeableConcept|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
-|/value[xsi:type=ED]|.extension[http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.valueAttachment]|[CDA ED ↔ FHIR Attachment](mappingGuidance.html#cda-ED--fhir-attachment)|
+|/value[xsi:type=ED]|`.extension:[http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.value].valueAttachment`<br/>See [Extensions for converting between versions](http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.valueAttachment)|[CDA ED ↔ FHIR Attachment](mappingGuidance.html#cda-ed--fhir-attachment)<br/>Note: if the ED references narrative content that is simple text, this could also be represented using `.valueString`. Additionally, if the Result Organizer contains only a single observation with an ED value, implementers may consider sending only the DiagnosticReport with `.presentedForm` representing the attachment, but such mapping is beyond the scope of this guide.|
 |/value[xsi:type=INT]|.valueInteger|
 |/value[xsi:type=REAL]|.valueQuantity|Leave unit fields empty
 |/value[xsi:type=ST]|.valueString|

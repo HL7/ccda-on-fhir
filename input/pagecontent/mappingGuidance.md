@@ -598,18 +598,54 @@ The ED type can be used for results; it can be represented as Attachment.
 
 |[ED type](https://hl7.org/cda/stds/core/2.0.1-sd/StructureDefinition-ED.html)|[Attachment](https://hl7.org/fhir/R4/datatypes.html#attachment)|Notes|
 |:-------|:------|:---------|
-|data|.data||
 |nullFlavor||not supported|
 |compression||not supported|
 |integrityCheck||not supported|
 |integrityCheckAlgorithm||not supported|
 |language|.language||
 |mediaType|.contentType||
-|representation||not supported|
-|xmlText||not supported|
-|reference||not supported|
+|representation||not supported, but if not `B64`, then the contents must be encoded before creating the attachment data. |
+|xmlText|.data|The mixed content of the ED-type element, typically `<value>`|
+|reference/@value|.data|If there is no mixed content, the data from the narrative referenced via value is the content.<br/>In this case, it is generally not B64-encoded, so must be encoded before creating the attachment data.|
 |thumbnail||not supported|
 
+Example mappings - assume CDA narrative contains an element with `ID="id1"` that contains "tagged text".
+
+<table>
+<tr><th>CDA ED</th><th>FHIR Attachment</th></tr>
+<tr><td>
+<div markdown="1">
+{% highlight xml %}
+<text mediaType="text/plain" representation="B64" language="en">
+  dGFnZ2VkIHRleHQ=
+</text>
+{% endhighlight %}
+or
+{% highlight xml %}
+<text mediaType="text/plain" representation="TXT" language="en">
+  tagged text
+</text>
+{% endhighlight %}
+or
+{% highlight xml %}
+<text mediaType="text/plain" language="en">
+  <reference value="id1" />
+</text>
+{% endhighlight %}
+</div>
+
+</td><td>
+<div markdown="1">
+{% highlight json %}
+"attachment" {
+  "contentType": "text/plain",
+  "data": "dGFnZ2VkIHRleHQ=",
+  "language": "en"
+}
+{% endhighlight %}
+</div>
+</td></tr>
+</table>
 
 ### Narrative Text
 
