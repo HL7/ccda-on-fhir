@@ -58,7 +58,7 @@ C-CDA also defines a [Specimen Collection Procedure](https://hl7.org/cda/us/ccda
 |/specimenRole/specimenPlayingEntity/quantity|.collection.quantity|[CDA ↔ FHIR Quantity](mappingGuidance.html#cda--fhir-quantity)|
 |/specimenRole/specimenPlayingEntity/desc|.note|
 |**C-CDA [Specimen Collection Procedure](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-SpecimenCollectionProcedure.html)**<br/>/targetSiteCode|.collection.bodySite|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
-|**C-CDA [Specimen Condtion Observation](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-SpecimenConditionObservation.html)**<br/>/value|.condition|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
+|**C-CDA [Specimen Condition Observation](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-SpecimenConditionObservation.html)**<br/>/value|.condition|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 
 ### Example
 
