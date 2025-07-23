@@ -16,7 +16,7 @@ Clinical Notes may appear in their own section or as an entry in any open sectio
 |/effectiveTime|.context.period|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)
 |/author|.author|[C-CDA → FHIR Participation](CF-participations.html)
 |/author/time|.date|[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)
-|/entryRelationship[@typeCode=COMP]/encounter<br/>or<br/>Parent `<encounter>` element<br/>or<br/>`<encompassingEncounter>`|.context.encounter|C-CDA requires an encounter for notes, but allows for context conduction. If the Note Activity is in an entryRelationship chain that includes an Encounter Activity, use that. Otherwise, if the document contains an `<encompassingEncounter>`, that is the encounter for the note.<br/>[CDA → FHIR Encounters](CF-encounters.html)
+|/entryRelationship[@typeCode=COMP]/encounter<br/>or<br/>Parent `<encounter>` element<br/>or<br/>`<encompassingEncounter>`|.context.encounter|If the Note Activity includes an entryRelationship to an Encounter Activity (or an `<encounter>` element with an `<id>` referencing an Encounter Activity elsewhere in the document), that is the context.encounter. If no entryRelationship is present, but the Note Activity is itself an entryRelationship underneath an Encounter Activity, use that. If neither are true, but the document contains an `<encompassingEncounter>`, that is the encounter for entire document (see [context conduction](https://hl7.org/cda/stds/core/overview.html#technical-aspects-of-cda-context)) and should be used.<br/>[CDA → FHIR Encounters](CF-encounters.html)
 |/reference/externalDocument/id|.relatesTo.target.identifier|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
 
 ### Example
