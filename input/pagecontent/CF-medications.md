@@ -9,6 +9,10 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
 	</blockquote>
 </div>
 
+**Medication Status**
+
+C-CDA may list a medication state (`statusCode`) as “completed” (i.e. the prescription writing has been completed) but containing dates in the future. This may more align with a FHIR status of “active” than “completed” which indicates all actions implied by the prescription have been completed. C-CDA also provides ambiguous guidance with respect to mood: completed and planned cases are well-defined, but active or ongoing cases are not addressed. We provide maps for both status and mood elements, but care is necessary to ensure C-CDA authors' intentions are understood.
+
 **Medication Timing and Frequency**
 
 C-CDA represents both timing (start date / end date) and frequency (when and how often to take) using `<effectiveTime>` elements. The first (represented in XPath as `/effectiveTime[1]`) represents the timing. If it contains `<low>` and/or `<high>` timestamps, this represents the `.timing.repeat.boundsPeriod` information of `MedicationRequest.dosageInstruction`. If, instead, the first effectiveTime only contains a single `@value` attribute, it represents a `.timing.event` dateTime value.
@@ -24,9 +28,9 @@ The C-CDA Example Search site maintains a document of [Common Medication Frequen
 |C-CDA¹<br>[Medication Activity substanceAdministration](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-MedicationActivity.html)|FHIR<br>[MedicationRequest](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-medicationrequest.html)|Transform Steps|
 |:----|:----|:----|
 |/@negationInd="true"|set .doNotPerform=true||
-|@moodCode|.intent|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept) <br/>[Mood to intent](ConceptMap-CF-MedActivityMood.html)|
+|@moodCode|.intent|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept) <br/>[Mood to intent](ConceptMap-CF-MedActivityMood.html)<br/>See note above on Medication Status|
 |/id|.identifier|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
-|/statusCode|.status|Pay attention to the definitions of active and completed in the FHIR medicationrequest-status code system. C-CDA may list a medication state as “completed” (i.e. the prescription writing has been completed), but containing dates in the future. This may more align with a FHIR status of “active” than “completed” which indicates all actions implied by the prescription have been completed<br/>[CDA statusCode → FHIR status](./ConceptMap-CF-MedicationStatus.html)|
+|/statusCode|.status|See note above on Medication Status<br/>Pay attention to the definitions of active and completed in the FHIR medicationrequest-status code system. <br/>[CDA statusCode → FHIR status](./ConceptMap-CF-MedicationStatus.html)|
 |/effectiveTime[1]/@value|.dosageInstruction.timing.event|**Constraint**: Use this when effectiveTime@value is populated<br/>[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
 |/effectiveTime[1]/low|.dosageInstruction.timing.repeat.boundsPeriod.start|**Constraint**: Use this when effectiveTime/@value is not populated<br/>[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
 |/effectiveTime[1]/high|.dosageInstruction.timing.repeat.boundsPeriod.end|**Constraint**: Use this when effectiveTime/@value is not populated<br/>[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
