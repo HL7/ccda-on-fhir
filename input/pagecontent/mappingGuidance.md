@@ -43,6 +43,13 @@ Cases where the FHIR system uses a scheme with no OID present a problem. The UID
 
 #### CDA id → FHIR Identifier with Example Mapping
 
+In general, CDA `@extension` maps directly to `identifier.value`. How `@root` is mapped depends on a few criteria:
+
+- If root is a known identifier system (see [Mapping OID ↔ URI](#mapping-oid--uri)) and [HL7 Terminology: External Identifier Systems](https://terminology.hl7.org/identifiers.html)), translate the OID to a uri.
+- If extension is missing, the root is unique on its own and is mapped to `identifier.value`. Use the [Uniform Resource Identifier](https://terminology.hl7.org/NamingSystem-uri.html) (`urn:ietf:rfc:3986`) as `identifier.system`, and prefix the CDA OID or UUID with `urn:oid:` or `urn:uuid:` before sending it as `identifier.value`.
+- If root is the [Uniform Resource Identifier](https://terminology.hl7.org/NamingSystem-uri.html) OID of `2.16.840.1.113883.4.873`, its value is likely the result of [FHIR Identifier → CDA id](#fhir-identifier--cda-id-with-example-mapping) mapping described below. The extension should be split to both `identifier.value` and `identifier.system` as described in the table below.
+- If extension is present, but there is no known URI for the OID, the OID can be sent directly in `identifier.system` after prefixing it with `urn:oid:`.
+
 |Case|Approach|CDA id@root|CDA id@extension|identifier.system|identifier.value|
 |:--|:--|:--|:--|:--|:--|
 |URL exists|translate|2.16.840.1.113883.4.1|123-45-6789|http://hl7.org/fhir/sid/us-ssn|123-45-6789
