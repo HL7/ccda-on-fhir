@@ -1,6 +1,6 @@
 {
   "package-id" : "hl7.fhir.us.ccda",
-  "version" : "2.0.0-ballot",
+  "version" : "2.0.0",
   "path" : "http://hl7.org/fhir/us/ccda/2025Jan",
   "mode": "working",
   "status" : "ballot",

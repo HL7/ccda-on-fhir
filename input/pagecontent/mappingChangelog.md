@@ -1,4 +1,4 @@
-### 2.0.0 (Current STU Ballot)
+### 2.0.0 (Current Publication)
 Though feedback is welcome on any part of the IG, only changed content may be voted upon during an STU ballot. The following is a high-level list of changes since version 1.2.0 STU1.
 
 **New Resources / Guidance**
