@@ -4,7 +4,7 @@
     <a href="mappingBackground.html">Background</a>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">C-CDA → FHIR<b class="caret">
+    <a data-toggle="dropdown"  class="dropdown-toggle">C-CDA → FHIR<b class="caret">
       </b>
     </a>
     <ul class="dropdown-menu">
@@ -23,7 +23,7 @@
     </ul>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">FHIR → C-CDA<b class="caret">
+    <a data-toggle="dropdown"  class="dropdown-toggle">FHIR → C-CDA<b class="caret">
       </b>
     </a>
     <ul class="dropdown-menu">
