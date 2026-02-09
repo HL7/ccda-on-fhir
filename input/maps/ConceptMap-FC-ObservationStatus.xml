@@ -30,7 +30,7 @@
   <targetUri value="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.39"/>
   <group>
     <source value="http://hl7.org/fhir/observation-status"/>
-    <target value="http://terminology.hl7.org/CodeSystem/2.16.840.1.113883.5.14"/>
+    <target value="http://terminology.hl7.org/CodeSystem/v3-ActStatus4"/>
     <element>
       <code value="registered"/>
       <display value="registered"/>

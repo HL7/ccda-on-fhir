@@ -29,7 +29,7 @@
   <sourceUri value="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.39"/>
   <targetUri value="http://hl7.org/fhir/ValueSet/observation-status"/>
   <group>
-    <source value="http://terminology.hl7.org/CodeSystem/2.16.840.1.113883.5.14"/>
+    <source value="http://terminology.hl7.org/CodeSystem/v3-ActStatus"/>
     <target value="http://hl7.org/fhir/observation-status"/>
     <element>
       <code value="aborted"/>

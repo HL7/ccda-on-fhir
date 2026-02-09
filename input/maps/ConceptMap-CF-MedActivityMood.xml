@@ -29,7 +29,7 @@
   <sourceUri value="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.18"/>
   <targetUri value="http://hl7.org/fhir/ValueSet/medicationrequest-intent"/>
   <group>
-    <source value="http://terminology.hl7.org/CodeSystem/2.16.840.1.113883.5.1001"/>
+    <source value="http://terminology.hl7.org/CodeSystem/v3-ActMood"/>
     <target value="http://hl7.org/fhir/CodeSystem/medicationrequest-intent"/>
     <element>
       <code value="EVN"/>
