@@ -429,10 +429,6 @@
       </page>
     </page>
     <parameter>
-      <code value="path-expansion-params"/>
-      <value value="terminology-settings.json"/>
-    </parameter>
-    <parameter>
       <code value="releaselabel"/>
       <value value="STU 2 Ballot"/>
     </parameter>
