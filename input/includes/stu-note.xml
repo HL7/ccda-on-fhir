@@ -5,8 +5,7 @@
 				href="https://jira.hl7.org/browse/PSS-1811">C-CDA ↔ FHIR mapping project</a> which
 			was related to the original <a
 				href="https://www.hl7.org/implement/standards/product_brief.cfm?product_id=469">C-CDA
-			on FHIR work</a>. These mappings are included under the "Mapping" heading and will
-			undergo future updates for additional content.</p>
+			on FHIR work</a>. </p>
 		<p>The next release will aim to complete mappings to USCDI 3, address the known issues, and 
 		reintroduce the document profiles.</p>
 	</blockquote>
