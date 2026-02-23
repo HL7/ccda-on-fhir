@@ -1,6 +1,6 @@
 [Consolidated Clinical Document Architecture (C-CDA)](https://hl7.org/cda/us/ccda/) and [Fast Healthcare Interoperability Resources (FHIR) US Core](http://hl7.org/fhir/us/core/STU4/) are two of the most common standards for exchanging clinical data in the United States. This [project's](https://confluence.hl7.org/display/CGP/C-CDA+to+and+from+US+Core+Mapping) goals are to establish HL7 mapping transformation guidance to provide clarity and consistency in translating data between C-CDA and FHIR and between FHIR and C-CDA. 
 
-In our first publication, we focused on the subset of domains that are recognized as the most exchangeable concepts in the industry. This first publication is limited to Problems, Allergies, Medications, Immunizations, Procedures, and Patient (PAMI+) domains. Acknowledging the various stages of maturity for each domain, we included the entire work for these concepts. This project was scoped independently of the document-level profiles developed in earlier versions of this guide.  
+The first release of this Implementation Guide laid out guidance for assembling FHIR documents that met C-CDA requirements. The second release added mappings between C-CDA and FHIR, focusing on the PAMPI domains (Problems, Allergies, Medications, Procedures, and Immunizations). This release extends that guidance into additional clinical domains and removes the document profiles. 
 
 <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<blockquote class="stu-note">
