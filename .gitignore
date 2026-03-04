@@ -1,5 +1,6 @@
 # Temporary folders #
 #####################
+.ignore
 temp
 template
 output
