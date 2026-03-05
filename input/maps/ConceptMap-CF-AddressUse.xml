@@ -27,7 +27,7 @@
       <value value="info@hl7.org"/>
     </telecom>
   </contact>
-  <sourceUri value="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.1.11.10637"/>
+  <sourceUri value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.1.11.10637"/>
   <targetUri value="http://hl7.org/fhir/ValueSet/address-use"/>
   <group>
     <source value="http://terminology.hl7.org/CodeSystem/v3-AddressUse"/>

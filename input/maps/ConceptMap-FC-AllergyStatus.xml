@@ -28,7 +28,7 @@
     </telecom>
   </contact>
   <sourceUri value="http://hl7.org/fhir/ValueSet/allergyintolerance-clinical"/>
-  <targetUri value="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1099.29"/>
+  <targetUri value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1099.29"/>
   <group>
     <source value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"/>
     <target value="http://snomed.info/sct"/>

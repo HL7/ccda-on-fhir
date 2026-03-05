@@ -27,7 +27,7 @@
     </telecom>
   </contact>
   <sourceUri value="http://hl7.org/fhir/ValueSet/allergy-intolerance-type"/>
-  <targetUri value="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.3221.6.2"/>
+  <targetUri value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.88.12.3221.6.2"/>
   <group>
     <source value="http://hl7.org/fhir/allergy-intolerance-type"/>
     <target value="http://snomed.info/sct"/>

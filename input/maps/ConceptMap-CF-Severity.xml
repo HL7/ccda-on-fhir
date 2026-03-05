@@ -27,7 +27,7 @@
       <value value="info@hl7.org"/>
     </telecom>
   </contact>
-  <sourceUri value="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.3221.6.8"/>
+  <sourceUri value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.88.12.3221.6.8"/>
   <targetUri value="http://hl7.org/fhir/ValueSet/reaction-event-severity"/>
   <group>
     <source value="http://snomed.info/sct"/>
