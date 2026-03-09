@@ -63,16 +63,9 @@
       <code value="old"/>
       <display value="Old / Incorrect"/>
       <target>
-        <code value="OLD"/>
-        <display value="no longer in use"/>
-        <equivalence value="narrower"/>
-        <comment value="Incorrect is not included in the CDA definition" />
-      </target>
-      <target>
         <code value="BAD"/>
         <display value="bad address"/>
-        <equivalence value="narrower"/>
-        <comment value="Old is not included in the CDA definition" />
+        <equivalence value="wider"/>
       </target>
     </element>
     <element>

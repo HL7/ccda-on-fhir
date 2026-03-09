@@ -76,15 +76,6 @@
       </target>
     </element>
     <element>
-      <code value="OLD"/>
-      <display value="no longer in use"/>
-      <target>
-        <code value="old"/>
-        <display value="Old / Incorrect"/>
-        <equivalence value="wider"/>
-      </target>
-    </element>
-    <element>
       <code value="TMP"/>
       <display value="temporary address"/>
       <target>
