@@ -30,7 +30,7 @@
   <targetUri value="http://hl7.org/fhir/ValueSet/condition-clinical"/>
   <group>
     <source value="http://snomed.info/sct"/>
-    <target value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+    <target value="http://terminology.hl7.org/CodeSystem/condition-clinical|3.0.0"/>
     <element>
       <code value="246455001" />
       <display value="Recurrence" />

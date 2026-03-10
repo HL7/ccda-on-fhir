@@ -30,7 +30,7 @@
   <sourceUri value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.11.20.9.22"/>
   <targetUri value="http://hl7.org/fhir/ValueSet/event-status"/>
   <group>
-    <source value="http://terminology.hl7.org/CodeSystem/v3-ActStatus"/>
+    <source value="http://terminology.hl7.org/CodeSystem/v3-ActStatus|4.0.0"/>
     <target value="http://hl7.org/fhir/event-status"/>
     <element>
       <code value="aborted"/>

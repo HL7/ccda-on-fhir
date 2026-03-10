@@ -30,7 +30,7 @@
   <sourceUri value="http://hl7.org/fhir/ValueSet/allergyintolerance-clinical"/>
   <targetUri value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1099.29"/>
   <group>
-    <source value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"/>
+    <source value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical|1.0.1"/>
     <target value="http://snomed.info/sct"/>
     <element>
       <code value="resolved"/>

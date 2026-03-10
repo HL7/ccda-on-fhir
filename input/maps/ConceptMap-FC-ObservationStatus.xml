@@ -30,7 +30,7 @@
   <targetUri value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.11.20.9.39"/>
   <group>
     <source value="http://hl7.org/fhir/observation-status"/>
-    <target value="http://terminology.hl7.org/CodeSystem/v3-ActStatus"/>
+    <target value="http://terminology.hl7.org/CodeSystem/v3-ActStatus|4.0.0"/>
     <element>
       <code value="registered"/>
       <display value="registered"/>

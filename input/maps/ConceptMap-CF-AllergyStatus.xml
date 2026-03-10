@@ -31,7 +31,7 @@
   <targetUri value="http://hl7.org/fhir/ValueSet/allergyintolerance-clinical"/>
   <group>
     <source value="http://snomed.info/sct"/>
-    <target value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"/>
+    <target value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical|1.0.1"/>
     <element>
       <code value="413322009"/>
       <display value="Problem Resolved"/>

@@ -27,7 +27,7 @@
     </telecom>
   </contact>
   <group>
-    <source value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+    <source value="http://terminology.hl7.org/CodeSystem/condition-category|2.0.0"/>
     <target value="http://loinc.org"/>
     <element>
       <code value="encounter-diagnosis"/>

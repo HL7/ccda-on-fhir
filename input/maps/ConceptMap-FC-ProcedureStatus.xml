@@ -30,7 +30,7 @@
   <sourceUri value="http://hl7.org/fhir/ValueSet/event-status"/>
   <group>
     <source value="http://hl7.org/fhir/event-status"/>
-    <target value="http://terminology.hl7.org/CodeSystem/v3-ActStatus"/>
+    <target value="http://terminology.hl7.org/CodeSystem/v3-ActStatus|4.0.0"/>
     <element>
       <code value="preparation"/>
       <display value="Preparation"/>
@@ -102,7 +102,7 @@
   </group>
   <group>
     <source value="http://hl7.org/fhir/event-status"/>
-    <target value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
+    <target value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor|4.0.0"/>
     <element>
       <code value="preparation"/>
       <display value="Preparation"/>

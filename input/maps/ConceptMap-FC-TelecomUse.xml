@@ -31,7 +31,7 @@
   <targetUri value="http://terminology.hl7.org/ValueSet/v3-TelecommunicationAddressUse"/>
   <group>
     <source value="http://hl7.org/fhir/contact-point-use"/>
-    <target value="http://terminology.hl7.org/CodeSystem/v3-AddressUse"/>
+    <target value="http://terminology.hl7.org/CodeSystem/v3-AddressUse|4.0.0"/>
     <element>
       <code value="home"/>
       <display value="Home"/>

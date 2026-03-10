@@ -30,8 +30,8 @@
   <sourceUri value="http://hl7.org/fhir/ValueSet/immunization-status-reason"/>
   <targetUri value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.1.11.19717"/>
   <group>
-    <source value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
-    <target value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+    <source value="http://terminology.hl7.org/CodeSystem/v3-ActReason|4.0.0"/>
+    <target value="http://terminology.hl7.org/CodeSystem/v3-ActReason|4.0.0"/>
     <element>
       <code value="IMMUNE"/>
       <display value="immunity"/>
@@ -71,7 +71,7 @@
   </group>
   <group>
     <source value="http://snomed.info/sct"/>
-    <target value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+    <target value="http://terminology.hl7.org/CodeSystem/v3-ActReason|4.0.0"/>
     <element>
       <code value="171257003" />
       <display value="No consent - Tetanus/low dose diphtheria vaccine" />

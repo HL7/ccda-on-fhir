@@ -28,7 +28,7 @@
   </contact>
   <group>
     <source value="http://loinc.org"/>
-    <target value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+    <target value="http://terminology.hl7.org/CodeSystem/condition-category|2.0.0"/>
     <element>
       <code value="46240-8"/>
       <display value="History of Hospitalizations+Outpatient visits Narrative"/>

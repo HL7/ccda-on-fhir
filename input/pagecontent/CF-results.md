@@ -8,20 +8,20 @@ Observation values are generic - they can be of any CDA type in CDA, and *almost
 
 ### C-CDA Organizer to FHIR Diagnostic Report
 
-|C-CDA¹<br/>[Result Organizer](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-ResultOrganizer.html)|FHIR<br/>Diagnostic Report ([Lab](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-diagnosticreport-lab.html)) ([Reports](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-diagnosticreport-note.html))|Transform Steps|
+|C-CDA¹<br/>[Result Organizer](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-ResultOrganizer.html)|FHIR<br/>Diagnostic Report ([Lab](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-diagnosticreport-lab.html)) ([Reports](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-diagnosticreport-note.html))|Transform Steps|
 |:----|:----|:----|
 |/id|.identifier|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
 |/code|.code<br/>&amp;<br/>.category|Map to code using [CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept).<br/>Category (and target FHIR Profile) may be identified by looking up a LOINC code's CLASSTYPE (see process in next table).<br/>Alternatively, an extension for `<sdtc:category>` is being developed for CDA Organizer which, if present, will map directly to this field.
 |/statusCode|.status|[CDA Result Status → FHIR Report Status](./ConceptMap-CF-ResultReportStatus.html)
 |/effectiveTime|.effectiveDateTime<br/>or<br/>.effectivePeriod|If low and high are identical, use effectiveDateTime. If organizer/effectiveTime is missing, use the earliest and latest observation/effectiveTime as the source of the mapping.<br/>[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)
 |/specimen|.specimen|[See below](#c-cda-specimen-to-fhir-specimen)
-|/author|**[Provenance](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-provenance.html)**|[CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)|
+|/author|**[Provenance](http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-provenance.html)**|[CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)|
 |**[Result Observation](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-ResultObservation.html)**<br/>/component/observation|.result|See following table
 |**[Specimen Collection Procedure](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-SpecimenCollectionProcedure.html)**<br/>/component/procedure[code/@code=17636008]|.specimen|[See below](#c-cda-specimen-to-fhir-specimen)
 
 ### C-CDA Observation to FHIR Observation
 
-|C-CDA¹<br/>[Result Observation](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-ResultObservation.html)|FHIR<br/>[Lab Result Observation](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-observation-lab.html)|Transform Steps|
+|C-CDA¹<br/>[Result Observation](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-ResultObservation.html)|FHIR<br/>[Lab Result Observation](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-lab.html)|Transform Steps|
 |:----|:----|:----|
 |/id|.identifier|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
 ||.category|If the code is LOINC, the category can be inferred from the LOINC code CLASSTYPE. Query a FHIR server via `{endpoint}CodeSystem/$lookup?system=http://loinc.org&code={code}&&property=CLASSTYPE` and set the category according to the CLASSTYPE property:<br/>1=Laboratory class (laboratory); 2=Clinical class (clinical-test); 3=Claims attachments (not mapped); 4=Surveys (survey)
@@ -39,7 +39,7 @@ Observation values are generic - they can be of any CDA type in CDA, and *almost
 |/methodCode|.method|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 |/targetSiteCode|.bodySite|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
 |/specimen|.specimen|[See below](#c-cda-specimen-to-fhir-specimen)
-|/author|**[Provenance](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-provenance.html)**|[CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)|
+|/author|**[Provenance](http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-provenance.html)**|[CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)|
 |/referenceRange/observationRange/interpretationCode|**Not Supported**|FHIR expects reference ranges to be "normal" ranges. If C-CDA includes multiple reference ranges, only map the one with interpretationCode = `"N"`.
 |/referenceRange/observationRange/value[xsi:type=IVL_PQ]|.referenceRange.low<br/>&<br/>.referenceRange.high|
 |/referenceRange/observationRange/value[xsi:type=ST]<br/>or<br/>/referenceRange/observationRange/text|.referenceRange.text|

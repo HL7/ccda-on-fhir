@@ -41,7 +41,7 @@
   "targetUri" : "http://hl7.org/fhir/ValueSet/encounter-status",
   "group" : [
     {
-      "source" : "http://terminology.hl7.org/CodeSystem/v3-ActStatus",
+      "source" : "http://terminology.hl7.org/CodeSystem/v3-ActStatus|4.0.0",
       "target" : "http://hl7.org/fhir/encounter-status",
       "element" : [
         {

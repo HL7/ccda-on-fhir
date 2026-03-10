@@ -31,7 +31,7 @@
   <targetUri value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.1.11.15913"/>
   <group>
     <source value="http://hl7.org/fhir/name-use"/>
-    <target value="http://terminology.hl7.org/CodeSystem/v3-EntityNameUse"/>
+    <target value="http://terminology.hl7.org/CodeSystem/v3-EntityNameUse|4.0.0"/>
     <element>
       <code value="usual"/>
       <display value="Usual"/>

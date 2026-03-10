@@ -29,8 +29,8 @@
   <sourceUri value="http://hl7.org/fhir/ValueSet/data-absent-reason"/>
   <targetUri value="http://terminology.hl7.org/ValueSet/v3-NullFlavor"/>
   <group>
-    <source value="http://terminology.hl7.org/CodeSystem/data-absent-reason"/>
-    <target value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
+    <source value="http://terminology.hl7.org/CodeSystem/data-absent-reason|1.0.0"/>
+    <target value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor|4.0.0"/>
     <element>
       <code value="unknown"/>
       <display value="Unknown"/>

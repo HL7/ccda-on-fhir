@@ -30,7 +30,7 @@
   <targetUri value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.1.11.20549"/>
   <group>
     <source value="http://hl7.org/fhir/allergy-intolerance-criticality"/>
-    <target value="http://terminology.hl7.org/CodeSystem/v3-ObservationValue"/>
+    <target value="http://terminology.hl7.org/CodeSystem/v3-ObservationValue|4.0.0"/>
     <element>
       <code value="high"/>
       <display value="High Risk"/>

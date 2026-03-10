@@ -30,7 +30,7 @@
   <sourceUri value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.1.11.10637"/>
   <targetUri value="http://hl7.org/fhir/ValueSet/address-use"/>
   <group>
-    <source value="http://terminology.hl7.org/CodeSystem/v3-AddressUse"/>
+    <source value="http://terminology.hl7.org/CodeSystem/v3-AddressUse|4.0.0"/>
     <target value="http://hl7.org/fhir/address-use"/>
     <element>
       <code value="BAD"/>

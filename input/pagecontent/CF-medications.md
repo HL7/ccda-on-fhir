@@ -25,7 +25,7 @@ The C-CDA Example Search site maintains a document of [Common Medication Frequen
 
 ### C-CDA to FHIR (MedicationRequest)
 
-|C-CDA¹<br>[Medication Activity substanceAdministration](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-MedicationActivity.html)|FHIR<br>[MedicationRequest](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-medicationrequest.html)|Transform Steps|
+|C-CDA¹<br>[Medication Activity substanceAdministration](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-MedicationActivity.html)|FHIR<br>[MedicationRequest](http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-medicationrequest.html)|Transform Steps|
 |:----|:----|:----|
 |/@negationInd="true"|set .doNotPerform=true||
 |@moodCode|.intent|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept) <br/>[Mood to intent](ConceptMap-CF-MedActivityMood.html)<br/>See note above on Medication Status|
@@ -45,7 +45,7 @@ The C-CDA Example Search site maintains a document of [Common Medication Frequen
 |/administrationUnitCode|Medication.form|[See below](#c-cda-to-fhir-medication)
 |/consumable/manufacturedProduct/manufacturedMaterial/code|.medicationCodeableConcept<br/>OR<br/>.medicationReference|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)<br/>Only one of these fields may be populated. When generating a Medication resource ([see below](#c-cda-to-fhir-medication)), use the medicationReference field.|
 |/consumable/manufacturedProduct/manufacturerOrganization|Medication.manufacturer|[See below](#c-cda-to-fhir-medication)
-|/author|.requester<br/>&<br/>**[Provenance](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-procedure.html)**|[CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)|
+|/author|.requester<br/>&<br/>**[Provenance](http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-provenance.html)**|[CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)|
 |/author/time|.authoredOn|Earliest, if more than one.<br/>[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)|
 |**[Drug Vehicle](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-DrugVehicle.html)**<br/>/participant[@typeCode="CSM"]/playingEntity/code|Medication.ingredient|[See below](#c-cda-to-fhir-medication)
 |**[Indication](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-Indication.html)**<br/>/entryRelationship[@typeCode="RSON"]/observation/value|.reasonCode|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
@@ -63,11 +63,11 @@ The C-CDA Example Search site maintains a document of [Common Medication Frequen
 ### C-CDA to FHIR (Medication)
 MedicationRequest (and other resources) may represent the medication as a simple CodeableConcept. But when additional information about the medication needs to be conveyed, a Medication resource should be created instead and referenced by the MedicationRequest resource. Implementers may also opt to always create Medication resources.
 
-|C-CDA¹<br>[Medication Activity substanceAdministration](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-MedicationActivity.html)|FHIR<br>[Medication](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-medication.html)|Transform Steps|
+|C-CDA¹<br>[Medication Activity substanceAdministration](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-MedicationActivity.html)|FHIR<br>[Medication](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-medication.html)|Transform Steps|
 |:----|:----|:----|
 |/administrationUnitCode|.form|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)
 |/consumable/manufacturedProduct/manufacturedMaterial/code|.code|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)|
-|/consumable/manufacturedProduct/manufacturerOrganization|**[Organization](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-organization.html)**<br/>.manufacturer|
+|/consumable/manufacturedProduct/manufacturerOrganization|**[Organization](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-organization.html)**<br/>.manufacturer|
 |**[Drug Vehicle](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-DrugVehicle.html)**<br/>/participant[@typeCode="CSM"]/playingEntity/code|.ingredient.itemCodeableConcept|Set `.isActive = false`<br/>[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)
 
 ### Example

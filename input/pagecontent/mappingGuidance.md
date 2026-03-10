@@ -8,9 +8,9 @@ td, th {
 
 #### How to Read Mapping Tables and Transform Steps? 
 
-The header row of the mapping table provides links to the respective profiles in FHIR (e.g. **[US Core AllergyIntolerance](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-allergyintolerance.html)**) and templates in C-CDA (e.g. **[Allergy Intolerance observation](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-AllergyIntoleranceObservation.html)**)and specifies the "base" that each of the rows will build on.  All FHIR elements use a simplified dot notation and the CDA elements use simplified slash notation. Always use the underlying standards, provided via header row links, to ensure conformance when building FHIR resources or C-CDA clinical documents. 
+The header row of the mapping table provides links to the respective profiles in FHIR (e.g. **[US Core AllergyIntolerance](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-allergyintolerance.html)**) and templates in C-CDA (e.g. **[Allergy Intolerance observation](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-AllergyIntoleranceObservation.html)**)and specifies the "base" that each of the rows will build on.  All FHIR elements use a simplified dot notation and the CDA elements use simplified slash notation. Always use the underlying standards, provided via header row links, to ensure conformance when building FHIR resources or C-CDA clinical documents. 
 
-Rather than repeating cardinality, conformance, and other criteria from FHIR Resources or a C-CDA templates defined outside this implementaiton guide, external references are shown in tables as bold hyperlinks (e.g. **[US Core Patient](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-patient.html)** or **[C-CDA US Realm Header](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-USRealmHeader.html)**). Unbolded links refer to guidance contained within this guide (e.g. [CDA ↔ FHIR Name, Address, and Telecom mapping](mappingGuidance.html#name-address-telecom)). When criteria for selecting XML elements from C-CDA is required, you will see **[XPath](https://en.wikipedia.org/wiki/XPath)** notation with the respective criteria within brackets (e.g. /entryRelationship[@typeCode="MSFT"]).
+Rather than repeating cardinality, conformance, and other criteria from FHIR Resources or a C-CDA templates defined outside this implementaiton guide, external references are shown in tables as bold hyperlinks (e.g. **[US Core Patient](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html)** or **[C-CDA US Realm Header](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-USRealmHeader.html)**). Unbolded links refer to guidance contained within this guide (e.g. [CDA ↔ FHIR Name, Address, and Telecom mapping](mappingGuidance.html#name-address-telecom)). When criteria for selecting XML elements from C-CDA is required, you will see **[XPath](https://en.wikipedia.org/wiki/XPath)** notation with the respective criteria within brackets (e.g. /entryRelationship[@typeCode="MSFT"]).
 
 
 The "Transform Steps" column of the table will provide guidance for mapping content between C-CDA and FHIR, those steps will be listed in the following order: 
@@ -471,14 +471,14 @@ Units can be different, as long as they are equivalent:
 
 ### CDA ↔ FHIR Provenance
 
-CDA provides a repeated set of elements within each activity which may be used in populating data to/from FHIR [Provenance.Agent](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-provenance.html)  
+CDA provides a repeated set of elements within each activity which may be used in populating data to/from FHIR [Provenance.Agent](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-provenance.html)  
 
 - **author**: Represents the humans and/or machines that authored the [document/section/entry/act]. 
 - **performer**: A person who actually and principally carries out an action.
 - **informant**: An informant (or source of information) is a person that provides relevant information, such as the parent of a comatose patient who describes the patient's behavior prior to the onset of coma.
 - **participant** Used to represent other participants not explicitly mentioned by other classes, that were somehow involved in the documented activities
 
-FHIR, however, provides different elements within resources (e.g. Condition.recorder) that convey some information on provenance and a dedicated [Provenance](http://hl7.org/fhir/provenance.html) resource which references a target resource. In addition, FHIR documents do not provide context conduction, so all FHIR resources in a FHIR document should have explicit [Provenance](https://hl7.org/fhir/us/core/STU4/basic-provenance.html). See Context conduction under [v3 Similarities and Differences](http://hl7.org/fhir/R4/comparison-v3.html#7.17.2.1) for more information.
+FHIR, however, provides different elements within resources (e.g. Condition.recorder) that convey some information on provenance and a dedicated [Provenance](http://hl7.org/fhir/provenance.html) resource which references a target resource. In addition, FHIR documents do not provide context conduction, so all FHIR resources in a FHIR document should have explicit [Provenance](https://hl7.org/fhir/us/core/STU6.1/basic-provenance.html). See Context conduction under [v3 Similarities and Differences](http://hl7.org/fhir/R4/comparison-v3.html#7.17.2.1) for more information.
 
 <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<blockquote class="stu-note">
@@ -488,7 +488,7 @@ FHIR, however, provides different elements within resources (e.g. Condition.reco
 	</blockquote>
 </div>
 
-At a minimum, it is recommended that when [Provenance](http://hl7.org/fhir/provenance.html) resources are present in a FHIR document, that they should be mapped to provenance as defined in the [C-CDA Companion Guide](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=447) and [Basic Provenance in US Core](https://hl7.org/fhir/us/core/STU4/basic-provenance.html). 
+At a minimum, it is recommended that when [Provenance](http://hl7.org/fhir/provenance.html) resources are present in a FHIR document, that they should be mapped to provenance as defined in the [C-CDA Companion Guide](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=447) and [Basic Provenance in US Core](https://hl7.org/fhir/us/core/STU6.1/basic-provenance.html). 
 
 Preliminary guidelines for documents may include: 
 1. Assembler generated documents
@@ -585,7 +585,7 @@ The mappings of name, address and telecom information are useful in many part of
 
 CDA and FHIR address missing data and null usage in different ways:  
 - The use of nullFlavor in CDA is explained in depth in Volume 1 of the [C-CDA Implementation Guide](https://hl7.org/cda/us/ccda/generalguidance.html#unknown-and-no-known-information) and in the [C-CDA Companion Guide](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=447). 
-- The use of the data absent reason extension is explained in depth in the [US Core Implementation Guide](https://hl7.org/fhir/us/core/STU4/general-guidance.html#missing-data) and also in the [base extension](http://hl7.org/fhir/extension-data-absent-reason.html).
+- The use of the data absent reason extension is explained in depth in the [US Core Implementation Guide](https://hl7.org/fhir/us/core/STU6.1/general-guidance.html#missing-data) and also in the [base extension](http://hl7.org/fhir/extension-data-absent-reason.html).
 
 In this publication, we include a mapping between missing data concepts. **Importantly, it should be noted that several mappings include non-equivalence (wider or narrower or unsupported) and that each standard may allow data elements to be omitted while the other requires**. Feedback to improve implementer guidance is welcome on the handling of missing data between C-CDA and FHIR:
 - [NullFlavor (CDA) → Data Absent Reason code (FHIR)](./ConceptMap-CF-NullFlavorDataAbsentReason.html) 

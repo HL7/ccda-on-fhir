@@ -30,7 +30,7 @@
   <sourceUri value="http://hl7.org/fhir/ValueSet/contact-point-system"/>
   <group>
     <source value="http://hl7.org/fhir/contact-point-system"/>
-    <target value="http://terminology.hl7.org/CodeSystem/v3-URLScheme" />
+    <target value="http://terminology.hl7.org/CodeSystem/v3-URLScheme|4.0.0" />
     <element>
       <code value="email"/>
       <display value="Email"/>

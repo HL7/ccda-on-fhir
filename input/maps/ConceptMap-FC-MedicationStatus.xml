@@ -30,7 +30,7 @@
   <targetUri value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1099.11"/>
   <group>
     <source value="http://hl7.org/fhir/CodeSystem/medicationrequest-status"/>
-    <target value="http://terminology.hl7.org/CodeSystem/v3-ActStatus"/>
+    <target value="http://terminology.hl7.org/CodeSystem/v3-ActStatus|4.0.0"/>
     <element>
       <code value="active"/>
       <display value="Active"/>

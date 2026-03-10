@@ -30,8 +30,8 @@
   <sourceUri value="http://terminology.hl7.org/ValueSet/v3-NullFlavor"/>
   <targetUri value="http://hl7.org/fhir/ValueSet/data-absent-reason"/>
   <group>
-    <source value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
-    <target value="http://terminology.hl7.org/CodeSystem/data-absent-reason"/>
+    <source value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor|4.0.0"/>
+    <target value="http://terminology.hl7.org/CodeSystem/data-absent-reason|1.0.0"/>
     <element>
       <code value="NI"/>
       <display value="NoInformation"/>

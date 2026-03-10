@@ -7,7 +7,7 @@ Encounter Activities in the Encounters Section (or elsewhere in the document, su
 ### C-CDA Encounter to FHIR
 <sup>(b)</sup> - indicates element is only present in Encounter Activity in the body of the document<br/><sup>(h)</sup> - indicates element is only present in EncompassingEncounter in the header of the document
 
-|C-CDA¹<br/>[Encounter Activity](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-EncounterActivity.html) or [EncompassingEncounter](https://hl7.org/cda/stds/core/2.0.0-sd-snapshot1/StructureDefinition-EncompassingEncounter.html)|FHIR<br/>[Encounter](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-encounter.html)|Transform Steps|
+|C-CDA¹<br/>[Encounter Activity](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-EncounterActivity.html) or [EncompassingEncounter](https://hl7.org/cda/stds/core/2.0.0-sd-snapshot1/StructureDefinition-EncompassingEncounter.html)|FHIR<br/>[Encounter](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-encounter.html)|Transform Steps|
 |:----|:----|:----|
 |/id|.identifier|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
 |/code |.class|Only the V3 ActCode system, which may be present in the root element or any `<translation>`.<br/>Other code systems may map to V3 ActCode (for example CPT codes 99211-99215 map to `AMB`, 99221-99223 to `IMP`, 99281-99285 to `EMER`, etc), but if this mapping is not possible, use the [Data Absent Reason](http://hl7.org/fhir/StructureDefinition/data-absent-reason) extension.|

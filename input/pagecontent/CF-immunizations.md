@@ -8,7 +8,7 @@ Mapping is from `@moodCode="EVN"` (i.e. historical) immunizations, not `INT` (fu
 <br />
 ### C-CDA to FHIR
 
-|C-CDA¹<br/>[Immunization Activity substanceAdministration](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-ImmunizationActivity.html)|FHIR<br/>[Immunization](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-immunization.html#profile)|Transform Steps|
+|C-CDA¹<br/>[Immunization Activity substanceAdministration](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-ImmunizationActivity.html)|FHIR<br/>[Immunization](http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-immunization.html#profile)|Transform Steps|
 |:----|:----|:----|
 |/@negationInd="true"||Set ```.status="not-done"``` when @negationInd="true"|
 |/id|.identifier|[CDA id ↔ FHIR identifier](mappingGuidance.html#cda-id--fhir-identifier)|
@@ -22,7 +22,7 @@ Mapping is from `@moodCode="EVN"` (i.e. historical) immunizations, not `INT` (fu
 |/consumable/manufacturedMaterial/lotNumberText|.lotNumber||
 |/consumable/manufacturedMaterial/manufacturerOrganization|.manufacturer|
 |N/A|.primarySource|Since this is unavailable in CDA, when mapping to a FHIR profile that requires the element (such as USCore prior to Release 6), include a [data-absent-reason extension](http://hl7.org/fhir/StructureDefinition/data-absent-reason) such as 'unsupported'.
-|/author|**[Provenance](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-provenance.html)**|[CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)|
+|/author|**[Provenance](http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-provenance.html)**|[CDA ↔ FHIR Provenance](mappingGuidance.html#cda--fhir-provenance)|
 |/author/time|.recorded|Earliest, if more than one.<br/>[CDA ↔ FHIR Time/Dates](mappingGuidance.html#cda--fhir-timedates)
 |/performer|.performer|Set ```performer.function="AP"```
 |**[Immunization Not Given Reason](https://hl7.org/cda/us/ccda/3.0.0/StructureDefinition-ImmunizationNotGivenReason.html) (FKA "Refusal Reason")**<br/>/entryRelationship[@typeCode="RSON"]²/observation/code<br/>(only if code is from ValueSet [No Immunization Reason](http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.1.11.19717/expansion/Latest))|.statusReason|[CDA coding ↔ FHIR CodeableConcept](mappingGuidance.html#cda-coding--fhir-codeableconcept)<br/>Indicates the reason the immunization event was **not** performed. This is generally only used for the status of "not-done".|
