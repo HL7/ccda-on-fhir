@@ -33,7 +33,7 @@
     <target value="http://hl7.org/fhir/CodeSystem/medicationrequest-intent"/>
     <element>
       <code value="EVN"/>
-      <display value="event"/>
+      <display value="event (occurrence)"/>
       <target>
         <code value="plan"/>
         <display value="plan"/>

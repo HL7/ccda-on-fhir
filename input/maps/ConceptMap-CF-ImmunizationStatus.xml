@@ -28,7 +28,7 @@
     </telecom>
   </contact>
   <sourceUri value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.1.11.15933"/>
-  <targetUri value="https://hl7.org/fhir/valueset-immunization-status.html"/>
+  <targetUri value="http://hl7.org/fhir/ValueSet/immunization-status"/>
   <group>
     <source value="http://terminology.hl7.org/CodeSystem/v3-ActStatus|4.0.0"/>
     <target value="http://hl7.org/fhir/event-status"/>

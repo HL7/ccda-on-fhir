@@ -5,7 +5,6 @@
   <meta>
     <versionId value="200"/>
     <lastUpdated value="2024-12-03T20:08:08.798+00:00"/>
-    <source value="#dMBMcvZsrSDFhHb1"/>
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="cgp"/>
