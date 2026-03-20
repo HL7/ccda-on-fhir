@@ -98,6 +98,8 @@ Additionally, the [FHIR Clinical Documents](https://hl7.org/fhir/uv/fhir-clinica
 ### Dependencies
 
 {% include dependency-table-en.xhtml %}
+{% include cross-version-analysis.xhtml %}
+{% include globals-table.xhtml %}
 
 ### IP Statements
 
