@@ -1,7 +1,7 @@
 {
   "resourceType" : "Requirements",
   "id" : "fromNarrative",
-  "url" : "https://profiles.ihe.net/fhir/ihe.formatcode.fhir/Requirements/fromNarrative",
+  "url" : "http://hl7.org/fhir/us/ccda/Requirements/fromNarrative",
   "name" : "FromNarrative",
   "title" : "Narrative Conformance Statements",
   "status" : "active",

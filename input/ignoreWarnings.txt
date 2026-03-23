@@ -6,20 +6,11 @@ A definition for CodeSystem 'urn:oid:2.16.840.1.113883.3.247.1.1' could not be f
 # ICD-9 missing code from tx.fhir.org
 tx.fhir.org does not support '486' for unknown reasons
 
-# Unknown Code '486' in the system 'http://hl7.org/fhir/sid/icd-9-cm' version '2015' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment (from http://tx.fhir.org/r4)
-tx.fhir.org does not support '486' for unknown reasons
+# tx.fhir.org only validates a fragment of ICD-9
+Unknown Code '486' in the CodeSystem 'http://hl7.org/fhir/sid/icd-9-cm' version '2015' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment (from https://tx.fhir.org/r4, see log, or see the servers logic)
 
-# Unknown Code '486' in the system 'http://hl7.org/fhir/sid/icd-9-cm' version '2015' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
-tx.fhir.org does not support '486' for unknown reasons
-
-# Unknown Code '486' in the CodeSystem 'http://hl7.org/fhir/sid/icd-9-cm' version '2015' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
-tx.fhir.org does not support '486' for unknown reasons
-
-# Unknown Code '486' in the CodeSystem 'http://hl7.org/fhir/sid/icd-9-cm' version '2015' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment (from https://tx.fhir.org/r4, see log, or see the servers logic)
-tx.fhir.org only validates a fragment of ICD-9
-
-# Unknown Code '486' in the CodeSystem 'http://hl7.org/fhir/sid/icd-9-cm' version '2015' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
-tx.fhir.org only validates a fragment of ICD-9
+# tx.fhir.org only validates a fragment of ICD-9
+Unknown Code '486' in the CodeSystem 'http://hl7.org/fhir/sid/icd-9-cm' version '2015' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
 
 # Missing performers in examples prior to 2023 ballot. This content is not being balloted and will probably be removed in the next cycle.
 Best Practice Recommendation: In general, all observations should have a performer
@@ -35,3 +26,14 @@ Target Code System http://snomed.info/sct is only supported on the terminology s
 Target Code System http://loinc.org is only supported on the terminology server, so the target codes are not validated for performance reasons
 Source Code System http://snomed.info/sct is only supported on the terminology server, so the source codes are not validated for performance reasons
 Source Code System http://loinc.org is only supported on the terminology server, so the source codes are not validated for performance reasons
+
+# These are example identifiers with arbitrary identifier systems. There is no reason the validator should know them.
+No definition could be found for URL value 'urn:oid:1.3.6.1.4.1.22812.3.2009316.3.4.10.2'
+No definition could be found for URL value 'urn:oid:1.3.6.1.4.1.22812.3.2009316.3.4.1.2.1'
+No definition could be found for URL value 'urn:oid:2.16.840.1.113883.19.5.9999.456'
+No definition could be found for URL value 'urn:oid:1.3.6.1.4.1.22812.3.2009316.3'
+No definition could be found for URL value 'urn:oid:1.3.6.1.4.1.22812.3.2009316.3.4.7'
+
+# This guide addresses current regulations. Any party interested in future work is invited to participate.
+The ImplementationGuide uses package hl7.fhir.us.core#6.1.0 released on 2023-06-30, but the most recent appropriate version is 8.0.1. This reference is getting old and the more recent version should be considered
+The ImplementationGuide uses package hl7.fhir.uv.extensions.r4#5.1.0 released on 2024-04-27, but the most recent appropriate version is 5.2.0. This reference is getting old and the more recent version should be considered
