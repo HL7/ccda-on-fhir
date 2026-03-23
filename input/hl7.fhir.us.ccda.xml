@@ -442,5 +442,9 @@
       <code value="display-warnings"/>
       <value value="true"/>
     </parameter>
+    <parameter>
+      <code value="path-expansion-params"/>
+      <value value="expansion-parameters.json"/>
+    </parameter>
   </definition>
 </ImplementationGuide>

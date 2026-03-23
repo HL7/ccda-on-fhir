@@ -100,6 +100,7 @@ Additionally, the [FHIR Clinical Documents](https://hl7.org/fhir/uv/fhir-clinica
 {% include dependency-table-en.xhtml %}
 {% include cross-version-analysis.xhtml %}
 {% include globals-table.xhtml %}
+{% include expansion-params.xhtml %}
 
 ### IP Statements
 
