@@ -26,8 +26,8 @@
       <value value="info@hl7.org"/>
     </telecom>
   </contact>
-  <sourceUri value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.88.12.3221.6.2/"/>
-  <targetUri value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1186.8/"/>
+  <sourceUri value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.88.12.3221.6.2"/>
+  <targetUri value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1186.8"/>
   <group>
     <source value="http://snomed.info/sct"/>
     <target value="http://snomed.info/sct"/>
