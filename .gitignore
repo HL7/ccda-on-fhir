@@ -32,3 +32,4 @@ _genonce.bat
 _genonce.sh
 _updatePublisher.bat
 _updatePublisher.sh
+.claude/
