@@ -3,23 +3,8 @@
 # Illustrative OID not available for validation in tx.fhir.org as used in C-CDA examples: https://cdasearch.hl7.org/examples/view/Problems/Problem%20Value%2C%20Translation%2C%20Qualifier%20examples This is deliebrately used in this guide to illustrate OID to urn:oid conversion in C-CDA to FHIR when URL is unavailable. 
 A definition for CodeSystem 'urn:oid:2.16.840.1.113883.3.247.1.1' could not be found, so the code cannot be validated
 
-# ICD-9 missing code from tx.fhir.org
-tx.fhir.org does not support '486' for unknown reasons
-
-# tx.fhir.org only validates a fragment of ICD-9
-Unknown Code '486' in the CodeSystem 'http://hl7.org/fhir/sid/icd-9-cm' version '2015' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment (from https://tx.fhir.org/r4, see log, or see the servers logic)
-
 # tx.fhir.org only validates a fragment of ICD-9
 Unknown Code '486' in the CodeSystem 'http://hl7.org/fhir/sid/icd-9-cm' version '2015' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
-
-# Missing performers in examples prior to 2023 ballot. This content is not being balloted and will probably be removed in the next cycle.
-Best Practice Recommendation: In general, all observations should have a performer
-
-# This extension was deprecated due to composition.version being included in R5.  This IG uses R4 so the extension is still necessary for capturing the version.
-The extension http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber|5.1.0 is deprecated
-
-# LOINC radiology codes manually validated
-The value set include has too many codes to validate (0), so each individual code has not been checked
 
 # This is a validator issue, not an IG issue
 Target Code System http://snomed.info/sct is only supported on the terminology server, so the target codes are not validated for performance reasons
