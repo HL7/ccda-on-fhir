@@ -24,15 +24,6 @@
     {
       "coding": [
         {
-          "code": "55607006",
-          "system": "http://snomed.info/sct",
-          "display": "Problem"
-        }
-      ]
-    },
-    {
-      "coding": [
-        {
           "system": "http://terminology.hl7.org/CodeSystem/condition-category",
           "code": "problem-list-item"
         }
