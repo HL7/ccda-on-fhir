@@ -273,7 +273,6 @@ When authors or other provenance are recorded in the parent [Problem Concern Act
             <span class="attrib">codeSystemName=</span><span class="value">"LOINC"</span> 
             <span class="attrib">displayName=</span><span class="value">"Earliest date of diagnosis"</span>/&gt;
           &lt;<span class="field">statusCode</span> <span class="attrib">code=</span><span class="value">"completed"</span>/&gt;
-          <span class="comment">&lt;!-- SHALL to the year (MAY be more specific) --&gt;</span>
           &lt;<span class="field">effectiveTime</span> <span class="attrib">value=</span><span class="value">"<mark class="color28">20100101</mark>"</span>/&gt;
         &lt;/<span class="field">act</span>&gt;
       &lt;/<span class="field">entryRelationship</span>&gt;
