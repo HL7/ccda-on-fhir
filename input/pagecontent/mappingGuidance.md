@@ -99,7 +99,7 @@ To convert between the standards, systems should deploy programming logic that c
 |20230531|2023-05-31|
 |202305312205-0500|2023-05-31T22:05-05:00|Timezone offset should be preserved
 
-Note that in C-CDA, timezone offset is a SHOULD, while in FHIR, time zone offset is required when more specific than the day. There may be instances where a CDA date-time value omits a time zone offset and other data from the document may be necessary to populate FHIR dateTime requirements.
+Note that in C-CDA, timezone offset is not required, while in FHIR, time zone offset is required when more specific than the day. There may be instances where a CDA date-time value omits a time zone offset and other data from the document may be necessary to populate FHIR dateTime requirements.
 
 The following are possible approaches to map CDA timestamps without offset to a FHIR dateTime or instant datatype. Selecting an approach depends on various factors including the criticality of the data, the age of the document, and the level of information the transformation process has about the location where the particular element was recorded.
 
