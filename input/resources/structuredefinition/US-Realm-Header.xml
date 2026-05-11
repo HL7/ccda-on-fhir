@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="US-Realm-Header"/>
+    <meta>
+        <versionId value="18"/>
+        <lastUpdated value="2020-08-19T06:01:56.578+00:00"/>
+        <source value="#bY1W9IGf5zWYeBRy"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/ccda/StructureDefinition/US-Realm-Header"/>
+    <name value="USRealmHeader"/>
+    <title value="US Realm Header"/>
+    <status value="active"/>
+    <contact>
+        <name value="Rick Geimer"/>
+        <telecom>
+            <system value="phone"/>
+            <value value="206-592-2443"/>
+            <use value="work"/>
+        </telecom>
+        <telecom>
+            <system value="email"/>
+            <value value="rick.geimer@lantanagroup.com"/>
+            <use value="work"/>
+        </telecom>
+    </contact>
+    <description value="This profile defines constraints that represent common administrative and demographic concepts for US Realm clinical documents. Further specification, such as type, are provided in document profiles that conform to this profile."/>
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+        </coding>
+    </jurisdiction>
+    <fhirVersion value="4.0.1"/>
+    <kind value="resource"/>
+    <abstract value="true"/>
+    <type value="Composition"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/clinicaldocument"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Composition">
+            <path value="Composition"/>
+        </element>
+        <element id="Composition.language">
+            <path value="Composition.language"/>
+            <short value="language"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.extension:version_number_extension">
+            <path value="Composition.extension"/>
+            <sliceName value="version_number_extension"/>
+            <max value="1"/>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://hl7.org/fhir/us/ccda/StructureDefinition/VersionNumber"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.extension:data_enterer_extension">
+            <path value="Composition.extension"/>
+            <sliceName value="data_enterer_extension"/>
+            <max value="1"/>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://hl7.org/fhir/us/ccda/StructureDefinition/DataEntererExtension"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.extension:informant_extension">
+            <path value="Composition.extension"/>
+            <sliceName value="informant_extension"/>
+            <label value="informant"/>
+            <short value="informant"/>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://hl7.org/fhir/us/ccda/StructureDefinition/InformantExtension"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.extension:information_recipient_extension">
+            <path value="Composition.extension"/>
+            <sliceName value="information_recipient_extension"/>
+            <label value="informationRecipient"/>
+            <short value="informationRecipient"/>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://hl7.org/fhir/us/ccda/StructureDefinition/InformationRecipientExtension"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.extension:participant_extension">
+            <path value="Composition.extension"/>
+            <sliceName value="participant_extension"/>
+            <label value="participant"/>
+            <short value="participant"/>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://hl7.org/fhir/us/ccda/StructureDefinition/ParticipantExtension"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.extension:performer_extension">
+            <path value="Composition.extension"/>
+            <sliceName value="performer_extension"/>
+            <label value="performer"/>
+            <short value="performer"/>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://hl7.org/fhir/us/ccda/StructureDefinition/PerformerExtension"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.extension:authorization_extension">
+            <path value="Composition.extension"/>
+            <sliceName value="authorization_extension"/>
+            <label value="authorization"/>
+            <short value="authorization"/>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://hl7.org/fhir/us/ccda/StructureDefinition/AuthorizationExtension"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.extension:order_extension">
+            <path value="Composition.extension"/>
+            <sliceName value="order_extension"/>
+            <label value="authorization"/>
+            <short value="authorization"/>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://hl7.org/fhir/us/ccda/StructureDefinition/OrderExtension"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.identifier">
+            <path value="Composition.identifier"/>
+            <short value="identifier"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.type">
+            <path value="Composition.type"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.subject">
+            <path value="Composition.subject"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.encounter">
+            <path value="Composition.encounter"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.date">
+            <path value="Composition.date"/>
+            <short value="date"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.author">
+            <path value="Composition.author"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.title">
+            <path value="Composition.title"/>
+            <label value="Document Title"/>
+            <short value="Document Title"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.confidentiality">
+            <path value="Composition.confidentiality"/>
+            <label value="Use the confidentiality codes in Meta.security"/>
+            <short value="Use the confidentiality codes in Meta.security"/>
+            <definition value="Use the confidentiality codes in Meta.security (https://hl7.org/fhir/security-labels.html)"/>
+            <min value="0"/>
+            <max value="0"/>
+            <mustSupport value="false"/>
+        </element>
+        <element id="Composition.attester">
+            <path value="Composition.attester"/>
+            <slicing>
+                <discriminator>
+                    <type value="value"/>
+                    <path value="mode"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <mustSupport value="false"/>
+        </element>
+        <element id="Composition.attester:legal_attester">
+            <path value="Composition.attester"/>
+            <sliceName value="legal_attester"/>
+            <short value="attester"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.attester:legal_attester.mode">
+            <path value="Composition.attester.mode"/>
+            <short value="mode"/>
+            <max value="1"/>
+            <fixedCode value="legal"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.attester:legal_attester.party">
+            <path value="Composition.attester.party"/>
+            <short value="party"/>
+            <min value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.attester:professional_attester">
+            <path value="Composition.attester"/>
+            <sliceName value="professional_attester"/>
+            <short value="attester"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.attester:professional_attester.mode">
+            <path value="Composition.attester.mode"/>
+            <short value="mode"/>
+            <fixedCode value="professional"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.attester:professional_attester.party">
+            <path value="Composition.attester.party"/>
+            <short value="party"/>
+            <min value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.attester:personal_attester">
+            <path value="Composition.attester"/>
+            <sliceName value="personal_attester"/>
+            <short value="attester"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.attester:personal_attester.mode">
+            <path value="Composition.attester.mode"/>
+            <short value="mode"/>
+            <fixedCode value="personal"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.attester:personal_attester.party">
+            <path value="Composition.attester.party"/>
+            <short value="party"/>
+            <min value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Composition.custodian">
+            <path value="Composition.custodian"/>
+            <label value="custodian"/>
+            <short value="custodian"/>
+            <min value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+    </differential>
+</StructureDefinition>

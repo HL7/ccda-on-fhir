@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patient
+    xmlns="http://hl7.org/fhir">
+    <id value="example"/>
+    <meta>
+        <versionId value="9"/>
+        <lastUpdated value="2020-09-09T21:58:13.238+00:00"/>
+        <source value="#T77feouCUwFbnN3H"/>
+        <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"/>
+    </meta>
+ <extension url="http://hl7.org/fhir/us/core/StructureDefinition/us-core-race">
+    <extension url="ombCategory">
+      <valueCoding>
+        <system value="urn:oid:2.16.840.1.113883.6.238"/>
+        <code value="2106-3"/>
+        <display value="White"/>
+      </valueCoding>
+    </extension>
+    <extension url="ombCategory">
+      <valueCoding>
+        <system value="urn:oid:2.16.840.1.113883.6.238"/>
+        <code value="1002-5"/>
+        <display value="American Indian or Alaska Native"/>
+      </valueCoding>
+    </extension>
+    <extension url="ombCategory">
+      <valueCoding>
+        <system value="urn:oid:2.16.840.1.113883.6.238"/>
+        <code value="2028-9"/>
+        <display value="Asian"/>
+      </valueCoding>
+    </extension>
+    <extension url="detailed">
+      <valueCoding>
+        <system value="urn:oid:2.16.840.1.113883.6.238"/>
+        <code value="1586-7"/>
+        <display value="Shoshone"/>
+      </valueCoding>
+    </extension>
+    <extension url="detailed">
+      <valueCoding>
+        <system value="urn:oid:2.16.840.1.113883.6.238"/>
+        <code value="2036-2"/>
+        <display value="Filipino"/>
+      </valueCoding>
+    </extension>
+    <extension url="text">
+      <valueString value="Mixed"/>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity">
+    <extension url="ombCategory">
+      <valueCoding>
+        <system value="urn:oid:2.16.840.1.113883.6.238"/>
+        <code value="2135-2"/>
+        <display value="Hispanic or Latino"/>
+      </valueCoding>
+    </extension>
+    <extension url="detailed">
+      <valueCoding>
+        <system value="urn:oid:2.16.840.1.113883.6.238"/>
+        <code value="2184-0"/>
+        <display value="Dominican"/>
+      </valueCoding>
+    </extension>
+    <extension url="detailed">
+      <valueCoding>
+        <system value="urn:oid:2.16.840.1.113883.6.238"/>
+        <code value="2148-5"/>
+        <display value="Mexican"/>
+      </valueCoding>
+    </extension>
+    <extension url="text">
+      <valueString value="Hispanic or Latino"/>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex">
+    <valueCode value="F"/>
+  </extension>
+    <identifier>
+        <use value="usual"/>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+                <code value="MR"/>
+                <display value="Medical Record Number"/>
+            </coding>
+            <text value="Medical Record Number"/>
+        </type>
+        <system value="http://hospital.smarthealthit.org"/>
+        <value value="900"/>
+    </identifier>
+    <active value="true"/>
+    <name>
+        <family value="Noelle"/>
+        <given value="Paticia"/>
+    </name>
+    <telecom>
+        <system value="phone"/>
+        <value value="555-555-2003"/>
+        <use value="home"/>
+    </telecom>
+    <telecom>
+        <system value="email"/>
+        <value value="Patricia.Noelle@example.com"/>
+    </telecom>
+    <gender value="female"/>
+    <birthDate value="1954-10-17"/>
+    <address>
+        <line value="7247 Main St"/>
+        <city value="Springfield"/>
+        <state value="OK"/>
+        <postalCode value="62707"/>
+        <country value="US"/>
+    </address>
+</Patient>
