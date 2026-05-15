@@ -1,0 +1,48 @@
+# ╭─────────────────────────────────────────────────────────────────────────────╮
+# │                              IG Configuration                               │
+# ╰─────────────────────────────────────────────────────────────────────────────╯
+id: hl7.fhir.us.ccda
+canonical: http://hl7.org/fhir/us/ccda
+version: 2.0.0
+name: CCDAonFHIR
+title: C-CDA on FHIR
+status: active
+publisher:
+  name: HL7 International / Cross-Group Projects
+  url: http://www.hl7.org/Special/committees/cgp
+contact:
+  - name: HL7 International / Cross-Group Projects
+    telecom:
+      - system: url
+        value: http://www.hl7.org/Special/committees/cgp
+jurisdiction: urn:iso:std:iso:3166#US
+fhirVersion: 4.0.1
+
+# ╭─────────────────────────────────────────────────────────────────────────────╮
+# │                              Dependencies                                   │
+# ╰─────────────────────────────────────────────────────────────────────────────╯
+dependencies:
+  hl7.fhir.us.core: 6.1.0
+  hl7.fhir.uv.extensions.r4: 5.1.0
+
+# ╭─────────────────────────────────────────────────────────────────────────────╮
+# │                              Parameters                                     │
+# ╰─────────────────────────────────────────────────────────────────────────────╯
+copyrightYear: 2020+
+releaseLabel: STU2
+
+# ╭─────────────────────────────────────────────────────────────────────────────╮
+# │                              FSH-only options                               │
+# ╰─────────────────────────────────────────────────────────────────────────────╯
+FSHOnly: false
+
+# ╭─────────────────────────────────────────────────────────────────────────────╮
+# │                              Extension configuration                        │
+# ╰─────────────────────────────────────────────────────────────────────────────╯
+extension:
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg
+    valueCode: cgp
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+    valueCode: trial-use
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+    valueInteger: 2
