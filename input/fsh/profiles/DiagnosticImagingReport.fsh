@@ -48,6 +48,7 @@ Description: "A Diagnostic Imaging Report (DIR) is a document that contains a co
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains findings_entry 0..*
   * entry[findings_entry] only Reference(Observation)
     * ^sliceName = "findings_entry"
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."
@@ -66,6 +67,7 @@ Description: "A Diagnostic Imaging Report (DIR) is a document that contains a co
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains dicom_object_catalog_entry 0..*
   * entry[dicom_object_catalog_entry] only Reference(ImagingStudy)
     * ^sliceName = "dicom_object_catalog_entry"
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."

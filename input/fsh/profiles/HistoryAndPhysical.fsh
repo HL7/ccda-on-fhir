@@ -65,6 +65,7 @@ A History and Physical Examination is required upon hospital admission as well a
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains allergies_and_intolerances_entry 0..*
   * entry[allergies_and_intolerances_entry] only Reference($us-core-allergyintolerance)
     * ^sliceName = "allergies_and_intolerances_entry"
     * ^mustSupport = true
@@ -82,6 +83,7 @@ A History and Physical Examination is required upon hospital admission as well a
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains family_history_section_entry 0..*
   * entry[family_history_section_entry] only Reference($us-core-allergyintolerance)
     * ^sliceName = "family_history_section_entry"
     * ^mustSupport = true
@@ -109,6 +111,7 @@ A History and Physical Examination is required upon hospital admission as well a
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains medications_section_entry 0..*
   * entry[medications_section_entry] only Reference(MedicationStatement or $us-core-medication or $us-core-medicationrequest)
     * ^sliceName = "medications_section_entry"
     * ^mustSupport = true
@@ -125,6 +128,7 @@ A History and Physical Examination is required upon hospital admission as well a
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains past_medical_history_entry 0..*
   * entry[past_medical_history_entry] only Reference($us-core-condition)
     * ^sliceName = "past_medical_history_entry"
     * ^mustSupport = true
@@ -142,6 +146,7 @@ A History and Physical Examination is required upon hospital admission as well a
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains physical_exam_entry 0..*
   * entry[physical_exam_entry] only Reference(Observation)
     * ^sliceName = "physical_exam_entry"
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."
@@ -160,6 +165,7 @@ A History and Physical Examination is required upon hospital admission as well a
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains results_entry 0..*
   * entry[results_entry] only Reference($us-core-observation-lab)
     * ^sliceName = "results_entry"
     * ^mustSupport = true
@@ -187,6 +193,7 @@ A History and Physical Examination is required upon hospital admission as well a
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains smoking_status_entry 0..*
   * entry[smoking_status_entry] only Reference($us-core-smokingstatus)
     * ^sliceName = "smoking_status_entry"
     * ^short = "Smoking status"
@@ -205,6 +212,7 @@ A History and Physical Examination is required upon hospital admission as well a
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains vital_signs_entry 0..*
   * entry[vital_signs_entry] only Reference($vitalsigns)
     * ^sliceName = "vital_signs_entry"
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."
@@ -232,6 +240,7 @@ A History and Physical Examination is required upon hospital admission as well a
   * entry ^slicing.discriminator.type = #profile
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
+  * entry contains assessment_and_plan_entry 0..*
   * entry[assessment_and_plan_entry] only Reference($us-core-condition or Observation or Communication)
     * ^sliceName = "assessment_and_plan_entry"
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."
@@ -280,6 +289,7 @@ A History and Physical Examination is required upon hospital admission as well a
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains immunizations_entry 0..*
   * entry[immunizations_entry] only Reference($us-core-immunization)
     * ^sliceName = "immunizations_entry"
 * section[plan_of_treatment_section] ^label = "Plan of Treatment Section"
@@ -296,8 +306,8 @@ A History and Physical Examination is required upon hospital admission as well a
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains plan_of_treatment_entry 0..*
   * entry[plan_of_treatment_entry] only Reference($us-core-goal or $us-core-medicationrequest or $us-core-encounter or Communication or Appointment or CommunicationRequest or DeviceRequest or NutritionOrder or Task or ServiceRequest or VisionPrescription or RequestGroup)
-    * ^sliceName = "sliceEntry"
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."
 * section[problem_section] ^label = "Problem Section"
   * ^short = "Problem Section"
@@ -313,6 +323,7 @@ A History and Physical Examination is required upon hospital admission as well a
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains problem_entry 0..*
   * entry[problem_entry] only Reference($us-core-condition)
     * ^sliceName = "problem_entry"
     * ^mustSupport = true
@@ -330,6 +341,7 @@ A History and Physical Examination is required upon hospital admission as well a
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains procedures_entry 0..*
   * entry[procedures_entry] only Reference($us-core-procedure)
     * ^sliceName = "procedures_entry"
     * ^mustSupport = true

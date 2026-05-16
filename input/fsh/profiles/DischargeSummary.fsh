@@ -84,6 +84,7 @@ The best practice for a Discharge Summary is to include the discharge dispositio
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains allergy_entry 0..*
   * entry[allergy_entry] only Reference($us-core-allergyintolerance)
     * ^sliceName = "allergy_entry"
     * ^mustSupport = true
@@ -110,6 +111,7 @@ The best practice for a Discharge Summary is to include the discharge dispositio
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains discharge_diagnosis_entry 0..*
   * entry[discharge_diagnosis_entry] only Reference($us-core-condition)
     * ^sliceName = "discharge_diagnosis_entry"
     * ^mustSupport = true
@@ -128,8 +130,8 @@ The best practice for a Discharge Summary is to include the discharge dispositio
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains plan_of_treatment_entry 0..*
   * entry[plan_of_treatment_entry] only Reference($us-core-goal or $us-core-medicationrequest or $us-core-encounter or Communication or Appointment or CommunicationRequest or DeviceRequest or NutritionOrder or Task or ServiceRequest or VisionPrescription or RequestGroup)
-    * ^sliceName = "sliceEntry"
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."
 * section[discharge_medications_section] ^label = "Discharge Medications Section"
   * ^short = "Discharge Medications Section"
@@ -145,6 +147,7 @@ The best practice for a Discharge Summary is to include the discharge dispositio
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains discharge_medications_entry 0..*
   * entry[discharge_medications_entry] only Reference(MedicationStatement or $us-core-medication or $us-core-medicationrequest)
     * ^sliceName = "discharge_medications_entry"
     * ^mustSupport = true
@@ -162,6 +165,7 @@ The best practice for a Discharge Summary is to include the discharge dispositio
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains admission_diagnosis_entry 0..*
   * entry[admission_diagnosis_entry] only Reference($us-core-condition)
     * ^sliceName = "admission_diagnosis_entry"
     * ^mustSupport = true
@@ -179,6 +183,7 @@ The best practice for a Discharge Summary is to include the discharge dispositio
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains admission_medications_entry 0..*
   * entry[admission_medications_entry] only Reference(MedicationStatement or $us-core-medication or $us-core-medicationrequest)
     * ^sliceName = "admission_medications_entry"
     * ^mustSupport = true
@@ -213,6 +218,7 @@ The best practice for a Discharge Summary is to include the discharge dispositio
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains family_history_entry 0..*
   * entry[family_history_entry] only Reference(FamilyMemberHistory)
     * ^sliceName = "family_history_entry"
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."
@@ -231,6 +237,7 @@ The best practice for a Discharge Summary is to include the discharge dispositio
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains functional_status_entry 0..*
   * entry[functional_status_entry] only Reference($us-core-condition or Observation or ClinicalImpression)
     * ^sliceName = "functional_status_entry"
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."
@@ -298,6 +305,7 @@ The best practice for a Discharge Summary is to include the discharge dispositio
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains immunizations_entry 0..*
   * entry[immunizations_entry] only Reference($us-core-immunization)
     * ^sliceName = "immunizations_entry"
     * ^mustSupport = true
@@ -315,6 +323,7 @@ The best practice for a Discharge Summary is to include the discharge dispositio
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains nutrition_entry 0..*
   * entry[nutrition_entry] only Reference(Observation)
     * ^sliceName = "nutrition_entry"
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."
@@ -332,6 +341,7 @@ The best practice for a Discharge Summary is to include the discharge dispositio
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains past_medical_history_entry 0..*
   * entry[past_medical_history_entry] only Reference($us-core-condition)
     * ^sliceName = "past_medical_history_entry"
     * ^mustSupport = true
@@ -349,6 +359,7 @@ The best practice for a Discharge Summary is to include the discharge dispositio
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains problem_entry 0..*
   * entry[problem_entry] only Reference($us-core-condition)
     * ^sliceName = "problem_entry"
     * ^mustSupport = true
@@ -366,6 +377,7 @@ The best practice for a Discharge Summary is to include the discharge dispositio
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains procedure_entry 0..*
   * entry[procedure_entry] only Reference($us-core-procedure)
     * ^sliceName = "procedure_entry"
     * ^mustSupport = true
@@ -402,6 +414,7 @@ The best practice for a Discharge Summary is to include the discharge dispositio
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains smoking_status_entry 0..*
   * entry[smoking_status_entry] only Reference($us-core-smokingstatus)
     * ^sliceName = "smoking_status_entry"
     * ^short = "Smoking status"
@@ -420,6 +433,7 @@ The best practice for a Discharge Summary is to include the discharge dispositio
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains vital_signs_entry 0..*
   * entry[vital_signs_entry] only Reference($vitalsigns)
     * ^sliceName = "vital_signs_entry"
     * ^mustSupport = true
@@ -435,6 +449,7 @@ The best practice for a Discharge Summary is to include the discharge dispositio
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains goals_entry 0..*
   * entry[goals_entry] only Reference($us-core-goal)
     * ^sliceName = "goals_entry"
     * ^short = "entry"
@@ -451,6 +466,7 @@ The best practice for a Discharge Summary is to include the discharge dispositio
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains health_concerns_entry 0..*
   * entry[health_concerns_entry] only Reference($us-core-allergyintolerance or $us-core-condition or $us-core-observation-lab or $us-core-smokingstatus or $vitalsigns or ClinicalImpression or Observation or RiskAssessment or List or DocumentReference)
     * ^sliceName = "health_concerns_entry"
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."

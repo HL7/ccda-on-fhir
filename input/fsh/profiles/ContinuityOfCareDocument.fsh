@@ -79,6 +79,7 @@ More specific use cases, such as a Discharge Summary, Transfer Summary, Referral
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains allergy_entry 0..*
   * entry[allergy_entry] only Reference($us-core-allergyintolerance)
     * ^sliceName = "allergy_entry"
     * ^mustSupport = true
@@ -97,6 +98,7 @@ More specific use cases, such as a Discharge Summary, Transfer Summary, Referral
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains medication_entry 0..*
   * entry[medication_entry] only Reference(MedicationStatement or $us-core-medication or $us-core-medicationrequest)
     * ^sliceName = "medication_entry"
     * ^mustSupport = true
@@ -115,6 +117,7 @@ More specific use cases, such as a Discharge Summary, Transfer Summary, Referral
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains problems_entry 0..*
   * entry[problems_entry] only Reference($us-core-condition)
     * ^sliceName = "problems_entry"
     * ^mustSupport = true
@@ -133,6 +136,7 @@ More specific use cases, such as a Discharge Summary, Transfer Summary, Referral
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains sliceEntry 0..*
   * entry[sliceEntry] only Reference($us-core-observation-lab)
     * ^sliceName = "sliceEntry"
     * ^mustSupport = true
@@ -151,6 +155,7 @@ More specific use cases, such as a Discharge Summary, Transfer Summary, Referral
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains smoking_status_entry 0..*
   * entry[smoking_status_entry] only Reference($us-core-smokingstatus)
     * ^sliceName = "smoking_status_entry"
     * ^short = "Smoking status"
@@ -170,6 +175,7 @@ More specific use cases, such as a Discharge Summary, Transfer Summary, Referral
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains vital_signs_entry 0..*
   * entry[vital_signs_entry] only Reference($vitalsigns)
     * ^sliceName = "vital_signs_entry"
     * ^mustSupport = true
@@ -188,8 +194,8 @@ More specific use cases, such as a Discharge Summary, Transfer Summary, Referral
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains plan_of_treatment_entry 0..*
   * entry[plan_of_treatment_entry] only Reference($us-core-goal or $us-core-medicationrequest or $us-core-encounter or Communication or Appointment or CommunicationRequest or DeviceRequest or NutritionOrder or Task or ServiceRequest or VisionPrescription or RequestGroup)
-    * ^sliceName = "sliceEntry"
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."
 * section[procedures_section] ^label = "Procedures Section"
   * ^short = "Procedures Section"
@@ -206,6 +212,7 @@ More specific use cases, such as a Discharge Summary, Transfer Summary, Referral
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains procedure_entry 0..*
   * entry[procedure_entry] only Reference($us-core-procedure)
     * ^sliceName = "procedure_entry"
     * ^mustSupport = true
@@ -224,6 +231,7 @@ More specific use cases, such as a Discharge Summary, Transfer Summary, Referral
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains family_history_entry 0..*
   * entry[family_history_entry] only Reference(FamilyMemberHistory)
     * ^sliceName = "family_history_entry"
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."
@@ -242,6 +250,7 @@ More specific use cases, such as a Discharge Summary, Transfer Summary, Referral
   * entry ^slicing.discriminator.type = #profile
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
+  * entry contains advance_directive_entry 0..*
   * entry[advance_directive_entry] only Reference(Consent)
     * ^sliceName = "advance_directive_entry"
     * ^mustSupport = true
@@ -260,6 +269,7 @@ More specific use cases, such as a Discharge Summary, Transfer Summary, Referral
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains encounter_entry 0..*
   * entry[encounter_entry] only Reference($us-core-encounter)
     * ^sliceName = "encounter_entry"
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."
@@ -279,6 +289,7 @@ More specific use cases, such as a Discharge Summary, Transfer Summary, Referral
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains functional_status_entry 0..*
   * entry[functional_status_entry] only Reference(Observation)
     * ^sliceName = "functional_status_entry"
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."
@@ -298,6 +309,7 @@ More specific use cases, such as a Discharge Summary, Transfer Summary, Referral
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains immunization_entry 0..*
   * entry[immunization_entry] only Reference($us-core-immunization)
     * ^sliceName = "immunization_entry"
     * ^mustSupport = true
@@ -316,6 +328,7 @@ More specific use cases, such as a Discharge Summary, Transfer Summary, Referral
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains nutrition_entry 0..*
   * entry[nutrition_entry] only Reference(NutritionOrder or ClinicalImpression or Observation)
     * ^sliceName = "nutrition_entry"
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."
@@ -335,6 +348,7 @@ More specific use cases, such as a Discharge Summary, Transfer Summary, Referral
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains mental_status_entry 0..*
   * entry[mental_status_entry] only Reference(Observation)
     * ^sliceName = "mental_status_entry"
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."
@@ -355,6 +369,7 @@ More specific use cases, such as a Discharge Summary, Transfer Summary, Referral
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains medical_equipment_entry 0..*
   * entry[medical_equipment_entry] only Reference(Device or $us-core-procedure)
     * ^sliceName = "medical_equipment_entry"
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."
@@ -375,6 +390,7 @@ More specific use cases, such as a Discharge Summary, Transfer Summary, Referral
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains coverage_entry 0..*
   * entry[coverage_entry] only Reference(Coverage)
     * ^sliceName = "coverage_entry"
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."
@@ -391,6 +407,7 @@ More specific use cases, such as a Discharge Summary, Transfer Summary, Referral
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains goals_entry 0..*
   * entry[goals_entry] only Reference($us-core-goal)
     * ^sliceName = "goals_entry"
     * ^short = "entry"
@@ -407,6 +424,7 @@ More specific use cases, such as a Discharge Summary, Transfer Summary, Referral
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains health_concerns_entry 0..*
   * entry[health_concerns_entry] only Reference($us-core-allergyintolerance or $us-core-condition or $us-core-observation-lab or $us-core-smokingstatus or $vitalsigns or ClinicalImpression or Observation or RiskAssessment or List or DocumentReference)
     * ^sliceName = "health_concerns_entry"
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."

@@ -74,8 +74,8 @@ Key differentiators between a Care Plan profile and CCD  profile (another snapsh
     * ^slicing.discriminator.path = "reference"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains health_concerns_entry 0..*
   * entry[health_concerns_entry] only Reference($us-core-allergyintolerance or $us-core-condition or $us-core-observation-lab or $us-core-smokingstatus or $vitalsigns or ClinicalImpression or Observation or RiskAssessment or List or DocumentReference)
-    * ^sliceName = "health_concerns_entry"
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."
     * ^mustSupport = true
 * section[goals_section] ^short = "Goals Section"
@@ -90,8 +90,8 @@ Key differentiators between a Care Plan profile and CCD  profile (another snapsh
     * ^slicing.discriminator.path = "reference"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains goals_entry 0..*
   * entry[goals_entry] only Reference($us-core-goal)
-    * ^sliceName = "goals_entry"
     * ^short = "entry"
     * ^mustSupport = true
 * section[interventions_section] ^short = "Interventions Section"
@@ -107,8 +107,8 @@ Key differentiators between a Care Plan profile and CCD  profile (another snapsh
     * ^slicing.discriminator.path = "reference"
     * ^slicing.rules = #open
     * ^short = "entry"
-  * entry[interventions_section] only Reference(List or RequestGroup or MedicationDispense or Communication or ServiceRequest or $us-core-procedure or MedicationStatement or $us-core-medication or $us-core-medicationrequest)
-    * ^sliceName = "interventions_section"
+  * entry contains interventions_entry 0..*
+  * entry[interventions_entry] only Reference(List or RequestGroup or MedicationDispense or Communication or ServiceRequest or $us-core-procedure or MedicationStatement or $us-core-medication or $us-core-medicationrequest)
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."
     * ^mustSupport = true
 * section[eval_outcomes_section] ^short = "Health Status Evaluations and Outcomes Section"
@@ -124,7 +124,7 @@ Key differentiators between a Care Plan profile and CCD  profile (another snapsh
     * ^slicing.discriminator.path = "reference"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains eval_outcomes_entry 0..*
   * entry[eval_outcomes_entry] only Reference(Observation)
-    * ^sliceName = "eval_outcomes_entry"
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."
     * ^mustSupport = true

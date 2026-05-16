@@ -73,6 +73,7 @@ A Consultation Note includes the reason for the referral, history of present ill
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains allergy_intolerance_entry 0..*
   * entry[allergy_intolerance_entry] only Reference($us-core-allergyintolerance)
     * ^sliceName = "allergy_intolerance_entry"
     * ^mustSupport = true
@@ -103,6 +104,7 @@ A Consultation Note includes the reason for the referral, history of present ill
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains problem_section_entry 0..*
   * entry[problem_section_entry] only Reference($us-core-condition)
     * ^sliceName = "problem_section_entry"
     * ^mustSupport = true
@@ -121,6 +123,7 @@ A Consultation Note includes the reason for the referral, history of present ill
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains sliceEntry 0..*
   * entry[sliceEntry] only Reference(MedicationStatement or $us-core-medication or $us-core-medicationrequest)
     * ^sliceName = "sliceEntry"
 * section[physical_exam_section] ^label = "Physical Exam Section"
@@ -138,6 +141,7 @@ A Consultation Note includes the reason for the referral, history of present ill
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains sliceEntry 0..*
   * entry[sliceEntry] only Reference(Observation)
     * ^sliceName = "sliceEntry"
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."
@@ -156,6 +160,7 @@ A Consultation Note includes the reason for the referral, history of present ill
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains sliceEntry 0..*
   * entry[sliceEntry] only Reference($us-core-observation-lab)
     * ^sliceName = "sliceEntry"
 * section[advance_directives_section] ^label = "Advance Directives Section"
@@ -172,6 +177,7 @@ A Consultation Note includes the reason for the referral, history of present ill
   * entry ^slicing.discriminator.type = #profile
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
+  * entry contains advance_directive_entry 0..*
   * entry[advance_directive_entry] only Reference(Consent)
     * ^sliceName = "advance_directive_entry"
     * ^mustSupport = true
@@ -189,6 +195,7 @@ A Consultation Note includes the reason for the referral, history of present ill
   * entry ^slicing.discriminator.type = #profile
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
+  * entry contains sliceEntry 0..*
   * entry[sliceEntry] only Reference($us-core-condition or Observation or Communication)
     * ^sliceName = "sliceEntry"
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."
@@ -240,6 +247,7 @@ A Consultation Note includes the reason for the referral, history of present ill
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains sliceEntry 0..*
   * entry[sliceEntry] only Reference(FamilyMemberHistory)
     * ^sliceName = "sliceEntry"
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."
@@ -258,6 +266,7 @@ A Consultation Note includes the reason for the referral, history of present ill
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains sliceEntry 0..*
   * entry[sliceEntry] only Reference(Observation)
     * ^sliceName = "sliceEntry"
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."
@@ -287,6 +296,7 @@ A Consultation Note includes the reason for the referral, history of present ill
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains sliceEntry 0..*
   * entry[sliceEntry] only Reference($us-core-condition)
     * ^sliceName = "sliceEntry"
 * section[immunizations_section] ^label = "Immunizations Section"
@@ -304,6 +314,7 @@ A Consultation Note includes the reason for the referral, history of present ill
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains sliceEntry 0..*
   * entry[sliceEntry] only Reference($us-core-immunization)
     * ^sliceName = "sliceEntry"
 * section[medical_equipment_section] ^label = "Medical Equipment Section"
@@ -321,6 +332,7 @@ A Consultation Note includes the reason for the referral, history of present ill
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains medical_equipment_entry 0..*
   * entry[medical_equipment_entry] only Reference(Device or $us-core-procedure)
     * ^sliceName = "medical_equipment_entry"
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."
@@ -340,6 +352,7 @@ A Consultation Note includes the reason for the referral, history of present ill
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains sliceEntry 0..*
   * entry[sliceEntry] only Reference(Observation)
     * ^sliceName = "sliceEntry"
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."
@@ -358,6 +371,7 @@ A Consultation Note includes the reason for the referral, history of present ill
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains sliceEntry 0..*
   * entry[sliceEntry] only Reference(NutritionOrder or ClinicalImpression)
     * ^sliceName = "sliceEntry"
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."
@@ -376,8 +390,8 @@ A Consultation Note includes the reason for the referral, history of present ill
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains plan_of_treatment_entry 0..*
   * entry[plan_of_treatment_entry] only Reference($us-core-goal or $us-core-medicationrequest or $us-core-encounter or Communication or Appointment or CommunicationRequest or DeviceRequest or NutritionOrder or Task or ServiceRequest or VisionPrescription or RequestGroup)
-    * ^sliceName = "sliceEntry"
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."
 * section[procedures_section] ^label = "Procedures Section"
   * ^short = "Procedures Section"
@@ -394,6 +408,7 @@ A Consultation Note includes the reason for the referral, history of present ill
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains sliceEntry 0..*
   * entry[sliceEntry] only Reference($us-core-procedure)
     * ^sliceName = "sliceEntry"
 * section[reason_for_visit_section] ^label = "Reason for Visit Section"
@@ -433,8 +448,8 @@ A Consultation Note includes the reason for the referral, history of present ill
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains smokingStatusSliceEntry 0..*
   * entry[smokingStatusSliceEntry] only Reference($us-core-smokingstatus)
-    * ^sliceName = "sliceEntry"
     * ^short = "Smoking status"
 * section[vital_signs_section] ^label = "Vital Signs Section"
   * ^short = "Vital Signs Section"
@@ -451,5 +466,6 @@ A Consultation Note includes the reason for the referral, history of present ill
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains sliceEntry 0..*
   * entry[sliceEntry] only Reference($vitalsigns)
     * ^sliceName = "sliceEntry"

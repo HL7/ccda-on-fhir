@@ -55,6 +55,7 @@ The Operative Note is created immediately following a surgical or other high-ris
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains anesthesia_entry 0..*
   * entry[anesthesia_entry] only Reference(MedicationStatement or $us-core-medication or $us-core-medicationrequest or $us-core-procedure)
     * ^sliceName = "anesthesia_entry"
     * ^mustSupport = true
@@ -72,6 +73,7 @@ The Operative Note is created immediately following a surgical or other high-ris
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains complications_entry 0..*
   * entry[complications_entry] only Reference($us-core-condition)
     * ^sliceName = "complications_entry"
     * ^mustSupport = true
@@ -89,6 +91,7 @@ The Operative Note is created immediately following a surgical or other high-ris
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains preoperative_diagnosis_entry 0..*
   * entry[preoperative_diagnosis_entry] only Reference($us-core-condition)
     * ^sliceName = "preoperative_diagnosis_entry"
     * ^mustSupport = true
@@ -116,6 +119,7 @@ The Operative Note is created immediately following a surgical or other high-ris
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains procedure_findings_entry 0..*
   * entry[procedure_findings_entry] only Reference($us-core-condition)
     * ^sliceName = "procedure_findings_entry"
     * ^mustSupport = true
@@ -184,8 +188,8 @@ The Operative Note is created immediately following a surgical or other high-ris
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains plan_of_treatment_entry 0..*
   * entry[plan_of_treatment_entry] only Reference($us-core-goal or $us-core-medicationrequest or $us-core-encounter or Communication or Appointment or CommunicationRequest or DeviceRequest or NutritionOrder or Task or ServiceRequest or VisionPrescription or RequestGroup)
-    * ^sliceName = "sliceEntry"
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."
 * section[planned_procedure_section] ^label = "Planned Procedure Section"
   * ^short = "Planned Procedure Section"
@@ -201,6 +205,7 @@ The Operative Note is created immediately following a surgical or other high-ris
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains planned_procedure_entry 0..*
   * entry[planned_procedure_entry] only Reference(ServiceRequest)
     * ^sliceName = "planned_procedure_entry"
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."
@@ -225,14 +230,6 @@ The Operative Note is created immediately following a surgical or other high-ris
     * ^short = "Procedure Indications"
   * text 1.. MS
     * ^short = "This section contains only human readable content"
-* section[problem_section]
-  * entry ^slicing.discriminator.type = #profile
-    * ^slicing.discriminator.path = "resolve()"
-    * ^slicing.rules = #open
-    * ^short = "entry"
-  * entry[problem_entry] only Reference($us-core-condition)
-    * ^sliceName = "problem_entry"
-    * ^mustSupport = true
 * section[procedure_implants_section] ^label = "Procedure Implants Section"
   * ^short = "Procedure Implants Section"
   * title 1.. MS

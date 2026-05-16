@@ -69,6 +69,7 @@ A Progress Note is not a re-evaluation note. A Progress Note is not intended to 
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains allergies_and_intolerances_entry 0..*
   * entry[allergies_and_intolerances_entry] only Reference($us-core-allergyintolerance)
     * ^sliceName = "allergies_and_intolerances_entry"
     * ^mustSupport = true
@@ -85,6 +86,7 @@ A Progress Note is not a re-evaluation note. A Progress Note is not intended to 
   * entry ^slicing.discriminator.type = #profile
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
+  * entry contains assessment_and_plan_entry 0..*
   * entry[assessment_and_plan_entry] only Reference($us-core-condition or Observation or Communication)
     * ^sliceName = "assessment_and_plan_entry"
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."
@@ -123,6 +125,7 @@ A Progress Note is not a re-evaluation note. A Progress Note is not intended to 
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains interventions_section 0..*
   * entry[interventions_section] only Reference(List or RequestGroup)
     * ^sliceName = "interventions_section"
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."
@@ -141,6 +144,7 @@ A Progress Note is not a re-evaluation note. A Progress Note is not intended to 
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains medications_entry 0..*
   * entry[medications_entry] only Reference(MedicationStatement or $us-core-medication or $us-core-medicationrequest)
     * ^sliceName = "medications_entry"
     * ^mustSupport = true
@@ -159,6 +163,7 @@ A Progress Note is not a re-evaluation note. A Progress Note is not intended to 
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains nutrition_entry 0..*
   * entry[nutrition_entry] only Reference(Observation)
     * ^sliceName = "nutrition_entry"
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."
@@ -188,6 +193,7 @@ A Progress Note is not a re-evaluation note. A Progress Note is not intended to 
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains physical_exam_entry 0..*
   * entry[physical_exam_entry] only Reference(Observation)
     * ^sliceName = "physical_exam_entry"
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."
@@ -206,8 +212,8 @@ A Progress Note is not a re-evaluation note. A Progress Note is not intended to 
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains plan_of_treatment_entry 0..*
   * entry[plan_of_treatment_entry] only Reference($us-core-goal or $us-core-medicationrequest or $us-core-encounter or Communication or Appointment or CommunicationRequest or DeviceRequest or NutritionOrder or Task or ServiceRequest or VisionPrescription or RequestGroup)
-    * ^sliceName = "sliceEntry"
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."
 * section[problems_section] ^label = "Problems Section"
   * ^short = "Problems Section"
@@ -219,14 +225,6 @@ A Progress Note is not a re-evaluation note. A Progress Note is not intended to 
     * ^short = "Problem list"
   * text 1.. MS
     * ^short = "text"
-* section[problem_section]
-  * entry ^slicing.discriminator.type = #profile
-    * ^slicing.discriminator.path = "resolve()"
-    * ^slicing.rules = #open
-    * ^short = "entry"
-  * entry[problem_entry] only Reference($us-core-condition)
-    * ^sliceName = "problem_entry"
-    * ^mustSupport = true
 * section[results_section] ^label = "Results Section"
   * ^short = "Results Section"
   * title 1.. MS
@@ -242,6 +240,7 @@ A Progress Note is not a re-evaluation note. A Progress Note is not intended to 
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains results_entry 0..*
   * entry[results_entry] only Reference($us-core-observation-lab)
     * ^sliceName = "results_entry"
     * ^mustSupport = true
@@ -279,6 +278,7 @@ A Progress Note is not a re-evaluation note. A Progress Note is not intended to 
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains vital_signs_entry 0..*
   * entry[vital_signs_entry] only Reference($vitalsigns)
     * ^sliceName = "vital_signs_entry"
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."

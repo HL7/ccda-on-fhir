@@ -71,6 +71,7 @@ Examples of referral situations are:
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains allergies_and_intolerances_entry 0..*
   * entry[allergies_and_intolerances_entry] only Reference($us-core-allergyintolerance)
     * ^sliceName = "allergies_and_intolerances_entry"
     * ^mustSupport = true
@@ -87,6 +88,7 @@ Examples of referral situations are:
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains medications_entry 0..*
   * entry[medications_entry] only Reference(MedicationStatement or $us-core-medication or $us-core-medicationrequest)
     * ^sliceName = "medications_entry"
     * ^mustSupport = true
@@ -105,6 +107,7 @@ Examples of referral situations are:
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains problem_entry 0..*
   * entry[problem_entry] only Reference($us-core-condition)
     * ^sliceName = "problem_entry"
     * ^mustSupport = true
@@ -121,6 +124,7 @@ Examples of referral situations are:
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains reason_for_referral_entry 0..*
   * entry[reason_for_referral_entry] only Reference(ServiceRequest)
     * ^sliceName = "reason_for_referral_entry"
     * ^mustSupport = true
@@ -137,6 +141,7 @@ Examples of referral situations are:
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains functional_status_entry 0..*
   * entry[functional_status_entry] only Reference(Observation)
     * ^sliceName = "functional_status_entry"
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."
@@ -154,6 +159,7 @@ Examples of referral situations are:
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains mental_status_entry 0..*
   * entry[mental_status_entry] only Reference(Observation)
     * ^sliceName = "mental_status_entry"
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."
@@ -173,6 +179,7 @@ Examples of referral situations are:
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains nutrition_entry 0..*
   * entry[nutrition_entry] only Reference(Observation)
     * ^sliceName = "nutrition_entry"
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."
@@ -192,8 +199,8 @@ Examples of referral situations are:
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains plan_of_treatment_entry 0..*
   * entry[plan_of_treatment_entry] only Reference($us-core-goal or $us-core-medicationrequest or $us-core-encounter or Communication or Appointment or CommunicationRequest or DeviceRequest or NutritionOrder or Task or ServiceRequest or VisionPrescription or RequestGroup)
-    * ^sliceName = "sliceEntry"
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."
 * section[results_section] ^label = "Results Section"
   * ^short = "Results Section"
@@ -210,6 +217,7 @@ Examples of referral situations are:
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains results_entry 0..*
   * entry[results_entry] only Reference($us-core-observation-lab)
     * ^sliceName = "results_entry"
     * ^mustSupport = true
@@ -226,6 +234,7 @@ Examples of referral situations are:
   * entry ^slicing.discriminator.type = #profile
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
+  * entry contains assessment_and_plan_entry 0..*
   * entry[assessment_and_plan_entry] only Reference($us-core-condition or Observation or Communication)
     * ^sliceName = "assessment_and_plan_entry"
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."
@@ -244,6 +253,7 @@ Examples of referral situations are:
   * entry ^slicing.discriminator.type = #profile
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
+  * entry contains advance_directive_entry 0..*
   * entry[advance_directive_entry] only Reference(Consent)
     * ^sliceName = "advance_directive_entry"
     * ^mustSupport = true
@@ -271,6 +281,7 @@ Examples of referral situations are:
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains family_history_entry 0..*
   * entry[family_history_entry] only Reference(FamilyMemberHistory)
     * ^sliceName = "family_history_entry"
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."
@@ -297,6 +308,7 @@ Examples of referral situations are:
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains past_medical_history_entry 0..*
   * entry[past_medical_history_entry] only Reference($us-core-condition)
     * ^sliceName = "past_medical_history_entry"
     * ^mustSupport = true
@@ -324,6 +336,7 @@ Examples of referral situations are:
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains immunizations_entry 0..*
   * entry[immunizations_entry] only Reference($us-core-immunization)
     * ^sliceName = "immunizations_entry"
     * ^mustSupport = true
@@ -342,6 +355,7 @@ Examples of referral situations are:
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains medical_equipment_entry 0..*
   * entry[medical_equipment_entry] only Reference(Device or $us-core-procedure)
     * ^sliceName = "medical_equipment_entry"
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."
@@ -359,6 +373,7 @@ Examples of referral situations are:
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains physical_exam_entry 0..*
   * entry[physical_exam_entry] only Reference(Observation)
     * ^sliceName = "physical_exam_entry"
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."
@@ -378,6 +393,7 @@ Examples of referral situations are:
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains procedures_entry 0..*
   * entry[procedures_entry] only Reference($us-core-procedure)
     * ^sliceName = "procedures_entry"
     * ^mustSupport = true
@@ -405,6 +421,7 @@ Examples of referral situations are:
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains social_history_entry 0..*
   * entry[social_history_entry] only Reference($us-core-smokingstatus)
     * ^sliceName = "social_history_entry"
     * ^short = "Smoking status"
@@ -424,6 +441,7 @@ Examples of referral situations are:
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains vital_signs_entry 0..*
   * entry[vital_signs_entry] only Reference($vitalsigns)
     * ^sliceName = "vital_signs_entry"
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."
@@ -440,6 +458,7 @@ Examples of referral situations are:
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains goals_entry 0..*
   * entry[goals_entry] only Reference($us-core-goal)
     * ^sliceName = "goals_entry"
     * ^short = "entry"
@@ -456,6 +475,7 @@ Examples of referral situations are:
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
     * ^short = "entry"
+  * entry contains health_concerns_entry 0..*
   * entry[health_concerns_entry] only Reference($us-core-allergyintolerance or $us-core-condition or $us-core-observation-lab or $us-core-smokingstatus or $vitalsigns or ClinicalImpression or Observation or RiskAssessment or List or DocumentReference)
     * ^sliceName = "health_concerns_entry"
     * ^short = "This section contains unprofiled resources not covered by US Core. Please refer to C-CDA R2.1 for guidance on terminology, etc."
