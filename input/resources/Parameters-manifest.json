@@ -1,0 +1,10 @@
+{
+  "resourceType": "Parameters",
+  "id": "manifest",
+  "parameter": [
+    {
+      "name": "force-valueset-version",
+      "valueCanonical": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.877|20260410"
+    }
+  ]
+}

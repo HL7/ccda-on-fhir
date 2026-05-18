@@ -15,7 +15,7 @@ Usage: #example
 * subject = Reference(example) "Amy V. Shaw"
 * date = "2016-02-28T09:10:14Z"
 * author = Reference(ccda-practitionerrole-example) "Ronald Bone, MD"
-* title = "Continuity of Care Document"
+* title = "Continuity of Care Document Example"
 * attester
   * mode = #legal
   * time = "2016-06-15T09:10:14Z"
@@ -56,14 +56,14 @@ Usage: #example
   * entry = Reference(procedure-rehab)
 * section[+]
   * title = "Results Section"
-  * code = $loinc#30954-2 "Relevant diagnostic tests/laboratory data Narrative"
+  * code = $loinc#30954-2 "Relevant diagnostic tests/laboratory data note"
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Result Type</b></td><td><b>Quantity Value</b></td><td><b>Date</b></td><td><b>Status</b></td></tr><tr><td>Glucose [Moles/volume] in Blood</td><td>6.3 mmol/l</td><td>2016/06/15</td><td>Final</td></tr></table></div>"
   * entry = Reference(observation-lab-urine)
 * section[+]
   * title = "Advance Directives Section"
-  * code = $loinc#42348-3 "Advance directives"
+  * code = $loinc#42348-3 "Advance healthcare directives"
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Name</b></td><td><b>Applies Period</b></td></tr><tr><td>Resuscitation</td><td>2010/01/01 - 2025/01/01</td></tr></table></div>"
@@ -75,7 +75,7 @@ Usage: #example
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Encounter</b></td><td><b>Performer</b></td><td><b>Location</b></td><td><b>Date</b></td></tr><tr><td>Checkup Examination</td><td>Dr. S. Steene</td><td>Community Urgent Care Center</td><td>2016/04/18</td></tr></table></div>"
 * section[+]
   * title = "Family History Section"
-  * code = $loinc#10157-6 "History of family member diseases Narrative"
+  * code = $loinc#10157-6 "History of family member diseases note"
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Relationship</b></td><td><b>Diagnosis</b></td><td><b>Age at Onset</b></td></tr><tr><td>Father</td><td>Myocardial Infarction(cause of Death)</td><td>57</td></tr><tr><td>Father</td><td>Diabetes</td><td>40</td></tr></table></div>"
@@ -87,7 +87,7 @@ Usage: #example
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Functional or Cognitive Finding</b></td><td><b>Observation</b></td><td><b>Observation Date</b></td><td><b>Condition Status</b></td></tr><tr><td>Ambulation (Dependent to Independent</td><td>Independently able</td><td>2016/06/15</td><td>Active</td></tr><tr><td>Finding of Functional Performance and Activity</td><td>Dyspnea</td><td>2016/06/15</td><td>Active</td></tr><tr><td>Cognitive Function Finding</td><td>Memory Impairment</td><td>2010/04/17</td><td>Active</td></tr></table></div>"
 * section[+]
   * title = "Immunizations Section"
-  * code = $loinc#11369-6 "History of Immunization Narrative"
+  * code = $loinc#11369-6 "History of Immunization note"
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Vaccine</b></td><td><b>Date</b></td><td><b>Status</b></td></tr><tr><td>Fluvax (Influenza)</td><td>2014/05/29</td><td>Completed</td></tr></table></div>"
@@ -106,7 +106,7 @@ Usage: #example
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Date</b></td><td><b>Mental Status</b></td><td><b>Support System</b></td></tr><tr><td>2016/06/15</td><td>Good</td><td>Not required</td></tr><tr><td>2012/04/29</td><td>Dimentia</td><td>Daily Home Care</td></tr></table></div>"
 * section[+]
   * title = "Social History Section"
-  * code = $loinc#29762-2 "Social history Narrative"
+  * code = $loinc#29762-2 "Social history note"
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Social History Element</b></td><td><b>Description</b></td><td><b>Effective Dates</b></td></tr><tr><td>Smoking</td><td>1 pack tobacco per day</td><td>2010/01/01 - 2016/06/15</td></tr></table></div>"
@@ -131,7 +131,7 @@ Usage: #example
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Supply/Device</b></td><td><b>Date Supplied</b></td></tr><tr><td>Automatic Implantable cardioverter/defbrillator</td><td>2015/05/29</td></tr><tr><td>Wheelchair</td><td>2016/06/15</td></tr></table></div>"
 * section[+]
   * title = "Vital Signs Section"
-  * code = $loinc#8716-3 "Vital signs"
+  * code = $loinc#8716-3 "Vital signs note"
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Vital Sign</b></td><td><b>Date</b></td><td><b>Value</b></td></tr><tr><td>Temperature</td><td>2016/06/15</td><td>39 Degrees Celcius</td></tr></table></div>"

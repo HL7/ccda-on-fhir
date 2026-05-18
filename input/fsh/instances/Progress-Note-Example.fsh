@@ -15,7 +15,7 @@ Usage: #example
 * subject = Reference(example) "Amy V. Shaw"
 * date = "2016-06-15T09:10:14Z"
 * author = Reference(ccda-practitionerrole-example) "Ronald Bone, MD"
-* title = "Progress Note"
+* title = "Progress Note Example"
 * attester
   * mode = #legal
   * time = "2012-01-04T09:10:14Z"
@@ -66,7 +66,7 @@ Usage: #example
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Date</b></td><td><b>Nutritional Status</b></td><td><b>Diet</b></td></tr><tr><td>2005/12/29</td><td>Well nourished</td><td>Low sodium diet, excessive carbohydrate</td></tr><tr><td>2010/05/26</td><td>Slight dehydration</td><td>High protein, low fibre</td></tr></table></div>"
 * section[+]
   * title = "Physical Exam Section"
-  * code = $loinc#29545-1 "Physical findings Narrative"
+  * code = $loinc#29545-1 "Physical findings note"
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>HEENT: All normal to examination.</p><p>&gt;HEART: RRR, no murmur.</p><p>THORAX &amp; LUNGS: Clear without rhonchi or wheeze.</p><p>ABDOMEN: Marked distension and tenderness, slightly obese, pos\r\n                                bowelsounds.</p><p>BACK: Normal to inspection and palpation, without tenderness; no\r\n                                presacral edema.</p><p>EXTREMITIES: Doughy edema bilaterally, chronic stasis changes, no\r\n                                asymmetrical swelling.</p></div>"
@@ -110,14 +110,14 @@ Usage: #example
   * entry = Reference(condition-problem)
 * section[+]
   * title = "Results Section"
-  * code = $loinc#30954-2 "Relevant diagnostic tests/laboratory data Narrative"
+  * code = $loinc#30954-2 "Relevant diagnostic tests/laboratory data note"
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Result Type</b></td><td><b>Quantity Value</b></td><td><b>Date</b></td><td><b>Status</b></td></tr><tr><td>Glucose [Moles/volume] in Blood</td><td>6.3 mmol/l</td><td>2016/06/15</td><td>Final</td></tr></table></div>"
   * entry = Reference(observation-lab-urine)
 * section[+]
   * title = "Vital Signs Section"
-  * code = $loinc#8716-3 "Vital signs"
+  * code = $loinc#8716-3 "Vital signs note"
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Vital Sign</b></td><td><b>Date</b></td><td><b>Value</b></td></tr><tr><td>Temperature</td><td>2016/06/15</td><td>39 Degrees Celcius</td></tr></table></div>"

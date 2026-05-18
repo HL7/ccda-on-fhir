@@ -15,7 +15,7 @@ Usage: #example
 * subject = Reference(example) "Amy V. Shaw"
 * date = "2016-06-15T09:10:14Z"
 * author = Reference(ccda-practitionerrole-example) "Ronald Bone, MD"
-* title = "Transfer Summary"
+* title = "Transfer Summary Example"
 * custodian = Reference(organization-1) "Acme Labs"
 * event
   * code = $sct#73761001 "Colonoscopy"
@@ -31,7 +31,7 @@ Usage: #example
   * entry = Reference(allergy-intolerance)
 * section[+]
   * title = "Advance Directives Section"
-  * code = $loinc#42348-3 "Advance directives"
+  * code = $loinc#42348-3 "Advance healthcare directives"
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Name</b></td><td><b>Applies Period</b></td></tr><tr><td>Resuscitation</td><td>2015/01/01 - 2016/12/31</td></tr></table></div>"
@@ -67,7 +67,7 @@ Usage: #example
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Encounter</b></td><td><b>Performer</b></td><td><b>Location</b></td><td><b>Date</b></td></tr><tr><td>Checkup Examination</td><td>Dr. S. Steene</td><td>Community Urgent Care Center</td><td>2015/09/26</td></tr></table></div>"
 * section[+]
   * title = "Past Medical History Section"
-  * code = $loinc#11348-0 "History of Past illness Narrative"
+  * code = $loinc#11348-0 "History of Past illness note"
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Problem Name</b></td><td><b>Type</b></td><td><b>Onset Date</b></td><td><b>Abatement Date</b></td><td><b>Status</b></td></tr><tr><td>Fever</td><td>Condition</td><td>2016-04-01</td><td>2016-04-14</td><td>Complete</td></tr></table></div>"
@@ -80,13 +80,13 @@ Usage: #example
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This patient was only recently discharged for a recurrent GI bleed as\r\n                                described below. </p><p>He presented to the ER today c/o a dark stool yesterday but a normal\r\n                                brown stool today. On exam he was hypotensive in the 80?s resolved\r\n                                after .... .... .... </p><p>Lab at discharge: Glucose 112, BUN 16, creatinine 1.1, electrolytes\r\n                                normal. H. pylori antibody pending. Admission hematocrit 16%,\r\n                                discharge hematocrit 29%. WBC 7300, platelet count 256,000.\r\n                                Urinalysis normal. Urine culture: No growth. INR 1.1, PTT 40. </p><p>He was transfused with 6 units of packed red blood cells with ....\r\n                                .... .... </p><p>GI evaluation 12 September: Colonoscopy showed single red clot in\r\n                                .... ........ </p></div>"
 * section[+]
   * title = "Family History Section"
-  * code = $loinc#10157-6 "History of family member diseases Narrative"
+  * code = $loinc#10157-6 "History of family member diseases note"
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Relationship</b></td><td><b>Diagnosis</b></td><td><b>Age at Onset</b></td></tr><tr><td>Father</td><td>Myocardial Infarction(cause of Death)</td><td>57</td></tr><tr><td>Father</td><td>Diabetes</td><td>40</td></tr></table></div>"
 * section[+]
   * title = "Social History Section"
-  * code = $loinc#29762-2 "Social history Narrative"
+  * code = $loinc#29762-2 "Social history note"
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Social History Element</b></td><td><b>Description</b></td><td><b>Effective Dates</b></td></tr><tr><td>Smoking</td><td>1 pack tobacco per day</td><td>2005/05/01 - 2010/02/28</td></tr></table></div>"
@@ -156,7 +156,7 @@ Usage: #example
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Diverticula of intestine</p></div>"
 * section[+]
   * title = "Immunizations Section"
-  * code = $loinc#11369-6 "History of Immunization Narrative"
+  * code = $loinc#11369-6 "History of Immunization note"
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Vaccine</b></td><td><b>Date</b></td><td><b>Status</b></td></tr><tr><td>Fluvax (Influenza)</td><td>2016-04-05</td><td>Completed</td></tr></table></div>"
@@ -175,14 +175,14 @@ Usage: #example
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Colonoscopy</p></div>"
 * section[+]
   * title = "Results Section"
-  * code = $loinc#30954-2 "Relevant diagnostic tests/laboratory data Narrative"
+  * code = $loinc#30954-2 "Relevant diagnostic tests/laboratory data note"
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Result Type</b></td><td><b>Quantity Value</b></td><td><b>Date</b></td><td><b>Status</b></td></tr><tr><td>Glucose [Moles/volume] in Blood</td><td>6.3 mmol/l</td><td>2016/06/15</td><td>Final</td></tr></table></div>"
   * entry = Reference(observation-lab-urine)
 * section[+]
   * title = "Vital Signs Section"
-  * code = $loinc#8716-3 "Vital signs"
+  * code = $loinc#8716-3 "Vital signs note"
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Vital Sign</b></td><td><b>Date</b></td><td><b>Value</b></td></tr><tr><td>Temperature</td><td>2016/06/15</td><td>39 Degrees Celcius</td></tr></table></div>"

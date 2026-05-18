@@ -17,7 +17,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:d0dbd5a1-0bd7-4205-b936-09482c02c6d9) "Amy V. Shaw"
 * date = "2016-06-15T09:10:14Z"
 * author = Reference(urn:uuid:23d3a2c1-44ae-491b-94d3-764d2a9d8f8c) "Brenda Jennings Richard MD"
-* title = "Care Plan"
+* title = "Care Plan Example"
 * attester
   * mode = #legal
   * time = "2016-06-15T09:10:14Z"

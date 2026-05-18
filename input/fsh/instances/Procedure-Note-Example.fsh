@@ -33,7 +33,7 @@ Usage: #example
 * subject = Reference(example) "Amy V. Shaw"
 * date = "2016-02-28T09:10:14Z"
 * author = Reference(ccda-practitionerrole-example) "Ronald Bone, MD"
-* title = "Procedure Note"
+* title = "Procedure Note Example"
 * attester
   * mode = #legal
   * time = "2012-01-04T09:10:14Z"
@@ -146,13 +146,13 @@ Usage: #example
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Asthmatic symptoms while under general anesthesia.</p></div>"
 * section[+]
   * title = "Family History Section"
-  * code = $loinc#10157-6 "History of family member diseases Narrative"
+  * code = $loinc#10157-6 "History of family member diseases note"
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Relationship</b></td><td><b>Diagnosis</b></td><td><b>Age at Onset</b></td></tr><tr><td>Father</td><td>Myocardial Infarction(cause of Death)</td><td>57</td></tr><tr><td>Father</td><td>Diabetes</td><td>40</td></tr></table></div>"
 * section[+]
   * title = "Past Medical History Section"
-  * code = $loinc#11348-0 "History of Past illness Narrative"
+  * code = $loinc#11348-0 "History of Past illness note"
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Problem Name</b></td><td><b>Type</b></td><td><b>Onset Date</b></td><td><b>Abatement Date</b></td><td><b>Status</b></td></tr><tr><td>Fever</td><td>Condition</td><td>2016-04-01</td><td>2016-04-14</td><td>Complete</td></tr></table></div>"
@@ -178,7 +178,7 @@ Usage: #example
   * entry = Reference(medication-statement)
 * section[+]
   * title = "Physical Exam Section"
-  * code = $loinc#29545-1 "Physical findings Narrative"
+  * code = $loinc#29545-1 "Physical findings note"
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>HEENT: All normal to examination.</p><p>&gt;HEART: RRR, no murmur.</p><p>THORAX &amp; LUNGS: Clear without rhonchi or wheeze.</p><p>ABDOMEN: Marked distension and tenderness, slightly obese, pos\r\n                                bowelsounds.</p><p>BACK: Normal to inspection and palpation, without tenderness; no\r\n                                presacral edema.</p><p>EXTREMITIES: Doughy edema bilaterally, chronic stasis changes, no\r\n                                asymmetrical swelling.</p></div>"
@@ -209,7 +209,7 @@ Usage: #example
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Patient denies recent history of fever or malaise. Positive for\r\n                                weakness and shortness of breath. Several episodes of abdominal\r\n                                tenderness. No recent headaches. Positive for osteoarthritis in\r\n                                hips, knees and hands. </p></div>"
 * section[+]
   * title = "Social History Section"
-  * code = $loinc#29762-2 "Social history Narrative"
+  * code = $loinc#29762-2 "Social history note"
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Social History Element</b></td><td><b>Description</b></td><td><b>Effective Dates</b></td></tr><tr><td>Smoking</td><td>1 pack tobacco per day</td><td>2005/05/01 - 2010/02/28</td></tr></table></div>"

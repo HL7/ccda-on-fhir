@@ -1,5 +1,5 @@
 Instance: Inline-Instance-for-Complete-Document-Bundle-Example-2
-InstanceOf: PractitionerRole
+InstanceOf: $us-core-practitionerrole
 Usage: #inline
 * id = "ccda-practitionerrole-example"
 * practitioner = Reference(urn:uuid:51819bca-6cdd-4a9c-a76f-51b4f50e7fd2) "Brenda Jennings Richard MD"

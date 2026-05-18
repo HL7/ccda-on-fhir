@@ -15,7 +15,7 @@ Usage: #example
 * subject = Reference(example) "Amy V. Shaw"
 * date = "2016-02-28T09:10:14Z"
 * author = Reference(ccda-practitionerrole-example) "Ronald Bone, MD"
-* title = "Discharge Summary"
+* title = "Discharge Summary Example"
 * custodian = Reference(organization-1) "Community Health and Hospitals"
 * section[0]
   * title = "Allergies and Intolerances Section"
@@ -56,7 +56,7 @@ Usage: #example
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Medication</b></td><td><b>Directions</b></td><td><b>Start Date</b></td><td><b>Status</b></td><td><b>Indications</b></td><td><b>Fill Instructions</b></td></tr><tr><td>Pepcid Complete (MAGNESIUM HYDROXIDE0</td><td>Chew one tablet completely and swallow as needed </td><td>20160615</td><td>Active</td><td>Bloating</td><td>Generic substitution allowed</td></tr></table></div>"
 * section[+]
   * title = "Past Medical History Section"
-  * code = $loinc#11348-0 "History of Past illness Narrative"
+  * code = $loinc#11348-0 "History of Past illness note"
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Problem Name</b></td><td><b>Type</b></td><td><b>Onset Date</b></td><td><b>Abatement Date</b></td><td><b>Status</b></td></tr><tr><td>Fever</td><td>Condition</td><td>2016-06-15</td><td>2016-06-15</td><td>Complete</td></tr></table></div>"
@@ -75,13 +75,13 @@ Usage: #example
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Patient denies recent history of fever or malaise. Positive for\r\n                                weakness and shortness of breath. One episode of melena. No recent\r\n                                headaches. Positive for osteoarthritis in hips, knees and hands.\r\n\t\t\t\t\t\t\t</p></div>"
 * section[+]
   * title = "Family History Section"
-  * code = $loinc#10157-6 "History of family member diseases Narrative"
+  * code = $loinc#10157-6 "History of family member diseases note"
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Relationship</b></td><td><b>Diagnosis</b></td><td><b>Age at Onset</b></td></tr><tr><td>Father</td><td>Myocardial Infarction(cause of Death)</td><td>57</td></tr><tr><td>Father</td><td>Diabetes</td><td>40</td></tr></table></div>"
 * section[+]
   * title = "Social History Section"
-  * code = $loinc#29762-2 "Social history Narrative"
+  * code = $loinc#29762-2 "Social history note"
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Social History Element</b></td><td><b>Description</b></td><td><b>Effective Dates</b></td></tr><tr><td>Smoking</td><td>1 pack tobacco per day</td><td>2005/05/01 - 2010/02/28</td></tr></table></div>"
@@ -156,7 +156,7 @@ Usage: #example
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table border=\"1\" width=\"100%\"><thead><tr><th>Laboratory Information</th><th>Chemistries and drug levels</th></tr></thead><tbody><tr><td>Potasium</td><td>4.0</td></tr><tr><td>NA (135-145meq/l)</td><td>140</td></tr></tbody></table><br/><table border=\"1\" width=\"100%\"><thead><tr><th>Other Tests</th><th>Results</th></tr></thead><tbody><tr><td>EKG</td><td>Sinus rhythm without acute changes.</td></tr></tbody></table></div>"
 * section[+]
   * title = "Immunizations Section"
-  * code = $loinc#11369-6 "History of Immunization Narrative"
+  * code = $loinc#11369-6 "History of Immunization note"
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Vaccine</b></td><td><b>Date</b></td><td><b>Status</b></td></tr><tr><td>Fluvax (Influenza)</td><td>2016-04-05</td><td>Completed</td></tr></table></div>"
@@ -169,7 +169,7 @@ Usage: #example
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Date</b></td><td><b>Nutritional Status</b></td><td><b>Diet</b></td></tr><tr><td>2016/06/15</td><td>Well nourished</td><td>Low sodium diet, excessive carbohydrate</td></tr><tr><td>2016/06/15</td><td>Slight dehydration</td><td>High protein, low fibre</td></tr></table></div>"
 * section[+]
   * title = "Vital Signs Section"
-  * code = $loinc#8716-3 "Vital signs"
+  * code = $loinc#8716-3 "Vital signs note"
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Vital Sign</b></td><td><b>Date</b></td><td><b>Value</b></td></tr><tr><td>Temperature</td><td>2016/06/15</td><td>39 Degrees Celcius</td></tr></table></div>"

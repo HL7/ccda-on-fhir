@@ -61,25 +61,21 @@
 <artifact id="Procedure/CF-procedure" key="Binary-CF-procedure" name="CF-procedure"/>
 <artifact deprecated="true" id="Procedure/CF-procedure" key="Procedure-CF-procedure" name="CF-procedure-example"/>
 <artifact deprecated="true" id="StructureDefinition/Care-Plan-Document" key="Composition-Care-Plan-Example" name="Care Plan"/>
-<artifact deprecated="true" id="Composition/Care-Plan-Example" key="Composition-Care-Plan-Example" name="Care Plan"/>
 <artifact deprecated="true" id="StructureDefinition/Care-Plan-Document" key="StructureDefinition-Care-Plan-Document" name="Care Plan Document"/>
 <artifact deprecated="true" id="ValueSet/2.16.840.1.113762.1.4.1099.10" key="ValueSet-2.16.840.1.113762.1.4.1099.10" name="Care Plan Document Type"/>
+<artifact deprecated="true" id="Composition/Care-Plan-Example" key="Composition-Care-Plan-Example" name="Care Plan Example"/>
 <artifact deprecated="true" id="Bundle/Complete-Document-Bundle-Example" key="Bundle-Complete-Document-Bundle-Example" name="Complete-Document-Bundle-Example"/>
 <artifact deprecated="true" key="Composition" name="Composition"/>
 <artifact deprecated="true" id="ValueSet/2.16.840.1.113883.11.20.9.31" key="ValueSet-2.16.840.1.113883.11.20.9.31" name="ConsultDocumentType"/>
 <artifact deprecated="true" id="StructureDefinition/Consultation-Note" key="StructureDefinition-Consultation-Note" name="Consultation Note"/>
-<artifact deprecated="true" id="Composition/Consultation-Note-Example" key="StructureDefinition-Consultation-Note" name="Consultation Note"/>
-<artifact deprecated="true" id="Composition/Consultation-Note-Example" key="Composition-Consultation-Note-Example" name="Consultation Note - Composition"/>
+<artifact deprecated="true" id="Composition/Consultation-Note-Example" key="Composition-Consultation-Note-Example" name="Consultation Note Example"/>
 <artifact deprecated="true" id="StructureDefinition/Continuity-of-Care-Document" key="StructureDefinition-Continuity-of-Care-Document" name="Continuity of Care Document"/>
-<artifact deprecated="true" id="Composition/Continuity-of-Care-Document-Example" key="StructureDefinition-Continuity-of-Care-Document" name="Continuity of Care Document"/>
-<artifact deprecated="true" id="Composition/Continuity-of-Care-Document-Example" key="Composition-Continuity-of-Care-Document-Example" name="Continuity of Care Document - Composition"/>
+<artifact deprecated="true" id="Composition/Continuity-of-Care-Document-Example" key="Composition-Continuity-of-Care-Document-Example" name="Continuity of Care Document Example"/>
 <artifact deprecated="true" id="StructureDefinition/DataEntererExtension" key="StructureDefinition-DataEntererExtension" name="Data Enterer Extension"/>
 <artifact deprecated="true" id="StructureDefinition/Diagnostic-Imaging-Report" key="StructureDefinition-Diagnostic-Imaging-Report" name="Diagnostic Imaging Report"/>
-<artifact deprecated="true" id="Composition/Diagnostic-Imaging-Report-Example" key="StructureDefinition-Diagnostic-Imaging-Report" name="Diagnostic Imaging Report"/>
-<artifact deprecated="true" id="Composition/Diagnostic-Imaging-Report-Example" key="Composition-Diagnostic-Imaging-Report-Example" name="Diagnostic Imaging Report - Composition"/>
+<artifact deprecated="true" id="Composition/Diagnostic-Imaging-Report-Example" key="Composition-Diagnostic-Imaging-Report-Example" name="Diagnostic Imaging Report Example"/>
 <artifact deprecated="true" id="StructureDefinition/Discharge-Summary" key="StructureDefinition-Discharge-Summary" name="Discharge Summary"/>
-<artifact deprecated="true" id="Composition/Discharge-Summary-Example" key="StructureDefinition-Discharge-Summary" name="Discharge Summary"/>
-<artifact deprecated="true" id="Composition/Discharge-Summary-Example" key="Composition-Discharge-Summary-Example" name="Discharge Summary - Composition"/>
+<artifact deprecated="true" id="Composition/Discharge-Summary-Example" key="Composition-Discharge-Summary-Example" name="Discharge Summary Example"/>
 <artifact deprecated="true" id="ValueSet/2.16.840.1.113883.11.20.4.1" key="ValueSet-2.16.840.1.113883.11.20.4.1" name="DischargeSummaryDocumentTypeCode"/>
 <artifact id="AllergyIntolerance/FC-allergy" key="Binary-FC-allergy" name="FC-allergy"/>
 <artifact deprecated="true" id="AllergyIntolerance/FC-allergy" key="AllergyIntolerance-FC-allergy" name="FC-allergy-example"/>
@@ -122,29 +118,24 @@
 <artifact deprecated="true" id="StructureDefinition/InformationRecipientExtension" key="StructureDefinition-InformationRecipientExtension" name="Information Recipient Extension"/>
 <artifact deprecated="true" id="ValueSet/1.3.6.1.4.1.12009.10.2.5" key="ValueSet-1.3.6.1.4.1.12009.10.2.5" name="LOINC Imaging Document Codes"/>
 <artifact deprecated="true" id="StructureDefinition/Operative-Note" key="StructureDefinition-Operative-Note" name="Operative Note"/>
-<artifact deprecated="true" id="Composition/Operative-Note-Example" key="StructureDefinition-Operative-Note" name="Operative Note"/>
-<artifact deprecated="true" id="Composition/Operative-Note-Example" key="Composition-Operative-Note-Example" name="Operative Note - Composition"/>
+<artifact deprecated="true" id="Composition/Operative-Note-Example" key="Composition-Operative-Note-Example" name="Operative Note Example"/>
 <artifact deprecated="true" id="StructureDefinition/OrderExtension" key="StructureDefinition-OrderExtension" name="Order Extension"/>
 <artifact deprecated="true" id="StructureDefinition/ParticipantExtension" key="StructureDefinition-ParticipantExtension" name="Participant Extension"/>
 <artifact deprecated="true" id="StructureDefinition/PerformerExtension" key="StructureDefinition-PerformerExtension" name="Performer Extension"/>
 <artifact deprecated="true" id="StructureDefinition/Procedure-Note" key="StructureDefinition-Procedure-Note" name="Procedure Note"/>
-<artifact deprecated="true" id="Composition/Procedure-Note-Example" key="StructureDefinition-Procedure-Note" name="Procedure Note"/>
-<artifact deprecated="true" id="Composition/Procedure-Note-Example" key="Composition-Procedure-Note-Example" name="Procedure Note - Composition"/>
+<artifact deprecated="true" id="Composition/Procedure-Note-Example" key="Composition-Procedure-Note-Example" name="Procedure Note Example"/>
 <artifact deprecated="true" id="ValueSet/2.16.840.1.113883.11.20.6.1" key="ValueSet-2.16.840.1.113883.11.20.6.1" name="ProcedureNoteDocumentTypeCodes"/>
 <artifact deprecated="true" id="StructureDefinition/Progress-Note" key="StructureDefinition-Progress-Note" name="Progress Note"/>
-<artifact deprecated="true" id="Composition/Progress-Note-Example" key="StructureDefinition-Progress-Note" name="Progress Note"/>
-<artifact deprecated="true" id="Composition/Progress-Note-Example" key="Composition-Progress-Note-Example" name="Progress Note - Composition"/>
+<artifact deprecated="true" id="Composition/Progress-Note-Example" key="Composition-Progress-Note-Example" name="Progress Note Example"/>
 <artifact deprecated="true" id="ValueSet/2.16.840.1.113883.11.20.8.1" key="ValueSet-2.16.840.1.113883.11.20.8.1" name="ProgressNoteDocumentTypeCode"/>
 <artifact deprecated="true" key="Provenance" name="Provenance"/>
 <artifact deprecated="true" id="StructureDefinition/Referral-Note" key="StructureDefinition-Referral-Note" name="Referral Note"/>
-<artifact deprecated="true" id="Composition/Referral-Note-Example" key="StructureDefinition-Referral-Note" name="Referral Note"/>
-<artifact deprecated="true" id="Composition/Referral-Note-Example" key="Composition-Referral-Note-Example" name="Referral Note - Composition"/>
+<artifact deprecated="true" id="Composition/Referral-Note-Example" key="Composition-Referral-Note-Example" name="Referral Note Example"/>
 <artifact deprecated="true" id="ValueSet/2.16.840.1.113883.1.11.20.2.3" key="ValueSet-2.16.840.1.113883.1.11.20.2.3" name="ReferralDocumentType"/>
 <artifact deprecated="true" key="StructureDefinition" name="StructureDefinition"/>
 <artifact deprecated="true" id="ValueSet/2.16.840.1.113883.11.20.1.1" key="ValueSet-2.16.840.1.113883.11.20.1.1" name="SurgicalOperationNoteDocumentTypeCode"/>
 <artifact deprecated="true" id="StructureDefinition/Transfer-Summary" key="StructureDefinition-Transfer-Summary" name="Transfer Summary"/>
-<artifact deprecated="true" id="Composition/Transfer-Summary-Example" key="StructureDefinition-Transfer-Summary" name="Transfer Summary"/>
-<artifact deprecated="true" id="Composition/Transfer-Summary-Example" key="Composition-Transfer-Summary-Example" name="Transfer Summary - Composition"/>
+<artifact deprecated="true" id="Composition/Transfer-Summary-Example" key="Composition-Transfer-Summary-Example" name="Transfer Summary Example"/>
 <artifact deprecated="true" id="ValueSet/2.16.840.1.113883.1.11.20.2.4" key="ValueSet-2.16.840.1.113883.1.11.20.2.4" name="TransferDocumentType"/>
 <artifact deprecated="true" id="StructureDefinition/US-Realm-Header" key="StructureDefinition-US-Realm-Header" name="US Realm Header"/>
 <artifact deprecated="true" key="ValueSet" name="ValueSet"/>
@@ -161,6 +152,7 @@
 <artifact deprecated="true" id="Encounter/example-1" key="Encounter-example-1" name="example-1"/>
 <artifact id="Parameters/expansion-parameters" key="Parameters-expansion-parameters" name="expansion-parameters"/>
 <artifact deprecated="true" id="Immunization/immunization" key="Immunization-immunization" name="immunization"/>
+<artifact id="Parameters/manifest" key="Parameters-manifest" name="manifest"/>
 <artifact deprecated="true" id="MedicationStatement/medication-statement" key="MedicationStatement-medication-statement" name="medication-statement"/>
 <artifact deprecated="true" id="Observation/observation-lab-urine" key="Observation-observation-lab-urine" name="observation-lab-urine"/>
 <artifact deprecated="true" id="Observation/observation-smoker" key="Observation-observation-smoker" name="observation-smoker"/>

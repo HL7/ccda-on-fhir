@@ -15,7 +15,7 @@ Usage: #example
 * subject = Reference(example) "Amy V. Shaw"
 * date = "2016-06-15T09:10:14Z"
 * author = Reference(ccda-practitionerrole-example) "Ronald Bone, MD"
-* title = "Operative Note"
+* title = "Operative Note Example"
 * attester
   * mode = #legal
   * time = "2016-06-15T09:10:14Z"
