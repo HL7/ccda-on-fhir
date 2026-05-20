@@ -390,5 +390,5 @@ MedicationRequest (and other resources) may represent the medication as a simple
 #### Links to example content
 
 The consensus mapping example developed through multiple vendors are available below:
-* [Medication CDA example](./Binary-CF-medication.html)
-* [MedicationRequest FHIR example](./MedicationRequest-CF-medication.html)
+* [CDA Input](./Binary-CDA-Input-MedicationRequest.html)
+* [FHIR Output](./MedicationRequest-FHIR-Output-MedicationRequest.html)

@@ -49,231 +49,293 @@
     <version value="5.1.0"/>
   </dependsOn>
   <definition>
+    <grouping>
+      <id value="cf-input"/>
+      <name value="C-CDA to FHIR Example Input"/>
+      <description value="C-CDA source examples (CDA XML as input)"/>
+    </grouping>
+    <grouping>
+      <id value="cf-output"/>
+      <name value="C-CDA to FHIR Example Output"/>
+      <description value="FHIR resources derived from C-CDA input"/>
+    </grouping>
+    <grouping>
+      <id value="fc-input"/>
+      <name value="FHIR to C-CDA Example Input"/>
+      <description value="FHIR resources as input for C-CDA transformation"/>
+    </grouping>
+    <grouping>
+      <id value="fc-output"/>
+      <name value="FHIR to C-CDA Example Output"/>
+      <description value="C-CDA output examples (CDA XML produced from FHIR)"/>
+    </grouping>
+    <grouping>
+      <id value="document-examples"/>
+      <name value="Document Profile Examples"/>
+      <description value="Shared resources used by document bundle examples"/>
+    </grouping>
+    <grouping>
+      <id value="terminology-cf"/>
+      <name value="Terminology Maps: C-CDA to FHIR"/>
+      <description value="ConceptMaps for translating C-CDA codes to FHIR"/>
+    </grouping>
+    <grouping>
+      <id value="terminology-fc"/>
+      <name value="Terminology Maps: FHIR to C-CDA"/>
+      <description value="ConceptMaps for translating FHIR codes to C-CDA"/>
+    </grouping>
+    <!-- CF Output Examples (FHIR resources from C-CDA) -->
     <resource>
       <reference>
-        <reference value="PractitionerRole/ccda-practitionerrole-example"/>
-        <display value="ccda-practitionerrole-example"/>
+        <reference value="Patient/FHIR-Output-Patient"/>
       </reference>
-      <name value="ccda-practitionerrole-example"/>
-      <description value="ccda-practitionerrole-example"/>
+      <groupingId value="cf-output"/>
+      <name value="FHIR Output - Patient"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
       <reference>
-        <reference value="Practitioner/ccda-practitioner-example"/>
-        <display value="Practitioner Brenda Jennings Richard"/>
+        <reference value="AllergyIntolerance/FHIR-Output-AllergyIntolerance"/>
       </reference>
-      <name value="Practitioner Brenda Jennings Richard"/>
-      <description value="Practitioner Brenda Jennings Richard"/>
+      <groupingId value="cf-output"/>
+      <name value="FHIR Output - AllergyIntolerance"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
       <reference>
-        <reference value="Patient/CF-patient"/>
-        <display value="ccda-to-fhir-patient"/>
+        <reference value="Immunization/FHIR-Output-Immunization"/>
       </reference>
-      <name value="CF-patient-example"/>
-      <description value="ccda-to-fhir-patient"/>
+      <groupingId value="cf-output"/>
+      <name value="FHIR Output - Immunization"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
       <reference>
-        <reference value="AllergyIntolerance/CF-allergy"/>
-        <display value="ccda-to-fhir-allergy"/>
+        <reference value="MedicationRequest/FHIR-Output-MedicationRequest"/>
       </reference>
-      <name value="CF-allergy-example"/>
-      <description value="ccda-to-fhir-allergy"/>
+      <groupingId value="cf-output"/>
+      <name value="FHIR Output - MedicationRequest"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
       <reference>
-        <reference value="AllergyIntolerance/FC-allergy"/>
-        <display value="fhir-to-ccda-allergy"/>
+        <reference value="Condition/FHIR-Output-Condition"/>
       </reference>
-      <name value="FC-allergy-example"/>
-      <description value="fhir-to-ccda-allergy"/>
+      <groupingId value="cf-output"/>
+      <name value="FHIR Output - Condition"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
       <reference>
-        <reference value="Immunization/CF-immunization"/>
-        <display value="ccda-to-fhir-immunization"/>
+        <reference value="Procedure/FHIR-Output-Procedure"/>
       </reference>
-      <name value="CF-immunization-example"/>
-      <description value="ccda-to-fhir-immunization"/>
+      <groupingId value="cf-output"/>
+      <name value="FHIR Output - Procedure"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <!-- FC Input Examples (FHIR resources for C-CDA) -->
+    <resource>
+      <reference>
+        <reference value="Patient/FHIR-Input-Patient"/>
+      </reference>
+      <groupingId value="fc-input"/>
+      <name value="FHIR Input - Patient"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
       <reference>
-        <reference value="Immunization/FC-immunization"/>
-        <display value="fhir-to-ccda-immunization"/>
+        <reference value="AllergyIntolerance/FHIR-Input-AllergyIntolerance"/>
       </reference>
-      <name value="FC-immunization-example"/>
-      <description value="fhir-to-ccda-immunization"/>
+      <groupingId value="fc-input"/>
+      <name value="FHIR Input - AllergyIntolerance"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
       <reference>
-        <reference value="MedicationRequest/CF-medication"/>
-        <display value="ccda-to-fhir-medication"/>
+        <reference value="Immunization/FHIR-Input-Immunization"/>
       </reference>
-      <name value="CF-medication-example"/>
-      <description value="ccda-to-fhir-medication"/>
+      <groupingId value="fc-input"/>
+      <name value="FHIR Input - Immunization"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
       <reference>
-        <reference value="MedicationRequest/FC-medication"/>
-        <display value="fhir-to-ccda-medication"/>
+        <reference value="MedicationRequest/FHIR-Input-MedicationRequest"/>
       </reference>
-      <name value="FC-medication-example"/>
-      <description value="fhir-to-ccda-medication"/>
+      <groupingId value="fc-input"/>
+      <name value="FHIR Input - MedicationRequest"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
       <reference>
-        <reference value="Condition/CF-problem"/>
-        <display value="ccda-to-fhir-problem"/>
+        <reference value="Condition/FHIR-Input-Condition"/>
       </reference>
-      <name value="CF-problem-example"/>
-      <description value="ccda-to-fhir-problem"/>
+      <groupingId value="fc-input"/>
+      <name value="FHIR Input - Condition"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
       <reference>
-        <reference value="Condition/FC-problem"/>
-        <display value="fhir-to-ccda-problem"/>
+        <reference value="Procedure/FHIR-Input-Procedure"/>
       </reference>
-      <name value="FC-problem-example"/>
-      <description value="fhir-to-ccda-problem"/>
+      <groupingId value="fc-input"/>
+      <name value="FHIR Input - Procedure"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <!-- Document Examples -->
+    <resource>
+      <reference>
+        <reference value="PractitionerRole/Document-PractitionerRole"/>
+      </reference>
+      <groupingId value="document-examples"/>
+      <name value="Document - PractitionerRole"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
       <reference>
-        <reference value="Procedure/CF-procedure"/>
-        <display value="ccda-to-fhir-procedure"/>
+        <reference value="Practitioner/Document-Practitioner"/>
       </reference>
-      <name value="CF-procedure-example"/>
-      <description value="ccda-to-fhir-procedure"/>
+      <groupingId value="document-examples"/>
+      <name value="Document - Practitioner"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
       <reference>
-        <reference value="Organization/organization-2"/>
-        <display value="Acme Clinic"/>
+        <reference value="Organization/Document-Organization-2"/>
       </reference>
-      <name value="Acme Clinic"/>
-      <description value="Acme Clinic"/>
+      <groupingId value="document-examples"/>
+      <name value="Document - Organization 2"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
       <reference>
-        <reference value="Organization/organization-1"/>
-        <display value="Acme Labs"/>
+        <reference value="Organization/Document-Organization-1"/>
       </reference>
-      <name value="Acme Labs"/>
-      <description value="Acme Labs"/>
+      <groupingId value="document-examples"/>
+      <name value="Document - Organization 1"/>
       <exampleBoolean value="true"/>
+    </resource>
+    <!-- CF Input Examples (CDA XML) -->
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format">
+        <valueCode value="application/xml"/>
+      </extension>
+      <reference>
+        <reference value="Binary/CDA-Input-AllergyIntolerance"/>
+      </reference>
+      <groupingId value="cf-input"/>
+      <name value="CDA Input - AllergyIntolerance"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format">
         <valueCode value="application/xml"/>
       </extension>
       <reference>
-        <reference value="Binary/CF-allergy" />
-            </reference>
-      <name value="CF-allergy"/>
-      <description value="ccda-to-fhir-allergy"/>
+        <reference value="Binary/CDA-Input-Immunization"/>
+      </reference>
+      <groupingId value="cf-input"/>
+      <name value="CDA Input - Immunization"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format">
         <valueCode value="application/xml"/>
       </extension>
       <reference>
-        <reference value="Binary/CF-immunization" />
-            </reference>
-      <name value="CF-immunization"/>
-      <description value="ccda-to-fhir-immunization"/>
+        <reference value="Binary/CDA-Input-MedicationRequest"/>
+      </reference>
+      <groupingId value="cf-input"/>
+      <name value="CDA Input - MedicationRequest"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format">
         <valueCode value="application/xml"/>
       </extension>
       <reference>
-        <reference value="Binary/CF-medication" />
-            </reference>
-      <name value="CF-medication"/>
-      <description value="ccda-to-fhir-medication"/>
+        <reference value="Binary/CDA-Input-Patient"/>
+      </reference>
+      <groupingId value="cf-input"/>
+      <name value="CDA Input - Patient"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format">
         <valueCode value="application/xml"/>
       </extension>
       <reference>
-        <reference value="Binary/CF-patient" />
-            </reference>
-      <name value="CF-patient"/>
-      <description value="ccda-to-fhir-patient"/>
+        <reference value="Binary/CDA-Input-Condition"/>
+      </reference>
+      <groupingId value="cf-input"/>
+      <name value="CDA Input - Condition"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format">
         <valueCode value="application/xml"/>
       </extension>
       <reference>
-        <reference value="Binary/CF-problem" />
-            </reference>
-      <name value="CF-problem"/>
-      <description value="ccda-to-fhir-problem"/>
+        <reference value="Binary/CDA-Input-Procedure"/>
+      </reference>
+      <groupingId value="cf-input"/>
+      <name value="CDA Input - Procedure"/>
+    </resource>
+    <!-- FC Output Examples (CDA XML) -->
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format">
+        <valueCode value="application/xml"/>
+      </extension>
+      <reference>
+        <reference value="Binary/CDA-Output-AllergyIntolerance"/>
+      </reference>
+      <groupingId value="fc-output"/>
+      <name value="CDA Output - AllergyIntolerance"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format">
         <valueCode value="application/xml"/>
       </extension>
       <reference>
-        <reference value="Binary/CF-procedure" />
-            </reference>
-      <name value="CF-procedure"/>
-      <description value="ccda-to-fhir-procedure"/>
+        <reference value="Binary/CDA-Output-Immunization"/>
+      </reference>
+      <groupingId value="fc-output"/>
+      <name value="CDA Output - Immunization"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format">
         <valueCode value="application/xml"/>
       </extension>
       <reference>
-        <reference value="Binary/FC-allergy" />
-            </reference>
-      <name value="FC-allergy"/>
-      <description value="fhir-to-ccda-allergy"/>
+        <reference value="Binary/CDA-Output-MedicationRequest"/>
+      </reference>
+      <groupingId value="fc-output"/>
+      <name value="CDA Output - MedicationRequest"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format">
         <valueCode value="application/xml"/>
       </extension>
       <reference>
-        <reference value="Binary/FC-immunization" />
-            </reference>
-      <name value="FC-immunization"/>
-      <description value="fhir-to-ccda-immunization"/>
+        <reference value="Binary/CDA-Output-Condition"/>
+      </reference>
+      <groupingId value="fc-output"/>
+      <name value="CDA Output - Condition"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format">
         <valueCode value="application/xml"/>
       </extension>
       <reference>
-        <reference value="Binary/FC-medication" />
-            </reference>
-      <name value="FC-medication"/>
-      <description value="fhir-to-ccda-medication"/>
+        <reference value="Binary/CDA-Output-Patient"/>
+      </reference>
+      <groupingId value="fc-output"/>
+      <name value="CDA Output - Patient"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format">
         <valueCode value="application/xml"/>
       </extension>
       <reference>
-        <reference value="Binary/FC-problem" />
-            </reference>
-      <name value="FC-problem"/>
-      <description value="fhir-to-ccda-problem"/>
+        <reference value="Binary/CDA-Output-Procedure"/>
+      </reference>
+      <groupingId value="fc-output"/>
+      <name value="CDA Output - Procedure"/>
     </resource>
     <page>
       <nameUrl value="index.html"/>

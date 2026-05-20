@@ -1,4 +1,4 @@
-Instance: practitioner-1
+Instance: Document-Practitioner-1
 InstanceOf: Practitioner
 Usage: #example
 * meta

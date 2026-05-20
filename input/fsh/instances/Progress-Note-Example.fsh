@@ -12,22 +12,22 @@ Usage: #example
   * value = "urn:uuid:e51b38c1-0a51-4fab-b16e-dc3c3563d052"
 * status = #preliminary
 * type = $loinc#11506-3 "Progress note"
-* subject = Reference(example) "Amy V. Shaw"
+* subject = Reference(Document-Patient) "Amy V. Shaw"
 * date = "2016-06-15T09:10:14Z"
-* author = Reference(ccda-practitionerrole-example) "Ronald Bone, MD"
+* author = Reference(Document-PractitionerRole) "Ronald Bone, MD"
 * title = "Progress Note Example"
 * attester
   * mode = #legal
   * time = "2012-01-04T09:10:14Z"
-  * party = Reference(practitioner-1) "Ronald Boone, MD"
-* custodian = Reference(organization-1) "Community Health and Hospitals"
+  * party = Reference(Document-Practitioner-1) "Ronald Boone, MD"
+* custodian = Reference(Document-Organization-1) "Community Health and Hospitals"
 * section[0]
   * title = "Allergies and Intolerances Section"
   * code = $loinc#48765-2 "Allergies and adverse reactions Document"
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Substance</b></td><td><b>Overall Severity</b></td><td><b>Reaction</b></td><td><b>Reaction Severity</b></td><td><b>Status</b></td></tr><tr><td>Cashew Nut</td><td>Severe</td><td>Anaphylactic reaction</td><td>Mild</td><td>Active</td></tr></table></div>"
-  * entry = Reference(allergy-intolerance)
+  * entry = Reference(Document-AllergyIntolerance)
 * section[+]
   * title = "Assessment Section"
   * code = $loinc#51848-0 "Evaluation note"
@@ -94,7 +94,7 @@ Usage: #example
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Medication</b></td><td><b>Directions</b></td><td><b>Start Date</b></td><td><b>Status</b></td><td><b>Indications</b></td><td><b>Fill Instructions</b></td></tr><tr><td>Amoxicillin</td><td>Amoxicillin Powder, for Suspension 250mg/5ml</td><td>20160401</td><td>Active</td><td>Pneumonia</td><td>Generic substitution allowed</td></tr></table></div>"
-  * entry = Reference(medication-statement)
+  * entry = Reference(Document-MedicationStatement)
 * section[+]
   * title = "Plan of Treatment Section"
   * code = $loinc#18776-5 "Plan of care note"
@@ -107,18 +107,18 @@ Usage: #example
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Problem Name</b></td><td><b>Type</b></td><td><b>Onset Date</b></td><td><b>Abatement Date</b></td><td><b>Status</b></td></tr><tr><td>Fever</td><td>Condition</td><td>2016-04-01</td><td>2016-04-14</td><td>Complete</td></tr></table></div>"
-  * entry = Reference(condition-problem)
+  * entry = Reference(Document-Condition)
 * section[+]
   * title = "Results Section"
   * code = $loinc#30954-2 "Relevant diagnostic tests/laboratory data note"
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Result Type</b></td><td><b>Quantity Value</b></td><td><b>Date</b></td><td><b>Status</b></td></tr><tr><td>Glucose [Moles/volume] in Blood</td><td>6.3 mmol/l</td><td>2016/06/15</td><td>Final</td></tr></table></div>"
-  * entry = Reference(observation-lab-urine)
+  * entry = Reference(Document-Observation-Lab)
 * section[+]
   * title = "Vital Signs Section"
   * code = $loinc#8716-3 "Vital signs note"
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Vital Sign</b></td><td><b>Date</b></td><td><b>Value</b></td></tr><tr><td>Temperature</td><td>2016/06/15</td><td>39 Degrees Celcius</td></tr></table></div>"
-  * entry = Reference(Observation/observation-vitals-temp)
+  * entry = Reference(Document-Observation-Vitals)

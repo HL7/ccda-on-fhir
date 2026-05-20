@@ -90,5 +90,5 @@ Procedure Activity Observation is a CDA Observation class, and it can best be re
 #### Links to example content
 
 The consensus mapping example developed through multiple vendors are available below:
-* [Procedure CDA example](./Binary-CF-procedure.html)
-* [Procedure FHIR example](./Procedure-CF-procedure.html)
+* [CDA Input](./Binary-CDA-Input-Procedure.html)
+* [FHIR Output](./Procedure-FHIR-Output-Procedure.html)

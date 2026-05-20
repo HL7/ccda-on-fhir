@@ -49,8 +49,8 @@ This page provides a mapping from FHIR to CDA. For the CDA to FHIR mapping, plea
 #### Links to example content
 
 Note that these mappings have only been implemented by a single vendor to date. 
-* [Immuniztion FHIR example](./Immunization-FC-immunization.html)
-* [Immuniztion CDA example](./Binary-FC-immunization.html)
+* [FHIR Input](./Immunization-FHIR-Input-Immunization.html)
+* [CDA Output](./Binary-CDA-Output-Immunization.html)
 
 ### Prior work and Expanded Spreadsheets
 

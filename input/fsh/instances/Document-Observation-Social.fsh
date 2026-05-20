@@ -1,4 +1,4 @@
-Instance: observation-smoker
+Instance: Document-Observation-Social
 InstanceOf: Observation
 Usage: #example
 * meta
@@ -11,7 +11,7 @@ Usage: #example
   * text = "Social History"
 * code = $loinc#72166-2 "Tobacco smoking status"
   * text = "Tobacco smoking status"
-* subject = Reference(example) "Amy Shaw"
+* subject = Reference(Document-Patient) "Amy Shaw"
 * effectiveDateTime = "2016-03-18T05:27:04Z"
 * valueCodeableConcept = $sct#428041000124106
   * text = "Current some day smoker"

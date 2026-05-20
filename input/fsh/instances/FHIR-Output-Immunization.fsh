@@ -1,4 +1,4 @@
-Instance: CF-immunization
+Instance: FHIR-Output-Immunization
 InstanceOf: Immunization
 Usage: #example
 * identifier
@@ -7,11 +7,11 @@ Usage: #example
 * status = #completed
 * vaccineCode = $cvx#88 "influenza virus vaccine, unspecified formulation"
   * text = "Influenza Virus Vaccine"
-* patient = Reference(CF-patient)
+* patient = Reference(FHIR-Output-Patient)
 * occurrenceDateTime = "2010-08-15"
 * recorded = "2010-08-16"
 * primarySource.extension
   * url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
   * valueCode = #unknown
 * lotNumber = "1"
-* performer.actor = Reference(ccda-practitionerrole-example)
+* performer.actor = Reference(Document-PractitionerRole)

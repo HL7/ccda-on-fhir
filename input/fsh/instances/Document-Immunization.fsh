@@ -1,4 +1,4 @@
-Instance: immunization
+Instance: Document-Immunization
 InstanceOf: Immunization
 Usage: #example
 * meta
@@ -8,6 +8,6 @@ Usage: #example
   * profile = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization"
 * status = #completed
 * vaccineCode = $cvx#158 "influenza, injectable, quadrivalent, contains preservative"
-* patient = Reference(example) "Amy Shaw"
+* patient = Reference(Document-Patient) "Amy Shaw"
 * occurrenceDateTime = "2016-01-08"
 * primarySource = false

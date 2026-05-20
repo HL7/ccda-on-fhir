@@ -1,4 +1,4 @@
-Instance: encounter-1
+Instance: Document-Encounter
 InstanceOf: Encounter
 Usage: #example
 * meta
@@ -9,7 +9,7 @@ Usage: #example
 * class = $v3-ActCode#AMB "ambulatory"
 * type = $cpt#99211
   * text = "Office Visit"
-* subject = Reference(example)
+* subject = Reference(Document-Patient)
 * period
   * start = "2015-11-01T17:00:14-05:00"
   * end = "2015-11-01T18:00:14-05:00"

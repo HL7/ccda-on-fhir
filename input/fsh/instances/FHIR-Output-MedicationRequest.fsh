@@ -1,4 +1,4 @@
-Instance: CF-medication
+Instance: FHIR-Output-MedicationRequest
 InstanceOf: MedicationRequest
 Usage: #example
 * identifier
@@ -7,9 +7,9 @@ Usage: #example
 * status = #active
 * intent = #plan
 * medicationCodeableConcept = $rxnorm#252298 "albuterol 0.1 MG Inhalation Powder"
-* subject = Reference(CF-patient)
+* subject = Reference(FHIR-Output-Patient)
 * dosageInstruction
   * sequence = 1
   * asNeededBoolean = false
   * doseAndRate.doseQuantity.value = 1
-* requester = Reference(ccda-practitionerrole-example)
+* requester = Reference(Document-PractitionerRole)

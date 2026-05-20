@@ -9,36 +9,36 @@ Usage: #example
 * language = #en-US
 * extension[0]
   * url = "http://hl7.org/fhir/us/ccda/StructureDefinition/OrderExtension"
-  * valueReference = Reference(colonoscopy) "Colonoscopy"
+  * valueReference = Reference(Document-ServiceRequest) "Colonoscopy"
 * extension[+]
   * url = "http://hl7.org/fhir/us/ccda/StructureDefinition/PerformerExtension"
-  * valueReference = Reference(ccda-practitionerrole-example)
+  * valueReference = Reference(Document-PractitionerRole)
 * extension[+]
   * url = "http://hl7.org/fhir/us/ccda/StructureDefinition/InformationRecipientExtension"
-  * valueReference = Reference(practitioner-1)
+  * valueReference = Reference(Document-Practitioner-1)
 * extension[+]
   * url = "http://hl7.org/fhir/us/ccda/StructureDefinition/ParticipantExtension"
-  * valueReference = Reference(practitioner-1)
+  * valueReference = Reference(Document-Practitioner-1)
 * extension[+]
   * url = "http://hl7.org/fhir/us/ccda/StructureDefinition/InformantExtension"
-  * valueReference = Reference(practitioner-1)
+  * valueReference = Reference(Document-Practitioner-1)
 * extension[+]
   * url = "http://hl7.org/fhir/us/ccda/StructureDefinition/AuthorizationExtension"
-  * valueReference = Reference(consent-example-basic)
+  * valueReference = Reference(Document-Consent)
 * identifier
   * system = "urn:ietf:rfc:3986"
   * value = "urn:uuid:ef152c04-068f-461e-82c0-654b7460259e"
 * status = #preliminary
 * type = $loinc#28570-0 "Procedure note"
-* subject = Reference(example) "Amy V. Shaw"
+* subject = Reference(Document-Patient) "Amy V. Shaw"
 * date = "2016-02-28T09:10:14Z"
-* author = Reference(ccda-practitionerrole-example) "Ronald Bone, MD"
+* author = Reference(Document-PractitionerRole) "Ronald Bone, MD"
 * title = "Procedure Note Example"
 * attester
   * mode = #legal
   * time = "2012-01-04T09:10:14Z"
-  * party = Reference(ccda-practitionerrole-example) "Ronald Boone, MD"
-* custodian = Reference(organization-1) "Community Health and Hospitals"
+  * party = Reference(Document-PractitionerRole) "Ronald Boone, MD"
+* custodian = Reference(Document-Organization-1) "Community Health and Hospitals"
 * event
   * code = $sct#73761001 "Colonoscopy"
   * period
@@ -50,15 +50,15 @@ Usage: #example
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Substance</b></td><td><b>Overall Severity</b></td><td><b>Reaction</b></td><td><b>Reaction Severity</b></td><td><b>Status</b></td></tr><tr><td>Cashew Nut</td><td>Severe</td><td>Anaphylactic reaction</td><td>Mild</td><td>Active</td></tr></table></div>"
-  * entry = Reference(allergy-intolerance)
+  * entry = Reference(Document-AllergyIntolerance)
 * section[+]
   * title = "Anesthesia Section"
   * code = $loinc#59774-0 "Anesthesia"
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Conscious sedation with propofol 200 mg IV</p></div>"
-  * entry[0] = Reference(procedure-rehab)
-  * entry[+] = Reference(medication-statement)
+  * entry[0] = Reference(Document-Procedure)
+  * entry[+] = Reference(Document-MedicationStatement)
 * section[+]
   * title = "Assessment Section"
   * code = $loinc#51848-0 "Evaluation note"
@@ -107,7 +107,7 @@ Usage: #example
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>A 6 mm sessile polyp was found in the ascending colon and removed by\r\n                                snare, no cautery. Bleeding was controlled. Moderate diverticulosis\r\n                                and hemorrhoids were incidentally noted.</p></div>"
-  * entry = Reference(condition-problem)
+  * entry = Reference(Document-Condition)
 * section[+]
   * title = "Procedure Implants Section"
   * code = $loinc#59771-6 "Procedure implants Narrative"
@@ -156,7 +156,7 @@ Usage: #example
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Problem Name</b></td><td><b>Type</b></td><td><b>Onset Date</b></td><td><b>Abatement Date</b></td><td><b>Status</b></td></tr><tr><td>Fever</td><td>Condition</td><td>2016-04-01</td><td>2016-04-14</td><td>Complete</td></tr></table></div>"
-  * entry = Reference(condition-problem)
+  * entry = Reference(Document-Condition)
 * section[+]
   * title = "History of Present Illness Section"
   * code = $loinc#10164-2 "History of Present illness Narrative"
@@ -175,7 +175,7 @@ Usage: #example
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Medication</b></td><td><b>Directions</b></td><td><b>Start Date</b></td><td><b>Status</b></td><td><b>Indications</b></td><td><b>Fill Instructions</b></td></tr><tr><td>Amoxicillin</td><td>Amoxicillin Powder, for Suspension 250mg/5ml</td><td>20160401</td><td>Active</td><td>Pneumonia</td><td>Generic substitution allowed</td></tr></table></div>"
-  * entry = Reference(medication-statement)
+  * entry = Reference(Document-MedicationStatement)
 * section[+]
   * title = "Physical Exam Section"
   * code = $loinc#29545-1 "Physical findings note"
@@ -194,7 +194,7 @@ Usage: #example
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Procedure Name</b></td><td><b>Body Site</b></td><td><b>Performer</b></td><td><b>Date Performed</b></td><td><b>Reason</b></td></tr><tr><td>Appendectomy (Procedure)</td><td>Abdomen</td><td>Dr. Adam Everyman</td><td>20160615</td><td>Generalized abdominal pain 24 hours. Localized in RIF with\r\n                                        rebound and guarding</td></tr></table></div>"
-  * entry = Reference(procedure-rehab)
+  * entry = Reference(Document-Procedure)
 * section[+]
   * title = "Reason for Visit Section"
   * code = $loinc#29299-5 "Reason for visit"

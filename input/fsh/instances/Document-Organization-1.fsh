@@ -1,4 +1,4 @@
-Instance: organization-1
+Instance: Document-Organization-1
 InstanceOf: Organization
 Usage: #example
 * meta

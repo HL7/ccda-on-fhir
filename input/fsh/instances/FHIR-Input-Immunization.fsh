@@ -1,4 +1,4 @@
-Instance: FC-immunization
+Instance: FHIR-Input-Immunization
 InstanceOf: Immunization
 Usage: #example
 * meta.security = $v3-Confidentiality#N
@@ -9,7 +9,7 @@ Usage: #example
 * status = #completed
 * vaccineCode = $cvx#88 "influenza virus vaccine, unspecified formulation"
   * text = "Influenza Virus Vaccine"
-* patient = Reference(CF-patient)
+* patient = Reference(FHIR-Input-Patient)
 * occurrenceDateTime = "2010-08-15"
 * recorded = "2010-08-15"
 * lotNumber = "1"

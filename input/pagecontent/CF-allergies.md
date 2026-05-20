@@ -185,5 +185,5 @@ When authors or other provenance are recorded only in the parent [Allergy Concer
 #### Links to example content
 
 The consensus mapping example developed through multiple vendors are available below:
-* [Allergy CDA example](./Binary-CF-allergy.html)
-* [Allergy FHIR example](./AllergyIntolerance-CF-allergy.html)
+* [CDA Input](./Binary-CDA-Input-AllergyIntolerance.html)
+* [FHIR Output](./AllergyIntolerance-FHIR-Output-AllergyIntolerance.html)

@@ -1,4 +1,4 @@
-Instance: condition-problem
+Instance: Document-Condition
 InstanceOf: Condition
 Usage: #example
 * meta
@@ -12,4 +12,4 @@ Usage: #example
   * text = "Problem List Item"
 * code = $sct#442311008 "Liveborn born in hospital"
   * text = "Single liveborn, born in hospital, delivered without mention of cesarean section"
-* subject = Reference(example) "Amy V. Shaw"
+* subject = Reference(Document-Patient) "Amy V. Shaw"

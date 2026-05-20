@@ -12,15 +12,15 @@ Usage: #example
   * value = "urn:uuid:75a12dcd-f85d-4c7f-b1de-38a1a2b7498f"
 * status = #preliminary
 * type = $loinc#11504-8 "Surgical operation note"
-* subject = Reference(example) "Amy V. Shaw"
+* subject = Reference(Document-Patient) "Amy V. Shaw"
 * date = "2016-06-15T09:10:14Z"
-* author = Reference(ccda-practitionerrole-example) "Ronald Bone, MD"
+* author = Reference(Document-PractitionerRole) "Ronald Bone, MD"
 * title = "Operative Note Example"
 * attester
   * mode = #legal
   * time = "2016-06-15T09:10:14Z"
-  * party = Reference(ccda-practitionerrole-example) "Ronald Boone, MD"
-* custodian = Reference(organization-1) "Community Health and Hospitals"
+  * party = Reference(Document-PractitionerRole) "Ronald Boone, MD"
+* custodian = Reference(Document-Organization-1) "Community Health and Hospitals"
 * event
   * code = $sct#73761001 "Colonoscopy"
   * period
@@ -38,7 +38,7 @@ Usage: #example
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Asthmatic symptoms while under general anesthesia.</p></div>"
-  * entry = Reference(condition-problem)
+  * entry = Reference(Document-Condition)
 * section[+]
   * title = "Preoperative Diagnosis Section"
   * code = $loinc#10219-4 "Surgical operation note preoperative diagnosis Narrative"
@@ -81,7 +81,7 @@ Usage: #example
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>A 6 mm sessile polyp was found in the ascending colon and removed by\r\n                                snare, no cautery. Bleeding was controlled. Moderate diverticulosis\r\n                                and hemorrhoids were incidentally noted.</p></div>"
-  * entry = Reference(condition-problem)
+  * entry = Reference(Document-Condition)
 * section[+]
   * title = "Procedure Specimens Taken Section"
   * code = $loinc#59773-2 "Procedure specimens taken Narrative"

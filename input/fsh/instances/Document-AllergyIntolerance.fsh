@@ -1,4 +1,4 @@
-Instance: allergy-intolerance
+Instance: Document-AllergyIntolerance
 InstanceOf: AllergyIntolerance
 Usage: #example
 * meta
@@ -10,7 +10,7 @@ Usage: #example
 * criticality = #high
 * code = $sct#387406002 "Sulfonamide (substance)"
   * text = "sulfonamide antibacterial"
-* patient = Reference(example) "Amy V. Shaw"
+* patient = Reference(Document-Patient) "Amy V. Shaw"
 * reaction
   * manifestation = $sct#271807003 "skin rash"
     * text = "skin rash"

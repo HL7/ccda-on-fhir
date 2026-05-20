@@ -51,8 +51,8 @@ See guidance on timing mappings on [Medications CDA → FHIR](./CF-medications.h
 #### Links to example content
 
 Note that these mappings have only been implemented by a single vendor to date. 
-* [MedicationRequest FHIR example](./MedicationRequest-FC-medication.html)
-* [Medication CDA example](./Binary-FC-medication.html)
+* [FHIR Input](./MedicationRequest-FHIR-Input-MedicationRequest.html)
+* [CDA Output](./Binary-CDA-Output-MedicationRequest.html)
 
 ### Prior work and Expanded Spreadsheets
 

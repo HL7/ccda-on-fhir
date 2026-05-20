@@ -386,5 +386,5 @@ When authors or other provenance are recorded in the parent [Problem Concern Act
 #### Links to example content
 
 The consensus mapping example developed through multiple vendors are available below:
-* [Problem CDA example](./Binary-CF-problem.html)
-* [Condition FHIR example](./Condition-CF-problem.html)
+* [CDA Input](./Binary-CDA-Input-Condition.html)
+* [FHIR Output](./Condition-FHIR-Output-Condition.html)

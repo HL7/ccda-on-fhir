@@ -1,4 +1,4 @@
-Instance: procedure-rehab
+Instance: Document-Procedure
 InstanceOf: Procedure
 Usage: #example
 * meta
@@ -9,5 +9,5 @@ Usage: #example
 * status = #completed
 * code = $sct#35637008 "Alcohol rehabilitation"
   * text = "Alcohol rehabilitation"
-* subject = Reference(example) "Amy Shaw"
+* subject = Reference(Document-Patient) "Amy Shaw"
 * performedDateTime = "2002-05-23"

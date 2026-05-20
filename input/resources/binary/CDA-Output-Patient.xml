@@ -1,0 +1,27 @@
+<recordTarget>
+  <patientRole>
+    <id extension="FC-160920144139807" root="1.3.6.1.4.1.22812.3.2009316.3" />
+    <addr use="H">
+      <streetAddressLine>1357 Amber Drive</streetAddressLine>
+      <city>Beaverton</city>
+      <state>OR</state>
+      <postalCode>97006</postalCode>
+    </addr>
+    <telecom value="tel:+1(565)867-5309" use="MC"/>
+    <telecom value="mailto:adam@diameterhealth.com" use="WP"/>
+    <patient>
+      <name use="L">
+        <given>Myra</given>
+        <family>Jones</family>
+      </name>
+      <administrativeGenderCode code="F" codeSystem="2.16.840.1.113883.5.1" />
+      <birthTime value="19470501" />
+      <raceCode code="2106-3" codeSystem="2.16.840.1.113883.6.238" displayName="White" />
+      <ethnicGroupCode code="2135-2" codeSystem="2.16.840.1.113883.6.238" displayName="Hispanic or Latino" />
+      <languageCommunication>
+        <languageCode code="en" />
+        <preferenceInd value="true" />
+      </languageCommunication>
+    </patient>
+  </patientRole>
+</recordTarget>

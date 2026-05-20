@@ -1,4 +1,4 @@
-Instance: observation-lab-urine
+Instance: Document-Observation-Lab
 InstanceOf: Observation
 Usage: #example
 * meta
@@ -11,7 +11,7 @@ Usage: #example
   * text = "Laboratory"
 * code = $loinc#5811-5 "Specific gravity of Urine by Test strip"
   * text = "SPEC GRAV"
-* subject = Reference(example) "Amy Shaw"
+* subject = Reference(Document-Patient) "Amy Shaw"
 * effectiveDateTime = "2005-07-05"
 * valueQuantity
   * value = 1.017

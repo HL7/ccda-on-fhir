@@ -1,4 +1,4 @@
-Instance: ccda-practitioner-example
+Instance: Document-Practitioner
 InstanceOf: Practitioner
 Usage: #example
 * meta

@@ -1,4 +1,4 @@
-Instance: observation-vitals-temp
+Instance: Document-Observation-Vitals
 InstanceOf: $vitalsigns
 Usage: #example
 * meta
@@ -11,7 +11,7 @@ Usage: #example
 * code = $loinc#8310-5 "Body temperature"
   * text = "temperature"
 * subject
-  * reference = "Patient/example"
+  * reference = "Patient/Document-Patient"
   * display = "Amy Shaw"
 * effectiveDateTime = "1999-07-02"
 * valueQuantity = 36.55556 'Cel' "Cel"

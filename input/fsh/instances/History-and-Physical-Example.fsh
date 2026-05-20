@@ -12,15 +12,15 @@ Usage: #example
   * value = "urn:uuid:c2a73e86-2e57-4384-83ff-3bc2536107aa"
 * status = #preliminary
 * type = $loinc#34117-2 "History and Physical Note"
-* subject = Reference(example) "Amy V. Shaw"
+* subject = Reference(Document-Patient) "Amy V. Shaw"
 * date = "2016-06-15T09:10:14Z"
-* author = Reference(ccda-practitionerrole-example) "Ronald Bone, MD"
+* author = Reference(Document-PractitionerRole) "Ronald Bone, MD"
 * title = "History and Physical Note"
 * attester
   * mode = #legal
   * time = "2012-01-04T09:10:14Z"
-  * party = Reference(ccda-practitionerrole-example) "Ronald Boone, MD"
-* custodian = Reference(organization-1) "Community Health and Hospitals"
+  * party = Reference(Document-PractitionerRole) "Ronald Boone, MD"
+* custodian = Reference(Document-Organization-1) "Community Health and Hospitals"
 * event
   * code = $v3-ActClass#PCPR "Care Provision"
   * period
@@ -32,7 +32,7 @@ Usage: #example
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Substance</b></td><td><b>Overall Severity</b></td><td><b>Reaction</b></td><td><b>Reaction Severity</b></td><td><b>Status</b></td></tr><tr><td>Cashew Nut</td><td>Severe</td><td>Anaphylactic reaction</td><td>Mild</td><td>Active</td></tr></table></div>"
-  * entry = Reference(allergy-intolerance)
+  * entry = Reference(Document-AllergyIntolerance)
 * section[+]
   * title = "Assessment Section"
   * code = $loinc#51848-0 "Evaluation note"
@@ -87,7 +87,7 @@ Usage: #example
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Vaccine</b></td><td><b>Date</b></td><td><b>Status</b></td></tr><tr><td>Fluvax (Influenza)</td><td>2016-04-05</td><td>Completed</td></tr></table></div>"
-  * entry = Reference(immunization)
+  * entry = Reference(Document-Immunization)
 * section[+]
   * title = "Instructions Section"
   * code = $loinc#69730-0 "Instructions"
@@ -100,7 +100,7 @@ Usage: #example
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Medication</b></td><td><b>Directions</b></td><td><b>Start Date</b></td><td><b>Status</b></td><td><b>Indications</b></td><td><b>Fill Instructions</b></td></tr><tr><td>Amoxicillin</td><td>Amoxicillin Powder, for Suspension 250mg/5ml</td><td>20160401</td><td>Active</td><td>Pneumonia</td><td>Generic substitution allowed</td></tr></table></div>"
-  * entry = Reference(medication-statement)
+  * entry = Reference(Document-MedicationStatement)
 * section[+]
   * title = "Physical Exam Section"
   * code = $loinc#29545-1 "Physical findings note"
@@ -119,14 +119,14 @@ Usage: #example
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Problem Name</b></td><td><b>Type</b></td><td><b>Onset Date</b></td><td><b>Abatement Date</b></td><td><b>Status</b></td></tr><tr><td>Fever</td><td>Condition</td><td>2016-04-01</td><td>2016-04-14</td><td>Complete</td></tr></table></div>"
-  * entry = Reference(condition-problem)
+  * entry = Reference(Document-Condition)
 * section[+]
   * title = "Procedures Section"
   * code = $loinc#47519-4 "History of Procedures Document"
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Procedure Name</b></td><td><b>Body Site</b></td><td><b>Performer</b></td><td><b>Date Performed</b></td><td><b>Reason</b></td></tr><tr><td>Appendectomy (Procedure)</td><td>Abdomen</td><td>Dr. Adam Everyman</td><td>20160405</td><td>Generalized abdominal pain 24 hours. Localized in RIF with\r\n                                        rebound and guarding</td></tr></table></div>"
-  * entry = Reference(procedure-rehab)
+  * entry = Reference(Document-Procedure)
 * section[+]
   * title = "Reason for Visit Section"
   * code = $loinc#29299-5 "Reason for visit"
@@ -139,7 +139,7 @@ Usage: #example
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Result Type</b></td><td><b>Quantity Value</b></td><td><b>Date</b></td><td><b>Status</b></td></tr><tr><td>Glucose [Moles/volume] in Blood</td><td>6.3 mmol/l</td><td>2016/04/01</td><td>Final</td></tr></table></div>"
-  * entry = Reference(observation-lab-urine)
+  * entry = Reference(Document-Observation-Lab)
 * section[+]
   * title = "Review of Systems Section"
   * code = $loinc#10187-3 "Review of systems"
@@ -152,11 +152,11 @@ Usage: #example
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Social History Element</b></td><td><b>Description</b></td><td><b>Effective Dates</b></td></tr><tr><td>Smoking</td><td>1 pack tobacco per day</td><td>2005/05/01 - 2010/02/28</td></tr></table></div>"
-  * entry = Reference(observation-smoker)
+  * entry = Reference(Document-Observation-Social)
 * section[+]
   * title = "Vital Signs Section"
   * code = $loinc#8716-3 "Vital signs note"
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Vital Sign</b></td><td><b>Date</b></td><td><b>Value</b></td></tr><tr><td>Temperature</td><td>2016/06/15</td><td>39 Degrees Celcius</td></tr></table></div>"
-  * entry = Reference(Observation/observation-vitals-temp)
+  * entry = Reference(Document-Observation-Vitals)

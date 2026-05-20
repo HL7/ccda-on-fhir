@@ -308,5 +308,5 @@ This page provides a mapping from CDA to FHIR. For the FHIR to CDA mapping, plea
 #### Links to example content
 
 The consensus mapping example developed through multiple vendors are available below:
-* [Patient CDA example](./Binary-CF-patient.html)
-* [Patient FHIR example](./Patient-CF-patient.html)
+* [CDA Input](./Binary-CDA-Input-Patient.html)
+* [FHIR Output](./Patient-FHIR-Output-Patient.html)

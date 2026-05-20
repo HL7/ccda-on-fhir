@@ -1,4 +1,4 @@
-Instance: FC-medication
+Instance: FHIR-Input-MedicationRequest
 InstanceOf: MedicationRequest
 Usage: #example
 * meta.security = $v3-Confidentiality#N
@@ -9,7 +9,7 @@ Usage: #example
 * intent = #order
 * medicationCodeableConcept = $rxnorm#252298 "albuterol 0.1 MG Inhalation Powder"
   * text = "albuterol 0.1 MG Inhalation Powder"
-* subject = Reference(CF-patient)
+* subject = Reference(FHIR-Input-Patient)
 * groupIdentifier
   * system = "urn:ietf:rfc:3986"
   * value = "urn:uuid:2a620155-9d11-439e-92b3-5d9815ff4ee8"

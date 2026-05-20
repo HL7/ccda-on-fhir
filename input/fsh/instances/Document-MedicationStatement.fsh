@@ -1,4 +1,4 @@
-Instance: medication-statement
+Instance: Document-MedicationStatement
 InstanceOf: MedicationStatement
 Usage: #example
 * meta
@@ -8,6 +8,6 @@ Usage: #example
 * status = #active
 * medicationCodeableConcept = $rxnorm#206765 "Prinivil 10 MG Oral Tablet"
   * text = "lisinopril oral 10 mg"
-* subject = Reference(example) "Amy Shaw"
+* subject = Reference(Document-Patient) "Amy Shaw"
 * effectivePeriod.start = "2010-05-01"
 * dateAsserted = "2016-05-01T16:13:03Z"

@@ -1,4 +1,4 @@
-Instance: example
+Instance: Document-Patient
 InstanceOf: Patient
 Usage: #example
 * meta

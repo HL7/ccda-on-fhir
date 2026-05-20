@@ -1,4 +1,4 @@
-Instance: FC-problem
+Instance: FHIR-Input-Condition
 InstanceOf: Condition
 Usage: #example
 * meta
@@ -17,5 +17,5 @@ Usage: #example
   * coding[+] = $icd-10-cm#J18.9
   * coding[+] = urn:oid:2.16.840.1.113883.3.247.1.1#87580
   * text = "Pneumonia"
-* subject = Reference(CF-patient)
+* subject = Reference(FHIR-Input-Patient)
 * onsetDateTime = "2012-08-06"

@@ -1,4 +1,4 @@
-Instance: colonoscopy
+Instance: Document-ServiceRequest
 InstanceOf: ServiceRequest
 Usage: #example
 * meta
@@ -9,6 +9,6 @@ Usage: #example
 * intent = #order
 * code = $sct#73761001 "Colonoscopy (procedure)"
   * text = "Colonoscopy"
-* subject = Reference(example)
-* requester = Reference(ccda-practitionerrole-example) "Dr. Brenda Jennings Richard"
-* performer = Reference(ccda-practitionerrole-example) "Dr. Brenda Jennings Richard"
+* subject = Reference(Document-Patient)
+* requester = Reference(Document-PractitionerRole) "Dr. Brenda Jennings Richard"
+* performer = Reference(Document-PractitionerRole) "Dr. Brenda Jennings Richard"

@@ -9,7 +9,7 @@ Usage: #example
 * language = #en-US
 * extension[0]
   * url = "http://hl7.org/fhir/us/ccda/StructureDefinition/DataEntererExtension"
-  * valueReference = Reference(ccda-practitionerrole-example)
+  * valueReference = Reference(Document-PractitionerRole)
 * extension[+]
   * url = "http://hl7.org/fhir/us/ccda/StructureDefinition/VersionNumber"
   * valueInteger = 1
@@ -18,15 +18,15 @@ Usage: #example
   * value = "urn:uuid:39067866-6319-4008-9c6d-3f0176d6826c"
 * status = #preliminary
 * type = $loinc#18776-5 "Plan of care note"
-* subject = Reference(example) "Amy V. Shaw"
+* subject = Reference(Document-Patient) "Amy V. Shaw"
 * date = "2016-06-15T09:10:14Z"
-* author = Reference(ccda-practitionerrole-example) "Ronald Bone, MD"
+* author = Reference(Document-PractitionerRole) "Ronald Bone, MD"
 * title = "Care Plan Example"
 * attester
   * mode = #legal
   * time = "2016-06-15T09:10:14Z"
-  * party = Reference(ccda-practitionerrole-example) "Ronald Boone, MD"
-* custodian = Reference(acme-lab) "Acme Lab"
+  * party = Reference(Document-PractitionerRole) "Ronald Boone, MD"
+* custodian = Reference(Document-Organization-Lab) "Acme Lab"
 * event
   * code = $sct#73761001 "Colonoscopy"
   * period

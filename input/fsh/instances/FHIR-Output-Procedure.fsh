@@ -1,4 +1,4 @@
-Instance: CF-procedure
+Instance: FHIR-Output-Procedure
 InstanceOf: Procedure
 Usage: #example
 * identifier[0]
@@ -12,5 +12,5 @@ Usage: #example
   * text = "Excision of appendix"
   * coding[0] = $sct#80146002 "Excision of appendix"
   * coding[+] = $ICD10#0DBJ4ZZ "Excision of Appendix, Percutaneous Endoscopic Approach"
-* subject = Reference(CF-patient)
+* subject = Reference(FHIR-Output-Patient)
 * performedDateTime = "2012-08-06"

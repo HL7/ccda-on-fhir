@@ -12,18 +12,18 @@ Usage: #example
   * value = "urn:uuid:3a94d1bd-c399-40d2-8574-8212e1491e9c"
 * status = #preliminary
 * type = $loinc#18842-5 "Discharge Summary"
-* subject = Reference(example) "Amy V. Shaw"
+* subject = Reference(Document-Patient) "Amy V. Shaw"
 * date = "2016-02-28T09:10:14Z"
-* author = Reference(ccda-practitionerrole-example) "Ronald Bone, MD"
+* author = Reference(Document-PractitionerRole) "Ronald Bone, MD"
 * title = "Discharge Summary Example"
-* custodian = Reference(organization-1) "Community Health and Hospitals"
+* custodian = Reference(Document-Organization-1) "Community Health and Hospitals"
 * section[0]
   * title = "Allergies and Intolerances Section"
   * code = $loinc#48765-2 "Allergies and adverse reactions Document"
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Substance</b></td><td><b>Overall Severity</b></td><td><b>Reaction</b></td><td><b>Reaction Severity</b></td><td><b>Status</b></td></tr><tr><td>Cashew Nut</td><td>Severe</td><td>Anaphylactic reaction</td><td>Mild</td><td>Active</td></tr></table></div>"
-  * entry = Reference(allergy-intolerance)
+  * entry = Reference(Document-AllergyIntolerance)
 * section[+]
   * title = "Chief Complaint and Reason for Visit Section"
   * code = $loinc#46239-0 "Chief complaint+Reason for visit Narrative"
@@ -60,7 +60,7 @@ Usage: #example
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Problem Name</b></td><td><b>Type</b></td><td><b>Onset Date</b></td><td><b>Abatement Date</b></td><td><b>Status</b></td></tr><tr><td>Fever</td><td>Condition</td><td>2016-06-15</td><td>2016-06-15</td><td>Complete</td></tr></table></div>"
-  * entry = Reference(condition-problem)
+  * entry = Reference(Document-Condition)
 * section[+]
   * title = "History of Present Illness Section"
   * code = $loinc#10164-2 "History of Present illness Narrative"
@@ -85,7 +85,7 @@ Usage: #example
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Social History Element</b></td><td><b>Description</b></td><td><b>Effective Dates</b></td></tr><tr><td>Smoking</td><td>1 pack tobacco per day</td><td>2005/05/01 - 2010/02/28</td></tr></table></div>"
-  * entry = Reference(observation-smoker)
+  * entry = Reference(Document-Observation-Social)
 * section[+]
   * title = "Functional Status Section"
   * code = $loinc#47420-5 "Functional status assessment note"
@@ -116,14 +116,14 @@ Usage: #example
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Problem Name</b></td><td><b>Type</b></td><td><b>Onset Date</b></td><td><b>Abatement Date</b></td><td><b>Status</b></td></tr><tr><td>Fever</td><td>Condition</td><td>2016-04-01</td><td>2016-04-14</td><td>Complete</td></tr></table></div>"
-  * entry = Reference(condition-problem)
+  * entry = Reference(Document-Condition)
 * section[+]
   * title = "Procedures Section"
   * code = $loinc#47519-4 "History of Procedures Document"
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Procedure Name</b></td><td><b>Body Site</b></td><td><b>Performer</b></td><td><b>Date Performed</b></td><td><b>Reason</b></td></tr><tr><td>Appendectomy (Procedure)</td><td>Abdomen</td><td>Dr. Adam Everyman</td><td>20160405</td><td>Generalized abdominal pain 24 hours. Localized in RIF with\r\n                                        rebound and guarding</td></tr></table></div>"
-  * entry = Reference(procedure-rehab)
+  * entry = Reference(Document-Procedure)
 * section[+]
   * title = "Discharge Diagnosis Section"
   * code = $loinc#11535-2 "Hospital discharge Dx Narrative"
@@ -160,7 +160,7 @@ Usage: #example
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Vaccine</b></td><td><b>Date</b></td><td><b>Status</b></td></tr><tr><td>Fluvax (Influenza)</td><td>2016-04-05</td><td>Completed</td></tr></table></div>"
-  * entry = Reference(immunization)
+  * entry = Reference(Document-Immunization)
 * section[+]
   * title = "Nutrition Section"
   * code = $loinc#61144-2 "Diet and nutrition Narrative"
@@ -173,4 +173,4 @@ Usage: #example
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Vital Sign</b></td><td><b>Date</b></td><td><b>Value</b></td></tr><tr><td>Temperature</td><td>2016/06/15</td><td>39 Degrees Celcius</td></tr></table></div>"
-  * entry = Reference(Observation/observation-vitals-temp)
+  * entry = Reference(Document-Observation-Vitals)

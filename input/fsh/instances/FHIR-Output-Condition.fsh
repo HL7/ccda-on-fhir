@@ -1,4 +1,4 @@
-Instance: CF-problem
+Instance: FHIR-Output-Condition
 InstanceOf: Condition
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns"
@@ -16,5 +16,5 @@ Usage: #example
 * extension
   * url = "http://hl7.org/fhir/StructureDefinition/condition-assertedDate"
   * valueDateTime = "2012-08-06"
-* subject = Reference(CF-patient)
+* subject = Reference(FHIR-Output-Patient)
 * onsetDateTime = "2012-08-06"

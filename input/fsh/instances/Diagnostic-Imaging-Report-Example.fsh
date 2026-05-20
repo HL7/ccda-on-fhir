@@ -12,15 +12,15 @@ Usage: #example
   * value = "urn:uuid:895f6f22-f7d6-4feb-90d4-dbfd49b5471e"
 * status = #preliminary
 * type = $loinc#18748-4 "Diagnostic imaging study"
-* subject = Reference(example) "Amy V. Shaw"
+* subject = Reference(Document-Patient) "Amy V. Shaw"
 * date = "2016-05-16T09:10:14Z"
-* author = Reference(ccda-practitionerrole-example) "Ronald Bone, MD"
+* author = Reference(Document-PractitionerRole) "Ronald Bone, MD"
 * title = "Diagnostic Imaging Report Example"
 * attester
   * mode = #legal
   * time = "2016-06-15T09:10:14Z"
-  * party = Reference(ccda-practitionerrole-example) "Ronald Boone, MD"
-* custodian = Reference(acme-lab) "Acme Labs"
+  * party = Reference(Document-PractitionerRole) "Ronald Boone, MD"
+* custodian = Reference(Document-Organization-Lab) "Acme Labs"
 * event
   * code = $sct#399208008 "Plain X-ray of chest"
   * period

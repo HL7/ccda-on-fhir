@@ -1,4 +1,4 @@
-Instance: CF-patient
+Instance: FHIR-Output-Patient
 InstanceOf: Patient
 Usage: #example
 * extension[0]
@@ -43,4 +43,4 @@ Usage: #example
 * communication
   * language = urn:ietf:bcp:47#en
   * preferred = true
-* managingOrganization = Reference(organization-1)
+* managingOrganization = Reference(Document-Organization-1)

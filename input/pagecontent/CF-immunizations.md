@@ -372,5 +372,5 @@ Mapping is from `@moodCode="EVN"` (i.e. historical) immunizations, not `INT` (fu
 #### Links to example content
 
 The consensus mapping example developed through multiple vendors are available below:
-* [Immuniztion CDA example](./Binary-CF-immunization.html)
-* [Immuniztion FHIR example](./Immunization-CF-immunization.html)
+* [CDA Input](./Binary-CDA-Input-Immunization.html)
+* [FHIR Output](./Immunization-FHIR-Output-Immunization.html)

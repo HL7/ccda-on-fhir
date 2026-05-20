@@ -1,4 +1,4 @@
-Instance: consent-example-basic
+Instance: Document-Consent
 InstanceOf: Consent
 Usage: #example
 * meta
@@ -8,9 +8,9 @@ Usage: #example
 * status = #active
 * scope = $consentscope#patient-privacy
 * category = $loinc#59284-0
-* patient = Reference(example)
+* patient = Reference(Document-Patient)
 * dateTime = "2016-05-11"
-* organization = Reference(organization-2)
+* organization = Reference(Document-Organization-2)
 * sourceAttachment
   * url = "http://example.org/not-a-real-consent-just-an-example-url.pdf"
   * title = "The terms of the consent in lawyer speak."
