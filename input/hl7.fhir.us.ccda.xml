@@ -429,6 +429,11 @@
           <generation value="markdown"/>
         </page>
       </page>
+      <page>
+        <nameUrl value="the_specification.html"/>
+        <title value="Specification"/>
+        <generation value="markdown"/>
+      </page>
     </page>
     <parameter>
       <code value="releaselabel"/>

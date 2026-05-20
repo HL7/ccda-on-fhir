@@ -3,11 +3,18 @@
   <li>
     <a href="mappingBackground.html">Background</a>
   </li>
+  <li>
+    <a href="mappingGuidance.html">Structural Guidance</a>
+  </li>
+  <li>
+    <a href="the_specification.html">Document Profiles</a>
+  </li>
   <li class="dropdown">
-    <a data-toggle="dropdown"  class="dropdown-toggle">C-CDA → FHIR<b class="caret">
+    <a data-toggle="dropdown" class="dropdown-toggle">Element Maps<b class="caret">
       </b>
     </a>
     <ul class="dropdown-menu">
+      <li class="dropdown-header">C-CDA → FHIR</li>
       <li><a href="CF-allergies.html">Allergies</a></li>
       <li><a href="CF-encounters.html">Encounters</a></li>
       <li><a href="CF-immunizations.html">Immunizations</a></li>
@@ -15,18 +22,13 @@
       <li><a href="CF-notes.html">Notes</a></li>
       <li><a href="CF-participations.html">Participation</a></li>
       <li><a href="CF-patient.html">Patient</a></li>
-      <li><a href="CF-procedures.html">Procedures</a></li>
       <li><a href="CF-problems.html">Problems</a></li>
+      <li><a href="CF-procedures.html">Procedures</a></li>
       <li><a href="CF-results.html">Results</a></li>
       <li><a href="CF-social.html">Social History</a></li>
       <li><a href="CF-vitals.html">Vital Signs</a></li>
-    </ul>
-  </li>
-  <li class="dropdown">
-    <a data-toggle="dropdown"  class="dropdown-toggle">FHIR → C-CDA<b class="caret">
-      </b>
-    </a>
-    <ul class="dropdown-menu">
+      <li class="divider"></li>
+      <li class="dropdown-header">FHIR → C-CDA</li>
       <li><a href="FC-allergies.html">Allergies</a></li>
       <li><a href="FC-immunizations.html">Immunizations</a></li>
       <li><a href="FC-medications.html">Medications</a></li>
@@ -35,9 +37,6 @@
       <li><a href="FC-procedures.html">Procedures</a></li>
       <li><a href="FC-vitals.html">Vitals</a></li>
     </ul>
-  </li>
-  <li>
-    <a href="mappingGuidance.html">Structural Guidance</a>
   </li>
   <li>
     <a href="conceptMaps.html">Terminology Maps</a>

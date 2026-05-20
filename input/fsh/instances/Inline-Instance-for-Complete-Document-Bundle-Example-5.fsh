@@ -1,5 +1,5 @@
 Instance: Inline-Instance-for-Complete-Document-Bundle-Example-5
-InstanceOf: Practitioner
+InstanceOf: $us-core-practitioner
 Usage: #inline
 * id = "ccda-practitioner-example"
 * identifier

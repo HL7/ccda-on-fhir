@@ -6,6 +6,7 @@ Usage: #inline
 * extension[0]
   * url = "http://hl7.org/fhir/us/ccda/StructureDefinition/DataEntererExtension"
   * valueReference = Reference(urn:uuid:23d3a2c1-44ae-491b-94d3-764d2a9d8f8c)
+  * valueReference.type = "PractitionerRole"
 * extension[+]
   * url = "http://hl7.org/fhir/us/ccda/StructureDefinition/VersionNumber"
   * valueInteger = 1
@@ -22,6 +23,7 @@ Usage: #inline
   * mode = #legal
   * time = "2016-06-15T09:10:14Z"
   * party = Reference(urn:uuid:23d3a2c1-44ae-491b-94d3-764d2a9d8f8c) "Ronald Boone, MD"
+  * party.type = "PractitionerRole"
 * custodian = Reference(urn:uuid:58d390ba-6348-4b0d-b85f-7fbd94223718) "Acme Lab"
 * event
   * code = $sct#73761001 "Colonoscopy"
