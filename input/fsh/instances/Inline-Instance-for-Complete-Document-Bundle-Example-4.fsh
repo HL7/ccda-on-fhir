@@ -3,7 +3,7 @@ InstanceOf: Organization
 Usage: #inline
 * id = "acme-lab"
 * identifier[0]
-  * system = "http://hl7.org.fhir/sid/us-npi"
+  * system = "http://hl7.org/fhir/sid/us-npi"
   * value = "1144221847"
 * identifier[+]
   * system = "http://www.acme.org/organization"

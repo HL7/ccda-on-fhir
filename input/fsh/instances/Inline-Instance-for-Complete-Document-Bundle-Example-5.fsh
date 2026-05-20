@@ -7,7 +7,7 @@ Usage: #inline
   * type = $v2-0203#PRN "Provider number"
     * text = "US National Provider Identifier"
   * system = "http://hl7.org/fhir/sid/us-npi"
-  * value = "9999991011"
+  * value = "9941339108"
 * name
   * family = "Richard"
   * given[0] = "Brenda"
