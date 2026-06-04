@@ -56,7 +56,8 @@ GOTO collectArgs
 
 echo ---------------------------------------------------------------
 ECHO Checking internet connection...
-PING tx.fhir.org -4 -n 1 -w 4000 >nul 2>&1 && SET "online_status=true" || SET "online_status=false"
+powershell -Command "try { $r=[System.Net.WebRequest]::Create('https://tx.fhir.org/r4/metadata'); $r.Timeout=4000; $r.GetResponse().Close(); exit 0 } catch { exit 1 }"
+IF %ERRORLEVEL% EQU 0 (SET "online_status=true") ELSE (SET "online_status=false")
 
 IF "%online_status%"=="true" (
     ECHO We are online and tx.fhir.org is available.
