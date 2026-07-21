@@ -16,7 +16,7 @@
     <valueInteger value="2"/>
   </extension>
   <url value="http://hl7.org/fhir/us/ccda/ImplementationGuide/hl7.fhir.us.ccda"/>
-  <version value="2.0.0"/>
+  <version value="2.1.0"/>
   <name value="CCDAonFHIR"/>
   <title value="C-CDA on FHIR"/>
   <status value="active"/>

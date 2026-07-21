@@ -3,7 +3,7 @@
 # ╰─────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.us.ccda
 canonical: http://hl7.org/fhir/us/ccda
-version: 2.0.0
+version: 2.1.0
 name: CCDAonFHIR
 title: C-CDA on FHIR
 status: active
@@ -33,7 +33,7 @@ dependencies:
 # │                              Parameters                                     │
 # ╰─────────────────────────────────────────────────────────────────────────────╯
 copyrightYear: 2020+
-releaseLabel: STU2
+releaseLabel: STU2.1
 
 # ╭─────────────────────────────────────────────────────────────────────────────╮
 # │                              FSH-only options                               │
