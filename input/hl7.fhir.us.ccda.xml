@@ -342,8 +342,8 @@
       <title value="Home Page"/>
       <generation value="markdown"/>
       <page>
-        <nameUrl value="mappingBackground.html"/>
-        <title value="Mapping Background"/>
+        <nameUrl value="background.html"/>
+        <title value="Background"/>
         <generation value="markdown"/>
         <page>
           <nameUrl value="mappingGuidance.html"/>

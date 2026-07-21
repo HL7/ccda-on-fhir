@@ -103,7 +103,7 @@ Implementers moving from C-CDA to FHIR need to be aware that the goal of this pr
 
 #### Mapping between C-CDA and C-CDA on FHIR
 
-The mappings which have been developed as part of an independent project, which was performed independently of the original document-level profiles, are included [here](mappingBackground.html) and in the menu dropdown under "Mapping" 
+The mappings which have been developed as part of an independent project, which was performed independently of the original document-level profiles, are included [here](background.html) and in the menu dropdown under "Mapping" 
 
 
 [Next Page - Downloads](downloads.html)

@@ -15,4 +15,4 @@
 - [Procedures](FC-procedures.html)
 - [Vitals](FC-vitals.html)
 
-Please refer to [mapping background](mappingBackground.html) for more information how maps were selected and developed.
+Please refer to [mapping background](background.html) for more information how maps were selected and developed.

@@ -1,46 +1,29 @@
-[Previous Page - Home Page](index.html)
+[Consolidated Clinical Document Architecture (C-CDA)](https://hl7.org/cda/us/ccda/) and [Fast Healthcare Interoperability Resources (FHIR) US Core](http://hl7.org/fhir/us/core/STU6.1/) are two of the most common standards for exchanging clinical data in the United States. But things are changing:
 
-{% include stu-note.xml %}
+* As FHIR adoption grows, we need an agreed way to construct FHIR documents.
+* As CMS and ONC guidance change, we face a situation where there is a great deal of existing information and capability in CDA, and a great need to consume that information with APIs. 
+* There are also use cases for moving information from FHIR to CDA, primarily in the public health domain.
 
-### Clinical Documents
+This IG combines two related workstreams. The first is a specification for FHIR profiles to support transmission of a FHIR document bundle containing data conforming to the C-CDA information model. This effort is supported by the document profiles, which conform to the UV FHIR Clinical Document specification. The second is guidance on translating between XML C-CDA documents and FHIR documents. The two efforts share a common set of examples.
 
-Clinical documents come in many forms, from paper documents in a filing cabinet to electronic documents shared via Health Information Exchanges (HIEs). Regardless of their form, clinical documents share key characteristics that differentiate them from messages or queries for discrete data elements.   
+Note that C-CDA is a very large specification, so this guidance does not attempt to address every template. Instead, it focuses on the data elements specified in USCDI. This version supports USCDI-3, which is supported by FHIR US Core R6.1 and C-CDA 2.1 & Companion Guide 4.1. The 2.1 publication does not provide a USCDI index, so we use the index to USCDI-4 provided in C-CDA 3.0. We expect to advance these maps to keep up with USCDI in the future.
 
-#### Key Characteristics of Clinical Documents
+In addition to these (primarily) entry level USCDI elements, both the profiles and the maps also address the document headers.
 
-* Persistence – A clinical document continues to exist in an unaltered state, for a time period defined by local and regulatory requirements. Note: documents outlive the servers (and often the syntax) on which they are created. 
-* Stewardship – A clinical document is maintained by an organization entrusted with its care. 
-* Potential for authentication – A clinical document is an assemblage of information that is intended to be legally authenticated. 
-* Context – A clinical document establishes the default context for its contents. 
-* Wholeness – Authentication of a clinical document applies to the whole and does not apply to portions of the document without the full context of the document. 
-* Human readability – A clinical document is human readable. 
+FHIR-to-C-CDA element and terminology maps are notated "FHIR->C-CDA"; C-CDA-to-FHIR as  "C-CDA->FHIR". 
 
-### Clinical Document Architecture
+By establishing the HL7 mapping transformation guidance, the project provides clarity and consistency in translating data between C-CDA and FHIR, as well as simply providing an agreed common understanding of their meaning. This clarity and consistency are critical to ensure interoperability and communication across different healthcare systems, devices, applications and to ensure accurate public reporting and analytics. Ultimately, consistent transforms between standards reduces duplication of patient data and leads to better patient care and improved healthcare outcomes. In addition, this work clearly identifies elements where divergent assumptions impede reliably correct and unambiguous translation. These elements may present opportunities for refining the standards.
 
-The HL7 Version 3 Clinical Document Architecture (CDA®) is a document markup standard that specifies the structure and semantics of "clinical documents" for the purpose of exchange between healthcare providers and patients. It defines a clinical document as having the following six characteristics: 1) Persistence, 2) Stewardship, 3) Potential for authentication, 4) Context, 5) Wholeness and 6) Human readability.
+### Transformation Challenges and Limitations 
 
-A CDA can contain any type of clinical content -- typical CDA documents would be a Discharge Summary, Imaging Report, Admission & Physical, Pathology Report and more. The most popular use is for inter-enterprise information exchange, such as is envisioned for a US Health Information Exchange (HIE).
+Some implementers may be interested in extracting FHIR resources from CDA documents without actually creating a document. This should not present any problems, as long as the implementer correctly reproduces the resource context. Entries in CDA documents inherit context from their sections and documents, as explained [here](https://build.fhir.org/ig/HL7/CDA-ccda/generalguidance.html#context-conduction), but FHIR resources are independent: they must explicitly assert context in order for it to propagate.
 
-More information on CDA can be found [here](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=7). 
+There has been more interest in mapping from C-CDA to FHIR: there are more of these maps, and they are more mature, having been tested by multiple implementer stakeholders. The FHIR-to-C-CDA direction covers the PAMPI domains (Problem, Allergy, Medication, Procedure, Immunization), but with less maturity.
 
-### Consolidated CDA (C-CDA)
+Since the information models were built by different people at different times, the underlying assumptions differ. As a result, there are cases where the mapping is less precise than the underlying data might support, and where as a result a "round trip" from one specification to the other and back will result in a loss of information. In some cases, the loss can be identified prospectively, in which case we annotate the maps, but there may be cases where this is not true.
 
-The Consolidated CDA (C-CDA) implementation guide contains a library of CDA templates, incorporating and harmonizing previous efforts from Health Level Seven (HL7), Integrating the Healthcare Enterprise (IHE), and Health Information Technology Standards Panel (HITSP). It represents harmonization of the HL7 Health Story guides, HITSP C32, related components of IHE Patient Care Coordination (IHE PCC), and Continuity of Care (CCD). C-CDA Release 1 included all required CDA templates in Final Rules for Stage 1 Meaningful Use and 45 CFR Part 170 – Health Information Technology: Initial Set of Standards, Implementation Specifications, and Certification Criteria for Electronic Health Record Technology; Final Rule. This R2.1 guide was developed and produced by the HL7 Structured Documents Workgroup. It updates the C-CDA R2 (2014) guide to support “on-the-wire” compatibility with R1.1 systems C-CDA Release 2.1 implementation guide, in conjunction with the HL7 CDA Release 2 (CDA R2) standard, is to be used for implementing the following CDA documents and header constraints for clinical notes: Care Plan including Home Health Plan of Care (HHPoC), Consultation Note, Continuity of Care Document (CCD), Diagnostic Imaging Reports (DIR), Discharge Summary, History and Physical (H&P), Operative Note, Procedure Note, Progress Note, Referral Note, Transfer Summary, Unstructured Document, Patient Generated Document (US Realm Header).
+### Approach
 
-More information on C-CDA can be found [here](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492). 
+We employed several tactics to meet our goals. Standards developers drafted maps based on the respective specifications, and these were reviewed by stakeholders both offline and at public, regularly scheduled meetings. These meetings included implementers, terminologists, regulatory and public health representatives, and strategists, who engaged in realignment, consensus-seeking, and reformatting of the maps for a variety of audiences. Difficult questions were escalated to the work groups responsible for the specifications. Issues and their resolutions were logged in the publicly accessible [project site](https://confluence.hl7.org/spaces/CGP/pages/111124183/C-CDA+to+FHIR+and+from+US+Core+Mapping).
 
-### Moving from CDA/C-CDA to FHIR
-
-Since C-CDA exists and has seen widespread implementation, one may question why a FHIR version is desired. The main reason is that CDA and C-CDA are based on HL7 Version 3, which while XML-based was (and still is) rather difficult to implement for a variety of reasons such as data types that are not widely implemented in software libraries, reliance on xsi:type for datatype choices, etc. Also, FHIR is much easier to learn than CDA, so while implementers who are already familiar with CDA will likely keep working with it, new implementers are likely to want to move directly to FHIR. 
-
-#### CDA Header to FHIR Composition Resource Analysis
-
-Efforts to map from CDA to FHIR began shortly after FHIR DSTU 1 (aka FHIR R1) was published. The initial work compared the CDA header to the FHIR Composition resource to identify any discrepancies. This work resulted in some key changes to the Composition resource in FHIR DSTU 2 (aka FHIR R2). This initial mapping work is still available via a Google Docs Spreadsheet located [here](https://docs.google.com/spreadsheets/d/1KctdexG3oB2QBiBQNH1Rbt2uJ6DxQFROyIFKo5q95WU/edit#gid=1223244219). 
-
-### The C-CDA on FHIR Project
-
-The C-CDA on FHIR Project is a volunteer effort that picked up where the Argonaut analytical mappings left off. The initial goal of the project was to represent Consolidated CDA Templates for Clinical Notes (C-CDA) 2.1 templates using FHIR profiles. The first stage of the project defined C-CDA document-level profiles on the Composition resource and contained sections. All coded data used by sections was accomplished by referencing relevant US-Core FHIR profiles. This work was completed and the IG was published in April 2018. 
-
-Subsequent work represented in this implementation guide has proceeded as an unballoted STU update to upgrade the FHIR STU 3 profiles to FHIR R4 and make any other necessary changes to comply with the latest FHIR quality criteria.
-
-[Next Page - The Specification](the_specification.html)
+In addition, the project team employed the example-based approach through Connectathons with vendors and experts in the standards community. The approach involves sharing inbound examples among the vendors, comparing the outbound artifacts generated by these vendors, and discussing with the group to achieve alignment in best practice recommendations. Our team has been focused on the generated artifacts, regardless of the transformation technologies, so any vendor is empowered to achieve the same transformation results. Note that, to date, the Connectathons have addressed only the CDA-to-FHIR cases, though two implementers have provided feedback on the FHIR-to-CDA cases.
