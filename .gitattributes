@@ -3,3 +3,4 @@
 input/includes/examples/*.xhtml text eol=lf
 examples-src/correspondence/*.yaml text eol=lf
 examples-src/oid-map.json text eol=lf
+input/resources/binary/*.xml text eol=lf
