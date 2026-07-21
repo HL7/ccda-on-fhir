@@ -6,8 +6,14 @@
   <li>
     <a href="mappingGuidance.html">Structural Guidance</a>
   </li>
-  <li>
-    <a href="the_specification.html">Document Profiles</a>
+  <li class="dropdown">
+    <a data-toggle="dropdown" class="dropdown-toggle">Documents<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a href="the_specification.html">Document Guidance &amp; Profiles</a></li>
+      <li><a href="myra-jones.html">Complete Example (Myra Jones)</a></li>
+    </ul>
   </li>
   <li class="dropdown">
     <a data-toggle="dropdown" class="dropdown-toggle">Element Maps<b class="caret">
@@ -15,6 +21,7 @@
     </a>
     <ul class="dropdown-menu">
       <li class="dropdown-header">C-CDA → FHIR</li>
+      <li><a href="CF-header.html">Header (Document)</a></li>
       <li><a href="CF-allergies.html">Allergies</a></li>
       <li><a href="CF-encounters.html">Encounters</a></li>
       <li><a href="CF-immunizations.html">Immunizations</a></li>

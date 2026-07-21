@@ -1,6 +1,7 @@
 Instance: Document-Immunization
 InstanceOf: Immunization
 Usage: #example
+Description: "Supporting example instance (Immunization) referenced by the document profile examples."
 * meta
   * versionId = "4"
   * lastUpdated = "2020-08-12T19:18:13.351+00:00"

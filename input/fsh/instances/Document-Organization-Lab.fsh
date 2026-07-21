@@ -1,6 +1,7 @@
 Instance: Document-Organization-Lab
 InstanceOf: Organization
 Usage: #example
+Description: "Supporting example instance (Organization Lab) referenced by the document profile examples."
 * meta
   * versionId = "6"
   * lastUpdated = "2020-08-12T21:30:13.081+00:00"

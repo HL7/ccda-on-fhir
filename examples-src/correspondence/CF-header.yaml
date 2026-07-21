@@ -1,0 +1,50 @@
+# Correspondence file: CF-header highlighted example (Myra CCD header -> Composition)
+selector:
+  headerPath: ClinicalDocument
+  exclude: [component]
+resources:
+  - Composition-CCD-Myra
+rows:
+  - cda: id/@root
+    fhir: Composition-CCD-Myra.identifier.value
+    transform: uuid-to-urn
+    scope: header
+  - cda: code/@code
+    fhir: Composition-CCD-Myra.type.coding[0].code
+    scope: header
+  - cda: code/@codeSystem
+    fhir: Composition-CCD-Myra.type.coding[0].system
+    transform: oid-to-uri
+  - cda: title
+    fhir: Composition-CCD-Myra.title
+    transform: trim
+    scope: header
+  - cda: effectiveTime/@value
+    fhir: Composition-CCD-Myra.date
+    transform: cda-datetime
+    scope: header
+  - cda: confidentialityCode/@code
+    fhir: Composition-CCD-Myra.confidentiality
+    scope: header
+  - cda: languageCode/@code
+    fhir: Composition-CCD-Myra.language
+    scope: header
+  - cda: author/assignedAuthor/assignedPerson/name/given
+    fhir: Composition-CCD-Myra.author[0].display
+    transform: display
+    note: "author display assembled from person name"
+    uscdi: "Provenance / Author"
+  - cda: custodian/assignedCustodian/representedCustodianOrganization/name
+    fhir: Composition-CCD-Myra.custodian.display
+    transform: trim
+    scope: header
+  - cda: documentationOf/serviceEvent/effectiveTime/low/@value
+    fhir: Composition-CCD-Myra.event[0].period.start
+    transform: cda-date
+    note: "source low has no timezone; date precision per policy"
+    scope: header
+  - cda: documentationOf/serviceEvent/effectiveTime/high/@value
+    fhir: Composition-CCD-Myra.event[0].period.end
+    transform: cda-date
+    note: "date precision to match start (source low lacks a zone; per-1 needs comparable bounds)"
+    scope: header

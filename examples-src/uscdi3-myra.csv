@@ -1,0 +1,97 @@
+USCDI Data Class,USCDI Data Element,Found in File,Line Number,Entry Type,Code/Identifier
+Allergies and Intolerances,Substance (Reactant),Yes,782,participantRole,1191 Aspirin; 762952008 Peanut (line 925)
+Allergies and Intolerances,Reaction,Yes,802,observation,247472004 Wheal
+Assessment and Plan of Treatment,Assessment and Plan of Treatment,Yes,1938,section,18776-5 Plan of Treatment
+Assessment and Plan of Treatment,SDOH Assessment,Yes,601,observation,88122-7 Food insecurity screening
+Care Team Member(s),Care Team Member Name,Yes,2790,assignedPerson,Dr. Samir Khan
+Care Team Member(s),Care Team Member Identifier,Yes,2778,id,NPI 12345678910
+Care Team Member(s),Care Team Member Location,Yes,2781,addr,"1004 Healthcare Dr., Portland, OR"
+Care Team Member(s),Care Team Member Telecom,Yes,2786,telecom,tel:+1(555)555-1002
+Care Team Member(s),Care Team Member Role,Yes,2779,code,207R00000X Internal Medicine
+Clinical Notes,Consultation Note,Yes,2497,act,34109-9 / 11488-4 Consultation note
+Clinical Notes,Discharge Summary Note,Yes,2570,act,18842-5 Discharge summary
+Clinical Notes,History & Physical,Yes,2590,act,34117-2 History and physical note
+Clinical Notes,Imaging Narrative,Yes,2610,act,18748-4 Diagnostic imaging study
+Clinical Notes,Laboratory Report Narrative,Yes,2630,act,11502-2 Laboratory report
+Clinical Notes,Pathology Report Narrative,Yes,2650,act,11526-1 Pathology study
+Clinical Notes,Procedure Note,Yes,2670,act,28570-0 Procedure note
+Clinical Notes,Progress Note,Yes,2690,act,11506-5 Progress note
+Encounter Information,Encounter Diagnosis,Yes,2445,observation,64109004 Costal Chondritis
+Encounter Information,Encounter Disposition,Yes,2370,sdtc:dischargeDispositionCode,01 Discharged to home
+Encounter Information,Encounter Location,Yes,2392,participant LOC,"Community Urgent Care, 1004 Healthcare Dr., Portland, OR"
+Encounter Information,Encounter Time,Yes,2369,effectiveTime,201208151000-0800
+Encounter Information,Encounter Type,Yes,2360,code,99213 Office/outpatient established low MDM 20-29 min
+Goals,Patient Goals,Yes,1979,observation moodCode=GOL,262285001 Weight decreased (finding)
+Goals,SDOH Goals,Yes,2013,observation moodCode=GOL,1078229009 Food security
+Health Concerns,Health Concerns,Yes,2711,section/act,75310-3 Health Concern Act
+Health Concerns,SDOH Problems/Health Concerns,Yes,593,observation,445281000124101 Nutrition impaired due to limited food access
+Health Insurance Information,Coverage Status,Yes,2829,statusCode,completed (Coverage Activity)
+Health Insurance Information,Coverage Type,Yes,2836,code,1 Medicare (Source of Payment Typology); narrative: Medicare Part A
+Health Insurance Information,Group Identifier,Yes,2883,id extension,GRP-98765
+Health Insurance Information,Member Identifier,Yes,2855,id extension,1EG4-TE5-MK72
+Health Insurance Information,Payer Identifier,Yes,2842,id extension,CMS
+Health Insurance Information,Relationship to Subscriber,Yes,2856,code,SELF
+Health Insurance Information,Subscriber Identifier,Yes,2870,id extension,1EG4-TE5-MK72
+Health Status/Assessments,Disability Status,Yes,2945,observation,89571-4 Disability status (LA29240-1 No identified disability)
+Health Status/Assessments,Functional Status,Yes,2920,observation,54522-8 Functional status (371153006 Independent)
+Health Status/Assessments,Mental/Cognitive Status,Yes,2932,observation,373930000 Cognitive function finding (66557003 No impairment)
+Health Status/Assessments,Pregnancy Status,Yes,2956,observation,82810-3 Pregnancy status (60001007 Not pregnant)
+Immunizations,Immunizations,Yes,1644,substanceAdministration,CVX 88 Influenza; CVX 43 Hepatitis B (line 1779)
+Laboratory,Tests,Yes,2078,organizer,24357-6 Urinalysis macro panel
+Laboratory,Values/Results,Yes,2114,observation,5811-5 Specific gravity 1.015
+Laboratory,Result Interpretation,Yes,2127,interpretationCode,N Normal
+Laboratory,Result Reference Range,Yes,2136,referenceRange,1.005-1.030
+Laboratory,Result Status,Yes,2124,statusCode,completed
+Laboratory,Specimen Type,Yes,2132,specimen,122575003 Urine specimen
+Medications,Medications,Yes,1116,substanceAdministration,1190220 Albuterol/ipratropium; 1657066 Bevacizumab (line 1237)
+Medications,Dose,Yes,1030,doseQuantity,value=1; value=5 unit=mg/kg
+Medications,Dose Unit of Measure,Yes,1035,administrationUnitCode,C48501 Inhalation dosing unit
+Medications,Indication,Yes,1116,observation,56018004 Wheezing; 363406005 Malignant neoplasm of colon (line 1264)
+Medications,Fill Status,Yes,1131,supply statusCode,completed
+Patient Demographics/Information,Current Address,Yes,23,addr,"1357 Amber Drive, Beaverton, OR 97006"
+Patient Demographics/Information,Date of Birth,Yes,48,birthTime,19470501
+Patient Demographics/Information,Email Address,Yes,36,telecom,mailto:myra.jones@email.com
+Patient Demographics/Information,Ethnicity,Yes,53,ethnicGroupCode,2135-2 Hispanic or Latino
+Patient Demographics/Information,First Name,Yes,39,given,Myra
+Patient Demographics/Information,Gender Identity,Yes,1892,observation,446141000124107 Identifies as female gender
+Patient Demographics/Information,Last Name,Yes,40,family,Jones
+Patient Demographics/Information,Phone Number,Yes,35,telecom,tel:+1(565)867-5309
+Patient Demographics/Information,Phone Number Type,Yes,35,telecom use,MC (mobile)
+Patient Demographics/Information,Preferred Language,Yes,86,languageCode,en
+Patient Demographics/Information,Previous Address,Yes,29,addr use=BAD,"742 Evergreen Terrace, Portland, OR 97201"
+Patient Demographics/Information,Previous Name,Yes,42,name use=SRCH,Myra Gonzalez (maiden)
+Patient Demographics/Information,Race,Yes,51,raceCode,2106-3 White
+Patient Demographics/Information,Related Person's Name,Yes,66,guardianPerson,Boris Betterhalf
+Patient Demographics/Information,Related Person's Relationship,Yes,58,code,FTH father
+Patient Demographics/Information,Sex,Yes,47,administrativeGenderCode,F
+Patient Demographics/Information,Sex Parameter for Clinical Use,Yes,1913,observation,99501-9 Female-typical parameter (LA32969-2)
+Patient Demographics/Information,Sexual Orientation,Yes,1903,observation,20430005 Heterosexual
+Patient Demographics/Information,Suffix,Yes (added in v8),,,
+Patient Demographics/Information,Tribal Affiliation,Yes (added in v8),,,
+Problems,Problems,Yes,336,observation,233604007 Pneumonia; 195967001 Asthma (line 456); 414916001 Obesity (line 668); etc.
+Problems,Date of Diagnosis,Yes,636,act,77975-1 Earliest date of diagnosis
+Problems,Date of Resolution,Yes,527,effectiveTime high,20140405235959 Acute pharyngitis resolution
+Procedures,Procedures,Yes,1335,procedure,416940007 Chest x-ray; 73761001 Colonoscopy (line 1440); 33206 Pacemaker (line 1563); etc.
+Procedures,SDOH Interventions,Yes,1538,procedure,385767005 Meals on wheels provision education
+Procedures,Performance Time,Yes,1344,effectiveTime,Procedure dates
+Procedures,Reason for Referral,Yes,2968,act,42349-1 Reason for referral
+Provenance,Author,Yes,118,assignedPerson,Provider abc
+Provenance,Author Organization,Yes,94,providerOrganization,Primary Care's Partners Test
+Provenance,Author Role,Yes,110,code,260000000X
+Provenance,Author Time Stamp,Yes,106,time,20161003182710+0000
+Smoking Status,Smoking Status,Yes,1861,observation,449868002 Current every day smoker
+Smoking Status,Substance Use,Yes,1925,observation,74013-4 Alcoholic drinks per day - Social drinker
+Unique Device Identifier(s),UDI,Yes,1454,participantRole,Colonoscope UDI (line 1454); Pacemaker UDI (line 1568)
+Vital Signs,BMI,Yes,2258,observation,39156-5 BMI 32.4 kg/m2
+Vital Signs,Blood Pressure (Diastolic),Yes,2222,observation,8462-4 Diastolic BP 78 mm[Hg]
+Vital Signs,Blood Pressure (Systolic),Yes,2210,observation,8480-6 Systolic BP 128 mm[Hg]
+Vital Signs,Body Height,Yes,2234,observation,8302-2 Height 162 cm
+Vital Signs,Body Temperature,Yes,2270,observation,8310-5 Temperature 37.0 Cel
+Vital Signs,Body Weight,Yes,2246,observation,29463-7 Weight 85 kg
+Vital Signs,Heart Rate,Yes,2195,observation,8867-4 HEART RATE 80 /min
+Vital Signs,Inhaled Oxygen Concentration,Yes,2306,observation,3150-0 Inhaled O2 21%
+Vital Signs,Pediatric BMI for Age,,,,
+Vital Signs,Pediatric Head Circumference,,,,
+Vital Signs,Pediatric Weight for Height,,,,
+Vital Signs,Pulse Oximetry,Yes,2294,observation,2708-6 SpO2 97%
+Vital Signs,Respiratory Rate,Yes,2282,observation,9279-1 Respiratory rate 16 /min

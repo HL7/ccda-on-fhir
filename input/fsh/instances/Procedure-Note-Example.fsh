@@ -1,6 +1,7 @@
 Instance: Procedure-Note-Example
 InstanceOf: Composition
 Usage: #example
+Description: "Example composition for the Procedure Note document profile."
 * meta
   * versionId = "4"
   * lastUpdated = "2020-08-12T21:30:12.894+00:00"
@@ -8,22 +9,31 @@ Usage: #example
   * profile = "http://hl7.org/fhir/us/ccda/StructureDefinition/Procedure-Note"
 * language = #en-US
 * extension[0]
-  * url = "http://hl7.org/fhir/us/ccda/StructureDefinition/OrderExtension"
+  * url = "http://hl7.org/fhir/StructureDefinition/event-basedOn"
   * valueReference = Reference(Document-ServiceRequest) "Colonoscopy"
 * extension[+]
   * url = "http://hl7.org/fhir/us/ccda/StructureDefinition/PerformerExtension"
   * valueReference = Reference(Document-PractitionerRole)
 * extension[+]
-  * url = "http://hl7.org/fhir/us/ccda/StructureDefinition/InformationRecipientExtension"
-  * valueReference = Reference(Document-Practitioner-1)
+  * url = "http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/information-recipient-extension"
+  * extension[0].url = "type"
+  * extension[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ParticipationType#PRCP "primary information recipient"
+  * extension[+].url = "party"
+  * extension[=].valueReference = Reference(Document-Practitioner-1)
 * extension[+]
-  * url = "http://hl7.org/fhir/us/ccda/StructureDefinition/ParticipantExtension"
-  * valueReference = Reference(Document-Practitioner-1)
+  * url = "http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/ParticipantExtension"
+  * extension[0].url = "type"
+  * extension[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ParticipationType#PART "participation"
+  * extension[+].url = "party"
+  * extension[=].valueReference = Reference(Document-Practitioner-1)
 * extension[+]
-  * url = "http://hl7.org/fhir/us/ccda/StructureDefinition/InformantExtension"
-  * valueReference = Reference(Document-Practitioner-1)
+  * url = "http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/informant-extension"
+  * extension[0].url = "type"
+  * extension[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ParticipationType#INF "informant"
+  * extension[+].url = "party"
+  * extension[=].valueReference = Reference(Document-Practitioner-1)
 * extension[+]
-  * url = "http://hl7.org/fhir/us/ccda/StructureDefinition/AuthorizationExtension"
+  * url = "http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/consent-extension"
   * valueReference = Reference(Document-Consent)
 * identifier
   * system = "urn:ietf:rfc:3986"

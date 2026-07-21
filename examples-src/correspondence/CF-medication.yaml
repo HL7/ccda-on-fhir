@@ -1,0 +1,131 @@
+# Correspondence file: CF-medications highlighted example
+# Selector: which entry of the master CCD this example uses.
+# Rows: cda = XPath relative to the selected element (default ns = urn:hl7-org:v3);
+#        fhir = <InstanceName>.<dotted path> into the SUSHI-generated JSON;
+#        transform = declared value relationship for the checker (default: equal);
+#        note = optional reviewer hint. Row order assigns colors (color10, color11, ...).
+selector:
+  section: "10160-0"          # HISTORY OF MEDICATION USE
+  entryId: "cdbd33f0-6cde-11db-9fe1-0800200c9a66"
+  element: substanceAdministration
+binary: CDA-Input-MedicationRequest
+resources:                    # right-column panes, in order
+  - FHIR-Output-MedicationRequest
+  - FHIR-Output-Medication
+alternatives:                 # illustrative comment blocks (content derived from canonical data)
+  - resource: FHIR-Output-MedicationRequest
+    before: medicationReference
+    as: medicationCodeableConcept
+    from: FHIR-Output-Medication.code
+    comment: "Only one of medicationReference or medicationCodeableConcept may be populated. Implementers not creating a separate Medication resource send the code directly (D-med-4). Shown for illustration, derived from the Medication resource below:"
+rows:
+  - cda: id/@root
+    fhir: FHIR-Output-MedicationRequest.identifier[0].value
+    transform: uuid-to-urn
+  - cda: statusCode/@code
+    fhir: FHIR-Output-MedicationRequest.status
+    transform: conceptmap CF-MedicationStatus
+  - cda: "@moodCode"
+    fhir: FHIR-Output-MedicationRequest.intent
+    transform: conceptmap CF-MedActivityMood
+    note: "PLACEHOLDER pending MedMaps (D-med-2)"
+  - cda: effectiveTime[1]/low/@value
+    fhir: FHIR-Output-MedicationRequest.dosageInstruction[0].timing.repeat.boundsPeriod.start
+    transform: cda-date
+  - cda: effectiveTime[2]/period/low/@value
+    fhir: FHIR-Output-MedicationRequest.dosageInstruction[0].timing.repeat.period
+    transform: number
+  - cda: effectiveTime[2]/period/high/@value
+    fhir: FHIR-Output-MedicationRequest.dosageInstruction[0].timing.repeat.periodMax
+    transform: number
+  - cda: effectiveTime[2]/period/low/@unit
+    fhir: FHIR-Output-MedicationRequest.dosageInstruction[0].timing.repeat.periodUnit
+  - cda: routeCode/@code
+    fhir: FHIR-Output-MedicationRequest.dosageInstruction[0].route.coding[0].code
+  - cda: routeCode/@displayName
+    fhir: FHIR-Output-MedicationRequest.dosageInstruction[0].route.coding[0].display
+    transform: display
+  - cda: doseQuantity/@value
+    fhir: FHIR-Output-MedicationRequest.dosageInstruction[0].doseAndRate[0].doseQuantity.value
+    uscdi: "Medications / Dose"
+    transform: number
+  - cda: maxDoseQuantity/numerator/@value
+    fhir: FHIR-Output-MedicationRequest.dosageInstruction[0].maxDosePerPeriod.numerator.value
+    transform: number
+  - cda: maxDoseQuantity/numerator/@unit
+    fhir: FHIR-Output-MedicationRequest.dosageInstruction[0].maxDosePerPeriod.numerator.code
+  - cda: maxDoseQuantity/denominator/@value
+    fhir: FHIR-Output-MedicationRequest.dosageInstruction[0].maxDosePerPeriod.denominator.value
+    transform: number
+  - cda: maxDoseQuantity/denominator/@unit
+    fhir: FHIR-Output-MedicationRequest.dosageInstruction[0].maxDosePerPeriod.denominator.code
+  - cda: author/time/@value
+    fhir: FHIR-Output-MedicationRequest.authoredOn
+    uscdi: "Provenance / Author Time Stamp"
+    transform: cda-date
+    note: "date precision only (Jay 2026-07-18: no times without policy on zones)"
+  - cda: entryRelationship[@typeCode="RSON"]/observation/value/@code
+    fhir: FHIR-Output-MedicationRequest.reasonCode[0].coding[0].code
+    uscdi: "Medications / Indication"
+  - cda: entryRelationship[@typeCode="RSON"]/observation/value/@displayName
+    fhir: FHIR-Output-MedicationRequest.reasonCode[0].coding[0].display
+    transform: display
+  - cda: entryRelationship[@typeCode="SUBJ"]/act/text
+    fhir: FHIR-Output-MedicationRequest.dosageInstruction[0].patientInstruction
+    transform: trim
+  - cda: entryRelationship[@typeCode="SUBJ"]/act/code/@code
+    fhir: FHIR-Output-MedicationRequest.dosageInstruction[0].additionalInstruction[0].coding[0].code
+  - cda: entryRelationship[@typeCode="COMP"][act/code/@code="48767-8"]/act/text
+    fhir: FHIR-Output-MedicationRequest.note[0].text
+    transform: trim
+  - cda: entryRelationship[@typeCode="REFR"]/supply/effectiveTime/high/@value
+    fhir: FHIR-Output-MedicationRequest.dispenseRequest.validityPeriod.end
+    transform: cda-date
+  - cda: entryRelationship[@typeCode="REFR"]/supply/repeatNumber/@value
+    fhir: FHIR-Output-MedicationRequest.dispenseRequest.numberOfRepeatsAllowed
+    transform: minus-one
+    note: "FHIR excludes the original dispense"
+  - cda: entryRelationship[@typeCode="REFR"]/supply/quantity/@value
+    fhir: FHIR-Output-MedicationRequest.dispenseRequest.quantity.value
+    transform: number
+  - cda: precondition/criterion/value/@code
+    fhir: FHIR-Output-MedicationRequest.dosageInstruction[0].asNeededBoolean
+    transform: presence-true
+    note: "presence of precondition => asNeededBoolean=true"
+  - cda: consumable/manufacturedProduct/manufacturedMaterial/code/@code
+    fhir: FHIR-Output-Medication.code.coding[0].code
+    uscdi: "Medications / Medications"
+  - cda: consumable/manufacturedProduct/manufacturedMaterial/code/@displayName
+    fhir: FHIR-Output-Medication.code.coding[0].display
+    transform: display
+  - cda: administrationUnitCode/@code
+    fhir: FHIR-Output-Medication.form.coding[0].code
+  - cda: administrationUnitCode/@displayName
+    fhir: FHIR-Output-Medication.form.coding[0].display
+    transform: display
+  - cda: consumable/manufacturedProduct/manufacturerOrganization/name
+    fhir: FHIR-Output-Medication.manufacturer.display
+    transform: trim
+  - cda: participant[@typeCode="CSM"]/participantRole/playingEntity/code/@code
+    fhir: FHIR-Output-Medication.ingredient[0].itemCodeableConcept.coding[0].code
+  - cda: participant[@typeCode="CSM"]/participantRole/playingEntity/code/@displayName
+    fhir: FHIR-Output-Medication.ingredient[0].itemCodeableConcept.coding[0].display
+    transform: display
+  - cda: routeCode/@codeSystem
+    fhir: FHIR-Output-MedicationRequest.dosageInstruction[0].route.coding[0].system
+    transform: oid-to-uri
+  - cda: entryRelationship[@typeCode="RSON"]/observation/value/@codeSystem
+    fhir: FHIR-Output-MedicationRequest.reasonCode[0].coding[0].system
+    transform: oid-to-uri
+  - cda: entryRelationship[@typeCode="SUBJ"]/act/code/@codeSystem
+    fhir: FHIR-Output-MedicationRequest.dosageInstruction[0].additionalInstruction[0].coding[0].system
+    transform: oid-to-uri
+  - cda: consumable/manufacturedProduct/manufacturedMaterial/code/@codeSystem
+    fhir: FHIR-Output-Medication.code.coding[0].system
+    transform: oid-to-uri
+  - cda: administrationUnitCode/@codeSystem
+    fhir: FHIR-Output-Medication.form.coding[0].system
+    transform: oid-to-uri
+  - cda: participant[@typeCode="CSM"]/participantRole/playingEntity/code/@codeSystem
+    fhir: FHIR-Output-Medication.ingredient[0].itemCodeableConcept.coding[0].system
+    transform: oid-to-uri

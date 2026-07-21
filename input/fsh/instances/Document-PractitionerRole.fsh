@@ -1,6 +1,7 @@
 Instance: Document-PractitionerRole
 InstanceOf: PractitionerRole
 Usage: #example
+Description: "Supporting example instance (PractitionerRole) referenced by the document profile examples."
 * meta
   * versionId = "5"
   * lastUpdated = "2020-08-12T19:18:13.336+00:00"

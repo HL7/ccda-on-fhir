@@ -1,6 +1,7 @@
 Instance: FHIR-Input-Condition
 InstanceOf: Condition
 Usage: #example
+Description: "FHIR resource used as input for the Condition FHIR-to-CDA mapping example."
 * meta
   * profile = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns"
   * security = $v3-Confidentiality#N

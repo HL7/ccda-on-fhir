@@ -2,6 +2,8 @@ ValueSet: ProgressNoteDocumentTypeCode
 Id: 2.16.840.1.113883.11.20.8.1
 Title: "ProgressNoteDocumentTypeCode"
 Description: "LOINC Imaging Document Codes"
+* ^identifier.system = "urn:ietf:rfc:3986"
+* ^identifier.value = "urn:oid:2.16.840.1.113883.11.20.8.1"
 * ^meta.versionId = "7"
 * ^meta.lastUpdated = "2020-08-19T06:16:52.976+00:00"
 * ^meta.source = "#VmlRX1mG0gTJ10zG"

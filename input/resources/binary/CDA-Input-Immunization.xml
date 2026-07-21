@@ -1,67 +1,137 @@
-<entry typeCode="DRIV">
-  <substanceAdministration classCode="SBADM" moodCode="EVN" negationInd="false">
-    <templateId root="2.16.840.1.113883.10.20.22.4.52"/>
-    <templateId root="2.16.840.1.113883.10.20.22.4.52" extension="2015-08-01"/>
-    <id root="e6f1ba43-c0ed-4b9b-9f12-f435d8ad8f92"/>
-    <text>
-      <reference value="#immun1"/>
-    </text>
-    <statusCode code="completed"/>
-    <effectiveTime value="20100815"/>
-    <consumable>
-      <manufacturedProduct classCode="MANU">
-        <templateId root="2.16.840.1.113883.10.20.22.4.54"/>
-        <templateId root="2.16.840.1.113883.10.20.22.4.54" extension="2014-06-09"/>
-        <manufacturedMaterial>
-          <code code="88" codeSystem="2.16.840.1.113883.12.292"
-                                displayName="Influenza virus vaccine" codeSystemName="CVX">
-            <originalText>
-              <reference value="#ImmunizationProduct_100"/>
-            </originalText>
-          </code>
-          <lotNumberText>1</lotNumberText>
-        </manufacturedMaterial>
-      </manufacturedProduct>
-    </consumable>
-    <performer>
-      <assignedEntity>
-        <id root="2.16.840.1.113883.19.5.9999.456" extension="2981824"/>
-        <addr>
-          <streetAddressLine>1021 Health Drive</streetAddressLine>
-          <city>Ann Arbor</city>
-          <state>MI</state>
-          <postalCode>99099</postalCode>
-          <country>US</country>
-        </addr>
-        <telecom nullFlavor="UNK"/>
-        <assignedPerson>
-          <name>
-            <given>Amanda</given>
-            <family>Assigned</family>
-          </name>
-        </assignedPerson>
-        <representedOrganization>
-          <id root="2.16.840.1.113883.19.5.9999.1394"/>
-          <name>Good Health Clinic</name>
-          <telecom nullFlavor="UNK"/>
-          <addr nullFlavor="UNK"/>
-        </representedOrganization>
-      </assignedEntity>
-    </performer>
-    <author>
-      <templateId root="2.16.840.1.113883.10.20.22.4.119"/>
-      <time value="20100816"/>
-      <assignedAuthor>
-        <id extension="99999999" root="2.16.840.1.113883.4.6"/>
-        <code code="207Q00000X" codeSystem="2.16.840.1.113883.6.101" codeSystemName="Health Care Provider Taxonomy" displayName="Family Medicine" />
-        <telecom use="WP" value="tel:555-555-1002"/>
-        <assignedPerson>
-          <name>
-            <given>Henry</given>
-            <family>Seven</family>
-          </name>
-        </assignedPerson>
-      </assignedAuthor>
-    </author>
-  </substanceAdministration>
-</entry>
+<substanceAdministration classCode="SBADM" moodCode="EVN" negationInd="false" xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <!-- ** Immunization activity ** -->
+                            <templateId root="2.16.840.1.113883.10.20.22.4.52"/>
+                            <templateId root="2.16.840.1.113883.10.20.22.4.52" extension="2015-08-01"/>
+                            <id root="e6f1ba43-c0ed-4b9b-9f12-f435d8ad8f92"/>
+                            <text>
+                                <reference value="#immun1"/>
+                            </text>
+                            <!-- Indicates the status of the substanceAdministartion -->
+                            <statusCode code="completed"/>
+                            <effectiveTime value="20100815"/>
+                            <repeatNumber value="1"/>
+                            <routeCode code="C28161" codeSystem="2.16.840.1.113883.3.26.1.1" codeSystemName="National Cancer Institute (NCI) Thesaurus" displayName="Intramuscular Route of Administration"/>
+                            <approachSiteCode code="700022004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Muscle and/or tendon structure of upper limb"/>
+                            <doseQuantity value="60" unit="ug"/>
+                            <consumable>
+                                <manufacturedProduct classCode="MANU">
+                                    <!-- ** Immunization medication information ** -->
+                                    <templateId root="2.16.840.1.113883.10.20.22.4.54"/>
+                                    <templateId root="2.16.840.1.113883.10.20.22.4.54" extension="2014-06-09"/>
+                                    <id root="5823d446-9066-11ee-b9d1-0242ac120002"/>
+                                    <manufacturedMaterial>
+                                        <code code="88" codeSystem="2.16.840.1.113883.12.292" displayName="Influenza virus vaccine" codeSystemName="CVX">
+                                            <originalText>
+                                                <reference value="#ImmunizationProduct_100"/>
+                                            </originalText>
+                                            <translation code="49281-0422-50" codeSystem="2.16.840.1.113883.6.69" codeSystemName="NDC" displayName="Influenza vaccine"/>
+                                        </code>
+                                        <lotNumberText>1</lotNumberText>
+                                    </manufacturedMaterial>
+                                    <manufacturerOrganization>
+                                        <name>Health LS - Immuno Inc.</name>
+                                    </manufacturerOrganization>
+                                </manufacturedProduct>
+                            </consumable>
+                            <!-- Optional Performer -->
+                            <performer>
+                                <assignedEntity>
+                                    <id root="2.16.840.1.113883.19.5.9999.456" extension="2981824"/>
+                                    <addr>
+                                        <streetAddressLine>1021 Health Drive</streetAddressLine>
+                                        <city>Ann Arbor</city>
+                                        <state>MI</state>
+                                        <postalCode>99099</postalCode>
+                                        <country>US</country>
+                                    </addr>
+                                    <telecom nullFlavor="UNK"/>
+                                    <assignedPerson>
+                                        <name>
+                                            <given>Amanda</given>
+                                            <family>Assigned</family>
+                                        </name>
+                                    </assignedPerson>
+                                    <representedOrganization>
+                                        <id root="2.16.840.1.113883.19.5.9999.1394"/>
+                                        <name>Good Health Clinic</name>
+                                        <telecom use="WP" value="tel:555-555-1002"/>
+                                        <addr>
+                                            <streetAddressLine>1021 Health Drive</streetAddressLine>
+                                            <city>Ann Arbor</city>
+                                            <state>MI</state>
+                                            <postalCode>99099</postalCode>
+                                            <country>US</country>
+                                        </addr>
+                                    </representedOrganization>
+                                </assignedEntity>
+                            </performer>
+                            <!-- Optional Author -->
+                            <author>
+                                <templateId root="2.16.840.1.113883.10.20.22.4.119"/>
+                                <time value="20100815"/>
+                                <assignedAuthor>
+                                    <id extension="99999999" root="2.16.840.1.113883.4.6"/>
+                                    <code code="207Q00000X" codeSystem="2.16.840.1.113883.6.101" codeSystemName="Health Care Provider Taxonomy" displayName="Family Medicine"/>
+                                    <telecom use="WP" value="tel:555-555-1002"/>
+                                    <assignedPerson>
+                                        <name>
+                                            <given>Henry</given>
+                                            <family>Seven</family>
+                                        </name>
+                                    </assignedPerson>
+                                </assignedAuthor>
+                            </author>
+                            <participant typeCode="CSM">
+                                <participantRole classCode="MANU">
+                                    <templateId root="2.16.840.1.113883.10.20.22.4.24"/>
+                                    <code code="412307009" displayName="Drug vehicle" codeSystem="2.16.840.1.113883.6.96"/>
+                                    <playingEntity classCode="MMAT">
+                                        <code code="224707008" displayName="Cellar" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED"/>
+                                        <name>Cell based</name>
+                                    </playingEntity>
+                                </participantRole>
+                            </participant>
+                            <entryRelationship typeCode="RSON">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <!-- Indication (V2) -->
+                                    <templateId root="2.16.840.1.113883.10.20.22.4.19" extension="2014-06-09"/>
+                                    <templateId root="2.16.840.1.113883.10.20.22.4.19"/>
+                                    <id extension="545077400017" root="1.3.6.1.4.1.22812.3.2009316.3.4.1"/>
+                                    <id extension="545077400019" root="1.3.6.1.4.1.22812.3.2009316.3.4.1"/>
+                                    <code codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" code="404684003" displayName="Clinical finding"/>
+                                    <statusCode code="completed"/>
+                                    <effectiveTime>
+                                        <low value="20100815"/>
+                                    </effectiveTime>
+                                    <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CD" code="195967001" codeSystem="2.16.840.1.113883.6.96" displayName="asthma"/>
+                                </observation>
+                            </entryRelationship>
+                            <entryRelationship typeCode="SUBJ" inversionInd="true">
+                                <act classCode="ACT" moodCode="INT">
+                                    <!-- Instruction (V2) -->
+                                    <templateId root="2.16.840.1.113883.10.20.22.4.20" extension="2014-06-09"/>
+                                    <templateId root="2.16.840.1.113883.10.20.22.4.20"/>
+                                    <code code="171044003" codeSystem="2.16.840.1.113883.6.96" displayName="Immunization education"/>
+                                    <text>Possible flu-like symptoms for three days</text>
+                                    <statusCode code="completed"/>
+                                </act>
+                            </entryRelationship>
+                            <entryRelationship typeCode="MFST" inversionInd="true">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.22.4.9" extension="2014-06-09"/>
+                                    <templateId root="2.16.840.1.113883.10.20.22.4.9"/>
+                                    <id root="37006474-947a-11ee-b9d1-0242ac120002"/>
+                                    <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+                                    <text>
+                                        <reference value="#_8a7ed342-967a-400e-88d5-2f8c2b7cdda0"/>
+                                    </text>
+                                    <statusCode code="completed"/>
+                                    <effectiveTime>
+                                        <low value="20080501"/>
+                                        <high value="20080501"/>
+                                    </effectiveTime>
+                                    <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CD" code="247472004" codeSystem="2.16.840.1.113883.6.96" displayName="Wheal">
+                                    </value>
+                                </observation>
+                            </entryRelationship>
+                        </substanceAdministration>

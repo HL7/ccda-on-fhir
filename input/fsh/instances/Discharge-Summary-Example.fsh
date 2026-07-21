@@ -1,6 +1,7 @@
 Instance: Discharge-Summary-Example
 InstanceOf: Composition
 Usage: #example
+Description: "Example composition for the Discharge Summary document profile."
 * meta
   * versionId = "4"
   * lastUpdated = "2020-08-12T21:30:18.557+00:00"
@@ -94,7 +95,7 @@ Usage: #example
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Functional or Cognitive Finding</b></td><td><b>Observation</b></td><td><b>Observation Date</b></td><td><b>Condition Status</b></td></tr><tr><td>Ambulation (Dependent to Independent</td><td>Independently able</td><td>2010/03/11</td><td>Active</td></tr><tr><td>Finding of Functional Performance and Activity</td><td>Dyspnea</td><td>2008/02/16</td><td>Active</td></tr><tr><td>Cognitive Function Finding</td><td>Memory Impairment</td><td>2014/04/29</td><td>Active</td></tr></table></div>"
 * section[+]
   * title = "Hospital Course Section"
-  * code = $loinc#8648-8 "Hospital course"
+  * code = $loinc#8648-8 "Hospital course note"
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Following a colonoscopy, the patient was admitted and started on\r\n                                Lovenox and nitroglycerin paste. The patient had serial cardiac\r\n                                enzymes and was ruled out for myocardial infarction. The patient\r\n                                underwent a dual isotope stress test. There was no evidence of\r\n                                reversible ischemia on the Cardiolite scan. The patient has been\r\n                                ambulated. The patient had a Holter monitor placed but the report is\r\n                                not available at this time. The patient has remained hemodynamically\r\n                                stable. Will discharge.</p></div>"
@@ -126,7 +127,7 @@ Usage: #example
   * entry = Reference(Document-Procedure)
 * section[+]
   * title = "Discharge Diagnosis Section"
-  * code = $loinc#11535-2 "Hospital discharge Dx Narrative"
+  * code = $loinc#11535-2 "Hospital discharge diagnosis note"
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Diverticula of intestine</p></div>"

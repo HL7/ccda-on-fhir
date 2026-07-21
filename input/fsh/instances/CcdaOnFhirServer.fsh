@@ -6,12 +6,12 @@ Usage: #definition
   * lastUpdated = "2020-08-13T15:57:20.047+00:00"
   * source = "#CXWcf7GLdy7BZgYk"
 * url = "http://hl7.org/fhir/us/ccda/CapabilityStatement/CcdaOnFhirServer"
-* version = "1.0"
+* version = "2.0.0"
 * name = "CcdaOnFhirServer"
 * title = "CCDA on FHIR Server"
 * status = #active
 * experimental = false
-* date = "2020-08-12"
+* date = "2026-07-18"
 * publisher = "HL7 International - Structured Documents Working Group"
 * description = "This section describes the expected capabilities of the C-CDA on FHIR Document Source (aka server) actor which is responsible for responding to the queries for clinical documents provided by a C-CDA on FHIR Document Consumer (aka client) actor. This CapabilityStatement imports and extends the [us-core-server CapabilityStatement](https://www.hl7.org/fhir/us/core/CapabilityStatement-us-core-server.html)"
 * kind = #requirements
@@ -24,14 +24,15 @@ Usage: #definition
   * resource[0]
     * type = #Bundle
     * interaction[0].code = #create
-    * interaction[+].code = #search-type
     * interaction[+].code = #read
     * interaction[+].code = #vread
+    * interaction[+].code = #search-type
     * interaction[+].code = #update
-    * interaction[+].code = #patch
     * interaction[+].code = #delete
-    * interaction[+].code = #history-instance
-    * interaction[+].code = #history-type
+    * operation[0]
+      * name = "validate"
+      * definition = "http://hl7.org/fhir/OperationDefinition/Resource-validate"
+      * documentation = "Pre-flight check: a document Bundle MAY be submitted for validation without being stored."
   * resource[+]
     * type = #Composition
     * supportedProfile[0] = "http://hl7.org/fhir/us/ccda/StructureDefinition/Care-Plan-Document"
@@ -39,17 +40,29 @@ Usage: #definition
     * supportedProfile[+] = "http://hl7.org/fhir/us/ccda/StructureDefinition/Continuity-of-Care-Document"
     * supportedProfile[+] = "http://hl7.org/fhir/us/ccda/StructureDefinition/Diagnostic-Imaging-Report"
     * supportedProfile[+] = "http://hl7.org/fhir/us/ccda/StructureDefinition/Discharge-Summary"
+    * supportedProfile[+] = "http://hl7.org/fhir/us/ccda/StructureDefinition/History-and-Physical"
     * supportedProfile[+] = "http://hl7.org/fhir/us/ccda/StructureDefinition/Operative-Note"
     * supportedProfile[+] = "http://hl7.org/fhir/us/ccda/StructureDefinition/Procedure-Note"
     * supportedProfile[+] = "http://hl7.org/fhir/us/ccda/StructureDefinition/Progress-Note"
     * supportedProfile[+] = "http://hl7.org/fhir/us/ccda/StructureDefinition/Referral-Note"
     * supportedProfile[+] = "http://hl7.org/fhir/us/ccda/StructureDefinition/Transfer-Summary"
-    * interaction[0].code = #create
+    * interaction[0].code = #read
     * interaction[+].code = #search-type
-    * interaction[+].code = #read
-    * interaction[+].code = #vread
-    * interaction[+].code = #update
-    * interaction[+].code = #patch
-    * interaction[+].code = #delete
-    * interaction[+].code = #history-instance
-    * interaction[+].code = #history-type
+    * operation[0]
+      * name = "document"
+      * definition = "http://hl7.org/fhir/OperationDefinition/Composition-document"
+      * documentation = "Generate a complete document Bundle on demand from a stored Composition."
+  * resource[+]
+    * type = #DocumentReference
+    * supportedProfile = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference"
+    * documentation = "Document discovery/indexing (see Document Guidance page)."
+    * interaction[0].code = #read
+    * interaction[+].code = #search-type
+* document[0]
+  * mode = #producer
+  * profile = "http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/clinical-document-bundle"
+  * documentation = "Provides C-CDA on FHIR documents to clients (read, search, $document)."
+* document[+]
+  * mode = #consumer
+  * profile = "http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/clinical-document-bundle"
+  * documentation = "Accepts documents submitted by clients (create/update/delete), validating on receipt."

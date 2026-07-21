@@ -1,6 +1,7 @@
 Instance: Document-Patient
 InstanceOf: Patient
 Usage: #example
+Description: "Supporting example instance (Patient) referenced by the document profile examples."
 * meta
   * versionId = "9"
   * lastUpdated = "2020-09-09T21:58:13.238+00:00"
@@ -30,12 +31,6 @@ Usage: #example
   * extension[0]
     * url = "ombCategory"
     * valueCoding = urn:oid:2.16.840.1.113883.6.238#2135-2 "Hispanic or Latino"
-  * extension[+]
-    * url = "detailed"
-    * valueCoding = urn:oid:2.16.840.1.113883.6.238#2184-0 "Dominican"
-  * extension[+]
-    * url = "detailed"
-    * valueCoding = urn:oid:2.16.840.1.113883.6.238#2148-5 "Mexican"
   * extension[+]
     * url = "text"
     * valueString = "Hispanic or Latino"

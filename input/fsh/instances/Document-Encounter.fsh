@@ -1,6 +1,7 @@
 Instance: Document-Encounter
 InstanceOf: Encounter
 Usage: #example
+Description: "Supporting example instance (Encounter) referenced by the document profile examples."
 * meta
   * versionId = "5"
   * lastUpdated = "2020-08-12T21:30:19.918+00:00"

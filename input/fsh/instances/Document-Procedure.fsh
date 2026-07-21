@@ -1,6 +1,7 @@
 Instance: Document-Procedure
 InstanceOf: Procedure
 Usage: #example
+Description: "Supporting example instance (Procedure) referenced by the document profile examples."
 * meta
   * versionId = "5"
   * lastUpdated = "2020-08-12T19:18:13.140+00:00"

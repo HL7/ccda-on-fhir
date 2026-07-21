@@ -1,6 +1,7 @@
 Instance: Transfer-Summary-Example
 InstanceOf: Composition
 Usage: #example
+Description: "Example composition for the Transfer Summary document profile."
 * meta
   * versionId = "4"
   * lastUpdated = "2020-08-12T21:30:12.324+00:00"
@@ -150,7 +151,7 @@ Usage: #example
   * entry = Reference(Document-Procedure)
 * section[+]
   * title = "Discharge Diagnosis Section"
-  * code = $loinc#11535-2 "Hospital discharge Dx Narrative"
+  * code = $loinc#11535-2 "Hospital discharge diagnosis note"
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Diverticula of intestine</p></div>"

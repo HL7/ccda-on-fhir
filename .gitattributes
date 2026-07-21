@@ -1,0 +1,5 @@
+# Generated files: pin to LF so regeneration on Windows does not produce
+# phantom line-ending modifications (generator writes LF).
+input/includes/examples/*.xhtml text eol=lf
+examples-src/correspondence/*.yaml text eol=lf
+examples-src/oid-map.json text eol=lf

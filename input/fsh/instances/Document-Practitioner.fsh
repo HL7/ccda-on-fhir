@@ -1,6 +1,7 @@
 Instance: Document-Practitioner
 InstanceOf: Practitioner
 Usage: #example
+Description: "Supporting example instance (Practitioner) referenced by the document profile examples."
 * meta
   * versionId = "6"
   * lastUpdated = "2020-08-12T21:30:18.070+00:00"
@@ -10,7 +11,7 @@ Usage: #example
   * type = $v2-0203#PRN "Provider number"
     * text = "US National Provider Identifier"
   * system = "http://hl7.org/fhir/sid/us-npi"
-  * value = "9941339108"
+  * value = "1234567893"
 * name
   * family = "Richard"
   * given[0] = "Brenda"

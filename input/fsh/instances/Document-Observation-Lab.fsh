@@ -1,6 +1,7 @@
 Instance: Document-Observation-Lab
 InstanceOf: Observation
 Usage: #example
+Description: "Supporting example instance (Observation Lab) referenced by the document profile examples."
 * meta
   * versionId = "6"
   * lastUpdated = "2020-08-12T21:30:20.811+00:00"

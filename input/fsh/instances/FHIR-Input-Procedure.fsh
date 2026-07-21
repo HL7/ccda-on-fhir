@@ -1,6 +1,7 @@
 Instance: FHIR-Input-Procedure
 InstanceOf: Procedure
 Usage: #example
+Description: "FHIR resource used as input for the Procedure FHIR-to-CDA mapping example."
 * identifier[0]
   * value = "FC-545069400001"
   * system = "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.4.7"

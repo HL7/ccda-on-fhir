@@ -1,6 +1,7 @@
 Instance: Care-Plan-Example
 InstanceOf: Composition
 Usage: #example
+Description: "Example composition for the Care Plan document profile."
 * meta
   * versionId = "6"
   * lastUpdated = "2020-08-19T04:55:46.030+00:00"
@@ -8,11 +9,14 @@ Usage: #example
   * profile = "http://hl7.org/fhir/us/ccda/StructureDefinition/Care-Plan-Document"
 * language = #en-US
 * extension[0]
-  * url = "http://hl7.org/fhir/us/ccda/StructureDefinition/DataEntererExtension"
-  * valueReference = Reference(Document-PractitionerRole)
+  * url = "http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/data-enterer-extension"
+  * extension[0].url = "type"
+  * extension[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ParticipationType#ENT "data entry person"
+  * extension[+].url = "party"
+  * extension[=].valueReference = Reference(Document-PractitionerRole)
 * extension[+]
-  * url = "http://hl7.org/fhir/us/ccda/StructureDefinition/VersionNumber"
-  * valueInteger = 1
+  * url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.version"
+  * valueString = "1"
 * identifier
   * system = "urn:ietf:rfc:3986"
   * value = "urn:uuid:39067866-6319-4008-9c6d-3f0176d6826c"

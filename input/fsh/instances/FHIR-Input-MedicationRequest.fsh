@@ -1,6 +1,7 @@
 Instance: FHIR-Input-MedicationRequest
 InstanceOf: MedicationRequest
 Usage: #example
+Description: "FHIR resource used as input for the MedicationRequest FHIR-to-CDA mapping example."
 * meta.security = $v3-Confidentiality#N
 * identifier
   * system = "urn:ietf:rfc:3986"

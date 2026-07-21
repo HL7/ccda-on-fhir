@@ -1,6 +1,7 @@
 Instance: Document-ServiceRequest
 InstanceOf: ServiceRequest
 Usage: #example
+Description: "Supporting example instance (ServiceRequest) referenced by the document profile examples."
 * meta
   * versionId = "2"
   * lastUpdated = "2020-08-12T19:18:12.918+00:00"

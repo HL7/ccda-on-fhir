@@ -1,6 +1,7 @@
 Instance: Document-Consent
 InstanceOf: Consent
 Usage: #example
+Description: "Supporting example instance (Consent) referenced by the document profile examples."
 * meta
   * versionId = "7"
   * lastUpdated = "2020-08-13T00:30:34.762+00:00"

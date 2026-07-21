@@ -19,14 +19,14 @@ Description: "This profile defines constraints that represent common administrat
 * language 1.. MS
   * ^short = "language"
 * extension contains
-    VersionNumber named version_number_extension 0..1 MS and
-    DataEntererExtension named data_enterer_extension 0..1 MS and
-    InformantExtension named informant_extension 0..* MS and
-    InformationRecipientExtension named information_recipient_extension 0..* MS and
-    ParticipantExtension named participant_extension 0..* MS and
+    http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.version|0.0.1-snapshot-2 named version_number_extension 0..1 MS and
+    http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/data-enterer-extension named data_enterer_extension 0..1 MS and
+    http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/informant-extension named informant_extension 0..* MS and
+    http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/information-recipient-extension named information_recipient_extension 0..* MS and
+    http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/ParticipantExtension named participant_extension 0..* MS and
     PerformerExtension named performer_extension 0..* MS and
-    AuthorizationExtension named authorization_extension 0..* MS and
-    OrderExtension named order_extension 0..* MS
+    http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/consent-extension named authorization_extension 0..* MS and
+    http://hl7.org/fhir/StructureDefinition/event-basedOn|5.1.0 named order_extension 0..* MS
 * extension[informant_extension] ^label = "informant"
   * ^short = "informant"
 * extension[information_recipient_extension] ^label = "informationRecipient"
@@ -53,11 +53,6 @@ Description: "This profile defines constraints that represent common administrat
 * title MS
   * ^label = "Document Title"
   * ^short = "Document Title"
-* confidentiality 0..0
-  * ^label = "Use the confidentiality codes in Meta.security"
-  * ^short = "Use the confidentiality codes in Meta.security"
-  * ^definition = "Use the confidentiality codes in Meta.security (https://hl7.org/fhir/security-labels.html)"
-  * ^mustSupport = false
 * attester ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "mode"
   * ^slicing.rules = #open

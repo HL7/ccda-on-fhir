@@ -2,6 +2,8 @@ ValueSet: TransferDocumentType
 Id: 2.16.840.1.113883.1.11.20.2.4
 Title: "TransferDocumentType"
 Description: "Transfer Document Type"
+* ^identifier.system = "urn:ietf:rfc:3986"
+* ^identifier.value = "urn:oid:2.16.840.1.113883.1.11.20.2.4"
 * ^meta.versionId = "6"
 * ^meta.lastUpdated = "2020-08-19T06:18:55.577+00:00"
 * ^meta.source = "#J5leCsKPn0gyItgS"

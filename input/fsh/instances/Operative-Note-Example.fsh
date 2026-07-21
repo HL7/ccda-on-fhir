@@ -1,6 +1,7 @@
 Instance: Operative-Note-Example
 InstanceOf: Composition
 Usage: #example
+Description: "Example composition for the Operative Note document profile."
 * meta
   * versionId = "4"
   * lastUpdated = "2020-08-12T21:30:19.501+00:00"

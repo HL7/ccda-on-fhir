@@ -1,35 +1,34 @@
-# Temporary folders #
-#####################
-.ignore
-temp
-template
-output
-fsh-generated
 
 # Don't commit txcache or other input-cache files #
-###########################################
-input-cache
-
-# Windows generated files #
-###########################
-Thumbs.db
-
 # OS generated files #
-######################
-.DS_Store
-.DS_Store?
-
+# Temporary folders #
+# Windows generated files #
 # backup files #
-################
-*.bak
-/fsh/build
-
 # scripts      #
 ################
+#####################
+######################
+###########################
+###########################################
+*.bak
+.DS_Store
+.DS_Store?
+.claude/
+.ignore
+/fsh/build
+/package.json
+Thumbs.db
 _gencontinuous.bat
 _gencontinuous.sh
 _genonce.bat
 _genonce.sh
 _updatePublisher.bat
 _updatePublisher.sh
-.claude/
+fsh-generated
+fsh-generated/
+input-cache
+node_modules/
+output
+package-lock.json
+temp
+template

@@ -1,6 +1,7 @@
 Instance: Document-Observation-Vitals
 InstanceOf: $vitalsigns
 Usage: #example
+Description: "Supporting example instance (Observation Vitals) referenced by the document profile examples."
 * meta
   * versionId = "6"
   * lastUpdated = "2020-08-12T21:30:21.122+00:00"

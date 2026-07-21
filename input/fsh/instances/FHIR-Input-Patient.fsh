@@ -1,6 +1,7 @@
 Instance: FHIR-Input-Patient
 InstanceOf: Patient
 Usage: #example
+Description: "FHIR resource used as input for the Patient FHIR-to-CDA mapping example."
 * extension[0]
   * extension[0]
     * url = "ombCategory"

@@ -1,6 +1,7 @@
 Instance: Progress-Note-Example
 InstanceOf: Composition
 Usage: #example
+Description: "Example composition for the Progress Note document profile."
 * meta
   * versionId = "4"
   * lastUpdated = "2020-08-12T21:30:13.524+00:00"

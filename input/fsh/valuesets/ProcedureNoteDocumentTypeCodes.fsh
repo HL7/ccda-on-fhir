@@ -2,6 +2,8 @@ ValueSet: ProcedureNoteDocumentTypeCodes
 Id: 2.16.840.1.113883.11.20.6.1
 Title: "ProcedureNoteDocumentTypeCodes"
 Description: "LOINC Imaging Document Codes"
+* ^identifier.system = "urn:ietf:rfc:3986"
+* ^identifier.value = "urn:oid:2.16.840.1.113883.11.20.6.1"
 * ^meta.versionId = "7"
 * ^meta.lastUpdated = "2020-08-19T06:15:59.748+00:00"
 * ^meta.source = "#af5tUShc5DIhxYJS"

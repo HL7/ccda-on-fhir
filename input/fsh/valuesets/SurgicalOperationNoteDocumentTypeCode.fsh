@@ -2,6 +2,8 @@ ValueSet: SurgicalOperationNoteDocumentTypeCode
 Id: 2.16.840.1.113883.11.20.1.1
 Title: "SurgicalOperationNoteDocumentTypeCode"
 Description: "Surival Operation Note Doucment Type Code"
+* ^identifier.system = "urn:ietf:rfc:3986"
+* ^identifier.value = "urn:oid:2.16.840.1.113883.11.20.1.1"
 * ^meta.versionId = "6"
 * ^meta.lastUpdated = "2020-08-19T06:18:31.162+00:00"
 * ^meta.source = "#TGF9CHNWdziFGXop"

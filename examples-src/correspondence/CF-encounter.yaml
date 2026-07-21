@@ -1,0 +1,45 @@
+# Correspondence file: CF-encounters highlighted example (Myra urgent-care encounter)
+selector:
+  section: "46240-8"           # ENCOUNTERS
+  entryId: "2a620155-9d11-439e-92b3-5d9815ff4de8"
+  element: encounter
+resources:
+  - FHIR-Output-Encounter
+  - FHIR-Output-Condition-EncounterDx
+rows:
+  - cda: id/@root
+    fhir: FHIR-Output-Encounter.identifier[0].value
+    transform: uuid-to-urn
+  - cda: code/@code
+    fhir: FHIR-Output-Encounter.type[0].coding[0].code
+    uscdi: "Encounter Information / Encounter Type"
+  - cda: code/@codeSystem
+    fhir: FHIR-Output-Encounter.type[0].coding[0].system
+    transform: oid-to-uri
+  - cda: code/@displayName
+    fhir: FHIR-Output-Encounter.type[0].coding[0].display
+    transform: display
+  - cda: effectiveTime/@value
+    fhir: FHIR-Output-Encounter.period.start
+    transform: cda-datetime
+    uscdi: "Encounter Information / Encounter Time"
+  - cda: sdtc:dischargeDispositionCode/@code
+    fhir: FHIR-Output-Encounter.hospitalization.dischargeDisposition.coding[0].code
+    uscdi: "Encounter Information / Encounter Disposition"
+  - cda: sdtc:dischargeDispositionCode/@displayName
+    fhir: FHIR-Output-Encounter.hospitalization.dischargeDisposition.coding[0].display
+    transform: display
+  - cda: performer/assignedEntity/assignedPerson/name/given
+    fhir: FHIR-Output-Encounter.participant[0].individual.display
+    transform: display
+    note: "individual display assembled from person name"
+  - cda: participant[@typeCode="LOC"]/participantRole/playingEntity/name
+    fhir: FHIR-Output-Encounter.location[0].location.display
+    transform: trim
+    uscdi: "Encounter Information / Encounter Location"
+  - cda: entryRelationship[@typeCode="REFR"]/act/entryRelationship/observation/value/@code
+    fhir: FHIR-Output-Condition-EncounterDx.code.coding[0].code
+    uscdi: "Encounter Information / Encounter Diagnosis"
+  - cda: entryRelationship[@typeCode="REFR"]/act/entryRelationship/observation/value/@codeSystem
+    fhir: FHIR-Output-Condition-EncounterDx.code.coding[0].system
+    transform: oid-to-uri

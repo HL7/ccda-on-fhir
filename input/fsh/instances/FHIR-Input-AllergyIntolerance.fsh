@@ -1,6 +1,7 @@
 Instance: FHIR-Input-AllergyIntolerance
 InstanceOf: AllergyIntolerance
 Usage: #example
+Description: "FHIR resource used as input for the AllergyIntolerance FHIR-to-CDA mapping example."
 * meta.security = $v3-Confidentiality#N
 * identifier[0]
   * system = "urn:oid:1.3.6.1.4.1.22812.3.2009316.3.4.10.2"

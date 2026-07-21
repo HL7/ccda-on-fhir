@@ -1,0 +1,56 @@
+# Correspondence file: CF-allergies highlighted example (Myra aspirin allergy concern)
+selector:
+  section: "48765-2"           # ALLERGIES section
+  entryId: "1.3.6.1.4.1.22812.3.2009316.3.4.10"
+  element: act
+binary: CDA-Input-AllergyIntolerance
+resources:
+  - FHIR-Output-AllergyIntolerance
+rows:
+  - cda: entryRelationship[@typeCode="SUBJ"]/observation/id[1]/@root
+    fhir: FHIR-Output-AllergyIntolerance.identifier[0].system
+    transform: oid-to-urn
+  - cda: entryRelationship[@typeCode="SUBJ"]/observation/id[1]/@extension
+    fhir: FHIR-Output-AllergyIntolerance.identifier[0].value
+  - cda: entryRelationship[@typeCode="SUBJ"]/observation/id[2]/@extension
+    fhir: FHIR-Output-AllergyIntolerance.identifier[1].value
+  - cda: statusCode/@code
+    fhir: FHIR-Output-AllergyIntolerance.clinicalStatus.coding[0].code
+    note: "fallback: act statusCode used only when the Allergy Status Observation is absent (it is, in this entry)"
+  - cda: entryRelationship[@typeCode="SUBJ"]/observation/value/@code
+    fhir: FHIR-Output-AllergyIntolerance.category[0]
+    transform: conceptmap CF-AllergyIntoleranceCategory
+  - cda: entryRelationship[@typeCode="SUBJ"]/observation/effectiveTime/low/@value
+    fhir: FHIR-Output-AllergyIntolerance.onsetDateTime
+    transform: cda-date
+  - cda: author/time/@value
+    fhir: FHIR-Output-AllergyIntolerance.recordedDate
+    uscdi: "Provenance / Author Time Stamp"
+    transform: cda-date
+    note: "date precision only"
+  - cda: entryRelationship[@typeCode="SUBJ"]/observation/participant/participantRole/playingEntity/code/@code
+    fhir: FHIR-Output-AllergyIntolerance.code.coding[0].code
+    uscdi: "Allergies and Intolerances / Substance (Reactant)"
+  - cda: entryRelationship[@typeCode="SUBJ"]/observation/participant/participantRole/playingEntity/code/@codeSystem
+    fhir: FHIR-Output-AllergyIntolerance.code.coding[0].system
+    transform: oid-to-uri
+  - cda: entryRelationship[@typeCode="SUBJ"]/observation/participant/participantRole/playingEntity/code/translation/@code
+    fhir: FHIR-Output-AllergyIntolerance.code.coding[1].code
+  - cda: entryRelationship[@typeCode="SUBJ"]/observation/participant/participantRole/playingEntity/code/translation/@codeSystem
+    fhir: FHIR-Output-AllergyIntolerance.code.coding[1].system
+    transform: oid-to-uri
+  - cda: .//entryRelationship[@typeCode="MFST"]/observation/value/@code
+    fhir: FHIR-Output-AllergyIntolerance.reaction[0].manifestation[0].coding[0].code
+    uscdi: "Allergies and Intolerances / Reaction"
+  - cda: .//entryRelationship[@typeCode="MFST"]/observation/value/@displayName
+    fhir: FHIR-Output-AllergyIntolerance.reaction[0].manifestation[0].coding[0].display
+    transform: display
+  - cda: .//entryRelationship[@typeCode="MFST"]/observation/value/@codeSystem
+    fhir: FHIR-Output-AllergyIntolerance.reaction[0].manifestation[0].coding[0].system
+    transform: oid-to-uri
+  - cda: .//observation[code/@code="SEV"]/value/@code
+    fhir: FHIR-Output-AllergyIntolerance.reaction[0].severity
+    transform: conceptmap CF-Severity
+  - cda: .//observation[code/@code="82606-5"]/value/@code
+    fhir: FHIR-Output-AllergyIntolerance.criticality
+    transform: conceptmap CF-Criticality

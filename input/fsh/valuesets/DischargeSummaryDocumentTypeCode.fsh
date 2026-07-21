@@ -4,6 +4,8 @@ Title: "DischargeSummaryDocumentTypeCode"
 Description: """(Clinical Focus: Kind of discharge summary document classified by author role),(Data Element Scope: ),(Inclusion Criteria: A list of LOINC terms, intended to identify Discharge Summary Notes where component contains "Discharge Summary Note", Timing = "Patient", Property = Find" , scale = "Doc"),(Exclusion Criteria: )
 
 This value set was imported on 6/24/2019 with a version of 20190425."""
+* ^identifier.system = "urn:ietf:rfc:3986"
+* ^identifier.value = "urn:oid:2.16.840.1.113883.11.20.4.1"
 * ^meta.versionId = "6"
 * ^meta.lastUpdated = "2020-08-19T06:35:09.726+00:00"
 * ^meta.source = "#8awj3JDXaUCFNlQA"

@@ -1,6 +1,7 @@
 Instance: Document-Practitioner-1
 InstanceOf: Practitioner
 Usage: #example
+Description: "Supporting example instance (Practitioner 1) referenced by the document profile examples."
 * meta
   * versionId = "13"
   * lastUpdated = "2020-09-27T15:56:26.213+00:00"
@@ -8,7 +9,7 @@ Usage: #example
   * profile = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
 * identifier
   * system = "http://hl7.org/fhir/sid/us-npi"
-  * value = "9941339108"
+  * value = "1245319599"
 * name
   * family = "Bone"
   * given = "Ronald"

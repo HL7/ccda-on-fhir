@@ -1,6 +1,7 @@
 Instance: Document-MedicationStatement
 InstanceOf: MedicationStatement
 Usage: #example
+Description: "Supporting example instance (MedicationStatement) referenced by the document profile examples."
 * meta
   * versionId = "7"
   * lastUpdated = "2020-08-13T00:27:42.879+00:00"

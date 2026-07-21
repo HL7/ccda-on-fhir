@@ -1,6 +1,7 @@
 Instance: Continuity-of-Care-Document-Example
 InstanceOf: Composition
 Usage: #example
+Description: "Example composition for the Continuity of Care Document document profile."
 * meta
   * versionId = "3"
   * lastUpdated = "2020-08-12T21:30:17.571+00:00"

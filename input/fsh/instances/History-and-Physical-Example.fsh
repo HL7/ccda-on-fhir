@@ -1,6 +1,7 @@
 Instance: History-and-Physical-Example
 InstanceOf: Composition
 Usage: #example
+Description: "Example composition for the History and Physical document profile."
 * meta
   * versionId = "4"
   * lastUpdated = "2020-08-12T21:30:12.759+00:00"

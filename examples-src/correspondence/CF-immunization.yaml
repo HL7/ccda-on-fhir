@@ -1,0 +1,59 @@
+# Correspondence file: CF-immunizations highlighted example (Myra influenza immunization)
+selector:
+  section: "11369-6"           # IMMUNIZATIONS
+  entryId: "e6f1ba43-c0ed-4b9b-9f12-f435d8ad8f92"
+  element: substanceAdministration
+binary: CDA-Input-Immunization
+resources:
+  - FHIR-Output-Immunization
+rows:
+  - cda: id/@root
+    fhir: FHIR-Output-Immunization.identifier[0].value
+    transform: uuid-to-urn
+  - cda: statusCode/@code
+    fhir: FHIR-Output-Immunization.status
+    transform: conceptmap CF-ImmunizationStatus
+  - cda: effectiveTime/@value
+    fhir: FHIR-Output-Immunization.occurrenceDateTime
+    transform: cda-date
+  - cda: author/time/@value
+    fhir: FHIR-Output-Immunization.recorded
+    uscdi: "Provenance / Author Time Stamp"
+    transform: cda-date
+  - cda: routeCode/@code
+    fhir: FHIR-Output-Immunization.route.coding[0].code
+  - cda: routeCode/@codeSystem
+    fhir: FHIR-Output-Immunization.route.coding[0].system
+    transform: oid-to-uri
+  - cda: routeCode/@displayName
+    fhir: FHIR-Output-Immunization.route.coding[0].display
+    transform: display
+  - cda: approachSiteCode/@code
+    fhir: FHIR-Output-Immunization.site.coding[0].code
+  - cda: approachSiteCode/@codeSystem
+    fhir: FHIR-Output-Immunization.site.coding[0].system
+    transform: oid-to-uri
+  - cda: approachSiteCode/@displayName
+    fhir: FHIR-Output-Immunization.site.coding[0].display
+    transform: display
+  - cda: doseQuantity/@value
+    fhir: FHIR-Output-Immunization.doseQuantity.value
+    transform: number
+  - cda: doseQuantity/@unit
+    fhir: FHIR-Output-Immunization.doseQuantity.code
+  - cda: consumable/manufacturedProduct/manufacturedMaterial/code/@code
+    fhir: FHIR-Output-Immunization.vaccineCode.coding[0].code
+    uscdi: "Immunizations / Immunizations"
+  - cda: consumable/manufacturedProduct/manufacturedMaterial/code/@codeSystem
+    fhir: FHIR-Output-Immunization.vaccineCode.coding[0].system
+    transform: oid-to-uri
+  - cda: consumable/manufacturedProduct/manufacturedMaterial/lotNumberText
+    fhir: FHIR-Output-Immunization.lotNumber
+    transform: trim
+  - cda: consumable/manufacturedProduct/manufacturerOrganization/name
+    fhir: FHIR-Output-Immunization.manufacturer.display
+    transform: trim
+  - cda: performer/assignedEntity/assignedPerson/name/given
+    fhir: FHIR-Output-Immunization.performer[0].actor.display
+    transform: display
+    note: "actor display assembled from person name"

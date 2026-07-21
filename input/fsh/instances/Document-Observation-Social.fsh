@@ -1,6 +1,7 @@
 Instance: Document-Observation-Social
 InstanceOf: Observation
 Usage: #example
+Description: "Supporting example instance (Observation Social) referenced by the document profile examples."
 * meta
   * versionId = "6"
   * lastUpdated = "2020-08-12T21:30:13.468+00:00"

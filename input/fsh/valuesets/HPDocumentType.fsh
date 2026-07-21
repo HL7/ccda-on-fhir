@@ -4,6 +4,8 @@ Title: "HPDocumentType"
 Description: """(Clinical Focus: Subclassification of history & physical document by setting, author role, and author specialty),(Data Element Scope: ClinicalDocument.code@code in H&P Document template in C-CDA R2.1),(Inclusion Criteria: Some selected LOINC codes for information that uses H&P Document template to represent the information in CDA),(Exclusion Criteria: )
 
 This value set was imported on 6/25/2019 with a version of 20190517."""
+* ^identifier.system = "urn:ietf:rfc:3986"
+* ^identifier.value = "urn:oid:2.16.840.1.113883.1.11.20.22"
 * ^meta.versionId = "6"
 * ^meta.lastUpdated = "2020-08-19T06:35:26.180+00:00"
 * ^meta.source = "#UQHxYsUhbLhPRes1"

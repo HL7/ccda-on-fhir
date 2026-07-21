@@ -1,0 +1,59 @@
+# Correspondence file: CF-procedures highlighted example (Myra procedure-history entry)
+selector:
+  section: "47519-4"           # PROCEDURES
+  entryId: "1.3.6.1.4.1.22812.3.2009316.3.4.7"
+  element: procedure
+binary: CDA-Input-Procedure
+resources:
+  - FHIR-Output-Procedure
+rows:
+  - cda: id[1]/@root
+    fhir: FHIR-Output-Procedure.identifier[0].system
+    transform: oid-to-urn
+  - cda: id[1]/@extension
+    fhir: FHIR-Output-Procedure.identifier[0].value
+  - cda: id[2]/@extension
+    fhir: FHIR-Output-Procedure.identifier[1].value
+  - cda: statusCode/@code
+    fhir: FHIR-Output-Procedure.status
+    transform: conceptmap CF-ProcedureStatus
+  - cda: code/@code
+    fhir: FHIR-Output-Procedure.code.coding[0].code
+    uscdi: "Procedures / Procedures"
+  - cda: code/@codeSystem
+    fhir: FHIR-Output-Procedure.code.coding[0].system
+    transform: oid-to-uri
+  - cda: code/@displayName
+    fhir: FHIR-Output-Procedure.code.coding[0].display
+    transform: display
+  - cda: code/translation[1]/@code
+    fhir: FHIR-Output-Procedure.code.coding[1].code
+  - cda: code/translation[1]/@codeSystem
+    fhir: FHIR-Output-Procedure.code.coding[1].system
+    transform: oid-to-uri
+  - cda: code/translation[2]/@code
+    fhir: FHIR-Output-Procedure.code.coding[2].code
+  - cda: code/translation[2]/@codeSystem
+    fhir: FHIR-Output-Procedure.code.coding[2].system
+    transform: oid-to-uri
+  - cda: code/translation[3]/@code
+    fhir: FHIR-Output-Procedure.code.coding[3].code
+  - cda: code/translation[3]/@codeSystem
+    fhir: FHIR-Output-Procedure.code.coding[3].system
+    transform: oid-to-uri
+  - cda: effectiveTime/@value
+    fhir: FHIR-Output-Procedure.performedDateTime
+    uscdi: "Procedures / Performance Time"
+    transform: cda-date
+  - cda: targetSiteCode/@code
+    fhir: FHIR-Output-Procedure.bodySite[0].coding[0].code
+  - cda: targetSiteCode/@codeSystem
+    fhir: FHIR-Output-Procedure.bodySite[0].coding[0].system
+    transform: oid-to-uri
+  - cda: targetSiteCode/@displayName
+    fhir: FHIR-Output-Procedure.bodySite[0].coding[0].display
+    transform: display
+  - cda: performer/assignedEntity/assignedPerson/name/given
+    fhir: FHIR-Output-Procedure.performer[0].actor.display
+    transform: display
+    note: "actor display assembled from person name"

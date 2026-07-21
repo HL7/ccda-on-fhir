@@ -1,37 +1,212 @@
-<entry typeCode="DRIV">
-  <substanceAdministration classCode="SBADM" moodCode="EVN">
-    <templateId root="2.16.840.1.113883.10.20.22.4.16" extension="2014-06-09"/>
-    <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
-    <id root="cdbd33f0-6cde-11db-9fe1-0800200c9a66"/>
-    <statusCode code="active"/>
-    <effectiveTime xsi:type="IVL_TS">
-      <low value="20120806"/>
-      <high nullFlavor="UNK"/>
-    </effectiveTime>
-    <effectiveTime xsi:type="PIVL_TS" institutionSpecified="true" operator="A">
-      <period nullFlavor="UNK"/>
-    </effectiveTime>
-    <repeatNumber value="1"/>
-    <doseQuantity value="1"/>
-    <consumable>
-      <manufacturedProduct classCode="MANU">
-        <templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09"/>
-        <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
-        <id root="2a620155-9d11-439e-92b3-5d9815ff4ee8"/>
-        <manufacturedMaterial>
-          <code code="252298" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RxNorm" displayName="albuterol 0.1 MG Inhalation Powder"/>
-        </manufacturedMaterial>
-      </manufacturedProduct>
-    </consumable>
-    <performer>
-      <assignedEntity>
-        <id root="2.16.840.1.113883.4.6" extension="2222222222"/>
-        <addr nullFlavor="UNK"/>
-        <telecom use="WP" value="tel:+1(555)555-1002"/>
-        <representedOrganization>
-          <name>Agastha Medical Center</name>
-        </representedOrganization>
-      </assignedEntity>
-    </performer>
-  </substanceAdministration>
-</entry>
+<substanceAdministration classCode="SBADM" moodCode="EVN" xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <templateId root="2.16.840.1.113883.10.20.22.4.16" extension="2014-06-09"/>
+                            <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+                            <id root="cdbd33f0-6cde-11db-9fe1-0800200c9a66"/>
+                            <statusCode code="active"/>
+                            <effectiveTime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="IVL_TS">
+                                <low value="20120806"/>
+                                <high nullFlavor="UNK"/>
+                            </effectiveTime>
+                            <effectiveTime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="PIVL_TS" operator="A">
+                                <period xsi:type="IVL_PQ">
+                                    <low value="4" unit="h"/>
+                                    <high value="6" unit="h"/>
+                                </period>
+                            </effectiveTime>
+                            <repeatNumber value="1"/>
+                            <routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" codeSystemName="NCI Thesaurus" displayName="Oral Route of Administration"/>
+                            <doseQuantity value="1"/>
+                            <maxDoseQuantity>
+                                <numerator value="6" unit="{spray}"/>
+                                <denominator value="1" unit="{day}"/>
+                            </maxDoseQuantity>
+                            <administrationUnitCode code="C48501" codeSystem="2.16.840.1.113883.3.26.1.1" codeSystemName="National Cancer Institute (NCI) Thesaurus" displayName="Inhalation dosing unit"/>
+                            <consumable>
+                                <manufacturedProduct classCode="MANU">
+                                    <templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09"/>
+                                    <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+                                    <id root="2a620155-9d11-439e-92b3-5d9815ff4ee8"/>
+                                    <manufacturedMaterial>
+                                        <code code="1190220" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RxNorm" displayName="ACTUAT albuterol 0.1 MG/ACTUAT / ipratropium bromide 0.02 MG/ACTUAT Inhalation Spray"/>
+                                    </manufacturedMaterial>
+                                    <manufacturerOrganization>
+                                        <name>Good Pharma Inc</name>
+                                    </manufacturerOrganization>
+                                </manufacturedProduct>
+                            </consumable>
+                            <performer>
+                                <assignedEntity>
+                                    <id root="2.16.840.1.113883.4.6" extension="2222222222"/>
+                                    <addr nullFlavor="UNK"/>
+                                    <telecom use="WP" value="tel:+1(555)555-1002"/>
+                                    <representedOrganization>
+                                        <name>Agastha Medical Center</name>
+                                    </representedOrganization>
+                                </assignedEntity>
+                            </performer>
+                            <author>
+                                <!-- Time the author noted that patient is on medication -->
+                                <templateId root="2.16.840.1.113883.10.20.22.4.119"/>
+                                <time value="201309111603-0700"/>
+                                <assignedAuthor>
+                                    <id extension="1679576722" root="2.16.840.1.113883.4.6"/>
+                                    <code code="207RC0000X" codeSystem="2.16.840.1.113883.6.101" codeSystemName="NUCC" displayName="Allopathic &amp; Osteopathic Physicians; Internal Medicine, Cardiovascular Disease"/>
+                                    <addr>
+                                        <streetAddressLine>6666 StreetName St.</streetAddressLine>
+                                        <city>Silver Spring</city>
+                                        <state>MD</state>
+                                        <postalCode>20901</postalCode>
+                                        <country>US</country>
+                                    </addr>
+                                    <telecom value="tel:+1(301)666-6666" use="WP"/>
+                                    <assignedPerson>
+                                        <name>
+                                            <given>Heartly</given>
+                                            <family>Sixer</family>
+                                            <suffix>MD</suffix>
+                                        </name>
+                                    </assignedPerson>
+                                </assignedAuthor>
+                            </author>
+                            <participant typeCode="CSM">
+                                <participantRole classCode="MANU">
+                                    <templateId root="2.16.840.1.113883.10.20.22.4.24"/>
+                                    <code code="412307009" displayName="Drug vehicle" codeSystem="2.16.840.1.113883.6.96"/>
+                                    <playingEntity classCode="MMAT">
+                                        <code code="387390002" displayName="sodium chloride" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED"/>
+                                        <name>sodium chloride</name>
+                                    </playingEntity>
+                                </participantRole>
+                            </participant>
+                            <entryRelationship typeCode="COMP">
+                                <!-- Medication Free Text SIG -->
+                                <substanceAdministration classCode="SBADM" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.22.4.147"/>
+                                    <code code="76662-6" codeSystem="2.16.840.1.113883.6.1"/>
+                                    <text>
+                                        <reference value="#MedicationSig_PRN_222222"/>
+                                    </text>
+                                    <consumable>
+                                        <manufacturedProduct>
+                                            <manufacturedLabeledDrug nullFlavor="NA"/>
+                                        </manufacturedProduct>
+                                    </consumable>
+                                </substanceAdministration>
+                            </entryRelationship>
+                            <entryRelationship typeCode="RSON">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <!-- Indication (V2) -->
+                                    <templateId root="2.16.840.1.113883.10.20.22.4.19" extension="2014-06-09"/>
+                                    <templateId root="2.16.840.1.113883.10.20.22.4.19"/>
+                                    <id extension="44" root="1.3.6.1.4.1.22812.3.99930.3.4.1.3"/>
+                                    <code codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" code="404684003" displayName="Clinical finding"/>
+                                    <statusCode code="completed"/>
+                                    <effectiveTime>
+                                        <low nullFlavor="NI"/>
+                                    </effectiveTime>
+                                    <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CD" code="56018004" codeSystem="2.16.840.1.113883.6.96" displayName="wheezing"/>
+                                </observation>
+                            </entryRelationship>
+                            <entryRelationship typeCode="SUBJ" inversionInd="true">
+                                <act classCode="ACT" moodCode="INT">
+                                    <!-- Instruction (V2) -->
+                                    <templateId root="2.16.840.1.113883.10.20.22.4.20" extension="2014-06-09"/>
+                                    <templateId root="2.16.840.1.113883.10.20.22.4.20"/>
+                                    <code code="1153465004" displayName="Education about overdosing" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"/>
+<!--               information that vendors mapped:                    <code code="422037009" displayName="Provider medication administration instructions" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"/>--> 
+                                    <text> Do not overtake</text>
+                                    <statusCode code="completed"/>
+                                </act>
+                            </entryRelationship>
+                            <entryRelationship typeCode="REFR">
+                                <supply classCode="SPLY" moodCode="INT">
+                                    <templateId root="2.16.840.1.113883.10.20.22.4.17" extension="2014-06-09"/>
+                                    <templateId root="2.16.840.1.113883.10.20.22.4.17"/>
+                                    <id root="1.2.3.4.56789.1" extension="cb734647-fc99-424c-a864-7e3cda82e704"/>
+                                    <statusCode code="completed"/>
+                                    <effectiveTime>
+                                        <high value="20121106"/>
+                                    </effectiveTime>
+                                    <repeatNumber value="2"/>
+                                    <quantity value="3"/>
+                                    <product>
+                                        <manufacturedProduct classCode="MANU">
+                                            <templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09"/>
+                                            <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+                                            <id root="2a620155-9d11-439e-92b3-5d9815ff4ee8"/>
+                                            <manufacturedMaterial>
+                                                <code code="1190220" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RxNorm" displayName="ACTUAT albuterol 0.1 MG/ACTUAT / ipratropium bromide 0.02 MG/ACTUAT Inhalation Spray"/>
+                                            </manufacturedMaterial>
+                                        </manufacturedProduct>
+                                    </product>
+                                </supply>
+                            </entryRelationship>
+                            <entryRelationship typeCode="MFST" inversionInd="true">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.22.4.9" extension="2014-06-09"/>
+                                    <templateId root="2.16.840.1.113883.10.20.22.4.9"/>
+                                    <id root="4556b822-9540-11ee-b9d1-0242ac120002"/>
+                                    <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+                                    <statusCode code="completed"/>
+                                    <effectiveTime>
+                                        <low value="20120806"/>
+                                        <high value="20120806"/>
+                                    </effectiveTime>
+                                    <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CD" code="247472004" codeSystem="2.16.840.1.113883.6.96"/>
+                                </observation>
+                            </entryRelationship>
+                            <entryRelationship typeCode="COMP">
+                                <!-- **DRUG MONITORING ACT **-->
+                                <act classCode="ACT" moodCode="INT">
+                                    <templateId root="2.16.840.1.113883.10.20.22.4.123"/>
+                                    <id root="2a620155-9d11-439e-92b3-5d9815ff4ee8"/>
+                                    <code code="395170001" displayName="Medication monitoring" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT"/>
+                                    <statusCode code="completed"/>
+                                    <effectiveTime>
+                                        <low value="20120806"/>
+                                        <high nullFlavor="UNK"/>
+                                    </effectiveTime>
+                                    <participant typeCode="RESP">
+                                        <participantRole classCode="ASSIGNED">
+                                            <id root="2a620155-9d11-439e-92b3-5d9815ff4ee5"/>
+                                            <playingEntity classCode="PSN">
+                                                <name>
+                                                    <prefix qualifier="AC TITLE">Dr. </prefix><!-- Space in element is intentional (see CDA R2.0 Section 2.23.4) -->
+                                                    <given>Robin</given>
+                                                    <family>Taylor</family>
+                                                </name>
+                                            </playingEntity>
+                                        </participantRole>
+                                    </participant>
+                                </act>
+                            </entryRelationship>
+                            <entryRelationship typeCode="COMP" inversionInd="true">
+                                <!-- This entryRelationship sequenceNumber indicates this is #1 in the series -->
+                                <sequenceNumber value="1"/>
+                                <act classCode="ACT" moodCode="EVN">
+                                    <!-- Substance Administered Act Template -->
+                                    <templateId root="2.16.840.1.113883.10.20.22.4.118"/>
+                                    <id root="df8908d0-40f2-11e3-aa6e-0800200c9a66"/>
+                                    <code code="416118004" displayName="administration" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT"/>
+                                    <statusCode code="completed"/>
+                                    <effectiveTime value="20120806"/>
+                                </act>
+                            </entryRelationship>
+                        <entryRelationship typeCode="COMP" inversionInd="true">
+                            <!-- Comment Activity -->
+                            <act classCode="ACT" moodCode="EVN">
+                                <templateId root="2.16.840.1.113883.10.20.22.4.64"/>
+                                <code code="48767-8" codeSystem="2.16.840.1.113883.6.1" displayName="Annotation comment"/>
+                                <text>Patient reports improved symptom control with the combination inhaler.</text>
+                                <statusCode code="completed"/>
+                            </act>
+                        </entryRelationship>
+                            <precondition typeCode="PRCN">
+                                <criterion>
+                                    <templateId root="2.16.840.1.113883.10.20.22.4.25" extension="2014-06-09"/>
+                                    <templateId root="2.16.840.1.113883.10.20.22.4.25"/>
+                                    <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+                                    <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CD" code="56018004" codeSystem="2.16.840.1.113883.6.96" displayName="Wheezing"/>
+                                </criterion>
+                            </precondition>
+                        </substanceAdministration>

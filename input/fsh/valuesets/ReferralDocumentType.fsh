@@ -2,6 +2,8 @@ ValueSet: ReferralDocumentType
 Id: 2.16.840.1.113883.1.11.20.2.3
 Title: "ReferralDocumentType"
 Description: "Referral Document Type"
+* ^identifier.system = "urn:ietf:rfc:3986"
+* ^identifier.value = "urn:oid:2.16.840.1.113883.1.11.20.2.3"
 * ^meta.versionId = "7"
 * ^meta.lastUpdated = "2020-08-19T06:17:32.034+00:00"
 * ^meta.source = "#JslZ3iUZTEut4Ehu"

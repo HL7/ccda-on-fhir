@@ -2,6 +2,8 @@ ValueSet: ConsultDocumentType
 Id: 2.16.840.1.113883.11.20.9.31
 Title: "ConsultDocumentType"
 Description: "Consult Document Type"
+* ^identifier.system = "urn:ietf:rfc:3986"
+* ^identifier.value = "urn:oid:2.16.840.1.113883.11.20.9.31"
 * ^meta.versionId = "7"
 * ^meta.lastUpdated = "2020-08-19T06:13:37.224+00:00"
 * ^meta.source = "#tECJbt4f4F0j476q"

@@ -1,0 +1,33 @@
+# Correspondence file: CF-social highlighted example (Myra smoking status observation)
+selector:
+  section: "29762-2"           # SOCIAL HISTORY
+  entryId: "2.16.840.1.113883.19"
+  element: observation
+resources:
+  - FHIR-Output-Observation-SmokingStatus
+rows:
+  - cda: id/@root
+    fhir: FHIR-Output-Observation-SmokingStatus.identifier[0].system
+    transform: oid-to-urn
+  - cda: id/@extension
+    fhir: FHIR-Output-Observation-SmokingStatus.identifier[0].value
+  - cda: statusCode/@code
+    fhir: FHIR-Output-Observation-SmokingStatus.status
+    transform: conceptmap CF-ResultStatus
+  - cda: code/@code
+    fhir: FHIR-Output-Observation-SmokingStatus.code.coding[0].code
+  - cda: code/@codeSystem
+    fhir: FHIR-Output-Observation-SmokingStatus.code.coding[0].system
+    transform: oid-to-uri
+  - cda: effectiveTime/@value
+    fhir: FHIR-Output-Observation-SmokingStatus.effectiveDateTime
+    transform: cda-datetime
+  - cda: value/@code
+    fhir: FHIR-Output-Observation-SmokingStatus.valueCodeableConcept.coding[0].code
+    uscdi: "Smoking Status / Smoking Status"
+  - cda: value/@codeSystem
+    fhir: FHIR-Output-Observation-SmokingStatus.valueCodeableConcept.coding[0].system
+    transform: oid-to-uri
+  - cda: value/@displayName
+    fhir: FHIR-Output-Observation-SmokingStatus.valueCodeableConcept.coding[0].display
+    transform: display

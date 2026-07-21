@@ -1,6 +1,7 @@
 Instance: FHIR-Output-Patient
 InstanceOf: Patient
 Usage: #example
+Description: "FHIR resource produced by the CDA-to-FHIR mapping example for Patient."
 * extension[0]
   * extension[0]
     * url = "ombCategory"
@@ -20,9 +21,14 @@ Usage: #example
 * identifier
   * value = "160920144139807"
   * system = "urn:oid:1.3.6.1.4.1.22812.3.2009316.3"
-* name
-  * use = #usual
+* name[0]
+  * use = #official
   * family = "Jones"
+  * given = "Myra"
+  * suffix = "Ph.D."
+* name[+]
+  * use = #old
+  * family = "Gonzalez"
   * given = "Myra"
 * telecom[0]
   * system = #phone
@@ -30,8 +36,8 @@ Usage: #example
   * use = #mobile
 * telecom[+]
   * system = #email
-  * value = "adam@diameterhealth.com"
-  * use = #work
+  * value = "myra.jones@email.com"
+  * use = #home
 * gender = #female
 * birthDate = "1947-05-01"
 * address
@@ -40,6 +46,7 @@ Usage: #example
   * city = "Beaverton"
   * state = "OR"
   * postalCode = "97006"
+* maritalStatus = http://terminology.hl7.org/CodeSystem/v3-MaritalStatus#M "Married"
 * communication
   * language = urn:ietf:bcp:47#en
   * preferred = true

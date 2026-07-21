@@ -23,6 +23,10 @@ fhirVersion: 4.0.1
 # ╰─────────────────────────────────────────────────────────────────────────────╯
 dependencies:
   hl7.fhir.us.core: 6.1.0
+  hl7.fhir.uv.fhir-clinical-document: 1.1.0
+  hl7.fhir.uv.xver-r5.r4:
+    version: 0.0.1-snapshot-2
+    uri: http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4
   hl7.fhir.uv.extensions.r4: 5.1.0
 
 # ╭─────────────────────────────────────────────────────────────────────────────╮
@@ -46,3 +50,89 @@ extension:
     valueCode: trial-use
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
     valueInteger: 2
+
+resources:
+  Binary/CDA-Input-AllergyIntolerance:
+    name: "CDA Input: AllergyIntolerance entry"
+    description: "C-CDA entry XML used as input for the AllergyIntolerance mapping example."
+    exampleBoolean: false
+    extension:
+      - url: http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format
+        valueCode: application/xml
+  Binary/CDA-Output-AllergyIntolerance:
+    name: "CDA Output: AllergyIntolerance entry"
+    description: "C-CDA entry XML produced by the FHIR-to-CDA mapping example for AllergyIntolerance."
+    exampleBoolean: false
+    extension:
+      - url: http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format
+        valueCode: application/xml
+  Binary/CDA-Input-Condition:
+    name: "CDA Input: Condition entry"
+    description: "C-CDA entry XML used as input for the Condition mapping example."
+    exampleBoolean: false
+    extension:
+      - url: http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format
+        valueCode: application/xml
+  Binary/CDA-Output-Condition:
+    name: "CDA Output: Condition entry"
+    description: "C-CDA entry XML produced by the FHIR-to-CDA mapping example for Condition."
+    exampleBoolean: false
+    extension:
+      - url: http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format
+        valueCode: application/xml
+  Binary/CDA-Input-Immunization:
+    name: "CDA Input: Immunization entry"
+    description: "C-CDA entry XML used as input for the Immunization mapping example."
+    exampleBoolean: false
+    extension:
+      - url: http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format
+        valueCode: application/xml
+  Binary/CDA-Output-Immunization:
+    name: "CDA Output: Immunization entry"
+    description: "C-CDA entry XML produced by the FHIR-to-CDA mapping example for Immunization."
+    exampleBoolean: false
+    extension:
+      - url: http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format
+        valueCode: application/xml
+  Binary/CDA-Input-MedicationRequest:
+    name: "CDA Input: MedicationRequest entry"
+    description: "C-CDA entry XML used as input for the MedicationRequest mapping example."
+    exampleBoolean: false
+    extension:
+      - url: http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format
+        valueCode: application/xml
+  Binary/CDA-Output-MedicationRequest:
+    name: "CDA Output: MedicationRequest entry"
+    description: "C-CDA entry XML produced by the FHIR-to-CDA mapping example for MedicationRequest."
+    exampleBoolean: false
+    extension:
+      - url: http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format
+        valueCode: application/xml
+  Binary/CDA-Input-Patient:
+    name: "CDA Input: Patient entry"
+    description: "C-CDA entry XML used as input for the Patient mapping example."
+    exampleBoolean: false
+    extension:
+      - url: http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format
+        valueCode: application/xml
+  Binary/CDA-Output-Patient:
+    name: "CDA Output: Patient entry"
+    description: "C-CDA entry XML produced by the FHIR-to-CDA mapping example for Patient."
+    exampleBoolean: false
+    extension:
+      - url: http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format
+        valueCode: application/xml
+  Binary/CDA-Input-Procedure:
+    name: "CDA Input: Procedure entry"
+    description: "C-CDA entry XML used as input for the Procedure mapping example."
+    exampleBoolean: false
+    extension:
+      - url: http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format
+        valueCode: application/xml
+  Binary/CDA-Output-Procedure:
+    name: "CDA Output: Procedure entry"
+    description: "C-CDA entry XML produced by the FHIR-to-CDA mapping example for Procedure."
+    exampleBoolean: false
+    extension:
+      - url: http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format
+        valueCode: application/xml

@@ -6,17 +6,13 @@ The entire implementation guide (including the HTML files, definitions, validati
 
 **Artifact Definitions**
 
-* [XML](definitions.xml.zip)
-* [JSON](definitions.json.zip)
-* [TTL](definitions.ttl.zip)
+The NPM package (package.tgz) is included in the full IG download above and on the package registry as `hl7.fhir.us.ccda`.
 
 **Examples:** 
 
 All the examples that are used in this Implementation Guide available for download:
 
-* [XML](examples.xml.zip)
-* [JSON](examples.json.zip)
-* [TTl](examples.ttl.zip)
+The examples are included in the full IG download and package above.
 
 **Validation**
 

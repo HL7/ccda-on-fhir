@@ -1,38 +1,84 @@
-<recordTarget>
-  <patientRole>
-    <id extension="160920144139807" root="1.3.6.1.4.1.22812.3.2009316.3" />
-    <addr use="H">
-      <streetAddressLine>1357 Amber Drive</streetAddressLine>
-      <city>Beaverton</city>
-      <state>OR</state>
-      <postalCode>97006</postalCode>
-    </addr>
-    <telecom value="tel:+1(565)867-5309" use="MC"/>
-    <telecom value="mailto:adam@diameterhealth.com" use="WP"/>
-    <patient>
-      <name use="L">
-        <given>Myra</given>
-        <family>Jones</family>
-      </name>
-      <administrativeGenderCode code="F" codeSystem="2.16.840.1.113883.5.1" />
-      <birthTime value="19470501" />
-      <raceCode code="2106-3" codeSystem="2.16.840.1.113883.6.238" displayName="White" />
-      <ethnicGroupCode code="2135-2" codeSystem="2.16.840.1.113883.6.238" displayName="Hispanic or Latino" />
-      <languageCommunication>
-        <languageCode code="en" />
-        <preferenceInd value="true" />
-      </languageCommunication>
-    </patient>
-    <providerOrganization>
-      <id extension="3" root="1.3.6.1.4.1.22812.3.2009316.3" />
-      <name>Primary Care's Partners Test</name>
-      <telecom use="WP" value="tel:+1-(676)857-6769" />
-      <addr use="H">
-        <streetAddressLine>123 main street</streetAddressLine>
-        <city>Chicago</city>
-        <state>IL</state>
-        <postalCode>60629</postalCode>
-      </addr>
-    </providerOrganization>
-  </patientRole>
-</recordTarget>
+<patientRole xmlns="urn:hl7-org:v3" xmlns:sdtc="urn:hl7-org:sdtc">
+            <id extension="160920144139807" root="1.3.6.1.4.1.22812.3.2009316.3"/>
+            <addr use="H">
+                <streetAddressLine>1357 Amber Drive</streetAddressLine>
+                <city>Beaverton</city>
+                <state>OR</state>
+                <postalCode>97006</postalCode>
+            </addr>
+            <addr use="BAD">
+                <streetAddressLine>742 Evergreen Terrace</streetAddressLine>
+                <city>Portland</city>
+                <state>OR</state>
+                <postalCode>97201</postalCode>
+            </addr>
+            <telecom value="tel:+1(565)867-5309" use="MC"/>
+            <telecom value="mailto:myra.jones@email.com" use="H"/>
+            <patient>
+                <name use="L">
+                    <given>Myra</given>
+                    <family>Jones</family>
+                    <suffix>Ph.D.</suffix>
+                </name>
+                <name use="SRCH">
+                    <given>Myra</given>
+                    <family>Gonzalez</family>
+                    <!-- Previous/maiden name -->
+                </name>
+                <administrativeGenderCode code="F" codeSystem="2.16.840.1.113883.5.1"/>
+                <birthTime value="19470501"/>
+                <maritalStatusCode code="M" displayName="Married" codeSystem="2.16.840.1.113883.5.2" codeSystemName="MaritalStatus"/>
+                <religiousAffiliationCode code="1013" displayName="Christian (non-Catholic, non-specific)" codeSystem="2.16.840.1.113883.5.1076" codeSystemName="HL7 Religious Affiliation"/>
+                <raceCode code="2106-3" codeSystem="2.16.840.1.113883.6.238" displayName="White"/>
+                <sdtc:raceCode code="2108-9" displayName="European" codeSystem="2.16.840.1.113883.6.238" xmlns:sdtc="urn:hl7-org:sdtc"/>
+                <ethnicGroupCode code="2135-2" codeSystem="2.16.840.1.113883.6.238" displayName="Hispanic or Latino"/>
+                <sdtc:ethnicGroupCode code="2146-9" displayName="Spanish Basque" codeSystem="2.16.840.1.113883.6.238" xmlns:sdtc="urn:hl7-org:sdtc"/>
+                <guardian>
+                    <!--  original version for the vendors:                   <code code="POWATT" displayName="Power of Attorney" codeSystem="2.16.840.1.113883.5.111" codeSystemName="RoleCode" />-->
+                    <!-- This was updated to the following "FTH" code as the "POWATT" was deemed more appropriate as participant, per feedback during vendors' mapping alignment meeting on 7/9/2024-->
+                    <code code="FTH" displayName="father" codeSystem="2.16.840.1.113883.5.111" codeSystemName="RoleCode"/>
+                    <addr use="H">
+                        <streetAddressLine>123 main street</streetAddressLine>
+                        <city>Beaverton</city>
+                        <state>OR</state>
+                        <postalCode>97867</postalCode>
+                    </addr>
+                    <telecom value="tel:+1(555)555-2008" use="MC"/>
+                    <guardianPerson>
+                        <name>
+                            <given>Boris</given>
+                            <given qualifier="CL">Bo</given>
+                            <family>Betterhalf</family>
+                        </name>
+                    </guardianPerson>
+                </guardian>
+                <birthplace>
+                    <place>
+                        <addr>
+                            <streetAddressLine>4444 Home Street</streetAddressLine>
+                            <city>Beaverton</city>
+                            <state>OR</state>
+                            <postalCode>97867</postalCode>
+                            <country>US</country>
+                        </addr>
+                    </place>
+                </birthplace>
+                <languageCommunication>
+                    <languageCode code="en"/>
+                    <modeCode code="ESP" displayName="Expressed spoken" codeSystem="2.16.840.1.113883.5.60" codeSystemName="LanguageAbilityMode"/>
+                    <proficiencyLevelCode code="G" displayName="Good" codeSystem="2.16.840.1.113883.5.61" codeSystemName="LanguageAbilityProficiency"/>
+                    <preferenceInd value="true"/>
+                </languageCommunication>
+            </patient>
+            <providerOrganization>
+                <id extension="3" root="1.3.6.1.4.1.22812.3.2009316.3"/>
+                <name>Primary Care's Partners Test</name>
+                <telecom use="WP" value="tel:+1-(676)857-6769"/>
+                <addr use="H">
+                    <streetAddressLine>123 main street</streetAddressLine>
+                    <city>Chicago</city>
+                    <state>IL</state>
+                    <postalCode>60629</postalCode>
+                </addr>
+            </providerOrganization>
+        </patientRole>

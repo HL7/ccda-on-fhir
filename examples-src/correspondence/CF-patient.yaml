@@ -1,0 +1,71 @@
+# Correspondence file: CF-patient highlighted example (Myra recordTarget)
+selector:
+  headerPath: recordTarget/patientRole
+binary: CDA-Input-Patient
+resources:
+  - FHIR-Output-Patient
+rows:
+  - cda: id/@root
+    fhir: FHIR-Output-Patient.identifier[0].system
+    transform: oid-to-urn
+  - cda: id/@extension
+    fhir: FHIR-Output-Patient.identifier[0].value
+  - cda: patient/name[1]/given
+    fhir: FHIR-Output-Patient.name[0].given[0]
+    uscdi: "Patient Demographics/Information / First Name"
+    transform: trim
+  - cda: patient/name[1]/family
+    fhir: FHIR-Output-Patient.name[0].family
+    uscdi: "Patient Demographics/Information / Last Name"
+    transform: trim
+  - cda: patient/name[1]/suffix
+    fhir: FHIR-Output-Patient.name[0].suffix[0]
+    uscdi: "Patient Demographics/Information / Suffix"
+    transform: trim
+  - cda: patient/name[2]/family
+    fhir: FHIR-Output-Patient.name[1].family
+    uscdi: "Patient Demographics/Information / Previous Name"
+    transform: trim
+  - cda: patient/administrativeGenderCode/@code
+    fhir: FHIR-Output-Patient.gender
+    uscdi: "Patient Demographics/Information / Sex"
+    transform: conceptmap CF-AdministrativeGender
+  - cda: patient/birthTime/@value
+    fhir: FHIR-Output-Patient.birthDate
+    uscdi: "Patient Demographics/Information / Date of Birth"
+    transform: cda-date
+  - cda: patient/maritalStatusCode/@code
+    fhir: FHIR-Output-Patient.maritalStatus.coding[0].code
+  - cda: addr[1]/streetAddressLine
+    fhir: FHIR-Output-Patient.address[0].line[0]
+    uscdi: "Patient Demographics/Information / Current Address"
+    transform: trim
+  - cda: addr[1]/city
+    fhir: FHIR-Output-Patient.address[0].city
+    transform: trim
+  - cda: addr[1]/state
+    fhir: FHIR-Output-Patient.address[0].state
+    transform: trim
+  - cda: addr[1]/postalCode
+    fhir: FHIR-Output-Patient.address[0].postalCode
+    transform: trim
+  - cda: telecom[1]/@value
+    fhir: FHIR-Output-Patient.telecom[0].value
+    uscdi: "Patient Demographics/Information / Phone Number"
+    transform: tel-value
+  - cda: telecom[2]/@value
+    fhir: FHIR-Output-Patient.telecom[1].value
+    uscdi: "Patient Demographics/Information / Email Address"
+    transform: mailto-value
+  - cda: patient/raceCode/@code
+    fhir: FHIR-Output-Patient.extension[1].extension[0].valueCoding.code
+    uscdi: "Patient Demographics/Information / Race"
+  - cda: patient/ethnicGroupCode/@code
+    fhir: FHIR-Output-Patient.extension[0].extension[0].valueCoding.code
+    uscdi: "Patient Demographics/Information / Ethnicity"
+  - cda: patient/languageCommunication/languageCode/@code
+    fhir: FHIR-Output-Patient.communication[0].language.coding[0].code
+    uscdi: "Patient Demographics/Information / Preferred Language"
+  - cda: patient/languageCommunication/preferenceInd/@value
+    fhir: FHIR-Output-Patient.communication[0].preferred
+    transform: boolean

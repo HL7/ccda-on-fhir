@@ -1,0 +1,18 @@
+{
+  "name": "scripts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@xmldom/xmldom": "^0.9.10",
+    "js-yaml": "^5.2.1",
+    "work": "file:..",
+    "xpath": "^0.0.34"
+  }
+}

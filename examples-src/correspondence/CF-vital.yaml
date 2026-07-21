@@ -1,0 +1,34 @@
+# Correspondence file: CF-vitals highlighted example (Myra heart-rate observation)
+# Selector targets the organizer; rows reach the heart-rate component.
+selector:
+  section: "8716-3"            # VITAL SIGNS
+  entryId: "2.16.840.1.113883.3.42.126.100001.19"
+  element: organizer
+resources:
+  - FHIR-Output-Observation-HeartRate
+rows:
+  - cda: component[1]/observation/id/@root
+    fhir: FHIR-Output-Observation-HeartRate.identifier[0].system
+    transform: oid-to-urn
+  - cda: component[1]/observation/id/@extension
+    fhir: FHIR-Output-Observation-HeartRate.identifier[0].value
+  - cda: component[1]/observation/statusCode/@code
+    fhir: FHIR-Output-Observation-HeartRate.status
+    transform: conceptmap CF-ResultStatus
+  - cda: component[1]/observation/code/@code
+    fhir: FHIR-Output-Observation-HeartRate.code.coding[0].code
+  - cda: component[1]/observation/code/@codeSystem
+    fhir: FHIR-Output-Observation-HeartRate.code.coding[0].system
+    transform: oid-to-uri
+  - cda: component[1]/observation/code/@displayName
+    fhir: FHIR-Output-Observation-HeartRate.code.coding[0].display
+    transform: display
+  - cda: component[1]/observation/effectiveTime/@value
+    fhir: FHIR-Output-Observation-HeartRate.effectiveDateTime
+    transform: cda-datetime
+  - cda: component[1]/observation/value/@value
+    fhir: FHIR-Output-Observation-HeartRate.valueQuantity.value
+    uscdi: "Vital Signs / Heart Rate"
+    transform: number
+  - cda: component[1]/observation/value/@unit
+    fhir: FHIR-Output-Observation-HeartRate.valueQuantity.code

@@ -1,6 +1,7 @@
 Instance: Referral-Note-Example
 InstanceOf: Composition
 Usage: #example
+Description: "Example composition for the Referral Note document profile."
 * meta
   * versionId = "4"
   * lastUpdated = "2020-08-12T21:30:11.629+00:00"

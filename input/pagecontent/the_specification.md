@@ -46,14 +46,19 @@ Note: the C-CDA Unstructured Document profile is not included in this specificat
 
 #### Extensions
 
-* [Authorization Extension](StructureDefinition-AuthorizationExtension.html)
-* [Informant Extension](StructureDefinition-InformantExtension.html)
-* [Participant Extension](StructureDefinition-ParticipantExtension.html)
+This guide reuses the standard extensions defined by the [FHIR Clinical Documents IG](http://hl7.org/fhir/uv/fhir-clinical-document/) wherever an equivalent exists, rather than defining its own:
+
+* [Consent (authorization)](http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition-consent-extension.html)
+* [Informant](http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition-informant-extension.html)
+* [Participant](http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition-ParticipantExtension.html)
+* [Data Enterer](http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition-data-enterer-extension.html)
+* [Information Recipient](http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition-information-recipient-extension.html)
+* [Order / basedOn](http://hl7.org/fhir/R4/extension-event-basedon.html) (cross-version event-basedOn extension)
+* [Version Number](http://hl7.org/fhir/versions.html) (R5 cross-version extension `extension-Composition.version`)
+
+One extension remains locally defined (no equivalent exists in the FHIR Clinical Documents IG):
+
 * [Performer Extension](StructureDefinition-PerformerExtension.html)
-* [Data Enterer Extension](StructureDefinition-DataEntererExtension.html)
-* [Information Recipient Extension](StructureDefinition-InformationRecipientExtension.html)
-* [Order Extension](StructureDefinition-OrderExtension.html)
-* [Version Number Extension](StructureDefinition-VersionNumber.html)
 
 ### Document Bundles
 

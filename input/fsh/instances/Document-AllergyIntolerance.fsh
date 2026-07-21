@@ -1,6 +1,7 @@
 Instance: Document-AllergyIntolerance
 InstanceOf: AllergyIntolerance
 Usage: #example
+Description: "Supporting example instance (AllergyIntolerance) referenced by the document profile examples."
 * meta
   * versionId = "7"
   * lastUpdated = "2020-08-12T21:30:13.331+00:00"

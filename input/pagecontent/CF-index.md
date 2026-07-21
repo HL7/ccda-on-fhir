@@ -8,6 +8,7 @@
 </div>
 
 #### Available Maps
+- [Header (Document)](CF-header.html)
 - [Allergies](CF-allergies.html)
 - [Encounters](CF-encounters.html)
 - [Immunizations](CF-immunizations.html)

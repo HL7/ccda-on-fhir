@@ -1,0 +1,75 @@
+# Correspondence file: CF-results highlighted example (Myra urinalysis organizer)
+selector:
+  section: "30954-2"           # RESULTS
+  entryId: "1.3.6.1.4.1.22812.20.1.1.4.5"
+  element: organizer
+resources:
+  - FHIR-Output-DiagnosticReport
+  - FHIR-Output-Observation-Lab
+  - FHIR-Output-Specimen
+rows:
+  - cda: id/@root
+    fhir: FHIR-Output-DiagnosticReport.identifier[0].system
+    transform: oid-to-urn
+  - cda: id/@extension
+    fhir: FHIR-Output-DiagnosticReport.identifier[0].value
+  - cda: statusCode/@code
+    fhir: FHIR-Output-DiagnosticReport.status
+    transform: conceptmap CF-ResultReportStatus
+  - cda: code/@code
+    fhir: FHIR-Output-DiagnosticReport.code.coding[0].code
+  - cda: code/@codeSystem
+    fhir: FHIR-Output-DiagnosticReport.code.coding[0].system
+    transform: oid-to-uri
+  - cda: effectiveTime/low/@value
+    fhir: FHIR-Output-DiagnosticReport.effectivePeriod.start
+    transform: cda-date
+  - cda: effectiveTime/high/@value
+    fhir: FHIR-Output-DiagnosticReport.effectivePeriod.end
+    transform: cda-date
+  - cda: performer/assignedEntity/representedOrganization/name
+    fhir: FHIR-Output-DiagnosticReport.performer[0].display
+    transform: trim
+  - cda: component/observation/id/@extension
+    fhir: FHIR-Output-Observation-Lab.identifier[0].value
+  - cda: component/observation/statusCode/@code
+    fhir: FHIR-Output-Observation-Lab.status
+    transform: conceptmap CF-ResultStatus
+    uscdi: "Laboratory / Result Status"
+  - cda: component/observation/code/@code
+    fhir: FHIR-Output-Observation-Lab.code.coding[0].code
+    uscdi: "Laboratory / Tests"
+  - cda: component/observation/code/@codeSystem
+    fhir: FHIR-Output-Observation-Lab.code.coding[0].system
+    transform: oid-to-uri
+  - cda: component/observation/code/@displayName
+    fhir: FHIR-Output-Observation-Lab.code.coding[0].display
+    transform: display
+  - cda: component/observation/effectiveTime/@value
+    fhir: FHIR-Output-Observation-Lab.effectiveDateTime
+    transform: cda-date
+  - cda: component/observation/value/@value
+    fhir: FHIR-Output-Observation-Lab.valueQuantity.value
+    transform: number
+    uscdi: "Laboratory / Values/Results"
+  - cda: component/observation/value/@unit
+    fhir: FHIR-Output-Observation-Lab.valueQuantity.code
+  - cda: component/observation/interpretationCode/@code
+    fhir: FHIR-Output-Observation-Lab.interpretation[0].coding[0].code
+    uscdi: "Laboratory / Result Interpretation"
+  - cda: component/observation/referenceRange/observationRange/value/low/@value
+    fhir: FHIR-Output-Observation-Lab.referenceRange[0].low.value
+    transform: number
+    uscdi: "Laboratory / Result Reference Range"
+  - cda: component/observation/referenceRange/observationRange/value/high/@value
+    fhir: FHIR-Output-Observation-Lab.referenceRange[0].high.value
+    transform: number
+  - cda: component/observation/specimen/specimenRole/id/@root
+    fhir: FHIR-Output-Specimen.identifier[0].value
+    transform: uuid-to-urn
+  - cda: component/observation/specimen/specimenRole/specimenPlayingEntity/code/@code
+    fhir: FHIR-Output-Specimen.type.coding[0].code
+    uscdi: "Laboratory / Specimen Type"
+  - cda: component/observation/specimen/specimenRole/specimenPlayingEntity/code/@codeSystem
+    fhir: FHIR-Output-Specimen.type.coding[0].system
+    transform: oid-to-uri

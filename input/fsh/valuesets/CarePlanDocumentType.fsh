@@ -6,6 +6,8 @@ Description: """(Clinical Focus: Terms used to identify documents that represent
 and 93024-8 Pharmacist Consult Note.),(Exclusion Criteria: )
 
 This value set was imported on 6/24/2019 with a version of 20190425."""
+* ^identifier.system = "urn:ietf:rfc:3986"
+* ^identifier.value = "urn:oid:2.16.840.1.113762.1.4.1099.10"
 * ^meta.versionId = "6"
 * ^meta.lastUpdated = "2020-08-19T06:34:51.720+00:00"
 * ^meta.source = "#49QzE2rZjBWNk32p"

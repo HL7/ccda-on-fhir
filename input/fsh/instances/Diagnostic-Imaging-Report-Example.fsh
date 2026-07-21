@@ -1,6 +1,7 @@
 Instance: Diagnostic-Imaging-Report-Example
 InstanceOf: Composition
 Usage: #example
+Description: "Example composition for the Diagnostic Imaging Report document profile."
 * meta
   * versionId = "4"
   * lastUpdated = "2020-08-12T21:30:12.638+00:00"

@@ -1,0 +1,27 @@
+# Correspondence file: CF-notes highlighted example (Myra consultation Note Activity)
+# Note Activity in v8 carries no <id>, so the selector takes the first act in the section.
+selector:
+  section: "11488-4"           # Consultation Notes section
+  element: act
+resources:
+  - FHIR-Output-DocumentReference
+rows:
+  - cda: code/translation/@code
+    fhir: FHIR-Output-DocumentReference.type.coding[0].code
+    uscdi: "Clinical Notes / Consultation Note"
+  - cda: code/translation/@codeSystem
+    fhir: FHIR-Output-DocumentReference.type.coding[0].system
+    transform: oid-to-uri
+  - cda: code/translation/@displayName
+    fhir: FHIR-Output-DocumentReference.type.coding[0].display
+    transform: display
+  - cda: effectiveTime/@value
+    fhir: FHIR-Output-DocumentReference.context.period.start
+    transform: cda-date
+  - cda: author/time/@value
+    fhir: FHIR-Output-DocumentReference.date
+    transform: cda-datetime
+  - cda: author/assignedAuthor/assignedPerson/name/family
+    fhir: FHIR-Output-DocumentReference.author[0].display
+    transform: display
+    note: "author display assembled from person name"
