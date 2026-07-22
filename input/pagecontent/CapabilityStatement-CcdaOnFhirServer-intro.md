@@ -1,1 +1,0 @@
-{% include stu-note.xml %}
