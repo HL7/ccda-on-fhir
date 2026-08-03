@@ -189,3 +189,16 @@ Complete-Document-Bundle-Example claims `meta.profile = clinical-document-bundle
 ## 4b. Build-baseline record (stage 1)
 
 First full IG Publisher build of `fsh-claude`: **29 errors / 177 warnings / 17 broken links** → after fix batches (commits 72345c4, 14ec76a, ba9430f, c526086, 08db492): **0 errors**. Fixes: ValueSet OIDs ×9; Luhn-valid NPIs ×2; LOINC display corrections ×3; `us-core-condition` → `us-core-condition-problems-health-concerns`; detailed-ethnicity codings removed from Amy-Shaw-era Patient (VSAC expansion failures; superseded by Myra later); 12 Binary CDA fragments namespace-fixed, registered with `implementationguide-resource-format=application/xml` (the mechanism master used); downloads/CF-results link fixes; xver dependsOn uri = canonical + `/ImplementationGuide/` path. Warnings pass 1 (b94724b): cross-version extension URLs version-pinned; 42 instance descriptions added. Remaining warnings (~130): LOINC display corrections in re
+## 5. Documentation decisions
+
+### D-doc-1 — Bundle reference-graph illustration — **proposed**
+
+Added a generated resource-reference graph of the Myra Jones document Bundle to the
+myra-jones page (`input/images/myra-bundle-graph.svg`). Design: the Bundle drawn as the
+enclosing frame; Composition section boundaries as dashed labeled clusters around their
+section entries; `section.entry` references as unlabeled gray arrows terminating on the
+entry resource; all other inter-resource references as labeled arrows; nodes show resource
+type plus a short display hint. Rationale: chosen over a clinFHIR screenshot for legibility
+(vector), IG-consistent styling, and regenerability — `scripts/gen-bundle-graph.py`
+rebuilds the SVG from `fsh-generated/resources/Bundle-Bundle-CCD-Myra.json` (run after
+SUSHI; requires Graphviz `dot`), so the illustration cannot drift from the bundle.
