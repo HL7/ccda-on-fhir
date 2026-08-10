@@ -87,7 +87,7 @@ by our maps must be usable as US-PCS section entries.
    claims its profile (D-profile-3), so most of the check happens automatically when the
    IG Publisher validates a build. Fold the remainder — including the D-profile-3
    first-entry-slice risk — into the header-map ballot work.
-2. **Document the US-PCS relationship in this IG.** Add a short narrative page stating
+2. **Document the US-PCS relationship in this IG.** DONE 2026-08-03: "Relationships" section added to background.md (Jay's wording). Original proposal: add a short narrative page stating
    that the two guides are complementary: US-PCS generates FHIR-native summaries; this IG
    maps C-CDA documents into the US Core resources those summaries draw from. Record the
    three boundaries as decisions: (a) our two negation outputs (Administration not-done,

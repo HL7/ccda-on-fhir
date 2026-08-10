@@ -215,3 +215,9 @@ scope (IPS MedicationRequest requires doNotPerform=false, verified); document ty
 carried CCD->US-PCS. Actions proposed: "Relationship to US-PCS" narrative page; ballot
 comment on US-PCS STU1 affirming the division of labor; align MS-definition language with
 their ballot resolution. No MedMaps changes.
+
+*D-doc-2 addendum (2026-08-03):* relationship narrative added to `background.md` with Jay's
+wording (CD-IG derivation; USCDI-3 content scope shared with PCS; maps do not change
+specifications; entry maps valid irrespective of containing template; medication-negation
+difference: IPS prohibits, PCS permits but recommends exclusion, US Core supports
+do-not-give only). Remaining proposed actions: US-PCS ballot comment; MS-inheritance watch.
