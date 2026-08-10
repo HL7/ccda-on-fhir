@@ -202,3 +202,16 @@ type plus a short display hint. Rationale: chosen over a clinFHIR screenshot for
 (vector), IG-consistent styling, and regenerability — `scripts/gen-bundle-graph.py`
 rebuilds the SVG from `fsh-generated/resources/Bundle-Bundle-CCD-Myra.json` (run after
 SUSHI; requires Graphviz `dot`), so the illustration cannot drift from the bundle.
+
+### D-doc-2 — US-PCS / CD-IG alignment posture — **proposed**
+
+Analysis in `analysis-us-pcs-alignment.md` (2026-08-03). Position: US-PCS and this IG are
+complementary (their scope excludes CDA mapping; ours is the CDA side); alignment target is
+that our mapped US Core resources are usable as US-PCS section entries. US-PCS independently
+corroborates the MedMaps US Core medication model (MR-first, order/plan intent,
+doNotPerform). Recorded boundaries: our two US Core negation exceptions (Administration
+not-done / Statement not-taken) are not US-PCS section entries; IPS-proper output is out of
+scope (IPS MedicationRequest requires doNotPerform=false, verified); document type is not
+carried CCD->US-PCS. Actions proposed: "Relationship to US-PCS" narrative page; ballot
+comment on US-PCS STU1 affirming the division of labor; align MS-definition language with
+their ballot resolution. No MedMaps changes.
