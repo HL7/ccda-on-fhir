@@ -82,13 +82,25 @@ by our maps must be usable as US-PCS section entries.
 
 ## 5. Recommended actions
 
-1. Keep the CD-IG 1.1 verification in the header-map ballot workstream (mechanical).
-2. Add a short "Relationship to US-PCS" narrative to this IG (pipeline diagram above;
-   points 3.1 and 4.1-4.3).
-3. Submit ballot comment(s) on US-PCS STU1 (open now) affirming the division of labor —
-   their summary generation, this IG's CDA mapping — and referencing this IG as the
-   CDA-side companion; optionally note the shared MS-inheritance question.
-4. No MedMaps changes: US-PCS independently corroborates MedicationRequest-first,
+1. **FHIR Clinical Documents 1.1 check.** This is verification, not new design. Our header
+   profiles already derive from CD-IG 1.1 (D-profile-2) and the bundle example already
+   claims its profile (D-profile-3), so most of the check happens automatically when the
+   IG Publisher validates a build. Fold the remainder — including the D-profile-3
+   first-entry-slice risk — into the header-map ballot work.
+2. **Document the US-PCS relationship in this IG.** Add a short narrative page stating
+   that the two guides are complementary: US-PCS generates FHIR-native summaries; this IG
+   maps C-CDA documents into the US Core resources those summaries draw from. Record the
+   three boundaries as decisions: (a) our two negation outputs (Administration not-done,
+   Statement not-taken) cannot appear in a US-PCS medication section; (b) IPS-conformant
+   output is out of scope, because IPS forbids doNotPerform = true; (c) a mapped CCD never
+   becomes a US-PCS — a summary is generated from the resources, not converted from the
+   document.
+3. **Comment on the US-PCS ballot, which is open now.** A short comment confirming the
+   division of labor — summary generation is theirs, CDA mapping is ours — puts the
+   complementary relationship on the record in their specification at essentially no cost.
+   Optionally raise the shared must-support-inheritance question so their resolution can
+   be reused here.
+4. **No MedMaps changes.** US-PCS independently corroborates MedicationRequest-first,
    order/plan intent by author, and doNotPerform-based negation.
 
 ## Sources
