@@ -32,9 +32,9 @@ In addition, the project team employed the example-based approach through Connec
 
 ### Relationships to FHIR Clinical Documents, the International Patient Summary (IPS), and the US Patient Care Summary (PCS)
 
-The FHIR profiles in this guide are derived from the [FHIR Clinical Documents](https://hl7.org/fhir/uv/fhir-clinical-document/STU1.1/en/) specification.
+The FHIR profiles in this guide are derived from the [FHIR Clinical Documents](https://hl7.org/fhir/uv/fhir-clinical-document/STU1.1/en/) specification. This is the same foundation used by the [PCS](https://build.fhir.org/ig/HL7/us-fhir-ps/en/index.html).
 
-The content scope of this guide is USCDI-3, plus header and provenance. This is the same foundation used by the [PCS](https://build.fhir.org/ig/HL7/us-fhir-ps/en/index.html).
+The content scope of this guide is USCDI-3, plus header and provenance.
 
 The structural scope of the maps is the two US specifications supporting that content scope: C-CDA and FHIR US Core. The maps do not change specifications: a CDA document with a CCD code will result in a FHIR document with a CCD code; it will never change into a PCS.
 
