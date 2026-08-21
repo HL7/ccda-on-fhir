@@ -221,3 +221,34 @@ wording (CD-IG derivation; USCDI-3 content scope shared with PCS; maps do not ch
 specifications; entry maps valid irrespective of containing template; medication-negation
 difference: IPS prohibits, PCS permits but recommends exclusion, US Core supports
 do-not-give only). Remaining proposed actions: US-PCS ballot comment; MS-inheritance watch.
+
+### D-doc-3 — Transform quality/completeness signaling — **approved (Jay, 2026-08-18)**
+
+How a CDA-to-FHIR transform indicates quality issues (broken rules, missing data,
+structured data demoted to narrative):
+
+- **Element level, in-document:** `data-absent-reason` where required data is missing for a
+  known reason (`unsupported`, `error`, ...); `Narrative.status = additional` on resources
+  whose narrative carries content not represented in the structured data.
+- **Lineage, in-document:** a Provenance whose `target` lists the Composition and entries —
+  admitted to the document bundle by the FHIR documents rule ("Provenance Resources that
+  have a target of Composition or another resource included in the document"); `recorded` =
+  transform time; agents = document author + assembler + transmitter; `entity.role=source`
+  with `what.reference` -> DocumentReference(CDA) and `what.identifier` = ClinicalDocument
+  id. Document level: DocumentReference(FHIR) `relatesTo(transforms)` DocumentReference(CDA).
+- **Issue log:** an OperationOutcome with `issue.severity` information/warning (issues on a
+  successful transform), `issue.expression` = FHIRPath into the document bundle,
+  `issue.details` from an IG-defined transform-issue code system (e.g., unmapped-code,
+  structured-data-in-narrative, rule-violation, missing-required), `issue.diagnostics`
+  carrying the source-side CDA XPath. Delivered with the exchange (transaction-response
+  `entry.response.outcome`, operation `Parameters`, or message bundle).
+- **Persistence (the decision):** the OperationOutcome is NOT attested content and SHALL NOT
+  be a document entry. It is persisted outside the document; the document carries a pointer
+  via an IG-defined extension on the in-document (transform) Provenance referencing the
+  OperationOutcome (version-specific reference recommended, since the document is immutable).
+  The alternative — including the OperationOutcome as an entry via a dedicated Composition
+  section (legal under the documents rule's "resources referenced from the Composition") —
+  was considered and rejected: the issue log is not attested, and OperationOutcome's scope
+  discourages use as persisted content.
+- Build items (P5): the extension StructureDefinition, the transform-issue CodeSystem, and
+  narrative guidance with Jay's reference diagram.
