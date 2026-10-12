@@ -280,7 +280,7 @@ document standard. Rationale: assert transform origin (Provenance) and enough me
 it; discrimination is by LOINC (`Composition.type`, section codes); scope note defers to
 any future US realm clinical-document specification; coordinate the CCD profile with US-PCS.
 
-- **Composition profile** derived from FHIR Clinical Documents (published v1.0.0,
+- **Composition profile** derived from FHIR Clinical Documents (published v1.1.0 STU update, 2026-07-03,
   `hl7.fhir.uv.fhir-clinical-document`): US actor retargets, `meta.profile` signal,
   `type` bound to the C-CDA document-type value set. Sections inherit FCD's generic rules —
   section/entry conformance expectations live in the mapping pages, not the profiles.
