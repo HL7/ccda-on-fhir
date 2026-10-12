@@ -358,3 +358,32 @@ gap**, no extension; OO-notable when present. Upstream actions: FCD trackers to 
 generalize data-enterer-extension for slotless participations ("other types are allowed" is
 already in its own description), (b) offer author-time for adoption so the realm-local
 extension can retire (CH Core EPR-Time lesson).
+
+### D-hdr-5 — Entity collapse across participations — **proposed**
+
+When one entity fills multiple participations in a document, the transform collapses by the
+following decision procedure (CDA structurally forces restatement — participations cannot
+reference one another; only entries can, via the C-CDA Entry Reference template — so
+duplication in the source is the norm, not a signal):
+
+- **Match by identifier only.** Identifier equality = exact `II` root+extension match
+  (root-only matches root-only); `nullFlavor` ids are no identifier. No identifier, no
+  match. Name/demographic matching is explicitly excluded.
+- **Match per resource, at the right tier.** Person identifiers (e.g., NPI ->
+  `Practitioner.identifier`) merge Practitioners; role identifiers (assignedAuthor/id etc.
+  -> `PractitionerRole.identifier`) merge PractitionerRoles. Same person in two roles =
+  one Practitioner, two PractitionerRoles (per D-hdr-3). Identifiers match only within the
+  same resource type: an entity mapping to different types in different participations
+  (Practitioner / RelatedPerson) is not merged; the identifier rides both.
+- **On match, merge as superset**: equal elements kept once; elements present in one
+  instance only are taken; disagreeing *repeating* elements are unioned (deduplicated by
+  equality).
+- **Disagreeing single-cardinality elements block the collapse**: instantiate both
+  instances, same identifier (FHIR-legal); each participation references its own instance,
+  so no downstream consumer must pick a winner. Realistic case: same role id with two
+  representedOrganizations -> two PractitionerRoles.
+- **Scope: one document's transform.** Cross-document reconciliation (same identifier in
+  two documents) is the receiver's concern, not the transform's.
+
+Reverse transform: a multiply-referenced FHIR resource is re-expanded inline at each CDA
+participation with its ids preserved.
