@@ -136,3 +136,79 @@ resources:
     extension:
       - url: http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format
         valueCode: application/xml
+
+# Page tree ported from the retired input/hl7.fhir.us.ccda.xml (lost in the FSH
+# conversion; unregistered pages broke menu/index links), plus CF-header,
+# myra-jones, and downloads.
+
+pages:
+  index.md:
+    title: Home Page
+    background.md:
+      title: Background
+      mappingGuidance.md:
+        title: Mapping General and Structural Guidance
+      CF-index.md:
+        title: "C-CDA → FHIR Index"
+        CF-header.md:
+          title: C-CDA to FHIR Header
+        CF-patient.md:
+          title: C-CDA to FHIR Patient
+        CF-participations.md:
+          title: C-CDA to FHIR Participations
+        CF-allergies.md:
+          title: C-CDA to FHIR Allergies
+        CF-encounters.md:
+          title: C-CDA to FHIR Encounters
+        CF-immunizations.md:
+          title: C-CDA to FHIR Immunizations
+        CF-medications.md:
+          title: C-CDA to FHIR Medications
+        CF-notes.md:
+          title: C-CDA to FHIR Notes
+        CF-problems.md:
+          title: C-CDA to FHIR Problems
+        CF-procedures.md:
+          title: C-CDA to FHIR Procedures
+        CF-results.md:
+          title: C-CDA to FHIR Results
+        CF-social.md:
+          title: C-CDA to FHIR Social History
+        CF-vitals.md:
+          title: C-CDA to FHIR Vital Signs
+      FC-index.md:
+        title: "FHIR → C-CDA Index"
+        FC-patient.md:
+          title: FHIR to C-CDA Patient
+        FC-allergies.md:
+          title: FHIR to C-CDA Allergies
+        FC-encounters.md:
+          title: FHIR to C-CDA Encounters
+        FC-immunizations.md:
+          title: FHIR to C-CDA Immunizations
+        FC-medications.md:
+          title: FHIR to C-CDA Medications
+        FC-notes.md:
+          title: FHIR to C-CDA Notes
+        FC-problems.md:
+          title: FHIR to C-CDA Problems
+        FC-procedures.md:
+          title: FHIR to C-CDA Procedures
+        FC-results.md:
+          title: FHIR to C-CDA Results
+        FC-social.md:
+          title: FHIR to C-CDA Social History
+        FC-vitals.md:
+          title: FHIR to C-CDA Vital Signs
+      conceptMaps.md:
+        title: Terminology Maps (Concept Maps)
+      mappingChangelog.md:
+        title: Change Log
+      mappingIssues.md:
+        title: Known Issues
+      myra-jones.md:
+        title: Myra Jones CCD Example
+    the_specification.md:
+      title: Specification
+    downloads.md:
+      title: Downloads

@@ -252,3 +252,138 @@ structured data demoted to narrative):
   discourages use as persisted content.
 - Build items (P5): the extension StructureDefinition, the transform-issue CodeSystem, and
   narrative guidance with Jay's reference diagram.
+
+*D-doc-3 addendum (2026-10-12):* delivery and pointer revisions agreed with the architecture
+diagram. (1) The OperationOutcome travels as an **entry of the delivery bundle** (`type` =
+`transaction` for persisting receivers, `collection` for pure push) — not as
+transaction-response `entry.response.outcome`, which is server plumbing (the same
+role-confusion R5 `Bundle.issues` was invented to fix); server reference-rewriting turns
+intra-package `urn:uuid` pointers durable on persistence. (2) **Both pointer channels are
+permitted**: the Provenance extension (document layer, always present) and
+`DocumentReference.context.related` (exchange layer, when the FHIR DocumentReference
+exists); when both exist they SHOULD reference the same OperationOutcome (enforceable by
+invariant only when co-packaged). (3) The agent list gains the **transformer** (software)
+agent. (4) `Provenance.target` = the Composition **and the generated resources**:
+document-level provenance is the floor for every resource until context conduction is
+modeled; all targets remain in-document. (5) **Unmapped source content:** unrecognized
+entries become free-standing bundle entries placed in the same section as their siblings;
+an "Unmapped Section" is created only when the *source section* is unrecognized, and
+carries the source section's own code/title/narrative where present (minted code or
+text-only section reserved for a codeless source section). Receivers must store the OO as
+an addressable resource. Open: representation of an unmapped entry (Basic + source XML vs
+narrative-only presence + OO issue).
+
+### D-doc-4 — Document-level profile architecture — **approved (Jay, 2026-10-06; delivery details 2026-10-12)**
+
+Document templates return to the IG as **transform-output profiles**, not a US realm
+document standard. Rationale: assert transform origin (Provenance) and enough meta to find
+it; discrimination is by LOINC (`Composition.type`, section codes); scope note defers to
+any future US realm clinical-document specification; coordinate the CCD profile with US-PCS.
+
+- **Composition profile** derived from FHIR Clinical Documents (published v1.1.0 STU update, 2026-07-03,
+  `hl7.fhir.uv.fhir-clinical-document`): US actor retargets, `meta.profile` signal,
+  `type` bound to the C-CDA document-type value set. Sections inherit FCD's generic rules —
+  section/entry conformance expectations live in the mapping pages, not the profiles.
+- **Provenance profile** (the transform record): `recorded` = transform time; agents =
+  document author, assembler, transmitter, transformer; `entity.role=source`,
+  `what.identifier` always, `what.reference` -> CDA DocumentReference when present.
+- **OperationOutcome profile** per D-doc-3 (+ counts mechanism open: issue repetitions vs
+  a counts extension).
+- **Document Bundle profile**: Composition slice + required Provenance slice (+ stylesheet
+  Binary). The Bundle profile, not the Composition, enforces Provenance presence.
+- **12 per-type Composition profiles** derived from the main one, asserting **only** the
+  LOINC type; nothing else in the IG references them; scope note + formal ballot question
+  inviting their removal (honors the stakeholder request; the ballot decides).
+- **DocumentReference profile** derived from US Core: `relatesTo(transforms)` -> source-CDA
+  DocumentReference; `context.related` -> OperationOutcome; `content.attachment.url` ->
+  document Bundle.
+- **Outer delivery bundle**: guidance page + worked example only (transport varies by
+  ecosystem; MHD ITI-65 precedent for bundle-in-bundle); at most a loose collection profile.
+
+### D-hdr-1 — Composition.status derivation — **proposed**
+
+CDA has no document-level statusCode: the normative edition's V3 Medical Records mapping
+(Table 4) lists `statusCode` among attributes "not present in CDA", and the document
+characteristics are "defined and complete information object" with *potential* for
+authentication (unauthenticated / authenticated / legally authenticated states all legal) —
+the spec does **not** say documents are "completed" or attested. Since `Composition.status`
+is 1..1, the map is a derivation rule: default **`final`** (the instance cannot express
+otherwise); **`amended`** when `relatedDocument/@typeCode = RPLC` (paired with
+`relatesTo(replaces)` from the parent setId/version); APND leaves the new document `final`
+with `relatesTo(appends)`; **`preliminary`** only from a populated `sdtc:statusCode` other
+than completed (rare; Structured Form Definition use case); **`entered-in-error`** never
+emitted by the transform (out-of-band document management only). The authentication axis
+maps to `Composition.attester` (professional/legal + `attester.time`), not to status.
+Mapping note owns the caveat: FHIR `final` ("verified by an appropriate person") slightly
+overclaims for an unauthenticated source; `preliminary` misstates worse.
+
+### D-hdr-2 — guardian -> RelatedPerson.relationship — **proposed**
+
+Primary coding **v3 RoleCode `GUARD`** — inside the extensible PatientRelationshipType
+binding and an exact round-trip of CDA's RoleClass GUARD. Secondary coding SNOMED
+`394619001 |Guardian (person)|` in the same CodeableConcept; `58626006 |Legal guardian|`
+only when the source explicitly asserts legal guardianship. When `guardian/code` carries a
+specific personal relationship (MTH etc.), translate it as an additional `relationship`
+repetition. "Other" backstop unnecessary.
+
+### D-hdr-3 — Author representation: PractitionerRole pattern — **approved (Jay, 2026-10-12)**
+
+Human authors map uniformly to `Composition.author` -> **PractitionerRole referencing
+Practitioner**, the role possibly empty except for the practitioner reference. AssignedAuthor
+is a role, and the split is preserved: person name -> `Practitioner.name`; role-scoped work
+telecom -> `PractitionerRole.telecom`; role-scoped work address -> **contained Location**
+via `PractitionerRole.location` (a role's work address has no independent identity — the
+containment criterion); representedOrganization -> `PractitionerRole.organization`; NPI ->
+`Practitioner.identifier` (dedup key). Target is **base PractitionerRole**, not US Core:
+US Core's pd-1 (`telecom.exists() or endpoint.exists()`) fails an empty role; instances may
+additionally claim US Core when conformant. Scope: human authors only — authoring devices ->
+Device; patient authors -> Patient (per the medication model's author axis).
+
+### D-hdr-4 — author.time and author.functionCode — **approved (Jay, 2026-10-12)**
+
+`ClinicalDocument.effectiveTime` = document creation time (for transformed documents, the
+*original's* creation; CDA: "the time when the transform occurred is not currently
+represented in CDA" — the gap `Provenance.recorded` fills FHIR-side). Header `author.time`
+(point in time per R2) has no Composition slot -> IG mints an **`author-time` extension on
+`Composition.author`** (`valueDateTime`; repeats with each author). Header scope only:
+entry-level author times use resource-native elements (`authoredOn` etc.). FCD's
+data-enterer-extension was evaluated and rejected for reuse: its `type` is pinned to
+ParticipationType `ENT` by pattern, and it is a self-contained participation — the wrong
+grain for authors, who already have a slot (duplicated references invite disagreement).
+Doctrine: slotless participations (informant, recipient, tracker, dataEnterer) use the
+self-contained participation-extension pattern; slotted participations missing an attribute
+get a small element-level extension. `author.functionCode`: base-CDA-legal, untemplated in
+C-CDA, unobserved in US practice (sample corpus: zero author occurrences) — **deliberate
+gap**, no extension; OO-notable when present. Upstream actions: FCD trackers to (a)
+generalize data-enterer-extension for slotless participations ("other types are allowed" is
+already in its own description), (b) offer author-time for adoption so the realm-local
+extension can retire (CH Core EPR-Time lesson).
+
+### D-hdr-5 — Entity collapse across participations — **proposed**
+
+When one entity fills multiple participations in a document, the transform collapses by the
+following decision procedure (CDA structurally forces restatement — participations cannot
+reference one another; only entries can, via the C-CDA Entry Reference template — so
+duplication in the source is the norm, not a signal):
+
+- **Match by identifier only.** Identifier equality = exact `II` root+extension match
+  (root-only matches root-only); `nullFlavor` ids are no identifier. No identifier, no
+  match. Name/demographic matching is explicitly excluded.
+- **Match per resource, at the right tier.** Person identifiers (e.g., NPI ->
+  `Practitioner.identifier`) merge Practitioners; role identifiers (assignedAuthor/id etc.
+  -> `PractitionerRole.identifier`) merge PractitionerRoles. Same person in two roles =
+  one Practitioner, two PractitionerRoles (per D-hdr-3). Identifiers match only within the
+  same resource type: an entity mapping to different types in different participations
+  (Practitioner / RelatedPerson) is not merged; the identifier rides both.
+- **On match, merge as superset**: equal elements kept once; elements present in one
+  instance only are taken; disagreeing *repeating* elements are unioned (deduplicated by
+  equality).
+- **Disagreeing single-cardinality elements block the collapse**: instantiate both
+  instances, same identifier (FHIR-legal); each participation references its own instance,
+  so no downstream consumer must pick a winner. Realistic case: same role id with two
+  representedOrganizations -> two PractitionerRoles.
+- **Scope: one document's transform.** Cross-document reconciliation (same identifier in
+  two documents) is the receiver's concern, not the transform's.
+
+Reverse transform: a multiply-referenced FHIR resource is re-expanded inline at each CDA
+participation with its ids preserved.
