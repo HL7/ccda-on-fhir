@@ -222,43 +222,43 @@
 <page deprecated="true" key="profiles" name="(profiles)"/>
 <page key="artifacts" name="Artifacts Summary"/>
 <page deprecated="true" key="background" name="Background"/>
-<page deprecated="true" key="CF-notes" name="C-CDA to FHIR Notes"/>
-<page key="CF-allergies" name="CF Allergies"/>
-<page key="CF-encounters" name="CF Encounters"/>
-<page key="CF-header" name="CF Header"/>
-<page key="CF-immunizations" name="CF Immunizations"/>
-<page key="CF-index" name="CF Index"/>
-<page key="CF-medications" name="CF Medications"/>
-<page key="CF-participations" name="CF Participations"/>
-<page key="CF-patient" name="CF Patient"/>
-<page key="CF-problems" name="CF Problems"/>
-<page key="CF-procedures" name="CF Procedures"/>
-<page key="CF-results" name="CF Results"/>
-<page key="CF-social" name="CF Social"/>
-<page key="CF-vitals" name="CF Vitals"/>
-<page key="conceptMaps" name="Concept Maps"/>
+<page key="CF-allergies" name="C-CDA to FHIR Allergies"/>
+<page key="CF-encounters" name="C-CDA to FHIR Encounters"/>
+<page key="CF-header" name="C-CDA to FHIR Header"/>
+<page key="CF-immunizations" name="C-CDA to FHIR Immunizations"/>
+<page key="CF-medications" name="C-CDA to FHIR Medications"/>
+<page key="CF-notes" name="C-CDA to FHIR Notes"/>
+<page key="CF-participations" name="C-CDA to FHIR Participations"/>
+<page key="CF-patient" name="C-CDA to FHIR Patient"/>
+<page key="CF-problems" name="C-CDA to FHIR Problems"/>
+<page key="CF-procedures" name="C-CDA to FHIR Procedures"/>
+<page key="CF-results" name="C-CDA to FHIR Results"/>
+<page key="CF-social" name="C-CDA to FHIR Social History"/>
+<page key="CF-vitals" name="C-CDA to FHIR Vital Signs"/>
+<page key="CF-index" name="C-CDA → FHIR Index"/>
+<page key="mappingChangelog" name="Change Log"/>
 <page deprecated="true" key="downloads" name="Downloads"/>
-<page key="FC-allergies" name="FC Allergies"/>
-<page key="FC-encounters" name="FC Encounters"/>
-<page key="FC-immunizations" name="FC Immunizations"/>
-<page key="FC-index" name="FC Index"/>
-<page key="FC-medications" name="FC Medications"/>
-<page key="FC-patient" name="FC Patient"/>
-<page key="FC-problems" name="FC Problems"/>
-<page key="FC-procedures" name="FC Procedures"/>
-<page key="FC-results" name="FC Results"/>
-<page key="FC-social" name="FC Social"/>
-<page key="FC-vitals" name="FC Vitals"/>
-<page deprecated="true" key="FC-notes" name="FHIR to C-CDA Notes"/>
+<page key="FC-allergies" name="FHIR to C-CDA Allergies"/>
+<page key="FC-encounters" name="FHIR to C-CDA Encounters"/>
+<page key="FC-immunizations" name="FHIR to C-CDA Immunizations"/>
+<page key="FC-medications" name="FHIR to C-CDA Medications"/>
+<page key="FC-notes" name="FHIR to C-CDA Notes"/>
+<page key="FC-patient" name="FHIR to C-CDA Patient"/>
+<page key="FC-problems" name="FHIR to C-CDA Problems"/>
+<page key="FC-procedures" name="FHIR to C-CDA Procedures"/>
+<page key="FC-results" name="FHIR to C-CDA Results"/>
+<page key="FC-social" name="FHIR to C-CDA Social History"/>
+<page key="FC-vitals" name="FHIR to C-CDA Vital Signs"/>
+<page key="FC-index" name="FHIR → C-CDA Index"/>
 <page deprecated="true" key="Guidance" name="Guidance"/>
-<page key="index" name="Home"/>
+<page key="index" name="Home Page"/>
 <page deprecated="true" key="implementation" name="Implementation (see Documentation)" url="implementation"/>
+<page key="mappingIssues" name="Known Issues"/>
 <page deprecated="true" key="mappingBackground" name="Mapping Background"/>
-<page key="mappingChangelog" name="Mapping Changelog"/>
-<page key="mappingGuidance" name="Mapping Guidance"/>
-<page key="mappingIssues" name="Mapping Issues"/>
-<page key="myra-jones" name="Myra Jones"/>
+<page key="mappingGuidance" name="Mapping General and Structural Guidance"/>
+<page key="myra-jones" name="Myra Jones CCD Example"/>
+<page key="the_specification" name="Specification"/>
 <page key="toc" name="Table of Contents"/>
 <page deprecated="true" key="Terminology" name="Terminology"/>
-<page deprecated="true" key="the_specification" name="The Specification"/>
+<page key="conceptMaps" name="Terminology Maps (Concept Maps)"/>
 </specification>
