@@ -1,11 +1,8 @@
 Profile: USRealmHeader
-Parent: $clinicaldocument
+Parent: $clinical-document-composition
 Id: US-Realm-Header
 Title: "US Realm Header"
-Description: "This profile defines constraints that represent common administrative and demographic concepts for US Realm clinical documents. Further specification, such as type, are provided in document profiles that conform to this profile."
-* ^meta.versionId = "18"
-* ^meta.lastUpdated = "2020-08-19T06:01:56.578+00:00"
-* ^meta.source = "#bY1W9IGf5zWYeBRy"
+Description: "This profile defines constraints that represent common administrative and demographic concepts for US Realm clinical documents produced by a C-CDA to FHIR transform. It derives from the FHIR Clinical Document Composition profile and asserts only the US Realm delta. Further specification, such as type, is provided in document profiles that conform to this profile."
 * ^status = #active
 * ^contact.name = "Rick Geimer"
 * ^contact.telecom[0].system = #phone
@@ -18,70 +15,46 @@ Description: "This profile defines constraints that represent common administrat
 * ^abstract = true
 * language 1.. MS
   * ^short = "language"
-* extension contains
-    http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.version|0.0.1-snapshot-2 named version_number_extension 0..1 MS and
-    http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/data-enterer-extension named data_enterer_extension 0..1 MS and
-    http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/informant-extension named informant_extension 0..* MS and
-    http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/information-recipient-extension named information_recipient_extension 0..* MS and
-    http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/ParticipantExtension named participant_extension 0..* MS and
-    PerformerExtension named performer_extension 0..* MS and
-    http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/consent-extension named authorization_extension 0..* MS and
-    http://hl7.org/fhir/StructureDefinition/event-basedOn|5.1.0 named order_extension 0..* MS
-* extension[informant_extension] ^label = "informant"
-  * ^short = "informant"
-* extension[information_recipient_extension] ^label = "informationRecipient"
-  * ^short = "informationRecipient"
-* extension[participant_extension] ^label = "participant"
-  * ^short = "participant"
+// Participation extensions are inherited from FHIR Clinical Documents; flagged MS here.
+* extension[data-enterer] MS
+* extension[informant] MS
+  * ^label = "informant"
+* extension[information-recipient] MS
+  * ^label = "informationRecipient"
+* extension[participant] MS
+  * ^label = "participant"
+* extension[consent] MS
+  * ^label = "authorization"
+* extension[basedOn] MS
+  * ^label = "order"
+* extension contains PerformerExtension named performer_extension 0..* MS
 * extension[performer_extension] ^label = "performer"
   * ^short = "performer"
-* extension[authorization_extension] ^label = "authorization"
-  * ^short = "authorization"
-* extension[order_extension] ^label = "authorization"
-  * ^short = "authorization"
-* identifier 1.. MS
-  * ^short = "identifier"
-* type MS
+// Composition.identifier carries ClinicalDocument.setId (when present); the document id
+// maps to Bundle.identifier. R4 Composition.identifier is 0..1, so both cannot be carried.
+* identifier MS
+  * ^short = "setId of the source document; the document id maps to Bundle.identifier"
 * subject only Reference($us-core-patient or Group)
 * subject MS
 * encounter only Reference($us-core-encounter)
 * encounter MS
-* date MS
-  * ^short = "date"
 * author only Reference($us-core-practitioner or $us-core-practitionerrole or PractitionerRole or $us-core-patient or Device or RelatedPerson)
-* author MS
-* title MS
-  * ^label = "Document Title"
-  * ^short = "Document Title"
-* attester ^slicing.discriminator.type = #value
-  * ^slicing.discriminator.path = "mode"
-  * ^slicing.rules = #open
-  * ^mustSupport = false
-* attester contains
-    legal_attester 0..1 MS and
-    professional_attester 0..* MS and
-    personal_attester 0..* MS
-* attester[legal_attester] ^short = "attester"
-  * mode ..1 MS
-  * mode = #legal (exactly)
-    * ^short = "mode"
+* author.extension contains AuthorTime named author-time 0..1 MS
+* author.extension[author-time] ^short = "Time of the author's participation (CDA author/time)"
+// Attester slices legal_attester and professional_attester are inherited from FCD;
+// US Realm constrains their parties and adds the personal attester.
+* attester[legal_attester] MS
   * party 1.. MS
   * party only Reference($us-core-practitioner or $us-core-practitionerrole)
-    * ^short = "party"
-* attester[professional_attester] ^short = "attester"
-  * mode = #professional (exactly)
-  * mode MS
-    * ^short = "mode"
+* attester[professional_attester] MS
   * party 1.. MS
   * party only Reference($us-core-practitioner or $us-core-practitionerrole)
-    * ^short = "party"
+* attester contains personal_attester 0..* MS
 * attester[personal_attester] ^short = "attester"
   * mode = #personal (exactly)
   * mode MS
-    * ^short = "mode"
   * party 1.. MS
   * party only Reference($us-core-patient or RelatedPerson)
-    * ^short = "party"
 * custodian 1.. MS
 * custodian only Reference($us-core-organization)
   * ^label = "custodian"

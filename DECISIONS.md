@@ -387,3 +387,20 @@ duplication in the source is the norm, not a signal):
 
 Reverse transform: a multiply-referenced FHIR resource is re-expanded inline at each CDA
 participation with its ids preserved.
+
+*D-hdr addenda — header profile re-parent rulings (Jay, 2026-10-12):* USRealmHeader now
+derives from FCD `clinical-document-composition`, asserting only the US delta.
+(1) `category = clinical-note` is inherited from FCD guidance, not restated.
+(2) **Identifiers:** `ClinicalDocument.id` -> `Bundle.identifier`; `setId` ->
+`Composition.identifier` (now 0..1 — R4 caps Composition.identifier at one, so both ids
+cannot be carried on the Composition; R5 relaxes this to 0..*, noted for the future).
+(3) Author types stay **permissive** (Practitioner, PractitionerRole, Patient, Device,
+RelatedPerson): the IG sets expectations for transform output, not realm-wide law; the
+uniform PractitionerRole pattern (D-hdr-3) is transform guidance, not a profile constraint.
+(4) Inherited `section 1..*` noted: fine for all defined document types; a future
+unstructured or patient-authored document would also need `custodian` relaxed (we assert
+1..1; FCD kept 0..1 anticipating patient-authored notes in R6).
+(5) `clindoc-limit-participantType` accepted; instance check on rebuild.
+(6) relatesTo guidance: transform emits `targetIdentifier` (setId-based), never
+targetReference, matching FCD's closed slices. New extension: `author-time` on
+`Composition.author` (valueDateTime) per D-hdr-4.

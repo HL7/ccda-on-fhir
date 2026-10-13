@@ -62,3 +62,4 @@ Alias: $2.16.840.1.113883.11.20.4.1 = http://hl7.org/fhir/us/ccda/ValueSet/2.16.
 Alias: $2.16.840.1.113883.11.20.6.1 = http://hl7.org/fhir/us/ccda/ValueSet/2.16.840.1.113883.11.20.6.1
 Alias: $2.16.840.1.113883.11.20.8.1 = http://hl7.org/fhir/us/ccda/ValueSet/2.16.840.1.113883.11.20.8.1
 Alias: $2.16.840.1.113883.11.20.9.31 = http://hl7.org/fhir/us/ccda/ValueSet/2.16.840.1.113883.11.20.9.31
+Alias: $clinical-document-composition = http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/clinical-document-composition
