@@ -19,6 +19,7 @@
 <artifact deprecated="true" id="Organization/acme-lab" key="Organization-acme-lab" name="Acme Lab"/>
 <artifact deprecated="true" id="Organization/organization-1" key="Organization-organization-1" name="Acme Labs"/>
 <artifact deprecated="true" key="AuditEvent" name="AuditEvent"/>
+<artifact id="StructureDefinition/author-time" key="StructureDefinition-author-time" name="Author Time"/>
 <artifact deprecated="true" id="StructureDefinition/AuthorizationExtension" key="StructureDefinition-AuthorizationExtension" name="Authorization Extension"/>
 <artifact deprecated="true" id="ConceptMap/CF-ImmunizationRefusal" key="ConceptMap-CF-ImmunizationRefusal" name="C-CDA Immunization Refusal to FHIR Immunization Status Reason"/>
 <artifact deprecated="true" id="ConceptMap/CF-ImmunizationSite" key="ConceptMap-CF-ImmunizationSite" name="C-CDA Immunization approachSiteCode to FHIR Immunization Site"/>
