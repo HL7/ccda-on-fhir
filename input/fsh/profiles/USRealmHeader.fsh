@@ -15,18 +15,9 @@ Description: "This profile defines constraints that represent common administrat
 * ^abstract = true
 * language 1.. MS
   * ^short = "language"
-// Participation extensions are inherited from FHIR Clinical Documents; flagged MS here.
-* extension[data-enterer] MS
-* extension[informant] MS
-  * ^label = "informant"
-* extension[information-recipient] MS
-  * ^label = "informationRecipient"
-* extension[participant] MS
-  * ^label = "participant"
-* extension[consent] MS
-  * ^label = "authorization"
-* extension[basedOn] MS
-  * ^label = "order"
+// Participation extensions (data-enterer, informant, information-recipient, participant,
+// consent, basedOn) are inherited from FHIR Clinical Documents and not re-asserted here:
+// this profile provides conceptual space; deriving profiles may flag them MS.
 * extension contains PerformerExtension named performer_extension 0..* MS
 * extension[performer_extension] ^label = "performer"
   * ^short = "performer"
