@@ -404,3 +404,57 @@ unstructured or patient-authored document would also need `custodian` relaxed (w
 (6) relatesTo guidance: transform emits `targetIdentifier` (setId-based), never
 targetReference, matching FCD's closed slices. New extension: `author-time` on
 `Composition.author` (valueDateTime) per D-hdr-4.
+
+### D-doc-5 — Delivery-package membership and URL regimes — **proposed**
+
+- **FDocRef SHOULD be a transaction-bundle entry** (index + carrier of the rewritable
+  pointers). **CDocRef MAY**, paired with a Binary carrying the source CDA when the
+  deployment transports the source; else it points at the source's external home, or is
+  omitted (identifier-only lineage).
+- **Three URL regimes under bundle inclusion:** (1) Reference elements in transaction
+  entries (context.related -> OO; relatesTo.target -> CDocRef) use urn:uuid fullUrls and
+  are rewritten by the server — durable for free. DocumentReference.relatesTo.target has
+  no identifier choice in R4; use Reference.identifier when CDocRef is absent.
+  (2) `attachment.url` is datatype url, NOT rewritten by transaction processing: guidance
+  must either impose an MHD-style recipient obligation to repair attachment URLs, use
+  client-assigned ids (PUT) so URLs are predictable, or point at already-persisted
+  locations. OPEN: pick one.
+  (3) References from inside the document Bundle outward (Provenance entity.what,
+  OO-pointer extension) are never rewritten (nested bundle, immutable document): absolute
+  URL or logical identifier at creation time only. Hence: what.identifier always; the
+  Provenance OO-pointer is populated only when the OO's stable location is known
+  (persisted-first flows); context.related is the pointer for push-then-persist flows.
+- Storage models: sealed `Bundle/{id}` (document of record; contents have no addresses) vs
+  additionally shredded flat resources (queryable shadows, new server ids). Citations of
+  attested content point into the sealed Bundle.
+
+### D-doc-6 — Shredding, derived-resource provenance, and context conduction — **approved (Jay, 2026-10-19; gap handling proposed)**
+
+- Shredding uses FCD's `convert-to-transaction-bundle` operation (Informative/experimental;
+  it is structural only and does not address provenance for derived resources).
+- **The transform Provenance survives the shred and becomes per-resource lineage for
+  free:** it is a document-bundle entry with targets on the generated resources
+  (D-doc-3 addendum), so conversion rewrites its targets to the shredded copies'
+  addresses. A shredding receiver MAY add its own Provenance citing the sealed Bundle
+  (entity.role=source) to record the shred step distinctly.
+- **Context conduction (CDA §4.4.1) — division of labor:** the *transform* preserves the
+  conduction matrix into the document's native slots; the *shredder* resolves it.
+  Propagating header components: author, confidentiality, data enterer, language,
+  informant, legal authenticator, participant, record target. Data enterer, legal
+  authenticator, record target have no override levels -> document-constant, no tree
+  logic. Tree-resolved components land: author -> Composition.author / section.author /
+  resource-native; subject -> Composition.subject / section.focus / resource.subject;
+  language -> Composition.language / resource.language. Gaps (proposed handling):
+  section-level informant (no R4 slot - documented loss until evidence demands an
+  extension); body/section confidentiality overrides (candidate meta.security on affected
+  resources - OPEN); entry-level participant (resource-native where possible).
+- **Resolution rule for shredders:** per component, nearest attribution at a level where
+  §4.4.1 permits override wins; **a null override breaks conduction** — a CDA participation
+  with nullFlavor maps to the attribution element with data-absent-reason (via the
+  CF-NullFlavorDataAbsentReason map), and DAR is read as present-and-unknown, stopping the
+  walk (never falling through to the document author). Absent participation = inherit;
+  DAR = unknown. Rare but required for honest attribution.
+- Upstream (FCD) comment items: (a) generalize data-enterer-extension / participation
+  extensions (D-hdr-4); (b) author-time adoption (D-hdr-4); (c) the convert operation's
+  reconciliation guidance should address provenance propagation and the §4.4.1 resolution
+  matrix, with this IG's pattern as a worked example.

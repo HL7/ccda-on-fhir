@@ -56,7 +56,6 @@ Key differentiators between a Care Plan profile and CCD  profile (another snapsh
 * section ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "code"
   * ^slicing.rules = #open
-  * ^mustSupport = false
 * section contains
     health_concerns_section 1..1 MS and
     goals_section 1..1 MS and
