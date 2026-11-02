@@ -146,6 +146,8 @@ pages:
     title: Home Page
     background.md:
       title: Background
+      uscdi.md:
+        title: USCDI Scope and Coverage
       mappingGuidance.md:
         title: Mapping General and Structural Guidance
       CF-index.md:

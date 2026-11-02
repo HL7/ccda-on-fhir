@@ -6,7 +6,7 @@
 
 This IG combines two related workstreams. The first is a specification for FHIR profiles to support transmission of a FHIR document bundle containing data conforming to the C-CDA information model. This effort is supported by the document profiles, which conform to the UV FHIR Clinical Document specification. The second is guidance on translating between XML C-CDA documents and FHIR documents. The two efforts share a common set of examples.
 
-Note that C-CDA is a very large specification, so this guidance does not attempt to address every template. Instead, it focuses on the data elements specified in USCDI. This version supports USCDI-3, which is supported by FHIR US Core R6.1 and C-CDA 2.1 & Companion Guide 4.1. The 2.1 publication does not provide a USCDI index, so we use the index to USCDI-4 provided in C-CDA 3.0. We expect to advance these maps to keep up with USCDI in the future.
+Note that C-CDA is a very large specification, so this guidance does not attempt to address every template. Instead, it focuses on the data elements specified in USCDI. This version supports USCDI-3, which is supported by FHIR US Core R6.1 and C-CDA 2.1 & Companion Guide 4.1. The 2.1 publication does not provide a USCDI index, so we use the index to USCDI-4 provided in C-CDA 3.0. We expect to advance these maps to keep up with USCDI in the future. The element-level index is on the [USCDI Scope and Coverage](uscdi.html) page.
 
 In addition to these (primarily) entry level USCDI elements, both the profiles and the maps also address the document headers.
 
@@ -34,7 +34,7 @@ In addition, the project team employed the example-based approach through Connec
 
 The FHIR profiles in this guide are derived from the [FHIR Clinical Documents](https://hl7.org/fhir/uv/fhir-clinical-document/STU1.1/en/) specification. This is the same foundation used by the [PCS](https://build.fhir.org/ig/HL7/us-fhir-ps/en/index.html).
 
-The content scope of this guide is USCDI-3, plus header and provenance.
+The content scope of this guide is USCDI-3, plus header and provenance. See [USCDI Scope and Coverage](uscdi.html) for the element-level index.
 
 The structural scope of the maps is the two US specifications supporting that content scope: C-CDA and FHIR US Core. The maps do not change specifications: a CDA document with a CCD code will result in a FHIR document with a CCD code; it will never change into a PCS.
 

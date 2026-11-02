@@ -20,6 +20,8 @@
       </b>
     </a>
     <ul class="dropdown-menu">
+      <li><a href="uscdi.html">USCDI Scope &amp; Coverage</a></li>
+      <li class="divider"></li>
       <li class="dropdown-header">C-CDA → FHIR</li>
       <li><a href="CF-header.html">Header (Document)</a></li>
       <li><a href="CF-allergies.html">Allergies</a></li>

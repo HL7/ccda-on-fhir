@@ -458,3 +458,35 @@ targetReference, matching FCD's closed slices. New extension: `author-time` on
   extensions (D-hdr-4); (b) author-time adoption (D-hdr-4); (c) the convert operation's
   reconciliation guidance should address provenance propagation and the §4.4.1 resolution
   matrix, with this IG's pattern as a worked example.
+
+### D-doc-7 — USCDI scope-and-coverage page — **proposed**
+
+Source: Jay's USCDI tracking spreadsheet (tab 1541913679), reconciled against the published STU2
+maps and the fsh branch (which carries no new element maps beyond STU2; it changes examples,
+header, and document profiles only). New page `input/pagecontent/uscdi.md`, registered under
+Background and linked from the Element Maps menu and the two scope statements on background.md.
+
+- **Columns kept:** class, element, USCDI version introduced, status, guide version, map page,
+  note. Spreadsheet columns dropped: per-version Keep/Drop grid, delta counters, FHIR/C-CDA
+  target paths (the map pages carry those).
+- **Status vocabulary:** Mapped / Planned / Deferred / Not planned. Deferred = introduced after
+  v3 and unscheduled; Not planned = removed from USCDI before the guide addressed it.
+- **Moved elements:** listed once under the *current* USCDI class, with the version of first
+  appearance under any class and a note naming the earlier home (Smoking Status, Health
+  Concerns, UDI, Assessment and Plan of Treatment, SDOH Assessment). Care Team Member (v1,
+  single element) is represented by its five v2 successors. This removes the spreadsheet's
+  duplicate rows and the double-counting in its delta totals.
+- **Status reconciled to the IG where the spreadsheet lagged:** Date of Death, Sex, Tribal
+  Affiliation, Related Person Name/Relationship, Result Reference Range, Specimen Identifier,
+  Specimen Source Site → Mapped 2.0.0; Previous Name/Address (via name/addr @use) and
+  Performance Time → Mapped 1.2.0; Treatment Intervention / Care Experience Preference →
+  Deferred (spreadsheet had Later + R2.1.0). Author Time Stamp / Organization kept as Planned
+  with a note that high-level provenance guidance exists since 1.2.0.
+- **Removed-but-mapped elements** (Birth Sex, Sexual Orientation, Gender Identity) are shown
+  as Mapped with the removal noted, since the social-history page still carries them.
+- **Omitted:** spreadsheet rows "Name to use" and "Pronoun" (Drop with no introducing version;
+  presumed v6 draft candidates never adopted). Add back if they were in a published list.
+- **Open for Jay:** (1) the "v3.1" label for the ONC-amended v3 list (Sex added; Sexual
+  Orientation and Gender Identity removed) is taken from the spreadsheet and should be
+  verified against the regulation; (2) menu placement (Element Maps dropdown vs. a Background
+  dropdown); (3) whether SDOH Interventions should be Mapped 1.2.0 via the generic procedure map.
