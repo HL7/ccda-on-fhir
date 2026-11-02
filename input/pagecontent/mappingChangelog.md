@@ -1,5 +1,7 @@
 ### 2.1.0 (Current work in progress)
 - Replace Header profile with one that inherits from FHIR Clinical Documents
+- Add entry maps to address USCDI requirements as outlined on USCID page
+- Add Bundle profile to frame expectations around boundaries
 
 
 ### 2.0.0 (Current Publication)

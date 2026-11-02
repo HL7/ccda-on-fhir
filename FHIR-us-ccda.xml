@@ -262,4 +262,5 @@
 <page key="toc" name="Table of Contents"/>
 <page deprecated="true" key="Terminology" name="Terminology"/>
 <page key="conceptMaps" name="Terminology Maps (Concept Maps)"/>
+<page key="uscdi" name="USCDI Scope and Coverage"/>
 </specification>

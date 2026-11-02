@@ -15,13 +15,13 @@ This page indexes the [USCDI](https://www.healthit.gov/isp/united-states-core-da
 
 |Status|Elements|
 |:----|----:|
-|Mapped|79|
-|Planned|29|
+|Mapped|80|
+|Planned|28|
 |Deferred|25|
 |Not planned|5|
 |**Total**|**138**|
 
-Of the 95 elements from USCDI v1–v3 that remain in USCDI, 66 are mapped and 29 are planned for 2.1.0. Of the 38 elements introduced in v4–v6, 13 were mapped in the course of related work and 25 are deferred.
+Of the 95 elements from USCDI v1–v3 that remain in USCDI, 67 are mapped and 28 are planned for 2.1.0. Of the 38 elements introduced in v4–v6, 13 were mapped in the course of related work and 25 are deferred.
 
 Mapped elements by guide version:
 
@@ -29,6 +29,7 @@ Mapped elements by guide version:
 |:----|----:|
 |1.2.0|33|
 |2.0.0|46|
+|2.1.0|1|
 
 #### Element index
 
@@ -101,7 +102,7 @@ Mapped elements by guide version:
 |Laboratory|Specimen Identifier|v4|Mapped|2.0.0|[Results](CF-results.html)||
 |Laboratory|Specimen Condition Acceptability|v4|Deferred||||
 |Laboratory|Test Kit Unique Device Identifier|v5|Not planned|||Removed from USCDI in v6.|
-|Medical Devices|Unique Device Identifier – Implantable|v1|Planned|2.1.0||Its own class in v1–v3; moved here in v4.|
+|Medical Devices|Unique Device Identifier – Implantable|v1|Mapped|2.1.0|[Participations](CF-participations.html#cda-to-fhir-device)|Its own class in v1–v3; moved here in v4.|
 |Medications|Medications|v1|Mapped|1.2.0|[Medications](CF-medications.html)||
 |Medications|Dose|v3|Mapped|1.2.0|[Medications](CF-medications.html)||
 |Medications|Dose Units of Measure|v3|Mapped|1.2.0|[Medications](CF-medications.html)||

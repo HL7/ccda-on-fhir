@@ -490,3 +490,75 @@ Background and linked from the Element Maps menu and the two scope statements on
   Orientation and Gender Identity removed) is taken from the spreadsheet and should be
   verified against the regulation; (2) menu placement (Element Maps dropdown vs. a Background
   dropdown); (3) whether SDOH Interventions should be Mapped 1.2.0 via the generic procedure map.
+
+### D-part-1 — Participation maps: PractitionerRole and RelatedPerson tables, Practitioner fixes — **proposed**
+
+Page `CF-participations.md` previously ended at a thin Practitioner table. Added PractitionerRole
+and RelatedPerson tables and an entity-collapse section; fixed the Practitioner table.
+
+- **Practitioner fixes:** the addr row sent role addresses to `PractitionerRole.address`, which
+  does not exist in R4. Now: person-scoped addr/telecom (`@use=H`, `MC`) → Practitioner;
+  work (`@use=WP`) → PractitionerRole.telecom and a contained Location via
+  PractitionerRole.location (D-hdr-3). Added rows for assignedAuthoringDevice → Device and
+  sdtc:patient/id → Patient (D-hdr-3 scope). Suffix → qualification only for credentials.
+- **PractitionerRole:** created whenever role-scoped content exists; always for document
+  authors (D-hdr-3). Target is base R4 PractitionerRole; US Core asserted additionally when
+  telecom/endpoint present (pd-1). `code` → `.specialty` when NUCC taxonomy, else `.code`.
+  functionCode/time have no slot: deferred to the referencing resource; header author time →
+  `author-time` extension + Provenance.recorded (D-hdr-4).
+- **Mapping id nuance:** published rule (id → Practitioner/RelatedPerson.identifier, never
+  PractitionerRole) kept as default; exception added for ids known to identify the role
+  (D-hdr-5 tiering). NPI always Practitioner.
+- **RelatedPerson sources:** relatedEntity, guardian, associatedEntity/participantRole with a
+  relationship classCode (PRS, NOK, ECON, CAREGIVER, AGNT, GUARD) or a non-clinical playing
+  person. `@classCode` → one relationship coding (GUARD + optional SNOMED 394619001 per
+  D-hdr-2); `code` → additional relationship repetition; asPatientRelationship preferred when
+  present. `.patient` and `.active=true` always (US Core mandatory); name-or-relationship
+  invariant noted.
+- **Guardian two-homes rule:** Patient.contact (CF-patient, published) stays primary; a
+  RelatedPerson is created in addition only when something must reference the guardian, with
+  the same identifier. D-hdr-2's coding applies to that RelatedPerson.
+- **Entity collapse** (D-hdr-5, still proposed) is now summarized on the page; if D-hdr-5 is
+  amended the page section follows.
+- **Not done — follow-up:** no generated example yet. Needs (a) Myra instances
+  Myra-Practitioner-Author / Myra-PractitionerRole-Author (header author: local id 92698 +
+  NPI 1234123400, NUCC 260000000X, home addr, work mailto); (b) Composition-CCD-Myra.author
+  changed from display-only to a reference, and the document Bundle example to include both;
+  (c) a correspondence file CF-participation.yaml with `headerPath: ClinicalDocument/author`
+  (gen-highlighted.js supports headerPath; confirm multi-step paths); (d) a guardian →
+  RelatedPerson example would need a referencing informant, which Myra lacks (no informant in
+  the header). Also fixed heading typo "Practitioner vs ParticipantRole".
+
+### D-part-2 — Device section on the Participations page — **proposed**
+
+Jay: authoring device belongs with header participations; product instance (USCDI UDI) must be
+added; Participations page stays independent (a Header grouping was floated, not adopted), so
+both cases live there.
+
+- **Bullet fix:** the resource-type rule sent every device to US Core Implantable Device; an
+  authoring EHR has no patient or UDI. Now: authoring device → base R4 Device; product instance
+  → US Core Implantable Device.
+- **Comparison table:** device entity band added (assignedAuthoringDevice, Author only;
+  playingDevice for entry participants) so the R-MIM digest is complete.
+- **Authoring device map:** manufacturerModelName → deviceName(model-name); softwareName →
+  deviceName(other) or version.value; representedOrganization → owner; role addr/telecom
+  dropped or carried on the owner (R4 Device has none). `.type` omitted (no CDA source).
+- **Product Instance map:** participantRole/id → udiCarrier.carrierHRF with issuer from @root
+  (FDA UDI 2.16.840.1.113883.3.3719 → http://hl7.org/fhir/NamingSystem/fda-udi); other ids →
+  identifier; playingDevice/code → type (US Core 1..1; derive from GUDID or procedure context
+  when absent); scopingEntity/desc → manufacturer; patient always. Procedure linkage:
+  focalDevice.manipulated vs usedReference — row added to CF-procedures.
+- **UDI Organizer map:** all 13 component observations keyed by NCIt code (C101722 DI,
+  C101672 lot, C101671 serial, C101669 mfg date, C101670 expiry, C113843 distinct id, C71898
+  brand → deviceName(manufacturer-name), C99285 model → modelNumber, C54131 company →
+  manufacturer). No R4 slot for catalog number, MRI safety, latex safety → Device.property
+  keyed by the NCIt code. Implantable Device Status → Not Supported (Device.status is record
+  status); narrative or the implanting/removing Procedure instead.
+- **USCDI index:** Medical Devices / UDI row moved from Planned to Mapped 2.1.0 (counts updated:
+  Mapped 80, Planned 28, 2.1.0 = 1).
+- **Open:** (1) UDI parsing (GS1/HIBCC/ICCBBA) into deviceIdentifier and production
+  identifiers is described as "when the UDI can be parsed" — decide whether the transform
+  must parse or may leave carrierHRF only; (2) issuer URI for non-FDA agencies; (3) examples:
+  Myra has an authoring device (header author 2) and two Product Instances on the colonoscopy
+  procedure (lines 1470, 1584) but no UDI Organizer — a Device instance with patient +
+  type + carrierHRF is enough for a product-instance example.
